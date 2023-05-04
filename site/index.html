@@ -1,0 +1,452 @@
+	<!doctype html>
+	<html lang="us">
+	<head>
+		<meta charset="utf-8">
+		<title>Shadow Tower Randomizer</title>
+		<link href="jquery-ui.css" rel="stylesheet">
+		<style>
+			body{
+				font-family: "Trebuchet MS", sans-serif;
+				margin: 50px;
+			}
+			.demoHeaders {
+				margin-top: 2em;
+			}
+			#dialog-link {
+				padding: .4em 1em .4em 20px;
+				text-decoration: none;
+				position: relative;
+			}
+			#dialog-link span.ui-icon {
+				margin: 0 5px 0 0;
+				position: absolute;
+				left: .2em;
+				top: 50%;
+				margin-top: -8px;
+			}
+			#icons {
+				margin: 0;
+				padding: 0;
+			}
+			#icons li {
+				margin: 2px;
+				position: relative;
+				padding: 4px 0;
+				cursor: pointer;
+				float: left;
+				list-style: none;
+			}
+			#icons span.ui-icon {
+				float: left;
+				margin: 0 4px;
+			}
+			.fakewindowcontain .ui-widget-overlay {
+				position: absolute;
+			}
+			.ui-widget {
+				padding: 0px 11px 0px 21px !important;
+				font-size: 0.7cm;
+			}
+			select {
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>Shadow Tower Randomizer</h1>
+
+		<input type="file" id="file" style="display:none;" />
+
+		<button id="button4">Upload ISO</button>
+		<button id="button1">Randomize</button>
+		<!--button id="button5">Download ISO</button-->
+
+		<br>
+		<!--button id="button2">Upload recipe</button>
+			<button id="button3">Download recipe</button-->
+
+				<!-- button id="button-icon">An icon-only button</button-->
+				<br>
+
+		<!--div class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+					<strong>ISO loaded. Randomization done.</strong></p>
+				</div>
+			</div-->
+	<!--div class="ui-widget">
+		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+			<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+			<strong>Error:</strong>Couldn't parse the files.</p>
+		</div>
+	</div-->
+	<br>
+
+	<p/>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">General</a></li>
+			<li><a href="#tabs-2">Randomization</a></li>
+			<li><a href="#tabs-3">Progress</a></li>
+			<li><a href="#tabs-4">Seeding</a></li>
+		</ul>
+		<div id="tabs-1">
+			<form style="margin-top: 1em;">
+				<h3>Difficulty</h3>
+				<div id="dif-radioset">
+					<input type="radio" id="dif-radio1" name="radio"><label for="dif-radio1">
+						Easy
+					</label>
+					<input type="radio" id="dif-radio2" name="radio" checked="checked"><label for="dif-radio2">
+						Medium
+					</label>
+					<input type="radio" id="dif-radio3" name="radio"><label for="dif-radio3">
+						Hard
+					</label>
+				</div>
+			</form>
+
+			<ul>
+				<li>Easy - 100% more drops, 50% enemy stats.</li>
+				<li>Medium - same levels as the regular game.</li>
+				<li>Hard - 50% less items found, 50% less drops, 100% higher enemy stats.</li>
+			</ul>
+
+			<form style="margin-top: 1em;">
+				<h3>Preset by purpose</h3>
+				<div id="purpose-radioset">
+					<input type="radio" id="purpose-radio1" name="radio" checked="checked"><label for="purpose-radio1">
+						Any%
+					</label>
+					<input type="radio" id="purpose-radio2" name="radio"><label for="purpose-radio2">
+						100%
+					</label>
+					<input type="radio" id="purpose-radio3" name="radio"><label for="purpose-radio3">
+						Scary Game
+					</label>
+					<input type="radio" id="purpose-radio4" name="radio"><label for="purpose-radio4">
+						Stable
+					</label>
+				</div>
+			</form>
+			<ul>
+				<li>Any% challenge - Equips and creatures randomness is higher, so some may be difficult to get.. difficulty easy, random equips increased, creatures crazy, progressiveness increased. spawn rate medium, amplitude absolute-anywhere, style random position. key drops Fire World, Ilusionists illusion-world</li>
+				<li>100% challenge - Equips have high chance to drop. Enemies have high chance to spawn. difficulty easy, random equips increased, creatures increased, progressiveness medium. spawn rate predictable, amplitude within-world, style random position. key drops Ashen Cavern, Illusionists worship-area</li>
+				<li>Scary Game - Highest randomness and unpredictability. difficulty hard, random equips crazy, creatures crazy, progressiveness flat. spawn rate crazy-king-hopper-like, amplitude absolute-anywhere, style crazy-may-not-work. key drops anywhere, illusionists anywhere</li>
+				<li>Stable - Randomizes mostly by shuffling. difficulty medium, random equips only-swap, creatures only-swap , progressiveness flat. spawn rate only-swap, amplityde anywhere-within-world, style only-swap. key drops keep on cerberus, illusionists no-change</li>
+			</ul>
+
+		</div>
+		<div id="tabs-2">
+
+			<form style="margin-top: 1em;">
+				<h3>To remove randomness so it will be total deterministic</h3>
+				<div id="remove-randomness-radioset">
+					<input type="radio" id="remove-randomness-radio1" name="radio" checked="checked"><label for="remove-randomness-radio1">
+						Yes
+					</label>
+					<input type="radio" id="remove-randomness-radio2" name="radio"><label for="remove-randomness-radio2">
+						No
+					</label>
+				</div>
+			</form>
+
+			<form style="margin-top: 1em;">
+				<h3>Random equips stats</h3>
+				<div id="equip-radioset">
+					<input type="radio" id="equip-radio1" name="radio"><label for="equip-radio1">
+						Soft
+					</label>
+					<input type="radio" id="equip-radio2" name="radio"><label for="equip-radio2">
+						Medium
+					</label>
+					<input type="radio" id="equip-radio3" name="radio" checked="checked"><label for="equip-radio3">
+						Increased
+					</label>
+					<input type="radio" id="equip-radio4" name="radio"><label for="equip-radio4">
+						Crazy
+					</label>
+					<input type="radio" id="equip-radio5" name="radio"><label for="equip-radio5">
+						Only swap
+					</label>
+				</div>
+			</form>
+			<ul>
+				<li>Soft - from -10% to +10% the average of the area.</li>
+				<li>Medium - from -30% to +100% the average of the area.</li>
+				<li>Increased - from -70% to +300% the average of the area.</li>
+				<li>Crazy - from -99% to +3000% the average of the area.</li>
+			</ul>
+
+
+			<form style="margin-top: 1em;">
+				<h3>Random creature stats</h3>
+				<div id="creature-radioset">
+					<input type="radio" id="creature-radio1" name="radio"><label for="creature-radio1">
+						Soft
+					</label>
+					<input type="radio" id="creature-radio2" name="radio"><label for="creature-radio2">
+						Medium
+					</label>
+					<input type="radio" id="creature-radio3" name="radio" checked="checked"><label for="creature-radio3">
+						Increased
+					</label>
+					<input type="radio" id="creature-radio4" name="radio"><label for="creature-radio4">
+						Crazy
+					</label>
+					<input type="radio" id="creature-radio5" name="radio"><label for="creature-radio5">
+						Only swap
+					</label>
+				</div>
+			</form>
+			<ul>
+				<li>Soft - from -10% to +10% the average of the area.</li>
+				<li>Medium - from -30% to +100% the average of the area.</li>
+				<li>Increased - from -70% to +300% the average of the area.</li>
+				<li>Crazy - from -99% to +3000% the average of the area.</li>
+			</ul>
+
+			<form style="margin-top: 1em;">
+				<h3>Spawn rate</h3>
+				<div id="spawn-rate-radioset">
+					<input type="radio" id="spawn-rate-radio1" name="radio" checked="checked"><label for="spawn-rate-radio1">
+						Predictable
+					</label>
+					<input type="radio" id="spawn-rate-radio2" name="radio"><label for="spawn-rate-radio2">
+						Medium
+					</label>
+					<input type="radio" id="spawn-rate-radio3" name="radio"><label for="spawn-rate-radio3">
+						Rare
+					</label>
+					<input type="radio" id="spawn-rate-radio4" name="radio"><label for="spawn-rate-radio4">
+						Crazy like King Hopper
+					</label>
+					<input type="radio" id="spawn-rate-radio5" name="radio"><label for="spawn-rate-radio5">
+						Only swap
+					</label>
+				</div>
+			</form>
+			<ul>
+				<li>Predictable - Creatures spawn very easy.</li>
+				<li>Medium - Same level as the game, but no exceptional rare cases like King Hopper.</li>
+				<li>Crazy like King Hopper - Many enemies may be very rare to spawn like the King Hopper.</li>
+			</ul>
+
+			<form style="margin-top: 1em;">
+				<h3>Random spawn amplitude</h3>
+				<div id="spawn-amplitude-radioset">
+					<input type="radio" id="spawn-amplitude-radio1" name="radio"><label for="spawn-amplitude-radio1">
+						No change
+					</label>
+					<input type="radio" id="spawn-amplitude-radio2" name="radio"><label for="spawn-amplitude-radio2">
+						Anywhere within area
+					</label>
+					<input type="radio" id="spawn-amplitude-radio3" name="radio"><label for="spawn-amplitude-radio3">
+						Anywhere within world
+					</label>
+					<input type="radio" id="spawn-amplitude-radio4" name="radio" checked="checked"><label for="spawn-amplitude-radio4">
+						Absolute anywhere
+					</label>
+				</div>
+			</form>
+
+			<form style="margin-top: 1em;">
+				<h3>Random spawn style</h3>
+				<div id="spawn-style-radioset">
+					<input type="radio" id="spawn-style-radio1" name="radio"><label for="spawn-style-radio1">
+						Swap positions
+					</label>
+					<input type="radio" id="spawn-style-radio2" name="radio" checked="checked"><label for="spawn-style-radio2">
+						Random position
+					</label>
+					<input type="radio" id="spawn-style-radio3" name="radio"><label for="spawn-style-radio3">
+						Crazy - excessive randomness, that may break the game
+					</label>
+				</div>
+			</form>
+
+		</div>
+		<div id="tabs-3">
+
+			<form style="margin-top: 1em;">
+				<h3>Progressiveness</h3>
+				<div id="progressivenes-radioset">
+					<input type="radio" id="progressivenes-radio1" name="radio"><label for="progressivenes-radio1">
+						Flat
+					</label>
+					<input type="radio" id="progressivenes-radio2" name="radio"><label for="progressivenes-radio2">
+						Medium
+					</label>
+					<input type="radio" id="progressivenes-radio3" name="radio" checked="checked"><label for="progressivenes-radio3">
+						Increased
+					</label>
+					<input type="radio" id="progressivenes-radio4" name="radio"><label for="progressivenes-radio4">
+						Crazy
+					</label>
+				</div>
+			</form>
+			<ul>
+				<li>Flat - Po progressiveness, all areas have the same level of difficulty, that is the game average.</li>
+				<li>Medium - Similar to the game progressivity: every area goes about 10% harder than previous.</li>
+				<li>Increased - Game starts 3x easier and ends 3x harder.</li>
+				<li>Crazy - Progressiveness is chaotic, each area is decided to be from 10x easier to 10x harder individually.</li>
+			</ul>
+
+			<form style="margin-top: 1em;">
+				<h3>Fiery key drop</h3>
+				<div id="fiery-key-radioset">
+					<input type="radio" id="fiery-key-radio1" name="radio"><label for="fiery-key-radio1">
+						Keep on Cerberus
+					</label>
+					<input type="radio" id="fiery-key-radio2" name="radio"><label for="fiery-key-radio2">
+						Ashen Cavern
+					</label>
+					<input type="radio" id="fiery-key-radio3" name="radio" checked="checked"><label for="fiery-key-radio3">
+						Fire World
+					</label>
+					<input type="radio" id="fiery-key-radio4" name="radio"><label for="fiery-key-radio4">
+						anywhere before Fire World
+					</label>
+				</div>
+			</form>
+			<p>In regular game, Fiery key is dropped by Cerberus, then used to open a compartment where is Flaming key. Flaming key is used to teleport to the place where Ebony Knight is. As one of the world bosses, Ebony Knight should be defeated in order to be able to enter the final room and beat the game. So the Fiery key is needed for achieving end of the game.</p>
+
+			<form style="margin-top: 1em;">
+				<h3>Ilusionists</h3>
+				<div id="ilusionists-radioset">
+					<input type="radio" id="ilusionists-radio1" name="radio"><label for="ilusionists-radio1">
+						No change
+					</label>
+					<input type="radio" id="ilusionists-radio2" name="radio" checked="checked"><label for="ilusionists-radio2">
+						Worship domain
+					</label>
+					<input type="radio" id="ilusionists-radio3" name="radio" checked="checked"><label for="ilusionists-radio3">
+						Illusion World
+					</label>
+					<input type="radio" id="ilusionists-radio4" name="radio"><label for="ilusionists-radio4">
+						Anywhere in the game
+					</label>
+				</div>
+			</form>
+			<p>Ilusionists are Lord Gorthur, Jester and Willowess, need to be killed in order to make Illusion World boss Disguise to show up. In the regular game they are in the worship area.</p>
+
+		</div>
+
+		<div id="tabs-4">
+
+			Seed (start with random one, button to generate new)<br><br>
+
+			Public key<br><br>
+
+			Generate a key with ssh-keygen, provide the public key here. The game recipe is output and can be decrypted only by using the private key the owner has.<br>
+			<ul>
+				<li>Command to key</li>
+				<li>File with public key to be copied</li>
+				<li>Command to decrypt the recipe</li>
+			</ul>
+		</div>
+	</div>
+
+	<p/>
+
+	<h3>Information</h3>
+
+	<p>Advanced knowledge of the game is not required.</p>
+	<p>You need to verify equipment and equips stats in game, as they may differ from regular game.</p>
+	<p>Mind that with randomized areas, you should manage exploration like you do when playing for first time.</p>
+	<p>To beat the game, still need to kill all world bosses and they are in their original areas. For Desguise to spawn you still need to defeat the ilusionists first.</p>
+	<p>Bosses and event-related creatures are not randomized.
+	The preset options set the other options to level where it provides reasonable play time for the expected experience.</p>
+	<p>"Only swap" option for each parameter makes no random generation but just swapping, so it is guarenteed that you don't get weird numbers, may be the safer way to play if the randomness gets non-reliable.</p>
+	<p>Randomization produces a intermediary Recipe, that contains the readable information of all random set that are intended to be performed. You can also download, change and upload it to do your own customized changes in the game.</p>
+	<p>I expect to implement also enemy walk speed and attack cooldown time randomization, as well as capability of adding more creatures spawn and items found than the regular game, but as additional features since these seem to be more complex to do.</p>
+</div>
+
+<h3>Credits</h3>
+
+Credit for people in modding committee?
+Credit for people who contributed with ideas, data and test.
+
+Thanks for Lucifer65535 by items reference provided here https://gamefaqs.gamespot.com/ps/198605-shadow-tower/faqs/72621
+
+<h3>Disclaimer</h3>
+
+<p>It is provided "as is" with no warranty of functionality or safety. The modified software may harm you or your equipment such as computer or video game console. It is not recommended to anyone to use it. If you use, it is on your own responsibility.</p>
+
+<p>This tool development had purely educational purpose, not having any commercial usage. Usage and modification is absolutely allowed for any legal activity.</p>
+
+<p>We don't promote piracy or any other illegal activity.</p>
+
+
+<h3>Contact</h3>
+
+Discord user Fredo#4809
+
+<script src="external/jquery/jquery.js"></script>
+<script src="Iso9660.js"></script>
+<script src="KaitaiStream.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+	$( "#button1" ).button();
+	$( "#button2" ).button();
+	$( "#button3" ).button();
+	$( "#button4" ).button();
+	$( "#button5" ).button();
+	/*	$( "#button1" ).button({
+			icon: "ui-icon-gear"
+		});*/
+
+		$( "#dif-radioset" ).buttonset();
+		$( "#purpose-radioset" ).buttonset();
+		$( "#equip-radioset" ).buttonset();
+		$( "#spawn-amplitude-radioset" ).buttonset();
+		$( "#spawn-rate-radioset" ).buttonset();
+		$( "#spawn-style-radioset" ).buttonset();
+		$( "#ilusionists-radioset" ).buttonset();
+		$( "#progressivenes-radioset" ).buttonset();
+		$( "#creature-radioset" ).buttonset();
+		$( "#fiery-key-radioset" ).buttonset();
+		$( "#remove-randomness-radioset" ).buttonset();
+
+		$( "#controlgroup" ).controlgroup();
+
+		$( "#tabs" ).tabs();
+
+		$( "#button4" ).on( "click", function() {
+			document.getElementById("file").click();
+		});
+		
+		//$('#file').change(function(){
+		//	var files = $('#file').prop('files');
+		//	var arrayBuffer = files[0];
+		//	var data = new Iso9660(new KaitaiStream(arrayBuffer));
+		//	console.log(data.sectorSize);
+		//})
+
+		$('#file').change(function() {
+
+			var reader = new FileReader();
+			reader.onload = function() {
+
+				var arrayBuffer = this.result;
+				var array = new Uint8Array(arrayBuffer);
+				//var binaryString = String.fromCharCode.apply(null, array);
+
+				//console.log(binaryString);
+				var data = new Iso9660(new KaitaiStream(arrayBuffer));
+				console.log(data.sectorSize);
+			}
+			reader.readAsArrayBuffer(this.files[0]);
+
+		});
+
+	/*
+		var arrayBuffer = ...;
+		var data = new Iso9660(new KaitaiStream(arrayBuffer));
+		*/
+	</script>
+</body>
+</html>
