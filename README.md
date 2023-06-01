@@ -9,6 +9,10 @@ pack
 
 unpack>unpack.txt && npm run randomize .\params.json "C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st" && npm run change changeset.json && pack
 
+E:
+cd E:\Download\mednafen-1.29.0-win64
+mednafen.exe C:\Users\fred\Desktop\shadow-tower-randomizer\mkpsxiso.cue
+
 //changing short sword
 //481 138b800-139c000.T"
 //part.bin[0xBAA0] = 0x40;

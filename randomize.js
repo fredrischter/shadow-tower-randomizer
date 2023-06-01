@@ -72,7 +72,7 @@ human_world_solitary_region.spawns[0].drop1Chance.set(0x64);
 // Blank all creature spawns
 for (var a in areas) {
 	var area = areas[a];
-//	if (area.name == "human_world_forgotten_region") {
+//	if (area.name == "human_world_cursed_region") {
 //		continue;
 //	}
 	if (!area.spawns) {
@@ -87,9 +87,9 @@ for (var a in areas) {
 }
 
 //for (var i = 0; i < SPAWN_ENTRIES_COUNT; i++) {
-//	var spawn = human_world_forgotten_region.spawns[i];
+//	var spawn = human_world_cursed_region.spawns[i];
 //	if (!spawn.chance.isNull() && !spawn.isBlank && !spawn.name.endsWith("door")) {
-//		spawn.type.set(0x04); //04_acid_skull
+//		spawn.type.set(0x04); //04_fat_mole_a
 //	}
 //}
 

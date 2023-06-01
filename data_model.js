@@ -375,7 +375,7 @@ global.ITEM_DATA_ENTRY_SIZE = 0x2C; // 44
 class ItemData  {
   constructor(itemIndex, lineSplit, line) {
     this.itemIndex = itemIndex;
-    this.name = "item_" + (""+this.itemIndex.toString(16)) + "_" + lineSplit[2];
+    this.name = /*"item_" + (""+this.itemIndex.toString(16)) + "_" +*/ lineSplit[2];
     this.line = line;
     this.absoluteIndex = ITEM_DATA_START_OFFSET
       + itemIndex * ITEM_DATA_ENTRY_SIZE;
@@ -408,7 +408,7 @@ for (var i = 0 ; i < itemLinesSplit.length ; i++) {
   if (line.trim().length==0) {
     continue;
   }
-  var lineSplit = line.split(" ");
+  var lineSplit = line.split(" ").filter(n => n);
   itemData[i] = new ItemData(i, lineSplit, line);
   global.items.push(itemData[i]);
 }
