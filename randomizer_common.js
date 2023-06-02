@@ -137,8 +137,8 @@ class TFormatPart {
 
   verifyCheckSum() {
     if (this.bin.length <= 4) {
-      console.log("ERROR - checksum not possible since bin is <4 bytes " + this.fileName);
-      return false;
+      console.log("skipping checksum, not possible since bin is <4 bytes " + this.fileName);
+      return true;
     }
     var checksumOffset = this.bin.length-4;
     var expected = getUInt32(this.bin, checksumOffset);
@@ -155,8 +155,8 @@ class TFormatPart {
   
   setCheckSum() {
     if (this.bin.length <= 4) {
-      console.log("ERROR - checksum not possible since bin is <4 bytes " + this.fileName);
-      return false;
+      console.log("skipping setting checksum, not possible since bin is <4 bytes " + this.fileName);
+      return;
     }
     var checksumOffset = this.bin.length-4;
     var checkSum = this.checkSum();

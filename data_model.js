@@ -368,14 +368,15 @@ f040  139a840    item_138_soul_pod_29_sp           0  0  0  0  0  0  0  0  0  0 
 f06c  139a86c    item_139_soul_pod_14_sp           0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 14  0  0  0  0  0  0  0  0  0  0  0  0  0  4  0  0  0  0  0  0  0`;
 
 global.ITEM_DATA_PART_FILE_INDEX = 481;
+global.ITEM_DATA_START_IN_FILE = 0xba90;
 global.ITEM_DATA_PART_FILE_OFFSET_START = 0x138b800;
-global.ITEM_DATA_START_OFFSET = 0x13972a0;
+global.ITEM_DATA_START_OFFSET = 0x1397290;
 global.ITEM_DATA_ENTRY_SIZE = 0x2C; // 44
 
 class ItemData  {
   constructor(itemIndex, lineSplit, line) {
     this.itemIndex = itemIndex;
-    this.name = /*"item_" + (""+this.itemIndex.toString(16)) + "_" +*/ lineSplit[2];
+    this.name = lineSplit[2];
     this.line = line;
     this.absoluteIndex = ITEM_DATA_START_OFFSET
       + itemIndex * ITEM_DATA_ENTRY_SIZE;
@@ -384,6 +385,27 @@ class ItemData  {
 
   setup(FDAT) {
     this.map_file = FDAT.files[ITEM_DATA_PART_FILE_INDEX];
+
+    this.str = new UInt8(this.map_file.bin, this.offset_in_file + 0x10);
+    this.spd = new UInt8(this.map_file.bin, this.offset_in_file + 0x11);
+    this.def = new UInt8(this.map_file.bin, this.offset_in_file + 0x12);
+    this.bal = new UInt8(this.map_file.bin, this.offset_in_file + 0x13);
+    this.sla = new UInt8(this.map_file.bin, this.offset_in_file + 0x14);
+    this.smh = new UInt8(this.map_file.bin, this.offset_in_file + 0x15);
+    this.pir = new UInt8(this.map_file.bin, this.offset_in_file + 0x16);
+    this.spr = new UInt8(this.map_file.bin, this.offset_in_file + 0x17);
+    this.foc = new UInt8(this.map_file.bin, this.offset_in_file + 0x18);
+    this.ham = new UInt8(this.map_file.bin, this.offset_in_file + 0x19);
+    this.pur = new UInt8(this.map_file.bin, this.offset_in_file + 0x1a);
+    this.par = new UInt8(this.map_file.bin, this.offset_in_file + 0x1b);
+    this.mel = new UInt8(this.map_file.bin, this.offset_in_file + 0x1c);
+    this.sol = new UInt8(this.map_file.bin, this.offset_in_file + 0x1d);
+    this.hp  = new UInt16(this.map_file.bin, this.offset_in_file + 0x1e);
+
+    this.type     = new UInt8(this.map_file.bin, this.offset_in_file + 0x26);
+    this.max_dura = new UInt8(this.map_file.bin, this.offset_in_file + 0x27);
+    this.dura     = new UInt8(this.map_file.bin, this.offset_in_file + 0x28);
+
     console.log(this.toReadableString());
   }
 
@@ -395,7 +417,26 @@ class ItemData  {
   }
 
   toString() {
-    return "{\"id\":\"" + this.itemIndex.toString(16) + "\", \"name\":\"" + this.name + "\"},";
+    return "{\"id\":\"" + (this.itemIndex.toString(16) + "\"").padEnd(3) + ", \"name\":\"" + (this.name + "\"").padEnd(32)
+      + ", \"str\":" + (this.str.get() + "").padStart(5)
+      + ", \"spd\":" + (this.spd.get() + "").padStart(5)
+      + ", \"def\":" + (this.def.get() + "").padStart(5)
+      + ", \"bal\":" + (this.bal.get() + "").padStart(5)
+      + ", \"sla\":" + (this.sla.get() + "").padStart(5)
+      + ", \"smh\":" + (this.smh.get() + "").padStart(5)
+      + ", \"pir\":" + (this.pir.get() + "").padStart(5)
+      + ", \"spr\":" + (this.spr.get() + "").padStart(5)
+      + ", \"foc\":" + (this.foc.get() + "").padStart(5)
+      + ", \"ham\":" + (this.ham.get() + "").padStart(5)
+      + ", \"pur\":" + (this.pur.get() + "").padStart(5)
+      + ", \"par\":" + (this.par.get() + "").padStart(5)
+      + ", \"mel\":" + (this.mel.get() + "").padStart(5)
+      + ", \"sol\":" + (this.sol.get() + "").padStart(5)
+      + ", \"hp\":" + (this.hp.get() + "").padStart(5)
+      + ", \"type\":" + ((itemTypeNames[this.type.get()] || "NONE") + "").padStart(10)
+      + ", \"max_dura\":" + (this.max_dura.get() + "").padStart(5)
+      + ", \"dura\":" + (this.dura.get() + "").padStart(5)
+      + "}";
   }
 }
 
@@ -461,6 +502,15 @@ class Area  {
 
     this.setupSpawns(this, this.map_file);
 
+  }
+
+  toString() {
+    var str = "{\"name\":\"" + this.name + "\", \"creatures\":[\n";
+    this.creatures.forEach(obj => { if (obj.name.endsWith("door")) return; str += "  " + obj + ",\n"; });
+    str+"], \"spawns\":[";
+    this.spawns.forEach(obj => { if (obj.isBlank || obj.name.endsWith("door")) return; str += "  " + obj + ",\n"; });
+    str+"]}";
+    return str;
   }
 
   setupSpawns(area, tfile) {
@@ -641,7 +691,21 @@ class Creature {
       }
     }
 
-    this.hp = new UInt16(bin, this.offset_in_file + 0x32);
+    this.str = new UInt8( bin, this.offset_in_file + 0x24);
+    this.spd = new UInt8( bin, this.offset_in_file + 0x25);
+    this.def = new UInt8( bin, this.offset_in_file + 0x26);
+    this.bal = new UInt8( bin, this.offset_in_file + 0x27);
+    this.sla = new UInt8( bin, this.offset_in_file + 0x28);
+    this.smh = new UInt8( bin, this.offset_in_file + 0x29);
+    this.pir = new UInt8( bin, this.offset_in_file + 0x2a);
+    this.spr = new UInt8( bin, this.offset_in_file + 0x2b);
+    this.foc = new UInt8( bin, this.offset_in_file + 0x2c);
+    this.ham = new UInt8( bin, this.offset_in_file + 0x2d);
+    this.pur = new UInt8( bin, this.offset_in_file + 0x2e);
+    this.par = new UInt8( bin, this.offset_in_file + 0x2f);
+    this.mel = new UInt8( bin, this.offset_in_file + 0x30);
+    this.sol = new UInt8( bin, this.offset_in_file + 0x31);
+    this.hp  = new UInt16(bin, this.offset_in_file + 0x32);
 
     area[this.name] = this;
 
@@ -678,12 +742,25 @@ class Creature {
   }
 
   toString() {
-    return "{\"name\":\""+this.name + "\""
+    return "{\"name\":\""+(this.name + "\"").padEnd(22)
+      + ", \"str\":" + (this.str.get() + "").padStart(5)
+      + ", \"spd\":" + (this.spd.get() + "").padStart(5)
+      + ", \"def\":" + (this.def.get() + "").padStart(5)
+      + ", \"bal\":" + (this.bal.get() + "").padStart(5)
+      + ", \"sla\":" + (this.sla.get() + "").padStart(5)
+      + ", \"smh\":" + (this.smh.get() + "").padStart(5)
+      + ", \"pir\":" + (this.pir.get() + "").padStart(5)
+      + ", \"spr\":" + (this.spr.get() + "").padStart(5)
+      + ", \"foc\":" + (this.foc.get() + "").padStart(5)
+      + ", \"ham\":" + (this.ham.get() + "").padStart(5)
+      + ", \"pur\":" + (this.pur.get() + "").padStart(5)
+      + ", \"par\":" + (this.par.get() + "").padStart(5)
+      + ", \"mel\":" + (this.mel.get() + "").padStart(5)
+      + ", \"sol\":" + (this.sol.get() + "").padStart(5)
+      + ", \"hp\":" + (this.hp.get() + "").padStart(5)
       + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
       + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
-      + ",\"message\":\"" + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + CREATURE_SIZE), 4) + "\""
-      + ",\"isDoor\":" + this.isDoor + "\"" 
-      + ",\"entityStateData\":\"" + this.entityStates + "}";
+      + ",\"isDoor\":" + this.isDoor + "\"}";
   }
 
   set(source) {
@@ -702,8 +779,6 @@ class Creature {
 for (var logo_index in logo_files) {
   areas.push(new Area(parseInt(logo_index), logo_files[logo_index]));
 }
-
-//var creatureCountIndex = [];
 
 class Spawn {
   constructor(area, tfile, offset, offset_in_file, index) {
@@ -736,13 +811,8 @@ class Spawn {
       }
     }
 
-    this.creatureCountEntry = new UInt16(this.tfile.bin, this.offset_in_file + 0x02);
     var message = "";
     message = binToStr(this.tfile.bin.slice(this.offset_in_file, this.offset_in_file + SPAWN_ENTRY_SIZE));
-    //if (creatureCountIndex[this.creatureCountEntry.get()]) {
-    //  message = " Conflict? - creature index position " + this.creatureCountEntry.get() + " for " +this.creatureName+ " already occupied by " + creatureCountIndex[this.creatureCountEntry.get()];
-    //}
-    //creatureCountIndex[this.creatureCountEntry.get()] = this.creatureName;
 
     if (this.name != "other_stuff") {
       this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
@@ -767,7 +837,7 @@ class Spawn {
   }
 
   toReadableString() {
-    return "" + this.creatureCountEntry.get().toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name.padEnd(20)
+    return "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name.padEnd(20)
     + " "
     + (this.drop1Item ? "[drop "+(""+this.drop1Chance.get()).padStart(3)+"% " + this.drop1Item.name.padEnd(30) + "]": "".padEnd(42))
     + (this.drop2Item ? "[drop "+(""+this.drop2Chance.get()).padStart(3)+"% " + this.drop2Item.name.padEnd(30) + "]": "".padEnd(42))
@@ -776,16 +846,13 @@ class Spawn {
   }
 
   toString() {
-    return "\"spawn_" + this.index.toString(16) + "\":{\"chance\":" + this.chance.get() + ",\"name\":\"" + this.name + "\""
-      + ",\"entry\":" + this.creatureCountEntry.get() + ""
+    return "\"spawn_" + (this.index.toString(16) + "\"").padEnd(3) + ":{\"chance\":" + (""+this.chance.get()).padEnd(3) + ",\"name\":\"" + (this.name + "\"").padEnd(21)
       + (!this.mutexGroup.isNull() ? ",\"group\":" + this.mutexGroup.get(): "")
       + ",\"drop\":["
-      + (this.drop1Item ? "{\"chance\":" + this.drop1Chance.get() + ",\"name\":\"" + this.drop1Item.name + "\",\"itemId\":\"" + this.drop1 + "\"}" : "")
-      + (this.drop2Item ? ",{\"chance\":" + this.drop2Chance.get() + ",\"name\":\"" + this.drop2Item.name + "\",\"itemId\":\"" + this.drop2 + "\"}" : "")
-      + (this.drop3Item ? ",{\"chance\":" + this.drop3Chance.get() + ",\"name\":\"" + this.drop3Item.name + "\",\"itemId\":\"" + this.drop3 + "\"}" : "")
-      + "],"
-      + "\"message\":\""+message+"\""
-      + "},";
+      + (this.drop1Item ? ("{\"chance\":" + (this.drop1Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop1Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop1 + "\"}").padEnd(48) : "")
+      + (this.drop2Item ? (",{\"chance\":" + (this.drop2Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop2Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop2 + "\"}").padEnd(48) : "")
+      + (this.drop3Item ? (",{\"chance\":" + (this.drop3Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop3Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop3 + "\"}").padEnd(48) : "")
+      + "]}";
   }
 
   set(source) {
@@ -802,6 +869,15 @@ class Spawn {
   }
 }
 
+function fullJSON() {
+  var str = "{\"items\":[\n";
+  items.forEach(obj => str += " " + obj + ",\n");
+  str+="], \"areas\":[";
+  areas.forEach(obj => { if (!obj.name || obj.name.endsWith("door")) return; str += " " + obj + ",\n"; });
+  str+="]}";
+  return str;
+}
+
 function setup(FDAT) {
   
   console.log("\n** Item info dump");
@@ -814,8 +890,9 @@ function setup(FDAT) {
     areas[i].setup(FDAT);
   }
 
-  //console.log("\n** Creature count index");
-  //console.log(JSON.stringify(creatureCountIndex));
+  console.log("\n** JSON dump");
+  console.log(fullJSON());
+
 }
 
 module.exports = {

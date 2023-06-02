@@ -314,3 +314,22 @@ global.item_137_soul_pod_53_sp = 0x137;
 global.item_138_soul_pod_29_sp = 0x138;
 global.item_139_soul_pod_14_sp = 0x139;
 
+global.WEAPON = 6;
+global.TWO_HANDED = 9
+global.HELMET = 0;
+global.ARMOR = 1;
+global.FULL_ARMOR = 10;
+global.GAUNTLET = 2;
+global.BOOTS=3;
+global.SHIELD=7;
+global.RING=4;
+global.BRACELET=8;
+global.AMULET=5;
+
+global.itemTypeNames = {6:"WEAPON",9:"TWO_HANDED",0:"HELMET",1:"ARMOR",0:"FULL_ARMOR",2:"GAUNTLET",3:"BOOTS",7:"SHIELD",4:"RING",8:"BRACELET",5:"AMULET"};
+
+
+global.GAME_DATA = {}
+;
+
+
