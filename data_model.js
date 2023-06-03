@@ -386,6 +386,27 @@ class ItemData  {
   setup(FDAT) {
     this.map_file = FDAT.files[ITEM_DATA_PART_FILE_INDEX];
 
+    //0 ff
+    //1 2=valid 8=unused
+    //2 price in shop
+    this.price = new UInt8(this.map_file.bin, this.offset_in_file + 0x02);
+    //3 4 5 image or model
+    this.model1 = new UInt8(this.map_file.bin, this.offset_in_file + 0x03);
+    this.model2 = new UInt8(this.map_file.bin, this.offset_in_file + 0x04);
+    this.model3 = new UInt8(this.map_file.bin, this.offset_in_file + 0x05);
+    //6 what? status?
+
+    //7-13 not serious data
+    this.notSerious1 = new UInt8(this.map_file.bin, this.offset_in_file + 0x07);
+    this.notSerious2 = new UInt8(this.map_file.bin, this.offset_in_file + 0x08);
+    this.notSerious3 = new UInt8(this.map_file.bin, this.offset_in_file + 0x09);
+    this.notSerious4 = new UInt8(this.map_file.bin, this.offset_in_file + 0x0a);
+    this.notSerious5 = new UInt8(this.map_file.bin, this.offset_in_file + 0x0b);
+    this.notSerious6 = new UInt8(this.map_file.bin, this.offset_in_file + 0x0c);
+    this.notSerious7 = new UInt8(this.map_file.bin, this.offset_in_file + 0x0d);
+
+    //0e,0f zeros
+
     this.str = new UInt8(this.map_file.bin, this.offset_in_file + 0x10);
     this.spd = new UInt8(this.map_file.bin, this.offset_in_file + 0x11);
     this.def = new UInt8(this.map_file.bin, this.offset_in_file + 0x12);
@@ -405,6 +426,7 @@ class ItemData  {
     this.type     = new UInt8(this.map_file.bin, this.offset_in_file + 0x26);
     this.max_dura = new UInt8(this.map_file.bin, this.offset_in_file + 0x27);
     this.dura     = new UInt8(this.map_file.bin, this.offset_in_file + 0x28);
+    //29 2a 2b - zeros
 
     console.log(this.toReadableString());
   }

@@ -35,47 +35,7 @@ function arrayCopy(origin, dest, offset, length) {
 	}
 }
 
-//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.blood_slime1.bin, 0, 0xc0);
-//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.dark_spider1.bin, 0, 0xc0);
-//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.demon_bat1.bin, 0, 0xc0);
-//arrayCopy(human_world_solitary_region.01_acid_slime.bin, human_world_solitary_region.skeleton1.bin, 0, 0xc0);//93);
-
-//human_world_solitary_region["01_acid_slime"].hp.set(0x0001);
-//human_world_solitary_region["0e_acid_slime"].hp.set(0x0001);
-
-//human_world_solitary_region["00_dark_spider"].blank();
-//human_world_solitary_region["02_blood_slime"].blank();
-//human_world_solitary_region["06_skeleton"].blank();
-//human_world_solitary_region["08_dark_spider"].blank();
-//human_world_solitary_region["09_demon_bat"].blank();
-//human_world_solitary_region["0a_skeleton"].blank();
-//human_world_solitary_region["0c_demon_bat"].blank();
-//human_world_solitary_region["0d_dark_spider"].blank();
-
-//human_world_solitary_region["01_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
-//human_world_solitary_region["0e_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
-
-/*human_world_solitary_region.spawns[0].drop1.set(0x10a);
-human_world_solitary_region.spawns[0].drop2.set(0xffff);
-human_world_solitary_region.spawns[0].drop3.set(0xffff);
-human_world_solitary_region.spawns[0].drop1Chance.set(0x64);
-*/
-
-//for (var a in areas) {
-//	var area = areas[a];
-//	//	if (area.name == "human_world_cursed_region") {continue;|
-//	if (!area.spawns) {
-//		continue;
-//	}
-//	for (var i=0; i<SPAWN_ENTRIES_COUNT; i++) {
-//		if (!area.spawns[i].chance.isNull() &&
-//			!area.spawns[i].name.endsWith("door")) {
-//			area.spawns[i].blank();
-//		}
-//	}
-//}
-
-var items = [
+var goodItems = [
 item_109_endless_amulet,
 item_58_fortune_great_helm,
 item_45_fiery_bow_gun,
@@ -230,40 +190,33 @@ item_138_soul_pod_29_sp,
 item_139_soul_pod_14_sp];
 
 function forEachCreatureSpawn(spawn, area, index) {
-// Blank all creature spawns
-//	if (area.name == "human_world_cursed_region") {return;
-//	area.spawns[i].blank();
+	// Blank all creature spawns
+	//	if (area.name == "human_world_cursed_region") {return;
+	//	area.spawns[i].blank();
 
+	// Spawning cunes
 	spawn.chance.set(100);
-	if (items.length) {
-		if (area.name != "human_world_solitary_region") return;
-		spawn.drop1Chance.set(100);
-		spawn.drop2Chance.set(0);
-		spawn.drop3Chance.set(0);
-		spawn.drop1.set(items.shift());
-		spawn.drop2.set(item_139_soul_pod_14_sp);
-		spawn.drop3.set(item_139_soul_pod_14_sp);
-	}
+	spawn.drop1Chance.set(100);
+	spawn.drop1.set(item_10a_cune);
+
+	// Set good items to spawn early in the game
+	//	spawn.chance.set(100);
+	//	if (goodItems.length) {
+	//		if (area.name != "human_world_solitary_region") return;
+	//		spawn.drop1Chance.set(100);
+	//		spawn.drop2Chance.set(0);
+	//		spawn.drop3Chance.set(0);
+	//		spawn.drop1.set(items.shift());
+	//		spawn.drop2.set(item_139_soul_pod_14_sp);
+	//		spawn.drop3.set(item_139_soul_pod_14_sp);
+	//	}
 }
 
-function forEachSpawn(spawn, area, index) {
-	if (!area.spawns[i].chance.isNull() &&
-		!area.spawns[i].name.endsWith("door")) {
-		forEachCreatureSpawn(spawn, area, index);
-	}
+function forEachValidCreature(creature, area, index) {
+	creature.hp.set(1);
 }
 
-/*
-for (var a in areas) {
-	var area = areas[a];
-	if (!area.spawns) {
-		continue;
-	}
-	for (var i=0; i<SPAWN_ENTRIES_COUNT; i++) {
-		forEachSpawn(area.spawns[i], area, i);
-	}
-}
-*/
+
 
 //for (var i = 0; i < SPAWN_ENTRIES_COUNT; i++) {
 //	var spawn = human_world_cursed_region.spawns[i];
@@ -275,13 +228,84 @@ for (var a in areas) {
 	//.set(human_world_solitary_region.spawns[0]);
 	//human_world_solitary_region.spawns[i].mutexGroup.set(i+20);
 
+/*
+// copy magical sword into short sword
 binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin, 
 	ITEM_DATA_START_IN_FILE+ITEM_DATA_ENTRY_SIZE*item_25_magical_bastard_sword, 
 	tfile.files[ITEM_DATA_PART_FILE_INDEX].bin,
 	ITEM_DATA_START_IN_FILE+ITEM_DATA_ENTRY_SIZE*item_0_short_sword,
 	ITEM_DATA_ENTRY_SIZE);
+*/
+
+global.items[item_c4_summoner_ring_of_fire].price.set(1);
+global.items[item_c5_summoner_ring_of_fire].price.set(2);
+global.items[item_c6_ring_of_fire_resist].price.set(3);
+global.items[item_c7_priest_ring_of_fire].price.set(4);
+global.items[item_c8_sorcerer_ring_of_fire].price.set(5);
+global.items[item_c9_summoner_ring_of_frost].price.set(6);
+global.items[item_ca_summoner_ring_of_frost].price.set(7);
+global.items[item_cb_balance_ring_of_frost].price.set(8);
+global.items[item_cc_priest_ring_of_frost].price.set(9);
+
+global.items[item_0_short_sword].model1.set(global.items[item_25_magical_bastard_sword].model1.get());
+global.items[item_0_short_sword].model2.set(global.items[item_25_magical_bastard_sword].model2.get());
+global.items[item_0_short_sword].model3.set(global.items[item_25_magical_bastard_sword].model3.get());
 
 global.items[item_0_short_sword].str.set(0xff);
+global.items[item_0_short_sword].spd.set(0xff);
+global.items[item_0_short_sword].def.set(0xff);
+global.items[item_0_short_sword].bal.set(0xff);
+global.items[item_0_short_sword].sla.set(0xff);
+global.items[item_0_short_sword].smh.set(0xff);
+global.items[item_0_short_sword].pir.set(0xff);
+global.items[item_0_short_sword].spr.set(0xff);
+global.items[item_0_short_sword].foc.set(0xff);
+global.items[item_0_short_sword].ham.set(0xff);
+global.items[item_0_short_sword].pur.set(0xff);
+global.items[item_0_short_sword].par.set(0xff);
+global.items[item_0_short_sword].mel.set(0xff);
+global.items[item_0_short_sword].sol.set(0xff);
+
+//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.blood_slime1.bin, 0, 0xc0);
+//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.dark_spider1.bin, 0, 0xc0);
+//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.demon_bat1.bin, 0, 0xc0);
+//arrayCopy(human_world_solitary_region.01_acid_slime.bin, human_world_solitary_region.skeleton1.bin, 0, 0xc0);//93);
+
+//human_world_solitary_region["01_acid_slime"].hp.set(0x0001);
+//human_world_solitary_region["0e_acid_slime"].hp.set(0x0001);
+
+//human_world_solitary_region["00_dark_spider"].blank();
+//human_world_solitary_region["02_blood_slime"].blank();
+//human_world_solitary_region["06_skeleton"].blank();
+//human_world_solitary_region["08_dark_spider"].blank();
+//human_world_solitary_region["09_demon_bat"].blank();
+//human_world_solitary_region["0a_skeleton"].blank();
+//human_world_solitary_region["0c_demon_bat"].blank();
+//human_world_solitary_region["0d_dark_spider"].blank();
+
+//human_world_solitary_region["01_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
+//human_world_solitary_region["0e_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
+
+/*human_world_solitary_region.spawns[0].drop1.set(0x10a);
+human_world_solitary_region.spawns[0].drop2.set(0xffff);
+human_world_solitary_region.spawns[0].drop3.set(0xffff);
+human_world_solitary_region.spawns[0].drop1Chance.set(0x64);
+*/
+
+//for (var a in areas) {
+//	var area = areas[a];
+//	//	if (area.name == "human_world_cursed_region") {continue;|
+//	if (!area.spawns) {
+//		continue;
+//	}
+//	for (var i=0; i<SPAWN_ENTRIES_COUNT; i++) {
+//		if (!area.spawns[i].chance.isNull() &&
+//			!area.spawns[i].name.endsWith("door")) {
+//			area.spawns[i].blank();
+//		}
+//	}
+//}
+
 
 //human_world_solitary_region.spawns[0x37].set(human_world_solitary_region.spawns[0x38]);
 //human_world_solitary_region.spawns[0x38].set(human_world_solitary_region.spawns[0x39]);
@@ -317,6 +341,34 @@ human_world_solitary_region.spawns[2].drop1Chance.set(0x32); // blood slime 4
 human_world_solitary_region.spawns[8].chance.set(0x64); // slime 3
 human_world_solitary_region.spawns[2].chance.set(0x64); // blood slime 4
 */
+
+function forEachSpawn(spawn, area, index) {
+	if (!spawn.chance.isNull() &&
+		!spawn.name.endsWith("door")) {
+		forEachCreatureSpawn(spawn, area, index);
+	}
+}
+
+function forEachCreature(creature, area, index) {
+	if (!creature.isBlank) {
+		forEachValidCreature(creature, area, index);
+	}
+}
+
+for (var a in areas) {
+	var area = areas[a];
+	if (!area.spawns) {
+		continue;
+	}
+	for (var i=0; i<SPAWN_ENTRIES_COUNT; i++) {
+		forEachSpawn(area.spawns[i], area, i);
+	}
+	for (var i=0; i<CREATURE_COUNT; i++) {
+		forEachCreature(area.creatures[i], area, i);
+	}
+
+}
+
 
 let changeSet = {};
 //let changes44 = {};

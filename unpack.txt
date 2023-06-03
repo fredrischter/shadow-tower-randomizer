@@ -11,16 +11,6 @@ C:\Users\fred\Desktop\shadow-tower-randomizer>rm C:\Users\fred\Downloads\Reverse
 
 C:\Users\fred\Desktop\shadow-tower-randomizer>C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\dumpsxiso.exe C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st_original.bin -x C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st -s C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st.xml  1>dumpsxiso.out 
 
-C:\Users\fred\Desktop\shadow-tower-randomizer>REM call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\MO.T 
-
-C:\Users\fred\Desktop\shadow-tower-randomizer>REM call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\STAT.T 
-
-C:\Users\fred\Desktop\shadow-tower-randomizer>REM call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\TALKMSG.T 
-
-C:\Users\fred\Desktop\shadow-tower-randomizer>REM call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\CRT.T 
-
-C:\Users\fred\Desktop\shadow-tower-randomizer>REM call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\EQUIP.T 
-
 C:\Users\fred\Desktop\shadow-tower-randomizer>call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T 
 
 > shadow-tower-randomizer@1.0.0 disassemble
