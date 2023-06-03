@@ -237,6 +237,7 @@ binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin,
 	ITEM_DATA_ENTRY_SIZE);
 */
 
+global.items[item_58_fortune_great_helm].price.set(1);
 global.items[item_c4_summoner_ring_of_fire].price.set(1);
 global.items[item_c5_summoner_ring_of_fire].price.set(2);
 global.items[item_c6_ring_of_fire_resist].price.set(3);
@@ -247,9 +248,12 @@ global.items[item_ca_summoner_ring_of_frost].price.set(7);
 global.items[item_cb_balance_ring_of_frost].price.set(8);
 global.items[item_cc_priest_ring_of_frost].price.set(9);
 
-global.items[item_0_short_sword].model1.set(global.items[item_25_magical_bastard_sword].model1.get());
-global.items[item_0_short_sword].model2.set(global.items[item_25_magical_bastard_sword].model2.get());
-global.items[item_0_short_sword].model3.set(global.items[item_25_magical_bastard_sword].model3.get());
+
+global.items[item_0_short_sword].max_dura.set(60);
+global.items[item_0_short_sword].dura.set(50);
+global.items[item_0_short_sword].type.set(TWO_HANDED);
+//global.items[item_0_short_sword].model.set(global.items[item_25_magical_bastard_sword].model.get());
+//global.items[item_0_short_sword].image.set(global.items[item_c7_priest_ring_of_fire].image.get());
 
 global.items[item_0_short_sword].str.set(0xff);
 global.items[item_0_short_sword].spd.set(0xff);
@@ -383,13 +387,17 @@ for (var i in tfileOriginal.files) {
 	var changedPart = tfile.files[i];
 	let changes = {};
 	let filePath = originalPart.fileName;
-	changeSet[filePath] = changes;
+	var anyChange = false;
 	for (var k=0; k<originalPart.bin.length ; k++) {
 		var originalValue = originalPart.originalBin[k];
 		if (changedPart.bin[k] != originalValue) {
-			console.log("Change " + k.toString(16) + " " + originalValue.toString(16) + " to " + changedPart.bin[k].toString(16));
+			//console.log("Change " + k.toString(16) + " " + originalValue.toString(16) + " to " + changedPart.bin[k].toString(16));
 			changes[k.toString(16)] = changedPart.bin[k].toString(16);
+			anyChange = true;
 		}
+	}
+	if (anyChange) {
+		changeSet[filePath] = changes;
 	}
 }
 
