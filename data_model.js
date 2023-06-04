@@ -386,6 +386,13 @@ class ItemData  {
   setup(FDAT) {
     this.map_file = FDAT.files[ITEM_DATA_PART_FILE_INDEX];
 
+    // Identifying 
+    //0x03 
+    //0x06 status?
+    //0x07-0x0d
+    //
+    //0x20-0x23
+
     //0 ff
     //1 2=valid 8=unused
     //2 price in shop
@@ -396,7 +403,7 @@ class ItemData  {
     this.image = new UInt8(this.map_file.bin, this.offset_in_file + 0x05);
     //6 what? status?
 
-    //7-13 not serious data
+    //7-0d not serious data
 
     //0e,0f zeros
 
@@ -415,6 +422,12 @@ class ItemData  {
     this.mel = new UInt8(this.map_file.bin, this.offset_in_file + 0x1c);
     this.sol = new UInt8(this.map_file.bin, this.offset_in_file + 0x1d);
     this.hp  = new UInt16(this.map_file.bin, this.offset_in_file + 0x1e);
+
+    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x20);
+    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x21);
+    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x22);
+    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x23);
+    this.weight  = new UInt16(this.map_file.bin, this.offset_in_file + 0x24);
 
     this.type     = new UInt8(this.map_file.bin, this.offset_in_file + 0x26);
     this.max_dura = new UInt8(this.map_file.bin, this.offset_in_file + 0x27);

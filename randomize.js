@@ -197,8 +197,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 	// Spawning cunes
 	spawn.chance.set(100);
 	spawn.drop1Chance.set(100);
-	spawn.drop1.set(item_10a_cune);
-
+	spawn.drop1.set(item_c4_summoner_ring_of_fire);
 	// Set good items to spawn early in the game
 	//	spawn.chance.set(100);
 	//	if (goodItems.length) {
@@ -228,34 +227,33 @@ function forEachValidCreature(creature, area, index) {
 	//.set(human_world_solitary_region.spawns[0]);
 	//human_world_solitary_region.spawns[i].mutexGroup.set(i+20);
 
-/*
 // copy magical sword into short sword
-binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin, 
+/*binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin, 
 	ITEM_DATA_START_IN_FILE+ITEM_DATA_ENTRY_SIZE*item_25_magical_bastard_sword, 
 	tfile.files[ITEM_DATA_PART_FILE_INDEX].bin,
 	ITEM_DATA_START_IN_FILE+ITEM_DATA_ENTRY_SIZE*item_0_short_sword,
 	ITEM_DATA_ENTRY_SIZE);
-*/
 
-global.items[item_58_fortune_great_helm].price.set(1);
-global.items[item_c4_summoner_ring_of_fire].price.set(1);
-global.items[item_c5_summoner_ring_of_fire].price.set(2);
+// copy dead spirit ring into ring of fire
+binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin, 
+	ITEM_DATA_START_IN_FILE+ITEM_DATA_ENTRY_SIZE*item_e4_ring_of_dead_spirit, 
+	tfile.files[ITEM_DATA_PART_FILE_INDEX].bin,
+	ITEM_DATA_START_IN_FILE+ITEM_DATA_ENTRY_SIZE*item_c4_summoner_ring_of_fire,
+	ITEM_DATA_ENTRY_SIZE);*/
+
+/*global.items[item_58_fortune_great_helm].price.set(1);
 global.items[item_c6_ring_of_fire_resist].price.set(3);
 global.items[item_c7_priest_ring_of_fire].price.set(4);
-global.items[item_c8_sorcerer_ring_of_fire].price.set(5);
-global.items[item_c9_summoner_ring_of_frost].price.set(6);
-global.items[item_ca_summoner_ring_of_frost].price.set(7);
-global.items[item_cb_balance_ring_of_frost].price.set(8);
-global.items[item_cc_priest_ring_of_frost].price.set(9);
+*/
 
-
-global.items[item_0_short_sword].max_dura.set(60);
-global.items[item_0_short_sword].dura.set(50);
-global.items[item_0_short_sword].type.set(TWO_HANDED);
+//global.items[item_0_short_sword].max_dura.set(60);
+//global.items[item_0_short_sword].dura.set(50);
+//global.items[item_0_short_sword].type.set(TWO_HANDED);
 //global.items[item_0_short_sword].model.set(global.items[item_25_magical_bastard_sword].model.get());
 //global.items[item_0_short_sword].image.set(global.items[item_c7_priest_ring_of_fire].image.get());
+global.items[item_0_short_sword].weight.set(0x2ff);
 
-global.items[item_0_short_sword].str.set(0xff);
+/*global.items[item_0_short_sword].str.set(0xff);
 global.items[item_0_short_sword].spd.set(0xff);
 global.items[item_0_short_sword].def.set(0xff);
 global.items[item_0_short_sword].bal.set(0xff);
@@ -268,7 +266,7 @@ global.items[item_0_short_sword].ham.set(0xff);
 global.items[item_0_short_sword].pur.set(0xff);
 global.items[item_0_short_sword].par.set(0xff);
 global.items[item_0_short_sword].mel.set(0xff);
-global.items[item_0_short_sword].sol.set(0xff);
+global.items[item_0_short_sword].sol.set(0xff);*/
 
 //arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.blood_slime1.bin, 0, 0xc0);
 //arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.dark_spider1.bin, 0, 0xc0);
