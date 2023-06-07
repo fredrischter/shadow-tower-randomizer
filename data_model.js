@@ -1,5 +1,7 @@
 'use strict';
 
+const constants = require('./constants');
+
 // area files
 var logo_files = {
   1: "shadow_tower_part1",
@@ -373,6 +375,33 @@ global.ITEM_DATA_PART_FILE_OFFSET_START = 0x138b800;
 global.ITEM_DATA_START_OFFSET = 0x1397290;
 global.ITEM_DATA_ENTRY_SIZE = 0x2C; // 44
 
+function setAttributeValue(value) {
+  this.set(value * 0x10 + this.getAttributeType());
+}
+function setAttributeType(value) {
+  this.set(this.getAttributeValue() * 0x10 + value);
+}
+function getAttributeValue() {
+  return Math.floor(this.get()/0x10);
+}
+function getAttributeType() {
+  return this.get()%0x10;
+}
+function getReadableAttributeValue() {
+  switch(this.getAttributeType()) {
+    case ATTR_LIGHTING: return ATTR_LIGHTING_BY_ID[this.getAttributeValue()];
+    case ATTR_CRITICAL: return ATTR_CRITICAL_BY_ID[this.getAttributeValue()];
+    default: return "0x"+this.getAttributeValue().toString(16);
+  }
+}
+function getReadableAttributeType() {
+  return ATTR_BY_ID[this.getAttributeType()];
+}
+
+global.attribute = function(value, type) {
+  return value * 0x10 + type;
+}
+
 class ItemData  {
   constructor(itemIndex, lineSplit, line) {
     this.itemIndex = itemIndex;
@@ -423,10 +452,24 @@ class ItemData  {
     this.sol = new UInt8(this.map_file.bin, this.offset_in_file + 0x1d);
     this.hp  = new UInt16(this.map_file.bin, this.offset_in_file + 0x1e);
 
-    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x20);
-    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x21);
-    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x22);
-    //this.u  = new UInt16(this.map_file.bin, this.offset_in_file + 0x23);
+
+    this.attribute1 = new UInt8(this.map_file.bin, this.offset_in_file + 0x20);
+    this.attribute1.setAttributeValue = setAttributeValue;
+    this.attribute1.setAttributeType = setAttributeType;
+    this.attribute1.getAttributeValue = getAttributeValue;
+    this.attribute1.getAttributeType = getAttributeType;
+    this.attribute1.getReadableAttributeValue = getReadableAttributeValue;
+    this.attribute1.getReadableAttributeType = getReadableAttributeType;
+    this.attribute2 = new UInt8(this.map_file.bin, this.offset_in_file + 0x21);
+    this.attribute2.setAttributeValue = setAttributeValue;
+    this.attribute2.setAttributeType = setAttributeType;
+    this.attribute2.getAttributeValue = getAttributeValue;
+    this.attribute2.getAttributeType = getAttributeType;
+    this.attribute2.getReadableAttributeValue = getReadableAttributeValue;
+    this.attribute2.getReadableAttributeType = getReadableAttributeType;
+    this.elementalType  = new UInt8(this.map_file.bin, this.offset_in_file + 0x22);
+    this.elementalPower = new UInt8(this.map_file.bin, this.offset_in_file + 0x23);
+
     this.weight  = new UInt16(this.map_file.bin, this.offset_in_file + 0x24);
 
     this.type     = new UInt8(this.map_file.bin, this.offset_in_file + 0x26);
@@ -464,6 +507,14 @@ class ItemData  {
       + ", \"type\":" + ((itemTypeNames[this.type.get()] || "NONE") + "").padStart(10)
       + ", \"max_dura\":" + (this.max_dura.get() + "").padStart(5)
       + ", \"dura\":" + (this.dura.get() + "").padStart(5)
+      + ", \"weight\":" + (""+ this.weight.get() /*(Math.ceil(this.weight.get()*2.2)/10) 1/10 kg to pounds */).padStart(4)
+
+      + (this.attribute1.get() ? ", \"attribute1\": attribute(" + this.attribute1.getReadableAttributeValue() + "," + this.attribute1.getReadableAttributeType() + ")": "").padEnd(68)
+      + (this.attribute2.get() ? ", \"attribute2\": attribute(" + this.attribute2.getReadableAttributeValue() + "," + this.attribute2.getReadableAttributeType() + ")": "").padEnd(68)
+      + (this.elementalType.get() ? 
+           (", \"elementalType\":" + (ELEMENTS_BY_ID[this.elementalType.get()]?ELEMENTS_BY_ID[this.elementalType.get()]:this.elementalType.get())
+        + ", \"elementalPower\":" + this.elementalPower.get()) : "").padEnd(70)
+
       + "}";
   }
 }
@@ -496,6 +547,7 @@ global.SPAWN_ENTRIES_COUNT = 198;
 class Area  {
   constructor(logo_index, name) {
     this.logo_index = logo_index;
+// 0 - empty
 // 1 - RTIM_texture_map_name
 // 2 - Maybe_RTIM_texture_for_tile_set
 // 3 - MIPS_machine_code_map_script
@@ -884,9 +936,11 @@ class Spawn {
   }
 
   set(source) {
-    for (var i = 0; i < SPAWN_ENTRY_SIZE; i++) {
-      this.tfile.bin[this.offset_in_file + i] = source.tfile.bin[source.offset_in_file + i];
-    }
+    binCopy(source.tfile.bin, source.offset_in_file, this.tfile.bin, this.offset_in_file, SPAWN_ENTRY_SIZE);
+  }
+
+  swap(source) {
+    binSwap(source.tfile.bin, source.offset_in_file, this.tfile.bin, this.offset_in_file, SPAWN_ENTRY_SIZE);
   }
 
   blank() {

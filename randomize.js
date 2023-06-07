@@ -216,7 +216,6 @@ function forEachValidCreature(creature, area, index) {
 }
 
 
-
 //for (var i = 0; i < SPAWN_ENTRIES_COUNT; i++) {
 //	var spawn = human_world_cursed_region.spawns[i];
 //	if (!spawn.chance.isNull() && !spawn.isBlank && !spawn.name.endsWith("door")) {
@@ -251,7 +250,15 @@ global.items[item_c7_priest_ring_of_fire].price.set(4);
 //global.items[item_0_short_sword].type.set(TWO_HANDED);
 //global.items[item_0_short_sword].model.set(global.items[item_25_magical_bastard_sword].model.get());
 //global.items[item_0_short_sword].image.set(global.items[item_c7_priest_ring_of_fire].image.get());
-global.items[item_0_short_sword].weight.set(0x2ff);
+//global.items[item_0_short_sword].weight.set(0x2ff);
+
+/* set some attributes for equips
+global.items[item_c4_summoner_ring_of_fire].attribute1.set(attribute(0xf,ATTR_HP_RECOVERY));
+global.items[item_c4_summoner_ring_of_fire].attribute2.set(attribute(ATTR_CRITICAL_20pc,ATTR_CRITICAL));
+global.items[item_c4_summoner_ring_of_fire].elementalType.set(ELEMENT_HOLY);
+global.items[item_c4_summoner_ring_of_fire].elementalPower.set(130);
+global.items[item_0_short_sword].attribute1.set(attribute(ATTR_CRITICAL_20pc,ATTR_CRITICAL));
+*/
 
 /*global.items[item_0_short_sword].str.set(0xff);
 global.items[item_0_short_sword].spd.set(0xff);
@@ -284,6 +291,13 @@ global.items[item_0_short_sword].sol.set(0xff);*/
 //human_world_solitary_region["0a_skeleton"].blank();
 //human_world_solitary_region["0c_demon_bat"].blank();
 //human_world_solitary_region["0d_dark_spider"].blank();
+
+//trying to swap door
+//human_world_solitary_region["07_door"].swap(human_world_solitary_region["0b_door"]);
+
+//swapping doors for no result
+//human_world_solitary_region.spawns[0x38].swap(human_world_solitary_region.spawns[0x3b]);
+//human_world_solitary_region.spawns[0x39].swap(human_world_solitary_region.spawns[0x3a]);
 
 //human_world_solitary_region["01_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
 //human_world_solitary_region["0e_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
