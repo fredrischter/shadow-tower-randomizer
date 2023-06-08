@@ -334,15 +334,28 @@ var coll2 = human_world_solitary_region.collectables[1];
 //coll.bin[coll.offset_in_file + 0x0d] = coll.bin[coll.offset_in_file + 0x0d] + 6; // y
 //coll.bin[coll.offset_in_file + 0x0f] = coll.bin[coll.offset_in_file + 0x0f] + 6; // rotation y
 
-for (var i=0; i<10; i++) {
+//42 243000-253000.T
+//1	2,372,696	243458
+//44 255800-25e800.T
+//1	2,471,504	25B650
+//1	2,479,240	25D488
+
+//42 243000-253000.T
+//1	2,372,468	243374
+//44 255800-25e800.T
+//1	2,479,264	25D4A0
+//1	3,005,516	2DDC4C
+
+/*for (var i=0; i<10; i++) {
 	var j = i + 0xa;
 	human_world_solitary_region.collectables[j].set(coll);
 	human_world_solitary_region.collectables[j].y.set(coll.y.get()+i*20);
-}
+}*/
 
-//coll.bin[coll.offset_in_file + 0xa1] = coll.bin[coll.offset_in_file + 0xa1] + 60; // rotation z
-
-//coll.bin[coll.offset_in_file + 0xa3] = coll.bin[coll.offset_in_file + 0xa3] + 60; // rotation z
+coll.y.set(0x80fc);
+coll.bin[coll.offset_in_file + 0x04] = coll2.bin[coll2.offset_in_file + 0x04];
+coll.bin[coll.offset_in_file + 0x05] = coll2.bin[coll2.offset_in_file + 0x05];
+coll.bin[coll.offset_in_file + 0x06] = coll2.bin[coll2.offset_in_file + 0x06] + 1;
 
 //binSwap(coll.bin, coll.offset_in_file + 2 +10, coll2.bin, coll2.offset_in_file + 2 +10, 22 -10);
 

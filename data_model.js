@@ -547,20 +547,22 @@ class Area  {
 // 0 - empty
 // 1 - RTIM_texture_map_name
 // 2 - Maybe_RTIM_texture_for_tile_set
+    this.tiles_index = logo_index+1; // 42
 // 3 - MIPS_machine_code_map_script
-    this.map_index = logo_index+3;
 // 4 - Maybe_Customized_TMD_file_collisions
+    this.map_index = logo_index+3; // 44
 // 5 - Maybe_Customized_TMD_file_tiles
 // 6 - VH_file_ADPCM_audio_PS1
 // 7 - VB_file_ADPCM_audio_PS1
 // 8 - map_database_entity_class_etc
 // 9 - the_tilemap
-// 10 - another_customized_TMD_object_models
+// ? - another_customized_TMD_object_models
     this.name = name;
     global[name] = this;
   }
 
   setup(FDAT) {
+    this.tiles_file = FDAT.files[this.tiles_index];
     this.map_file = FDAT.files[this.map_index];
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
@@ -586,6 +588,17 @@ class Area  {
       var offset_in_file = 16 + COLLECTABLE_START_OFFSET + COLLECTABLE_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
       this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i));
+    }
+
+    // to do to fix this workaround 0x10
+    var TILE_START_OFFSET = 0x00;
+    this.tiles = [];
+    console.log("\nTiles");
+    console.log("idx  pos(x   ,z   ,y   ,rot )");
+    for (var i = 0; i<TILE_COUNT; i++) {
+      var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
+      var absoluteIndex = this.tiles_file.startOffset + offset_in_file;
+      this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i));
     }
 
     this.setupSpawns(this, this.map_file);
@@ -752,9 +765,9 @@ class Collectable {
 
     this.type = new UInt16(this.bin, this.offset_in_file + 0x00);
     this.x = new UInt16(this.bin, this.offset_in_file + 0x09);
-    this.z = new UInt16(this.bin, this.offset_in_file + 0x0b);
-    this.y = new UInt16(this.bin, this.offset_in_file + 0x0d);
-    this.rotation_y = new UInt16(this.bin, this.offset_in_file + 0x0f);
+    this.y = new UInt16(this.bin, this.offset_in_file + 0x0b);
+    this.z = new UInt16(this.bin, this.offset_in_file + 0x0d);
+    this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x0f);
 
     this.name = (itemData[this.type.get()] ? itemData[this.type.get()].name : "bad_id");
 
@@ -768,7 +781,7 @@ class Collectable {
      + this.name.padEnd(40)
      + this.offset_in_file.toString(16).padStart(4)
      + this.absoluteIndex.toString(16).padStart(10)
-     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_y.get().toString(16).padStart(4)+") "
+     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_z.get().toString(16).padStart(4)+") "
      + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + COLLECTABLE_SIZE), 4);
     return text;
   }
@@ -778,7 +791,7 @@ class Collectable {
       + ", \"x\":" + (this.x.get() + "").padStart(5)
       + ", \"y\":" + (this.y.get() + "").padStart(5)
       + ", \"z\":" + (this.z.get() + "").padStart(5)
-      + ", \"rotation_y\":" + (this.rotation_y.get() + "").padStart(5)
+      + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)
       + "}";
   }
 
@@ -793,6 +806,61 @@ class Collectable {
   blank() {
     binSet(this.bin, this.offset_in_file, COLLECTABLE_SIZE, 0x00);
     binSet(this.bin, this.offset_in_file, 0x2, 0xff);
+  }
+}
+
+global.TILE_SIZE = 0x0c;
+global.TILE_COUNT = 0x200;
+
+class Tile {
+  constructor(bin, area, offset_in_file, absoluteIndex, tileIndex) {
+    this.bin = bin;
+    this.area = area;
+    this.offset_in_file = offset_in_file;
+    this.absoluteIndex = absoluteIndex;
+    this.tileIndex = tileIndex;
+
+    this.isBlank = this.bin[this.offset_in_file + 0x08]==0xff;
+
+    this.x = new UInt8(this.bin, this.offset_in_file + 0x08);
+    this.y = new UInt8(this.bin, this.offset_in_file + 0x09);
+    this.z = new UInt8(this.bin, this.offset_in_file + 0x0a);
+
+    if (!this.isBlank) {
+      console.log(this.toReadableString());
+    }
+  }
+
+  toReadableString() {
+    var text = "" + this.tileIndex.toString(16).padEnd(5)
+     //+ this.name.padEnd(40)
+     + this.offset_in_file.toString(16).padStart(4)
+     + this.absoluteIndex.toString(16).padStart(10)
+     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+") "
+     + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + TILE_SIZE), 4);
+    return text;
+  }
+
+  toString() {
+    return "{"/*"{\"name\":\""+(this.name + "\"").padEnd(40)
+      + ", \"x\":" + (this.x.get() + "").padStart(5)
+      + ", \"y\":" + (this.y.get() + "").padStart(5)
+      + ", \"z\":" + (this.z.get() + "").padStart(5)
+      + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)*/
+      + "}";
+  }
+
+  set(source) {
+    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, TILE_SIZE);
+  }
+
+  swap(source) {
+    binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, TILE_SIZE);
+  }
+
+  blank() {
+    binSet(this.bin, this.offset_in_file, TILE_SIZE, 0x00);
+    this.x.set(0xff);
   }
 }
 
