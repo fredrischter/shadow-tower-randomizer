@@ -583,25 +583,24 @@ class Area  {
     var COLLECTABLE_START_OFFSET = this.map_file.sizedMixStarts[4] - 0x10;//0x7bb4;
     this.collectables = [];
     console.log("\nCollectables");
-    console.log("idx  name                          offset_in_file    offset  pos(x   ,z   ,y   ,rot )   type     -------------------------------------------------------------------------------------");
+    console.log("idx  name                          offset_in_file    offset                                                                   type     ------ tile         -----  pos  x       y       z     rot -------------------  tileId");
     for (var i = 0; i<COLLECTABLE_COUNT; i++) {
       var offset_in_file = 16 + COLLECTABLE_START_OFFSET + COLLECTABLE_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
       this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i));
     }
 
-    // to do to fix this workaround 0x10
+    this.setupSpawns(this, this.map_file);
+
     var TILE_START_OFFSET = 0x00;
     this.tiles = [];
     console.log("\nTiles");
-    console.log("idx  pos(x   ,z   ,y   ,rot )");
+    console.log("idx                                                                     x       y       z     rot      tile xyz  ----");
     for (var i = 0; i<TILE_COUNT; i++) {
       var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
       var absoluteIndex = this.tiles_file.startOffset + offset_in_file;
       this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i));
     }
-
-    this.setupSpawns(this, this.map_file);
 
   }
 
@@ -619,6 +618,7 @@ class Area  {
   setupSpawns(area, tfile) {
     this.spawns = [];
     console.log("\nSpawn");
+    console.log("idx chance name                 drop1                                     drop2                                     drop3                                      chance typ ----- drop1 drop2 drop3 mx %1 %2 %2 -----------------------------");
 
     for (var i=0;i<SPAWN_ENTRIES_COUNT;i++) {
       var offset = i * SPAWN_ENTRY_SIZE;
@@ -764,10 +764,14 @@ class Collectable {
       this.bin[this.offset_in_file + 0x01]==0xff;
 
     this.type = new UInt16(this.bin, this.offset_in_file + 0x00);
+    this.tileX = new UInt8(this.bin, this.offset_in_file + 0x04);
+    this.tileY = new UInt8(this.bin, this.offset_in_file + 0x05);
+    this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x06);
     this.x = new UInt16(this.bin, this.offset_in_file + 0x09);
     this.y = new UInt16(this.bin, this.offset_in_file + 0x0b);
     this.z = new UInt16(this.bin, this.offset_in_file + 0x0d);
     this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x0f);
+    this.tileId = new UInt8(this.bin, this.offset_in_file + 0x16);
 
     this.name = (itemData[this.type.get()] ? itemData[this.type.get()].name : "bad_id");
 
@@ -781,6 +785,8 @@ class Collectable {
      + this.name.padEnd(40)
      + this.offset_in_file.toString(16).padStart(4)
      + this.absoluteIndex.toString(16).padStart(10)
+     + "  tileId("+this.tileId.get().toString(16).padStart(4)+") "
+     + "  tile("+this.tileX.get().toString(16).padStart(4)+","+this.tileY.get().toString(16).padStart(4)+","+this.tileZ.get().toString(16).padStart(4)+") "
      + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_z.get().toString(16).padStart(4)+") "
      + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + COLLECTABLE_SIZE), 4);
     return text;
@@ -793,6 +799,18 @@ class Collectable {
       + ", \"z\":" + (this.z.get() + "").padStart(5)
       + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)
       + "}";
+  }
+
+  setTile(index) {
+    this.tileId.set(index);
+    var tile = this.area.tiles[index];
+    this.tileX.set(tile.tileX.get());
+    this.tileY.set(tile.tileY.get());
+    this.tileZ.set(tile.tileZ.get());
+  }
+
+  getTile() {
+    return this.tileId.get();
   }
 
   set(source) {
@@ -822,9 +840,13 @@ class Tile {
 
     this.isBlank = this.bin[this.offset_in_file + 0x08]==0xff;
 
-    this.x = new UInt8(this.bin, this.offset_in_file + 0x08);
-    this.y = new UInt8(this.bin, this.offset_in_file + 0x09);
-    this.z = new UInt8(this.bin, this.offset_in_file + 0x0a);
+    this.x = new UInt16(this.bin, this.offset_in_file + 0x00);
+    this.y = new UInt16(this.bin, this.offset_in_file + 0x02);
+    this.z = new UInt16(this.bin, this.offset_in_file + 0x04);
+    this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x06);
+    this.tileX = new UInt8(this.bin, this.offset_in_file + 0x08);
+    this.tileY = new UInt8(this.bin, this.offset_in_file + 0x09);
+    this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x0a);
 
     if (!this.isBlank) {
       console.log(this.toReadableString());
@@ -836,7 +858,8 @@ class Tile {
      //+ this.name.padEnd(40)
      + this.offset_in_file.toString(16).padStart(4)
      + this.absoluteIndex.toString(16).padStart(10)
-     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+") "
+     + "  tile("+this.tileX.get().toString(16).padStart(4)+","+this.tileY.get().toString(16).padStart(4)+","+this.tileZ.get().toString(16).padStart(4)+") "
+     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_z.get().toString(16).padStart(4)+") "
      + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + TILE_SIZE), 4);
     return text;
   }
