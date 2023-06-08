@@ -752,15 +752,15 @@ class Collectable {
 
     this.type = new UInt16(this.bin, this.offset_in_file + 0x00);
     this.x = new UInt16(this.bin, this.offset_in_file + 0x09);
-    this.y = new UInt16(this.bin, this.offset_in_file + 0x0b);
-    this.z = new UInt16(this.bin, this.offset_in_file + 0x0d);
+    this.z = new UInt16(this.bin, this.offset_in_file + 0x0b);
+    this.y = new UInt16(this.bin, this.offset_in_file + 0x0d);
     this.rotation_y = new UInt16(this.bin, this.offset_in_file + 0x0f);
 
     this.name = (itemData[this.type.get()] ? itemData[this.type.get()].name : "bad_id");
 
-    if (!this.isBlank) {
+    //if (!this.isBlank) {
       console.log(this.toReadableString());
-    }
+    //}
   }
 
   toReadableString() {
@@ -783,7 +783,7 @@ class Collectable {
   }
 
   set(source) {
-    binSet(source.bin, source.offset_in_file, this.bin, this.offset_in_file, COLLECTABLE_SIZE);
+    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, COLLECTABLE_SIZE);
   }
 
   swap(source) {
@@ -926,7 +926,7 @@ class Creature {
   }
 
   set(source) {
-    binSet(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
+    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
   }
 
   swap(source) {
@@ -1054,7 +1054,6 @@ function setup(FDAT) {
     areas[i].setup(FDAT);
   }
 
-  console.log("\n** JSON dump");
   fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
 
 }

@@ -194,10 +194,11 @@ function forEachCreatureSpawn(spawn, area, index) {
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
 
-	// Spawning cunes
-	spawn.chance.set(100);
-	spawn.drop1Chance.set(100);
-	spawn.drop1.set(item_c4_summoner_ring_of_fire);
+	// Spawning ring
+	//spawn.chance.set(100);
+	//spawn.drop1Chance.set(100);
+	//spawn.drop1.set(item_c4_summoner_ring_of_fire);
+
 	// Set good items to spawn early in the game
 	//	spawn.chance.set(100);
 	//	if (goodItems.length) {
@@ -212,7 +213,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 }
 
 function forEachValidCreature(creature, area, index) {
-	creature.hp.set(1);
+	//creature.hp.set(1);
 }
 
 
@@ -328,13 +329,16 @@ var coll2 = human_world_solitary_region.collectables[1];
 //coll.bin[coll.offset_in_file + 0x07] = coll.bin[coll.offset_in_file + 0x07] - 6;
 //coll.bin[coll.offset_in_file + 0x08] = coll.bin[coll.offset_in_file + 0x08] - 6;
 
-coll.bin[coll.offset_in_file + 0x09] = coll.bin[coll.offset_in_file + 0x09] - 6; //x
+//coll.bin[coll.offset_in_file + 0x09] = coll.bin[coll.offset_in_file + 0x09] - 6; //x
+//coll.bin[coll.offset_in_file + 0x0b] = coll.bin[coll.offset_in_file + 0x0b] - 6; // z
+//coll.bin[coll.offset_in_file + 0x0d] = coll.bin[coll.offset_in_file + 0x0d] + 6; // y
+//coll.bin[coll.offset_in_file + 0x0f] = coll.bin[coll.offset_in_file + 0x0f] + 6; // rotation y
 
-coll.bin[coll.offset_in_file + 0x0b] = coll.bin[coll.offset_in_file + 0x0b] - 6; // z
-
-coll.bin[coll.offset_in_file + 0x0d] = coll.bin[coll.offset_in_file + 0x0d] + 6; // y
-
-coll.bin[coll.offset_in_file + 0x0f] = coll.bin[coll.offset_in_file + 0x0f] + 6; // rotation y
+for (var i=0; i<10; i++) {
+	var j = i + 0xa;
+	human_world_solitary_region.collectables[j].set(coll);
+	human_world_solitary_region.collectables[j].y.set(coll.y.get()+i*20);
+}
 
 //coll.bin[coll.offset_in_file + 0xa1] = coll.bin[coll.offset_in_file + 0xa1] + 60; // rotation z
 
