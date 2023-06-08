@@ -2,6 +2,14 @@
 //cd C:\Users\fred\Desktop\shadow-tower-randomizer
 //npm run change slime.json
 
+memory positions
+
+199098 tile
+1991a0 movement
+1b58e0 movement
+1ba190 movement
+
+
 unpack
 npm run randomize .\params.json "C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st"
 npm run change changeset.json

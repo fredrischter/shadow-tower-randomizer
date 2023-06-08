@@ -386,7 +386,8 @@ global.ELEMENTS_BY_ID={
   0xe: "ELEMENT_DARK"
 }
 
-global.GAME_DATA = {}
-;
+global.attribute = function(value, type) {
+  return value * 0x10 + type;
+}
 
-
+const game_data = require('./game_data');

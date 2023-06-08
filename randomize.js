@@ -322,6 +322,25 @@ human_world_solitary_region.spawns[0].drop1Chance.set(0x64);
 //	}
 //}
 
+var coll = human_world_solitary_region.collectables[0];
+var coll2 = human_world_solitary_region.collectables[1];
+//coll.type.set(item_76_god_plate);
+//coll.bin[coll.offset_in_file + 0x07] = coll.bin[coll.offset_in_file + 0x07] - 6;
+//coll.bin[coll.offset_in_file + 0x08] = coll.bin[coll.offset_in_file + 0x08] - 6;
+
+coll.bin[coll.offset_in_file + 0x09] = coll.bin[coll.offset_in_file + 0x09] - 6; //x
+
+coll.bin[coll.offset_in_file + 0x0b] = coll.bin[coll.offset_in_file + 0x0b] - 6; // z
+
+coll.bin[coll.offset_in_file + 0x0d] = coll.bin[coll.offset_in_file + 0x0d] + 6; // y
+
+coll.bin[coll.offset_in_file + 0x0f] = coll.bin[coll.offset_in_file + 0x0f] + 6; // rotation y
+
+//coll.bin[coll.offset_in_file + 0xa1] = coll.bin[coll.offset_in_file + 0xa1] + 60; // rotation z
+
+//coll.bin[coll.offset_in_file + 0xa3] = coll.bin[coll.offset_in_file + 0xa3] + 60; // rotation z
+
+//binSwap(coll.bin, coll.offset_in_file + 2 +10, coll2.bin, coll2.offset_in_file + 2 +10, 22 -10);
 
 //human_world_solitary_region.spawns[0x37].set(human_world_solitary_region.spawns[0x38]);
 //human_world_solitary_region.spawns[0x38].set(human_world_solitary_region.spawns[0x39]);

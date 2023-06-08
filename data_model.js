@@ -1,6 +1,7 @@
 'use strict';
 
 const constants = require('./constants');
+const fs = require('fs');
 
 // area files
 var logo_files = {
@@ -398,10 +399,6 @@ function getReadableAttributeType() {
   return ATTR_BY_ID[this.getAttributeType()];
 }
 
-global.attribute = function(value, type) {
-  return value * 0x10 + type;
-}
-
 class ItemData  {
   constructor(itemIndex, lineSplit, line) {
     this.itemIndex = itemIndex;
@@ -504,7 +501,7 @@ class ItemData  {
       + ", \"mel\":" + (this.mel.get() + "").padStart(5)
       + ", \"sol\":" + (this.sol.get() + "").padStart(5)
       + ", \"hp\":" + (this.hp.get() + "").padStart(5)
-      + ", \"type\":" + ((itemTypeNames[this.type.get()] || "NONE") + "").padStart(10)
+      + ", \"type\":" + ((itemTypeNames[this.type.get()] || this.type.get()) + "").padStart(10)
       + ", \"max_dura\":" + (this.max_dura.get() + "").padStart(5)
       + ", \"dura\":" + (this.dura.get() + "").padStart(5)
       + ", \"weight\":" + (""+ this.weight.get() /*(Math.ceil(this.weight.get()*2.2)/10) 1/10 kg to pounds */).padStart(4)
@@ -584,7 +581,7 @@ class Area  {
     var COLLECTABLE_START_OFFSET = this.map_file.sizedMixStarts[4] - 0x10;//0x7bb4;
     this.collectables = [];
     console.log("\nCollectables");
-    console.log("idx  name                         offset_in_file    offset   type     -------------------------------------------------------------------------------------");
+    console.log("idx  name                          offset_in_file    offset  pos(x   ,z   ,y   ,rot )   type     -------------------------------------------------------------------------------------");
     for (var i = 0; i<COLLECTABLE_COUNT; i++) {
       var offset_in_file = 16 + COLLECTABLE_START_OFFSET + COLLECTABLE_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
@@ -598,9 +595,11 @@ class Area  {
   toString() {
     var str = "{\"name\":\"" + this.name + "\", \"creatures\":[\n";
     this.creatures.forEach(obj => { if (obj.name.endsWith("door")) return; str += "  " + obj + ",\n"; });
-    str+"], \"spawns\":[";
+    str+="], \"spawns\":{\n";
     this.spawns.forEach(obj => { if (obj.isBlank || obj.name.endsWith("door")) return; str += "  " + obj + ",\n"; });
-    str+"]}";
+    str+="}, \"collectables\":{\n";
+    this.collectables.forEach(obj => { if (obj.isBlank) return; str += "  "+obj.collectableIndex+":" + obj + ",\n"; });
+    str+="}}";
     return str;
   }
 
@@ -752,8 +751,11 @@ class Collectable {
       this.bin[this.offset_in_file + 0x01]==0xff;
 
     this.type = new UInt16(this.bin, this.offset_in_file + 0x00);
-    //console.log("type " + this.bin[this.offset_in_file].toString(16) + " " + this.bin[this.offset_in_file + 1].toString(16))
-    //console.log("type " + this.type.get().toString(16))
+    this.x = new UInt16(this.bin, this.offset_in_file + 0x09);
+    this.y = new UInt16(this.bin, this.offset_in_file + 0x0b);
+    this.z = new UInt16(this.bin, this.offset_in_file + 0x0d);
+    this.rotation_y = new UInt16(this.bin, this.offset_in_file + 0x0f);
+
     this.name = (itemData[this.type.get()] ? itemData[this.type.get()].name : "bad_id");
 
     if (!this.isBlank) {
@@ -766,12 +768,17 @@ class Collectable {
      + this.name.padEnd(40)
      + this.offset_in_file.toString(16).padStart(4)
      + this.absoluteIndex.toString(16).padStart(10)
+     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_y.get().toString(16).padStart(4)+") "
      + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + COLLECTABLE_SIZE), 4);
     return text;
   }
 
   toString() {
-    return "{\"name\":\""+(this.name + "\"").padEnd(22)
+    return "{\"name\":\""+(this.name + "\"").padEnd(40)
+      + ", \"x\":" + (this.x.get() + "").padStart(5)
+      + ", \"y\":" + (this.y.get() + "").padStart(5)
+      + ", \"z\":" + (this.z.get() + "").padStart(5)
+      + ", \"rotation_y\":" + (this.rotation_y.get() + "").padStart(5)
       + "}";
   }
 
@@ -1048,7 +1055,7 @@ function setup(FDAT) {
   }
 
   console.log("\n** JSON dump");
-  console.log(fullJSON());
+  fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
 
 }
 
