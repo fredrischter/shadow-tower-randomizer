@@ -70,6 +70,7 @@ class TFormatPart {
   trySizedMix() {
     if (this.bin.length > 4) {
       this.sizedMixParts = [];
+      this.sizedMixStarts = [];
       var cursor = 0;
 //      console.log("Trying bin " + this.bin.length + " " + this.fileName);
       do {
@@ -87,6 +88,7 @@ class TFormatPart {
         }
 //        console.log("sized mix part " + size.toString(16));
 
+        this.sizedMixStarts.push(cursor);
         var bin = this.bin.slice(cursor, cursor + size);
         //console.log("Cutting sized part cursor " + cursor.toString(16) + " new cursor " + (cursor + size).toString(16) + " bin length " + this.bin.length.toString(16) + " " + this.fileName);
         cursor += size;
