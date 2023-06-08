@@ -617,8 +617,8 @@ class Area  {
 
   setupSpawns(area, tfile) {
     this.spawns = [];
-    console.log("\nSpawn");
-    console.log("idx chance name                 drop1                                     drop2                                     drop3                                      chance typ ----- drop1 drop2 drop3 mx %1 %2 %2 -----------------------------");
+    console.log("\nSpawns");
+    console.log("idx chance name                                                      drop1                                     drop2                                     drop3                                      chance typ  tile drop1 drop2 drop3 mx %1 %2 %2 ---------    x     y     z --");
 
     for (var i=0;i<SPAWN_ENTRIES_COUNT;i++) {
       var offset = i * SPAWN_ENTRY_SIZE;
@@ -1043,6 +1043,10 @@ class Spawn {
 
     this.chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x00);
     this.type = new UInt8(this.tfile.bin, this.offset_in_file + 0x01);
+    this.tileId = new UInt16(this.tfile.bin, this.offset_in_file + 0x02);
+    this.x = new UInt16(this.tfile.bin, this.offset_in_file + 0x11);
+    this.y = new UInt16(this.tfile.bin, this.offset_in_file + 0x13);
+    this.z = new UInt16(this.tfile.bin, this.offset_in_file + 0x15);
 
     if (!this.chance.isNull()) {
       this.creature = this.area.creatures[this.type.get()];
@@ -1092,6 +1096,8 @@ class Spawn {
   toReadableString() {
     return "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name.padEnd(20)
     + " "
+    + "  tileId("+this.tileId.get().toString(16).padStart(4)+") "
+    + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+") "
     + (this.drop1Item ? "[drop "+(""+this.drop1Chance.get()).padStart(3)+"% " + this.drop1Item.name.padEnd(30) + "]": "".padEnd(42))
     + (this.drop2Item ? "[drop "+(""+this.drop2Chance.get()).padStart(3)+"% " + this.drop2Item.name.padEnd(30) + "]": "".padEnd(42))
     + (this.drop3Item ? "[drop "+(""+this.drop3Chance.get()).padStart(3)+"% " + this.drop3Item.name.padEnd(30) + "]": "".padEnd(42))
@@ -1099,7 +1105,13 @@ class Spawn {
   }
 
   toString() {
-    return "\"spawn_" + (this.index.toString(16) + "\"").padEnd(3) + ":{\"chance\":" + (""+this.chance.get()).padEnd(3) + ",\"name\":\"" + (this.name + "\"").padEnd(21)
+    return "\"spawn_" + (this.index.toString(16) + "\"").padEnd(3) + ":{"
+      + "\"chance\":" + (""+this.chance.get()).padEnd(3) 
+      + ",\"name\":\"" + (this.name + "\"").padEnd(21)
+      + ",\"tileId\":\"" + (this.tileId.get() + "\"").padEnd(16)
+      + ",\"x\":" + (this.x.get() + "").padEnd(10)
+      + ",\"y\":" + (this.y.get() + "").padEnd(10)
+      + ",\"z\":" + (this.z.get() + "").padEnd(10)
       + (!this.mutexGroup.isNull() ? ",\"group\":" + this.mutexGroup.get(): "")
       + ",\"drop\":["
       + (this.drop1Item ? ("{\"chance\":" + (this.drop1Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop1Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop1 + "\"}").padEnd(48) : "")

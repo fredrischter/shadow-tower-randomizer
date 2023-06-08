@@ -210,6 +210,9 @@ function forEachCreatureSpawn(spawn, area, index) {
 	//		spawn.drop2.set(item_139_soul_pod_14_sp);
 	//		spawn.drop3.set(item_139_soul_pod_14_sp);
 	//	}
+
+	// Randomize spawn tile
+	spawn.tileId.set(Math.floor(Math.random()*64));//area.tiles.length));
 }
 
 function forEachValidCreature(creature, area, index) {
@@ -300,9 +303,11 @@ global.items[item_0_short_sword].sol.set(0xff);*/
 //human_world_solitary_region.spawns[0x38].swap(human_world_solitary_region.spawns[0x3b]);
 //human_world_solitary_region.spawns[0x39].swap(human_world_solitary_region.spawns[0x3a]);
 
-//human_world_solitary_region["01_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
+//human_world_solitary_region["01_acid_slime"].swap(human_world_solitary_region["00_dark_spider"]);
 //human_world_solitary_region["0e_acid_slime"].set(human_world_forgotten_region["01_blood_skull"]);
 
+//swap position of spider and slime
+//human_world_solitary_region.spawns[0].tileId.swap(human_world_solitary_region.spawns[3].tileId);
 /*human_world_solitary_region.spawns[0].drop1.set(0x10a);
 human_world_solitary_region.spawns[0].drop2.set(0xffff);
 human_world_solitary_region.spawns[0].drop3.set(0xffff);
