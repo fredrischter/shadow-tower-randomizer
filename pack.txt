@@ -1,0 +1,1237 @@
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>SET dir=C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\ 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>REM npm run assemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\MO.T 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>REM npm run assemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\STAT.T 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>REM npm run assemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\TALKMSG.T 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>REM npm run assemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\CRT.T 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>REM npm run assemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\EQUIP.T 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>REM npm run assemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\ITEM.T 
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>node tfile_assemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T 
+ TFile with 809 parts loaded
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\0 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\1 800-9000.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\2 9000-19000.T 9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\3 19000-1b800.T 19000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\4 1b800-24800.T 1b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\5 24800-2e800.T 24800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\6 2e800-34000.T 2e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\7 34000-6d000.T 34000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\8 6d000-6e000.T 6d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\9 6e000-7f000.T 6e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\10 7f000-7f000.T 7f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\11 7f000-87800.T 7f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\12 87800-97800.T 87800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\13 97800-9a800.T 97800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\14 9a800-a3800.T 9a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\15 a3800-be000.T a3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\16 be000-c4000.T be000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\17 c4000-106000.T c4000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\18 106000-107000.T 106000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\19 107000-115000.T 107000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\20 115000-115000.T 115000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\21 115000-11d800.T 115000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\22 11d800-12d800.T 11d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\23 12d800-130000.T 12d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\24 130000-139000.T 130000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\25 139000-14b800.T 139000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\26 14b800-152800.T 14b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\27 152800-194000.T 152800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\28 194000-195000.T 194000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\29 195000-1a7800.T 195000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\30 1a7800-1a7800.T 1a7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\31 1a7800-1b0000.T 1a7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\32 1b0000-1c0000.T 1b0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\33 1c0000-1c2800.T 1c0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\34 1c2800-1cb800.T 1c2800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\35 1cb800-1df800.T 1cb800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\36 1df800-1e6800.T 1df800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\37 1e6800-226000.T 1e6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\38 226000-227000.T 226000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\39 227000-23a800.T 227000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\40 23a800-23a800.T 23a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\41 23a800-243000.T 23a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\42 243000-253000.T 243000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\43 253000-255800.T 253000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\44 255800-25e800.T 255800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\45 25e800-27a000.T 25e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\46 27a000-281000.T 27a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\47 281000-2c0800.T 281000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\48 2c0800-2c1800.T 2c0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\49 2c1800-2d5000.T 2c1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\50 2d5000-2d5000.T 2d5000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\51 2d5000-2dd800.T 2d5000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\52 2dd800-2ed800.T 2dd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\53 2ed800-2f0000.T 2ed800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\54 2f0000-2f9000.T 2f0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\55 2f9000-30f800.T 2f9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\56 30f800-315000.T 30f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\57 315000-357000.T 315000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\58 357000-358000.T 357000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\59 358000-36b800.T 358000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\60 36b800-36b800.T 36b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\61 36b800-374000.T 36b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\62 374000-384000.T 374000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\63 384000-386800.T 384000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\64 386800-38f800.T 386800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\65 38f800-3a1000.T 38f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\66 3a1000-3a6800.T 3a1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\67 3a6800-3e8800.T 3a6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\68 3e8800-3e9800.T 3e8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\69 3e9800-3fa800.T 3e9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\70 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\71 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\72 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\73 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\74 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\75 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\76 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\77 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\78 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\79 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\80 3fa800-3fa800.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\81 3fa800-403000.T 3fa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\82 403000-413000.T 403000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\83 413000-415800.T 413000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\84 415800-41e800.T 415800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\85 41e800-431000.T 41e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\86 431000-435000.T 431000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\87 435000-473800.T 435000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\88 473800-474800.T 473800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\89 474800-487800.T 474800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\90 487800-487800.T 487800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\91 487800-490000.T 487800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\92 490000-4a0000.T 490000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\93 4a0000-4a3000.T 4a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\94 4a3000-4ac000.T 4a3000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\95 4ac000-4ba000.T 4ac000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\96 4ba000-4c0000.T 4ba000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\97 4c0000-500800.T 4c0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\98 500800-501800.T 500800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\99 501800-514800.T 501800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\100 514800-514800.T 514800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\101 514800-51d000.T 514800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\102 51d000-52d000.T 51d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\103 52d000-52f800.T 52d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\104 52f800-538800.T 52f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\105 538800-54f800.T 538800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\106 54f800-555800.T 54f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\107 555800-594800.T 555800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\108 594800-595800.T 594800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\109 595800-5a9000.T 595800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\110 5a9000-5a9000.T 5a9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\111 5a9000-5b1800.T 5a9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\112 5b1800-5c1800.T 5b1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\113 5c1800-5c4000.T 5c1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\114 5c4000-5cd000.T 5c4000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\115 5cd000-5e1800.T 5cd000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\116 5e1800-5e9000.T 5e1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\117 5e9000-62a800.T 5e9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\118 62a800-62b800.T 62a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\119 62b800-63f000.T 62b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\120 63f000-63f000.T 63f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\121 63f000-647800.T 63f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\122 647800-657800.T 647800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\123 657800-65a000.T 657800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\124 65a000-663000.T 65a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\125 663000-676800.T 663000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\126 676800-67d000.T 676800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\127 67d000-6bc800.T 67d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\128 6bc800-6bd800.T 6bc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\129 6bd800-6d0800.T 6bd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\130 6d0800-6d0800.T 6d0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\131 6d0800-6d9000.T 6d0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\132 6d9000-6e9000.T 6d9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\133 6e9000-6eb800.T 6e9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\134 6eb800-6f4800.T 6eb800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\135 6f4800-6fe800.T 6f4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\136 6fe800-702800.T 6fe800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\137 702800-735000.T 702800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\138 735000-736000.T 735000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\139 736000-747000.T 736000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\140 747000-747000.T 747000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\141 747000-74f800.T 747000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\142 74f800-75f800.T 74f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\143 75f800-762000.T 75f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\144 762000-76b000.T 762000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\145 76b000-77c000.T 76b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\146 77c000-782000.T 77c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\147 782000-7c3800.T 782000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\148 7c3800-7c4800.T 7c3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\149 7c4800-7d8000.T 7c4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\150 7d8000-7d8000.T 7d8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\151 7d8000-7e0800.T 7d8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\152 7e0800-7f0800.T 7e0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\153 7f0800-7f3000.T 7f0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\154 7f3000-7fc000.T 7f3000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\155 7fc000-81a000.T 7fc000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\156 81a000-823800.T 81a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\157 823800-864000.T 823800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\158 864000-865000.T 864000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\159 865000-878000.T 865000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\160 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\161 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\162 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\163 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\164 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\165 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\166 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\167 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\168 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\169 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\170 878000-878000.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\171 878000-880800.T 878000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\172 880800-890800.T 880800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\173 890800-893800.T 890800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\174 893800-89c800.T 893800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\175 89c800-8b8800.T 89c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\176 8b8800-8bd800.T 8b8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\177 8bd800-8f7800.T 8bd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\178 8f7800-8f8800.T 8f7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\179 8f8800-90b800.T 8f8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\180 90b800-90b800.T 90b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\181 90b800-914000.T 90b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\182 914000-924000.T 914000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\183 924000-926800.T 924000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\184 926800-92f800.T 926800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\185 92f800-93c000.T 92f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\186 93c000-940800.T 93c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\187 940800-97e000.T 940800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\188 97e000-97f000.T 97e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\189 97f000-992800.T 97f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\190 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\191 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\192 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\193 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\194 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\195 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\196 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\197 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\198 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\199 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\200 992800-992800.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\201 992800-99b000.T 992800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\202 99b000-9ab000.T 99b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\203 9ab000-9ad800.T 9ab000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\204 9ad800-9b6800.T 9ad800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\205 9b6800-9c8000.T 9b6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\206 9c8000-9ce800.T 9c8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\207 9ce800-a10800.T 9ce800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\208 a10800-a11800.T a10800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\209 a11800-a23800.T a11800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\210 a23800-a23800.T a23800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\211 a23800-a2c000.T a23800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\212 a2c000-a3c000.T a2c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\213 a3c000-a3e800.T a3c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\214 a3e800-a47800.T a3e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\215 a47800-a5d000.T a47800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\216 a5d000-a64800.T a5d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\217 a64800-aa4800.T a64800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\218 aa4800-aa5800.T aa4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\219 aa5800-ab9000.T aa5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\220 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\221 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\222 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\223 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\224 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\225 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\226 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\227 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\228 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\229 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\230 ab9000-ab9000.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\231 ab9000-ac1800.T ab9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\232 ac1800-ad1800.T ac1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\233 ad1800-ad4000.T ad1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\234 ad4000-add000.T ad4000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\235 add000-ae5800.T add000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\236 ae5800-aea000.T ae5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\237 aea000-b10800.T aea000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\238 b10800-b11800.T b10800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\239 b11800-b24000.T b11800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\240 b24000-b24000.T b24000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\241 b24000-b2c800.T b24000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\242 b2c800-b3c800.T b2c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\243 b3c800-b3f800.T b3c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\244 b3f800-b48800.T b3f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\245 b48800-b5e000.T b48800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\246 b5e000-b65000.T b5e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\247 b65000-ba7000.T b65000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\248 ba7000-ba8000.T ba7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\249 ba8000-bbb000.T ba8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\250 bbb000-bbb000.T bbb000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\251 bbb000-bc3800.T bbb000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\252 bc3800-bd3800.T bc3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\253 bd3800-bd6000.T bd3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\254 bd6000-bdd800.T bd6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\255 bdd800-bfa000.T bdd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\256 bfa000-c02800.T bfa000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\257 c02800-c43000.T c02800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\258 c43000-c44000.T c43000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\259 c44000-c57800.T c44000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\260 c57800-c57800.T c57800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\261 c57800-c60000.T c57800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\262 c60000-c70000.T c60000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\263 c70000-c73000.T c70000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\264 c73000-c7c000.T c73000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\265 c7c000-c98000.T c7c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\266 c98000-c9f800.T c98000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\267 c9f800-ce1800.T c9f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\268 ce1800-ce2800.T ce1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\269 ce2800-cf6000.T ce2800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\270 cf6000-cf6000.T cf6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\271 cf6000-cfe800.T cf6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\272 cfe800-d0e800.T cfe800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\273 d0e800-d13000.T d0e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\274 d13000-d1a800.T d13000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\275 d1a800-d3a000.T d1a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\276 d3a000-d42000.T d3a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\277 d42000-d85800.T d42000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\278 d85800-d86800.T d85800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\279 d86800-d95000.T d86800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\280 d95000-d95000.T d95000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\281 d95000-d9d800.T d95000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\282 d9d800-dad800.T d9d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\283 dad800-db0800.T dad800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\284 db0800-db8000.T db0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\285 db8000-dd4000.T db8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\286 dd4000-ddb000.T dd4000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\287 ddb000-e1d000.T ddb000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\288 e1d000-e1e000.T e1d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\289 e1e000-e30800.T e1e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\290 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\291 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\292 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\293 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\294 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\295 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\296 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\297 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\298 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\299 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\300 e30800-e30800.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\301 e30800-e39000.T e30800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\302 e39000-e49000.T e39000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\303 e49000-e4c000.T e49000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\304 e4c000-e55000.T e4c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\305 e55000-e6a800.T e55000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\306 e6a800-e6e000.T e6a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\307 e6e000-eae000.T e6e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\308 eae000-eaf000.T eae000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\309 eaf000-ec1800.T eaf000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\310 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\311 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\312 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\313 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\314 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\315 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\316 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\317 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\318 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\319 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\320 ec1800-ec1800.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\321 ec1800-eca000.T ec1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\322 eca000-eda000.T eca000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\323 eda000-edc800.T eda000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\324 edc800-ee5800.T edc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\325 ee5800-f02800.T ee5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\326 f02800-f0c000.T f02800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\327 f0c000-f45800.T f0c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\328 f45800-f46800.T f45800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\329 f46800-f58000.T f46800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\330 f58000-f58000.T f58000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\331 f58000-f60800.T f58000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\332 f60800-f70800.T f60800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\333 f70800-f73000.T f70800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\334 f73000-f7c000.T f73000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\335 f7c000-f94000.T f7c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\336 f94000-f9b000.T f94000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\337 f9b000-fdd000.T f9b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\338 fdd000-fde000.T fdd000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\339 fde000-ff1800.T fde000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\340 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\341 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\342 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\343 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\344 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\345 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\346 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\347 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\348 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\349 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\350 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\351 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\352 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\353 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\354 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\355 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\356 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\357 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\358 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\359 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\360 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\361 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\362 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\363 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\364 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\365 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\366 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\367 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\368 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\369 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\370 ff1800-ff1800.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\371 ff1800-ffa000.T ff1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\372 ffa000-100a000.T ffa000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\373 100a000-100c800.T 100a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\374 100c800-1014000.T 100c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\375 1014000-1022800.T 1014000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\376 1022800-1026800.T 1022800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\377 1026800-1061800.T 1026800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\378 1061800-1062800.T 1061800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\379 1062800-1074800.T 1062800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\380 1074800-1074800.T 1074800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\381 1074800-107d000.T 1074800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\382 107d000-108d000.T 107d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\383 108d000-108f800.T 108d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\384 108f800-1098800.T 108f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\385 1098800-10a4000.T 1098800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\386 10a4000-10a8000.T 10a4000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\387 10a8000-10e9800.T 10a8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\388 10e9800-10ea800.T 10e9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\389 10ea800-10f9800.T 10ea800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\390 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\391 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\392 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\393 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\394 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\395 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\396 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\397 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\398 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\399 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\400 10f9800-10f9800.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\401 10f9800-1102000.T 10f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\402 1102000-1112000.T 1102000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\403 1112000-1114800.T 1112000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\404 1114800-111d800.T 1114800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\405 111d800-1125000.T 111d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\406 1125000-112a000.T 1125000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\407 112a000-1163000.T 112a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\408 1163000-1164000.T 1163000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\409 1164000-1175000.T 1164000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\410 1175000-1175000.T 1175000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\411 1175000-117d800.T 1175000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\412 117d800-118d800.T 117d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\413 118d800-1190000.T 118d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\414 1190000-1199000.T 1190000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\415 1199000-11a2800.T 1199000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\416 11a2800-11a8800.T 11a2800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\417 11a8800-11e1800.T 11a8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\418 11e1800-11e2800.T 11e1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\419 11e2800-11f3800.T 11e2800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\420 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\421 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\422 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\423 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\424 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\425 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\426 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\427 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\428 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\429 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\430 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\431 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\432 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\433 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\434 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\435 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\436 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\437 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\438 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\439 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\440 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\441 11f3800-11f3800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\442 11f3800-1203800.T 11f3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\443 1203800-1206000.T 1203800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\444 1206000-120f000.T 1206000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\445 120f000-1229800.T 120f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\446 1229800-122c800.T 1229800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\447 122c800-1264000.T 122c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\448 1264000-1264000.T 1264000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\449 1264000-1264000.T 1264000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\450 1264000-1264000.T 1264000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\451 1264000-1264000.T 1264000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\452 1264000-1274000.T 1264000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\453 1274000-1276800.T 1274000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\454 1276800-127f800.T 1276800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\455 127f800-1289800.T 127f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\456 1289800-128c800.T 1289800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\457 128c800-12c6800.T 128c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\458 12c6800-12c6800.T 12c6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\459 12c6800-12c6800.T 12c6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\460 12c6800-12c6800.T 12c6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\461 12c6800-12c6800.T 12c6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\462 12c6800-12d6800.T 12c6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\463 12d6800-12d9000.T 12d6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\464 12d9000-12e2000.T 12d9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\465 12e2000-12ec000.T 12e2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\466 12ec000-12ef000.T 12ec000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\467 12ef000-1329000.T 12ef000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\468 1329000-1329000.T 1329000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\469 1329000-1329000.T 1329000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\470 1329000-1329000.T 1329000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\471 1329000-1329000.T 1329000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\472 1329000-1339000.T 1329000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\473 1339000-133b800.T 1339000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\474 133b800-1344800.T 133b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\475 1344800-134e800.T 1344800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\476 134e800-1351800.T 134e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\477 1351800-138b800.T 1351800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\478 138b800-138b800.T 138b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\479 138b800-138b800.T 138b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\480 138b800-138b800.T 138b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\481 138b800-139c000.T 138b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\482 139c000-13af000.T 139c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\483 13af000-13b0000.T 13af000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\484 13b0000-13c7000.T 13b0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\485 13c7000-13cd000.T 13c7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\486 13cd000-13cf800.T 13cd000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\487 13cf800-13d0800.T 13cf800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\488 13d0800-13d1800.T 13d0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\489 13d1800-13d7000.T 13d1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\490 13d7000-13d9800.T 13d7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\491 13d9800-13da800.T 13d9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\492 13da800-13db800.T 13da800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\493 13db800-13e1000.T 13db800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\494 13e1000-13e3800.T 13e1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\495 13e3800-13e4800.T 13e3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\496 13e4800-13e5800.T 13e4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\497 13e5800-13ea800.T 13e5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\498 13ea800-13ed000.T 13ea800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\499 13ed000-13ee000.T 13ed000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\500 13ee000-13ef000.T 13ee000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\501 13ef000-13f5000.T 13ef000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\502 13f5000-13f6800.T 13f5000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\503 13f6800-13f7800.T 13f6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\504 13f7800-13f8800.T 13f7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\505 13f8800-13fe000.T 13f8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\506 13fe000-1400800.T 13fe000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\507 1400800-1401800.T 1400800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\508 1401800-1402800.T 1401800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\509 1402800-1408800.T 1402800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\510 1408800-140b000.T 1408800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\511 140b000-140c000.T 140b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\512 140c000-140d000.T 140c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\513 140d000-1412800.T 140d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\514 1412800-1415000.T 1412800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\515 1415000-1416000.T 1415000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\516 1416000-1417000.T 1416000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\517 1417000-141d000.T 1417000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\518 141d000-141f800.T 141d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\519 141f800-1420800.T 141f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\520 1420800-1421800.T 1420800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\521 1421800-1427800.T 1421800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\522 1427800-142a000.T 1427800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\523 142a000-142b000.T 142a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\524 142b000-142c000.T 142b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\525 142c000-1433000.T 142c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\526 1433000-1435800.T 1433000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\527 1435800-1436800.T 1435800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\528 1436800-1437800.T 1436800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\529 1437800-143e000.T 1437800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\530 143e000-1440800.T 143e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\531 1440800-1441800.T 1440800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\532 1441800-1442800.T 1441800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\533 1442800-1448800.T 1442800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\534 1448800-144b000.T 1448800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\535 144b000-144c000.T 144b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\536 144c000-144d000.T 144c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\537 144d000-1453800.T 144d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\538 1453800-1456000.T 1453800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\539 1456000-1457000.T 1456000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\540 1457000-1458000.T 1457000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\541 1458000-145e000.T 1458000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\542 145e000-1460800.T 145e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\543 1460800-1461800.T 1460800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\544 1461800-1462800.T 1461800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\545 1462800-1468800.T 1462800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\546 1468800-146b000.T 1468800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\547 146b000-146c000.T 146b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\548 146c000-146d000.T 146c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\549 146d000-1473800.T 146d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\550 1473800-1476000.T 1473800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\551 1476000-1477000.T 1476000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\552 1477000-1478000.T 1477000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\553 1478000-147d800.T 1478000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\554 147d800-1480000.T 147d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\555 1480000-1481000.T 1480000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\556 1481000-1482000.T 1481000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\557 1482000-1488000.T 1482000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\558 1488000-148a800.T 1488000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\559 148a800-148b800.T 148a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\560 148b800-148c800.T 148b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\561 148c800-1492000.T 148c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\562 1492000-1494800.T 1492000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\563 1494800-1495800.T 1494800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\564 1495800-1496800.T 1495800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\565 1496800-149c800.T 1496800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\566 149c800-149f000.T 149c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\567 149f000-14a0000.T 149f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\568 14a0000-14a1000.T 14a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\569 14a1000-14a7000.T 14a1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\570 14a7000-14a9800.T 14a7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\571 14a9800-14aa800.T 14a9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\572 14aa800-14ab800.T 14aa800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\573 14ab800-14b1000.T 14ab800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\574 14b1000-14b3800.T 14b1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\575 14b3800-14b4800.T 14b3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\576 14b4800-14b5800.T 14b4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\577 14b5800-14bb000.T 14b5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\578 14bb000-14bd800.T 14bb000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\579 14bd800-14be800.T 14bd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\580 14be800-14bf800.T 14be800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\581 14bf800-14c5000.T 14bf800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\582 14c5000-14c7800.T 14c5000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\583 14c7800-14c8800.T 14c7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\584 14c8800-14c9800.T 14c8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\585 14c9800-14cf000.T 14c9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\586 14cf000-14d1800.T 14cf000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\587 14d1800-14d2800.T 14d1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\588 14d2800-14d3800.T 14d2800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\589 14d3800-14d9000.T 14d3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\590 14d9000-14db800.T 14d9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\591 14db800-14dc800.T 14db800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\592 14dc800-14dd800.T 14dc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\593 14dd800-14e3800.T 14dd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\594 14e3800-14e6000.T 14e3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\595 14e6000-14e7000.T 14e6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\596 14e7000-14e8000.T 14e7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\597 14e8000-14ee800.T 14e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\598 14ee800-14f1000.T 14ee800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\599 14f1000-14f2000.T 14f1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\600 14f2000-14f3000.T 14f2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\601 14f3000-14f9000.T 14f3000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\602 14f9000-14fb800.T 14f9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\603 14fb800-14fc800.T 14fb800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\604 14fc800-14fd800.T 14fc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\605 14fd800-1504000.T 14fd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\606 1504000-1506800.T 1504000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\607 1506800-1507800.T 1506800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\608 1507800-1508800.T 1507800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\609 1508800-150c000.T 1508800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\610 150c000-150e800.T 150c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\611 150e800-150f800.T 150e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\612 150f800-1512000.T 150f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\613 1512000-1517000.T 1512000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\614 1517000-1519800.T 1517000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\615 1519800-151a800.T 1519800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\616 151a800-151d000.T 151a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\617 151d000-1522800.T 151d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\618 1522800-1525000.T 1522800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\619 1525000-1526000.T 1525000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\620 1526000-1529000.T 1526000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\621 1529000-152e800.T 1529000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\622 152e800-1531000.T 152e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\623 1531000-1532000.T 1531000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\624 1532000-1535000.T 1532000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\625 1535000-1535000.T 1535000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\626 1535000-1535000.T 1535000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\627 1535000-1535000.T 1535000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\628 1535000-1535000.T 1535000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\629 1535000-1539000.T 1535000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\630 1539000-153c800.T 1539000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\631 153c800-153d800.T 153c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\632 153d800-153e800.T 153d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\633 153e800-1542800.T 153e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\634 1542800-1547000.T 1542800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\635 1547000-1548000.T 1547000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\636 1548000-1549000.T 1548000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\637 1549000-154c800.T 1549000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\638 154c800-1551000.T 154c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\639 1551000-1552000.T 1551000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\640 1552000-1553000.T 1552000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\641 1553000-1556800.T 1553000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\642 1556800-155b000.T 1556800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\643 155b000-155c000.T 155b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\644 155c000-155d800.T 155c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\645 155d800-1561800.T 155d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\646 1561800-1566000.T 1561800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\647 1566000-1567000.T 1566000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\648 1567000-1568800.T 1567000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\649 1568800-156c000.T 1568800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\650 156c000-1570800.T 156c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\651 1570800-1571800.T 1570800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\652 1571800-1573000.T 1571800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\653 1573000-1577000.T 1573000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\654 1577000-157b800.T 1577000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\655 157b800-157c800.T 157b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\656 157c800-157e000.T 157c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\657 157e000-1582000.T 157e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\658 1582000-1586800.T 1582000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\659 1586800-1587800.T 1586800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\660 1587800-1589000.T 1587800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\661 1589000-158c800.T 1589000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\662 158c800-1591000.T 158c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\663 1591000-1592000.T 1591000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\664 1592000-1593800.T 1592000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\665 1593800-1597800.T 1593800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\666 1597800-159c000.T 1597800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\667 159c000-159d000.T 159c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\668 159d000-159e800.T 159d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\669 159e800-15a2000.T 159e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\670 15a2000-15a6800.T 15a2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\671 15a6800-15a7800.T 15a6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\672 15a7800-15a9000.T 15a7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\673 15a9000-15ac800.T 15a9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\674 15ac800-15b1000.T 15ac800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\675 15b1000-15b2000.T 15b1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\676 15b2000-15b3800.T 15b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\677 15b3800-15b7000.T 15b3800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\678 15b7000-15bb800.T 15b7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\679 15bb800-15bc800.T 15bb800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\680 15bc800-15be000.T 15bc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\681 15be000-15c1800.T 15be000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\682 15c1800-15c6000.T 15c1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\683 15c6000-15c7000.T 15c6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\684 15c7000-15c8800.T 15c7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\685 15c8800-15cc000.T 15c8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\686 15cc000-15d0800.T 15cc000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\687 15d0800-15d1800.T 15d0800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\688 15d1800-15d3000.T 15d1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\689 15d3000-15d7000.T 15d3000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\690 15d7000-15db800.T 15d7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\691 15db800-15dc800.T 15db800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\692 15dc800-15de000.T 15dc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\693 15de000-15e2000.T 15de000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\694 15e2000-15e4800.T 15e2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\695 15e4800-15e5800.T 15e4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\696 15e5800-15e7000.T 15e5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\697 15e7000-15eb000.T 15e7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\698 15eb000-15ed800.T 15eb000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\699 15ed800-15ee800.T 15ed800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\700 15ee800-15f0000.T 15ee800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\701 15f0000-15f4800.T 15f0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\702 15f4800-15f7000.T 15f4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\703 15f7000-15f8000.T 15f7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\704 15f8000-15f9800.T 15f8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\705 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\706 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\707 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\708 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\709 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\710 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\711 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\712 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\713 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\714 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\715 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\716 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\717 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\718 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\719 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\720 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\721 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\722 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\723 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\724 15f9800-15f9800.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\725 15f9800-15ff000.T 15f9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\726 15ff000-15ff000.T 15ff000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\727 15ff000-15ff000.T 15ff000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\728 15ff000-15ff000.T 15ff000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\729 15ff000-1604800.T 15ff000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\730 1604800-1604800.T 1604800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\731 1604800-1604800.T 1604800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\732 1604800-1604800.T 1604800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\733 1604800-1609800.T 1604800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\734 1609800-1609800.T 1609800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\735 1609800-1609800.T 1609800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\736 1609800-1609800.T 1609800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\737 1609800-160e800.T 1609800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\738 160e800-160e800.T 160e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\739 160e800-160e800.T 160e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\740 160e800-160e800.T 160e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\741 160e800-1612800.T 160e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\742 1612800-1619800.T 1612800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\743 1619800-161a800.T 1619800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\744 161a800-161d800.T 161a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\745 161d800-161e800.T 161d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\746 161e800-1627000.T 161e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\747 1627000-1628000.T 1627000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\748 1628000-162b000.T 1628000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\749 162b000-162b000.T 162b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\750 162b000-162b000.T 162b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\751 162b000-162b000.T 162b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\752 162b000-162b000.T 162b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\753 162b000-162c800.T 162b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\754 162c800-1635000.T 162c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\755 1635000-1636000.T 1635000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\756 1636000-1639000.T 1636000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\757 1639000-163b000.T 1639000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\758 163b000-1640800.T 163b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\759 1640800-1641800.T 1640800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\760 1641800-1643800.T 1641800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\761 1643800-1643800.T 1643800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\762 1643800-1643800.T 1643800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\763 1643800-1643800.T 1643800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\764 1643800-1643800.T 1643800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\765 1643800-1647000.T 1643800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\766 1647000-1648800.T 1647000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\767 1648800-1649800.T 1648800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\768 1649800-164c800.T 1649800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\769 164c800-164f000.T 164c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\770 164f000-1652800.T 164f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\771 1652800-1653800.T 1652800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\772 1653800-1656800.T 1653800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\773 1656800-1656800.T 1656800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\774 1656800-1656800.T 1656800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\775 1656800-1656800.T 1656800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\776 1656800-1656800.T 1656800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\777 1656800-1658000.T 1656800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\778 1658000-165c800.T 1658000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\779 165c800-165d800.T 165c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\780 165d800-1660800.T 165d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\781 1660800-1664800.T 1660800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\782 1664800-166d000.T 1664800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\783 166d000-166e000.T 166d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\784 166e000-1670800.T 166e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\785 1670800-1670800.T 1670800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\786 1670800-1670800.T 1670800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\787 1670800-1670800.T 1670800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\788 1670800-1670800.T 1670800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\789 1670800-1671000.T 1670800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\790 1671000-1675800.T 1671000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\791 1675800-1676800.T 1675800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\792 1676800-1678000.T 1676800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\793 1678000-167a800.T 1678000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\794 167a800-167d000.T 167a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\795 167d000-167e000.T 167d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\796 167e000-1681000.T 167e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\797 1681000-1681000.T 1681000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\798 1681000-1681000.T 1681000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\799 1681000-1681000.T 1681000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\800 1681000-1681000.T 1681000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\801 1681000-1683000.T 1681000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\802 1683000-1684800.T 1683000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\803 1684800-1685800.T 1684800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\804 1685800-1688800.T 1685800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\805 1688800-168b000.T 1688800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\806 168b000-1691800.T 168b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\807 1691800-1692800.T 1691800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T_PARTS\808 1692800-1695800.T 1692800
+ write bytes 23678976
+ wrote bytes 23678976
+ wrote table bytes 1620
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>node tfile_assemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T 
+ TFile with 81 parts loaded
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\0 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\1 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\2 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\3 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\4 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\5 800-2000.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\6 2000-2000.T 2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\7 2000-2000.T 2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\8 2000-2000.T 2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\9 2000-2000.T 2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\10 2000-2000.T 2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\11 2000-1b000.T 2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\12 1b000-29800.T 1b000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\13 29800-2a800.T 29800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\14 2a800-33000.T 2a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\15 33000-34800.T 33000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\16 34800-39800.T 34800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\17 39800-3e000.T 39800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\18 3e000-3f000.T 3e000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\19 3f000-42000.T 3f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\20 42000-42000.T 42000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\21 42000-57800.T 42000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\22 57800-65800.T 57800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\23 65800-66800.T 65800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\24 66800-6f000.T 66800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\25 6f000-70800.T 6f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\26 70800-84800.T 70800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\27 84800-93800.T 84800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\28 93800-94800.T 93800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\29 94800-9c000.T 94800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\30 9c000-9d800.T 9c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\31 9d800-b6800.T 9d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\32 b6800-c5000.T b6800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T c5000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\34 c6000-ce800.T c6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\35 ce800-d0000.T ce800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\36 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\37 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\38 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\39 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\40 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\41 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\42 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\43 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\44 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\45 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\46 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\47 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\48 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\49 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\50 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\51 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\52 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\53 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\54 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\55 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\56 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\57 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\58 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\59 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\60 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\61 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\62 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\63 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\64 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\65 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\66 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\67 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\68 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\69 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\70 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\71 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\72 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\73 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\74 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\75 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\76 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\77 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\78 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\79 d0000-d0000.T d0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T_PARTS\80 d0000-d0000.T d0000
+ write bytes 849920
+ wrote bytes 849920
+ wrote table bytes 164
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>node tfile_assemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T 
+ TFile with 81 parts loaded
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\0 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\1 800-17800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\2 17800-1c000.T 17800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T 1c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\4 1d000-22800.T 1d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\5 22800-22800.T 22800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\6 22800-2a800.T 22800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\7 2a800-32000.T 40000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\8 32000-33000.T 47800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\9 33000-3c000.T 48800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\10 3c000-3c800.T 51000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\11 3c800-43800.T 51000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\12 43800-4b000.T 58000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T 5f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\14 4c000-55000.T 60800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\15 55000-55800.T 69800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\16 55800-5b800.T 6a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\17 5b800-60000.T 70000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\18 60000-61000.T 74800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\19 61000-64000.T 75800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\20 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\21 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\22 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\23 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\24 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\25 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\26 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\27 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\28 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\29 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\30 64000-64000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\31 64000-7b000.T 78800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\32 7b000-82800.T 8f800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\33 82800-83800.T 97000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\34 83800-8b800.T 98000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\35 8b800-8b800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\36 8b800-8b800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\37 8b800-8b800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\38 8b800-8b800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\39 8b800-8b800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\40 8b800-8b800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\41 8b800-a2800.T a0000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\42 a2800-a7000.T b7000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T bb800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\44 a8000-ad800.T bc800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\45 ad800-ad800.T c2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\46 ad800-be000.T c2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\47 be000-c4000.T d2800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\48 c4000-c5000.T d8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\49 c5000-cc800.T d9800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\50 cc800-cd000.T e1000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\51 cd000-e4000.T e1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\52 e4000-eb800.T f8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T 100000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\54 ec800-f4800.T 101000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\55 f4800-f4800.T 109000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\56 f4800-fa800.T 109000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\57 fa800-ff000.T 10f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\58 ff000-100000.T 113800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\59 100000-103000.T 114800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\60 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\61 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\62 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\63 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\64 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\65 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\66 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\67 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\68 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\69 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\70 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\71 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\72 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\73 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\74 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\75 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\76 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\77 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\78 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\79 103000-103000.T 117800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T_PARTS\80 103000-103000.T 117800
+injecting rewite by offset shift change 6 55 -> 80, 2a800 -> 40000
+injecting rewite by offset shift change 7 64 -> 8f, 32000 -> 47800
+injecting rewite by offset shift change 8 66 -> 91, 33000 -> 48800
+injecting rewite by offset shift change 9 78 -> a2, 3c000 -> 51000
+injecting rewite by offset shift change 10 79 -> a2, 3c800 -> 51000
+injecting rewite by offset shift change 11 87 -> b0, 43800 -> 58000
+injecting rewite by offset shift change 12 96 -> bf, 4b000 -> 5f800
+injecting rewite by offset shift change 13 98 -> c1, 4c000 -> 60800
+injecting rewite by offset shift change 14 aa -> d3, 55000 -> 69800
+injecting rewite by offset shift change 15 ab -> d4, 55800 -> 6a000
+injecting rewite by offset shift change 16 b7 -> e0, 5b800 -> 70000
+injecting rewite by offset shift change 17 c0 -> e9, 60000 -> 74800
+injecting rewite by offset shift change 18 c2 -> eb, 61000 -> 75800
+injecting rewite by offset shift change 19 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 20 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 21 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 22 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 23 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 24 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 25 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 26 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 27 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 28 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 29 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 30 c8 -> f1, 64000 -> 78800
+injecting rewite by offset shift change 31 f6 -> 11f, 7b000 -> 8f800
+injecting rewite by offset shift change 32 105 -> 12e, 82800 -> 97000
+injecting rewite by offset shift change 33 107 -> 130, 83800 -> 98000
+injecting rewite by offset shift change 34 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 35 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 36 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 37 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 38 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 39 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 40 117 -> 140, 8b800 -> a0000
+injecting rewite by offset shift change 41 145 -> 16e, a2800 -> b7000
+injecting rewite by offset shift change 42 14e -> 177, a7000 -> bb800
+injecting rewite by offset shift change 43 150 -> 179, a8000 -> bc800
+injecting rewite by offset shift change 44 15b -> 184, ad800 -> c2000
+injecting rewite by offset shift change 45 15b -> 184, ad800 -> c2000
+injecting rewite by offset shift change 46 17c -> 1a5, be000 -> d2800
+injecting rewite by offset shift change 47 188 -> 1b1, c4000 -> d8800
+injecting rewite by offset shift change 48 18a -> 1b3, c5000 -> d9800
+injecting rewite by offset shift change 49 199 -> 1c2, cc800 -> e1000
+injecting rewite by offset shift change 50 19a -> 1c3, cd000 -> e1800
+injecting rewite by offset shift change 51 1c8 -> 1f1, e4000 -> f8800
+injecting rewite by offset shift change 52 1d7 -> 200, eb800 -> 100000
+injecting rewite by offset shift change 53 1d9 -> 202, ec800 -> 101000
+injecting rewite by offset shift change 54 1e9 -> 212, f4800 -> 109000
+injecting rewite by offset shift change 55 1e9 -> 212, f4800 -> 109000
+injecting rewite by offset shift change 56 1f5 -> 21e, fa800 -> 10f000
+injecting rewite by offset shift change 57 1fe -> 227, ff000 -> 113800
+injecting rewite by offset shift change 58 200 -> 229, 100000 -> 114800
+injecting rewite by offset shift change 59 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 60 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 61 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 62 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 63 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 64 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 65 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 66 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 67 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 68 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 69 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 70 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 71 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 72 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 73 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 74 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 75 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 76 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 77 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 78 206 -> 22f, 103000 -> 117800
+injecting rewite by offset shift change 79 206 -> 22f, 103000 -> 117800
+ write bytes 1142784
+ wrote bytes 1142784
+ wrote table bytes 164
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>node tfile_assemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T 
+ TFile with 82 parts loaded
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\0 800-800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\1 800-8800.T 800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\2 8800-10000.T 8800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\3 10000-11000.T 10000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\4 11000-1a000.T 11000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\5 1a000-1a800.T 1a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\6 1a800-21800.T 1a800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\7 21800-29000.T 21800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\8 29000-2a000.T 29000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\9 2a000-33000.T 2a000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\10 33000-33800.T 33000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\11 33800-51000.T 33800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\12 51000-58800.T 3b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\13 58800-59800.T 43000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\14 59800-62000.T 44000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\15 62000-62000.T 4d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\16 62000-68000.T 4d800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\17 68000-6c800.T 53800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\18 6c800-6d800.T 58000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\19 6d800-70800.T 59000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\20 70800-70800.T 5c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\21 70800-78800.T 5c000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\22 78800-80000.T 64000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\23 80000-81000.T 6b800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\24 81000-8a000.T 6c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\25 8a000-8a800.T 75800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\26 8a800-91800.T 76000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\27 91800-99000.T 7d000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\28 99000-9a000.T 84800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\29 9a000-a3000.T 85800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\30 a3000-a3800.T 8e800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\31 a3800-b1000.T 8f000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\32 b1000-bc800.T 9c800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\33 bc800-bd800.T a8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\34 bd800-c6000.T a9000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\35 c6000-c6800.T b1800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\36 c6800-c6800.T b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\37 c6800-c6800.T b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\38 c6800-c6800.T b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\39 c6800-c6800.T b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\40 c6800-c6800.T b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\41 c6800-d3800.T b2000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\42 d3800-d9000.T bf000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\43 d9000-da000.T c4800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\44 da000-e3800.T c5800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\45 e3800-e3800.T cf000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\46 e3800-ea800.T cf000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\47 ea800-f2000.T d6000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T dd800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\49 f3000-fc000.T de800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\50 fc000-fc800.T e7800
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\51 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\52 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\53 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\54 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\55 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\56 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\57 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\58 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\59 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\60 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\61 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\62 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\63 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\64 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\65 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\66 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\67 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\68 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\69 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\70 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\71 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\72 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\73 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\74 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\75 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\76 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\77 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\78 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\79 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\80 fc800-fc800.T e8000
+Part offsets? C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS\81 fc800-fc800.T e8000
+injecting rewite by offset shift change 11 a2 -> 77, 51000 -> 3b800
+injecting rewite by offset shift change 12 b1 -> 86, 58800 -> 43000
+injecting rewite by offset shift change 13 b3 -> 88, 59800 -> 44000
+injecting rewite by offset shift change 14 c4 -> 9a, 62000 -> 4d000
+injecting rewite by offset shift change 15 c4 -> 9b, 62000 -> 4d800
+injecting rewite by offset shift change 16 d0 -> a7, 68000 -> 53800
+injecting rewite by offset shift change 17 d9 -> b0, 6c800 -> 58000
+injecting rewite by offset shift change 18 db -> b2, 6d800 -> 59000
+injecting rewite by offset shift change 19 e1 -> b8, 70800 -> 5c000
+injecting rewite by offset shift change 20 e1 -> b8, 70800 -> 5c000
+injecting rewite by offset shift change 21 f1 -> c8, 78800 -> 64000
+injecting rewite by offset shift change 22 100 -> d7, 80000 -> 6b800
+injecting rewite by offset shift change 23 102 -> d9, 81000 -> 6c800
+injecting rewite by offset shift change 24 114 -> eb, 8a000 -> 75800
+injecting rewite by offset shift change 25 115 -> ec, 8a800 -> 76000
+injecting rewite by offset shift change 26 123 -> fa, 91800 -> 7d000
+injecting rewite by offset shift change 27 132 -> 109, 99000 -> 84800
+injecting rewite by offset shift change 28 134 -> 10b, 9a000 -> 85800
+injecting rewite by offset shift change 29 146 -> 11d, a3000 -> 8e800
+injecting rewite by offset shift change 30 147 -> 11e, a3800 -> 8f000
+injecting rewite by offset shift change 31 162 -> 139, b1000 -> 9c800
+injecting rewite by offset shift change 32 179 -> 150, bc800 -> a8000
+injecting rewite by offset shift change 33 17b -> 152, bd800 -> a9000
+injecting rewite by offset shift change 34 18c -> 163, c6000 -> b1800
+injecting rewite by offset shift change 35 18d -> 164, c6800 -> b2000
+injecting rewite by offset shift change 36 18d -> 164, c6800 -> b2000
+injecting rewite by offset shift change 37 18d -> 164, c6800 -> b2000
+injecting rewite by offset shift change 38 18d -> 164, c6800 -> b2000
+injecting rewite by offset shift change 39 18d -> 164, c6800 -> b2000
+injecting rewite by offset shift change 40 18d -> 164, c6800 -> b2000
+injecting rewite by offset shift change 41 1a7 -> 17e, d3800 -> bf000
+injecting rewite by offset shift change 42 1b2 -> 189, d9000 -> c4800
+injecting rewite by offset shift change 43 1b4 -> 18b, da000 -> c5800
+injecting rewite by offset shift change 44 1c7 -> 19e, e3800 -> cf000
+injecting rewite by offset shift change 45 1c7 -> 19e, e3800 -> cf000
+injecting rewite by offset shift change 46 1d5 -> 1ac, ea800 -> d6000
+injecting rewite by offset shift change 47 1e4 -> 1bb, f2000 -> dd800
+injecting rewite by offset shift change 48 1e6 -> 1bd, f3000 -> de800
+injecting rewite by offset shift change 49 1f8 -> 1cf, fc000 -> e7800
+injecting rewite by offset shift change 50 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 51 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 52 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 53 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 54 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 55 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 56 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 57 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 58 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 59 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 60 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 61 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 62 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 63 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 64 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 65 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 66 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 67 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 68 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 69 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 70 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 71 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 72 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 73 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 74 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 75 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 76 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 77 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 78 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 79 1f9 -> 1d0, fc800 -> e8000
+injecting rewite by offset shift change 80 1f9 -> 1d0, fc800 -> e8000
+ write bytes 1032192
+ wrote bytes 1032192
+ wrote table bytes 166
+
+C:\Users\fred\Desktop\shadow-tower-randomizer>C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\mkpsxiso.exe C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st.xml -q -y 

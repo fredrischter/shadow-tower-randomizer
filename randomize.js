@@ -29,6 +29,48 @@ var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
 var tfile = new TFILEReader(tFilePath).readTFormat();
 data_model.setup(tfile);
 
+let tFileModelFiles = {
+	"00_dark_spider": {
+		"files": [
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "1 800-17800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "2 17800-1c000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "3 1c000-1d000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "4 1d000-22800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "5 22800-22800.T"
+		]
+	},
+	"01_acid_slime": {
+		"files": [
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "6 22800-2a800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "7 2a800-32000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "8 32000-33000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "9 33000-3c000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T_PARTS" + path.sep + "10 3c000-3c800.T"
+		]
+	},
+	"02_parasite": {
+		"files": [
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "11 33800-51000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "12 51000-58800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "13 58800-59800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "14 59800-62000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "15 62000-62000.T"
+		]
+	}
+}
+
+function swapModels(model1, model2, changeSet) {
+	var obj1 = tFileModelFiles[model1];
+	var obj2 = tFileModelFiles[model2];
+	for (var i in obj1.files) {
+		changeSet.push({
+			"fileSwap": {
+				"file1": obj1.files[i], "file2": obj2.files[i]
+			}
+		});
+	}
+}
+
 function arrayCopy(origin, dest, offset, length) {
 	for (var i = 0; i < length; i++) {
 		dest[i] = origin[i];
@@ -438,6 +480,8 @@ for (var i in tfileOriginal.files) {
 		changeSet.push({"file":filePath, "bytes":changes});
 	}
 }
+
+swapModels("01_acid_slime", "02_parasite", changeSet);
 
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)

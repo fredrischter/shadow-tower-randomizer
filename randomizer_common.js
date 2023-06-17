@@ -14,22 +14,26 @@ class TFILEReader {
     //console.log(' finished reading file ' + this.data.length + ' bytes');
     this.cursor = this.data.entries();
     this.offset = 0;
+    this.indexInTFile = 0;
   }
 
   readTFormat() {
     return new TFormat(this);
   }
 
-  readTFormatPart() {
-    var startOffset = parseInt(this.baseFileName.split(" ")[1].split("-")[0], 16);
+  readTFormatPart(startOffset) {
+    //var startOffsetFromName = parseInt(this.baseFileName.split(" ")[1].split("-")[0], 16);
     var bin = new Array(this.data.length);
     while (!this.done()) {
       bin[this.offset] = this.next();
     }
+
+    console.log("Part offsets? " + this.baseFileName /*+ " " + startOffsetFromName.toString(16)*/ + " " + startOffset.toString(16));
+
     var originalTFile = this.baseFileName.split("_PARTS"+path.sep)[0];
-    //console.log(" " + startOffset + " " + " " + this.baseFileName);
+    //console.log(" " + startOffsetFromName + " " + " " + this.baseFileName);
     //console.log(" " + originalTFile);
-    return new TFormatPart(startOffset, bin, this.baseFileName, originalTFile);
+    return new TFormatPart(startOffset/* || startOffsetFromName*/, bin, this.baseFileName, originalTFile, this.indexInTFile++);
   }
 
   next() {
@@ -57,12 +61,14 @@ class TFILEReader {
 
 class TFormatPart {
 
-  constructor(startOffset, bin, fileName, originalTFile) {
+  constructor(startOffset, bin, fileName, originalTFile, indexInTFile) {
     this.startOffset = startOffset;
     this.bin = bin;
     this.originalBin = bin.slice();
     this.fileName = fileName;
     this.originalTFile = originalTFile;
+    this.indexInTFile = indexInTFile;
+    //console.log("     offset   " + this.startOffset.toString(16));
 
     this.trySizedMix();
   }
@@ -116,12 +122,15 @@ class TFormatPart {
     }
   }
 
-  reload() {
-    var reloaded = new TFILEReader(this.fileName).readTFormatPart();
+  reload(offset) {
+    var reloaded = new TFILEReader(this.fileName).readTFormatPart(offset);
     //if (this.bin.length != reloaded.bin.length) {
     //  console.log("Error - reloading part into part with wrong size.");
     //}
     this.bin = reloaded.bin;
+    this.startOffset = reloaded.startOffset;
+
+    return this.bin.length;
     //console.log("reloading into " + this.startOffset,toString(16) +" " +this.fileName+" " +this.originalTFile);
     //console.log("reloading from " + reloaded.startOffset,toString(16) +" " +reloaded.fileName+" " +reloaded.originalTFile);
   }
@@ -169,6 +178,17 @@ class TFormatPart {
 }
 
 class TFormat {
+
+  getTableBin() {
+    let buffer = new ArrayBuffer((this.offsetCount+1)*2);
+    let view = new Uint16Array(buffer);
+    view[0] = this.offsetCount;
+    for (var i = 0 ; i < this.offsetCount ; i++) {
+      view[i+1] = this.offsetTable[i];
+    }
+    return new Uint8Array(buffer);
+  }
+
   constructor(reader) {
     this.fileName = reader.baseFileName;
   	this.partsFolderName = reader.baseFileName+'_PARTS';
@@ -210,7 +230,7 @@ class TFormat {
       var currentEnd = this.offsetTable[i] * SECTOR_SIZE;
       var name = '' + i + ' ' + (previous).toString(16) + '-' + (currentEnd).toString(16);
       var fileName = this.partsFolderName+path.sep+name+'.T'
-      this.files[i] = new TFormatPart(previous, this.bin.slice(previous - this.beginningOfBin, currentEnd - this.beginningOfBin), fileName, reader.baseFileName);
+      this.files[i] = new TFormatPart(previous, this.bin.slice(previous - this.beginningOfBin, currentEnd - this.beginningOfBin), fileName, reader.baseFileName, i == 0 ? 0 : i - 1);
       previous = currentEnd;
     }
     console.log(" TFile with " + this.files.length + " parts loaded");
@@ -233,12 +253,20 @@ class TFormat {
   }
 
   injectPart(file) {
+    var indexFromTable = this.offsetTable[file.indexInTFile];
+    var indexFromOffset = file.startOffset / 0x800;
+    if (indexFromTable != indexFromOffset) {
+      console.log("injecting rewite by offset shift change " + file.indexInTFile + " " + (indexFromTable).toString(16) + " -> " + indexFromOffset.toString(16) + ", " + (indexFromTable*0x800).toString(16) + " -> " + (indexFromOffset*0x800).toString(16));
+      this.offsetTable[file.indexInTFile] = indexFromOffset;
+    }
     for (var i = 0 ; i < file.bin.length ; i++) {
       var newValue = file.bin[i];
       var binPos = file.startOffset - this.beginningOfBin;
       var current = this.bin[binPos+i];
       if (newValue!=current) {
-        console.log(" injecting change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
+        //if (indexFromTable == indexFromOffset) {
+          //console.log(" injecting byte change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
+        //}
         this.bin[binPos+i] = newValue;
       }
     }
@@ -247,8 +275,12 @@ class TFormat {
   write() {
     var fd = fs.openSync(this.fileName, 'r+');
     console.log(" write bytes " + this.bin.length);
-    const numberOfBytesWritten = fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin);
+    var numberOfBytesWritten = fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin);
     console.log(" wrote bytes " + numberOfBytesWritten);
+    const tableBin = this.getTableBin();
+    numberOfBytesWritten = fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0);
+    console.log(" wrote table bytes " + numberOfBytesWritten);
+    
   }
 }
 

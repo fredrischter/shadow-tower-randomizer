@@ -23,6 +23,12 @@ let changeset = JSON.parse(fs.readFileSync(changeFile));
 for (var i in changeset) {
 	var change = changeset[i];
 
+	if (change.fileSwap) {
+		fs.renameSync(change.fileSwap.file1, change.fileSwap.file1 + ".tmp");
+		fs.renameSync(change.fileSwap.file2, change.fileSwap.file1);
+		fs.renameSync(change.fileSwap.file1 + ".tmp", change.fileSwap.file2);
+	}
+
 	if (change.file) {
 		var part = new TFILEReader(change.file).readTFormatPart();
 		part.verifyCheckSum();
