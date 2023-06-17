@@ -849,7 +849,7 @@ class Tile {
     this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x0a);
 
     if (!this.isBlank) {
-      console.log(this.toReadableString());
+      //console.log(this.toReadableString());
     }
   }
 

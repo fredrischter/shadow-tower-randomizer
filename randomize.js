@@ -212,7 +212,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 	//	}
 
 	// Randomize spawn tile
-	spawn.tileId.set(Math.floor(Math.random()*64));//area.tiles.length));
+	//spawn.tileId.set(Math.floor(Math.random()*64));//area.tiles.length));
 }
 
 function forEachValidCreature(creature, area, index) {

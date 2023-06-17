@@ -19,9 +19,9 @@ REM call npm run disassemble %dir%st\ST\COM\ITEM.T
 REM call npm run disassemble %dir%st\ST\CHR0\M00.T
 REM call npm run disassemble %dir%st\ST\CHR0\M01.T
 REM call npm run disassemble %dir%st\ST\CHR0\M02.T
-REM call npm run disassemble %dir%st\ST\CHR0\M03.T
-REM call npm run disassemble %dir%st\ST\CHR0\M04.T
-REM call npm run disassemble %dir%st\ST\CHR0\M05.T
+call npm run disassemble %dir%st\ST\CHR0\M03.T
+call npm run disassemble %dir%st\ST\CHR0\M04.T
+call npm run disassemble %dir%st\ST\CHR0\M05.T
 REM call npm run disassemble %dir%st\ST\CHR0\M06.T
 REM call npm run disassemble %dir%st\ST\CHR0\M07.T
 REM call npm run disassemble %dir%st\ST\CHR0\M08.T
