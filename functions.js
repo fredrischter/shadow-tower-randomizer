@@ -69,3 +69,10 @@ global.binToStr = function(bin, padding) {
   return str;
 }
 
+global.randomIntFromInterval = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+global.randomInt = function(max) {
+  return Math.floor(Math.random() * (max + 1))
+}

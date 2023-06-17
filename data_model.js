@@ -15,6 +15,7 @@ var logo_files = {
   71: null,
   81: "illusion_world_bewilderment_domain",
   91: "illusion_world_gloomy_domain",
+
   101: "water_world_impure_pool_area",
   111: "earth_world_rotting_cavern",
   121: "earth_world_quaking_cavern",
@@ -25,6 +26,7 @@ var logo_files = {
   171: "monster_world_screeching area",
   181: "fire_world_ashen_cavern",
   191: null,
+
   201: "fire_world_burning_cavern",
   211: "water_world_sunken_river_area",
   221: null,
@@ -35,24 +37,26 @@ var logo_files = {
   271: "earth_world_poisonous_cavern",
   281: "earth_world_stone_cavern",
   291: null,
+
   301: "void",
   311: null,
   321: "water_world_watery_labyrinth_area",
-  341: null,
   331: "earth_world_hostile_rock_cavern",
+  341: null,
   351: null,
   361: null,
   371: "water_world_white_rain_area",
   381: "illusion_world_dream_domain",
   391: null,
+
   401: "shadow_tower_part2",
   411: "shadow_tower_part3",
   421: null,
   431: null,
-  441: "unknown_part1",
-  451: "unknown_part2",
-  461: "unknown_part3",
-  471: "unknown_part4"
+  441: null,//"unknown_part1",
+  451: null,//"unknown_part2",
+  461: null,//"unknown_part3",
+  471: null//"unknown_part4"
 }
 
 var itemDataString = `baa0  13972a0    item_0_short_sword                c 4e  0  0 30  9  7  0  0  0  0  0  0  0  0  0  0  0  0  0  b  0  6  c  a  0  0  0 ff  2  0  a  0  1  0  2  0  0 40  0  0  6  0  0
@@ -542,7 +546,7 @@ global.SPAWN_ENTRY_SIZE = 0x18;
 global.SPAWN_ENTRIES_COUNT = 198;
 
 class Area  {
-  constructor(logo_index, name) {
+  constructor(logo_index, name, areaIndexCounter) {
     this.logo_index = logo_index;
 // 0 - empty
 // 1 - RTIM_texture_map_name
@@ -558,6 +562,7 @@ class Area  {
 // 9 - the_tilemap
 // ? - another_customized_TMD_object_models
     this.name = name;
+    this.areaIndexCounter = areaIndexCounter;
     global[name] = this;
   }
 
@@ -887,6 +892,8 @@ class Tile {
   }
 }
 
+global.validCreatures = [];
+
 class Creature {
   constructor(bin, area, offset_in_file, absoluteIndex, creatureIndex) {
     this.bin = bin;
@@ -941,6 +948,10 @@ class Creature {
 
       if (this.isBlank) {
         global.blankCreature = this;
+      }
+
+      if (!this.isBlank) {
+        validCreatures.push(this);
       }
     }
 
@@ -1029,8 +1040,12 @@ class Creature {
   }
 }
 
+var areaIndexCounter = 0;
 for (var logo_index in logo_files) {
-  areas.push(new Area(parseInt(logo_index), logo_files[logo_index]));
+  if (!logo_files[logo_index]) {
+    continue;
+  }
+  areas.push(new Area(parseInt(logo_index), logo_files[logo_index], areaIndexCounter++));
 }
 
 class Spawn {

@@ -280,7 +280,6 @@ class TFormat {
     const tableBin = this.getTableBin();
     numberOfBytesWritten = fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0);
     console.log(" wrote table bytes " + numberOfBytesWritten);
-    
   }
 }
 

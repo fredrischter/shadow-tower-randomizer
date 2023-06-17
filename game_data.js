@@ -1564,28 +1564,4 @@ global.GAME_DATA={"items":[
 ], "spawns":{
 }, "collectables":{
 }},
- {"name":"unknown_part1", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100,"offset_in_file":"   4","absoluteIndex":" 1206004","isDoor":false},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"1"              ,"x":0         ,"y":0         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
- {"name":"unknown_part2", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100,"offset_in_file":"   4","absoluteIndex":" 1276804","isDoor":false},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"0"              ,"x":0         ,"y":0         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
- {"name":"unknown_part3", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100,"offset_in_file":"   4","absoluteIndex":" 12d9004","isDoor":false},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"0"              ,"x":0         ,"y":2         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
- {"name":"unknown_part4", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100,"offset_in_file":"   4","absoluteIndex":" 133b804","isDoor":false},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"0"              ,"x":0         ,"y":2         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
 ]};

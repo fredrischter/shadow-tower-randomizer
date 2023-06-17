@@ -29,6 +29,30 @@ var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
 var tfile = new TFILEReader(tFilePath).readTFormat();
 data_model.setup(tfile);
 
+// model files
+let modelFileNames = [
+	stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M00.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M01.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M02.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M03.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M06.T",/*stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M07.T",*/ stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M08.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M09.T",
+	stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M10.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M11.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M12.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M13.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M14.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M15.T",/*stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M16.T",*/ stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M17.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M18.T",/*stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M19.T",*/
+	stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M20.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M21.T",/*stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M22.T",*/stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M23.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M24.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M26.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M27.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M28.T",/*stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M29.T",*/
+	stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M30.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M31.T",*/stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M32.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M33.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M34.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M35.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M36.T",*/stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M37.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M38.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M39.T",*/
+	stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M40.T", stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M41.T"
+];
+for (var i in modelFileNames) {
+	let modelFile = new TFILEReader(modelFileNames[i]).readTFormat();
+	data_model.areas[i].modelFile = modelFile;
+	for (var c in data_model.areas[i].creatures) {
+		let creature = data_model.areas[i].creatures[c];
+		creature.modelFiles = [
+			modelFile.files[c*5].fileName,
+			modelFile.files[c*5+1].fileName,
+			modelFile.files[c*5+2].fileName,
+			modelFile.files[c*5+3].fileName,
+			modelFile.files[c*5+4].fileName,
+		]
+	}
+}
+
+/*
 let tFileModelFiles = {
 	"00_dark_spider": {
 		"files": [
@@ -66,15 +90,16 @@ let tFileModelFiles = {
 			stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T_PARTS" + path.sep + "30 cd800-cd800.T"
 		]
 	}
-}
+}*/
 
-function swapModels(model1, model2, changeSet) {
-	var obj1 = tFileModelFiles[model1];
-	var obj2 = tFileModelFiles[model2];
-	for (var i in obj1.files) {
+function swapModels(creature1, creature2, changeSet) {
+	if (creature1 == creature2) {
+		return;
+	}
+	for (var i in creature1.modelFiles) {
 		changeSet.push({
 			"fileSwap": {
-				"file1": obj1.files[i], "file2": obj2.files[i]
+				"file1": creature1.modelFiles[i], "file2": creature2.modelFiles[i]
 			}
 		});
 	}
@@ -491,10 +516,11 @@ for (var i in tfileOriginal.files) {
 }
 
 //swapModels("01_acid_slime", "02_parasite", changeSet);
-swapModels("01_acid_slime", "05_armored_warrior", changeSet);
+swapModels(human_world_solitary_region["01_acid_slime"],
+	human_world_forgotten_region["01_blood_skull"], changeSet);
 
-function randomIntFromInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min)
+for (var i =0; i<300; i++) {
+	swapModels(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
 }
 
 fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
