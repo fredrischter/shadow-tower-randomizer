@@ -3311,3 +3311,9 @@ idx                                                                     x       
 
  TFile with 82 parts loaded
  82 parts unpacked into C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T_PARTS
+
+> shadow-tower-randomizer@1.0.0 disassemble
+> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M25.T
+
+ TFile with 81 parts loaded
+ 81 parts unpacked into C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M25.T_PARTS

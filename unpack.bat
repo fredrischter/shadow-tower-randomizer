@@ -41,7 +41,7 @@ REM call npm run disassemble %dir%st\ST\CHR2\M21.T
 REM call npm run disassemble %dir%st\ST\CHR2\M22.T
 REM call npm run disassemble %dir%st\ST\CHR2\M23.T
 REM call npm run disassemble %dir%st\ST\CHR2\M24.T
-REM call npm run disassemble %dir%st\ST\CHR2\M25.T
+call npm run disassemble %dir%st\ST\CHR2\M25.T
 REM call npm run disassemble %dir%st\ST\CHR2\M26.T
 REM call npm run disassemble %dir%st\ST\CHR2\M27.T
 REM call npm run disassemble %dir%st\ST\CHR2\M28.T

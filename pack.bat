@@ -11,5 +11,6 @@ node tfile_assemble.js %dir%st\ST\COM\FDAT.T
 node tfile_assemble.js %dir%st\ST\CHR0\M03.T
 node tfile_assemble.js %dir%st\ST\CHR0\M04.T
 node tfile_assemble.js %dir%st\ST\CHR0\M05.T
+node tfile_assemble.js %dir%st\ST\CHR2\M25.T
 
 %dir%mkpsxiso.exe %dir%st.xml -q -y

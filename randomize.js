@@ -56,6 +56,15 @@ let tFileModelFiles = {
 			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "14 59800-62000.T",
 			stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T_PARTS" + path.sep + "15 62000-62000.T"
 		]
+	},
+	"05_armored_warrior": {
+		"files": [
+			stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T_PARTS" + path.sep + "26 a5000-bb800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T_PARTS" + path.sep + "27 bb800-c3000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T_PARTS" + path.sep + "28 c3000-c4000.T",
+			stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T_PARTS" + path.sep + "29 c4000-cd800.T",
+			stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T_PARTS" + path.sep + "30 cd800-cd800.T"
+		]
 	}
 }
 
@@ -481,7 +490,8 @@ for (var i in tfileOriginal.files) {
 	}
 }
 
-swapModels("01_acid_slime", "02_parasite", changeSet);
+//swapModels("01_acid_slime", "02_parasite", changeSet);
+swapModels("01_acid_slime", "05_armored_warrior", changeSet);
 
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
