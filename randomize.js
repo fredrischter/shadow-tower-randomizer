@@ -412,12 +412,11 @@ for (var a in areas) {
 
 }
 
-
-let changeSet = {};
+let changeSet = [];
 //let changes44 = {};
 //let file44Path = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T_PARTS" + path.sep 
 //	+ "44 255800-25e800.T";
-//changeSet[file44Path] = changes44;
+//changeSet.push({"file":file44Path, "bytes":changes44});
 //var part44 = new TFILEReader(file44Path).readTFormatPart();
 //part44.verifyCheckSum();
 
@@ -436,7 +435,7 @@ for (var i in tfileOriginal.files) {
 		}
 	}
 	if (anyChange) {
-		changeSet[filePath] = changes;
+		changeSet.push({"file":filePath, "bytes":changes});
 	}
 }
 

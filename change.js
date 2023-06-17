@@ -17,20 +17,23 @@ function copyArea(origin, dest, size) {
 	}
 }
 
-let change = JSON.parse(fs.readFileSync(changeFile));
-//console.log(change);
+let changeset = JSON.parse(fs.readFileSync(changeFile));
+//console.log(changeset);
 
-for (var file in change) {
-	var part = new TFILEReader(file).readTFormatPart();
-	part.verifyCheckSum();
+for (var i in changeset) {
+	var change = changeset[i];
 
-	var changeMap = change[file];
-	for (var index in changeMap) {
-		part.bin[parseInt(index, 16)] = parseInt(changeMap[index], 16);
+	if (change.file) {
+		var part = new TFILEReader(change.file).readTFormatPart();
+		part.verifyCheckSum();
+
+		for (var index in change.bytes) {
+			part.bin[parseInt(index, 16)] = parseInt(change.bytes[index], 16);
+		}
+
+		part.setCheckSum()
+		part.verifyCheckSum();
+		part.write();
 	}
-
-	part.setCheckSum()
-	part.verifyCheckSum();
-	part.write();
 }
 
