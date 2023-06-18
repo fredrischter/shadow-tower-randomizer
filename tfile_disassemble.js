@@ -10,11 +10,13 @@ if (!file || !file.endsWith(".T")) {
   return;
 }
 
-var tfile = new TFILEReader(file).readTFormat();
-tfile.writeParts();
-
-if (file.endsWith("FDAT.T")) {
-	data_model.setup(tfile);
+for (var c = 2; c < process.argv.length; c++) {
+	var tfile = new TFILEReader(process.argv[c]).readTFormat();
+	tfile.writeParts((err) => {
+		if (file.endsWith("FDAT.T")) {
+			data_model.setup(tfile);
+		}
+	});
 }
 
 //for (var i=0; i<tfile.files.length; i++) {

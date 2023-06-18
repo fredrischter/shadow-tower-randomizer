@@ -9,14 +9,16 @@ if (!file || !file.endsWith(".T")) {
   return;
 }
 
-var TFILE = new TFILEReader(file).readTFormat();
+for (var c = 2; c < process.argv.length; c++) {
+	var tfile = new TFILEReader(process.argv[c]).readTFormat();
+	var offset = tfile.beginningOfBin;
 
-var offset = TFILE.beginningOfBin;
-for (var i=0; i<TFILE.files.length; i++) {
-	var length = TFILE.files[i].reload(offset);
-	offset += length;
-	//console.log("Part to assemble "+TFILE.files[i].fileName);
+	for (var i=0; i<tfile.files.length; i++) {
+		var length = tfile.files[i].reload(offset);
+		offset += length;
+		//console.log("Part to assemble "+tfile.files[i].fileName);
+	}
+
+	tfile.injectParts();
+	tfile.write();
 }
-
-TFILE.injectParts();
-TFILE.write();

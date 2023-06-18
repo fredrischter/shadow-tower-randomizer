@@ -28,7 +28,7 @@ class TFILEReader {
       bin[this.offset] = this.next();
     }
 
-    console.log("Part offsets? " + this.baseFileName /*+ " " + startOffsetFromName.toString(16)*/ + " " + startOffset.toString(16));
+    //console.log("Part offsets? " + this.baseFileName /*+ " " + startOffsetFromName.toString(16)*/ + " " + startOffset.toString(16));
 
     var originalTFile = this.baseFileName.split("_PARTS"+path.sep)[0];
     //console.log(" " + startOffsetFromName + " " + " " + this.baseFileName);
@@ -105,9 +105,14 @@ class TFormatPart {
     }
   }
 
-  write() {
-    fs.writeFileSync(this.fileName, Buffer.from(this.bin));// ,{flag:'a+'}
+  write(callback) {
+    if (callback) {
+      fs.writeFileSync(this.fileName, Buffer.from(this.bin), callback);// ,{flag:'a+'}
+    } else {
+      fs.writeFileSync(this.fileName, Buffer.from(this.bin));// ,{flag:'a+'}
+    }
 
+    /* write sized mix parts
     if (this.sizedMixParts) {
       var sizedPartsDir = this.fileName + "_SIZED_MIX_PARTS";
       fs.rmSync(sizedPartsDir, { recursive: true, force: true });
@@ -119,7 +124,7 @@ class TFormatPart {
         cursor = newCursor;
         fs.writeFileSync(fileName, Buffer.from(this.sizedMixParts[i]));
       }
-    }
+    }*/
   }
 
   reload(offset) {
@@ -237,13 +242,31 @@ class TFormat {
     
   }
 
-  writeParts() {
-    fs.rmSync(this.partsFolderName, { recursive: true, force: true });
-    fs.mkdirSync(this.partsFolderName);
-    for (var i = 0 ; i < this.files.length ; i++) {
-      this.files[i].write();
+  writeParts(callback) {
+
+    if (callback) {
+      var finishedCount = 0;
+      fs.rm(this.partsFolderName, { recursive: true, force: true }, (err) => {
+        fs.mkdir(this.partsFolderName, (err) => {
+          for (var i = 0 ; i < this.files.length ; i++) {
+            this.files[i].write((err) => {
+              finishedCount++;
+              if (finishedCount == this.files.length) {
+                callback();
+              }
+            });
+          }
+        });
+      });
+
+    } else {
+      fs.rmSync(this.partsFolderName, { recursive: true, force: true });
+      fs.mkdirSync(this.partsFolderName);
+      for (var i = 0 ; i < this.files.length ; i++) {
+        this.files[i].write();
+      }
+      console.log(" " + this.files.length + " parts unpacked into " + this.partsFolderName);
     }
-    console.log(" " + this.files.length + " parts unpacked into " + this.partsFolderName);
   }
 
   injectParts() {
@@ -256,7 +279,7 @@ class TFormat {
     var indexFromTable = this.offsetTable[file.indexInTFile];
     var indexFromOffset = file.startOffset / 0x800;
     if (indexFromTable != indexFromOffset) {
-      console.log("injecting rewite by offset shift change " + file.indexInTFile + " " + (indexFromTable).toString(16) + " -> " + indexFromOffset.toString(16) + ", " + (indexFromTable*0x800).toString(16) + " -> " + (indexFromOffset*0x800).toString(16));
+      //console.log("injecting rewite by offset shift change " + file.indexInTFile + " " + (indexFromTable).toString(16) + " -> " + indexFromOffset.toString(16) + ", " + (indexFromTable*0x800).toString(16) + " -> " + (indexFromOffset*0x800).toString(16));
       this.offsetTable[file.indexInTFile] = indexFromOffset;
     }
     for (var i = 0 ; i < file.bin.length ; i++) {
@@ -272,14 +295,24 @@ class TFormat {
     }
   }
 
-  write() {
+  write(callback) {
     var fd = fs.openSync(this.fileName, 'r+');
-    console.log(" write bytes " + this.bin.length);
-    var numberOfBytesWritten = fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin);
-    console.log(" wrote bytes " + numberOfBytesWritten);
-    const tableBin = this.getTableBin();
-    numberOfBytesWritten = fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0);
-    console.log(" wrote table bytes " + numberOfBytesWritten);
+
+    if (callback) {
+      fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin, function(err, numberOfBytesWritten) {
+        console.log(" wrote bytes " + numberOfBytesWritten);
+        const tableBin = this.getTableBin();
+        fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0, function(err, numberOfBytesWritten) {
+          console.log(" wrote table bytes " + numberOfBytesWritten);
+        });
+      });
+    } else {
+      var numberOfBytesWritten = fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin);
+      console.log(" wrote bytes " + numberOfBytesWritten);
+      const tableBin = this.getTableBin();
+      numberOfBytesWritten = fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0);
+      console.log(" wrote table bytes " + numberOfBytesWritten);
+    }
   }
 }
 
