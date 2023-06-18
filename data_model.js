@@ -578,6 +578,7 @@ class Area  {
     this.creatures = [];
     console.log("\nCreatures");
     console.log("name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23");
+    nextExpectedEntityDataAddress = ENTITY_STATE_DATA_START;
     for (var i = 0; i<CREATURE_COUNT; i++) {
       var offset_in_file = 4 + CREATURE_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
@@ -618,6 +619,13 @@ class Area  {
     this.collectables.forEach(obj => { if (obj.isBlank) return; str += "  "+obj.collectableIndex+":" + obj + ",\n"; });
     str+="}}";
     return str;
+  }
+
+  reinjectEntityDataFromCreaturesToFile() {
+    var nextEntityDataAddress = 0;
+    for (var i in this.creatures) {
+      nextEntityDataAddress = this.creatures[i].reinjectEntityDataToFile(nextEntityDataAddress);
+    }
   }
 
   setupSpawns(area, tfile) {
@@ -730,6 +738,7 @@ const creatureNameByAbsoluteOffset={0x9a804:"dark_spider",0x9a8c4:"shadow_spider
 const CREATURE_DATA_LENGTH = 93;
 const ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET = 96;
 const ENTITY_STATE_OFFSETS_ARRAY_LENGTH = 24;
+const ENTITY_STATE_SIZE_BY_TYPE = {0x0: 0x14, 0x2: 0x10, 0x10: 0x18, 0x11: 0x1c, 0x12: 0x18, 0x13: 0x1c, 0x15: 0x1c, 0x16: 0x18, 0x20: 0x30, 0x30: 0x30, 0x40: 0x10, 0x50: 0x10, 0x14: 0x20, 0x70: 0x10, 0x71: 0x10, 0x72: 0x10, 0x80: 0x10};
 
 class EntityStateData {
   constructor(bin, creature, offset_in_file, absoluteIndex, creatureIndex, index) {
@@ -739,17 +748,22 @@ class EntityStateData {
     this.absoluteIndex = absoluteIndex;
     this.creatureIndex = creatureIndex;
     this.index = index;
-    this.length = 16;
+    this.type = this.bin[this.offset_in_file];
+    if (!ENTITY_STATE_SIZE_BY_TYPE[this.type]) {
+      console.log("ERROR EntityStateData type size unknown " + this.type.toString(16) + " " + ENTITY_STATE_SIZE_BY_TYPE[this.type]);
+    }
+    this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
+    this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
   }
 
   toReadableString() {
-    return "EntityStateData " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + this.length));    
+    return "EntityStateData(pos " + this.offset_in_file.toString(16) + " size " + this.length.toString(16) + ") " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + this.length));
   }
 
   toString() {
     return "{\"offset_in_file\":\""+this.offset_in_file.toString(16).padStart(4) + "\"" 
       + ",\"absoluteIndex\":\""+this.absoluteIndex.toString(16).padStart(8) + "\""  
-      + ",\"message\":\""+ binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + this.length)) + "\""
+      + ",\"message\":\""+ binToStr(this.originalBin) + "\""
       + "}";
   }
 }
@@ -894,6 +908,8 @@ class Tile {
 
 global.validCreatures = [];
 
+var nextExpectedEntityDataAddress;
+
 class Creature {
   constructor(bin, area, offset_in_file, absoluteIndex, creatureIndex) {
     this.bin = bin;
@@ -973,23 +989,53 @@ class Creature {
 
     area[this.name] = this;
 
-    this.entityStateOffsets = uInt32Array(this.bin, offset_in_file + ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET, ENTITY_STATE_OFFSETS_ARRAY_LENGTH);
+    this.entityStateOffsets = uInt32Array(this.bin, this.offset_in_file + ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET, ENTITY_STATE_OFFSETS_ARRAY_LENGTH);
     this.entityStates = [];
-    this.addresses = "";
+    
     for (var i = 0 ; i < this.entityStateOffsets.length ; i++) {
       var entityStateOffset = this.entityStateOffsets[i];
       if (entityStateOffset.isNull()) {
         continue;
       }
 
-      var address = (ENTITY_STATE_DATA_START + entityStateOffset.get()).toString(16);
-      this.addresses += address + " ";
-      this.entityStates.push(
-        new EntityStateData(this.bin, this, ENTITY_STATE_DATA_START + entityStateOffset.get(), 
-          this.area.map_file.startOffset + ENTITY_STATE_DATA_START + entityStateOffset.get(), 
-          this.creatureIndex, i));
+      var address = ENTITY_STATE_DATA_START + entityStateOffset.get();
+      var entityStateData = new EntityStateData(this.bin, this, address, 
+          this.area.map_file.startOffset + address, 
+          this.creatureIndex, i);
+
+      if (nextExpectedEntityDataAddress != address) {
+        console.log("ERROR - expected address " + nextExpectedEntityDataAddress.toString(16) + " doesnt match " + address.toString(16) + " " + entityStateData.toReadableString());
+        nextExpectedEntityDataAddress = address;
+      }
+      this.entityStates.push(entityStateData);
+      nextExpectedEntityDataAddress += entityStateData.length;
     }
     console.log(this.toReadableString());
+  }
+
+  reinjectEntityDataToFile(nextEntityDataAddress) {
+
+    console.log("reinjectEntityDataToFile " + this.name + " " + this.area.name);
+    for (var i in this.entityStates) {
+      var entityStateOffset = this.entityStateOffsets[i];
+      // Used to verify if run with no changes, the offsets would match totaly or not
+      // Found that actually some will not match, those are weird entries of entityState in last positions all zeroed
+      //if (entityStateOffset.get() != nextEntityDataAddress) {
+      //  console.log("ERROR mismatch placing entityStateOffset " + this.entityStates[i].toReadableString() + " " + entityStateOffset.get().toString(16) + " " + nextEntityDataAddress.toString(16) + " " + this.name + " " + this.area.name);
+      //} else {
+      //  console.log("OK             placing entityStateOffset " + this.entityStates[i].toReadableString() + " " + this.name + " " + this.area.name);
+      //}
+      
+      entityStateOffset.set(nextEntityDataAddress);
+      nextEntityDataAddress += this.entityStates[i].length;
+
+      var address = ENTITY_STATE_DATA_START + entityStateOffset.get();
+      this.entityStates[i].offset_in_file = address;
+
+      binCopy(this.entityStates[i].originalBin, 0, this.bin, this.entityStates[i].offset_in_file, this.entityStates[i].length);
+    }
+
+    return nextEntityDataAddress;
   }
 
   toReadableString() {

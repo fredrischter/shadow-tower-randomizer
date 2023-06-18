@@ -3,8 +3,6 @@ SET dir=C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\
 
 rm %dir%st.xml
 rm -rf %dir%st
-rm %dir%mkpsxiso.bin
-rm %dir%mkpsxiso.cue
 
 %dir%dumpsxiso.exe %dir%st_original.bin -x %dir%st -s %dir%st.xml > dumpsxiso.out
 

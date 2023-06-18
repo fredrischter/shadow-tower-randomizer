@@ -112,7 +112,7 @@ class TFormatPart {
       fs.writeFileSync(this.fileName, Buffer.from(this.bin));// ,{flag:'a+'}
     }
 
-    /* write sized mix parts
+    // write sized mix parts
     if (this.sizedMixParts) {
       var sizedPartsDir = this.fileName + "_SIZED_MIX_PARTS";
       fs.rmSync(sizedPartsDir, { recursive: true, force: true });
@@ -124,7 +124,7 @@ class TFormatPart {
         cursor = newCursor;
         fs.writeFileSync(fileName, Buffer.from(this.sizedMixParts[i]));
       }
-    }*/
+    }
   }
 
   reload(offset) {
@@ -287,9 +287,9 @@ class TFormat {
       var binPos = file.startOffset - this.beginningOfBin;
       var current = this.bin[binPos+i];
       if (newValue!=current) {
-        //if (indexFromTable == indexFromOffset) {
-          //console.log(" injecting byte change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
-        //}
+        if (indexFromTable == indexFromOffset) {
+          console.log(" injecting change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
+        }
         this.bin[binPos+i] = newValue;
       }
     }

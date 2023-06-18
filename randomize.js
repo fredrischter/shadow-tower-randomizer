@@ -92,10 +92,12 @@ let tFileModelFiles = {
 	}
 }*/
 
-function swapModels(creature1, creature2, changeSet) {
+function swapCreatures(creature1, creature2, changeSet) {
 	if (creature1 == creature2) {
 		return;
 	}
+
+	// model
 	for (var i in creature1.modelFiles) {
 		changeSet.push({
 			"fileSwap": {
@@ -103,6 +105,14 @@ function swapModels(creature1, creature2, changeSet) {
 			}
 		});
 	}
+
+	// entity bin
+	creature1.swap(creature2);
+
+	// entity states list of objects - this swap requires area to rewrite that entity states section redefining the offsets
+	var tmp = creature1.entityStates;
+	creature1.entityStates = creature2.entityStates;
+	creature2.entityStates = tmp;
 }
 
 function arrayCopy(origin, dest, offset, length) {
@@ -340,7 +350,7 @@ global.items[item_c4_summoner_ring_of_fire].elementalPower.set(130);
 global.items[item_0_short_sword].attribute1.set(attribute(ATTR_CRITICAL_20pc,ATTR_CRITICAL));
 */
 
-/*global.items[item_0_short_sword].str.set(0xff);
+global.items[item_0_short_sword].str.set(0xff);
 global.items[item_0_short_sword].spd.set(0xff);
 global.items[item_0_short_sword].def.set(0xff);
 global.items[item_0_short_sword].bal.set(0xff);
@@ -353,7 +363,7 @@ global.items[item_0_short_sword].ham.set(0xff);
 global.items[item_0_short_sword].pur.set(0xff);
 global.items[item_0_short_sword].par.set(0xff);
 global.items[item_0_short_sword].mel.set(0xff);
-global.items[item_0_short_sword].sol.set(0xff);*/
+global.items[item_0_short_sword].sol.set(0xff);
 
 //arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.blood_slime1.bin, 0, 0xc0);
 //arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.dark_spider1.bin, 0, 0xc0);
@@ -496,6 +506,19 @@ let changeSet = [];
 //var part44 = new TFILEReader(file44Path).readTFormatPart();
 //part44.verifyCheckSum();
 
+//swapCreatures("01_acid_slime", "02_parasite", changeSet);
+swapCreatures(human_world_solitary_region["01_acid_slime"],
+	human_world_solitary_region["00_dark_spider"], changeSet);
+
+for (var i =0; i<300; i++) {
+	swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+}
+
+for (var a in areas) {
+	var area = areas[a];
+	area.reinjectEntityDataFromCreaturesToFile();
+}
+
 for (var i in tfileOriginal.files) {
 	var originalPart = tfileOriginal.files[i];
 	var changedPart = tfile.files[i];
@@ -513,14 +536,6 @@ for (var i in tfileOriginal.files) {
 	if (anyChange) {
 		changeSet.push({"file":filePath, "bytes":changes});
 	}
-}
-
-//swapModels("01_acid_slime", "02_parasite", changeSet);
-swapModels(human_world_solitary_region["01_acid_slime"],
-	human_world_forgotten_region["01_blood_skull"], changeSet);
-
-for (var i =0; i<300; i++) {
-	swapModels(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
 }
 
 fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
