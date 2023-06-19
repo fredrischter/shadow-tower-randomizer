@@ -1,0 +1,106 @@
+Mapwalker
+map [{"name":"solitary","exits":[{"id":"1","dest":"hidden"},{"id":"2","dest":"hidden"}]},{"name":"hidden","exits":[{"id":"1","dest":"solitary"},{"id":"2","dest":"solitary"},{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]},{"name":"forgotten","exits":[{"id":"3","dest":"hidden"},{"id":"5","dest":"cursed"}]},{"name":"cursed","exits":[{"id":"4","dest":"hidden"},{"id":"5","dest":"forgotten"}]}]
+starting from solitary
+
+Location solitary
+  newly known area with exits {"name":"solitary","exits":[{"id":"1","dest":"hidden"},{"id":"2","dest":"hidden"}]} adding to []
+  from solitary - unknown ways to go: {"name":"solitary","exits":[{"id":"1","dest":"hidden"},{"id":"2","dest":"hidden"}]}
+ moving to hidden by 1
+  from solitary - unknown ways to go: {"name":"solitary","exits":[{"id":"1","dest":"hidden"},{"id":"2","dest":"hidden"}]}
+   removing {"id":"1","dest":"hidden"} -> {"name":"solitary","exits":[]}
+  from solitary - unknown ways to go: {"name":"solitary","exits":[]}
+addKnownPath direct solitary-hidden [{"id":"1","dest":"hidden"}]
+  should try to add more known paths, since it was just added a new one.
+addKnownPath direct solitary-hidden [{"id":"1","dest":"hidden"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location hidden
+  newly known area with exits {"name":"hidden","exits":[{"id":"2","dest":"solitary"},{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]} adding to [{"name":"solitary","exits":[]}]
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"2","dest":"solitary"},{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+ moving to solitary by 2
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"2","dest":"solitary"},{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+   removing {"id":"2","dest":"solitary"} -> {"name":"hidden","exits":[{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+addKnownPath direct hidden-solitary [{"id":"2","dest":"solitary"}]
+  should try to add more known paths, since it was just added a new one.
+addKnownPath direct hidden-solitary [{"id":"2","dest":"solitary"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location solitary
+  from solitary - unknown ways to go: {"name":"solitary","exits":[]}
+  from solitary - unknown ways to go: {"name":"solitary","exits":[]}
+    finding shorter known path to area with undiscovered ways from  solitary
+    setting path solitary-hidden from undefined to [{"id":"1","dest":"hidden"}]
+    nearest path to area with known undiscovered ways from solitary [{"id":"1","dest":"hidden"}]
+Got to go by [{"id":"1","dest":"hidden"}]
+ moving to hidden by 1
+  from solitary - unknown ways to go: {"name":"solitary","exits":[]}
+   removing {"id":"1","dest":"hidden"} -> {"name":"solitary","exits":[]}
+  from solitary - unknown ways to go: {"name":"solitary","exits":[]}
+addKnownPath direct solitary-hidden [{"id":"1","dest":"hidden"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location hidden
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+ moving to forgotten by 3
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"3","dest":"forgotten"},{"id":"4","dest":"cursed"}]}
+   removing {"id":"3","dest":"forgotten"} -> {"name":"hidden","exits":[{"id":"4","dest":"cursed"}]}
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"4","dest":"cursed"}]}
+addKnownPath direct hidden-forgotten [{"id":"3","dest":"forgotten"}]
+addKnownPath by better proposal solitary-forgotten [{"id":"1","dest":"hidden"},{"id":"3","dest":"forgotten"}]
+ known one was undefined
+  should try to add more known paths, since it was just added a new one.
+addKnownPath direct hidden-forgotten [{"id":"3","dest":"forgotten"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location forgotten
+  newly known area with exits {"name":"forgotten","exits":[{"id":"5","dest":"cursed"}]} adding to [{"name":"solitary","exits":[]},{"name":"hidden","exits":[{"id":"4","dest":"cursed"}]}]
+  from forgotten - unknown ways to go: {"name":"forgotten","exits":[{"id":"5","dest":"cursed"}]}
+ moving to cursed by 5
+  from forgotten - unknown ways to go: {"name":"forgotten","exits":[{"id":"5","dest":"cursed"}]}
+   removing {"id":"5","dest":"cursed"} -> {"name":"forgotten","exits":[]}
+  from forgotten - unknown ways to go: {"name":"forgotten","exits":[]}
+addKnownPath direct forgotten-cursed [{"id":"5","dest":"cursed"}]
+addKnownPath by better proposal hidden-cursed [{"id":"3","dest":"forgotten"},{"id":"5","dest":"cursed"}]
+ known one was undefined
+addKnownPath by better proposal solitary-cursed [{"id":"1","dest":"hidden"},{"id":"3","dest":"forgotten"},{"id":"5","dest":"cursed"}]
+ known one was undefined
+  should try to add more known paths, since it was just added a new one.
+addKnownPath direct forgotten-cursed [{"id":"5","dest":"cursed"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location cursed
+  newly known area with exits {"name":"cursed","exits":[{"id":"4","dest":"hidden"}]} adding to [{"name":"solitary","exits":[]},{"name":"hidden","exits":[{"id":"4","dest":"cursed"}]},{"name":"forgotten","exits":[]}]
+  from cursed - unknown ways to go: {"name":"cursed","exits":[{"id":"4","dest":"hidden"}]}
+ moving to hidden by 4
+  from cursed - unknown ways to go: {"name":"cursed","exits":[{"id":"4","dest":"hidden"}]}
+   removing {"id":"4","dest":"hidden"} -> {"name":"cursed","exits":[]}
+  from cursed - unknown ways to go: {"name":"cursed","exits":[]}
+addKnownPath direct cursed-hidden [{"id":"4","dest":"hidden"}]
+addKnownPath by better proposal cursed-solitary [{"id":"4","dest":"hidden"},{"id":"2","dest":"solitary"}]
+ known one was undefined
+addKnownPath by better proposal cursed-forgotten [{"id":"4","dest":"hidden"},{"id":"3","dest":"forgotten"}]
+ known one was undefined
+addKnownPath by better proposal forgotten-hidden [{"id":"5","dest":"cursed"},{"id":"4","dest":"hidden"}]
+ known one was undefined
+  should try to add more known paths, since it was just added a new one.
+addKnownPath direct cursed-hidden [{"id":"4","dest":"hidden"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location hidden
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"4","dest":"cursed"}]}
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"4","dest":"cursed"}]}
+ moving to cursed by 4
+  from hidden - unknown ways to go: {"name":"hidden","exits":[{"id":"4","dest":"cursed"}]}
+   removing {"id":"4","dest":"cursed"} -> {"name":"hidden","exits":[]}
+  from hidden - unknown ways to go: {"name":"hidden","exits":[]}
+addKnownPath direct hidden-cursed [{"id":"4","dest":"cursed"}]
+addKnownPath by better proposal solitary-cursed [{"id":"1","dest":"hidden"},{"id":"4","dest":"cursed"}]
+ known one was [{"id":"1","dest":"hidden"},{"id":"3","dest":"forgotten"},{"id":"5","dest":"cursed"}]
+  should try to add more known paths, since it was just added a new one.
+addKnownPath direct hidden-cursed [{"id":"4","dest":"cursed"}]
+  should stop trying to add more known paths, since nothing was found now.
+Location cursed
+  from cursed - unknown ways to go: {"name":"cursed","exits":[]}
+  from cursed - unknown ways to go: {"name":"cursed","exits":[]}
+    finding shorter known path to area with undiscovered ways from  cursed
+    don't know any area with known undiscovered ways - don't have anywhere to go anymore.
+Finished walk [{"id":"1","dest":"hidden"},{"id":"2","dest":"solitary"},{"id":"1","dest":"hidden"},{"id":"3","dest":"forgotten"},{"id":"5","dest":"cursed"},{"id":"4","dest":"hidden"},{"id":"4","dest":"cursed"}]
+  left to explore [{"name":"solitary","exits":[]},{"name":"hidden","exits":[]},{"name":"forgotten","exits":[]},{"name":"cursed","exits":[]}]
+  knownPaths {"solitary-hidden":[{"id":"1","dest":"hidden"}],"hidden-solitary":[{"id":"2","dest":"solitary"}],"hidden-forgotten":[{"id":"3","dest":"forgotten"}],"solitary-forgotten":[{"id":"1","dest":"hidden"},{"id":"3","dest":"forgotten"}],"forgotten-cursed":[{"id":"5","dest":"cursed"}],"hidden-cursed":[{"id":"4","dest":"cursed"}],"solitary-cursed":[{"id":"1","dest":"hidden"},{"id":"4","dest":"cursed"}],"cursed-hidden":[{"id":"4","dest":"hidden"}],"cursed-solitary":[{"id":"4","dest":"hidden"},{"id":"2","dest":"solitary"}],"cursed-forgotten":[{"id":"4","dest":"hidden"},{"id":"3","dest":"forgotten"}],"forgotten-hidden":[{"id":"5","dest":"cursed"},{"id":"4","dest":"hidden"}]}
+  walk path [{"id":"1","dest":"hidden"},{"id":"2","dest":"solitary"},{"id":"1","dest":"hidden"},{"id":"3","dest":"forgotten"},{"id":"5","dest":"cursed"},{"id":"4","dest":"hidden"},{"id":"4","dest":"cursed"}]
