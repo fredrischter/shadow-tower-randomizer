@@ -1050,11 +1050,11 @@ class ScenarioObject {
   }
 
   set(source) {
-    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, OBJECTS_SIZE);
+    binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
   }
 
   swap(source) {
-    binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file, OBJECTS_SIZE-14);
+    binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
   }
 
   blank() {

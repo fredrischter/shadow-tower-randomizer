@@ -531,24 +531,14 @@ for (var a in areas) {
 //	human_world_solitary_region.objects[t].blank();
 //}
 
-var door1 = shadow_tower_part1.objects[0];
-var door2 = shadow_tower_part1.objects[8];
-/*door1.bin[door1.offset_in_file + 14] = door2.bin[door2.offset_in_file + 14];
-door1.bin[door1.offset_in_file + 15] = door2.bin[door2.offset_in_file + 15];
-door1.bin[door1.offset_in_file + 16] = door2.bin[door2.offset_in_file + 16];
-door1.bin[door1.offset_in_file + 17] = door2.bin[door2.offset_in_file + 17];
-door1.bin[door1.offset_in_file + 18] = door2.bin[door2.offset_in_file + 18];
-door1.bin[door1.offset_in_file + 19] = door2.bin[door2.offset_in_file + 19];
-door1.bin[door1.offset_in_file + 20] = door2.bin[door2.offset_in_file + 20];
-door1.bin[door1.offset_in_file + 21] = door2.bin[door2.offset_in_file + 21];
-door1.bin[door1.offset_in_file + 22] = door2.bin[door2.offset_in_file + 22];
-door1.bin[door1.offset_in_file + 23] = door2.bin[door2.offset_in_file + 23];
-*/
-shadow_tower_part1.objects[0].swap(shadow_tower_part1.objects[5]);
-/*shadow_tower_part1.spawns[0x3a].tileId.swap(shadow_tower_part1.spawns[0x39].tileId);
+// swap door
+shadow_tower_part1.objects[0].swap(shadow_tower_part1.objects[11]);
+
+// swap door model
+shadow_tower_part1.spawns[0x3a].tileId.swap(shadow_tower_part1.spawns[0x39].tileId);
 shadow_tower_part1.spawns[0x3a].x.swap(shadow_tower_part1.spawns[0x39].x);
 shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
-shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);*/
+shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);
 
 for (var a in areas) {
 	var area = areas[a];
