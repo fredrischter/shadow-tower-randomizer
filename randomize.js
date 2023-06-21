@@ -280,13 +280,20 @@ function forEachCreatureSpawn(spawn, area, index) {
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
 
+	spawn.chance.set(100);
+	if (!spawn.drop1.isNull()) {
+		spawn.drop1Chance.set(100);
+	}
+	if (!spawn.drop2.isNull()) {
+		spawn.drop2Chance.set(100);
+	}
+	if (!spawn.drop3.isNull()) {
+		spawn.drop3Chance.set(100);
+	}
 	// Spawning ring
-	//spawn.chance.set(100);
-	//spawn.drop1Chance.set(100);
 	//spawn.drop1.set(item_c4_summoner_ring_of_fire);
 
 	// Set good items to spawn early in the game
-	//	spawn.chance.set(100);
 	//	if (goodItems.length) {
 	//		if (area.name != "human_world_solitary_region") return;
 	//		spawn.drop1Chance.set(100);
@@ -302,7 +309,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 }
 
 function forEachValidCreature(creature, area, index) {
-	//creature.hp.set(1);
+	creature.hp.set(1);
 }
 
 
@@ -506,13 +513,42 @@ let changeSet = [];
 //var part44 = new TFILEReader(file44Path).readTFormatPart();
 //part44.verifyCheckSum();
 
-//swapCreatures("01_acid_slime", "02_parasite", changeSet);
 swapCreatures(human_world_solitary_region["01_acid_slime"],
 	human_world_solitary_region["00_dark_spider"], changeSet);
 
-for (var i =0; i<300; i++) {
-	swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+//for (var i =0; i<300; i++) {
+	//swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+//}
+
+
+for (var a in areas) {
+	for (var t in areas[a].objects) {
+//		areas[a].objects[t].blank();
+	}
 }
+
+//for (var t in human_world_solitary_region.objects) {
+//	human_world_solitary_region.objects[t].blank();
+//}
+
+var door1 = shadow_tower_part1.objects[0];
+var door2 = shadow_tower_part1.objects[8];
+/*door1.bin[door1.offset_in_file + 14] = door2.bin[door2.offset_in_file + 14];
+door1.bin[door1.offset_in_file + 15] = door2.bin[door2.offset_in_file + 15];
+door1.bin[door1.offset_in_file + 16] = door2.bin[door2.offset_in_file + 16];
+door1.bin[door1.offset_in_file + 17] = door2.bin[door2.offset_in_file + 17];
+door1.bin[door1.offset_in_file + 18] = door2.bin[door2.offset_in_file + 18];
+door1.bin[door1.offset_in_file + 19] = door2.bin[door2.offset_in_file + 19];
+door1.bin[door1.offset_in_file + 20] = door2.bin[door2.offset_in_file + 20];
+door1.bin[door1.offset_in_file + 21] = door2.bin[door2.offset_in_file + 21];
+door1.bin[door1.offset_in_file + 22] = door2.bin[door2.offset_in_file + 22];
+door1.bin[door1.offset_in_file + 23] = door2.bin[door2.offset_in_file + 23];
+*/
+shadow_tower_part1.objects[0].swap(shadow_tower_part1.objects[5]);
+/*shadow_tower_part1.spawns[0x3a].tileId.swap(shadow_tower_part1.spawns[0x39].tileId);
+shadow_tower_part1.spawns[0x3a].x.swap(shadow_tower_part1.spawns[0x39].x);
+shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
+shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);*/
 
 for (var a in areas) {
 	var area = areas[a];

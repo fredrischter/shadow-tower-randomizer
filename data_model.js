@@ -590,6 +590,16 @@ class Area  {
       this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
     }
 
+    var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
+    this.objects = [];
+    console.log("\nObjects ");
+    console.log("idx  in_file offset");
+    for (var i = 0; i<OBJECTS_COUNT; i++) {
+      var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;
+      var absoluteIndex = this.map_file.startOffset + offset_in_file;
+      this.objects.push(new ScenarioObject(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles, this.mapDraw));
+    }
+
     this.creatures = [];
     console.log("\nCreatures");
     console.log("name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23");
@@ -613,10 +623,10 @@ class Area  {
 
     this.setupSpawns(this, this.map_file, this.mapDraw);
 
-    this.writeMap();
+    //this.writeMapImage();
   }
 
-  writeMap() {
+  writeMapImage() {
 
     const REMOVE_TILE = "REMOVE";
 
@@ -665,8 +675,6 @@ class Area  {
     var upperX = this.mapTiles.reduce((a, b) => { return {x:Math.max(a.x, b.x)}; }, {x:0}).x;
     var upperY = this.mapTiles.reduce((a, b) => { return {y:Math.max(a.y, b.y)}; }, {y:0}).y;
     var upperZ = this.mapTiles.reduce((a, b) => { return {z:Math.max(a.z, b.z)}; }, {z:0}).z;
-    console.log("Lower "+lowerX + " "+lowerY+ " "+lowerZ);
-    console.log("Upper "+upperX + " "+upperY + " "+upperZ);
 
     var processTile = tile => {
       tile.originalX = tile.x;
@@ -724,7 +732,7 @@ class Area  {
         this.canvasHeight - (this.mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+this.mapDraw[i].x)%5) * 9);
     }
     const buffer = canvas.toBuffer("image/png");
-    fs.writeFileSync("./maps/" + this.name + ".png", buffer);
+    fs.writeFile("./maps/" + this.name + ".png", buffer, function() {});
 
   }
 
@@ -979,6 +987,82 @@ class Collectable {
   }
 }
 
+global.OBJECTS_SIZE = 0x18;
+global.OBJECTS_COUNT = 0x15E;
+
+class ScenarioObject {
+  constructor(bin, area, offset_in_file, absoluteIndex, index, mapTiles, mapDraw) {
+    this.bin = bin;
+    this.area = area;
+    this.offset_in_file = offset_in_file;
+    this.absoluteIndex = absoluteIndex;
+    this.index = index;
+
+    this.tileX = new UInt8(this.bin, this.offset_in_file + 0x00);
+    this.tileY = new UInt8(this.bin, this.offset_in_file + 0x01);
+    this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x02);
+
+    this.id = new UInt16(this.bin, this.offset_in_file + 0x04);
+
+    this.isBlank = this.id.isNull();
+
+    if (!this.isBlank) {
+      
+      if (mapTiles) {
+        mapTiles.push({
+          color: "#b60abc",
+          x: this.tileX.get(),
+          y: this.tileZ.get(),
+          z: this.tileY.get()
+        });
+        mapDraw.push({
+          color: "#000000", 
+          x: this.tileX.get(), 
+          y: this.tileZ.get(), 
+          z: this.tileY.get(), 
+          text: "object index " + this.index});
+      }
+
+      console.log(this.toReadableString());
+    }
+  }
+
+  toReadableString() {
+    var text = "" + this.index.toString(16).padEnd(5)
+     + this.offset_in_file.toString(16).padStart(4)
+     + this.absoluteIndex.toString(16).padStart(10)
+     + "  tile("
+       + this.tileX.get().toString(16).padStart(4)+","
+       + this.tileY.get().toString(16).padStart(4)+","
+       + this.tileZ.get().toString(16).padStart(4)
+     + ") "
+     + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4);
+    return text;
+  }
+
+  toString() {
+    return "{"/*"{\"name\":\""+(this.name + "\"").padEnd(40)
+      + ", \"x\":" + (this.x.get() + "").padStart(5)
+      + ", \"y\":" + (this.y.get() + "").padStart(5)
+      + ", \"z\":" + (this.z.get() + "").padStart(5)
+      + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)*/
+      + "}";
+  }
+
+  set(source) {
+    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, OBJECTS_SIZE);
+  }
+
+  swap(source) {
+    binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file, OBJECTS_SIZE-14);
+  }
+
+  blank() {
+    binSet(this.bin, this.offset_in_file, OBJECTS_SIZE, 0x00);
+    this.id.set(0xffff);
+  }
+}
+
 global.TILE_SIZE = 0x0c;
 global.TILE_COUNT = 0x200;
 
@@ -1000,18 +1084,18 @@ class Tile {
     this.tileY = new UInt8(this.bin, this.offset_in_file + 0x09);
     this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x0a);
 
-    if (mapTiles &&
-      !this.tileX.isNull() &&
-      !this.tileY.isNull()) {
-      mapTiles.push({
-        color: "#160abc",
-        x: this.tileX.get(),
-        y: this.tileZ.get(),
-        z: this.tileY.get()
-      });
-    }
 
     if (!this.isBlank) {
+
+      if (mapTiles) {
+        mapTiles.push({
+          color: "#160abc",
+          x: this.tileX.get(),
+          y: this.tileZ.get(),
+          z: this.tileY.get()
+        });
+      }
+
       //console.log(this.toReadableString());
     }
   }
@@ -1270,7 +1354,7 @@ class Spawn {
         x: area.tiles[this.tileId.get()].tileX.get(), 
         y: area.tiles[this.tileId.get()].tileZ.get(), 
         z: area.tiles[this.tileId.get()].tileY.get(), 
-        text: this.name});
+        text: "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name});
     }
 
     if (this.chance.isNull()) {
