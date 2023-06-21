@@ -24,7 +24,7 @@ var logo_files = {
   141: "death_world_lingering_curse_layer",
   151: "earth_world_false_pit_cavern",
   161: null,
-  171: "monster_world_screeching area",
+  171: "monster_world_screeching_area",
   181: "fire_world_ashen_cavern",
   191: null,
 
