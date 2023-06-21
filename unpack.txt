@@ -7,16 +7,12 @@ C:\Users\fred\Desktop\shadow-tower-randomizer>rm -rf C:\Users\fred\Downloads\Rev
 
 C:\Users\fred\Desktop\shadow-tower-randomizer>C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\dumpsxiso.exe C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st_original.bin -x C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st -s C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st.xml  1>dumpsxiso.out 
 
-C:\Users\fred\Desktop\shadow-tower-randomizer>call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T 
+C:\Users\fred\Desktop\shadow-tower-randomizer>call npm run disassemble C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M00.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M01.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M02.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M06.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M08.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M09.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M10.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M11.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M12.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M13.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M14.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M15.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M17.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M18.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M20.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M21.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M23.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M24.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M25.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M26.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M27.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M28.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M30.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M32.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M33.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M37.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M38.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR4\M40.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR4\M41.T 
 
 > shadow-tower-randomizer@1.0.0 disassemble
-> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T
+> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\COM\FDAT.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M00.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M01.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M02.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M06.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M08.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M09.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M10.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M11.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M12.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M13.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M14.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M15.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M17.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M18.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M20.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M21.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M23.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M24.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M25.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M26.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M27.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M28.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M30.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M32.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M33.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M37.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M38.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR4\M40.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR4\M41.T
 
  TFile with 809 parts loaded
-
-> shadow-tower-randomizer@1.0.0 disassemble
-> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M00.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M01.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M02.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M03.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M04.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M05.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M06.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M08.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR0\M09.T
-
  TFile with 82 parts loaded
  TFile with 85 parts loaded
  TFile with 80 parts loaded
@@ -26,10 +22,6 @@ C:\Users\fred\Desktop\shadow-tower-randomizer>call npm run disassemble C:\Users\
  TFile with 82 parts loaded
  TFile with 81 parts loaded
  TFile with 81 parts loaded
-
-> shadow-tower-randomizer@1.0.0 disassemble
-> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M10.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M11.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M12.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M13.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M14.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M15.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M17.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR1\M18.T
-
  TFile with 81 parts loaded
  TFile with 81 parts loaded
  TFile with 81 parts loaded
@@ -38,10 +30,6 @@ C:\Users\fred\Desktop\shadow-tower-randomizer>call npm run disassemble C:\Users\
  TFile with 81 parts loaded
  TFile with 81 parts loaded
  TFile with 81 parts loaded
-
-> shadow-tower-randomizer@1.0.0 disassemble
-> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M20.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M21.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M23.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M24.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M25.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M26.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M27.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR2\M28.T
-
  TFile with 82 parts loaded
  TFile with 81 parts loaded
  TFile with 81 parts loaded
@@ -50,18 +38,10 @@ C:\Users\fred\Desktop\shadow-tower-randomizer>call npm run disassemble C:\Users\
  TFile with 81 parts loaded
  TFile with 81 parts loaded
  TFile with 81 parts loaded
-
-> shadow-tower-randomizer@1.0.0 disassemble
-> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M30.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M32.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M33.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M37.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR3\M38.T
-
  TFile with 82 parts loaded
  TFile with 81 parts loaded
  TFile with 81 parts loaded
  TFile with 82 parts loaded
  TFile with 81 parts loaded
-
-> shadow-tower-randomizer@1.0.0 disassemble
-> node tfile_disassemble.js C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR4\M40.T C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st\ST\CHR4\M41.T
-
  TFile with 82 parts loaded
  TFile with 82 parts loaded

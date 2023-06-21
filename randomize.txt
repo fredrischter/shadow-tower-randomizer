@@ -326,6 +326,9 @@ f05c  139a85c    item_139_soul_pod_14_sp          ff  2  3  0 78 ae  0  0  0  0 
 
 Setup Area shadow_tower_part1 in FDAT file index 4
 
+Tiles
+idx                                                                     x       y       z     rot      tile xyz  ----
+
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
 00_door                4     1b804   0  20  ff   0   1   0   0   0   0   0   0   0   0   0   0   0  ff  ff   0   0   0   0   0   2   0   6   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  64   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0  20   0   0   0  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff  ff EntityStateData(pos c04 size 10)   2  0  0 ff 80  0  0  0  1  0  0  0  0  0 30 10 EntityStateData(pos c14 size 10)  40  0  0 ff 80  0  0  0  0  0  0  0  0  0  0  0 EntityStateData(pos c24 size 10)  50  0  0 ff 80  0  0  0  0  0  0  0  0  0  0  0
@@ -388,11 +391,13 @@ idx chance name                                                      drop1      
 3b    100% 00_door                tileId(  74)   pos(   c,   1,  fc)                                                                                                                                bin  64  0 74  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  c  0  1  0 fc  0  0
 3c    100% 01_door                tileId( 1f6)   pos(   8,   0,  fc)                                                                                                                                bin  64  1 f6  1 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0 fc  0  0
 3d    100% 00_door                tileId(  bb)   pos(   4,  ff,  fc)                                                                                                                                bin  64  0 bb  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  4  0 ff  0 fc  0  0
+Lower 59 58 63
+Upper 69 68 82
+
+Setup Area human_world_cursed_region in FDAT file index 14
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area human_world_cursed_region in FDAT file index 14
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -471,11 +476,13 @@ f      25% 09_shadow_spider       tileId(  67)   pos(   c,   7,  f0) [drop 100% 
 30    100% 04_fat_mole_a          tileId(  3a)   pos(   0,   0,   7)                                                                                                                                bin  64  4 3a  0 ff ff ff ff ff ff 1e  0  0  0  0  0  0  0  0  0  0  7  0 fe
 38    100% 03_door                tileId(  75)   pos(   0,   0,  f6)                                                                                                                                bin  64  3 75  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  0  0  0  0 f6  0  0
 39    100% 03_door                tileId(  74)   pos(   0,   0,  f8)                                                                                                                                bin  64  3 74  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  0  0  0  0 f8  0  0
+Lower 57 56 63
+Upper 83 78 64
+
+Setup Area monster_world_false_eye_area in FDAT file index 24
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area monster_world_false_eye_area in FDAT file index 24
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -561,11 +568,13 @@ f      30% 09_freak               tileId(  7d)   pos(   6,   6,  ff) [drop 100% 
 30    100% 02_lizard_servant      tileId(  8d)   pos(   4,   0,   8)                                                                                                                                bin  64  2 8d  0 ff ff ff ff ff ff  a  0  0  0  0  0  0  4  0  0  0  8  0  0
 31    100% 06_dwarfling           tileId(  2e)   pos(   0,   0,  ff)                                                                                                                                bin  64  6 2e  0 ff ff ff ff ff ff  a  0  0  0  0  0  0  0  0  0  0 ff  0 f8
 38    100% 03_door                tileId(   1)   pos(   0,   0,   0)                                                                                                                                bin  64  3  1  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0 ff
+Lower 57 54 64
+Upper 81 72 65
+
+Setup Area fire_world_phoenix_cave in FDAT file index 34
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area fire_world_phoenix_cave in FDAT file index 34
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -646,11 +655,13 @@ f     100% 04_unknown_a           tileId(  a9)   pos(   c,   0,  fe) [drop  40% 
 14     50% 06_fire_jinn           tileId(  a1)   pos(   8,   0,  fe)                                                                                                                                bin  32  6 a1  0 ff ff ff ff ff ff 50  0  0  0  0  0  0  8  0  0  0 fe  0  0
 38    100% 03_door                tileId(   9)   pos(   0,   0,   0)                                                                                                                                bin  64  3  9  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  1
 39    100% 03_door                tileId(   2)   pos(   0,   0,   0)                                                                                                                                bin  64  3  2  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  1
+Lower 58 45 62
+Upper 71 67 64
+
+Setup Area human_world_solitary_region in FDAT file index 44
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area human_world_solitary_region in FDAT file index 44
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -732,11 +743,13 @@ f     100% 0a_skeleton            tileId(  33)   pos(   0,  ff,   0) [drop  50% 
 39    100% 0b_door                tileId(  60)   pos(   8,   0,   0)                                                                                                                                bin  64  b 60  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0  0
 3a    100% 0b_door                tileId(  5a)   pos(   8,   0,   0)                                                                                                                                bin  64  b 5a  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0  0
 3b    100% 03_door                tileId(  5d)   pos(   8,   0,   0)                                                                                                                                bin  64  3 5d  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0 ff
+Lower 61 64 63
+Upper 78 78 66
+
+Setup Area human_world_hidden_region in FDAT file index 54
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area human_world_hidden_region in FDAT file index 54
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -815,11 +828,13 @@ f     100% 09_blood_slime         tileId(  66)   pos(   e,   2,   0) [drop 100% 
 20    100% 02_parasite            tileId(   7)   pos(   0,  fc,   0) [drop 100% item_12e_dorados_ashes        ]                                                                                     bin  64  2  7  0 2e  1 ff ff ff ff 32 64  0  0  0  0  0  0  0 fc  0  0  0  4
 38    100% 03_door                tileId(  1f)   pos(   8,   0,   0)                                                                                                                                bin  64  3 1f  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0 ff
 39    100% 03_door                tileId(  1c)   pos(   8,   0,   0)                                                                                                                                bin  64  3 1c  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0 ff
+Lower 50 59 64
+Upper 74 77 65
+
+Setup Area human_world_forgotten_region in FDAT file index 64
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area human_world_forgotten_region in FDAT file index 64
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -899,11 +914,13 @@ f     100% 05_blood_skull         tileId(  4f)   pos(   8,  fa,   0) [drop 100% 
 13     25% 05_blood_skull         tileId(  58)   pos(   6,   7,   0) [drop  60% item_b_lethal_rapier          ][drop 100% item_23_guardian_bastard_sword]                                           bin  19  5 58  0  b  0 23  0 ff ff 1e 3c 64  0  0  0  0  6  0  7  0  0  0  0
 38    100% 03_door                tileId(  73)   pos(   8,   0,   0)                                                                                                                                bin  64  3 73  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0  0
 39    100% 03_door                tileId(  20)   pos(   8,   0,   0)                                                                                                                                bin  64  3 20  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  8  0  0  0  0  0  0
+Lower 56 54 63
+Upper 70 74 65
+
+Setup Area illusion_world_bewilderment_domain in FDAT file index 84
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area illusion_world_bewilderment_domain in FDAT file index 84
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -989,11 +1006,13 @@ f     100% 0a_rotting_face        tileId(   e)   pos(   0,   0,  f2) [drop 100% 
 30    100% 00_gorgoral            tileId(  7e)   pos(   4,  fd,  fb) [drop 100% item_10a_cune                 ][drop   0% item_116_key_of_delusion      ]                                           bin  64  0 7e  0  a  1 16  1 ff ff  a 64  0  0  0  0  0  4  0 fd  0 fb  0  0
 38    100% 03_door                tileId(  a1)   pos(   0,   0,   0)                                                                                                                                bin  64  3 a1  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0 fb
 39    100% 03_door                tileId(  76)   pos(   4,   5,   0)                                                                                                                                bin  64  3 76  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0  5  0  0  0  0
+Lower 61 60 63
+Upper 80 82 64
+
+Setup Area illusion_world_gloomy_domain in FDAT file index 94
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area illusion_world_gloomy_domain in FDAT file index 94
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1081,11 +1100,13 @@ f      50% 0d_deha                tileId(  12)   pos(   a,  fc,   0) [drop 100% 
 30    100% 0e_blank               tileId(  2a)   pos(   0,  f8,4c00)                                                                                                                                bin  64  e 2a  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0 f8  0  0 4c ff
 38    100% 03_door                tileId(   0)   pos(   c,  ff,   0)                                                                                                                                bin  64  3  0  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0 ff  0  0  0  0
 39    100% 03_door                tileId(  69)   pos(   8,   0,   0)                                                                                                                                bin  64  3 69  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  8  0  0  0  0  0  0
+Lower 57 57 62
+Upper 71 80 66
+
+Setup Area water_world_impure_pool_area in FDAT file index 104
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area water_world_impure_pool_area in FDAT file index 104
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1176,11 +1197,13 @@ f      25% 06_dweller             tileId(  2a)   pos(   0,   7,   0)            
 31    100% 04_blank               tileId(   3)   pos(   0,   4,   0)                                                                                                                                bin  64  4  3  0 ff ff ff ff ff ff  5  0  0  0  0  0  0  0  0  4  0  0  0 f8
 38    100% 0b_door                tileId(  c4)   pos(   0,   0,   0)                                                                                                                                bin  64  b c4  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  0
 39    100% 0f_door                tileId( 193)   pos(   0,   0,   0)                                                                                                                                bin  64  f 93  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  0
+Lower 59 51 63
+Upper 78 75 67
+
+Setup Area earth_world_rotting_cavern in FDAT file index 114
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area earth_world_rotting_cavern in FDAT file index 114
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1272,11 +1295,13 @@ f     100% 09_imp                 tileId(  1f)   pos(   0,   0,   0)            
 20    100% 05_dwarfling           tileId( 174)   pos(   0,   0,   0)                                                                                                                                bin  64  5 74  1 ff ff ff ff ff ff  a  0  0  0  0  0  0  0  0  0  0  0  0 fc
 30    100% 0a_blank               tileId(  54)   pos(   0,  fc,   0)                                                                                                                                bin  64  a 54  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0 fc  0  0  0 fc
 38    100% 03_door                tileId( 1a7)   pos(8004,  fb,   0)                                                                                                                                bin  64  3 a7  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  4 80 fb  0  0  0  0
+Lower 53 53 58
+Upper 77 78 64
+
+Setup Area earth_world_quaking_cavern in FDAT file index 124
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area earth_world_quaking_cavern in FDAT file index 124
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1363,11 +1388,13 @@ f      50% 05_acid_pod            tileId(  43)   pos(   c,  f9,   0) [drop 100% 
 21    100% 02_sand_leech_b        tileId(  31)   pos(   8,   0,  fe) [drop 100% item_10a_cune                 ]                                                                                     bin  64  2 31  0  a  1 ff ff ff ff  a 64  0  0  0  0  0  8  0  0  0 fe  0  0
 22    100% 02_sand_leech_b        tileId(  39)   pos(   c,   0,  fe) [drop 100% item_42_bow                   ]                                                                                     bin  64  2 39  0 42  0 ff ff ff ff  a 64  0  0  0  0  0  c  0  0  0 fe  0  0
 38    100% 03_door                tileId(  a5)   pos(   c,   1,   0)                                                                                                                                bin  64  3 a5  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  1  0  0  0  0
+Lower 49 62 64
+Upper 67 80 65
+
+Setup Area illusion_world_worship_domain in FDAT file index 134
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area illusion_world_worship_domain in FDAT file index 134
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1451,11 +1478,13 @@ f      30% 0a_warpoor             tileId(  e5)   pos(   4,   0,  fc) [drop  30% 
 23    100% 08_fester              tileId( 180)   pos(   8,   0,   0) [drop  80% item_f7_priest_bracelet       ]                                                                                     bin  64  8 80  1 f7  0 ff ff ff ff  5 50  0  0  0  0  0  8  0  0  0  0  0  0
 30    100% 02_fat_mole_d          tileId(  80)   pos(   8,   0,   0)                                                                                                                                bin  64  2 80  0 ff ff ff ff ff ff 50  0  0  0  0  0  0  8  0  0  0  0  0 f8
 38    100% 03_door                tileId( 1a6)   pos(   4,   0,   0)                                                                                                                                bin  64  3 a6  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0  0  0  0  0  0
+Lower 59 56 62
+Upper 82 71 64
+
+Setup Area death_world_lingering_curse_layer in FDAT file index 144
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area death_world_lingering_curse_layer in FDAT file index 144
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1542,11 +1571,13 @@ f     100% 0c_old_face            tileId( 1fb)   pos(   a,   0,   0) [drop  15% 
 30    100% 00_unknown_e           tileId(  6a)   pos(   c,   8,  fe)                                                                                                                                bin  64  0 6a  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  8  0 fe  0  0
 31    100% 04_blank               tileId( 112)   pos(   c,   0,   0)                                                                                                                                bin  64  4 12  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  0  0  0  0  0
 38    100% 02_door                tileId( 1f5)   pos(   4,   0,   0)                                                                                                                                bin  64  2 f5  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0  0  0  0  0  0
+Lower 48 53 58
+Upper 78 72 65
+
+Setup Area earth_world_false_pit_cavern in FDAT file index 154
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area earth_world_false_pit_cavern in FDAT file index 154
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1630,11 +1661,13 @@ f      50% 09_sloth_bug           tileId(   b)   pos(   c,   0,  fc) [drop  60% 
 38    100% 02_door                tileId( 1d5)   pos(   8,   0,   0)                                                                                                                                bin  64  2 d5  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  8  0  0  0  0  0  0
 39    100% 02_door                tileId(  b8)   pos(   4,  fb,   0)                                                                                                                                bin  64  2 b8  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0 fb  0  0  0  0
 3a    100% 02_door                tileId(  b6)   pos(   4,   4,   0)                                                                                                                                bin  64  2 b6  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0  4  0  0  0  0
+Lower 53 52 59
+Upper 76 74 77
+
+Setup Area monster_world_screeching area in FDAT file index 174
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area monster_world_screeching area in FDAT file index 174
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1713,11 +1746,13 @@ f     100% 0d_death_serpent       tileId(  40)   pos(   e,  f8,   0) [drop  30% 
 21    100% 0e_necron              tileId(  4e)   pos(   0,   0,   0) [drop 100% item_e4_ring_of_dead_spirit   ]                                                                                     bin  64  e 4e  0 e4  0 ff ff ff ff  a 64  0  0  0  0  0  0  0  0  0  0  0  8
 30    100% 01_auriel_c            tileId(  73)   pos(   8,   4,   0)                                                                                                                                bin  64  1 73  0 ff ff ff ff ff ff  a  0  0  0  0  0  0  8  0  4  0  0  0 f8
 38    100% 07_door                tileId(  35)   pos(   0,   0,   0)                                                                                                                                bin  64  7 35  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  0
+Lower 59 61 64
+Upper 79 78 64
+
+Setup Area fire_world_ashen_cavern in FDAT file index 184
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area fire_world_ashen_cavern in FDAT file index 184
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1800,11 +1835,13 @@ f     100% 05_horned_skull        tileId(  90)   pos(   c,  fc,  f7)            
 16     50% 09_cerberus            tileId( 11a)   pos(   a,  fc,   0)                                                                                                                                bin  32  9 1a  1 ff ff ff ff ff ff 32  0  0  0  0  0  0  a  0 fc  0  0  0  4
 17     50% 09_cerberus            tileId( 10a)   pos(   8,  fc,   0) [drop  40% item_b4_harden_tower_shield   ]                                                                                     bin  32  9  a  1 b4  0 ff ff ff ff 32 28  0  0  0  0  0  8  0 fc  0  0  0  4
 20    100% 0c_ebony_knight        tileId( 16c)   pos(   8,   8,  fc) [drop 100% item_1e_fiery_bastard_sword   ]                                                                                     bin  64  c 6c  1 1e  0 ff ff ff ff 64 64  0  0  0  0  0  8  0  8  0 fc  0  0
+Lower 62 52 63
+Upper 101 84 70
+
+Setup Area fire_world_burning_cavern in FDAT file index 204
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area fire_world_burning_cavern in FDAT file index 204
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1890,11 +1927,13 @@ f     100% 08_berzerker           tileId(  74)   pos(   8,   4,  f8) [drop  30% 
 19    100% 0d_dweller             tileId(  cd)   pos(   a,   4,  f8) [drop  50% item_3c_crushing_axe          ]                                                                                     bin  64  d cd  0 3c  0 ff ff ff ff 28 32  0  0  0  0  0  a  0  4  0 f8  0 fc
 1a     50% 0e_mystic_tower        tileId(  52)   pos(   c,  fc,  f6) [drop  40% item_b2_tower_shield          ]                                                                                     bin  32  e 52  0 b2  0 ff ff ff ff 1e 28  0  0  0  0  0  c  0 fc  0 f6  0  0
 38    100% 03_door                tileId(  2a)   pos(   8,   0,   0)                                                                                                                                bin  64  3 2a  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  8  0  0  0  0  0 ff
+Lower 56 49 63
+Upper 74 74 64
+
+Setup Area water_world_sunken_river_area in FDAT file index 214
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area water_world_sunken_river_area in FDAT file index 214
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -1967,11 +2006,13 @@ b      30% 05_water_knight        tileId(  33)   pos(   0,   0,  10) [drop  50% 
 c      30% 05_water_knight        tileId(  1d)   pos(   c,   4,  10) [drop 100% item_115_mermaid_key          ]                                                                                     bin  1e  5 1d  0 15  1 ff ff ff ff 28 64  0  0  0  0  0  c  0  4  0 10  0  4
 38    100% 01_door                tileId(  ad)   pos(   4,   0,   0)                                                                                                                                bin  64  1 ad  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0  0  0  0  0  0
 39    100% 01_door                tileId(   0)   pos(   0,   0,   0)                                                                                                                                bin  64  1  0  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  0
+Lower 51 64 63
+Upper 65 80 65
+
+Setup Area death_world_gate_of_the_dead in FDAT file index 234
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area death_world_gate_of_the_dead in FDAT file index 234
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2052,11 +2093,13 @@ f     100% 0a_bone_wolf           tileId(  62)   pos(   c,   0,  fc) [drop 100% 
 14    100% 0d_blood_bone          tileId(  dd)   pos(   0,  f8,  fc)                                                                                                                                bin  64  d dd  0 ff ff ff ff ff ff 3c  0  0  0  0  0  0  0  0 f8  0 fc  0 f8
 20    100% 0c_hollow_mage         tileId(  a1)   pos(   0,   0,  fc) [drop  80% item_109_endless_amulet       ]                                                                                     bin  64  c a1  0  9  1 ff ff ff ff  5 50  0  0  0  0  0  0  0  0  0 fc  0  0
 38    100% 07_door                tileId( 1e5)   pos(   0,   0,   0)                                                                                                                                bin  64  7 e5  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  0
+Lower 43 55 60
+Upper 85 88 69
+
+Setup Area fire_world_molten_cavern in FDAT file index 244
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area fire_world_molten_cavern in FDAT file index 244
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2141,11 +2184,13 @@ f      50% 09_steel_servant       tileId( 1b8)   pos(   c,  fd,   0) [drop 100% 
 30    100% 00_abraxus             tileId(  1e)   pos(   0,   0,   0)                                                                                                                                bin  64  0 1e  0 ff ff ff ff ff ff  a  0  0  0  0  0  0  0  0  0  0  0  0  0
 31    100% 0c_fat_mole_c          tileId( 146)   pos(   4,  fc,   0)                                                                                                                                bin  64  c 46  1 ff ff ff ff ff ff  5  0  0  0  0  0  0  4  0 fc  0  0  0  0
 32    100% 08_fat_mole_b          tileId( 125)   pos(   4,   0,   0)                                                                                                                                bin  64  8 25  1 ff ff ff ff ff ff  5  0  0  0  0  0  0  4  0  0  0  0  0  0
+Lower 58 50 62
+Upper 78 86 64
+
+Setup Area death_world_dark_castle_layer in FDAT file index 254
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area death_world_dark_castle_layer in FDAT file index 254
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2228,11 +2273,13 @@ f      50% 04_tree_ogre           tileId( 10a)   pos(   c,  fc,   0) [drop 100% 
 20    100% 08_armored_guardian    tileId(  34)   pos(   0,  f8,   0) [drop 100% item_129_sealed_sword_stone   ]                                                                                     bin  64  8 34  0 29  1 ff ff ff ff 1e 64  0  0  0  0  0  0  0 f8  0  0  0 f8
 38    100% 03_door                tileId( 1af)   pos(   c,  ff,   0)                                                                                                                                bin  64  3 af  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0 ff  0  0  0  0
 39    100% 0b_door                tileId( 101)   pos(   c,   0,   0)                                                                                                                                bin  64  b  1  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  0  0  0  0  0
+Lower 50 54 62
+Upper 77 72 64
+
+Setup Area death_world_undead_layer in FDAT file index 264
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area death_world_undead_layer in FDAT file index 264
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2317,11 +2364,13 @@ f     100% 0a_demons_eye          tileId(  22)   pos(   c,   0,  ee) [drop  15% 
 32    100% 0d_fat_mole_e          tileId(  6b)   pos(   4,   8,   0)                                                                                                                                bin  64  d 6b  0 ff ff ff ff ff ff  a  0  0  0  0  0  0  4  0  8  0  0  0 f8
 38    100% 0f_door                tileId(  5e)   pos(   0,   0,   0)                                                                                                                                bin  64  f 5e  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0 ff
 39    100% 07_door                tileId(  b8)   pos(   0,   0,  fc)                                                                                                                                bin  64  7 b8  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0 fc  0  0
+Lower 57 46 64
+Upper 79 67 65
+
+Setup Area earth_world_poisonous_cavern in FDAT file index 274
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area earth_world_poisonous_cavern in FDAT file index 274
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2418,11 +2467,13 @@ f      25% 08_trickster           tileId(  1c)   pos(   a,   4,   0)            
 38    100% 03_door                tileId(  8b)   pos(800c,  fc,   0)                                                                                                                                bin  64  3 8b  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  c 80 fc  0  0  0  0
 39    100% 03_door                tileId( 10c)   pos(8004,   3,   0)                                                                                                                                bin  64  3  c  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  4 80  3  0  0  0  0
 3a    100% 03_door                tileId( 148)   pos(   0,   0,8000)                                                                                                                                bin  64  3 48  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0 80 fc
+Lower 54 47 64
+Upper 74 81 65
+
+Setup Area earth_world_stone_cavern in FDAT file index 284
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area earth_world_stone_cavern in FDAT file index 284
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2509,11 +2560,13 @@ f      80% 08_clay_servant        tileId(  f6)   pos(   0,   4,   0)            
 32    100% 04_dybbuk              tileId(  66)   pos(   4,  fc,   0)                                                                                                                                bin  64  4 66  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  4  0 fc  0  0  0  0
 38    100% 0f_door                tileId(  ab)   pos(   8,   0,   0)                                                                                                                                bin  64  f ab  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  8  0  0  0  0  0 ff
 39    100% 0f_door                tileId(   0)   pos(   8,   0,   0)                                                                                                                                bin  64  f  0  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  8  0  0  0  0  0  0
+Lower 38 52 61
+Upper 67 82 69
+
+Setup Area void in FDAT file index 304
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area void in FDAT file index 304
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2577,11 +2630,13 @@ idx chance name                                                      drop1      
 30    100% 01_unknown_i           tileId(  21)   pos(   0,  40,   0)                                                                                                                                bin  64  1 21  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0 40  0  0  0 f8
 31    100% 02_unknown_j           tileId(  21)   pos(   0,  40,   0)                                                                                                                                bin  64  2 21  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0 40  0  0  0 f8
 32      0% 04_unknown_k           tileId(  21)   pos(   0,   8,   0)                                                                                                                                bin   0  4 21  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  8  0  0  0 f8
+Lower 61 55 62
+Upper 70 79 64
+
+Setup Area water_world_watery_labyrinth_area in FDAT file index 324
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area water_world_watery_labyrinth_area in FDAT file index 324
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2673,11 +2728,13 @@ f      50% 09_koazul              tileId(  57)   pos(   e,   8,   0) [drop 100% 
 1f     50% 0d_slasher             tileId(  35)   pos(   8,  fc,   0) [drop  30% item_74_plate_mail_of_honor   ]                                                                                     bin  32  d 35  0 74  0 ff ff ff ff 28 1e  0  0  0  0  0  8  0 fc  0  0  0  4
 38    100% 03_door                tileId(  ec)   pos(   8,   0,   0)                                                                                                                                bin  64  3 ec  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  8  0  0  0  0  0 ff
 39    100% 0b_door                tileId(  eb)   pos(   c,   1,   0)                                                                                                                                bin  64  b eb  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  1  0  0  0  0
+Lower 53 49 64
+Upper 73 77 64
+
+Setup Area earth_world_hostile_rock_cavern in FDAT file index 334
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area earth_world_hostile_rock_cavern in FDAT file index 334
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2748,11 +2805,13 @@ idx chance name                                                      drop1      
 a      25% 00_black_onyx          tileId(   1)   pos(   0,   4,  fc) [drop 100% item_126_bottle_of_light      ]                                                                                     bin  19  0  1  0 26  1 ff ff ff ff 1e 64  0  0  0  0  0  0  0  4  0 fc  0 fc
 21    100% 04_dread_knight        tileId(  c6)   pos(   0,   0,  fc) [drop   0% item_8_silent_sword           ][drop   0% item_2c_deadly_great_sword    ][drop   0% item_27_great_sword           ] bin  64  4 c6  0  8  0 2c  0 27  0  a  0  0  0  0  0  0  0  0  0  0 fc  0 f8
 38    100% 02_door                tileId( 108)   pos(   4,  fc,   0)                                                                                                                                bin  64  2  8  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0 fc  0  0  0  0
+Lower 59 56 63
+Upper 69 81 64
+
+Setup Area water_world_white_rain_area in FDAT file index 374
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area water_world_white_rain_area in FDAT file index 374
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2822,11 +2881,13 @@ idx chance name                                                      drop1      
 9      25% 04_dragon_turtle       tileId(  1c)   pos(   0,   0,   0) [drop 100% item_127_acid_vaccine         ]                                                                                     bin  19  4 1c  0 27  1 ff ff ff ff 5a 64  0  0  0  0  0  0  0  0  0  0  0  4
 20    100% 05_magi_magus          tileId(  25)   pos(   0,   0,  fe) [drop  20% item_d_shadow_wolf            ][drop  20% item_24_dark_sword            ][drop 100% item_ee_mighty_ring           ] bin  64  5 25  0  d  0 24  0 ee  0  a 14 14 64  0  0  0  0  0  0  0 fe  0 fc
 38    100% 03_door                tileId(   1)   pos(   0,   0,   0)                                                                                                                                bin  64  3  1  0 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0  0  0  0
+Lower 59 63 63
+Upper 69 81 64
+
+Setup Area illusion_world_dream_domain in FDAT file index 384
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area illusion_world_dream_domain in FDAT file index 384
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2888,11 +2949,13 @@ idx chance name                                                      drop1      
 1     100% 00_dark_spirits        tileId(   3)   pos(   8,   8,  f8) [drop  10% item_57_harden_great_helm     ][drop  30% item_56_great_helm            ][drop 100% item_10e_sacred_feather       ] bin  64  0  3  0 57  0 56  0  e  1 1e  a 1e 64  0  0  0  8  0  8  0 f8  0  0
 2     100% 00_dark_spirits        tileId(   1)   pos(   8,   4,  f8) [drop  10% item_45_fiery_bow_gun         ][drop 100% item_128_spirit_book          ]                                           bin  64  0  1  0 45  0 28  1 ff ff 1e  a 64  0  0  0  0  8  0  4  0 f8  0  0
 20    100% 01_disguise            tileId(   1)   pos(   8,   0,   0) [drop  60% item_108_amulet_of_winter     ][drop 100% item_59_mystic_great_helm     ]                                           bin  64  1  1  0  8  1 59  0 ff ff  a 3c 64  0  0  0  0  8  0  0  0  0  0  8
+Lower 68 56 63
+Upper 75 65 64
+
+Setup Area shadow_tower_part2 in FDAT file index 404
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area shadow_tower_part2 in FDAT file index 404
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -2956,11 +3019,13 @@ idx chance name                                                      drop1      
 3b    100% 01_door                tileId( 1cd)   pos(   c,   0,  fc)                                                                                                                                bin  64  1 cd  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  0  0 fc  0  0
 3c    100% 02_door                tileId( 1cf)   pos(   c,   1,  fc)                                                                                                                                bin  64  2 cf  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  1  0 fc  0  0
 3d    100% 02_door                tileId( 1d1)   pos(   c,   1,  fc)                                                                                                                                bin  64  2 d1  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  c  0  1  0 fc  0  0
+Lower 58 60 60
+Upper 70 69 77
+
+Setup Area shadow_tower_part3 in FDAT file index 414
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
-
-Setup Area shadow_tower_part3 in FDAT file index 414
 
 Creatures
 name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23
@@ -3025,9 +3090,8 @@ idx chance name                                                      drop1      
 3c    100% 02_door                tileId( 1e2)   pos(   0,   0,  fc)                                                                                                                                bin  64  2 e2  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0 fc  0 ff
 3d    100% 03_door                tileId( 1e8)   pos(   4,   0,  fc)                                                                                                                                bin  64  3 e8  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  4  0  0  0 fc  0  0
 3e    100% 03_door                tileId( 1e6)   pos(   0,   0,  fc)                                                                                                                                bin  64  3 e6  1 ff ff ff ff ff ff 14  0  0  0  0  0  0  0  0  0  0 fc  0 ff
-
-Tiles
-idx                                                                     x       y       z     rot      tile xyz  ----
+Lower 59 59 60
+Upper 69 69 78
  TFile with 82 parts loaded
  TFile with 85 parts loaded
  TFile with 80 parts loaded

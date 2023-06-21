@@ -581,14 +581,13 @@ class Area  {
     console.log("\nTiles");
     console.log("idx                                                                     x       y       z     rot      tile xyz  ----");
 
-    var canvas = this.createImage();
-    const drawContext = canvas.getContext("2d");
-    const mapDraw = [];
+    this.mapTiles = [];
+    this.mapDraw = [];
 
     for (var i = 0; i<TILE_COUNT; i++) {
       var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
       var absoluteIndex = this.tiles_file.startOffset + offset_in_file;
-      this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, drawContext));
+      this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
     }
 
     this.creatures = [];
@@ -609,32 +608,124 @@ class Area  {
     for (var i = 0; i<COLLECTABLE_COUNT; i++) {
       var offset_in_file = 16 + COLLECTABLE_START_OFFSET + COLLECTABLE_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
-      this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i, mapDraw));
+      this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapDraw));
     }
 
-    this.setupSpawns(this, this.map_file, mapDraw);
+    this.setupSpawns(this, this.map_file, this.mapDraw);
 
-    drawContext.font = "bold 8pt 'Sans'";
+    this.writeMap();
+  }
+
+  writeMap() {
+
+    const REMOVE_TILE = "REMOVE";
+
+    var zHandling = {
+      "shadow_tower_part1": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0, 4:1, 
+                        5:REMOVE_TILE, 6: REMOVE_TILE, 7: 3, 8: 4, 
+                        9: REMOVE_TILE, 10: 6, 11: REMOVE_TILE, 12: REMOVE_TILE, 13: REMOVE_TILE, 14: REMOVE_TILE, 15: REMOVE_TILE, 16: REMOVE_TILE, 17: REMOVE_TILE, 18: REMOVE_TILE, 19: REMOVE_TILE},
+      "human_world_cursed_region": {},
+      "monster_world_false_eye_area": {1:0},
+      "fire_world_phoenix_cave": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0},
+      "human_world_solitary_region": {0:REMOVE_TILE, 1:0, 2:REMOVE_TILE, 3:1},
+      "human_world_hidden_region": {},
+      "human_world_forgotten_region": {0:REMOVE_TILE, 1:0},
+      "illusion_world_bewilderment_domain": {0:REMOVE_TILE, 1:0},
+      "illusion_world_gloomy_domain": {},
+      "water_world_impure_pool_area": {0:REMOVE_TILE, 1:0, 2: REMOVE_TILE, 3: REMOVE_TILE, 4: 1},
+      "earth_world_rotting_cavern": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:REMOVE_TILE, 3:REMOVE_TILE, 4:REMOVE_TILE, 5:REMOVE_TILE, 
+                                    6:0},
+      "earth_world_quaking_cavern": {},
+      "illusion_world_worship_domain": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0},
+      "death_world_lingering_curse_layer": {},
+      "earth_world_false_pit_cavern": {},
+      "monster_world_screeching area": {},
+      "fire_world_ashen_cavern": {},
+      "fire_world_burning_cavern": {},
+      "water_world_sunken_river_area": {},
+      "death_world_gate_of_the_dead": {},
+      "fire_world_molten_cavern": {},
+      "death_world_dark_castle_layer": {},
+      "death_world_undead_layer": {},
+      "earth_world_poisonous_cavern": {},
+      "earth_world_stone_cavern": {},
+      "void": {},
+      "water_world_watery_labyrinth_area": {},
+      "earth_world_hostile_rock_cavern": {},
+      "water_world_white_rain_area": {},
+      "illusion_world_dream_domain": {},
+      "shadow_tower_part2": {},
+      "shadow_tower_part3": {}
+    }
+
+    // Find lower values
+    var lowerX = this.mapTiles.reduce((a, b) => { return {x:Math.min(a.x, b.x)}; }, {x:10000}).x;
+    var lowerY = this.mapTiles.reduce((a, b) => { return {y:Math.min(a.y, b.y)}; }, {y:10000}).y;
+    var lowerZ = this.mapTiles.reduce((a, b) => { return {z:Math.min(a.z, b.z)}; }, {z:10000}).z;
+    var upperX = this.mapTiles.reduce((a, b) => { return {x:Math.max(a.x, b.x)}; }, {x:0}).x;
+    var upperY = this.mapTiles.reduce((a, b) => { return {y:Math.max(a.y, b.y)}; }, {y:0}).y;
+    var upperZ = this.mapTiles.reduce((a, b) => { return {z:Math.max(a.z, b.z)}; }, {z:0}).z;
+    console.log("Lower "+lowerX + " "+lowerY+ " "+lowerZ);
+    console.log("Upper "+upperX + " "+upperY + " "+upperZ);
+
+    var processTile = tile => {
+      tile.originalX = tile.x;
+      tile.originalY = tile.y;
+      tile.originalZ = tile.z;
+      tile.x -= lowerX;
+      tile.y -= lowerY;
+      tile.z -= lowerZ;
+    };
+
+    // Normalize all tiles for the lowest to be on zero
+    this.mapTiles.forEach(processTile);
+    this.mapDraw.forEach(processTile);
+
+    var removeBadZTiles = tile => {
+      var toInclude = zHandling[this.name][tile.z]!=REMOVE_TILE;
+      if (toInclude && zHandling[this.name][tile.z]!=undefined) {
+        tile.z = zHandling[this.name][tile.z];
+        tile.x += Math.round((tile.z) * (1+upperX-lowerX));
+      }
+      return toInclude;
+    };
+
+    this.mapTiles = this.mapTiles.filter(removeBadZTiles);
+    this.mapDraw = this.mapDraw.filter(removeBadZTiles);
+
+    var extendedUpperX = this.mapTiles.reduce((a, b) => { return {x:Math.max(a.x, b.x)}; }, {x:0}).x;
+    var extendedUpperY = this.mapTiles.reduce((a, b) => { return {y:Math.max(a.y, b.y)}; }, {y:0}).y;
+
+    this.canvasWidth = (extendedUpperX + 6) * DRAW_TILE_SIZE;
+    this.canvasHeight = (extendedUpperY + 6) * DRAW_TILE_SIZE;
+    const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
+    const drawContext = canvas.getContext("2d");
+
+    drawContext.font = "bold 10pt 'Sans'";
     drawContext.textAlign = "left";
     var tileTexts = {};
-    for (var i in mapDraw) {
-      drawContext.fillStyle = mapDraw[i].color;
-      var key = ""+mapDraw[i].x + "-" + mapDraw[i].y;
+    for (var i in this.mapTiles) {
+      drawContext.fillStyle = this.mapTiles[i].color;
+      drawContext.fillRect(
+        DRAW_TILE_SIZE * (this.mapTiles[i].x + TILE_SHIFT_X), 
+        this.canvasHeight - DRAW_TILE_SIZE * (this.mapTiles[i].y + TILE_SHIFT_Y),
+        DRAW_TILE_SIZE-2,
+        DRAW_TILE_SIZE-2);
+      drawContext.fillText("x="+this.mapTiles[i].originalX.toString(16) + " y="+this.mapTiles[i].originalY.toString(16) + " z="+this.mapTiles[i].originalZ.toString(16), 
+        (this.mapTiles[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
+        this.canvasHeight -2 - (this.mapTiles[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE);
+    }
+    for (var i in this.mapDraw) {
+      drawContext.fillStyle = this.mapDraw[i].color;
+      var key = ""+this.mapDraw[i].x + "-" + this.mapDraw[i].y;
       tileTexts[key] = tileTexts[key] != undefined ? tileTexts[key] + 1 : 0;
-      drawContext.fillText(mapDraw[i].text, 
-        mapDraw[i].x * DRAW_TILE_SIZE + 2, 
-        DRAW_MAP_SIDE_SIZE - mapDraw[i].y * DRAW_TILE_SIZE + 9 + ((tileTexts[key]+mapDraw[i].x)%5) * 9);
+      drawContext.fillText(this.mapDraw[i].text, 
+        (this.mapDraw[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
+        this.canvasHeight - (this.mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+this.mapDraw[i].x)%5) * 9);
     }
     const buffer = canvas.toBuffer("image/png");
     fs.writeFileSync("./maps/" + this.name + ".png", buffer);
 
-  }
-
-  createImage() {
-    const width = DRAW_MAP_SIDE_SIZE;
-    const height = DRAW_MAP_SIDE_SIZE;
-    const canvas = createCanvas(width, height);
-    return canvas;
   }
 
   toString() {
@@ -760,13 +851,9 @@ class UInt32 {
   }
 }
 
-const DRAW_TILE_SIZE = 60;
-const DRAW_MAP_SIDE_SIZE = 0x80 * DRAW_TILE_SIZE;
-
-function tileDraw(drawContext, color, x, z) {
-  drawContext.fillStyle = color;
-  drawContext.fillRect(DRAW_TILE_SIZE * x, DRAW_MAP_SIDE_SIZE - DRAW_TILE_SIZE * z, DRAW_TILE_SIZE-1, DRAW_TILE_SIZE-1);
-}
+const DRAW_TILE_SIZE = 150;
+const TILE_SHIFT_X = 3;
+const TILE_SHIFT_Y = 3;
 
 const creatureNameByAbsoluteOffset={0x9a804:"dark_spider",0x9a8c4:"shadow_spider",0x9a984:"tongue_imp",0x9ab04:"fat_mole_a",0x9ac84:"tongue_imp",0x9ae04:"dark_spider",0x9aec4:"shadow_spider",0x9af84:"guardian_a",0x130004:"night_howler",0x1300c4:"chirper",0x130184:"lizard_servant",0x130304:"night_howler",0x1303c4:"master_howler",0x130484:"dwarfling",0x130604:"hermit_crab",0x1306c4:"freak",0x130904:"saurian_warrior_a",0x1309c4:"saurian_warrior_b",0x130a84:"dinogon",0x1c2984:"fire_jinn",0x1c2b04:"unknown_a",0x1c2bc4:"armored_jinn",0x1c2c84:"fire_jinn",0x255804:"dark_spider",0x2558c4:"acid_slime",0x255984:"blood_slime",0x255c84:"skeleton",0x255e04:"dark_spider",0x255ec4:"demon_bat",0x255f84:"skeleton",0x256104:"demon_bat",0x2561c4:"dark_spider",0x256284:"acid_slime",0x2f0004:"acid_slime",0x2f00c4:"blood_slime",0x2f0184:"parasite",0x2f0304:"acid_slime",0x2f03c4:"blood_slime",0x2f0484:"fanged_worm",0x2f0604:"casket",0x2f06c4:"blood_slime",0x386804:"acid_skull",0x3868c4:"blood_skull",0x386984:"skeleton",0x386b04:"acid_skull",0x386bc4:"blood_skull",0x386c84:"skeleton",0x415804:"gorgoral",0x4158c4:"gargaral",0x415984:"gordoral",0x415b04:"demon_warrior",0x415bc4:"gargaral",0x415c84:"gordoral",0x415e04:"war_demon_1",0x415ec4:"war_demon_2",0x415f84:"rotting_face",0x416104:"death_mage",0x416284:"rotting_face",0x4a3004:"red_puppet",0x4a30c4:"dark_spirits",0x4a3184:"dark_imp",0x4a3304:"dark_spirits",0x4a33c4:"dark_spirits",0x4a3484:"black_imp",0x4a3604:"ring_demon",0x4a36c4:"dark_fairy",0x4a3784:"dark_bishop",0x4a3904:"maristella",0x4a39c4:"deha",0x52f804:"akryal",0x52f8c4:"horned_slime",0x52f984:"blood_brain",0x52fbc4:"horned_slime",0x52fc84:"dweller",0x52fec4:"dementor",0x52ff84:"dweller",0x530104:"worm_face",0x5301c4:"hatchlin",0x5c4004:"watcher_plant",0x5c40c4:"myconid",0x5c4184:"elder",0x5c4304:"minor_dwarf",0x5c43c4:"dwarfling",0x5c4484:"elder",0x5c4604:"star_serpent",0x5c46c4:"imp",0x5c4904:"barrel_snail",0x5c49c4:"tondrom",0x5c4a84:"auriel_a",0x65a004:"sand_leech_a",0x65a0c4:"blue_flicker",0x65a184:"sand_leech_b",0x65a304:"kiljoy",0x65a3c4:"acid_pod",0x65a604:"torg",0x65a6c4:"cocoon_plant",0x65a784:"cocoon_plant",0x6eb804:"old_face",0x6eb8c4:"gorthaur",0x6eb984:"fat_mole_d",0x6ebb04:"wildowess",0x6ebc84:"warpoor",0x6ebe04:"fester",0x6ebec4:"cross_breed",0x6ebf84:"warpoor",0x762004:"unknown_e",0x7620c4:"unknown_f",0x7623c4:"unknown_g",0x762604:"apocrypha",0x7626c4:"unknown_h",0x762784:"old_face",0x762904:"old_face",0x7629c4:"bugler",0x7f3004:"earth_knight",0x7f30c4:"acid_pod",0x7f3304:"cannon_snail",0x7f33c4:"cocoon_plant",0x7f3604:"guardian_b",0x7f36c4:"sloth_bug",0x7f3904:"ray_plant",0x7f39c4:"cocoon_plant",0x8938c4:"auriel_c",0x893b04:"king_hopper",0x893bc4:"warden",0x893c84:"oblid",0x893e04:"oxelus",0x893f84:"cursed_demon",0x8941c4:"death_serpent",0x894284:"necron",0x926804:"bone_demon",0x9268c4:"berzerker",0x926b04:"zygote",0x926bc4:"horned_skull",0x926ec4:"cerberus",0x926f84:"ruby_demon",0x927104:"ebony_knight",0x9271c4:"damned_angel",0x9ad804:"berzerker",0x9ad8c4:"dweller",0x9ad984:"mystic_tower",0x9adb04:"berzerker",0x9adbc4:"dweller",0x9adc84:"mystic_tower",0x9ade04:"berzerker",0x9adec4:"iron_crusher",0x9adf84:"mystic_tower",0x9ae1c4:"dweller",0x9ae284:"mystic_tower",0xa3e804:"kabasaur",0xa3eb04:"kabasaur",0xa3ebc4:"water_knight",0xad4004:"unused_a",0xad40c4:"doriwi",0xad4184:"bone_wolf",0xad4304:"unused_b",0xad43c4:"doriwi",0xad4484:"hell_warrior",0xad4604:"wyvern",0xad4784:"bone_wolf",0xad4904:"hollow_mage",0xad49c4:"blood_bone",0xb3f804:"abraxus",0xb3f8c4:"horned_skull",0xb3f984:"dead_abraxus",0xb3fb04:"berzerker",0xb3fc84:"mystic_tower",0xb3fe04:"fat_mole_b",0xb3fec4:"steel_servant",0xb40104:"fat_mole_c",0xb401c4:"arachness",0xbd6004:"hell_hunter",0xbd6184:"karasu",0xbd6304:"tree_ogre",0xbd63c4:"armored_warrior",0xbd6484:"armored_slayer",0xbd6604:"armored_guardian",0xbd66c4:"armored_warrior",0xbd6784:"descrypha",0xc730c4:"unknown_b",0xc73304:"king_edward",0xc733c4:"unknown_c",0xc73604:"claw_head",0xc736c4:"pulsating_heart",0xc73784:"demons_eye",0xc73904:"unknown_d",0xc739c4:"fat_mole_e",0xc73a84:"claw_head",0xd13004:"duhrin",0xd130c4:"beak_plant",0xd13184:"watcher_plant",0xd13304:"auriel_b",0xd13604:"trickster",0xd136c4:"dwarf_warrior",0xd13904:"hanging_dead",0xd139c4:"trickster",0xd13a84:"watcher_plant",0xdb0804:"dybbuk",0xdb08c4:"demon_bat",0xdb0b04:"dybbuk",0xdb0bc4:"hobble_worm",0xdb0e04:"clay_servant",0xdb0f84:"barrel_snail",0xdb1104:"dybbuk",0xdb11c4:"crying_root",0xe4c004:"balron_a",0xe4c0c4:"unknown_i",0xe4c184:"unknown_j",0xe4c304:"unknown_k",0xe4c244:"balron_b",0xe4c604:"demon_king",0xedc804:"kabasaur",0xedc984:"horned_slime",0xedcb04:"great_frog",0xedcbc4:"blood_brain",0xedcec4:"koazul",0xedcf84:"horned_slime",0xedd104:"gaze_hopper",0xedd1c4:"slasher",0xedd284:"manna_python",0xf73004:"black_onyx",0xf730c4:"earth_knight",0xf73304:"dread_knight",0xf733c4:"earth_knight",0xf73484:"dread_knight_unused",0x100c804:"winged_worm",0x100cb04:"dragon_turtle",0x100cbc4:"magi_magus",0x108f804:"dark_spirits",0x108f8c4:"disguise"};
 
@@ -830,7 +917,14 @@ class Collectable {
     this.name = (itemData[this.type.get()] ? itemData[this.type.get()].name : "bad_id");
 
     if (mapDraw && this.name!="bad_id") {
-      mapDraw.push({color: "#108010", x: this.tileX.get(), y: this.tileZ.get(), text: this.name});
+      mapDraw.push({
+        color: "#108010", 
+        x: this.tileX.get(),
+        y: this.tileZ.get(),
+        z: this.tileY.get(),
+        text: this.name
+      });
+
     }
 
     //if (!this.isBlank) {
@@ -889,7 +983,7 @@ global.TILE_SIZE = 0x0c;
 global.TILE_COUNT = 0x200;
 
 class Tile {
-  constructor(bin, area, offset_in_file, absoluteIndex, tileIndex, drawContext) {
+  constructor(bin, area, offset_in_file, absoluteIndex, tileIndex, mapTiles) {
     this.bin = bin;
     this.area = area;
     this.offset_in_file = offset_in_file;
@@ -906,8 +1000,15 @@ class Tile {
     this.tileY = new UInt8(this.bin, this.offset_in_file + 0x09);
     this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x0a);
 
-    if (drawContext) {
-      tileDraw(drawContext, "#160abc", this.tileX.get(), this.tileZ.get());
+    if (mapTiles &&
+      !this.tileX.isNull() &&
+      !this.tileY.isNull()) {
+      mapTiles.push({
+        color: "#160abc",
+        x: this.tileX.get(),
+        y: this.tileZ.get(),
+        z: this.tileY.get()
+      });
     }
 
     if (!this.isBlank) {
@@ -1160,8 +1261,16 @@ class Spawn {
       this.name = "other_stuff";
     }
 
-    if (mapDraw && this.name != "other_stuff") {
-      mapDraw.push({color: "#801010", x: area.tiles[this.tileId.get()].tileX.get(), y: area.tiles[this.tileId.get()].tileZ.get(), text: this.name});
+    if (mapDraw && this.name != "other_stuff"
+      && !this.tileId.isNull()
+      && !area.tiles[this.tileId.get()].tileX.isNull()
+      && !area.tiles[this.tileId.get()].tileY.isNull()) {
+      mapDraw.push({
+        color: "#ff0000", 
+        x: area.tiles[this.tileId.get()].tileX.get(), 
+        y: area.tiles[this.tileId.get()].tileZ.get(), 
+        z: area.tiles[this.tileId.get()].tileY.get(), 
+        text: this.name});
     }
 
     if (this.chance.isNull()) {
@@ -1181,22 +1290,43 @@ class Spawn {
     message = binToStr(this.tfile.bin.slice(this.offset_in_file, this.offset_in_file + SPAWN_ENTRY_SIZE));
 
     if (this.name != "other_stuff") {
+      this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
       this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
       if (!this.drop1.isNull()) {
         this.drop1Item = itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
+        this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
+        mapDraw.push({
+          color: "#ffff00", 
+          x: area.tiles[this.tileId.get()].tileX.get(), 
+          y: area.tiles[this.tileId.get()].tileZ.get(), 
+          z: area.tiles[this.tileId.get()].tileY.get(), 
+          text: (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item.name
+        });
       }
       this.drop2 = new UInt16(this.tfile.bin, this.offset_in_file + 0x06);
       if (!this.drop2.isNull()) {
         this.drop2Item = itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
+        this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
+        mapDraw.push({
+          color: "#ffff00", 
+          x: area.tiles[this.tileId.get()].tileX.get(), 
+          y: area.tiles[this.tileId.get()].tileZ.get(), 
+          z: area.tiles[this.tileId.get()].tileY.get(), 
+          text: (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item.name
+        });
       }
       this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
       if (!this.drop3.isNull()) {
         this.drop3Item = itemData[this.drop3.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
+        this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
+        mapDraw.push({
+          color: "#ffff00", 
+          x: area.tiles[this.tileId.get()].tileX.get(), 
+          y: area.tiles[this.tileId.get()].tileZ.get(), 
+          z: area.tiles[this.tileId.get()].tileY.get(), 
+          text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item.name
+        });
       }
-      this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
-      this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
-      this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
-      this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
     }
 
     console.log(this.toReadableString());
