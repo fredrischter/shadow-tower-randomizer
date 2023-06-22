@@ -976,7 +976,7 @@ global.GAME_DATA={"items":[
   12:{"name":"item_12e_dorados_ashes"                 , "x":    2, "y":    0, "z":    2, "rotation_z":    0},
   13:{"name":"item_12e_dorados_ashes"                 , "x":    0, "y":    0, "z":  254, "rotation_z":    0},
 }},
- {"name":"monster_world_screeching area", "creatures":[
+ {"name":"monster_world_screeching_area", "creatures":[
   {"name":"01_auriel_c"          , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp": 7560,"offset_in_file":"  c4","absoluteIndex":"  8938c4","isDoor":false},
   {"name":"04_king_hopper"       , "str":    1, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    6, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp": 3230,"offset_in_file":" 304","absoluteIndex":"  893b04","isDoor":false},
   {"name":"05_warden"            , "str":    0, "spd":    0, "def":    5, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    3, "mel":    0, "sol":    0, "hp": 1110,"offset_in_file":" 3c4","absoluteIndex":"  893bc4","isDoor":false},
