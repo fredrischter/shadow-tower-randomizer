@@ -13,12 +13,12 @@ if (!paramsFile || !paramsFile.endsWith(".json")) {
 
 var areas = JSON.parse(fs.readFileSync(paramsFile));
 
-var currentArea = "solitary";
+var startArea = "shadow_tower_part1a";
+var currentArea = startArea;
 var enteredFromId;
 
 console.error("map " + JSON.stringify(areas));
 console.error("starting from " + currentArea);
-console.error();
 
 var walkPath = [];
 var knownPaths = {};//["origin"-"destination": [{"dest":"hidden", "id":"2"}]]
@@ -46,7 +46,7 @@ function getAreaByName(name) {
 
 function addToKnownUndiscoveredUndiscoveredWays(exceptId) {
 	var area = Object.assign({}, getAreaByName(currentArea));
-	area.exits = area.exits.filter(exit => exit.id != exceptId);
+	//area.exits = area.exits.filter(exit => exit.id != exceptId); // Not removing same id as id of the door in next area isn't same as in previous area
 	console.error("  newly known area with exits "+JSON.stringify(area)+ " adding to " +JSON.stringify(mapsWithKnownUndiscoveredWays));
 	mapsWithKnownUndiscoveredWays.push(area);
 }
@@ -179,15 +179,28 @@ while(steps ++ < 100) {
 			console.error("  left to explore " + JSON.stringify(mapsWithKnownUndiscoveredWays));
 			console.error("  knownPaths " + JSON.stringify(knownPaths));
 
-			for (var i in area) {
-				area.depth = length of path from first area to this area;	
+			for (var i in areas) {
+				let area = areas[i];
+				if (i == 0) {
+					area.depth = 0;
+				} else {
+					var key=areas[0].name+"-"+area.name;
+					var path = knownPaths[key];
+					if (path != null) {
+						area.depth = path.length;
+					}
+				}
 			}
-			var isComplete = walk contains all areas;
+
+			var walkedAreas = walkPath.map(way => way.dest);
+			var notWalkedAreas = areas.filter(area => area.name!=startArea && !walkedAreas.includes(area.name)).map(area => area.name);
+			console.error("  notWalkedAreas "+JSON.stringify(notWalkedAreas));
+			var isComplete = notWalkedAreas.length == 0;
 
 /*
 for (var i in area) {
 	area.depth = length of path from first area to this area;	
-}
+}	
 isComplete = walk contains all areas;
 
 output {
@@ -203,6 +216,9 @@ output {
 			console.log("\"map\":" + JSON.stringify(areas) + ",\n");
 			console.log("\"knownPaths\":" + JSON.stringify(knownPaths) + ",\n");
 			console.log("\"isComplete\":" + isComplete + ",\n");
+			if (!isComplete) {
+			console.log("\"notWalkedAreas\":" + JSON.stringify(notWalkedAreas) + ",\n");
+			}
 			console.log("}")
 
 			break;
