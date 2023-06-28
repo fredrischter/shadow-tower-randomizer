@@ -1243,7 +1243,7 @@ class Creature {
 
   reinjectEntityDataToFile(nextEntityDataAddress) {
 
-    console.log("reinjectEntityDataToFile " + this.name + " " + this.area.name);
+    //console.log("reinjectEntityDataToFile " + this.name + " " + this.area.name);
     for (var i in this.entityStates) {
       var entityStateOffset = this.entityStateOffsets[i];
       // Used to verify if run with no changes, the offsets would match totaly or not
