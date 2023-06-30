@@ -13,6 +13,27 @@ if (!paramsFile || !paramsFile.endsWith(".json")) {
 
 var areas = JSON.parse(fs.readFileSync(paramsFile));
 
+//var areasMap = {};
+
+//areas.forEach(area => {
+//	areasMap[area.name] = {};
+//	area.exits.forEach(exit => {
+//		areasMap[area.name][exit.id] = exit;
+//	});
+//});
+//
+//areas.forEach(area => {
+//	area.exits.forEach(exit => {
+//		if (exit["way-back-id"]) {
+//			if (areasMap[exit.dest][exit["way-back-id"]] != area.name) {
+//				console.log("ERROR - inconsistent way-back-id "+exit["way-back-id"]+" of expected area "+exit.dest+" doesnt match "+area.name+" exit "+exit.id);
+//				process.exit(1);
+//			}
+//		}
+//	});
+//});
+//
+
 var startArea = "shadow_tower_part1a";
 var currentArea = startArea;
 var enteredFromId;

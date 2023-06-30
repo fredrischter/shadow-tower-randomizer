@@ -1,5 +1,4 @@
 
-
 memory positions
 
 199098 tile
@@ -9,7 +8,7 @@ memory positions
 
 //cd C:\Users\fred\Desktop\shadow-tower-randomizer
 
-node map_walker.js map.json > walk.json
+node map_walker.js map.json > walk.json 2> walk_log.txt
 
 unpack
 npm run randomize .\params.json "C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin\st"
