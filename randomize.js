@@ -531,14 +531,45 @@ for (var a in areas) {
 //	human_world_solitary_region.objects[t].blank();
 //}
 
+// portal
+illusion_world_dream_domain.objects[3].set(illusion_world_worship_domain.objects[6]);
+
+// totem swap
+monster_world_screeching_area.objects[3].set(monster_world_false_eye_area.objects[10]);
+
+//monster_world_screeching_area.objects[3].bin[monster_world_screeching_area.objects[3].offset_in_file+22]=3;
+// //monster_world_screeching_area.objects[2].bin[
+//	monster_world_screeching_area.objects[2].offset_in_file+16] = 0; // destination map index
+
+
 // swap door
-shadow_tower_part1.objects[0].swap(shadow_tower_part1.objects[11]);
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+16] = 0; // destination tile x shift
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+17] = 0; // destination tile y shift
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+18] = 1;//1; destination tile z shift
+// //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+21] = 0; // destination map index
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+22] = 0; // angle 1=90
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+23] = 0xfd; // destination y fine position
+
+//human_world_solitary_region.objects[38].set(human_world_cursed_region.objects[31]);
+//human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+16] = 0xfc; // destination tile x shift
+//human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+17] = 6; // destination tile y shift
+//human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+18] = 0xff;//1; destination tile z shift
+//human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+22] = 2; // angle 1=90
+//human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+23] = 0xf8; // destination y fine position
+
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+22] = 1;
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+23] = 0xf8;
+
+//monster_world_screeching_area.objects[3].swap(human_world_forgotten_region.objects[20]);
+
+//human_world_solitary_region.objects[38].swap(earth_world_stone_cavern.objects[7]);
+//shadow_tower_part1.objects[0].swap(shadow_tower_part1.objects[11]);
 
 // swap door model
-shadow_tower_part1.spawns[0x3a].tileId.swap(shadow_tower_part1.spawns[0x39].tileId);
-shadow_tower_part1.spawns[0x3a].x.swap(shadow_tower_part1.spawns[0x39].x);
-shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
-shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);
+//shadow_tower_part1.spawns[0x3a].tileId.swap(shadow_tower_part1.spawns[0x39].tileId);
+//shadow_tower_part1.spawns[0x3a].x.swap(shadow_tower_part1.spawns[0x39].x);
+//shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
+//shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);
 
 for (var a in areas) {
 	var area = areas[a];
