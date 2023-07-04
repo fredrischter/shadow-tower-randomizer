@@ -576,6 +576,16 @@ class Area  {
     }
     console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index);
 
+/*
+0-entity and entity data
+1-spawns (to remove fixed 0x2C04, to take address from address of sized mix [1])
+2-300 entries 0x18 bytes each 
+3-objects
+4-collectables
+5-0x80 entries, size 0x10, all empty
+6-4 bytes entries
+*/
+
     var TILE_START_OFFSET = 0x00;
     this.tiles = [];
     console.log("\nTiles");
@@ -590,16 +600,7 @@ class Area  {
       this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
     }
 
-    var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
-    this.objects = [];
-    console.log("\nObjects ");
-    console.log("idx  in_file offset");
-    for (var i = 0; i<OBJECTS_COUNT; i++) {
-      var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;
-      var absoluteIndex = this.map_file.startOffset + offset_in_file;
-      this.objects.push(new ScenarioObject(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles, this.mapDraw));
-    }
-
+    //0-entity and entity data
     this.creatures = [];
     console.log("\nCreatures");
     console.log("name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23");
@@ -610,6 +611,24 @@ class Area  {
       this.creatures.push(new Creature(this.map_file.bin, this, offset_in_file, absoluteIndex, i));
     }
 
+    //1-spawns
+    this.setupSpawns(this, this.map_file, this.mapDraw);
+
+    //2-300 entries 0x18 bytes each     
+    
+
+    //3-objects
+    var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
+    this.objects = [];
+    console.log("\nObjects ");
+    console.log("idx  in_file offset");
+    for (var i = 0; i<OBJECTS_COUNT; i++) {
+      var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;
+      var absoluteIndex = this.map_file.startOffset + offset_in_file;
+      this.objects.push(new ScenarioObject(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles, this.mapDraw));
+    }
+
+    //4-collectables
     // to do to fix this workaround 0x10
     var COLLECTABLE_START_OFFSET = this.map_file.sizedMixStarts[4] - 0x10;//0x7bb4;
     this.collectables = [];
@@ -620,8 +639,6 @@ class Area  {
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
       this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapDraw));
     }
-
-    this.setupSpawns(this, this.map_file, this.mapDraw);
 
     //this.writeMapImage();
   }
@@ -740,7 +757,7 @@ class Area  {
     var str = "{\"name\":\"" + this.name + "\", \"creatures\":[\n";
     this.creatures.forEach(obj => { if (obj.name.endsWith("door")) return; str += "  " + obj + ",\n"; });
     str+="], \"spawns\":{\n";
-    this.spawns.forEach(obj => { if (obj.isBlank || obj.name.endsWith("door")) return; str += "  " + obj + ",\n"; });
+    this.spawns.forEach(obj => { if (obj.isBlank) return; str += "  " + obj + ",\n"; });
     str+="}, \"collectables\":{\n";
     this.collectables.forEach(obj => { if (obj.isBlank) return; str += "  "+obj.collectableIndex+":" + obj + ",\n"; });
     str+="}}";
@@ -879,6 +896,20 @@ class EntityStateData {
     this.creatureIndex = creatureIndex;
     this.index = index;
     this.type = this.bin[this.offset_in_file];
+
+    /*
+Entity data types
+0 tilt
+02 event
+10-16 move
+20 attack
+30 spell
+40 default
+50 default
+70-72 scene
+80 giving
+  */
+
     if (!ENTITY_STATE_SIZE_BY_TYPE[this.type]) {
       console.log("ERROR EntityStateData type size unknown " + this.type.toString(16) + " " + ENTITY_STATE_SIZE_BY_TYPE[this.type]);
     }
@@ -895,6 +926,14 @@ class EntityStateData {
       + ",\"absoluteIndex\":\""+this.absoluteIndex.toString(16).padStart(8) + "\""  
       + ",\"message\":\""+ binToStr(this.originalBin) + "\""
       + "}";
+  }
+
+  set(source) {
+    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, ENTITY_STATE_SIZE_BY_TYPE[this.type]);
+  }
+
+  swap(source) {
+    binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, ENTITY_STATE_SIZE_BY_TYPE[this.type]);
   }
 }
 
@@ -930,7 +969,7 @@ class Collectable {
         x: this.tileX.get(),
         y: this.tileZ.get(),
         z: this.tileY.get(),
-        text: this.name
+        text: "" + collectableIndex.toString(16) + " " + this.name
       });
 
     }
@@ -954,6 +993,11 @@ class Collectable {
 
   toString() {
     return "{\"name\":\""+(this.name + "\"").padEnd(40)
+      + ", \"type\":" + (this.type.get() + "").padStart(5)
+      + ", \"tileX\":" + (this.tileX.get() + "").padStart(5)
+      + ", \"tileY\":" + (this.tileY.get() + "").padStart(5)
+      + ", \"tileZ\":" + (this.tileZ.get() + "").padStart(5)
+      + ", \"tileId\":" + (this.tileId.get() + "").padStart(5)
       + ", \"x\":" + (this.x.get() + "").padStart(5)
       + ", \"y\":" + (this.y.get() + "").padStart(5)
       + ", \"z\":" + (this.z.get() + "").padStart(5)
@@ -1296,8 +1340,8 @@ class Creature {
       + ", \"mel\":" + (this.mel.get() + "").padStart(5)
       + ", \"sol\":" + (this.sol.get() + "").padStart(5)
       + ", \"hp\":" + (this.hp.get() + "").padStart(5)
-      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
-      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
+//      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
+//      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
       + ",\"isDoor\":" + this.isDoor + "}";
   }
 

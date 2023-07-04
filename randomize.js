@@ -43,7 +43,7 @@ for (var i in modelFileNames) {
 	for (var c in data_model.areas[i].creatures) {
 		let creature = data_model.areas[i].creatures[c];
 		creature.modelFiles = [
-			modelFile.files[c*5].fileName,
+			modelFile.files[c*5+0].fileName,
 			modelFile.files[c*5+1].fileName,
 			modelFile.files[c*5+2].fileName,
 			modelFile.files[c*5+3].fileName,
@@ -113,12 +113,14 @@ function swapCreatures(creature1, creature2, changeSet) {
 	var tmp = creature1.entityStates;
 	creature1.entityStates = creature2.entityStates;
 	creature2.entityStates = tmp;
-}
 
-function arrayCopy(origin, dest, offset, length) {
-	for (var i = 0; i < length; i++) {
-		dest[i] = origin[i];
-	}
+	//creature1.entityStates[1].bin[8]=0x2a;
+	//creature1.entityStates[1].bin[12]=0x40;
+	//creature1.entityStates[1].bin[14]=0x30;
+	//creature1.entityStates[1].bin[15]=0x10;
+	//creature1.entityStates[1].bin[17]=0x2;//creature2.entityStates[1].bin[17];
+	//creature1.entityStates[1].bin[19]=0x2;//creature2.entityStates[1].bin[19];
+	//creature1.entityStates[1].bin[23]=0x0;
 }
 
 var goodItems = [
@@ -279,7 +281,8 @@ function forEachCreatureSpawn(spawn, area, index) {
 	// Blank all creature spawns
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
-
+	//spawn.blank();
+/*
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
 		spawn.drop1Chance.set(100);
@@ -289,7 +292,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 	}
 	if (!spawn.drop3.isNull()) {
 		spawn.drop3Chance.set(100);
-	}
+	}*/
 	// Spawning ring
 	//spawn.drop1.set(item_c4_summoner_ring_of_fire);
 
@@ -372,11 +375,6 @@ global.items[item_0_short_sword].par.set(0xff);
 global.items[item_0_short_sword].mel.set(0xff);
 global.items[item_0_short_sword].sol.set(0xff);
 
-//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.blood_slime1.bin, 0, 0xc0);
-//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.dark_spider1.bin, 0, 0xc0);
-//arrayCopy(human_world_solitary_region.acid_slime1.bin, human_world_solitary_region.demon_bat1.bin, 0, 0xc0);
-//arrayCopy(human_world_solitary_region.01_acid_slime.bin, human_world_solitary_region.skeleton1.bin, 0, 0xc0);//93);
-
 //human_world_solitary_region["01_acid_slime"].hp.set(0x0001);
 //human_world_solitary_region["0e_acid_slime"].hp.set(0x0001);
 
@@ -422,6 +420,12 @@ human_world_solitary_region.spawns[0].drop1Chance.set(0x64);
 //}
 
 //Set potion to be over the quilted armor
+
+// no creatures, poison vaccine is given in the first area
+//human_world_solitary_region.collectables[0].type.set(item_124_poison_vaccine);
+//human_world_solitary_region.collectables[1].type.set(item_124_poison_vaccine);
+//human_world_solitary_region.collectables[2].type.set(item_124_poison_vaccine);
+
 //var coll = human_world_solitary_region.collectables[0];
 //var coll2 = human_world_solitary_region.collectables[1];
 //coll.setTile(coll2.getTile());
@@ -516,31 +520,55 @@ let changeSet = [];
 swapCreatures(human_world_solitary_region["01_acid_slime"],
 	human_world_solitary_region["00_dark_spider"], changeSet);
 
-//for (var i =0; i<300; i++) {
-	//swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
-//}
+//swapCreatures(human_world_solitary_region["01_acid_slime"],
+//	earth_world_rotting_cavern["00_watcher_plant"], changeSet);
 
-
-for (var a in areas) {
-	for (var t in areas[a].objects) {
-//		areas[a].objects[t].blank();
+/*
+var spider = human_world_solitary_region["01_acid_slime"];
+var slime = human_world_solitary_region["00_dark_spider"];
+for (var i=0; i<spider.entityStates.length; i++) {
+	if (slime.entityStates[i]) {
+		spider.entityStates[i].swap(slime.entityStates[i]);
 	}
 }
+*/
+
+/*
+human_world_solitary_region["01_acid_slime"].entityStates[4].bin[8]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[5].bin[8]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[4].bin[14]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[5].bin[14]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[4].bin[15]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[5].bin[15]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[4].bin[15]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[5].bin[15]=1;
+human_world_solitary_region["01_acid_slime"].entityStates[4].bin[20]=20;
+human_world_solitary_region["01_acid_slime"].entityStates[5].bin[20]=20;
+*/
+
+for (var i =0; i<300; i++) {
+//	swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+}
+
+//for (var a in areas) {
+//	for (var t in areas[a].objects) {
+////		areas[a].objects[t].blank();
+//	}
+//}
 
 //for (var t in human_world_solitary_region.objects) {
 //	human_world_solitary_region.objects[t].blank();
 //}
 
 // portal
-illusion_world_dream_domain.objects[3].set(illusion_world_worship_domain.objects[6]);
+//illusion_world_dream_domain.objects[3].set(illusion_world_worship_domain.objects[6]);
 
 // totem swap
-monster_world_screeching_area.objects[3].set(monster_world_false_eye_area.objects[10]);
+//monster_world_screeching_area.objects[3].set(monster_world_false_eye_area.objects[10]);
 
 //monster_world_screeching_area.objects[3].bin[monster_world_screeching_area.objects[3].offset_in_file+22]=3;
 // //monster_world_screeching_area.objects[2].bin[
 //	monster_world_screeching_area.objects[2].offset_in_file+16] = 0; // destination map index
-
 
 // swap door
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+16] = 0; // destination tile x shift
@@ -550,6 +578,7 @@ monster_world_screeching_area.objects[3].set(monster_world_false_eye_area.object
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+22] = 0; // angle 1=90
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+23] = 0xfd; // destination y fine position
 
+//shadow_tower_part1.objects[0].set(shadow_tower_part2.objects[7]);
 //human_world_solitary_region.objects[38].set(human_world_cursed_region.objects[31]);
 //human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+16] = 0xfc; // destination tile x shift
 //human_world_solitary_region.objects[38].bin[human_world_solitary_region.objects[38].offset_in_file+17] = 6; // destination tile y shift
@@ -571,10 +600,26 @@ monster_world_screeching_area.objects[3].set(monster_world_false_eye_area.object
 //shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
 //shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);
 
+/*
 for (var a in areas) {
 	var area = areas[a];
-	area.reinjectEntityDataFromCreaturesToFile();
+	var THING_START_OFFSET = area.map_file.sizedMixStarts[2] - 0x10;
+	for (var i = 0; i<300; i++) {
+	  var offset_in_file = 16 + THING_START_OFFSET + 0x18 * i;
+	  area.map_file.bin[offset_in_file + 0x00] = 0xff;
+	  area.map_file.bin[offset_in_file + 0x01] = 0x00;
+	  area.map_file.bin[offset_in_file + 0x02] = 0xff;
+	  for (var j = 0x03; i<0x18; i++) {
+	  	area.map_file.bin[offset_in_file + j] = 0xff;
+	  }
+	}
 }
+*/
+
+/*for (var a in areas) {
+	var area = areas[a];
+	area.reinjectEntityDataFromCreaturesToFile();
+}*/
 
 for (var i in tfileOriginal.files) {
 	var originalPart = tfileOriginal.files[i];
