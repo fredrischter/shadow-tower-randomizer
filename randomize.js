@@ -281,7 +281,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 	// Blank all creature spawns
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
-	//spawn.blank();
+	spawn.blank();
 /*
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
@@ -547,7 +547,7 @@ human_world_solitary_region["01_acid_slime"].entityStates[5].bin[20]=20;
 */
 
 for (var i =0; i<300; i++) {
-//	swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+	swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
 }
 
 //for (var a in areas) {
@@ -600,8 +600,7 @@ for (var i =0; i<300; i++) {
 //shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
 //shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);
 
-/*
-for (var a in areas) {
+/*for (var a in areas) {
 	var area = areas[a];
 	var THING_START_OFFSET = area.map_file.sizedMixStarts[2] - 0x10;
 	for (var i = 0; i<300; i++) {
@@ -613,13 +612,12 @@ for (var a in areas) {
 	  	area.map_file.bin[offset_in_file + j] = 0xff;
 	  }
 	}
-}
-*/
+}*/
 
-/*for (var a in areas) {
+for (var a in areas) {
 	var area = areas[a];
 	area.reinjectEntityDataFromCreaturesToFile();
-}*/
+}
 
 for (var i in tfileOriginal.files) {
 	var originalPart = tfileOriginal.files[i];
