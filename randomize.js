@@ -52,6 +52,9 @@ for (var i in modelFileNames) {
 	}
 }
 
+//this is scenario object files
+//let moFile = new TFILEReader(stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "MO.T").readTFormat();
+
 /*
 let tFileModelFiles = {
 	"00_dark_spider": {
@@ -281,7 +284,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 	// Blank all creature spawns
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
-	//spawn.blank();
+	spawn.blank();
 /*
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
@@ -517,8 +520,26 @@ let changeSet = [];
 //var part44 = new TFILEReader(file44Path).readTFormatPart();
 //part44.verifyCheckSum();
 
+//swapCreatures(human_world_solitary_region["01_acid_slime"],
+//	earth_world_rotting_cavern["00_watcher_plant"], changeSet);
 swapCreatures(human_world_solitary_region["01_acid_slime"],
-	human_world_solitary_region["00_dark_spider"], changeSet);
+	human_world_solitary_region["09_demon_bat"], changeSet);
+human_world_solitary_region.spawns[2].blank();
+
+//this is scenario object files
+//function swapMOFileParts(c1Index, c2Index) {
+//	for (var i=0; i<6; i++) {
+//		changeSet.push({
+//			"fileSwap": {
+//				"file1": moFile.files[c1Index*6+i].fileName, "file2": moFile.files[c2Index*6+i].fileName
+//			}
+//		});
+//	}
+//}
+//for (var i=2;i<4;i++) {
+//	swapMOFileParts(i, i+10);
+//}
+
 
 //swapCreatures(human_world_solitary_region["01_acid_slime"],
 //	earth_world_rotting_cavern["00_watcher_plant"], changeSet);
@@ -547,7 +568,7 @@ human_world_solitary_region["01_acid_slime"].entityStates[5].bin[20]=20;
 */
 
 for (var i =0; i<300; i++) {
-//	swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+	//swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
 }
 
 //for (var a in areas) {
@@ -589,9 +610,9 @@ for (var i =0; i<300; i++) {
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+22] = 1;
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+23] = 0xf8;
 
-//monster_world_screeching_area.objects[3].swap(human_world_forgotten_region.objects[20]);
-
+//monster_world_screeching_area.objects[3].swap(death_world_lingering_curse_layer.objects[2]);
 //human_world_solitary_region.objects[38].swap(earth_world_stone_cavern.objects[7]);
+
 //shadow_tower_part1.objects[0].swap(shadow_tower_part1.objects[11]);
 
 // swap door model
@@ -600,8 +621,7 @@ for (var i =0; i<300; i++) {
 //shadow_tower_part1.spawns[0x3a].y.swap(shadow_tower_part1.spawns[0x39].y);
 //shadow_tower_part1.spawns[0x3a].z.swap(shadow_tower_part1.spawns[0x39].z);
 
-/*
-for (var a in areas) {
+/*for (var a in areas) {
 	var area = areas[a];
 	var THING_START_OFFSET = area.map_file.sizedMixStarts[2] - 0x10;
 	for (var i = 0; i<300; i++) {
@@ -613,13 +633,12 @@ for (var a in areas) {
 	  	area.map_file.bin[offset_in_file + j] = 0xff;
 	  }
 	}
-}
-*/
+}*/
 
-/*for (var a in areas) {
+for (var a in areas) {
 	var area = areas[a];
 	area.reinjectEntityDataFromCreaturesToFile();
-}*/
+}
 
 for (var i in tfileOriginal.files) {
 	var originalPart = tfileOriginal.files[i];
