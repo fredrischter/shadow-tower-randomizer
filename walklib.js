@@ -22,7 +22,6 @@ function walk(areas) {
 		});
 	});
 
-
 	var startArea = "shadow_tower_part1a";
 	var currentArea = startArea;
 	var enteredFromId;
@@ -335,7 +334,7 @@ function walk(areas) {
 
 	var output = "{\n\"walk\":" + JSON.stringify(walkPath) + ",\n" +
 	  "\"map\":" + JSON.stringify(areas) + ",\n" +
-	  "\"knownPaths\":" + JSON.stringify(knownPaths) + ",\n" +
+//	  "\"knownPaths\":" + JSON.stringify(knownPaths) + ",\n" +
 	  "\"isComplete\":" + isComplete + ",\n" +
 	  "\"pathDifficulty\":" + steps + ",\n" +
       "\"notWalkedAreas\":" + JSON.stringify(notWalkedAreas) + "\n" +

@@ -35,7 +35,8 @@ function switchableWay(way) {
 	return true;
 }
 
-function assignWay(to, from) {
+function assignWay(to, from, area) {
+  console.log("  area "+area.name+" changing way, from " + JSON.stringify(to) + " to " + JSON.stringify(from));
   to.id = from.id;
   to.dest = from.dest;
   to.world = from.world;
@@ -50,9 +51,9 @@ function rotateDoors(map) {
   }
   var firstWayCopy = JSON.parse(JSON.stringify(switchableDoors[0]));
   for (var i=1; i<switchableDoors.length; i++) {
-  	assignWay(switchableDoors[i-1], switchableDoors[i]);
+  	assignWay(switchableDoors[i-1], switchableDoors[i], randomArea);
   }
-  assignWay(switchableDoors[switchableDoors.length-1], firstWayCopy);
+  assignWay(switchableDoors[switchableDoors.length-1], firstWayCopy, randomArea);
   //choose map with 2 ends or more
   //shuffle all doors, replace the door and its pair
   //consider consistentDoors, swapOnlyDirections (highest respect for gamedesign, only swap bidirectional doors in same area so it has no walk difference)
@@ -60,13 +61,27 @@ function rotateDoors(map) {
 
 function randomPickSwap(map) {
   var randomArea1 = map[Math.floor(Math.random()*map.length)];
-  var randomArea2 = map[Math.floor(Math.random()*map.length)];
-  var randomArea3 = map[Math.floor(Math.random()*map.length)];
+  var switchableDoors1 = randomArea1.exits.filter(way => switchableWay(way));
+  if (switchableDoors1.length<2) {
+  	return;
+  }
 
-  var firstWayCopy = JSON.parse(JSON.stringify(randomArea1));
-  assignWay(randomArea1, randomArea2);
-  assignWay(randomArea2, randomArea3);
-  assignWay(randomArea3, firstWayCopy);
+  var randomArea2 = map[Math.floor(Math.random()*map.length)];
+  var switchableDoors2 = randomArea2.exits.filter(way => switchableWay(way));
+  if (switchableDoors2.length<2) {
+  	return;
+  }
+
+  var randomArea3 = map[Math.floor(Math.random()*map.length)];
+  var switchableDoors3 = randomArea3.exits.filter(way => switchableWay(way));
+  if (switchableDoors3.length<2) {
+  	return;
+  }
+
+  var firstWayCopy = JSON.parse(JSON.stringify(switchableDoors1));
+  assignWay(switchableDoors1, switchableDoors2, randomArea1);
+  assignWay(switchableDoors2, switchableDoors3, randomArea2);
+  assignWay(switchableDoors3, firstWayCopy, randomArea3);
 
   //choose 3 random maps, one door of each
   //rotate these three
@@ -92,7 +107,7 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 }
 
 const LIMIT_ATTEMPTS = 10;
-const LIMIT_SWAP_ROUNDS = 20;
+const LIMIT_SWAP_ROUNDS = 300;
 
 var result;
 
@@ -100,17 +115,17 @@ do {
 	var attempts = 0;
 	do {
 		
-		//console.log("Attempt started");
-		//console.log(" Randomizing");
+		console.log("Attempt started");
+		console.log(" Randomizing");
 
 		// each random round, do both rotateDoors(map); map);
 		var generated=JSON.parse(JSON.stringify(lastValidMap.map));
-		for (var i=0;i<10;i++) {
-			rotateDoors(generated);
+		rotateDoors(generated);
+		for (var i=0;i<20;i++) {
 			randomPickSwap(generated);			
 		}
 
-		//console.log(" Walking");
+		console.log(" Walking");
 
 		var stringWalkResult=walklib.walk(generated);
 		var walkResult=JSON.parse(stringWalkResult);
@@ -130,10 +145,14 @@ do {
 	if (walkResult.isComplete) {
 		if (swapRounds<50) {
 			// First 50 swaps are free, always taking new map if it is just valid;
+			console.log("taking new generated map, but still doing 50 first swaps, did "+swapRounds);
 			lastValidMap = walkResult;
 		} else {
+			console.log("trying to get a reasonable map, with difficulty around "+difficulty+". lastValidMap difficulty "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
+
 			// Next rounds get new map only if it is better for difficulty, to narrow it towards better map
 			lastValidMap = chooseBetterForDifficulty(walkResult, lastValidMap, difficulty);
+			console.log(" taken lastValidMap as one with difficulty "+lastValidMap.pathDifficulty);
 		}
 
 		// After 100 rounds, try to get as soon as get one suitable for the difficulty
@@ -141,6 +160,7 @@ do {
 			result = walkResult;
 		}
 	}
+	console.log("didn't take the map since it was not completable.");
 
 	var gaveUp=!result && (++swapRounds>=LIMIT_SWAP_ROUNDS || attempts>=LIMIT_ATTEMPTS);
 
@@ -149,7 +169,8 @@ do {
 console.log("\"gaveUp\":"+gaveUp+",");
 console.log("\"swapRounds\":"+swapRounds+",");
 
-console.log(JSON.stringify(walkResult));
+console.log("walkResult");
+console.log(JSON.stringify(walkResult, null, 2));
 
 //Generates incrementally shuffled maps while resolvable till it gets expected difficulty and having more than 50 switches, try 10 times each step or done more than 200 switches (returns gaveUp:true).
 
