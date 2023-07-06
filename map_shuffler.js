@@ -114,7 +114,7 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 }
 
 const LIMIT_ATTEMPTS = 10;
-const LIMIT_SWAP_ROUNDS = 300;
+const LIMIT_SWAP_ROUNDS = 100;
 
 var result;
 
@@ -122,8 +122,8 @@ do {
 	var attempts = 0;
 	do {
 		
-		console.log("Attempt started");
-		console.log(" Randomizing");
+		//console.log("Attempt started");
+		//console.log(" Randomizing");
 
 		// each random round, do both rotateDoors(map); map);
 		var generated=JSON.parse(JSON.stringify(lastValidMap.map));
@@ -132,7 +132,7 @@ do {
 			randomPickSwap(generated);			
 		}
 
-		console.log(" Walking");
+		//console.log(" Walking");
 
 		var stringWalkResult=walklib.walk(generated, true);
 		var walkResult=JSON.parse(stringWalkResult);
@@ -144,45 +144,45 @@ do {
 			"pathDifficulty":123
 		}*/
 
-		console.log(" complete:" + walkResult.isComplete);
+		//console.log(" complete:" + walkResult.isComplete);
 //		if (walkResult.isComplete && walkResult.pathDifficulty < 50 || walkResult.pathDifficulty > 200) {
 //			console.log(" map:" + JSON.stringify(walkResult.map));
 //		}
-		console.log(" difficulty:" + walkResult.pathDifficulty);
+		//console.log(" difficulty:" + walkResult.pathDifficulty);
 
 	} while(!walkResult.isComplete && ++attempts<LIMIT_ATTEMPTS);
 
 	if (walkResult.isComplete) {
 		if (swapRounds<20) {
 			// First 50 swaps are free, always taking new map if it is just valid;
-			console.log("taking new generated map, difficukty "+walkResult.pathDifficulty+" but still doing more swaps, already did "+swapRounds);
+			//console.log("taking new generated map, difficukty "+walkResult.pathDifficulty+" but still doing more swaps, already did "+swapRounds);
 			lastValidMap = walkResult;
 		} else {
-			console.log("trying to get a reasonable map, with difficulty around "+difficulty+". lastValidMap difficulty "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
+			//console.log("trying to get a reasonable map, with difficulty around "+difficulty+". lastValidMap difficulty "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
 
 			// Next rounds get new map only if it is better for difficulty, to narrow it towards better map
 			lastValidMap = chooseBetterForDifficulty(walkResult, lastValidMap, difficulty);
-			console.log(" taken lastValidMap as one with difficulty "+lastValidMap.pathDifficulty);
+			//console.log(" taken lastValidMap as one with difficulty "+lastValidMap.pathDifficulty);
 
 			// After 50 rounds, try to get as soon as get one suitable for the difficulty
 			if (goodForDificulty(walkResult, difficulty)) {
 				result = walkResult;
-				console.log(" resolved as map with difficulty "+walkResult.pathDifficulty);
+				//console.log(" resolved as map with difficulty "+walkResult.pathDifficulty);
 			}
 		}
 
 	} else {
-		console.log("didn't take the map since it was not completable.");
+		//console.log("didn't take the map since it was not completable.");
 	}
 
 	var gaveUp=!result && (++swapRounds>=LIMIT_SWAP_ROUNDS || attempts>=LIMIT_ATTEMPTS);
 
 } while(!gaveUp && !result);
 
-console.log("\"gaveUp\":"+gaveUp+",");
-console.log("\"swapRounds\":"+swapRounds+",");
+//console.log("\"gaveUp\":"+gaveUp+",");
+//console.log("\"swapRounds\":"+swapRounds+",");
 
-console.log("walkResult");
+//console.log("walkResult");
 console.log(JSON.stringify(walkResult, null, 2));
 
 //Generates incrementally shuffled maps while resolvable till it gets expected difficulty and having more than 50 switches, try 10 times each step or done more than 200 switches (returns gaveUp:true).
