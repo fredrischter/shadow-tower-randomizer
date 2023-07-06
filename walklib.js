@@ -1,6 +1,6 @@
 'use strict';
 
-function walk(areas) {
+function walk(areas, skipWayBackVerification, skipLogs) {
 	var areasMap = {};
 
 	areas.forEach(area => {
@@ -10,24 +10,26 @@ function walk(areas) {
 		});
 	});
 
-	areas.forEach(area => {
-		area.exits.forEach(exit => {
-			if (exit.wayBackId) {
-				if (!areasMap[exit.dest][exit.wayBackId] || areasMap[exit.dest][exit.wayBackId].dest != area.name) {
-					console.error("ERROR - inconsistent wayBackId "+exit.wayBackId+" of expected area "+exit.dest+" doesnt match "+area.name+" exit "+exit.id+": ");
-					console.error("ERROR detail - "+areasMap[exit.dest][exit.wayBackId].dest +"!="+ area.name);
-					process.exit(1);
+	if (!skipWayBackVerification) {
+		areas.forEach(area => {
+			area.exits.forEach(exit => {
+				if (exit.wayBackId) {
+					if (!areasMap[exit.dest][exit.wayBackId] || areasMap[exit.dest][exit.wayBackId].dest != area.name) {
+						console.error("ERROR - inconsistent wayBackId "+exit.wayBackId+" of expected area "+exit.dest+" doesnt match "+area.name+" exit "+exit.id+": ");
+						console.error("ERROR detail - "+areasMap[exit.dest][exit.wayBackId].dest +"!="+ area.name);
+						process.exit(1);
+					}
 				}
-			}
-		});
-	});
+			});
+		});		
+	}
 
 	var startArea = "shadow_tower_part1a";
 	var currentArea = startArea;
 	var enteredFromId;
 
-	console.error("map " + JSON.stringify(areas));
-	console.error("starting from " + currentArea);
+	if (!skipLogs) console.error("map " + JSON.stringify(areas));
+	if (!skipLogs) console.error("starting from " + currentArea);
 
 	var walkPath = [];
 	var knownPaths = {};//["origin"-"destination": [{"dest":"hidden", "id":"2"}]]
@@ -38,7 +40,7 @@ function walk(areas) {
 	function getKnownUndiscoveredWaysByName(name) {
 		for (var i in mapsWithKnownUndiscoveredWays) {
 			if (mapsWithKnownUndiscoveredWays[i].name == name) {
-				console.error("  from " + name + " - unknown ways to go: " +JSON.stringify(mapsWithKnownUndiscoveredWays[i]));
+				if (!skipLogs) console.error("  from " + name + " - unknown ways to go: " +JSON.stringify(mapsWithKnownUndiscoveredWays[i]));
 				return mapsWithKnownUndiscoveredWays[i];
 			}
 		}
@@ -66,12 +68,12 @@ function walk(areas) {
 		});
 
 		//area.exits = area.exits.filter(exit => exit.id != exceptId); // Not removing same id as id of the door in next area isn't same as in previous area
-		console.error("  newly known area with exits "+JSON.stringify(area)+ " adding to " +JSON.stringify(mapsWithKnownUndiscoveredWays));
+		if (!skipLogs) console.error("  newly known area with exits "+JSON.stringify(area)+ " adding to " +JSON.stringify(mapsWithKnownUndiscoveredWays));
 		mapsWithKnownUndiscoveredWays.push(area);
 	}
 
 	function recombileKnownPathsFor(from, to) {
-		console.error("trying to combine from "+from+" to "+to);
+		if (!skipLogs) console.error("trying to combine from "+from+" to "+to);
 		var beginnings=[];
 		var ends=[];
 		for (var key in knownPaths) {
@@ -83,8 +85,8 @@ function walk(areas) {
 			}
 		}
 
-		console.error(" beginnings "+JSON.stringify(beginnings));
-		console.error(" ends "+JSON.stringify(ends));
+		if (!skipLogs) console.error(" beginnings "+JSON.stringify(beginnings));
+		if (!skipLogs) console.error(" ends "+JSON.stringify(ends));
 		for (var b in beginnings) {
 			var middle=beginnings[b];
 			for (var i in knownPaths) {
@@ -92,17 +94,17 @@ function walk(areas) {
 				if (dest != to) {
 					continue;
 				}
-				console.error("   trying to tie "+from+" - " +middle+ " - "+dest);
+				if (!skipLogs) console.error("   trying to tie "+from+" - " +middle+ " - "+dest);
 				if (i.startsWith(middle + "-")) {
-					console.error("     got "+i);
+					if (!skipLogs) console.error("     got "+i);
 					var key = from + "-" + dest;
 					if (!knownPaths[key]) {
-						console.error("   combining paths for "+key+":");
-						console.error("    start "+JSON.stringify(knownPaths[from+"-"+middle]));
-						console.error("    end "+JSON.stringify(knownPaths[middle+"-"+dest]));
+						if (!skipLogs) console.error("   combining paths for "+key+":");
+						if (!skipLogs) console.error("    start "+JSON.stringify(knownPaths[from+"-"+middle]));
+						if (!skipLogs) console.error("    end "+JSON.stringify(knownPaths[middle+"-"+dest]));
 
 						var combined = knownPaths[from+"-"+middle].concat(knownPaths[middle+"-"+dest]);
-						console.error("    result "+JSON.stringify(combined));
+						if (!skipLogs) console.error("    result "+JSON.stringify(combined));
 						knownPaths[key] = combined;
 					}
 				}
@@ -112,7 +114,7 @@ function walk(areas) {
 
 	function getShorterPathToKnownUndiscoveredWays(from) {
 		var found;
-		console.error("    finding shorter known path to area with undiscovered ways from " + from);
+		if (!skipLogs) console.error("    finding shorter known path to area with undiscovered ways from " + from);
 		for (var i in mapsWithKnownUndiscoveredWays) {
 			if (mapsWithKnownUndiscoveredWays[i].exits.length==0) {
 				continue;
@@ -120,7 +122,7 @@ function walk(areas) {
 			var key=from+"-"+mapsWithKnownUndiscoveredWays[i].name;
 			var path = knownPaths[key];
 
-			console.error("      checking "+key+ ", got path? " + (!!path));
+			if (!skipLogs) console.error("      checking "+key+ ", got path? " + (!!path));
 			if (!path) {
 				recombileKnownPathsFor(from, mapsWithKnownUndiscoveredWays[i].name);
 			}
@@ -128,16 +130,16 @@ function walk(areas) {
 
 			if (path) {
 				if (!found || found.length>path.length) {
-					console.error("    setting path "+key+ " from "+ JSON.stringify(found) +" to " + JSON.stringify(path));
+					if (!skipLogs) console.error("    setting path "+key+ " from "+ JSON.stringify(found) +" to " + JSON.stringify(path));
 					found = path;
 				}
 			}
 		}
 
 		if (path) {
-			console.error("    nearest path to area with known undiscovered ways from " + from + " " +JSON.stringify(path));
+			if (!skipLogs) console.error("    nearest path to area with known undiscovered ways from " + from + " " +JSON.stringify(path));
 		} else {
-			console.error("    don't know any area with known undiscovered ways - don't have anywhere to go anymore.");
+			if (!skipLogs) console.error("    don't know any area with known undiscovered ways - don't have anywhere to go anymore.");
 		}
 		
 		return path;
@@ -149,7 +151,7 @@ function walk(areas) {
 
 		//1.add direct know Path with only one step from-to for current movement
 		var key=previousArea+"-"+way.dest;
-		console.error("addKnownPath direct " + key + " " + JSON.stringify([way]));
+		if (!skipLogs) console.error("addKnownPath direct " + key + " " + JSON.stringify([way]));
 		if (!knownPaths[key] || knownPaths[key].length>1) {
 			addedNew = true;
 		}
@@ -190,8 +192,8 @@ function walk(areas) {
 			var path = proposals[i].path;
 			if (!knownPaths[key] || knownPaths[key].length > path.length) {
 				if (knownPaths[key]) {
-					console.error("addKnownPath by better proposal " + key + " " + JSON.stringify(path));
-					console.error(" known one was " + JSON.stringify(knownPaths[key]));				
+					if (!skipLogs) console.error("addKnownPath by better proposal " + key + " " + JSON.stringify(path));
+					if (!skipLogs) console.error(" known one was " + JSON.stringify(knownPaths[key]));				
 				}
 				knownPaths[key] = path;
 				addedNew = true;
@@ -199,9 +201,9 @@ function walk(areas) {
 		}
 
 		if (addedNew) {
-			console.error("  should try to add more known paths, since it was just added a new one.");
+			if (!skipLogs) console.error("  should try to add more known paths, since it was just added a new one.");
 		} else {
-			console.error("  should stop trying to add more known paths, since nothing was found now.");
+			if (!skipLogs) console.error("  should stop trying to add more known paths, since nothing was found now.");
 		}
 		return addedNew;
 	}
@@ -211,7 +213,7 @@ function walk(areas) {
 
 	while(steps ++ < 500) {
 
-		console.error("Location " + currentArea);
+		if (!skipLogs) console.error("Location " + currentArea);
 
 		//1-If map where you are isn't here mapsWithKnownUndiscoveredWays, add it with all it's ways.
 		//If (map where you are is desiredDestination) desiredDestination=null;
@@ -241,7 +243,7 @@ function walk(areas) {
 		if (chooseDestination && currentArea) {
 			var path = getShorterPathToKnownUndiscoveredWays(currentArea);
 			if (path) {
-				console.error("Got to go by " + JSON.stringify(path));
+				if (!skipLogs) console.error("Got to go by " + JSON.stringify(path));
 				choosenWay = path[0];
 				desiredDestination = choosenWay.dest;
 			} else {
@@ -251,7 +253,7 @@ function walk(areas) {
 		}
 
 		//5-console.log the move
-		console.error(" moving to " + choosenWay.dest + " by " + choosenWay.id);
+		if (!skipLogs) console.error(" moving to " + choosenWay.dest + " by " + choosenWay.id);
 		walkPath.push(choosenWay);
 
 		//4-Remove the way you've chosen mapsWithKnownUndiscoveredWays from here in the map where you are. If the map gets empty, remove it from mapsWithKnownUndiscoveredWays
@@ -260,7 +262,7 @@ function walk(areas) {
 			knownUndiscoveredWays.exits = knownUndiscoveredWays.exits.filter(function isDestination(thisExit) {
 				return thisExit.dest != choosenWay.dest && thisExit.id != choosenWay.id;
 			});
-			console.error("   removing " +JSON.stringify(choosenWay) +" -> " + JSON.stringify(knownUndiscoveredWays));
+			if (!skipLogs) console.error("   removing " +JSON.stringify(choosenWay) +" -> " + JSON.stringify(knownUndiscoveredWays));
 			getKnownUndiscoveredWaysByName(currentArea)
 		}
 
@@ -286,19 +288,19 @@ function walk(areas) {
 		//- the way if exit-bi becomes bi
 		//- the new place way back is entrance-bi becomes bi
 		if (choosenWay.direction && choosenWay.direction=="exit-bi") {
-			console.error("exit turned into bidirectional: "+previousArea+" -> "+JSON.stringify(choosenWay));
+			if (!skipLogs) console.error("exit turned into bidirectional: "+previousArea+" -> "+JSON.stringify(choosenWay));
 			choosenWay.direction="bi";
 		}
 		var wayBack = areasMap[currentArea][choosenWay.wayBackId];
 		if (choosenWay.wayBackId && wayBack && wayBack.direction && wayBack.direction=="entrance-bi") {
-			console.error("enrtance turned into bidirectional: "+currentArea+" -> "+JSON.stringify(wayBack));
+			if (!skipLogs) console.error("enrtance turned into bidirectional: "+currentArea+" -> "+JSON.stringify(wayBack));
 			wayBack.direction="bi";
 		}
 
 	}
 
-	console.error("  mapsWithKnownUndiscoveredWays " + JSON.stringify(mapsWithKnownUndiscoveredWays));
-	console.error("  knownPaths " + JSON.stringify(knownPaths));
+	if (!skipLogs) console.error("  mapsWithKnownUndiscoveredWays " + JSON.stringify(mapsWithKnownUndiscoveredWays));
+	if (!skipLogs) console.error("  knownPaths " + JSON.stringify(knownPaths));
 
 	for (var i in areas) {
 		let area = areas[i];
@@ -315,7 +317,7 @@ function walk(areas) {
 
 	var walkedAreas = walkPath.map(way => way.dest);
 	var notWalkedAreas = areas.filter(area => area.name!=startArea && !walkedAreas.includes(area.name)).map(area => area.name);
-	console.error("  notWalkedAreas "+JSON.stringify(notWalkedAreas));
+	if (!skipLogs) console.error("  notWalkedAreas "+JSON.stringify(notWalkedAreas));
 	var isComplete = notWalkedAreas.length == 0;
 
 	/*
