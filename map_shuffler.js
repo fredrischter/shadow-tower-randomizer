@@ -8,13 +8,13 @@ var areasMap = {};
 // Map areas include world and type(bi, exit or entrance)
 // Input difficulty, consistentDoors, swapOnlyDirections (highest respect for gamedesign, only swap bidirectional doors in same area so it has no walk difference)
 var difficulty=115;
+var consistentDoors=true;
 
 var areas = JSON.parse(JSON.stringify(originalMap));
 areas.forEach(area => {
 	areasMap[area.name] = area;
 	area.exits.forEach(exit => {
 		areasMap[area.name][exit.id] = exit;
-		exit.origin = area.name;
 	});
 });
 
@@ -36,11 +36,40 @@ function switchableWay(way) {
 	return true;
 }
 
-function assignWay(to, from, area) {
-  //console.log("  area "+area+" changing way, from " + JSON.stringify(to) + " to " + JSON.stringify(from));
+function assignWay(to, from, area, map) {
+  console.log(" area "+area.name+" changing way, from " + JSON.stringify(to) + " to " + JSON.stringify(from));
+  //console.log("  map pre change "+JSON.stringify(map));
+
+  if (consistentDoors) {
+    if (from.wayBackId) {
+    	var wayBackArea = map.find(area => area.name == from.dest);
+    }
+    //console.log("   wayback area found? "+JSON.stringify(wayBackArea));
+    if (wayBackArea) {
+    	var wayBackWay = wayBackArea.exits.find(exit => exit.id == from.wayBackId);
+
+    	if (!wayBackWay) {
+    		console.log("ERROR = wayBackArea didn't have wayBackWay with id " + from.wayBackId + " " + JSON.stringify(wayBackArea));
+    		process.exit(1);
+    	}
+
+		console.log("  wayback changing"+
+    	" dest set from " + wayBackWay.dest + " to " + area.name +
+    	" world set from " + wayBackWay.world + " to " + area.world +
+    	" wayBackId set from " + wayBackWay.wayBackId + " to " + to.id);
+
+    	wayBackWay.dest = area.name;
+    	wayBackWay.world = area.world;
+    	wayBackWay.wayBackId = to.id;
+    }
+  }
+
   to.dest = from.dest;
   to.world = from.world;
   to.wayBackId = from.wayBackId;
+
+  //console.log("  map post change "+JSON.stringify(map));
+
 }
 
 function rotateDoors(map) {
@@ -51,18 +80,19 @@ function rotateDoors(map) {
   }
   var firstWayCopy = JSON.parse(JSON.stringify(switchableDoors[0]));
   for (var i=1; i<switchableDoors.length; i++) {
-  	assignWay(switchableDoors[i-1], switchableDoors[i],randomArea.name);
+  	assignWay(switchableDoors[i-1], switchableDoors[i], randomArea, map);
   }
-  assignWay(switchableDoors[switchableDoors.length-1], firstWayCopy, randomArea.name);
+  assignWay(switchableDoors[switchableDoors.length-1], firstWayCopy, randomArea, map);
+
   //choose map with 2 ends or more
   //shuffle all doors, replace the door and its pair
   //consider consistentDoors, swapOnlyDirections (highest respect for gamedesign, only swap bidirectional doors in same area so it has no walk difference)
 }
 
 function randomPickSwap(map) {
-  var allDoors = map.map(area => area.exits.filter(way => way.type == "door")).flat(1);
-  var allTotems = map.map(area => area.exits.filter(way => way.type == "totem")).flat(1);
-  var allPortals = map.map(area => area.exits.filter(way => way.type == "portal")).flat(1);
+  var allDoors = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}}).filter(way => way.exit.type == "door")).flat(1);
+  var allTotems = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}}).filter(way => way.exit.type == "totem")).flat(1);
+  var allPortals = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}}).filter(way => way.exit.type == "portal")).flat(1);
 
   allWays = Math.random()>0.90 ? allPortals : (Math.random()>0.85 ? allTotems : (allDoors));
 
@@ -77,14 +107,14 @@ function randomPickSwap(map) {
   }
 
   var firstWayCopy = JSON.parse(JSON.stringify(way1));
-  if (way1.dest == way1.origin || way2.dest == way2.origin) {
-  	//console.log(" skipping to swap because direction conflicts "+JSON.stringify(way1)+" - "+JSON.stringify(way2));
+  if (way1.exit.dest == way2.area.name || way2.exit.dest == way1.area.name) {
+  	console.log(" skipping to swap because direction conflicts "+JSON.stringify(way1)+" - "+JSON.stringify(way2));
   	return;
   }
-//console.log("antes  "+JSON.stringify(map));
-  assignWay(way1, way2, way1.origin);
-  assignWay(way2, firstWayCopy, way2.origin);
-//console.log("depois "+JSON.stringify(map));
+//console.log("before  "+JSON.stringify(map));
+  assignWay(way1.exit, way2.exit, way1.area, map);
+  assignWay(way2.exit, firstWayCopy.exit, way2.area, map);
+//console.log("after "+JSON.stringify(map));
 
 //  assignWay(switchableDoors1, switchableDoors2);
 //  assignWay(switchableDoors2, switchableDoors3);
@@ -114,7 +144,7 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 }
 
 const LIMIT_ATTEMPTS = 10;
-const LIMIT_SWAP_ROUNDS = 100;
+const LIMIT_SWAP_ROUNDS = 50;
 
 var result;
 
@@ -132,9 +162,9 @@ do {
 			randomPickSwap(generated);			
 		}
 
-		//console.log(" Walking");
+		console.log(" Walking");
 
-		var stringWalkResult=walklib.walk(generated, true);
+		var stringWalkResult=walklib.walk(generated, !consistentDoors, true);
 		var walkResult=JSON.parse(stringWalkResult);
 		/*output {
 			"map": areas,
@@ -153,12 +183,12 @@ do {
 	} while(!walkResult.isComplete && ++attempts<LIMIT_ATTEMPTS);
 
 	if (walkResult.isComplete) {
-		if (swapRounds<20) {
+		if (swapRounds<10) {
 			// First 50 swaps are free, always taking new map if it is just valid;
-			//console.log("taking new generated map, difficukty "+walkResult.pathDifficulty+" but still doing more swaps, already did "+swapRounds);
+			console.error("" + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");
 			lastValidMap = walkResult;
 		} else {
-			//console.log("trying to get a reasonable map, with difficulty around "+difficulty+". lastValidMap difficulty "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
+			console.error("" + swapRounds + " need to get a map, with difficulty around "+difficulty+". lastValidMap "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
 
 			// Next rounds get new map only if it is better for difficulty, to narrow it towards better map
 			lastValidMap = chooseBetterForDifficulty(walkResult, lastValidMap, difficulty);

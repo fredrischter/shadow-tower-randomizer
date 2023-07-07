@@ -95,7 +95,7 @@
     { "id":"1", "dest":"earth_world_hostile_rock_cavern", "world": "earth_world", "wayBackId": "1", "type":"door"},
     { "id":"11", "dest":"shadow_tower_part2a", "wayBackId": "0", "type":"door"},
     { "id":"19", "dest": "earth_world_hostile_rock_cavern", "world": "earth_world", "wayBackId": "3", "type":"totem", "direction":"entrance"},
-    { "id":"16", "dest": "human_world_forgotten_region", "world": "human_world", "type":"totem"}
+    { "id":"16", "dest": "human_world_forgotten_region", "world": "human_world", "wayBackId": "41", "type":"totem"}
   ]},
 
   { "name":"earth_world_hostile_rock_cavern", "world": "earth_world", "exits": [
