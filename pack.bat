@@ -23,4 +23,4 @@ REM call npm run assemble %dir%st\ST\CHR3\M35.T
 REM call npm run assemble %dir%st\ST\CHR3\M36.T
 REM call npm run assemble %dir%st\ST\CHR3\M39.T
 
-mkpsxiso.exe %dir%st.xml -q -y
+mkpsxiso.exe %dir%st.xml -y

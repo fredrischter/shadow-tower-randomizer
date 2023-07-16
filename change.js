@@ -20,6 +20,8 @@ function copyArea(origin, dest, size) {
 let changeset = JSON.parse(fs.readFileSync(changeFile));
 //console.log(changeset);
 
+var textureFiles={};
+
 for (var i in changeset) {
 	var change = changeset[i];
 
@@ -27,9 +29,15 @@ for (var i in changeset) {
 		fs.renameSync(change.fileSwap.file1, change.fileSwap.file1 + ".tmp");
 		fs.renameSync(change.fileSwap.file2, change.fileSwap.file1);
 		fs.renameSync(change.fileSwap.file1 + ".tmp", change.fileSwap.file2);
-	}
-
-	if (change.file) {
+	} else if (change.textToTexture) {
+		if (!textureFiles[change.textToTexture.file]) {
+			textureFiles[change.textToTexture.file] = new TFILEReader(change.textToTexture.file).readTFormat();
+		}
+		for (var i=0; i<50; i++) {
+			textureFiles[change.textToTexture.file].files[change.textToTexture.part].bin[0x5600+i]=Math.floor(Math.random()*256); //0xdd;
+		}
+		textureFiles[change.textToTexture.file].files[change.textToTexture.part].setCheckSum();
+	} else if (change.file) {
 		var part = new TFILEReader(change.file).readTFormatPart();
 		part.verifyCheckSum();
 
@@ -37,9 +45,13 @@ for (var i in changeset) {
 			part.bin[parseInt(index, 16)] = parseInt(change.bytes[index], 16);
 		}
 
-		part.setCheckSum()
+		part.setCheckSum();
 		part.verifyCheckSum();
 		part.write();
 	}
 }
 
+for (var i in textureFiles) {
+	textureFiles[i].injectParts();
+	textureFiles[i].write();
+}

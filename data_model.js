@@ -60,6 +60,13 @@ var logo_files = {
   471: null//"unknown_part4"
 }
 
+//if (index>=0x47) {
+//  index--;
+//}
+//texture position 0x0-0x45 = 4+index*3 // weapons
+//texture position 0x47-0x5a = 220+(index-0x47)*3// helmets
+//texture position 0x5b-0x =
+
 var itemDataString = `baa0  13972a0    item_0_short_sword                c 4e  0  0 30  9  7  0  0  0  0  0  0  0  0  0  0  0  0  0  b  0  6  c  a  0  0  0 ff  2  0  a  0  1  0  2  0  0 40  0  0  6  0  0
 bacc  13972cc    item_1_short_sword                d 50  0  0 2d  8  a  0  0  0  0  0  0  0  0  0  0  0  0  0  c  0  6  b  5  0  0  0 ff  2  0 29  1  2  0  2  0  0 40  0  0  6  0  0
 baf8  13972f8    item_2_deadly_short_sword         6 5f  0  0 42  8 16  f  0  0  0  0 12  0  0  0 13 55  c 1b  e  0  6  a  4  0  0  0 ff  2  0 1b  2  4  0  2  0  0 20  0  0  7  0  0
