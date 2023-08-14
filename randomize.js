@@ -329,8 +329,39 @@ function forEachValidCreature(creature, area, index) {
 //	}
 //}
 
-	//.set(human_world_solitary_region.spawns[0]);
-	//human_world_solitary_region.spawns[i].mutexGroup.set(i+20);
+//for (var i = 0; i<5; i++) {
+//	human_world_solitary_region.creatures[i].maxPresence.set(1);
+//}
+//for (var i = 5; i<10; i++) {
+//	human_world_solitary_region.creatures[i].maxPresence.set(1);
+//}
+
+human_world_solitary_region.spawns[5].set(human_world_solitary_region.spawns[2]);
+human_world_solitary_region.spawns[6].set(human_world_solitary_region.spawns[5]);
+human_world_solitary_region.spawns[7].set(human_world_solitary_region.spawns[5]);
+human_world_solitary_region.spawns[8].set(human_world_solitary_region.spawns[5]);
+human_world_solitary_region.spawns[9].set(human_world_solitary_region.spawns[5]);
+
+human_world_solitary_region.spawns[1].set(human_world_solitary_region.spawns[0]);
+human_world_solitary_region.spawns[2].set(human_world_solitary_region.spawns[0]);
+human_world_solitary_region.spawns[3].set(human_world_solitary_region.spawns[0]);
+human_world_solitary_region.spawns[4].set(human_world_solitary_region.spawns[0]);
+
+for (var i = 1; i<SPAWN_ENTRIES_COUNT; i++) {
+	human_world_solitary_region.spawns[i].chance.set(100);
+
+	// 0x0e - 6 at once         00001110
+	// 0x1c - 3 at once         00011100
+	// 0x1d - 3 at once         00011101
+	// 0x28 - 3 at once         00101000
+	// 0x7f - 1 at once         01111110
+	// 0x5a - 1 at once limit 3 01011010 (from king hopper, chainspawn)
+	human_world_solitary_region.spawns[i].mutexGroup.set(0x5a);
+
+	if (i>=10) {
+		human_world_solitary_region.spawns[i].blank();
+	}
+}
 
 // copy magical sword into short sword
 /*binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin, 
