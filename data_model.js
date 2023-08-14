@@ -1,7 +1,7 @@
 'use strict';
 
 const constants = require('./constants');
-const { createCanvas } = require("canvas");
+//const { createCanvas } = require("canvas");
 const fs = require('fs');
 
 // area files
@@ -730,7 +730,7 @@ class Area  {
 
     this.canvasWidth = (extendedUpperX + 6) * DRAW_TILE_SIZE;
     this.canvasHeight = (extendedUpperY + 6) * DRAW_TILE_SIZE;
-    const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
+    /*const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
     const drawContext = canvas.getContext("2d");
 
     drawContext.font = "bold 10pt 'Sans'";
@@ -757,7 +757,7 @@ class Area  {
     }
     const buffer = canvas.toBuffer("image/png");
     fs.writeFile("./maps/" + this.name + ".png", buffer, function() {});
-
+*/
   }
 
   toString() {

@@ -1,5 +1,8 @@
 'use strict';
 
+//node map_walker.js map.json > walk.json 2> walk_log.txt
+//node map_shuffler.js > shuffle.json 2> nul
+
 const fs = require('fs');
 const walklib = require('./walklib');
 

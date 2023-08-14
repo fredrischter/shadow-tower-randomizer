@@ -1,5 +1,10 @@
 # Setup and run
 
+## On windows
+
+Install Powershell (https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3)
+Install npm (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
+Install Chocolatey (https://community.chocolatey.org/)
 
 # Functionality
 
@@ -11,9 +16,5 @@ fredrischter at gmail dot com
 
 # Run manually
 
-//cd C:\Users\fred\Desktop\shadow-tower-randomizer
+npm run mod "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)"
 
-unpack>unpack.txt && npm run randomize .\params.json "F:\st">randomize.txt && npm run change changeset.json && pack>pack.txt
-
-node map_walker.js map.json > walk.json 2> walk_log.txt
-node map_shuffler.js > shuffle.json 2> nul

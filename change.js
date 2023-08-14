@@ -4,7 +4,8 @@ const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 const fs = require('fs');
 
-var changeFile = process.argv[2];
+function change(changeFile) {
+
 if (!changeFile || !changeFile.endsWith(".json")) {
   console.log("ERROR - didn't provide .json file part as argument.");
   process.exit(1);
@@ -51,7 +52,16 @@ for (var i in changeset) {
 	}
 }
 
-for (var i in textureFiles) {
+/*for (var i in textureFiles) {
 	textureFiles[i].injectParts();
 	textureFiles[i].write();
+}*/
+
+
+}
+
+if (process.argv[1].indexOf("change.js") > -1){
+    change(process.argv[2]);
+} else {
+    module.exports = change;
 }

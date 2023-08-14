@@ -13,8 +13,8 @@ if (!paramsFile || !paramsFile.endsWith(".json")) {
 }
 
 var stDir = process.argv[3];
-if (!stDir || !stDir.endsWith("st")) {
-  console.log("ERROR - didn't provide path to shadow tower extracted iso - name of this folder should be st.");
+if (!stDir) {
+  console.log("ERROR - didn't provide path to shadow tower extracted iso.");
   process.exit(1);
   return;
 }
