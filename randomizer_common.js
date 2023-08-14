@@ -113,8 +113,7 @@ class TFormatPart {
     }
 
     // write sized mix parts
-    /*
-    if (this.sizedMixParts) {
+    /*if (this.sizedMixParts) {
       var sizedPartsDir = this.fileName + "_SIZED_MIX_PARTS";
       fs.rmdirSync(sizedPartsDir, { recursive: true, force: true });
       fs.mkdirSync(sizedPartsDir);

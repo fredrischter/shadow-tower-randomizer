@@ -292,7 +292,8 @@ function forEachCreatureSpawn(spawn, area, index) {
 	// Blank all creature spawns
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
-//		spawn.blank();
+
+	//spawn.blank();
 /*
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
@@ -523,6 +524,18 @@ for (var a in areas) {
 }
 
 let changeSet = [];
+
+/*
+changeSet.push({"textToTexture":{"file":stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "EQUIP.T", "part": 5, "text":"ABC"}});
+changeSet.push({"textToTexture":{"file":stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "STAT.T", "part": 1, "text":"ABC"}});
+changeSet.push({"textToTexture":{"file":stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "STAT.T", "part": 2, "text":"ABC"}});
+changeSet.push({"textToTexture":{"file":stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "STAT.T", "part": 3, "text":"ABC"}});
+changeSet.push({"textToTexture":{"file":stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "STAT.T", "part": 4, "text":"ABC"}});
+changeSet.push({"textToTexture":{"file":stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "STAT.T", "part": 5, "text":"ABC"}});
+*/
+
+//[{"textToTexture":{"file":"F:\\st\\ST\\COM\\EQUIP.T_PARTS\\4 18800-1a800.T","text":"ABC"}}]
+
 //let changes44 = {};
 //let file44Path = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T_PARTS" + path.sep 
 //	+ "44 255800-25e800.T";
@@ -532,9 +545,9 @@ let changeSet = [];
 
 //swapCreatures(human_world_solitary_region["01_acid_slime"],
 //	earth_world_rotting_cavern["00_watcher_plant"], changeSet);
-swapCreatures(human_world_solitary_region["01_acid_slime"],
-	human_world_solitary_region["09_demon_bat"], changeSet);
-human_world_solitary_region.spawns[2].blank();
+//swapCreatures(human_world_solitary_region["01_acid_slime"],
+//	human_world_solitary_region["09_demon_bat"], changeSet);
+//human_world_solitary_region.spawns[2].blank();
 
 //this is scenario object files
 //function swapMOFileParts(c1Index, c2Index) {
@@ -589,6 +602,11 @@ for (var i =0; i<300; i++) {
 
 //for (var t in human_world_solitary_region.objects) {
 //	human_world_solitary_region.objects[t].blank();
+//}
+
+//for (var i=0;i<human_world_forgotten_region.objects.length;i++) {
+//	if (i==2) continue;
+//	human_world_forgotten_region.objects[i].set(human_world_forgotten_region.objects[8]);
 //}
 
 // portal
