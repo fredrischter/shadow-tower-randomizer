@@ -6,17 +6,20 @@
   "scripts": {
     "start": "node index.js",
     "checksum": "node checksum.js",
-    "disassemble": "node tfile_disassemble.js",
-    "assemble": "node tfile_assemble.js",
+    "unpack": "node unpack.js",
+    "pack": "node pack.js",
     "randomize": "node randomize.js",
-    "change": "node change.js"
+    "change": "node change.js",
+    "mod": "node mod.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.11.2",
+    "7zip-bin": "^5.2.0",
     "eol": "^0.9.1",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "node-7z": "^3.0.0",
+    "path": "^0.12.7",
+    "util": "^0.12.5"
   }
 }

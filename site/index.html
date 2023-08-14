@@ -1,83 +1,83 @@
-	<!doctype html>
-	<html lang="us">
-	<head>
-		<meta charset="utf-8">
-		<title>Shadow Tower Randomizer</title>
-		<link href="jquery-ui.css" rel="stylesheet">
-		<style>
-			body{
-				font-family: "Trebuchet MS", sans-serif;
-				margin: 50px;
-			}
-			.demoHeaders {
-				margin-top: 2em;
-			}
-			#dialog-link {
-				padding: .4em 1em .4em 20px;
-				text-decoration: none;
-				position: relative;
-			}
-			#dialog-link span.ui-icon {
-				margin: 0 5px 0 0;
-				position: absolute;
-				left: .2em;
-				top: 50%;
-				margin-top: -8px;
-			}
-			#icons {
-				margin: 0;
-				padding: 0;
-			}
-			#icons li {
-				margin: 2px;
-				position: relative;
-				padding: 4px 0;
-				cursor: pointer;
-				float: left;
-				list-style: none;
-			}
-			#icons span.ui-icon {
-				float: left;
-				margin: 0 4px;
-			}
-			.fakewindowcontain .ui-widget-overlay {
-				position: absolute;
-			}
-			.ui-widget {
-				padding: 0px 11px 0px 21px !important;
-				font-size: 0.7cm;
-			}
-			select {
-				width: 200px;
-			}
-		</style>
-	</head>
-	<body>
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Shadow Tower Randomizer</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<style>
+		body{
+			font-family: "Trebuchet MS", sans-serif;
+			margin: 50px;
+		}
+		.demoHeaders {
+			margin-top: 2em;
+		}
+		#dialog-link {
+			padding: .4em 1em .4em 20px;
+			text-decoration: none;
+			position: relative;
+		}
+		#dialog-link span.ui-icon {
+			margin: 0 5px 0 0;
+			position: absolute;
+			left: .2em;
+			top: 50%;
+			margin-top: -8px;
+		}
+		#icons {
+			margin: 0;
+			padding: 0;
+		}
+		#icons li {
+			margin: 2px;
+			position: relative;
+			padding: 4px 0;
+			cursor: pointer;
+			float: left;
+			list-style: none;
+		}
+		#icons span.ui-icon {
+			float: left;
+			margin: 0 4px;
+		}
+		.fakewindowcontain .ui-widget-overlay {
+			position: absolute;
+		}
+		.ui-widget {
+			padding: 0px 11px 0px 21px !important;
+			font-size: 0.7cm;
+		}
+		select {
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
 
-		<h1>Shadow Tower Randomizer</h1>
+	<h1>Shadow Tower Randomizer</h1>
 
-		<input type="file" id="file" style="display:none;" />
+	<input type="file" id="file" style="display:none;" />
 
-		<div>
-			<label style="margin-top: 1em;"><b>Input</b></label>
-			<button id="buttonUpload">Upload ISO</button>
-			<button id="buttonRandomize">Randomize</button>
-			<button id="buttonRecipe">Upload Recipe</button>
-			<button id="buttonChangeset">Upload Changeset</button>
-			<span>&nbspSeed&nbsp</span><input id="seedInput"/>&nbsp
-		</div>
-		<div>
-			<label style="margin-top: 1em;"><b>Process</b></label>
-			<button id="buttonApply">Apply to ISO</button>
-		</div>
-		<div>
-			<label style="margin-top: 1em;"><b>Output</b></label>
-			<button id="buttonDownloadIso">Download ISO</button>
-			<button id="buttonDownloadSpoilers">Download Spoilers</button>
-			<span>&nbspSeed&nbsp</span><input disabled id="seedInput"/>&nbsp
-			<span>&nbspHash&nbsp</span><input disabled id="seedInput"/>&nbsp
-		</div>
-		<!--button id="button5">Download ISO</button-->
+	<div>
+		<label style="margin-top: 1em;"><b>Input</b></label>
+		<button id="buttonUpload">Upload ISO</button>
+		<button id="buttonRandomize">Randomize</button>
+		<button id="buttonRecipe">Upload Recipe</button>
+		<button id="buttonChangeset">Upload Changeset</button>
+		<span>&nbspSeed&nbsp</span><input id="seedInput"/>&nbsp
+	</div>
+	<div>
+		<label style="margin-top: 1em;"><b>Process</b></label>
+		<button id="buttonApply">Apply to ISO</button>
+	</div>
+	<div>
+		<label style="margin-top: 1em;"><b>Output</b></label>
+		<button id="buttonDownloadIso">Download ISO</button>
+		<button id="buttonDownloadSpoilers">Download Spoilers</button>
+		<span>&nbspSeed&nbsp</span><input disabled id="seedInput"/>&nbsp
+		<span>&nbspHash&nbsp</span><input disabled id="seedInput"/>&nbsp
+	</div>
+	<!--button id="button5">Download ISO</button-->
 
 		<!--button id="button2">Upload recipe</button>
 			<button id="button3">Download recipe</button-->
@@ -279,7 +279,7 @@
 				</div>
 			</form>
 			<ul style="font-size: 0.5em;">
-			Consider directive "To remove randomness" overwrites this option if enabled.
+				Consider directive "To remove randomness" overwrites this option if enabled.
 				<li>Predictable - Creatures spawn very easy.</li>
 				<li>Medium - Same level as the game, but no exceptional rare cases like King Hopper.</li>
 				<li>Crazy like King Hopper - Many enemies may be very rare to spawn like the King Hopper.</li>
@@ -317,8 +317,8 @@
 					</label>
 				</div>
 				<div style="font-size: 0.5em;">
-				Known Safe Tiles - Use only tested reasonable selected tiles to place random spawns.<br>
-				Crazy - Creatures may end up in walls or cause more strangeness and surprises.
+					Known Safe Tiles - Use only tested reasonable selected tiles to place random spawns.<br>
+					Crazy - Creatures may end up in walls or cause more strangeness and surprises.
 				</div>
 			</form>
 
@@ -369,148 +369,148 @@
 					</label>
 				</div>
 			</form>
-				
+			
 			<div style="font-size: 0.5em;">
-			<p>In regular game, Fiery key is dropped by Cerberus, then used to open a compartment where is Flaming key. Flaming key is used to teleport to the place where the Ebony Knight is. As one of the world bosses, Ebony Knight should be defeated in order to be able to enter the final room and beat the game. So the Fiery key is needed for achieving end of the game.</p>
-			<p>Flaming key in the first area - Makes easier game. You don't need to collect Fiery key. Just collect Flaming key in early game and use it in Ashen cavern to find Ebony Knight.
+				<p>In regular game, Fiery key is dropped by Cerberus, then used to open a compartment where is Flaming key. Flaming key is used to teleport to the place where the Ebony Knight is. As one of the world bosses, Ebony Knight should be defeated in order to be able to enter the final room and beat the game. So the Fiery key is needed for achieving end of the game.</p>
+				<p>Flaming key in the first area - Makes easier game. You don't need to collect Fiery key. Just collect Flaming key in early game and use it in Ashen cavern to find Ebony Knight.
+				</div>
+
+				<form style="margin-top: 1em;">
+					<h3>Ilusionists</h3>
+					<div id="ilusionists-radioset">
+						<input type="radio" id="ilusionists-radio1" name="radio"><label for="ilusionists-radio1">
+							No change
+						</label>
+						<input type="radio" id="ilusionists-radio2" name="radio" checked="checked"><label for="ilusionists-radio2">
+							Worship domain
+						</label>
+						<input type="radio" id="ilusionists-radio3" name="radio" checked="checked"><label for="ilusionists-radio3">
+							Illusion World
+						</label>
+						<input type="radio" id="ilusionists-radio4" name="radio"><label for="ilusionists-radio4">
+							Anywhere in the game
+						</label>
+					</div>
+				</form>
+				<p style="font-size: 0.5em;">Ilusionists are Lord Gorthur, Jester and Willowess, need to be killed in order to make Illusion World boss Disguise to show up. In the regular game they are in the worship area.</p>
+
 			</div>
 
-			<form style="margin-top: 1em;">
-				<h3>Ilusionists</h3>
-				<div id="ilusionists-radioset">
-					<input type="radio" id="ilusionists-radio1" name="radio"><label for="ilusionists-radio1">
-						No change
-					</label>
-					<input type="radio" id="ilusionists-radio2" name="radio" checked="checked"><label for="ilusionists-radio2">
-						Worship domain
-					</label>
-					<input type="radio" id="ilusionists-radio3" name="radio" checked="checked"><label for="ilusionists-radio3">
-						Illusion World
-					</label>
-					<input type="radio" id="ilusionists-radio4" name="radio"><label for="ilusionists-radio4">
-						Anywhere in the game
-					</label>
-				</div>
-			</form>
-			<p style="font-size: 0.5em;">Ilusionists are Lord Gorthur, Jester and Willowess, need to be killed in order to make Illusion World boss Disguise to show up. In the regular game they are in the worship area.</p>
+			<div id="tabs-4">
 
-		</div>
+				<form style="margin-top: 1em;">
 
-		<div id="tabs-4">
-
-			<form style="margin-top: 1em;">
-
-				<h3>To remove randomness so it will be total deterministic</h3>
-				<div id="remove-randomness-radioset">
-					<input type="radio" id="remove-randomness-radio1" name="radio" checked="checked"><label for="remove-randomness-radio1">
-						Yes
-					</label>
-					<input type="radio" id="remove-randomness-radio2" name="radio"><label for="remove-randomness-radio2">
-						No
-					</label>
-				</div>
-				<p style="font-size: 0.5em;">
-					Every creature spawns soon and drops always the same at 100% chance.
-				</p>
-
-			</form>
-
-			<form style="margin-top: 1em;">
-
-				<h3>All equips</h3>
-				<div id="all-equips-radioset">
-					<input type="radio" id="all-equips-radio1" name="radio" checked="checked"><label for="all-equips-radio1">
-						Yes
-					</label>
-					<input type="radio" id="all-equips-radio2" name="radio"><label for="all-equips-radio2">
-						No
-					</label>
-				</div>
+					<h3>To remove randomness so it will be total deterministic</h3>
+					<div id="remove-randomness-radioset">
+						<input type="radio" id="remove-randomness-radio1" name="radio" checked="checked"><label for="remove-randomness-radio1">
+							Yes
+						</label>
+						<input type="radio" id="remove-randomness-radio2" name="radio"><label for="remove-randomness-radio2">
+							No
+						</label>
+					</div>
 					<p style="font-size: 0.5em;">
-					Possibility to complete all items in one game play. It makes much more equips to be dropped, so as consequence you'll have much more, durability will be reduced and will have less drops of consumables.
+						Every creature spawns soon and drops always the same at 100% chance.
 					</p>
 
-			</form>
+				</form>
 
-			<form style="margin-top: 1em;">
+				<form style="margin-top: 1em;">
 
-				<h3>No HP or MP recovery</h3>
-				<div id="no-hp-mp-recovery-radioset">
-					<input type="radio" id="no-hp-mp-recovery-radio1" name="radio" checked="checked"><label for="no-hp-mp-recovery-radio1">
-						Yes
-					</label>
-					<input type="radio" id="no-hp-mp-recovery-radio2" name="radio"><label for="no-hp-mp-recovery-radio2">
-						No
-					</label>
-				</div>
+					<h3>All equips</h3>
+					<div id="all-equips-radioset">
+						<input type="radio" id="all-equips-radio1" name="radio" checked="checked"><label for="all-equips-radio1">
+							Yes
+						</label>
+						<input type="radio" id="all-equips-radio2" name="radio"><label for="all-equips-radio2">
+							No
+						</label>
+					</div>
 					<p style="font-size: 0.5em;">
-					To force good use of equipments and management of HP and MP. Eliminate practice of waiting to fill up HP and MP. Instead, there will be more availability of HP and MP potions and dorado ashes.
+						Possibility to complete all items in one game play. It makes much more equips to be dropped, so as consequence you'll have much more, durability will be reduced and will have less drops of consumables.
 					</p>
 
-			</form>
+				</form>
+
+				<form style="margin-top: 1em;">
+
+					<h3>No HP or MP recovery</h3>
+					<div id="no-hp-mp-recovery-radioset">
+						<input type="radio" id="no-hp-mp-recovery-radio1" name="radio" checked="checked"><label for="no-hp-mp-recovery-radio1">
+							Yes
+						</label>
+						<input type="radio" id="no-hp-mp-recovery-radio2" name="radio"><label for="no-hp-mp-recovery-radio2">
+							No
+						</label>
+					</div>
+					<p style="font-size: 0.5em;">
+						To force good use of equipments and management of HP and MP. Eliminate practice of waiting to fill up HP and MP. Instead, there will be more availability of HP and MP potions and dorado ashes.
+					</p>
+
+				</form>
+
+
+			</div>
 
 
 		</div>
 
+		<p/>
 
-	</div>
+		<h3>Randomization info</h3>
 
-	<p/>
+		<p>Advanced knowledge of the game is not required.</p>
+		<p>The preset options set the other options to level where it provides reasonable play time for the expected experience. Recommended to not change other parameters other than difficulty.</p>
+		<p>"Only swap" option for each parameter makes no random generation but just swapping, so it is guarenteed that you don't get weird numbers, may be the safer way to play if the randomness gets non-reliable.</p>
+		<p>From the recipe it is generated a changeset file (this is the one to be given to other people in order for them to reproduce the exact same output without knowing the spoilers). It can be uploaded for applying to iso again. When it applies, it's checksum is also applied to display in the initial short sword description.<p>
+			<p>Randomization produces a intermediary Recipe, that contains the readable information of all random set that are intended to be performed. You can also download, change and upload it to do your own customized changes in the game.</p>
+			<p>I expect to implement also enemy walk speed and attack cooldown time randomization, as well as capability of adding more creatures spawn and items found than the regular game, but as additional features since these seem to be more complex to do.</p>
 
-	<h3>Randomization info</h3>
+			<h3>Game play</h3>
 
-	<p>Advanced knowledge of the game is not required.</p>
-	<p>The preset options set the other options to level where it provides reasonable play time for the expected experience. Recommended to not change other parameters other than difficulty.</p>
-	<p>"Only swap" option for each parameter makes no random generation but just swapping, so it is guarenteed that you don't get weird numbers, may be the safer way to play if the randomness gets non-reliable.</p>
-	<p>From the recipe it is generated a changeset file (this is the one to be given to other people in order for them to reproduce the exact same output without knowing the spoilers). It can be uploaded for applying to iso again. When it applies, it's checksum is also applied to display in the initial short sword description.<p>
-	<p>Randomization produces a intermediary Recipe, that contains the readable information of all random set that are intended to be performed. You can also download, change and upload it to do your own customized changes in the game.</p>
-	<p>I expect to implement also enemy walk speed and attack cooldown time randomization, as well as capability of adding more creatures spawn and items found than the regular game, but as additional features since these seem to be more complex to do.</p>
+			<p>You need to verify equipment and equips stats in game, as they may differ from regular game.</p>
 
-	<h3>Game play</h3>
+			<p>Mind that with randomized areas, you should manage exploration like you do when playing for first time.</p>
 
-	<p>You need to verify equipment and equips stats in game, as they may differ from regular game.</p>
+			<p>To beat the game, you still need to kill all world bosses. They are in their original areas.
+			For Desguise to spawn you still need to defeat the ilusionists first.</p>
 
-	<p>Mind that with randomized areas, you should manage exploration like you do when playing for first time.</p>
+			<p>Bosses and event-related creatures are not randomized.</p>
+		</div>
 
-	<p>To beat the game, you still need to kill all world bosses. They are in their original areas.
-	For Desguise to spawn you still need to defeat the ilusionists first.</p>
+		<h3>Credits</h3>
 
-	<p>Bosses and event-related creatures are not randomized.</p>
-</div>
+		<p>Credits Thanks to the FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd) for providing knowledge base about From Software PSX games.</p>
 
-<h3>Credits</h3>
+		<p>Also thanks for people who contributed with ideas, data and testing. Thanks to Lucifer65535 by items reference provided here https://gamefaqs.gamespot.com/ps/198605-shadow-tower/faqs/72621 and to martin korth for no$psx, used for testing during mod development.</p>
 
-<p>Credits Thanks to the FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd) for providing knowledge base about From Software PSX games.</p>
+		<h3>Disclaimer</h3>
 
-<p>Also thanks for people who contributed with ideas, data and testing. Thanks to Lucifer65535 by items reference provided here https://gamefaqs.gamespot.com/ps/198605-shadow-tower/faqs/72621 and to martin korth for no$psx, used for testing during mod development.</p>
+		<p>It is provided "as is" with no warranty of functionality or safety. The modified software may harm you or your equipment such as computer or video game console. It is not recommended to be used by anyone. If you use, do on your own responsibility.</p>
 
-<h3>Disclaimer</h3>
+		<p>This tool development had purely educational purpose, not having any commercial usage. Usage and modification is absolutely allowed for any legal activity. We don't promote piracy or any other illegal activity.</p>
 
-<p>It is provided "as is" with no warranty of functionality or safety. The modified software may harm you or your equipment such as computer or video game console. It is not recommended to be used by anyone. If you use, do on your own responsibility.</p>
+		<p>This software is totally free for anyone to use, modify, distribute and everything else. If you use it for any online content (such as news, indexing, streaming) I'd thank if you mention author Fredo Rischter, and link to github repo https://github.com/fredrischter/shadow-tower-randomizer and the FromSoft Modding Committee.</p>
 
-<p>This tool development had purely educational purpose, not having any commercial usage. Usage and modification is absolutely allowed for any legal activity. We don't promote piracy or any other illegal activity.</p>
+		<h3>Contact</h3>
 
-<p>This software is totally free for anyone to use, modify, distribute and everything else. If you use it for any online content (such as news, indexing, streaming) I'd thank if you mention author Fredo Rischter, and link to github repo https://github.com/fredrischter/shadow-tower-randomizer and the FromSoft Modding Committee.</p>
+		fredrischter at gmail dot com
 
-<h3>Contact</h3>
+		<script src="external/jquery/jquery.js"></script>
+		<script src="Iso9660.js"></script>
+		<script src="KaitaiStream.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script>
 
-fredrischter at gmail dot com
+			$( "#buttonUpload" ).button({icon: "ui-icon-star"});
+			$( "#buttonRandomize" ).button();
+			$( "#buttonRecipe" ).button();
+			$( "#buttonChangeset" ).button();
+			
+			$( "#buttonApply" ).button({icon: "ui-icon-star"});
 
-<script src="external/jquery/jquery.js"></script>
-<script src="Iso9660.js"></script>
-<script src="KaitaiStream.js"></script>
-<script src="jquery-ui.js"></script>
-<script>
-
-	$( "#buttonUpload" ).button({icon: "ui-icon-star"});
-	$( "#buttonRandomize" ).button();
-	$( "#buttonRecipe" ).button();
-	$( "#buttonChangeset" ).button();
-	
-	$( "#buttonApply" ).button({icon: "ui-icon-star"});
-
-	$( "#buttonDownloadIso" ).button({icon: "ui-icon-star"});
-	$( "#buttonDownloadSpoilers" ).button();
+			$( "#buttonDownloadIso" ).button({icon: "ui-icon-star"});
+			$( "#buttonDownloadSpoilers" ).button();
 
 	/*	$( "#button1" ).button({
 			icon: "ui-icon-gear"

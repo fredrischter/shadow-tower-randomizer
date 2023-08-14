@@ -4,17 +4,24 @@ const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 const fs = require('fs');
 const path = require('path');
+const util = require('util');
 
-var paramsFile = process.argv[2];
+function randomize(paramsFile, stDir) {
+
+const logFile = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'a' });
+
+console.log = function () {
+	logFile.write(util.format.apply(null, arguments) + '\n');
+}
+
 if (!paramsFile || !paramsFile.endsWith(".json")) {
   console.log("ERROR - didn't provide .json file part as argument.");
   process.exit(1);
   return;
 }
 
-var stDir = process.argv[3];
-if (!stDir || !stDir.endsWith("st")) {
-  console.log("ERROR - didn't provide path to shadow tower extracted iso - name of this folder should be st.");
+if (!stDir) {
+  console.log("ERROR - didn't provide path to shadow tower extracted iso.");
   process.exit(1);
   return;
 }
@@ -29,28 +36,29 @@ var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
 var tfile = new TFILEReader(tFilePath).readTFormat();
 data_model.setup(tfile);
 
-// model files
-let modelFileNames = [
-	stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M00.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M01.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M02.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M03.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M06.T",/*stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M07.T",*/ stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M08.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M09.T",
-	stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M10.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M11.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M12.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M13.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M14.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M15.T",/*stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M16.T",*/ stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M17.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M18.T",/*stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M19.T",*/
-	stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M20.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M21.T",/*stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M22.T",*/stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M23.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M24.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M26.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M27.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M28.T",/*stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M29.T",*/
-	stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M30.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M31.T",*/stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M32.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M33.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M34.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M35.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M36.T",*/stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M37.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M38.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M39.T",*/
-	stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M40.T", stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M41.T"
-];
-for (var i in modelFileNames) {
-	let modelFile = new TFILEReader(modelFileNames[i]).readTFormat();
-	data_model.areas[i].modelFile = modelFile;
-	for (var c in data_model.areas[i].creatures) {
-		let creature = data_model.areas[i].creatures[c];
-		creature.modelFiles = [
-			modelFile.files[c*5+0].fileName,
-			modelFile.files[c*5+1].fileName,
-			modelFile.files[c*5+2].fileName,
-			modelFile.files[c*5+3].fileName,
-			modelFile.files[c*5+4].fileName,
-		]
-	}
-}
+//
+//	// model files
+//	let modelFileNames = [
+//		stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M00.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M01.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M02.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M03.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M06.T",/*stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M07.T",*/ stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M08.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M09.T",
+//		stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M10.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M11.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M12.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M13.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M14.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M15.T",/*stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M16.T",*/ stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M17.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M18.T",/*stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M19.T",*/
+//		stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M20.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M21.T",/*stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M22.T",*/stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M23.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M24.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M26.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M27.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M28.T",/*stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M29.T",*/
+//		stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M30.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M31.T",*/stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M32.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M33.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M34.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M35.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M36.T",*/stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M37.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M38.T",/*stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M39.T",*/
+//		stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M40.T", stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M41.T"
+//	];
+//	for (var i in modelFileNames) {
+//		let modelFile = new TFILEReader(modelFileNames[i]).readTFormat();
+//		data_model.areas[i].modelFile = modelFile;
+//		for (var c in data_model.areas[i].creatures) {
+//			let creature = data_model.areas[i].creatures[c];
+//			creature.modelFiles = [
+//				modelFile.files[c*5+0].fileName,
+//				modelFile.files[c*5+1].fileName,
+//				modelFile.files[c*5+2].fileName,
+//				modelFile.files[c*5+3].fileName,
+//				modelFile.files[c*5+4].fileName,
+//			]
+//		}
+//	}
 
 //this is scenario object files
 //let moFile = new TFILEReader(stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "MO.T").readTFormat();
@@ -284,7 +292,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 	// Blank all creature spawns
 	//	if (area.name == "human_world_cursed_region") {return;
 	//	area.spawns[i].blank();
-	spawn.blank();
+//		spawn.blank();
 /*
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
@@ -315,7 +323,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 }
 
 function forEachValidCreature(creature, area, index) {
-	creature.hp.set(1);
+//		creature.hp.set(1);
 }
 
 
@@ -363,6 +371,7 @@ global.items[item_c4_summoner_ring_of_fire].elementalPower.set(130);
 global.items[item_0_short_sword].attribute1.set(attribute(ATTR_CRITICAL_20pc,ATTR_CRITICAL));
 */
 
+/*
 global.items[item_0_short_sword].str.set(0xff);
 global.items[item_0_short_sword].spd.set(0xff);
 global.items[item_0_short_sword].def.set(0xff);
@@ -377,6 +386,7 @@ global.items[item_0_short_sword].pur.set(0xff);
 global.items[item_0_short_sword].par.set(0xff);
 global.items[item_0_short_sword].mel.set(0xff);
 global.items[item_0_short_sword].sol.set(0xff);
+*/
 
 //human_world_solitary_region["01_acid_slime"].hp.set(0x0001);
 //human_world_solitary_region["0e_acid_slime"].hp.set(0x0001);
@@ -660,3 +670,11 @@ for (var i in tfileOriginal.files) {
 }
 
 fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
+
+}
+
+if (process.argv[1].indexOf("randomize.js") > -1){
+    randomize(process.argv[2], process.argv[3]);
+} else {
+    module.exports = randomize;
+}
