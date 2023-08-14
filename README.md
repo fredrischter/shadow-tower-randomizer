@@ -16,5 +16,10 @@ fredrischter at gmail dot com
 
 # Run manually
 
-npm run mod "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)"
+cd iso-folder
 
+dumpsxiso.exe st_original.bin -x . -s st.xml
+
+npm run mod "iso-folder"
+
+mkpsxiso.exe st.xml -y
