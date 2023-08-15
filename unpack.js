@@ -3,7 +3,7 @@
 const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 
-function unpack(file, callback) {
+function unpack(file) {
 
 if (!file || !file.endsWith(".T")) {
   console.log("ERROR - didn't provide T file as argument.");
@@ -13,11 +13,7 @@ if (!file || !file.endsWith(".T")) {
 
 for (var c = 2; c < process.argv.length; c++) {
 	var tfile = new TFILEReader(file).readTFormat();
-	tfile.writeParts((err) => {
-		if (callback && file.endsWith("FDAT.T")) {
-			callback(tfile);
-		}
-	});
+	tfile.writeParts();
 }
 
 }

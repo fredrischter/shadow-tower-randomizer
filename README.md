@@ -16,5 +16,4 @@ fredrischter at gmail dot com
 
 # Run manually
 
-npm run mod "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)"
-
+npm run mod "C:\directory\extracted-iso-folder"

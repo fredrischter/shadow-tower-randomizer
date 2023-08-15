@@ -350,6 +350,7 @@ global.ATTR_CRITICAL_BY_ID={
   0xf: "ATTR_CRITICAL_80pc"
 }
 
+global.ATTR_NONE=0;
 global.ATTR_HP_RECOVERY=1;
 global.ATTR_MP_RECOVERY=2;
 global.ATTR_CRITICAL=3;

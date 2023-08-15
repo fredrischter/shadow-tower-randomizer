@@ -32,5 +32,5 @@ randomize(paramsFile, onlyPath);
 const change = require('./change');
 change("." + path.sep + "changeset.json");
 
-//process.argv[2]=onlyPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
-//const pack = require('./pack');
+const pack = require('./pack');
+pack(tFile);

@@ -8,7 +8,7 @@ const util = require('util');
 
 function randomize(paramsFile, stDir) {
 
-const logFile = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'a' });
+const logFile = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'w+' });
 
 console.log = function () {
 	logFile.write(util.format.apply(null, arguments) + '\n');
@@ -288,46 +288,6 @@ item_137_soul_pod_53_sp,
 item_138_soul_pod_29_sp,
 item_139_soul_pod_14_sp];
 
-function forEachCreatureSpawn(spawn, area, index) {
-	// Blank all creature spawns
-	//	if (area.name == "human_world_cursed_region") {return;
-	//	area.spawns[i].blank();
-
-	//spawn.blank();
-/*
-	spawn.chance.set(100);
-	if (!spawn.drop1.isNull()) {
-		spawn.drop1Chance.set(100);
-	}
-	if (!spawn.drop2.isNull()) {
-		spawn.drop2Chance.set(100);
-	}
-	if (!spawn.drop3.isNull()) {
-		spawn.drop3Chance.set(100);
-	}*/
-	// Spawning ring
-	//spawn.drop1.set(item_c4_summoner_ring_of_fire);
-
-	// Set good items to spawn early in the game
-	//	if (goodItems.length) {
-	//		if (area.name != "human_world_solitary_region") return;
-	//		spawn.drop1Chance.set(100);
-	//		spawn.drop2Chance.set(0);
-	//		spawn.drop3Chance.set(0);
-	//		spawn.drop1.set(items.shift());
-	//		spawn.drop2.set(item_139_soul_pod_14_sp);
-	//		spawn.drop3.set(item_139_soul_pod_14_sp);
-	//	}
-
-	// Randomize spawn tile
-	//spawn.tileId.set(Math.floor(Math.random()*64));//area.tiles.length));
-}
-
-function forEachValidCreature(creature, area, index) {
-//		creature.hp.set(1);
-}
-
-
 //for (var i = 0; i < SPAWN_ENTRIES_COUNT; i++) {
 //	var spawn = human_world_cursed_region.spawns[i];
 //	if (!spawn.chance.isNull() && !spawn.isBlank && !spawn.name.endsWith("door")) {
@@ -496,31 +456,98 @@ human_world_solitary_region.spawns[8].chance.set(0x64); // slime 3
 human_world_solitary_region.spawns[2].chance.set(0x64); // blood slime 4
 */
 
-function forEachSpawn(spawn, area, index) {
-	if (!spawn.chance.isNull() &&
-		!spawn.name.endsWith("door")) {
-		forEachCreatureSpawn(spawn, area, index);
+function forEachCreatureSpawn(spawn, area, index) {
+	// Blank all creature spawns
+	//	if (area.name == "human_world_cursed_region") {return;
+	//	area.spawns[i].blank();
+
+	//spawn.blank();
+
+	// Spawning ring
+	//spawn.drop1.set(item_c4_summoner_ring_of_fire);
+
+	// Set good items to spawn early in the game
+	//	if (goodItems.length) {
+	//		if (area.name != "human_world_solitary_region") return;
+	//		spawn.drop1Chance.set(100);
+	//		spawn.drop2Chance.set(0);
+	//		spawn.drop3Chance.set(0);
+	//		spawn.drop1.set(items.shift());
+	//		spawn.drop2.set(item_139_soul_pod_14_sp);
+	//		spawn.drop3.set(item_139_soul_pod_14_sp);
+	//	}
+
+	// Randomize spawn tile
+	//spawn.tileId.set(Math.floor(Math.random()*64));//area.tiles.length));
+}
+
+function forEachValidCreature(creature, area, index) {
+//		creature.hp.set(1);
+}
+
+
+// ------- PRESET King hopper
+/*
+forEachCreatureSpawn = function(spawn, area, index) {
+	if (spawn.creature.name.includes("king_hopper")) {
+		console.log("Setting spawn change to 100%, creature " + spawn.creature.name);
+		spawn.chance.set(100);
+	}
+}
+*/
+// ------- PRESET Directives
+forEachCreatureSpawn = function(spawn, area, index) {
+	spawn.chance.set(100);
+	if (!spawn.drop1.isNull()) {
+		spawn.drop1Chance.set(100);
+	}
+	if (!spawn.drop2.isNull()) {
+		spawn.drop2Chance.set(100);
+	}
+	if (!spawn.drop3.isNull()) {
+		spawn.drop3Chance.set(100);
 	}
 }
 
-function forEachCreature(creature, area, index) {
-	if (!creature.isBlank) {
-		forEachValidCreature(creature, area, index);
+for (var i in items) {
+	if (items[i].attribute1.getAttributeType() == ATTR_HP_RECOVERY) {
+		items[i].attribute1.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_HP_RECOVERY from equip " + items[i].name);
+	}
+	if (items[i].attribute2.getAttributeType() == ATTR_HP_RECOVERY) {
+		items[i].attribute2.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_HP_RECOVERY from equip " + items[i].name);
+	}
+	if (items[i].attribute1.getAttributeType() == ATTR_MP_RECOVERY) {
+		items[i].attribute1.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_MP_RECOVERY from equip " + items[i].name);
+	}
+	if (items[i].attribute2.getAttributeType() == ATTR_MP_RECOVERY) {
+		items[i].attribute2.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_MP_RECOVERY from equip " + items[i].name);
 	}
 }
+
+// -------
 
 for (var a in areas) {
 	var area = areas[a];
 	if (!area.spawns) {
 		continue;
 	}
-	for (var i=0; i<SPAWN_ENTRIES_COUNT; i++) {
-		forEachSpawn(area.spawns[i], area, i);
+	for (var index=0; index<SPAWN_ENTRIES_COUNT; index++) {
+		var spawn = area.spawns[index];
+		if (!spawn.chance.isNull() &&
+			!spawn.name.endsWith("door")) {
+			forEachCreatureSpawn(spawn, area, index);
+		}
 	}
-	for (var i=0; i<CREATURE_COUNT; i++) {
-		forEachCreature(area.creatures[i], area, i);
+	for (var index=0; index<CREATURE_COUNT; index++) {
+		var creature = area.creatures[index];
+		if (!creature.isBlank) {
+			forEachValidCreature(creature, area, index);
+		}
 	}
-
 }
 
 let changeSet = [];
@@ -590,9 +617,9 @@ human_world_solitary_region["01_acid_slime"].entityStates[4].bin[20]=20;
 human_world_solitary_region["01_acid_slime"].entityStates[5].bin[20]=20;
 */
 
-for (var i =0; i<300; i++) {
-	//swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
-}
+//for (var i =0; i<300; i++) {
+//	//swapCreatures(validCreatures[randomInt(validCreatures.length-1)],validCreatures[randomInt(validCreatures.length-1)], changeSet);
+//}
 
 //for (var a in areas) {
 //	for (var t in areas[a].objects) {
