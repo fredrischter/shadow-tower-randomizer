@@ -1250,6 +1250,7 @@ class Creature {
       }
     }
 
+    //this.maxPresence = new UInt8( bin, this.offset_in_file + 0x10);
     this.str = new UInt8( bin, this.offset_in_file + 0x24);
     this.spd = new UInt8( bin, this.offset_in_file + 0x25);
     this.def = new UInt8( bin, this.offset_in_file + 0x26);
@@ -1416,20 +1417,19 @@ class Spawn {
         }
       }
       this.isBlank=this.chance.isNull() && otherBytesZero;
-      if (this.isBlank) {
-        return;
-      }
+      //if (this.isBlank) {
+      //  return;
+      //}
     }
 
     var message = "";
     message = binToStr(this.tfile.bin.slice(this.offset_in_file, this.offset_in_file + SPAWN_ENTRY_SIZE));
 
-    if (this.name != "other_stuff") {
       this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
       this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
+      this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
       if (!this.drop1.isNull()) {
         this.drop1Item = itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
-        this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
         mapDraw.push({
           color: "#ffff00", 
           x: area.tiles[this.tileId.get()].tileX.get(), 
@@ -1439,9 +1439,9 @@ class Spawn {
         });
       }
       this.drop2 = new UInt16(this.tfile.bin, this.offset_in_file + 0x06);
+      this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
       if (!this.drop2.isNull()) {
         this.drop2Item = itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
-        this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
         mapDraw.push({
           color: "#ffff00", 
           x: area.tiles[this.tileId.get()].tileX.get(), 
@@ -1451,9 +1451,9 @@ class Spawn {
         });
       }
       this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
+      this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
       if (!this.drop3.isNull()) {
         this.drop3Item = itemData[this.drop3.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
-        this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
         mapDraw.push({
           color: "#ffff00", 
           x: area.tiles[this.tileId.get()].tileX.get(), 
@@ -1462,7 +1462,6 @@ class Spawn {
           text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item.name
         });
       }
-    }
 
     console.log(this.toReadableString());
   }
