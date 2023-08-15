@@ -38,31 +38,37 @@ fs.copyFileSync(originalParamsFile, paramsFile);
 
 const dumpiso = 'dumpsxiso.exe "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"';
 console.log("Running "+dumpiso);
-var child = child_process.exec(dumpiso);
-child.stdout.pipe(process.stdout);
-child.on('exit', function() {
 
-	var tFile=extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
-	const unpack = require('./unpack');
-	unpack(tFile);
-
-	const randomize = require('./randomize');
-	randomize(paramsFile, extractedPath);
-
-	const change = require('./change');
-	change(spoilersPath + path.sep + "changeset.json");
-
-	const pack = require('./pack');
-	pack(tFile);
-
-	const mkiso = 'mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"';
-	console.log("Running " + mkiso);
-	var child = child_process.exec(mkiso);
+function exec(cmd, callback) {
+	var child = child_process.exec(cmd);
 	child.stdout.pipe(process.stdout);
-	child.on('exit', function() {
-		console.log("Finished, output " + outputImage);
-		console.log("Extraced modified files " + extractedPath);
-		console.log("Spoilers " + spoilersPath);
+	child.on('exit', callback);
+}
+
+exec(dumpiso, function() {
+
+	var tFile=extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
+	exec('npm run unpack "'+tFile+'"', function() {
+
+		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"', function() {
+
+			const change = require('./change');
+			change(spoilersPath + path.sep + "changeset.json");
+
+			const pack = require('./pack');
+			pack(tFile);
+
+			const mkiso = 'mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"';
+			console.log("Running " + mkiso);
+
+			exec(mkiso, function() {
+				console.log("Finished, output " + outputImage);
+				console.log("Extraced modified files " + extractedPath);
+				console.log("Spoilers " + spoilersPath);
+			});
+
+		});
+
 	});
 
 });
