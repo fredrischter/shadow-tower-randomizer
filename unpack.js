@@ -5,23 +5,23 @@ const data_model = require('./data_model');
 
 function unpack(file) {
 
-if (!file || !file.endsWith(".T")) {
-  console.log("ERROR - didn't provide T file as argument.");
-  process.exit(1);
-  return;
-}
+	if (!file || !file.endsWith(".T")) {
+		console.log("ERROR - didn't provide T file as argument.");
+		process.exit(1);
+		return;
+	}
 
-var tfile = new TFILEReader(file).readTFormat();
-tfile.writeParts();
+	var tfile = new TFILEReader(file).readTFormat();
+	tfile.writeParts();
 
 }
 
 if (process.argv[1].indexOf("unpack.js") > -1){
-    unpack(process.argv[2], function(tfile) {
+	unpack(process.argv[2], function(tfile) {
 		data_model.setup(tfile);
-    });
+	});
 } else {
-    module.exports = unpack;
+	module.exports = unpack;
 }
 
 //for (var i=0; i<tfile.files.length; i++) {

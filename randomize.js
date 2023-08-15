@@ -8,49 +8,49 @@ const util = require('util');
 
 function randomize(paramsFile, stDir) {
 
-const logFileRandomize = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'w+' });
-console.log = function () {
-	logFileRandomize.write(util.format.apply(null, arguments) + '\n');
-}
+	const logFileRandomize = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'w+' });
+	console.log = function () {
+		logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+	}
 
-if (!paramsFile || !paramsFile.endsWith(".json")) {
-  console.log("ERROR - didn't provide .json file part as argument.");
-  process.exit(1);
-  return;
-}
+	if (!paramsFile || !paramsFile.endsWith(".json")) {
+		console.log("ERROR - didn't provide .json file part as argument.");
+		process.exit(1);
+		return;
+	}
 
-if (!stDir) {
-  console.log("ERROR - didn't provide path to shadow tower extracted iso.");
-  process.exit(1);
-  return;
-}
+	if (!stDir) {
+		console.log("ERROR - didn't provide path to shadow tower extracted iso.");
+		process.exit(1);
+		return;
+	}
 
-const PRESET_ONLY_FIX_KING_HOPPER="only-fix-king-hopper";
-const PRESET_ONLY_APPLY_DIRECTIVES="only-apply-directives";
-const DIFFICULTY_EASY="easy";
-const DIFFICULTY_MEDIUM="medium";
-const DIFFICULTY_HARD="hard";
-const DIFFICULTY_VERY_HARD="very-hard";
-const DIFFICULTY_EVEN_HARDER="even-harder";
+	const PRESET_ONLY_FIX_KING_HOPPER="only-fix-king-hopper";
+	const PRESET_ONLY_APPLY_DIRECTIVES="only-apply-directives";
+	const DIFFICULTY_EASY="easy";
+	const DIFFICULTY_MEDIUM="medium";
+	const DIFFICULTY_HARD="hard";
+	const DIFFICULTY_VERY_HARD="very-hard";
+	const DIFFICULTY_EVEN_HARDER="even-harder";
 
-var factorByDificultyParam = {
-	"easy" : 0.5,
-	"medium" : 1,
-	"hard" : 2,
-	"very-hard" : 3,
-	"even-harder" : 4
-};
+	var factorByDificultyParam = {
+		"easy" : 0.5,
+		"medium" : 1,
+		"hard" : 2,
+		"very-hard" : 3,
+		"even-harder" : 4
+	};
 
-let params = JSON.parse(fs.readFileSync(paramsFile));
-let changeSetPath = path.dirname(paramsFile);
-let changeSetFile = changeSetPath + path.sep + "changeset.json"
-console.log("changeSetFile "+changeSetFile);
-console.log(params);
+	let params = JSON.parse(fs.readFileSync(paramsFile));
+	let changeSetPath = path.dirname(paramsFile);
+	let changeSetFile = changeSetPath + path.sep + "changeset.json"
+	console.log("changeSetFile "+changeSetFile);
+	console.log(params);
 
-let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
-var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
-var tfile = new TFILEReader(tFilePath).readTFormat();
-data_model.setup(tfile);
+	let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
+	var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
+	var tfile = new TFILEReader(tFilePath).readTFormat();
+	data_model.setup(tfile);
 
 //
 //	// model files
@@ -478,20 +478,20 @@ var creatureAttributeFactor=factorByDificultyParam[params.difficulty];
 
 function applyDifficultyForEachValidCreature(creature, area, index) {
 	console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name);
-    creature.str.set(Math.min(256, Math.floor(creature.str.get() * creatureAttributeFactor)));
-    creature.spd.set(Math.min(256, Math.floor(creature.spd.get() * creatureAttributeFactor)));
-    creature.def.set(Math.min(256, Math.floor(creature.def.get() * creatureAttributeFactor)));
-    creature.bal.set(Math.min(256, Math.floor(creature.bal.get() * creatureAttributeFactor)));
-    creature.sla.set(Math.min(256, Math.floor(creature.sla.get() * creatureAttributeFactor)));
-    creature.smh.set(Math.min(256, Math.floor(creature.smh.get() * creatureAttributeFactor)));
-    creature.pir.set(Math.min(256, Math.floor(creature.pir.get() * creatureAttributeFactor)));
-    creature.spr.set(Math.min(256, Math.floor(creature.spr.get() * creatureAttributeFactor)));
-    creature.foc.set(Math.min(256, Math.floor(creature.foc.get() * creatureAttributeFactor)));
-    creature.ham.set(Math.min(256, Math.floor(creature.ham.get() * creatureAttributeFactor)));
-    creature.pur.set(Math.min(256, Math.floor(creature.pur.get() * creatureAttributeFactor)));
-    creature.par.set(Math.min(256, Math.floor(creature.par.get() * creatureAttributeFactor)));
-    creature.mel.set(Math.min(256, Math.floor(creature.mel.get() * creatureAttributeFactor)));
-    creature.sol.set(Math.min(256, Math.floor(creature.sol.get() * creatureAttributeFactor)));
+	creature.str.set(Math.min(256, Math.floor(creature.str.get() * creatureAttributeFactor)));
+	creature.spd.set(Math.min(256, Math.floor(creature.spd.get() * creatureAttributeFactor)));
+	creature.def.set(Math.min(256, Math.floor(creature.def.get() * creatureAttributeFactor)));
+	creature.bal.set(Math.min(256, Math.floor(creature.bal.get() * creatureAttributeFactor)));
+	creature.sla.set(Math.min(256, Math.floor(creature.sla.get() * creatureAttributeFactor)));
+	creature.smh.set(Math.min(256, Math.floor(creature.smh.get() * creatureAttributeFactor)));
+	creature.pir.set(Math.min(256, Math.floor(creature.pir.get() * creatureAttributeFactor)));
+	creature.spr.set(Math.min(256, Math.floor(creature.spr.get() * creatureAttributeFactor)));
+	creature.foc.set(Math.min(256, Math.floor(creature.foc.get() * creatureAttributeFactor)));
+	creature.ham.set(Math.min(256, Math.floor(creature.ham.get() * creatureAttributeFactor)));
+	creature.pur.set(Math.min(256, Math.floor(creature.pur.get() * creatureAttributeFactor)));
+	creature.par.set(Math.min(256, Math.floor(creature.par.get() * creatureAttributeFactor)));
+	creature.mel.set(Math.min(256, Math.floor(creature.mel.get() * creatureAttributeFactor)));
+	creature.sol.set(Math.min(256, Math.floor(creature.sol.get() * creatureAttributeFactor)));
 	//It is too much, makes the game to take too long
     //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
 }
@@ -517,7 +517,7 @@ function applyDifficultyForEachItem(item) {
 	item.weight.set(Math.floor(item.weight.get()/equipsAttributeFactor));
 
 	item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
-    item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
+	item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
 }
 
 if (params.difficulty != DIFFICULTY_MEDIUM) {
@@ -538,14 +538,14 @@ for (var a in areas) {
 		if (!spawn.chance.isNull() &&
 			!spawn.name.endsWith("door")) {
 			forEachCreatureSpawn.forEach((func) => func(spawn, area, index));
-		}
 	}
-	for (var index=0; index<CREATURE_COUNT; index++) {
-		var creature = area.creatures[index];
-		if (!creature.isBlank) {
-			forEachValidCreature.forEach((func) => func(creature, area, index));
-		}
+}
+for (var index=0; index<CREATURE_COUNT; index++) {
+	var creature = area.creatures[index];
+	if (!creature.isBlank) {
+		forEachValidCreature.forEach((func) => func(creature, area, index));
 	}
+}
 }
 
 for (var i in items) {
@@ -725,7 +725,7 @@ fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
 }
 
 if (process.argv[1].indexOf("randomize.js") > -1){
-    randomize(process.argv[2], process.argv[3]);
+	randomize(process.argv[2], process.argv[3]);
 } else {
-    module.exports = randomize;
+	module.exports = randomize;
 }

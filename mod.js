@@ -6,16 +6,16 @@ const child_process = require('child_process')
 
 var file = process.argv[2];
 if (!file) {
-  console.log("ERROR - didn't provide file as argument.");
-  process.exit(1);
-  return;
+	console.log("ERROR - didn't provide file as argument.");
+	process.exit(1);
+	return;
 }
 
 var originalParamsFile = process.argv[3];
 if (!originalParamsFile) {
-  console.log("ERROR - didn't provide params file as argument.");
-  process.exit(1);
-  return;
+	console.log("ERROR - didn't provide params file as argument.");
+	process.exit(1);
+	return;
 }
 
 const params = JSON.parse(fs.readFileSync(originalParamsFile));
@@ -65,7 +65,7 @@ exec(dumpiso, function() {
 					console.log("Extraced modified files " + extractedPath);
 					console.log("Spoilers " + spoilersPath);
 				});
-	
+				
 			});
 
 		});

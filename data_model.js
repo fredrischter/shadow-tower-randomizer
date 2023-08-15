@@ -417,7 +417,7 @@ class ItemData  {
     this.name = lineSplit[2];
     this.line = line;
     this.absoluteIndex = ITEM_DATA_START_OFFSET
-      + itemIndex * ITEM_DATA_ENTRY_SIZE;
+    + itemIndex * ITEM_DATA_ENTRY_SIZE;
     this.offset_in_file = this.absoluteIndex - ITEM_DATA_PART_FILE_OFFSET_START;
   }
 
@@ -491,40 +491,40 @@ class ItemData  {
 
   toReadableString() {
     return this.offset_in_file.toString(16).padEnd(6)
-      + this.absoluteIndex.toString(16).padEnd(10)
-      + " " + this.name.padEnd(32)
-      + binToStr(this.map_file.bin.slice(this.offset_in_file, this.offset_in_file + ITEM_DATA_ENTRY_SIZE));
+    + this.absoluteIndex.toString(16).padEnd(10)
+    + " " + this.name.padEnd(32)
+    + binToStr(this.map_file.bin.slice(this.offset_in_file, this.offset_in_file + ITEM_DATA_ENTRY_SIZE));
   }
 
   toString() {
     return "{\"id\":\"" + (this.itemIndex.toString(16) + "\"").padEnd(3) + ", \"name\":\"" + (this.name + "\"").padEnd(32)
-      + ", \"str\":" + (this.str.get() + "").padStart(5)
-      + ", \"spd\":" + (this.spd.get() + "").padStart(5)
-      + ", \"def\":" + (this.def.get() + "").padStart(5)
-      + ", \"bal\":" + (this.bal.get() + "").padStart(5)
-      + ", \"sla\":" + (this.sla.get() + "").padStart(5)
-      + ", \"smh\":" + (this.smh.get() + "").padStart(5)
-      + ", \"pir\":" + (this.pir.get() + "").padStart(5)
-      + ", \"spr\":" + (this.spr.get() + "").padStart(5)
-      + ", \"foc\":" + (this.foc.get() + "").padStart(5)
-      + ", \"ham\":" + (this.ham.get() + "").padStart(5)
-      + ", \"pur\":" + (this.pur.get() + "").padStart(5)
-      + ", \"par\":" + (this.par.get() + "").padStart(5)
-      + ", \"mel\":" + (this.mel.get() + "").padStart(5)
-      + ", \"sol\":" + (this.sol.get() + "").padStart(5)
-      + ", \"hp\":" + (this.hp.get() + "").padStart(5)
-      + ", \"type\":" + ((itemTypeNames[this.type.get()] || this.type.get()) + "").padStart(10)
-      + ", \"max_dura\":" + (this.max_dura.get() + "").padStart(5)
-      + ", \"dura\":" + (this.dura.get() + "").padStart(5)
-      + ", \"weight\":" + (""+ this.weight.get() /*(Math.ceil(this.weight.get()*2.2)/10) 1/10 kg to pounds */).padStart(4)
+    + ", \"str\":" + (this.str.get() + "").padStart(5)
+    + ", \"spd\":" + (this.spd.get() + "").padStart(5)
+    + ", \"def\":" + (this.def.get() + "").padStart(5)
+    + ", \"bal\":" + (this.bal.get() + "").padStart(5)
+    + ", \"sla\":" + (this.sla.get() + "").padStart(5)
+    + ", \"smh\":" + (this.smh.get() + "").padStart(5)
+    + ", \"pir\":" + (this.pir.get() + "").padStart(5)
+    + ", \"spr\":" + (this.spr.get() + "").padStart(5)
+    + ", \"foc\":" + (this.foc.get() + "").padStart(5)
+    + ", \"ham\":" + (this.ham.get() + "").padStart(5)
+    + ", \"pur\":" + (this.pur.get() + "").padStart(5)
+    + ", \"par\":" + (this.par.get() + "").padStart(5)
+    + ", \"mel\":" + (this.mel.get() + "").padStart(5)
+    + ", \"sol\":" + (this.sol.get() + "").padStart(5)
+    + ", \"hp\":" + (this.hp.get() + "").padStart(5)
+    + ", \"type\":" + ((itemTypeNames[this.type.get()] || this.type.get()) + "").padStart(10)
+    + ", \"max_dura\":" + (this.max_dura.get() + "").padStart(5)
+    + ", \"dura\":" + (this.dura.get() + "").padStart(5)
+    + ", \"weight\":" + (""+ this.weight.get() /*(Math.ceil(this.weight.get()*2.2)/10) 1/10 kg to pounds */).padStart(4)
 
-      + (this.attribute1.get() ? ", \"attribute1\": attribute(" + this.attribute1.getReadableAttributeValue() + "," + this.attribute1.getReadableAttributeType() + ")": "").padEnd(68)
-      + (this.attribute2.get() ? ", \"attribute2\": attribute(" + this.attribute2.getReadableAttributeValue() + "," + this.attribute2.getReadableAttributeType() + ")": "").padEnd(68)
-      + (this.elementalType.get() ? 
-           (", \"elementalType\":" + (ELEMENTS_BY_ID[this.elementalType.get()]?ELEMENTS_BY_ID[this.elementalType.get()]:this.elementalType.get())
-        + ", \"elementalPower\":" + this.elementalPower.get()) : "").padEnd(70)
+    + (this.attribute1.get() ? ", \"attribute1\": attribute(" + this.attribute1.getReadableAttributeValue() + "," + this.attribute1.getReadableAttributeType() + ")": "").padEnd(68)
+    + (this.attribute2.get() ? ", \"attribute2\": attribute(" + this.attribute2.getReadableAttributeValue() + "," + this.attribute2.getReadableAttributeType() + ")": "").padEnd(68)
+    + (this.elementalType.get() ? 
+     (", \"elementalType\":" + (ELEMENTS_BY_ID[this.elementalType.get()]?ELEMENTS_BY_ID[this.elementalType.get()]:this.elementalType.get())
+      + ", \"elementalPower\":" + this.elementalPower.get()) : "").padEnd(70)
 
-      + "}";
+    + "}";
   }
 }
 
@@ -569,19 +569,19 @@ class Area  {
 // 8 - map_database_entity_class_etc
 // 9 - the_tilemap
 // ? - another_customized_TMD_object_models
-    this.name = name;
-    this.areaIndexCounter = areaIndexCounter;
-    global[name] = this;
+this.name = name;
+this.areaIndexCounter = areaIndexCounter;
+global[name] = this;
+}
+
+setup(FDAT) {
+  this.tiles_file = FDAT.files[this.tiles_index];
+  this.map_file = FDAT.files[this.map_index];
+
+  if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
+    return;
   }
-
-  setup(FDAT) {
-    this.tiles_file = FDAT.files[this.tiles_index];
-    this.map_file = FDAT.files[this.map_index];
-
-    if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
-      return;
-    }
-    console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index);
+  console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index);
 
 /*
 0-entity and entity data
@@ -593,19 +593,19 @@ class Area  {
 6-4 bytes entries
 */
 
-    var TILE_START_OFFSET = 0x00;
-    this.tiles = [];
-    console.log("\nTiles");
-    console.log("idx                                                                     x       y       z     rot      tile xyz  ----");
+var TILE_START_OFFSET = 0x00;
+this.tiles = [];
+console.log("\nTiles");
+console.log("idx                                                                     x       y       z     rot      tile xyz  ----");
 
-    this.mapTiles = [];
-    this.mapDraw = [];
+this.mapTiles = [];
+this.mapDraw = [];
 
-    for (var i = 0; i<TILE_COUNT; i++) {
-      var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
-      var absoluteIndex = this.tiles_file.startOffset + offset_in_file;
-      this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
-    }
+for (var i = 0; i<TILE_COUNT; i++) {
+  var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
+  var absoluteIndex = this.tiles_file.startOffset + offset_in_file;
+  this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
+}
 
     //0-entity and entity data
     this.creatures = [];
@@ -656,41 +656,41 @@ class Area  {
 
     var zHandling = {
       "shadow_tower_part1": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0, 4:1, 
-                        5:REMOVE_TILE, 6: REMOVE_TILE, 7: 3, 8: 4, 
-                        9: REMOVE_TILE, 10: 6, 11: REMOVE_TILE, 12: REMOVE_TILE, 13: REMOVE_TILE, 14: REMOVE_TILE, 15: REMOVE_TILE, 16: REMOVE_TILE, 17: REMOVE_TILE, 18: REMOVE_TILE, 19: REMOVE_TILE},
-      "human_world_cursed_region": {},
-      "monster_world_false_eye_area": {1:0},
-      "fire_world_phoenix_cave": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0},
-      "human_world_solitary_region": {0:REMOVE_TILE, 1:0, 2:REMOVE_TILE, 3:1},
-      "human_world_hidden_region": {},
-      "human_world_forgotten_region": {},
-      "illusion_world_bewilderment_domain": {0:REMOVE_TILE, 1:0},
-      "illusion_world_gloomy_domain": {},
-      "water_world_impure_pool_area": {0:REMOVE_TILE, 1:0, 2: REMOVE_TILE, 3: REMOVE_TILE, 4: 1},
-      "earth_world_rotting_cavern": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:REMOVE_TILE, 3:REMOVE_TILE, 4:REMOVE_TILE, 5:REMOVE_TILE, 
-                                    6:0},
-      "earth_world_quaking_cavern": {},
-      "illusion_world_worship_domain": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0},
-      "death_world_lingering_curse_layer": {},
-      "earth_world_false_pit_cavern": {},
-      "monster_world_screeching_area": {},
-      "fire_world_ashen_cavern": {},
-      "fire_world_burning_cavern": {},
-      "water_world_sunken_river_area": {},
-      "death_world_gate_of_the_dead": {},
-      "fire_world_molten_cavern": {},
-      "death_world_dark_castle_layer": {},
-      "death_world_undead_layer": {},
-      "earth_world_poisonous_cavern": {},
-      "earth_world_stone_cavern": {},
-      "void": {},
-      "water_world_watery_labyrinth_area": {},
-      "earth_world_hostile_rock_cavern": {},
-      "water_world_white_rain_area": {},
-      "illusion_world_dream_domain": {},
-      "shadow_tower_part2": {},
-      "shadow_tower_part3": {}
-    }
+        5:REMOVE_TILE, 6: REMOVE_TILE, 7: 3, 8: 4, 
+        9: REMOVE_TILE, 10: 6, 11: REMOVE_TILE, 12: REMOVE_TILE, 13: REMOVE_TILE, 14: REMOVE_TILE, 15: REMOVE_TILE, 16: REMOVE_TILE, 17: REMOVE_TILE, 18: REMOVE_TILE, 19: REMOVE_TILE},
+        "human_world_cursed_region": {},
+        "monster_world_false_eye_area": {1:0},
+        "fire_world_phoenix_cave": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0},
+        "human_world_solitary_region": {0:REMOVE_TILE, 1:0, 2:REMOVE_TILE, 3:1},
+        "human_world_hidden_region": {},
+        "human_world_forgotten_region": {},
+        "illusion_world_bewilderment_domain": {0:REMOVE_TILE, 1:0},
+        "illusion_world_gloomy_domain": {},
+        "water_world_impure_pool_area": {0:REMOVE_TILE, 1:0, 2: REMOVE_TILE, 3: REMOVE_TILE, 4: 1},
+        "earth_world_rotting_cavern": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:REMOVE_TILE, 3:REMOVE_TILE, 4:REMOVE_TILE, 5:REMOVE_TILE, 
+          6:0},
+          "earth_world_quaking_cavern": {},
+          "illusion_world_worship_domain": {0:REMOVE_TILE, 1:REMOVE_TILE, 2:0},
+          "death_world_lingering_curse_layer": {},
+          "earth_world_false_pit_cavern": {},
+          "monster_world_screeching_area": {},
+          "fire_world_ashen_cavern": {},
+          "fire_world_burning_cavern": {},
+          "water_world_sunken_river_area": {},
+          "death_world_gate_of_the_dead": {},
+          "fire_world_molten_cavern": {},
+          "death_world_dark_castle_layer": {},
+          "death_world_undead_layer": {},
+          "earth_world_poisonous_cavern": {},
+          "earth_world_stone_cavern": {},
+          "void": {},
+          "water_world_watery_labyrinth_area": {},
+          "earth_world_hostile_rock_cavern": {},
+          "water_world_white_rain_area": {},
+          "illusion_world_dream_domain": {},
+          "shadow_tower_part2": {},
+          "shadow_tower_part3": {}
+        }
 
     // Find lower values
     var lowerX = this.mapTiles.reduce((a, b) => { return {x:Math.min(a.x, b.x)}; }, {x:10000}).x;
@@ -757,7 +757,7 @@ class Area  {
     }
     const buffer = canvas.toBuffer("image/png");
     fs.writeFile("./maps/" + this.name + ".png", buffer, function() {});
-*/
+    */
   }
 
   toString() {
@@ -915,33 +915,33 @@ Entity data types
 50 default
 70-72 scene
 80 giving
-  */
+*/
 
-    if (!ENTITY_STATE_SIZE_BY_TYPE[this.type]) {
-      console.log("ERROR EntityStateData type size unknown " + this.type.toString(16) + " " + ENTITY_STATE_SIZE_BY_TYPE[this.type]);
-    }
-    this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
-    this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
-  }
+if (!ENTITY_STATE_SIZE_BY_TYPE[this.type]) {
+  console.log("ERROR EntityStateData type size unknown " + this.type.toString(16) + " " + ENTITY_STATE_SIZE_BY_TYPE[this.type]);
+}
+this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
+this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
+}
 
-  toReadableString() {
-    return "EntityStateData(pos " + this.offset_in_file.toString(16) + " size " + this.length.toString(16) + ") " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + this.length));
-  }
+toReadableString() {
+  return "EntityStateData(pos " + this.offset_in_file.toString(16) + " size " + this.length.toString(16) + ") " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + this.length));
+}
 
-  toString() {
-    return "{\"offset_in_file\":\""+this.offset_in_file.toString(16).padStart(4) + "\"" 
-      + ",\"absoluteIndex\":\""+this.absoluteIndex.toString(16).padStart(8) + "\""  
-      + ",\"message\":\""+ binToStr(this.originalBin) + "\""
-      + "}";
-  }
+toString() {
+  return "{\"offset_in_file\":\""+this.offset_in_file.toString(16).padStart(4) + "\"" 
+  + ",\"absoluteIndex\":\""+this.absoluteIndex.toString(16).padStart(8) + "\""  
+  + ",\"message\":\""+ binToStr(this.originalBin) + "\""
+  + "}";
+}
 
-  set(source) {
-    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, ENTITY_STATE_SIZE_BY_TYPE[this.type]);
-  }
+set(source) {
+  binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, ENTITY_STATE_SIZE_BY_TYPE[this.type]);
+}
 
-  swap(source) {
-    binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, ENTITY_STATE_SIZE_BY_TYPE[this.type]);
-  }
+swap(source) {
+  binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, ENTITY_STATE_SIZE_BY_TYPE[this.type]);
+}
 }
 
 global.COLLECTABLE_SIZE = 0x18;
@@ -956,7 +956,7 @@ class Collectable {
     this.collectableIndex = collectableIndex;
 
     this.isBlank = this.bin[this.offset_in_file + 0x00]==0xff &&
-      this.bin[this.offset_in_file + 0x01]==0xff;
+    this.bin[this.offset_in_file + 0x01]==0xff;
 
     this.type = new UInt16(this.bin, this.offset_in_file + 0x00);
     this.tileX = new UInt8(this.bin, this.offset_in_file + 0x04);
@@ -988,28 +988,28 @@ class Collectable {
 
   toReadableString() {
     var text = "" + this.collectableIndex.toString(16).padEnd(5)
-     + this.name.padEnd(40)
-     + this.offset_in_file.toString(16).padStart(4)
-     + this.absoluteIndex.toString(16).padStart(10)
-     + "  tileId("+this.tileId.get().toString(16).padStart(4)+") "
-     + "  tile("+this.tileX.get().toString(16).padStart(4)+","+this.tileY.get().toString(16).padStart(4)+","+this.tileZ.get().toString(16).padStart(4)+") "
-     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_z.get().toString(16).padStart(4)+") "
-     + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + COLLECTABLE_SIZE), 4);
+    + this.name.padEnd(40)
+    + this.offset_in_file.toString(16).padStart(4)
+    + this.absoluteIndex.toString(16).padStart(10)
+    + "  tileId("+this.tileId.get().toString(16).padStart(4)+") "
+    + "  tile("+this.tileX.get().toString(16).padStart(4)+","+this.tileY.get().toString(16).padStart(4)+","+this.tileZ.get().toString(16).padStart(4)+") "
+    + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_z.get().toString(16).padStart(4)+") "
+    + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + COLLECTABLE_SIZE), 4);
     return text;
   }
 
   toString() {
     return "{\"name\":\""+(this.name + "\"").padEnd(40)
-      + ", \"type\":" + (this.type.get() + "").padStart(5)
-      + ", \"tileX\":" + (this.tileX.get() + "").padStart(5)
-      + ", \"tileY\":" + (this.tileY.get() + "").padStart(5)
-      + ", \"tileZ\":" + (this.tileZ.get() + "").padStart(5)
-      + ", \"tileId\":" + (this.tileId.get() + "").padStart(5)
-      + ", \"x\":" + (this.x.get() + "").padStart(5)
-      + ", \"y\":" + (this.y.get() + "").padStart(5)
-      + ", \"z\":" + (this.z.get() + "").padStart(5)
-      + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)
-      + "}";
+    + ", \"type\":" + (this.type.get() + "").padStart(5)
+    + ", \"tileX\":" + (this.tileX.get() + "").padStart(5)
+    + ", \"tileY\":" + (this.tileY.get() + "").padStart(5)
+    + ", \"tileZ\":" + (this.tileZ.get() + "").padStart(5)
+    + ", \"tileId\":" + (this.tileId.get() + "").padStart(5)
+    + ", \"x\":" + (this.x.get() + "").padStart(5)
+    + ", \"y\":" + (this.y.get() + "").padStart(5)
+    + ", \"z\":" + (this.z.get() + "").padStart(5)
+    + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)
+    + "}";
   }
 
   setTile(index) {
@@ -1080,14 +1080,14 @@ class ScenarioObject {
 
   toReadableString() {
     var text = "" + this.index.toString(16).padEnd(5)
-     + this.offset_in_file.toString(16).padStart(4)
-     + this.absoluteIndex.toString(16).padStart(10)
-     + "  tile("
-       + this.tileX.get().toString(16).padStart(4)+","
-       + this.tileY.get().toString(16).padStart(4)+","
-       + this.tileZ.get().toString(16).padStart(4)
-     + ") "
-     + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4);
+    + this.offset_in_file.toString(16).padStart(4)
+    + this.absoluteIndex.toString(16).padStart(10)
+    + "  tile("
+    + this.tileX.get().toString(16).padStart(4)+","
+    + this.tileY.get().toString(16).padStart(4)+","
+    + this.tileZ.get().toString(16).padStart(4)
+    + ") "
+    + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4);
     return text;
   }
 
@@ -1098,54 +1098,54 @@ class ScenarioObject {
       + ", \"z\":" + (this.z.get() + "").padStart(5)
       + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)*/
       + "}";
+    }
+
+    set(source) {
+      binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
+    }
+
+    swap(source) {
+      binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
+    }
+
+    blank() {
+      binSet(this.bin, this.offset_in_file, OBJECTS_SIZE, 0x00);
+      this.id.set(0xffff);
+    }
   }
 
-  set(source) {
-    binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
-  }
+  global.TILE_SIZE = 0x0c;
+  global.TILE_COUNT = 0x200;
 
-  swap(source) {
-    binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
-  }
+  class Tile {
+    constructor(bin, area, offset_in_file, absoluteIndex, tileIndex, mapTiles) {
+      this.bin = bin;
+      this.area = area;
+      this.offset_in_file = offset_in_file;
+      this.absoluteIndex = absoluteIndex;
+      this.tileIndex = tileIndex;
 
-  blank() {
-    binSet(this.bin, this.offset_in_file, OBJECTS_SIZE, 0x00);
-    this.id.set(0xffff);
-  }
-}
+      this.isBlank = this.bin[this.offset_in_file + 0x08]==0xff;
 
-global.TILE_SIZE = 0x0c;
-global.TILE_COUNT = 0x200;
-
-class Tile {
-  constructor(bin, area, offset_in_file, absoluteIndex, tileIndex, mapTiles) {
-    this.bin = bin;
-    this.area = area;
-    this.offset_in_file = offset_in_file;
-    this.absoluteIndex = absoluteIndex;
-    this.tileIndex = tileIndex;
-
-    this.isBlank = this.bin[this.offset_in_file + 0x08]==0xff;
-
-    this.x = new UInt16(this.bin, this.offset_in_file + 0x00);
-    this.y = new UInt16(this.bin, this.offset_in_file + 0x02);
-    this.z = new UInt16(this.bin, this.offset_in_file + 0x04);
-    this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x06);
-    this.tileX = new UInt8(this.bin, this.offset_in_file + 0x08);
-    this.tileY = new UInt8(this.bin, this.offset_in_file + 0x09);
-    this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x0a);
+      this.x = new UInt16(this.bin, this.offset_in_file + 0x00);
+      this.y = new UInt16(this.bin, this.offset_in_file + 0x02);
+      this.z = new UInt16(this.bin, this.offset_in_file + 0x04);
+      this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x06);
+      this.tileX = new UInt8(this.bin, this.offset_in_file + 0x08);
+      this.tileY = new UInt8(this.bin, this.offset_in_file + 0x09);
+      this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x0a);
 
 
-    if (!this.isBlank) {
+      if (!this.isBlank) {
 
-      if (mapTiles) {
-        mapTiles.push({
-          color: "#160abc",
-          x: this.tileX.get(),
-          y: this.tileZ.get(),
-          z: this.tileY.get()
-        });
-      }
+        if (mapTiles) {
+          mapTiles.push({
+            color: "#160abc",
+            x: this.tileX.get(),
+            y: this.tileZ.get(),
+            z: this.tileY.get()
+          });
+        }
 
       //console.log(this.toReadableString());
     }
@@ -1159,63 +1159,63 @@ class Tile {
      + "  tile("+this.tileX.get().toString(16).padStart(4)+","+this.tileY.get().toString(16).padStart(4)+","+this.tileZ.get().toString(16).padStart(4)+") "
      + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+","+this.rotation_z.get().toString(16).padStart(4)+") "
      + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + TILE_SIZE), 4);
-    return text;
-  }
+     return text;
+   }
 
-  toString() {
+   toString() {
     return "{"/*"{\"name\":\""+(this.name + "\"").padEnd(40)
       + ", \"x\":" + (this.x.get() + "").padStart(5)
       + ", \"y\":" + (this.y.get() + "").padStart(5)
       + ", \"z\":" + (this.z.get() + "").padStart(5)
       + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)*/
       + "}";
+    }
+
+    set(source) {
+      binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, TILE_SIZE);
+    }
+
+    swap(source) {
+      binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, TILE_SIZE);
+    }
+
+    blank() {
+      binSet(this.bin, this.offset_in_file, TILE_SIZE, 0x00);
+      this.x.set(0xff);
+    }
   }
 
-  set(source) {
-    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, TILE_SIZE);
-  }
+  global.validCreatures = [];
 
-  swap(source) {
-    binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, TILE_SIZE);
-  }
+  var nextExpectedEntityDataAddress;
 
-  blank() {
-    binSet(this.bin, this.offset_in_file, TILE_SIZE, 0x00);
-    this.x.set(0xff);
-  }
-}
+  class Creature {
+    constructor(bin, area, offset_in_file, absoluteIndex, creatureIndex) {
+      this.bin = bin;
+      this.area = area;
+      this.offset_in_file = offset_in_file;
+      this.absoluteIndex = absoluteIndex;
+      this.creatureIndex = creatureIndex;
 
-global.validCreatures = [];
+      this.isBlank = binToStr(this.bin.slice(offset_in_file + 36,offset_in_file + 36+16), 4) == "   0   0   0   0   0   0   0   0   0   0   0   0   0   0  64   0";
 
-var nextExpectedEntityDataAddress;
-
-class Creature {
-  constructor(bin, area, offset_in_file, absoluteIndex, creatureIndex) {
-    this.bin = bin;
-    this.area = area;
-    this.offset_in_file = offset_in_file;
-    this.absoluteIndex = absoluteIndex;
-    this.creatureIndex = creatureIndex;
-
-    this.isBlank = binToStr(this.bin.slice(offset_in_file + 36,offset_in_file + 36+16), 4) == "   0   0   0   0   0   0   0   0   0   0   0   0   0   0  64   0";
-
-    this.isDoor = false;
-    if (
-      this.bin[this.offset_in_file + 0x00]==0x00 &&
-      this.bin[this.offset_in_file + 0x01]==0x20 &&
-      this.bin[this.offset_in_file + 0x02]==0xff &&
-      this.bin[this.offset_in_file + 0x03]==0x00 &&
-      this.bin[this.offset_in_file + 0x04]==0x01 &&
-      this.bin[this.offset_in_file + 0x05]==0x00 &&
-      this.bin[this.offset_in_file + 0x06]==0x00 &&
-      this.bin[this.offset_in_file + 0x07]==0x00 &&
-      this.bin[this.offset_in_file + 0x08]==0x00 &&
-      this.bin[this.offset_in_file + 0x09]==0x00 &&
-      this.bin[this.offset_in_file + 0x0a]==0x00 &&
-      this.bin[this.offset_in_file + 0x0b]==0x00 &&
-      this.bin[this.offset_in_file + 0x0c]==0x00 &&
-      this.bin[this.offset_in_file + 0x0d]==0x00 &&
-      this.bin[this.offset_in_file + 0x0e]==0x00
+      this.isDoor = false;
+      if (
+        this.bin[this.offset_in_file + 0x00]==0x00 &&
+        this.bin[this.offset_in_file + 0x01]==0x20 &&
+        this.bin[this.offset_in_file + 0x02]==0xff &&
+        this.bin[this.offset_in_file + 0x03]==0x00 &&
+        this.bin[this.offset_in_file + 0x04]==0x01 &&
+        this.bin[this.offset_in_file + 0x05]==0x00 &&
+        this.bin[this.offset_in_file + 0x06]==0x00 &&
+        this.bin[this.offset_in_file + 0x07]==0x00 &&
+        this.bin[this.offset_in_file + 0x08]==0x00 &&
+        this.bin[this.offset_in_file + 0x09]==0x00 &&
+        this.bin[this.offset_in_file + 0x0a]==0x00 &&
+        this.bin[this.offset_in_file + 0x0b]==0x00 &&
+        this.bin[this.offset_in_file + 0x0c]==0x00 &&
+        this.bin[this.offset_in_file + 0x0d]==0x00 &&
+        this.bin[this.offset_in_file + 0x0e]==0x00
       /*this.bin[this.offset_in_file + 0x03]==0x00 &&
       this.bin[this.offset_in_file + 0x04]==0xff &&
       this.bin[this.offset_in_file + 0x05]==0xff &&
@@ -1231,24 +1231,24 @@ class Creature {
       this.bin[this.offset_in_file + 0x0f]==0x00 &&
       this.bin[this.offset_in_file + 0xa0]==0x00*/
       ) {
-      this.name =
+        this.name =
         (this.creatureIndex.toString(16)).padStart(2, "0") + "_" + 
         "door";
-      this.isDoor = true;
-      this.isBlank = false;
-    } else {
-      this.name = 
+        this.isDoor = true;
+        this.isBlank = false;
+      } else {
+        this.name = 
         (this.creatureIndex.toString(16)).padStart(2, "0") + "_" + 
         (this.isBlank ?"blank":(creatureNameByAbsoluteOffset[this.absoluteIndex] || "to_define"));
 
-      if (this.isBlank) {
-        global.blankCreature = this;
-      }
+        if (this.isBlank) {
+          global.blankCreature = this;
+        }
 
-      if (!this.isBlank) {
-        validCreatures.push(this);
+        if (!this.isBlank) {
+          validCreatures.push(this);
+        }
       }
-    }
 
     //this.maxPresence = new UInt8( bin, this.offset_in_file + 0x10);
     this.str = new UInt8( bin, this.offset_in_file + 0x24);
@@ -1280,8 +1280,8 @@ class Creature {
 
       var address = ENTITY_STATE_DATA_START + entityStateOffset.get();
       var entityStateData = new EntityStateData(this.bin, this, address, 
-          this.area.map_file.startOffset + address, 
-          this.creatureIndex, i);
+        this.area.map_file.startOffset + address, 
+        this.creatureIndex, i);
 
       if (nextExpectedEntityDataAddress != address) {
         console.log("ERROR - expected address " + nextExpectedEntityDataAddress.toString(16) + " doesnt match " + address.toString(16) + " " + entityStateData.toReadableString());
@@ -1320,9 +1320,9 @@ class Creature {
 
   toReadableString() {
     var text = this.name.padEnd(20)
-     + this.offset_in_file.toString(16).padStart(4)
-     + this.absoluteIndex.toString(16).padStart(10)
-     + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + CREATURE_SIZE), 4);
+    + this.offset_in_file.toString(16).padStart(4)
+    + this.absoluteIndex.toString(16).padStart(10)
+    + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + CREATURE_SIZE), 4);
 
     for (var i = 0 ; i < this.entityStates.length ; i++) {
       text += " " + this.entityStates[i].toReadableString();
@@ -1333,37 +1333,37 @@ class Creature {
 
   toString() {
     return "{\"name\":\""+(this.name + "\"").padEnd(22)
-      + ", \"str\":" + (this.str.get() + "").padStart(5)
-      + ", \"spd\":" + (this.spd.get() + "").padStart(5)
-      + ", \"def\":" + (this.def.get() + "").padStart(5)
-      + ", \"bal\":" + (this.bal.get() + "").padStart(5)
-      + ", \"sla\":" + (this.sla.get() + "").padStart(5)
-      + ", \"smh\":" + (this.smh.get() + "").padStart(5)
-      + ", \"pir\":" + (this.pir.get() + "").padStart(5)
-      + ", \"spr\":" + (this.spr.get() + "").padStart(5)
-      + ", \"foc\":" + (this.foc.get() + "").padStart(5)
-      + ", \"ham\":" + (this.ham.get() + "").padStart(5)
-      + ", \"pur\":" + (this.pur.get() + "").padStart(5)
-      + ", \"par\":" + (this.par.get() + "").padStart(5)
-      + ", \"mel\":" + (this.mel.get() + "").padStart(5)
-      + ", \"sol\":" + (this.sol.get() + "").padStart(5)
-      + ", \"hp\":" + (this.hp.get() + "").padStart(5)
+    + ", \"str\":" + (this.str.get() + "").padStart(5)
+    + ", \"spd\":" + (this.spd.get() + "").padStart(5)
+    + ", \"def\":" + (this.def.get() + "").padStart(5)
+    + ", \"bal\":" + (this.bal.get() + "").padStart(5)
+    + ", \"sla\":" + (this.sla.get() + "").padStart(5)
+    + ", \"smh\":" + (this.smh.get() + "").padStart(5)
+    + ", \"pir\":" + (this.pir.get() + "").padStart(5)
+    + ", \"spr\":" + (this.spr.get() + "").padStart(5)
+    + ", \"foc\":" + (this.foc.get() + "").padStart(5)
+    + ", \"ham\":" + (this.ham.get() + "").padStart(5)
+    + ", \"pur\":" + (this.pur.get() + "").padStart(5)
+    + ", \"par\":" + (this.par.get() + "").padStart(5)
+    + ", \"mel\":" + (this.mel.get() + "").padStart(5)
+    + ", \"sol\":" + (this.sol.get() + "").padStart(5)
+    + ", \"hp\":" + (this.hp.get() + "").padStart(5)
 //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
 //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
-      + ",\"isDoor\":" + this.isDoor + "}";
-  }
++ ",\"isDoor\":" + this.isDoor + "}";
+}
 
-  set(source) {
-    binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
-  }
+set(source) {
+  binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
+}
 
-  swap(source) {
-    binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
-  }
+swap(source) {
+  binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
+}
 
-  blank() {
-    binSet(this.bin, this.offset_in_file, CREATURE_SIZE, 0x00);
-  }
+blank() {
+  binSet(this.bin, this.offset_in_file, CREATURE_SIZE, 0x00);
+}
 }
 
 var areaIndexCounter = 0;
@@ -1407,16 +1407,16 @@ class Spawn {
         y: area.tiles[this.tileId.get()].tileZ.get(), 
         z: area.tiles[this.tileId.get()].tileY.get(), 
         text: "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name});
-    }
+  }
 
-    if (this.chance.isNull()) {
-      var otherBytesZero = true;
-      for (var i=11; i<SPAWN_ENTRY_SIZE; i++) {
-        if (this.tfile.bin[this.offset_in_file + i] != 0x00) {
-          otherBytesZero = false;
-        }
+  if (this.chance.isNull()) {
+    var otherBytesZero = true;
+    for (var i=11; i<SPAWN_ENTRY_SIZE; i++) {
+      if (this.tfile.bin[this.offset_in_file + i] != 0x00) {
+        otherBytesZero = false;
       }
-      this.isBlank=this.chance.isNull() && otherBytesZero;
+    }
+    this.isBlank=this.chance.isNull() && otherBytesZero;
       //if (this.isBlank) {
       //  return;
       //}
@@ -1425,43 +1425,43 @@ class Spawn {
     var message = "";
     message = binToStr(this.tfile.bin.slice(this.offset_in_file, this.offset_in_file + SPAWN_ENTRY_SIZE));
 
-      this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
-      this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
-      this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
-      if (!this.drop1.isNull()) {
-        this.drop1Item = itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
-        mapDraw.push({
-          color: "#ffff00", 
-          x: area.tiles[this.tileId.get()].tileX.get(), 
-          y: area.tiles[this.tileId.get()].tileZ.get(), 
-          z: area.tiles[this.tileId.get()].tileY.get(), 
-          text: (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item.name
-        });
-      }
-      this.drop2 = new UInt16(this.tfile.bin, this.offset_in_file + 0x06);
-      this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
-      if (!this.drop2.isNull()) {
-        this.drop2Item = itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
-        mapDraw.push({
-          color: "#ffff00", 
-          x: area.tiles[this.tileId.get()].tileX.get(), 
-          y: area.tiles[this.tileId.get()].tileZ.get(), 
-          z: area.tiles[this.tileId.get()].tileY.get(), 
-          text: (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item.name
-        });
-      }
-      this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
-      this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
-      if (!this.drop3.isNull()) {
-        this.drop3Item = itemData[this.drop3.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
-        mapDraw.push({
-          color: "#ffff00", 
-          x: area.tiles[this.tileId.get()].tileX.get(), 
-          y: area.tiles[this.tileId.get()].tileZ.get(), 
-          z: area.tiles[this.tileId.get()].tileY.get(), 
-          text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item.name
-        });
-      }
+    this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
+    this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
+    this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
+    if (!this.drop1.isNull()) {
+      this.drop1Item = itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
+      mapDraw.push({
+        color: "#ffff00", 
+        x: area.tiles[this.tileId.get()].tileX.get(), 
+        y: area.tiles[this.tileId.get()].tileZ.get(), 
+        z: area.tiles[this.tileId.get()].tileY.get(), 
+        text: (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item.name
+      });
+    }
+    this.drop2 = new UInt16(this.tfile.bin, this.offset_in_file + 0x06);
+    this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
+    if (!this.drop2.isNull()) {
+      this.drop2Item = itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
+      mapDraw.push({
+        color: "#ffff00", 
+        x: area.tiles[this.tileId.get()].tileX.get(), 
+        y: area.tiles[this.tileId.get()].tileZ.get(), 
+        z: area.tiles[this.tileId.get()].tileY.get(), 
+        text: (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item.name
+      });
+    }
+    this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
+    this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
+    if (!this.drop3.isNull()) {
+      this.drop3Item = itemData[this.drop3.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
+      mapDraw.push({
+        color: "#ffff00", 
+        x: area.tiles[this.tileId.get()].tileX.get(), 
+        y: area.tiles[this.tileId.get()].tileZ.get(), 
+        z: area.tiles[this.tileId.get()].tileY.get(), 
+        text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item.name
+      });
+    }
 
     console.log(this.toReadableString());
   }
@@ -1479,18 +1479,18 @@ class Spawn {
 
   toString() {
     return "\"spawn_" + (this.index.toString(16) + "\"").padEnd(3) + ":{"
-      + "\"chance\":" + (""+this.chance.get()).padEnd(3) 
-      + ",\"name\":\"" + (this.name + "\"").padEnd(21)
-      + ",\"tileId\":\"" + (this.tileId.get() + "\"").padEnd(16)
-      + ",\"x\":" + (this.x.get() + "").padEnd(10)
-      + ",\"y\":" + (this.y.get() + "").padEnd(10)
-      + ",\"z\":" + (this.z.get() + "").padEnd(10)
-      + (!this.mutexGroup.isNull() ? ",\"group\":" + this.mutexGroup.get(): "")
-      + ",\"drop\":["
-      + (this.drop1Item ? ("{\"chance\":" + (this.drop1Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop1Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop1 + "\"}").padEnd(48) : "")
-      + (this.drop2Item ? (",{\"chance\":" + (this.drop2Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop2Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop2 + "\"}").padEnd(48) : "")
-      + (this.drop3Item ? (",{\"chance\":" + (this.drop3Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop3Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop3 + "\"}").padEnd(48) : "")
-      + "]}";
+    + "\"chance\":" + (""+this.chance.get()).padEnd(3) 
+    + ",\"name\":\"" + (this.name + "\"").padEnd(21)
+    + ",\"tileId\":\"" + (this.tileId.get() + "\"").padEnd(16)
+    + ",\"x\":" + (this.x.get() + "").padEnd(10)
+    + ",\"y\":" + (this.y.get() + "").padEnd(10)
+    + ",\"z\":" + (this.z.get() + "").padEnd(10)
+    + (!this.mutexGroup.isNull() ? ",\"group\":" + this.mutexGroup.get(): "")
+    + ",\"drop\":["
+    + (this.drop1Item ? ("{\"chance\":" + (this.drop1Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop1Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop1 + "\"}").padEnd(48) : "")
+    + (this.drop2Item ? (",{\"chance\":" + (this.drop2Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop2Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop2 + "\"}").padEnd(48) : "")
+    + (this.drop3Item ? (",{\"chance\":" + (this.drop3Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop3Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop3 + "\"}").padEnd(48) : "")
+    + "]}";
   }
 
   set(source) {
