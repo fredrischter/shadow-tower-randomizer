@@ -34,3 +34,12 @@ npm run mod "ShadowTowerExtractedFolder"
 npm run mod "C:\Users\fred\Downloads\ShadowTowerExtractedFolder"
 
 7z a -tiso "C:\Users\fred\Downloads\ShadowTowerModified.iso" "C:\Users\fred\Downloads\ShadowTowerExtractedFolder\*"
+
+# How do I build bin image while building ISO doesn't work
+
+cd C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin
+
+dumpsxiso.exe st_original.bin -x . -s st.xml
+
+mkpsxiso.exe st.xml -y
+
