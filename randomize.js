@@ -526,11 +526,11 @@ function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
 }
 
 // ------- PRESET King hopper
-
-forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
-
-// ------- PRESET Directives
 /*
+forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
+*/
+// ------- PRESET Directives
+
 forEachCreatureSpawn = function(spawn, area, index) {
 	presetKingHopperFixforEachCreatureSpawn(spawn, area, index);
 	spawn.chance.set(100);
@@ -563,7 +563,7 @@ for (var i in items) {
 		console.log("Removing ATTR_MP_RECOVERY from equip " + items[i].name);
 	}
 }
-*/
+
 // -------
 
 for (var a in areas) {
