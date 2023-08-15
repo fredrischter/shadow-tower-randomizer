@@ -516,6 +516,10 @@ function forEachValidCreature(creature, area, index) {
 //		creature.hp.set(1);
 }
 
+function forEachItem(item) {
+}
+
+//-----------------------------
 
 function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
 	if (spawn.creature.name.includes("king_hopper")) {
@@ -525,13 +529,7 @@ function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
 	}
 }
 
-// ------- PRESET King hopper
-/*
-forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
-*/
-// ------- PRESET Directives
-
-forEachCreatureSpawn = function(spawn, area, index) {
+function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
 	presetKingHopperFixforEachCreatureSpawn(spawn, area, index);
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
@@ -545,24 +543,69 @@ forEachCreatureSpawn = function(spawn, area, index) {
 	}
 }
 
-for (var i in items) {
-	if (items[i].attribute1.getAttributeType() == ATTR_HP_RECOVERY) {
-		items[i].attribute1.setAttributeType(ATTR_NONE);
-		console.log("Removing ATTR_HP_RECOVERY from equip " + items[i].name);
+function presetDirectivesforEachItem(item) {
+	if (item.attribute1.getAttributeType() == ATTR_HP_RECOVERY) {
+		item.attribute1.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
 	}
-	if (items[i].attribute2.getAttributeType() == ATTR_HP_RECOVERY) {
-		items[i].attribute2.setAttributeType(ATTR_NONE);
-		console.log("Removing ATTR_HP_RECOVERY from equip " + items[i].name);
+	if (item.attribute2.getAttributeType() == ATTR_HP_RECOVERY) {
+		item.attribute2.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
 	}
-	if (items[i].attribute1.getAttributeType() == ATTR_MP_RECOVERY) {
-		items[i].attribute1.setAttributeType(ATTR_NONE);
-		console.log("Removing ATTR_MP_RECOVERY from equip " + items[i].name);
+	if (item.attribute1.getAttributeType() == ATTR_MP_RECOVERY) {
+		item.attribute1.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_MP_RECOVERY from equip " + item.name);
 	}
-	if (items[i].attribute2.getAttributeType() == ATTR_MP_RECOVERY) {
-		items[i].attribute2.setAttributeType(ATTR_NONE);
-		console.log("Removing ATTR_MP_RECOVERY from equip " + items[i].name);
+	if (item.attribute2.getAttributeType() == ATTR_MP_RECOVERY) {
+		item.attribute2.setAttributeType(ATTR_NONE);
+		console.log("Removing ATTR_MP_RECOVERY from equip " + item.name);
 	}
 }
+
+// ------- PRESET King hopper
+/*
+forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
+*/
+// ------- PRESET Directives
+/*
+forEachCreatureSpawn=presetDirectivesforEachCreatureSpawn;
+forEachItem=presetDirectivesforEachItem;
+*/
+// ------- ApplyDifficulty
+
+var equipsAttributeFactor=0.5;
+var creatureAttributeFactor=2;
+
+function applyDifficultyForEachValidCreature(creature, area, index) {
+}
+
+function applyDifficultyForEachItem(item) {
+	presetDirectivesforEachItem(item);
+	item.str.set(Math.floor(item.str.get()*equipsAttributeFactor));
+	item.spd.set(Math.floor(item.spd.get()*equipsAttributeFactor));
+	item.def.set(Math.floor(item.def.get()*equipsAttributeFactor));
+	item.bal.set(Math.floor(item.bal.get()*equipsAttributeFactor));
+	item.sla.set(Math.floor(item.sla.get()*equipsAttributeFactor));
+	item.smh.set(Math.floor(item.smh.get()*equipsAttributeFactor));
+	item.pir.set(Math.floor(item.pir.get()*equipsAttributeFactor));
+	item.spr.set(Math.floor(item.spr.get()*equipsAttributeFactor));
+	item.foc.set(Math.floor(item.foc.get()*equipsAttributeFactor));
+	item.ham.set(Math.floor(item.ham.get()*equipsAttributeFactor));
+	item.pur.set(Math.floor(item.pur.get()*equipsAttributeFactor));
+	item.par.set(Math.floor(item.par.get()*equipsAttributeFactor));
+	item.mel.set(Math.floor(item.mel.get()*equipsAttributeFactor));
+	item.sol.set(Math.floor(item.sol.get()*equipsAttributeFactor));
+	item.hp.set(Math.floor(item.hp.get()*equipsAttributeFactor));
+
+	item.weight.set(Math.floor(item.weight.get()/equipsAttributeFactor));
+
+    item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
+    item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
+}
+
+forEachCreatureSpawn=presetDirectivesforEachCreatureSpawn;
+forEachValidCreature=applyDifficultyForEachValidCreature;
+forEachItem=applyDifficultyForEachItem;
 
 // -------
 
@@ -584,6 +627,10 @@ for (var a in areas) {
 			forEachValidCreature(creature, area, index);
 		}
 	}
+}
+
+for (var i in items) {
+	forEachItem(items[i]);
 }
 
 let changeSet = [];
