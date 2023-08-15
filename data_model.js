@@ -1530,7 +1530,7 @@ function setup(FDAT) {
     areas[i].setup(FDAT);
   }
 
-  fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
+  //fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
 
 }
 

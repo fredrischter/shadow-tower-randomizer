@@ -20,7 +20,15 @@ fredrischter at gmail dot com
 
 # Run manually
 
+npm run mod "C:\path\imagefile.bin" ".\params\easy.json"
+
 npm run mod "C:\path\imagefile.bin" ".\params\hard.json"
 
+npm run mod "C:\path\imagefile.bin" ".\params\very-hard.json"
 
-C:\Users\fred\projetos\shadow-tower-randomizer>npm run mod "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)\Shadow Tower (U)(Undub v1.0).bin"  ".\params\hard.json"
+npm run mod "C:\path\imagefile.bin" ".\params\even-harder.json"
+
+npm run mod "C:\path\imagefile.bin" ".\params\only-apply-directives.json"
+
+npm run mod "C:\path\imagefile.bin" ".\params\only-fix-king-hopper.json"
+

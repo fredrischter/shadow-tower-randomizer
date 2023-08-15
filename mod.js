@@ -18,17 +18,20 @@ if (!originalParamsFile) {
   return;
 }
 
+const params = JSON.parse(fs.readFileSync(originalParamsFile));
+
 const onlyPath = path.dirname(file);
 const onlyFileName = path.basename(file);
-const outputImage = onlyPath + path.sep + 'modified' + onlyFileName;
 
-const extractedPath = onlyPath + path.sep + 'extracted';
-const spoilersPath = onlyPath + path.sep + 'spoilers';
+const productPath = onlyPath + path.sep + params.label;
+const outputImage = productPath + path.sep + onlyFileName;
+const extractedPath = productPath + path.sep + 'extracted';
+const spoilersPath = productPath + path.sep + 'spoilers';
 const xmlDescriptor = onlyPath + path.sep + 'st.xml';
 const paramsFile = spoilersPath + path.sep + "params.json";
 
-fs.rmdirSync(extractedPath, { recursive: true });
-fs.rmdirSync(spoilersPath, { recursive: true });
+fs.rmdirSync(productPath, { recursive: true });
+fs.mkdirSync(productPath);
 fs.mkdirSync(spoilersPath);
 
 fs.copyFileSync(originalParamsFile, paramsFile);

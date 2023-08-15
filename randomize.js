@@ -8,10 +8,9 @@ const util = require('util');
 
 function randomize(paramsFile, stDir) {
 
-const logFile = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'w+' });
-
+const logFileRandomize = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'w+' });
 console.log = function () {
-	logFile.write(util.format.apply(null, arguments) + '\n');
+	logFileRandomize.write(util.format.apply(null, arguments) + '\n');
 }
 
 if (!paramsFile || !paramsFile.endsWith(".json")) {
@@ -25,6 +24,22 @@ if (!stDir) {
   process.exit(1);
   return;
 }
+
+const PRESET_ONLY_FIX_KING_HOPPER="only-fix-king-hopper";
+const PRESET_ONLY_APPLY_DIRECTIVES="only-apply-directives";
+const DIFFICULTY_EASY="easy";
+const DIFFICULTY_MEDIUM="medium";
+const DIFFICULTY_HARD="hard";
+const DIFFICULTY_VERY_HARD="very-hard";
+const DIFFICULTY_EVEN_HARDER="even-harder";
+
+var factorByDificultyParam = {
+	"easy" : 0.5,
+	"medium" : 1,
+	"hard" : 2,
+	"very-hard" : 3,
+	"even-harder" : 4
+};
 
 let params = JSON.parse(fs.readFileSync(paramsFile));
 let changeSetPath = path.dirname(paramsFile);
@@ -351,6 +366,7 @@ human_world_solitary_region.spawns[8].chance.set(0x64); // slime 3
 human_world_solitary_region.spawns[2].chance.set(0x64); // blood slime 4
 */
 
+/*
 function forEachCreatureSpawn(spawn, area, index) {
 	// Blank all creature spawns
 	//	if (area.name == "human_world_cursed_region") {return;
@@ -382,19 +398,29 @@ function forEachValidCreature(creature, area, index) {
 
 function forEachItem(item) {
 }
+*/
+
+const logFile2 = fs.createWriteStream(stDir + path.sep + 'readable.log', { flags: 'w+' });
+console.log = function () {
+	logFile2.write(util.format.apply(null, arguments) + '\n');
+}
+
+var forEachCreatureSpawn = [];
+var forEachValidCreature = [];
+var forEachItem = [];
 
 //-----------------------------
 
 function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
 	if (spawn.creature.name.includes("king_hopper")) {
-		console.log("Setting spawn change to 100%, creature " + spawn.creature.name);
+		console.log("Setting spawn change to 100% and fixing mutex group, creature " + spawn.creature.name);
 		spawn.chance.set(100);
 		spawn.mutexGroup.set(14);
 	}
 }
 
 function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
-	presetKingHopperFixforEachCreatureSpawn(spawn, area, index);
+	console.log("Setting spawn change to 100% and fixing mutex group, creature " + spawn.creature.name);
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
 		spawn.drop1Chance.set(100);
@@ -427,20 +453,31 @@ function presetDirectivesforEachItem(item) {
 }
 
 // ------- PRESET King hopper
+
+if (params.preset == PRESET_ONLY_FIX_KING_HOPPER) {
+}
+// Always do
+forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
+
 /*
 forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
 */
 // ------- PRESET Directives
-/*
-forEachCreatureSpawn=presetDirectivesforEachCreatureSpawn;
-forEachItem=presetDirectivesforEachItem;
-*/
+
+if (params.preset == PRESET_ONLY_APPLY_DIRECTIVES) {
+	forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
+	forEachItem.push(presetDirectivesforEachItem);
+}
+
 // ------- ApplyDifficulty
 
-var equipsAttributeFactor=0.5;
-var creatureAttributeFactor=2;
+console.log("Difficulty " + params.difficulty + ", factor " + factorByDificultyParam[params.difficulty]);
+
+var equipsAttributeFactor=1/factorByDificultyParam[params.difficulty];
+var creatureAttributeFactor=factorByDificultyParam[params.difficulty];
 
 function applyDifficultyForEachValidCreature(creature, area, index) {
+	console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name);
     creature.str.set(Math.min(256, Math.floor(creature.str.get() * creatureAttributeFactor)));
     creature.spd.set(Math.min(256, Math.floor(creature.spd.get() * creatureAttributeFactor)));
     creature.def.set(Math.min(256, Math.floor(creature.def.get() * creatureAttributeFactor)));
@@ -460,7 +497,7 @@ function applyDifficultyForEachValidCreature(creature, area, index) {
 }
 
 function applyDifficultyForEachItem(item) {
-	presetDirectivesforEachItem(item);
+	console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name);
 	item.str.set(Math.floor(item.str.get()*equipsAttributeFactor));
 	item.spd.set(Math.floor(item.spd.get()*equipsAttributeFactor));
 	item.def.set(Math.floor(item.def.get()*equipsAttributeFactor));
@@ -483,9 +520,11 @@ function applyDifficultyForEachItem(item) {
     item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
 }
 
-forEachCreatureSpawn=presetDirectivesforEachCreatureSpawn;
-forEachValidCreature=applyDifficultyForEachValidCreature;
-forEachItem=applyDifficultyForEachItem;
+if (params.difficulty != DIFFICULTY_MEDIUM) {
+	forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
+	forEachValidCreature.push(applyDifficultyForEachValidCreature);
+	forEachItem.push(applyDifficultyForEachItem);
+}
 
 // -------
 
@@ -498,19 +537,19 @@ for (var a in areas) {
 		var spawn = area.spawns[index];
 		if (!spawn.chance.isNull() &&
 			!spawn.name.endsWith("door")) {
-			forEachCreatureSpawn(spawn, area, index);
+			forEachCreatureSpawn.forEach((func) => func(spawn, area, index));
 		}
 	}
 	for (var index=0; index<CREATURE_COUNT; index++) {
 		var creature = area.creatures[index];
 		if (!creature.isBlank) {
-			forEachValidCreature(creature, area, index);
+			forEachValidCreature.forEach((func) => func(creature, area, index));
 		}
 	}
 }
 
 for (var i in items) {
-	forEachItem(items[i]);
+	forEachItem.forEach((func) => func(items[i]));
 }
 
 let changeSet = [];
@@ -652,6 +691,10 @@ human_world_solitary_region["01_acid_slime"].entityStates[5].bin[20]=20;
 	  }
 	}
 }*/
+
+console.log = function () {
+	logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+}
 
 for (var a in areas) {
 	var area = areas[a];
