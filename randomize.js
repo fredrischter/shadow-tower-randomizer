@@ -27,8 +27,9 @@ if (!stDir) {
 }
 
 let params = JSON.parse(fs.readFileSync(paramsFile));
-let changeSetPath = paramsFile.substring(0, paramsFile.lastIndexOf(path.sep));
+let changeSetPath = path.dirname(paramsFile);
 let changeSetFile = changeSetPath + path.sep + "changeset.json"
+console.log("changeSetFile "+changeSetFile);
 console.log(params);
 
 let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
