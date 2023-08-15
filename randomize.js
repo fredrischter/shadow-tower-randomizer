@@ -579,6 +579,21 @@ var equipsAttributeFactor=0.5;
 var creatureAttributeFactor=2;
 
 function applyDifficultyForEachValidCreature(creature, area, index) {
+    creature.str.set(Math.min(256, Math.floor(creature.str.get() * creatureAttributeFactor)));
+    creature.spd.set(Math.min(256, Math.floor(creature.spd.get() * creatureAttributeFactor)));
+    creature.def.set(Math.min(256, Math.floor(creature.def.get() * creatureAttributeFactor)));
+    creature.bal.set(Math.min(256, Math.floor(creature.bal.get() * creatureAttributeFactor)));
+    creature.sla.set(Math.min(256, Math.floor(creature.sla.get() * creatureAttributeFactor)));
+    creature.smh.set(Math.min(256, Math.floor(creature.smh.get() * creatureAttributeFactor)));
+    creature.pir.set(Math.min(256, Math.floor(creature.pir.get() * creatureAttributeFactor)));
+    creature.spr.set(Math.min(256, Math.floor(creature.spr.get() * creatureAttributeFactor)));
+    creature.foc.set(Math.min(256, Math.floor(creature.foc.get() * creatureAttributeFactor)));
+    creature.ham.set(Math.min(256, Math.floor(creature.ham.get() * creatureAttributeFactor)));
+    creature.pur.set(Math.min(256, Math.floor(creature.pur.get() * creatureAttributeFactor)));
+    creature.par.set(Math.min(256, Math.floor(creature.par.get() * creatureAttributeFactor)));
+    creature.mel.set(Math.min(256, Math.floor(creature.mel.get() * creatureAttributeFactor)));
+    creature.sol.set(Math.min(256, Math.floor(creature.sol.get() * creatureAttributeFactor)));
+    creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
 }
 
 function applyDifficultyForEachItem(item) {
@@ -601,8 +616,9 @@ function applyDifficultyForEachItem(item) {
 
 	item.weight.set(Math.floor(item.weight.get()/equipsAttributeFactor));
 
-    item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
-    item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
+	//It is too much, makes the game unplayable
+    //item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
+    //item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
 }
 
 forEachCreatureSpawn=presetDirectivesforEachCreatureSpawn;
