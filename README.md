@@ -5,7 +5,8 @@
 - Go to repo folder via cmd and run:
 npm install
 
-- Install 7zip, make sure you have 7z command in path.
+- Download, extract and add bin to env path https://github.com/Lameguy64/mkpsxiso/releases/latest
+You'll end up with programs available mkpsxiso and dumpsxiso.
 
 # Functionality
 
@@ -19,27 +20,4 @@ fredrischter at gmail dot com
 
 # Run manually
 
-cd iso-folder
-
-7z x -y -oShadowTowerExtractedFolder "ShadowTower.iso"
-
-npm run mod "ShadowTowerExtractedFolder"
-
-7z a -tiso "ShadowTowerModified.iso" "ShadowTowerExtractedFolder\*"
-
-# Example
-
-7z x -y -o"C:\Users\fred\Downloads\ShadowTowerExtractedFolder" "C:\Users\fred\Downloads\ShadowTower.iso"
-
-npm run mod "C:\Users\fred\Downloads\ShadowTowerExtractedFolder"
-
-7z a -tiso "C:\Users\fred\Downloads\ShadowTowerModified.iso" "C:\Users\fred\Downloads\ShadowTowerExtractedFolder\*"
-
-# How do I build bin image while building ISO doesn't work
-
-cd C:\Users\fred\Downloads\ReverseEngineering\mkpsxiso-2.03-win64\bin
-
-dumpsxiso.exe st_original.bin -x . -s st.xml
-
-mkpsxiso.exe st.xml -y
-
+npm run mod "path/imagefile.bin"

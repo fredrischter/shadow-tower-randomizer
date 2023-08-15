@@ -1,8 +1,8 @@
 'use strict';
 
-//const sevenBin = require('7zip-bin');
-//const extractFull = require('node-7z').extractFull;
 const path = require('path');
+const fs = require('fs');
+const child_process = require('child_process')
 
 var file = process.argv[2];
 if (!file) {
@@ -11,26 +11,41 @@ if (!file) {
   return;
 }
 
-var onlyPath = file;//path.dirname(file);
+var onlyPath = path.dirname(file);
+var onlyFileName = path.basename(file);
+var outputImage = onlyPath + path.sep + 'modified' + onlyFileName;
 
-//const pathTo7zip = sevenBin.path7za
-//const seven = extractFull(file, onlyPath, {
-//  $bin: pathTo7zip
-//});
-//
-//console.log("Working file " + file);
-//console.log("Working path " + onlyPath);
+var extractedPath = onlyPath + path.sep + 'extracted';
+var xmlDescriptor = onlyPath + path.sep + 'st.xml';
 
-var tFile=onlyPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
-const unpack = require('./unpack');
-unpack(tFile);
+fs.rmdirSync(extractedPath, { recursive: true });
 
-var paramsFile="." + path.sep + "params.json";
-const randomize = require('./randomize');
-randomize(paramsFile, onlyPath);
+const dumpiso = 'dumpsxiso.exe "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"';
+console.log("Running "+dumpiso);
+var child = child_process.exec(dumpiso);
+child.stdout.pipe(process.stdout);
+child.on('exit', function() {
 
-const change = require('./change');
-change("." + path.sep + "changeset.json");
+	var tFile=extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
+	const unpack = require('./unpack');
+	unpack(tFile);
 
-const pack = require('./pack');
-pack(tFile);
+	var paramsFile="." + path.sep + "params.json";
+	const randomize = require('./randomize');
+	randomize(paramsFile, extractedPath);
+
+	const change = require('./change');
+	change("." + path.sep + "changeset.json");
+
+	const pack = require('./pack');
+	pack(tFile);
+
+	const mkiso = 'mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"';
+	console.log("Running " + mkiso);
+	var child = child_process.exec(mkiso);
+	child.stdout.pipe(process.stdout);
+	child.on('exit', function() {
+		console.log("Finished, output " + outputImage);
+	});
+
+});
