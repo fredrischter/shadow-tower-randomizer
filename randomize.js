@@ -135,158 +135,19 @@ function swapCreatures(creature1, creature2, changeSet) {
 }
 
 var goodItems = [
-item_109_endless_amulet,
-item_58_fortune_great_helm,
-item_45_fiery_bow_gun,
-item_e4_ring_of_dead_spirit,
-item_f9_king_bracelet,
-item_fa_moon_bracelet,
-item_c_shadow_blade,
-item_17_dragon_sword,
-
-item_76_god_plate,
-item_78_knight_plate_mail,
-item_31_blood_sword,
-
-item_77_plate_mail_of_rage,
-item_25_magical_bastard_sword,
-item_3e_living_axe,
-
-item_bf_master_gothic_shield,
-item_b3_tower_shield_of_honor,
-item_c1_gothic_shield_of_rage,
-item_c2_shinning_gothic_shield,
-item_c3_holy_gothic_shield,
-
-item_44_bow_gun,
-item_43_warrior_bow,
-item_42_bow,
-item_d_shadow_wolf,
-item_e_shadow_tiger,
-item_c0_gothic_shield_of_power,
-item_1a_lethal_bastard_sword,
-item_1b_swift_bastard_sword,
-item_1c_keenest_bastard_sword,
-item_1d_crushing_bastard_sword,
-item_1e_fiery_bastard_sword,
-item_20_shining_bastard_sword,
-item_23_guardian_bastard_sword,
-item_24_dark_sword,
-item_26_righteous_sword,
-item_2a_swift_great_sword,
-item_2c_deadly_great_sword,
-item_2d_keenest_great_sword,
-item_2e_crushing_great_sword,
-item_2f_mighty_great_sword,
-item_30_guardian_great_sword,
-
-item_4b_wizard_crown,
-item_4c_devil_crown,
-item_52_full_helm_of_curing,
-item_57_harden_great_helm,
-item_59_mystic_great_helm,
-item_5a_holy_great_helm,
-
-item_6d_shining_plate_mail,
-item_6e_dark_plate_mail,
-item_6f_plate_mail_of_protect,
-item_70_eternal_plate_mail,
-item_71_devil_plate_mail,
-item_72_holy_plate_mail,
-item_73_full_plate,
-item_87_swift_gauntlet,
-item_88_deadly_gauntlet,
-item_89_arm_guard,
-item_8a_arm_guard_of_composure,
-item_8b_deadly_arm_guard,
-item_8c_master_arm_guard,
-item_95_caustic_steel_boots,
-item_96_swift_steel_boots,
-item_9e_leg_guard_of_protect,
-item_9f_caustic_leg_guard,
-item_a0_holy_leg_guard,
-item_ae_shining_great_shield,
-item_af_dark_great_shield,
-item_b0_deadly_great_shield,
-item_b4_harden_tower_shield,
-item_b5_tower_shield_of_protect,
-item_b6_caustic_tower_shield,
-item_b9_gothic_shield,
-item_ba_harden_gothic_shield,
-item_bb_gothic_shield,
-item_bc_gothic_shield_of_resist,
-item_bd_gothic_shield_of_honor,
-item_be_gothic_shield_of_balance,
-item_c9_summoner_ring_of_frost,
-item_ca_summoner_ring_of_frost,
-item_cb_balance_ring_of_frost,
-item_cc_priest_ring_of_frost,
-item_cd_sorcerer_ring_of_frost,
-item_ce_soul_ring,
-item_cf_soul_ring,
-item_d0_holy_ring_of_resist,
-item_d1_holy_ring_of_priest,
-item_d2_holy_ring,
-item_d3_dark_ring,
-item_d4_dark_ring,
-item_d5_dark_priest_ring,
-item_d6_dark_sorcerer_ring,
-item_da_sorcerer_ring_of_poison,
-item_db_caustic_ring,
-item_dc_caustic_ring,
-item_dd_caustic_priest_ring,
-item_de_caustic_sorcerer_ring,
-item_df_ring_of_desire,
-item_e0_ring_of_ice,
-item_e1_ring_of_dark_souls,
-item_e2_black_ring,
-item_e3_ring_of_seal,
-item_e5_ring_of_rage,
-item_e6_ring_of_drain,
-item_eb_bracelet_of_curing,
-item_ec_bracelet_of_recovery,
-item_ed_mind_bracelet,
-item_ee_mighty_ring,
-item_ef_deadly_bracelet,
-item_f0_guardian_bracelet,
-item_f1_sorcerer_bracelet,
-item_f2_priest_bracelet,
-item_f8_holy_bracelet,
-item_fb_magical_amulet,
-item_10a_cune,
-item_110_fiery_key,
-item_111_kings_key,
-item_112_key_of_knowledge,
-item_113_beast_key,
-item_114_floodgate_key,
-item_115_mermaid_key,
-item_116_key_of_delusion,
-item_117_brass_key,
-item_118_iron_key,
-item_11c_healing_potion,
-item_11d_magic_potion,
-item_11e_anti_venom,
-item_11f_anti_paralytic,
-item_120_divine_symbol,
-item_122_evil_eye,
-item_123_fire_world_stone,
-item_124_poison_vaccine,
-item_125_dust_of_rage,
-item_126_bottle_of_light,
-item_127_acid_vaccine,
-item_128_spirit_book,
-item_129_sealed_sword_stone,
-item_12a_young_dragon_gem,
-item_12c_pitcher_of_nadya_hp,
-item_12d_pitcher_of_nadya_mp,
-item_12e_dorados_ashes,
-item_12f_spirit_key,
-item_130_blue_crystal,
-item_131_flaming_key,
-item_136_soul_pod_5_sp,
-item_137_soul_pod_53_sp,
-item_138_soul_pod_29_sp,
-item_139_soul_pod_14_sp];
+item_109_endless_amulet,item_58_fortune_great_helm,item_45_fiery_bow_gun,item_e4_ring_of_dead_spirit,item_f9_king_bracelet,item_fa_moon_bracelet,item_c_shadow_blade,item_17_dragon_sword,item_b3_tower_shield_of_honor,
+item_c9_summoner_ring_of_frost,item_ca_summoner_ring_of_frost,item_cb_balance_ring_of_frost,item_cc_priest_ring_of_frost,item_cd_sorcerer_ring_of_frost,item_ce_soul_ring,
+item_76_god_plate,item_78_knight_plate_mail,item_31_blood_sword,
+item_77_plate_mail_of_rage,item_25_magical_bastard_sword,item_3e_living_axe,
+item_137_soul_pod_53_sp,item_12c_pitcher_of_nadya_hp,item_12d_pitcher_of_nadya_mp,item_110_fiery_key,item_111_kings_key,item_112_key_of_knowledge,item_137_soul_pod_53_sp,item_113_beast_key,item_114_floodgate_key,item_115_mermaid_key,item_116_key_of_delusion,item_137_soul_pod_53_sp,item_117_brass_key,item_118_iron_key,item_129_sealed_sword_stone,item_12a_young_dragon_gem,item_137_soul_pod_53_sp,item_12e_dorados_ashes,item_12f_spirit_key,item_130_blue_crystal,item_131_flaming_key,
+item_bf_master_gothic_shield,item_c1_gothic_shield_of_rage,item_c2_shinning_gothic_shield,item_c3_holy_gothic_shield,
+item_44_bow_gun,item_43_warrior_bow,item_42_bow,item_d_shadow_wolf,item_e_shadow_tiger,item_c0_gothic_shield_of_power,item_1a_lethal_bastard_sword,item_1b_swift_bastard_sword,item_1c_keenest_bastard_sword,item_1d_crushing_bastard_sword,item_1e_fiery_bastard_sword,item_20_shining_bastard_sword,item_23_guardian_bastard_sword,item_24_dark_sword,item_26_righteous_sword,item_2a_swift_great_sword,item_2c_deadly_great_sword,item_2d_keenest_great_sword,item_2e_crushing_great_sword,item_2f_mighty_great_sword,item_30_guardian_great_sword,
+item_4b_wizard_crown,item_4c_devil_crown,item_52_full_helm_of_curing,item_57_harden_great_helm,item_59_mystic_great_helm,item_5a_holy_great_helm,
+item_cf_soul_ring,item_d0_holy_ring_of_resist,item_d1_holy_ring_of_priest,item_d2_holy_ring,item_d3_dark_ring,item_d4_dark_ring,item_d5_dark_priest_ring,
+item_d6_dark_sorcerer_ring,item_da_sorcerer_ring_of_poison,item_db_caustic_ring,item_dc_caustic_ring,item_dd_caustic_priest_ring,
+item_de_caustic_sorcerer_ring,item_df_ring_of_desire,item_e0_ring_of_ice,item_e1_ring_of_dark_souls,item_e2_black_ring,item_e3_ring_of_seal,item_e5_ring_of_rage,item_e6_ring_of_drain,
+item_6d_shining_plate_mail,item_6e_dark_plate_mail,item_6f_plate_mail_of_protect,item_70_eternal_plate_mail,item_71_devil_plate_mail,item_72_holy_plate_mail,item_73_full_plate,item_87_swift_gauntlet,item_88_deadly_gauntlet,item_8b_deadly_arm_guard,item_8c_master_arm_guard,item_96_swift_steel_boots,item_9e_leg_guard_of_protect,item_a0_holy_leg_guard,item_ae_shining_great_shield,item_af_dark_great_shield,item_b0_deadly_great_shield,item_b4_harden_tower_shield,item_b5_tower_shield_of_protect,item_b6_caustic_tower_shield,item_b9_gothic_shield,item_ba_harden_gothic_shield,item_bb_gothic_shield,item_bc_gothic_shield_of_resist,item_bd_gothic_shield_of_honor,item_be_gothic_shield_of_balance,item_eb_bracelet_of_curing,item_ec_bracelet_of_recovery,item_ed_mind_bracelet,item_ee_mighty_ring,item_ef_deadly_bracelet,item_f0_guardian_bracelet,item_f1_sorcerer_bracelet,item_f2_priest_bracelet,item_f8_holy_bracelet,item_fb_magical_amulet
+];
 
 //for (var i = 0; i < SPAWN_ENTRIES_COUNT; i++) {
 //	var spawn = human_world_cursed_region.spawns[i];
@@ -593,7 +454,8 @@ function applyDifficultyForEachValidCreature(creature, area, index) {
     creature.par.set(Math.min(256, Math.floor(creature.par.get() * creatureAttributeFactor)));
     creature.mel.set(Math.min(256, Math.floor(creature.mel.get() * creatureAttributeFactor)));
     creature.sol.set(Math.min(256, Math.floor(creature.sol.get() * creatureAttributeFactor)));
-    creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
+	//It is too much, makes the game to take too long
+    //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
 }
 
 function applyDifficultyForEachItem(item) {
@@ -616,9 +478,8 @@ function applyDifficultyForEachItem(item) {
 
 	item.weight.set(Math.floor(item.weight.get()/equipsAttributeFactor));
 
-	//It is too much, makes the game unplayable
-    //item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
-    //item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
+	item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
+    item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
 }
 
 forEachCreatureSpawn=presetDirectivesforEachCreatureSpawn;
