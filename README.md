@@ -29,8 +29,8 @@ npm run mod "ShadowTowerExtractedFolder"
 
 # Example
 
-7z x -y -o"C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)\ShadowTowerExtractedFolder" "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)\ShadowTower.iso"
+7z x -y -o"C:\Users\fred\Downloads\ShadowTowerExtractedFolder" "C:\Users\fred\Downloads\ShadowTower.iso"
 
-npm run mod "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)\ShadowTowerExtractedFolder"
+npm run mod "C:\Users\fred\Downloads\ShadowTowerExtractedFolder"
 
-7z a -tiso "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)\ShadowTowerModified.iso" "C:\Users\fred\Downloads\Shadow Tower (U)(Undub v1.0)\ShadowTowerExtractedFolder\*"
+7z a -tiso "C:\Users\fred\Downloads\ShadowTowerModified.iso" "C:\Users\fred\Downloads\ShadowTowerExtractedFolder\*"

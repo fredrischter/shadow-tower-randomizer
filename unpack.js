@@ -11,10 +11,8 @@ if (!file || !file.endsWith(".T")) {
   return;
 }
 
-for (var c = 2; c < process.argv.length; c++) {
-	var tfile = new TFILEReader(file).readTFormat();
-	tfile.writeParts();
-}
+var tfile = new TFILEReader(file).readTFormat();
+tfile.writeParts();
 
 }
 

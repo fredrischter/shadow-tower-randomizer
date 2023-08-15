@@ -260,7 +260,7 @@ class TFormat {
       });
 
     } else {
-      fs.rmdirSync(this.partsFolderName, { recursive: true, force: true });
+      //fs.rmdirSync(this.partsFolderName, { recursive: true, force: true });
       fs.mkdirSync(this.partsFolderName);
       for (var i = 0 ; i < this.files.length ; i++) {
         this.files[i].write();
