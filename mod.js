@@ -24,7 +24,7 @@ const onlyPath = path.dirname(file);
 const onlyFileName = path.basename(file);
 
 const productPath = onlyPath + path.sep + params.label;
-const outputImage = productPath + path.sep + onlyFileName;
+const outputImage = productPath + path.sep + 'modified-' + params.label + '-' + onlyFileName;
 const extractedPath = productPath + path.sep + 'extracted';
 const spoilersPath = productPath + path.sep + 'spoilers';
 const xmlDescriptor = onlyPath + path.sep + 'st.xml';
@@ -47,24 +47,25 @@ function exec(cmd, callback) {
 
 exec(dumpiso, function() {
 
-	var tFile=extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
+	var tFile = extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
 	exec('npm run unpack "'+tFile+'"', function() {
 
 		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"', function() {
 
-			const change = require('./change');
-			change(spoilersPath + path.sep + "changeset.json");
+			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 
-			const pack = require('./pack');
-			pack(tFile);
+				const pack = require('./pack');
+				pack(tFile);
 
-			const mkiso = 'mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"';
-			console.log("Running " + mkiso);
+				const mkiso = 'mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"';
+				console.log("Running " + mkiso);
 
-			exec(mkiso, function() {
-				console.log("Finished, output " + outputImage);
-				console.log("Extraced modified files " + extractedPath);
-				console.log("Spoilers " + spoilersPath);
+				exec(mkiso, function() {
+					console.log("Finished, output " + outputImage);
+					console.log("Extraced modified files " + extractedPath);
+					console.log("Spoilers " + spoilersPath);
+				});
+	
 			});
 
 		});

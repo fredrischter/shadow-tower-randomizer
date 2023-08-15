@@ -12,11 +12,11 @@ You'll end up with programs available mkpsxiso and dumpsxiso.
 
 Refer to ./site/index.html for features listing.
 
-Current version works with ISO files. So if you have BIN/CUE files instead, you need to convert to ISO using tool such as WinISO.
-
 # Contact
 
 fredrischter at gmail dot com
+
+FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
 
 # Run manually
 
