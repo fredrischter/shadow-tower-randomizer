@@ -302,6 +302,7 @@ item_139_soul_pod_14_sp];
 //	human_world_solitary_region.creatures[i].maxPresence.set(1);
 //}
 
+/*
 human_world_solitary_region.spawns[5].set(human_world_solitary_region.spawns[2]);
 human_world_solitary_region.spawns[6].set(human_world_solitary_region.spawns[5]);
 human_world_solitary_region.spawns[7].set(human_world_solitary_region.spawns[5]);
@@ -328,6 +329,7 @@ for (var i = 1; i<SPAWN_ENTRIES_COUNT; i++) {
 		human_world_solitary_region.spawns[i].blank();
 	}
 }
+*/
 
 // copy magical sword into short sword
 /*binCopy(tfile.files[ITEM_DATA_PART_FILE_INDEX].bin, 
