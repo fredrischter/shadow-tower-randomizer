@@ -130,11 +130,11 @@
 			</form>
 
 			<ul style="font-size: 0.5em;">
-				<li>Easy - 100% more drops, 50% enemy stats.</li>
+				<li>Easy - 100% more drops, and higher equip stats, 50% enemy stats.</li>
 				<li>Medium - same levels as the regular game.</li>
-				<li>Hard - 50% less items found, 50% less drops, 100% higher enemy stats.</li>
-				<li>Very hard - 80% less items found, 80% less drops, 200% higher enemy stats.</li>
-				<li>Even harder - 95% less items, 95% less drops, 300% enemy stats.</li>
+				<li>Hard - 50% less items and lower equip stats, 100% higher enemy stats.</li>
+				<li>Very hard - 66% less items found and lower equip stats, 200% higher enemy stats.</li>
+				<li>Even harder - 75% less items and lower equip stats, 300% higher enemy stats</li>
 			</ul>
 
 			<form style="margin-top: 1em;">
@@ -167,14 +167,14 @@
 				</div>
 			</form>
 			<ul style="font-size: 0.5em;">
-				<li>Any% challenge - Equips and creatures randomness is higher, so some may be difficult to get.. difficulty easy, random equips increased, creatures crazy, progressiveness increased. spawn rate medium, amplitude absolute-anywhere, style random position. key drops Fire World, Ilusionists illusion-world</li>
-				<li>100% challenge - Equips have high chance to drop. Enemies have high chance to spawn. difficulty easy, random equips increased, creatures increased, progressiveness medium. spawn rate predictable, amplitude within-world, style random position. key drops Ashen Cavern, Illusionists worship-area</li>
-				<li>Scary Game - Highest randomness and unpredictability. difficulty hard, random equips crazy, creatures crazy, progressiveness flat. spawn rate crazy-king-hopper-like, amplitude absolute-anywhere, style crazy-may-not-work. key drops anywhere, illusionists anywhere</li>
-				<li>Stable - Randomizes mostly by shuffling. difficulty medium, random equips only-swap, creatures only-swap , progressiveness flat. spawn rate only-swap, amplityde anywhere-within-world, style only-swap. key drops keep on cerberus, illusionists no-change</li>
-				<li>Comedy - Creatures lifted on air. Drop pitcher of Nadya filled up. Two or more creatures spawns same position. Doors removed. Set everything to crazy config. Equips drop much increased. Lot of drop Nadya jars and keys in the beginning.</li>
-				<li>Bonanza - Plenty of nice drops very soon in the game.</li>
-				<li>Only fix King Hopper - Only fix rare spawns. Change low chance spawns into 100% spawn chance.</li>
-				<li>Only directives - Doesn't randomize or change the game order, creatures. Only "fix" for completion, applying directives. Make possible to complete game 100% after one play through without having to mule equips using vs mode into new game. As downside, also apply the directive to havo no HP or MP recovery in the game.</li>
+				<li>Any% random challenge - Best recommended randomized game, not able to complete 100% equips collect.</li>
+				<li>100% random challenge - Much more items are available, making it possible to complete 100% of the game in one run.</li>
+				<li>Scary Game - Highest randomness, unpredictability and difficulty. Stability is compromised in favor of horror.</li>
+				<li>Stable - Mild randomization and difficulty in order to keep game reasonable to play.</li>
+				<li>Comedy - Creatures may spawn in bizarre positions. You'll find keys, filled Nadya pitchers and some nice equips in the beginning.</li>
+				<li>Bonanza - All of the nice drops very soon in the game (full armors and other rare and strong equips). It may corrupt textures or be unstable since all that is memory intensive.</li>
+				<li>Only fix King Hopper - Only fix King Hopper spawn, that is just broken in regular game, where if you miss the chance it never spawns.</li>
+				<li>Only directives - Doesn't randomize or change the game order, creatures. Only "fix" for modernization, applying directives. Read about directives in directives tab.</li>
 			</ul>
 
 		</div>
@@ -343,7 +343,7 @@
 				</div>
 			</form>
 			<ul style="font-size: 0.5em;">
-				<li>Flat - Po progressiveness, all areas have the same level of difficulty, that is the game average.</li>
+				<li>Flat - No progressiveness, all areas have the same level of difficulty, that is the game average.</li>
 				<li>Medium - Similar to the game progressivity: every area goes about 10% harder than previous.</li>
 				<li>Increased - Game starts 3x easier and ends 3x harder. Recommended to enhance the game positive feedback on collecting items in early game.</li>
 				<li>Crazy - Progressiveness is chaotic, each area is decided to be from 10x easier to 10x harder individually.</li>
@@ -419,15 +419,15 @@
 
 					<h3>All equips</h3>
 					<div id="all-equips-radioset">
-						<input type="radio" id="all-equips-radio1" name="radio" checked="checked"><label for="all-equips-radio1">
+						<input type="radio" id="all-equips-radio1" name="radio"><label for="all-equips-radio1">
 							Yes
 						</label>
-						<input type="radio" id="all-equips-radio2" name="radio"><label for="all-equips-radio2">
+						<input type="radio" id="all-equips-radio2" name="radio" checked="checked"><label for="all-equips-radio2">
 							No
 						</label>
 					</div>
 					<p style="font-size: 0.5em;">
-						Possibility to complete all items in one game play. It makes much more equips to be dropped, so as consequence you'll have much more, durability will be reduced and will have less drops of consumables.
+						Possibility to complete all items in one game play. It makes much more equips to be dropped.
 					</p>
 
 				</form>
@@ -464,6 +464,9 @@
 		<p>"Only swap" option for each parameter makes no random generation but just swapping, so it is guarenteed that you don't get weird numbers, may be the safer way to play if the randomness gets non-reliable.</p>
 		<p>From the recipe it is generated a changeset file (this is the one to be given to other people in order for them to reproduce the exact same output without knowing the spoilers). It can be uploaded for applying to iso again. When it applies, it's checksum is also applied to display in the initial short sword description.<p>
 			<p>Randomization produces a intermediary Recipe, that contains the readable information of all random set that are intended to be performed. You can also download, change and upload it to do your own customized changes in the game.</p>
+
+			<p>In-game creature book stats displayed are not changed, while the actual effective data in game is changed. So it is fair to provide creature_book.txt for the player, to even read in advance to know the stats and play accordingly.</p>
+
 			<p>I expect to implement also enemy walk speed and attack cooldown time randomization, as well as capability of adding more creatures spawn and items found than the regular game, but as additional features since these seem to be more complex to do.</p>
 
 			<h3>Game play</h3>
@@ -475,14 +478,14 @@
 			<p>To beat the game, you still need to kill all world bosses. They are in their original areas.
 			For Desguise to spawn you still need to defeat the ilusionists first.</p>
 
-			<p>Bosses and event-related creatures are not randomized.</p>
+			<p>Bosses and NPCs creatures are not randomized.</p>
 		</div>
 
 		<h3>Credits</h3>
 
-		<p>Credits Thanks to the FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd) for providing knowledge base about From Software PSX games.</p>
+		<p>Thanks to the FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd) for providing knowledge base about From Software PSX games.</p>
 
-		<p>Also thanks for people who contributed with ideas, data and testing. Thanks to Lucifer65535 by items reference provided here https://gamefaqs.gamespot.com/ps/198605-shadow-tower/faqs/72621 and to martin korth for no$psx, used for testing during mod development.</p>
+		<p>Also thanks for people who contributed with ideas, data and testing. Thanks to Lucifer65535 and David Bunch for online walkthroughs that made it easier to understand the game data and double check as I went finding data during the development. Thanks to martin korth for no$psx, used for testing during mod development.</p>
 
 		<h3>Disclaimer</h3>
 
@@ -490,7 +493,7 @@
 
 		<p>This tool development had purely educational purpose, not having any commercial usage. Usage and modification is absolutely allowed for any legal activity. We don't promote piracy or any other illegal activity.</p>
 
-		<p>This software is totally free for anyone to use, modify, distribute and everything else. If you use it for any online content (such as news, indexing, streaming) I'd thank if you mention author Fredo Rischter, and link to github repo https://github.com/fredrischter/shadow-tower-randomizer and the FromSoft Modding Committee.</p>
+		<p>This software is totally free for anyone to use, modify, distribute and everything else. If you use it for any online content (such as news, indexing, streaming) I'd thank if you mention author Fredo Rischter, and link to github repo https://github.com/fredrischter/shadow-tower-randomizer and to the FromSoft Modding Committee.</p>
 
 		<h3>Contact</h3>
 
