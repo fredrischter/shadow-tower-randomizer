@@ -25,27 +25,35 @@ const onlyFileName = path.basename(file);
 
 const productPath = onlyPath + path.sep + params.label;
 const outputImage = productPath + path.sep + 'modified-' + params.label + '-' + onlyFileName;
+//const outputCue = productPath + path.sep + 'modified-' + params.label + '-' + onlyFileName.split(".")[0] + '.cue';
 const extractedPath = productPath + path.sep + 'extracted';
 const spoilersPath = productPath + path.sep + 'spoilers';
 const xmlDescriptor = onlyPath + path.sep + 'st.xml';
 const paramsFile = spoilersPath + path.sep + "params.json";
 
-fs.rmdirSync(productPath, { recursive: true });
+if (fs.existsSync(productPath)) {
+	fs.rmdirSync(productPath, { recursive: true });
+}
 fs.mkdirSync(productPath);
 fs.mkdirSync(spoilersPath);
 
 fs.copyFileSync(originalParamsFile, paramsFile);
 
-const dumpiso = 'dumpsxiso.exe "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"';
-console.log("Running "+dumpiso);
-
 function exec(cmd, callback) {
+	console.log("Running " + cmd);
 	var child = child_process.exec(cmd);
 	child.stdout.pipe(process.stdout);
-	child.on('exit', callback);
+	child.stderr.pipe(process.stderr);
+	child.on('exit', function(err) {
+		if (err) {
+			console.log("Step finished with error " + err);
+			return;
+		}
+		callback();
+	});
 }
 
-exec(dumpiso, function() {
+exec('dumpsxiso.exe "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"', function() {
 
 	var tFile = extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
 	exec('npm run unpack "'+tFile+'"', function() {
@@ -54,16 +62,14 @@ exec(dumpiso, function() {
 
 			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 
-				const pack = require('./pack');
-				pack(tFile);
+				exec('npm run pack "'+tFile+'"', function() {
 
-				const mkiso = 'mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"';
-				console.log("Running " + mkiso);
-
-				exec(mkiso, function() {
-					console.log("Finished, output " + outputImage);
-					console.log("Extraced modified files " + extractedPath);
-					console.log("Spoilers " + spoilersPath);
+					exec('mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
+						console.log("Finished, output " + outputImage);
+						console.log("Extraced modified files " + extractedPath);
+						console.log("Spoilers " + spoilersPath);
+					});
+				
 				});
 				
 			});

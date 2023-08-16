@@ -25,6 +25,7 @@ function randomize(paramsFile, stDir) {
 		return;
 	}
 
+	const PRESET_NO_CHANGE="no-change";
 	const PRESET_ONLY_FIX_KING_HOPPER="only-fix-king-hopper";
 	const PRESET_ONLY_APPLY_DIRECTIVES="only-apply-directives";
 	const DIFFICULTY_EASY="easy";
@@ -420,7 +421,7 @@ function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
 }
 
 function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
-	console.log("Setting spawn change to 100% and fixing mutex group, creature " + spawn.creature.name);
+	console.log("Setting spawn change to 100% , creature " + spawn.creature.name);
 	spawn.chance.set(100);
 	if (!spawn.drop1.isNull()) {
 		spawn.drop1Chance.set(100);
@@ -452,12 +453,16 @@ function presetDirectivesforEachItem(item) {
 	}
 }
 
+if (params.preset == PRESET_NO_CHANGE) {
+
+}
+
 // ------- PRESET King hopper
 
 if (params.preset == PRESET_ONLY_FIX_KING_HOPPER) {
+	forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
 }
 // Always do
-forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
 
 /*
 forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
@@ -465,6 +470,7 @@ forEachCreatureSpawn = presetKingHopperFixforEachCreatureSpawn;
 // ------- PRESET Directives
 
 if (params.preset == PRESET_ONLY_APPLY_DIRECTIVES) {
+	forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
 	forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
 	forEachItem.push(presetDirectivesforEachItem);
 }
@@ -477,7 +483,6 @@ var equipsAttributeFactor=1/factorByDificultyParam[params.difficulty];
 var creatureAttributeFactor=factorByDificultyParam[params.difficulty];
 
 function applyDifficultyForEachValidCreature(creature, area, index) {
-	console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name);
 	creature.str.set(Math.min(256, Math.floor(creature.str.get() * creatureAttributeFactor)));
 	creature.spd.set(Math.min(256, Math.floor(creature.spd.get() * creatureAttributeFactor)));
 	creature.def.set(Math.min(256, Math.floor(creature.def.get() * creatureAttributeFactor)));
@@ -492,35 +497,38 @@ function applyDifficultyForEachValidCreature(creature, area, index) {
 	creature.par.set(Math.min(256, Math.floor(creature.par.get() * creatureAttributeFactor)));
 	creature.mel.set(Math.min(256, Math.floor(creature.mel.get() * creatureAttributeFactor)));
 	creature.sol.set(Math.min(256, Math.floor(creature.sol.get() * creatureAttributeFactor)));
+
+	console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get()+" spd " + creature.spd.get()+" def " + creature.def.get()+" bal " + creature.bal.get()+" sla " + creature.sla.get()+" smh " + creature.smh.get()+" pir " + creature.pir.get()+" spr " + creature.spr.get()+" foc " + creature.foc.get()+" ham " + creature.ham.get()+" pur " + creature.pur.get()+" par " + creature.par.get()+" mel " + creature.mel.get()+" sol " + creature.sol.get());
 	//It is too much, makes the game to take too long
     //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
 }
 
 function applyDifficultyForEachItem(item) {
-	console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name);
-	item.str.set(Math.floor(item.str.get()*equipsAttributeFactor));
-	item.spd.set(Math.floor(item.spd.get()*equipsAttributeFactor));
-	item.def.set(Math.floor(item.def.get()*equipsAttributeFactor));
-	item.bal.set(Math.floor(item.bal.get()*equipsAttributeFactor));
-	item.sla.set(Math.floor(item.sla.get()*equipsAttributeFactor));
-	item.smh.set(Math.floor(item.smh.get()*equipsAttributeFactor));
-	item.pir.set(Math.floor(item.pir.get()*equipsAttributeFactor));
-	item.spr.set(Math.floor(item.spr.get()*equipsAttributeFactor));
-	item.foc.set(Math.floor(item.foc.get()*equipsAttributeFactor));
-	item.ham.set(Math.floor(item.ham.get()*equipsAttributeFactor));
-	item.pur.set(Math.floor(item.pur.get()*equipsAttributeFactor));
-	item.par.set(Math.floor(item.par.get()*equipsAttributeFactor));
-	item.mel.set(Math.floor(item.mel.get()*equipsAttributeFactor));
-	item.sol.set(Math.floor(item.sol.get()*equipsAttributeFactor));
-	item.hp.set(Math.floor(item.hp.get()*equipsAttributeFactor));
+	item.str.set(Math.min(256, Math.floor(item.str.get()*equipsAttributeFactor)));
+	item.spd.set(Math.min(256, Math.floor(item.spd.get()*equipsAttributeFactor)));
+	item.def.set(Math.min(256, Math.floor(item.def.get()*equipsAttributeFactor)));
+	item.bal.set(Math.min(256, Math.floor(item.bal.get()*equipsAttributeFactor)));
+	item.sla.set(Math.min(256, Math.floor(item.sla.get()*equipsAttributeFactor)));
+	item.smh.set(Math.min(256, Math.floor(item.smh.get()*equipsAttributeFactor)));
+	item.pir.set(Math.min(256, Math.floor(item.pir.get()*equipsAttributeFactor)));
+	item.spr.set(Math.min(256, Math.floor(item.spr.get()*equipsAttributeFactor)));
+	item.foc.set(Math.min(256, Math.floor(item.foc.get()*equipsAttributeFactor)));
+	item.ham.set(Math.min(256, Math.floor(item.ham.get()*equipsAttributeFactor)));
+	item.pur.set(Math.min(256, Math.floor(item.pur.get()*equipsAttributeFactor)));
+	item.par.set(Math.min(256, Math.floor(item.par.get()*equipsAttributeFactor)));
+	item.mel.set(Math.min(256, Math.floor(item.mel.get()*equipsAttributeFactor)));
+	item.sol.set(Math.min(256, Math.floor(item.sol.get()*equipsAttributeFactor)));
+	item.hp.set(Math.min(256, Math.floor(item.hp.get()*equipsAttributeFactor)));
+	item.weight.set(Math.min(256, Math.floor(item.weight.get()/equipsAttributeFactor)));
+	item.max_dura.set(Math.min(256, Math.floor(item.max_dura.get()*equipsAttributeFactor)));
+	item.dura.set(Math.min(256, Math.floor(item.dura.get()*equipsAttributeFactor)));
 
-	item.weight.set(Math.floor(item.weight.get()/equipsAttributeFactor));
-
-	item.max_dura.set(Math.floor(item.max_dura.get()*equipsAttributeFactor));
-	item.dura.set(Math.floor(item.dura.get()*equipsAttributeFactor));
+	console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str "+item.str.get()+" spd "+item.spd.get()+" def "+item.def.get()+" bal "+item.bal.get()+" sla "+item.sla.get()+" smh "+item.smh.get()+" pir "+item.pir.get()+" spr "+item.spr.get()+" foc "+item.foc.get()+" ham "+item.ham.get()+" pur "+item.pur.get()+" par "+item.par.get()+" mel "+item.mel.get()+" sol "+item.sol.get()+" hp "+item.hp.get()+" weight "+item.weight.get()+" max_dura "+item.max_dura.get()+
+" dura "+item.dura.get());
 }
 
-if (params.difficulty != DIFFICULTY_MEDIUM) {
+if (params.difficulty && params.difficulty != DIFFICULTY_MEDIUM) {
+	forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
 	forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
 	forEachValidCreature.push(applyDifficultyForEachValidCreature);
 	forEachItem.push(applyDifficultyForEachItem);

@@ -246,7 +246,7 @@ class TFormat {
 
     if (callback) {
       var finishedCount = 0;
-      fs.rmdir(this.partsFolderName, { recursive: true, force: true }, (err) => {
+      fs.rm(this.partsFolderName, { recursive: true, force: true }, (err) => {
         fs.mkdir(this.partsFolderName, (err) => {
           for (var i = 0 ; i < this.files.length ; i++) {
             this.files[i].write((err) => {
