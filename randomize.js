@@ -8,8 +8,10 @@ const util = require('util');
 
 function randomize(paramsFile, stDir) {
 
-    const logFileRandomize = fs.createWriteStream(stDir + path.sep + 'randomize.log', { flags: 'w+' });
-    console.log = function () {
+    const logFileRandomize = fs.createWriteStream(stDir + path.sep + 'randomize.log', {
+        flags: 'w+'
+    });
+    console.log = function() {
         logFileRandomize.write(util.format.apply(null, arguments) + '\n');
     }
 
@@ -25,31 +27,33 @@ function randomize(paramsFile, stDir) {
         return;
     }
 
-    const PRESET_NO_CHANGE="no-change";
-    const PRESET_ONLY_FIX_KING_HOPPER="only-fix-king-hopper";
-    const PRESET_ONLY_APPLY_DIRECTIVES="only-apply-directives";
-    const DIFFICULTY_EASY="easy";
-    const DIFFICULTY_MEDIUM="medium";
-    const DIFFICULTY_HARD="hard";
-    const DIFFICULTY_VERY_HARD="very-hard";
-    const DIFFICULTY_EVEN_HARDER="even-harder";
+    const PRESET_NO_CHANGE = "no-change";
+    const PRESET_ONLY_FIX_KING_HOPPER = "only-fix-king-hopper";
+    const PRESET_ONLY_APPLY_DIRECTIVES = "only-apply-directives";
+    const DIFFICULTY_EASY = "easy";
+    const DIFFICULTY_MEDIUM = "medium";
+    const DIFFICULTY_HARD = "hard";
+    const DIFFICULTY_VERY_HARD = "very-hard";
+    const DIFFICULTY_EVEN_HARDER = "even-harder";
 
     var factorByDificultyParam = {
-        "easy" : 0.5,
-        "medium" : 1,
-        "hard" : 2,
-        "very-hard" : 3,
-        "even-harder" : 4
+        "easy": 0.5,
+        "medium": 1,
+        "hard": 2,
+        "very-hard": 3,
+        "even-harder": 4
     };
 
     let params = JSON.parse(fs.readFileSync(paramsFile));
     let changeSetPath = path.dirname(paramsFile);
     let changeSetFile = changeSetPath + path.sep + "changeset.json"
-    console.log("changeSetFile "+changeSetFile);
+    console.log("changeSetFile " + changeSetFile);
     console.log(params);
 
-    const logFile2 = fs.createWriteStream(stDir + path.sep + 'readable.log', { flags: 'w+' });
-    console.log = function () {
+    const logFile2 = fs.createWriteStream(stDir + path.sep + 'readable.log', {
+        flags: 'w+'
+    });
+    console.log = function() {
         logFile2.write(util.format.apply(null, arguments) + '\n');
     }
 
@@ -67,7 +71,8 @@ function randomize(paramsFile, stDir) {
         for (var i in creature1.modelFiles) {
             changeSet.push({
                 "fileSwap": {
-                    "file1": creature1.modelFiles[i], "file2": creature2.modelFiles[i]
+                    "file1": creature1.modelFiles[i],
+                    "file2": creature2.modelFiles[i]
                 }
             });
         }
@@ -82,18 +87,18 @@ function randomize(paramsFile, stDir) {
     }
 
     var goodItems = [
-        item_109_endless_amulet,item_58_fortune_great_helm,item_45_fiery_bow_gun,item_e4_ring_of_dead_spirit,item_f9_king_bracelet,item_fa_moon_bracelet,item_c_shadow_blade,item_17_dragon_sword,item_b3_tower_shield_of_honor,
-        item_c9_summoner_ring_of_frost,item_ca_summoner_ring_of_frost,item_cb_balance_ring_of_frost,item_cc_priest_ring_of_frost,item_cd_sorcerer_ring_of_frost,item_ce_soul_ring,
-        item_76_god_plate,item_78_knight_plate_mail,item_31_blood_sword,
-        item_77_plate_mail_of_rage,item_25_magical_bastard_sword,item_3e_living_axe,
-        item_137_soul_pod_53_sp,item_12c_pitcher_of_nadya_hp,item_12d_pitcher_of_nadya_mp,item_110_fiery_key,item_111_kings_key,item_112_key_of_knowledge,item_137_soul_pod_53_sp,item_113_beast_key,item_114_floodgate_key,item_115_mermaid_key,item_116_key_of_delusion,item_137_soul_pod_53_sp,item_117_brass_key,item_118_iron_key,item_129_sealed_sword_stone,item_12a_young_dragon_gem,item_137_soul_pod_53_sp,item_12e_dorados_ashes,item_12f_spirit_key,item_130_blue_crystal,item_131_flaming_key,
-        item_bf_master_gothic_shield,item_c1_gothic_shield_of_rage,item_c2_shinning_gothic_shield,item_c3_holy_gothic_shield,
-        item_44_bow_gun,item_43_warrior_bow,item_42_bow,item_d_shadow_wolf,item_e_shadow_tiger,item_c0_gothic_shield_of_power,item_1a_lethal_bastard_sword,item_1b_swift_bastard_sword,item_1c_keenest_bastard_sword,item_1d_crushing_bastard_sword,item_1e_fiery_bastard_sword,item_20_shining_bastard_sword,item_23_guardian_bastard_sword,item_24_dark_sword,item_26_righteous_sword,item_2a_swift_great_sword,item_2c_deadly_great_sword,item_2d_keenest_great_sword,item_2e_crushing_great_sword,item_2f_mighty_great_sword,item_30_guardian_great_sword,
-        item_4b_wizard_crown,item_4c_devil_crown,item_52_full_helm_of_curing,item_57_harden_great_helm,item_59_mystic_great_helm,item_5a_holy_great_helm,
-        item_cf_soul_ring,item_d0_holy_ring_of_resist,item_d1_holy_ring_of_priest,item_d2_holy_ring,item_d3_dark_ring,item_d4_dark_ring,item_d5_dark_priest_ring,
-        item_d6_dark_sorcerer_ring,item_da_sorcerer_ring_of_poison,item_db_caustic_ring,item_dc_caustic_ring,item_dd_caustic_priest_ring,
-        item_de_caustic_sorcerer_ring,item_df_ring_of_desire,item_e0_ring_of_ice,item_e1_ring_of_dark_souls,item_e2_black_ring,item_e3_ring_of_seal,item_e5_ring_of_rage,item_e6_ring_of_drain,
-        item_6d_shining_plate_mail,item_6e_dark_plate_mail,item_6f_plate_mail_of_protect,item_70_eternal_plate_mail,item_71_devil_plate_mail,item_72_holy_plate_mail,item_73_full_plate,item_87_swift_gauntlet,item_88_deadly_gauntlet,item_8b_deadly_arm_guard,item_8c_master_arm_guard,item_96_swift_steel_boots,item_9e_leg_guard_of_protect,item_a0_holy_leg_guard,item_ae_shining_great_shield,item_af_dark_great_shield,item_b0_deadly_great_shield,item_b4_harden_tower_shield,item_b5_tower_shield_of_protect,item_b6_caustic_tower_shield,item_b9_gothic_shield,item_ba_harden_gothic_shield,item_bb_gothic_shield,item_bc_gothic_shield_of_resist,item_bd_gothic_shield_of_honor,item_be_gothic_shield_of_balance,item_eb_bracelet_of_curing,item_ec_bracelet_of_recovery,item_ed_mind_bracelet,item_ee_mighty_ring,item_ef_deadly_bracelet,item_f0_guardian_bracelet,item_f1_sorcerer_bracelet,item_f2_priest_bracelet,item_f8_holy_bracelet,item_fb_magical_amulet
+        item_109_endless_amulet, item_58_fortune_great_helm, item_45_fiery_bow_gun, item_e4_ring_of_dead_spirit, item_f9_king_bracelet, item_fa_moon_bracelet, item_c_shadow_blade, item_17_dragon_sword, item_b3_tower_shield_of_honor,
+        item_c9_summoner_ring_of_frost, item_ca_summoner_ring_of_frost, item_cb_balance_ring_of_frost, item_cc_priest_ring_of_frost, item_cd_sorcerer_ring_of_frost, item_ce_soul_ring,
+        item_76_god_plate, item_78_knight_plate_mail, item_31_blood_sword,
+        item_77_plate_mail_of_rage, item_25_magical_bastard_sword, item_3e_living_axe,
+        item_137_soul_pod_53_sp, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_137_soul_pod_53_sp, item_113_beast_key, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_137_soul_pod_53_sp, item_117_brass_key, item_118_iron_key, item_129_sealed_sword_stone, item_12a_young_dragon_gem, item_137_soul_pod_53_sp, item_12e_dorados_ashes, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key,
+        item_bf_master_gothic_shield, item_c1_gothic_shield_of_rage, item_c2_shinning_gothic_shield, item_c3_holy_gothic_shield,
+        item_44_bow_gun, item_43_warrior_bow, item_42_bow, item_d_shadow_wolf, item_e_shadow_tiger, item_c0_gothic_shield_of_power, item_1a_lethal_bastard_sword, item_1b_swift_bastard_sword, item_1c_keenest_bastard_sword, item_1d_crushing_bastard_sword, item_1e_fiery_bastard_sword, item_20_shining_bastard_sword, item_23_guardian_bastard_sword, item_24_dark_sword, item_26_righteous_sword, item_2a_swift_great_sword, item_2c_deadly_great_sword, item_2d_keenest_great_sword, item_2e_crushing_great_sword, item_2f_mighty_great_sword, item_30_guardian_great_sword,
+        item_4b_wizard_crown, item_4c_devil_crown, item_52_full_helm_of_curing, item_57_harden_great_helm, item_59_mystic_great_helm, item_5a_holy_great_helm,
+        item_cf_soul_ring, item_d0_holy_ring_of_resist, item_d1_holy_ring_of_priest, item_d2_holy_ring, item_d3_dark_ring, item_d4_dark_ring, item_d5_dark_priest_ring,
+        item_d6_dark_sorcerer_ring, item_da_sorcerer_ring_of_poison, item_db_caustic_ring, item_dc_caustic_ring, item_dd_caustic_priest_ring,
+        item_de_caustic_sorcerer_ring, item_df_ring_of_desire, item_e0_ring_of_ice, item_e1_ring_of_dark_souls, item_e2_black_ring, item_e3_ring_of_seal, item_e5_ring_of_rage, item_e6_ring_of_drain,
+        item_6d_shining_plate_mail, item_6e_dark_plate_mail, item_6f_plate_mail_of_protect, item_70_eternal_plate_mail, item_71_devil_plate_mail, item_72_holy_plate_mail, item_73_full_plate, item_87_swift_gauntlet, item_88_deadly_gauntlet, item_8b_deadly_arm_guard, item_8c_master_arm_guard, item_96_swift_steel_boots, item_9e_leg_guard_of_protect, item_a0_holy_leg_guard, item_ae_shining_great_shield, item_af_dark_great_shield, item_b0_deadly_great_shield, item_b4_harden_tower_shield, item_b5_tower_shield_of_protect, item_b6_caustic_tower_shield, item_b9_gothic_shield, item_ba_harden_gothic_shield, item_bb_gothic_shield, item_bc_gothic_shield_of_resist, item_bd_gothic_shield_of_honor, item_be_gothic_shield_of_balance, item_eb_bracelet_of_curing, item_ec_bracelet_of_recovery, item_ed_mind_bracelet, item_ee_mighty_ring, item_ef_deadly_bracelet, item_f0_guardian_bracelet, item_f1_sorcerer_bracelet, item_f2_priest_bracelet, item_f8_holy_bracelet, item_fb_magical_amulet
     ];
 
     let changeSet = [];
@@ -143,8 +148,8 @@ function randomize(paramsFile, stDir) {
         }
     }
 
-    var equipsAttributeFactor=1/factorByDificultyParam[params.difficulty];
-    var creatureAttributeFactor=factorByDificultyParam[params.difficulty];
+    var equipsAttributeFactor = 1 / factorByDificultyParam[params.difficulty];
+    var creatureAttributeFactor = factorByDificultyParam[params.difficulty];
 
     function applyDifficultyForEachValidCreature(creature, area, index) {
         creature.str.set(Math.min(256, Math.ceil(creature.str.get() * creatureAttributeFactor)));
@@ -162,33 +167,33 @@ function randomize(paramsFile, stDir) {
         creature.mel.set(Math.min(256, Math.ceil(creature.mel.get() * creatureAttributeFactor)));
         creature.sol.set(Math.min(256, Math.ceil(creature.sol.get() * creatureAttributeFactor)));
 
-        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get()+" spd " + creature.spd.get()+" def " + creature.def.get()+" bal " + creature.bal.get()+" sla " + creature.sla.get()+" smh " + creature.smh.get()+" pir " + creature.pir.get()+" spr " + creature.spr.get()+" foc " + creature.foc.get()+" ham " + creature.ham.get()+" pur " + creature.pur.get()+" par " + creature.par.get()+" mel " + creature.mel.get()+" sol " + creature.sol.get());
+        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get() + " spd " + creature.spd.get() + " def " + creature.def.get() + " bal " + creature.bal.get() + " sla " + creature.sla.get() + " smh " + creature.smh.get() + " pir " + creature.pir.get() + " spr " + creature.spr.get() + " foc " + creature.foc.get() + " ham " + creature.ham.get() + " pur " + creature.pur.get() + " par " + creature.par.get() + " mel " + creature.mel.get() + " sol " + creature.sol.get());
         //It is too much, makes the game to take too long
         //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
     }
 
     function applyDifficultyForEachItem(item) {
-        item.str.set(Math.min(100, Math.ceil(item.str.get()*equipsAttributeFactor)));
-        item.spd.set(Math.min(100, Math.ceil(item.spd.get()*equipsAttributeFactor)));
-        item.def.set(Math.min(100, Math.ceil(item.def.get()*equipsAttributeFactor)));
-        item.bal.set(Math.min(100, Math.ceil(item.bal.get()*equipsAttributeFactor)));
-        item.sla.set(Math.min(100, Math.ceil(item.sla.get()*equipsAttributeFactor)));
-        item.smh.set(Math.min(100, Math.ceil(item.smh.get()*equipsAttributeFactor)));
-        item.pir.set(Math.min(100, Math.ceil(item.pir.get()*equipsAttributeFactor)));
-        item.spr.set(Math.min(100, Math.ceil(item.spr.get()*equipsAttributeFactor)));
-        item.foc.set(Math.min(100, Math.ceil(item.foc.get()*equipsAttributeFactor)));
-        item.ham.set(Math.min(100, Math.ceil(item.ham.get()*equipsAttributeFactor)));
-        item.pur.set(Math.min(100, Math.ceil(item.pur.get()*equipsAttributeFactor)));
-        item.par.set(Math.min(100, Math.ceil(item.par.get()*equipsAttributeFactor)));
-        item.mel.set(Math.min(100, Math.ceil(item.mel.get()*equipsAttributeFactor)));
-        item.sol.set(Math.min(100, Math.ceil(item.sol.get()*equipsAttributeFactor)));
-        item.hp.set(Math.min(100, Math.ceil(item.hp.get()*equipsAttributeFactor)));
-        item.weight.set(Math.min(100, Math.ceil(item.weight.get()/equipsAttributeFactor)));
-        item.max_dura.set(Math.min(100, Math.ceil(item.max_dura.get()*equipsAttributeFactor)));
-        item.dura.set(Math.min(100, Math.ceil(item.dura.get()*equipsAttributeFactor)));
+        item.str.set(Math.min(100, Math.ceil(item.str.get() * equipsAttributeFactor)));
+        item.spd.set(Math.min(100, Math.ceil(item.spd.get() * equipsAttributeFactor)));
+        item.def.set(Math.min(100, Math.ceil(item.def.get() * equipsAttributeFactor)));
+        item.bal.set(Math.min(100, Math.ceil(item.bal.get() * equipsAttributeFactor)));
+        item.sla.set(Math.min(100, Math.ceil(item.sla.get() * equipsAttributeFactor)));
+        item.smh.set(Math.min(100, Math.ceil(item.smh.get() * equipsAttributeFactor)));
+        item.pir.set(Math.min(100, Math.ceil(item.pir.get() * equipsAttributeFactor)));
+        item.spr.set(Math.min(100, Math.ceil(item.spr.get() * equipsAttributeFactor)));
+        item.foc.set(Math.min(100, Math.ceil(item.foc.get() * equipsAttributeFactor)));
+        item.ham.set(Math.min(100, Math.ceil(item.ham.get() * equipsAttributeFactor)));
+        item.pur.set(Math.min(100, Math.ceil(item.pur.get() * equipsAttributeFactor)));
+        item.par.set(Math.min(100, Math.ceil(item.par.get() * equipsAttributeFactor)));
+        item.mel.set(Math.min(100, Math.ceil(item.mel.get() * equipsAttributeFactor)));
+        item.sol.set(Math.min(100, Math.ceil(item.sol.get() * equipsAttributeFactor)));
+        item.hp.set(Math.min(100, Math.ceil(item.hp.get() * equipsAttributeFactor)));
+        item.weight.set(Math.min(100, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+        item.max_dura.set(Math.min(100, Math.ceil(item.max_dura.get() * equipsAttributeFactor)));
+        item.dura.set(Math.min(100, Math.ceil(item.dura.get() * equipsAttributeFactor)));
 
-        console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str "+item.str.get()+" spd "+item.spd.get()+" def "+item.def.get()+" bal "+item.bal.get()+" sla "+item.sla.get()+" smh "+item.smh.get()+" pir "+item.pir.get()+" spr "+item.spr.get()+" foc "+item.foc.get()+" ham "+item.ham.get()+" pur "+item.pur.get()+" par "+item.par.get()+" mel "+item.mel.get()+" sol "+item.sol.get()+" hp "+item.hp.get()+" weight "+item.weight.get()+" max_dura "+item.max_dura.get()+
-            " dura "+item.dura.get());
+        console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
+            " dura " + item.dura.get());
     }
 
     function operate() {
@@ -231,59 +236,61 @@ function randomize(paramsFile, stDir) {
         if (!area.spawns) {
             continue;
         }
-        for (var index=0; index<SPAWN_ENTRIES_COUNT; index++) {
+        for (var index = 0; index < SPAWN_ENTRIES_COUNT; index++) {
             var spawn = area.spawns[index];
             if (!spawn.chance.isNull() &&
                 !spawn.name.endsWith("door")) {
                 forEachCreatureSpawn.forEach((func) => func(spawn, area, index));
+            }
+        }
+
+        for (var index = 0; index < CREATURE_COUNT; index++) {
+            var creature = area.creatures[index];
+            if (!creature.isBlank) {
+                forEachValidCreature.forEach((func) => func(creature, area, index));
+            }
+        }
+        for (var i in items) {
+            forEachItem.forEach((func) => func(items[i]));
+        }
+
+    }
+
+    console.log = function() {
+        logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+    }
+
+    for (var a in areas) {
+        var area = areas[a];
+        area.reinjectEntityDataFromCreaturesToFile();
+    }
+
+    for (var i in tfileOriginal.files) {
+        var originalPart = tfileOriginal.files[i];
+        var changedPart = tfile.files[i];
+        let changes = {};
+        let filePath = originalPart.fileName;
+        var anyChange = false;
+        for (var k = 0; k < originalPart.bin.length; k++) {
+            var originalValue = originalPart.originalBin[k];
+            if (changedPart.bin[k] != originalValue) {
+                //console.log("Change " + k.toString(16) + " " + originalValue.toString(16) + " to " + changedPart.bin[k].toString(16));
+                changes[k.toString(16)] = changedPart.bin[k].toString(16);
+                anyChange = true;
+            }
+        }
+        if (anyChange) {
+            changeSet.push({
+                "file": filePath,
+                "bytes": changes
+            });
         }
     }
 
-    for (var index=0; index<CREATURE_COUNT; index++) {
-        var creature = area.creatures[index];
-        if (!creature.isBlank) {
-            forEachValidCreature.forEach((func) => func(creature, area, index));
-        }
-    }
-    for (var i in items) {
-        forEachItem.forEach((func) => func(items[i]));
-    }
-
+    fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
 }
 
-console.log = function () {
-    logFileRandomize.write(util.format.apply(null, arguments) + '\n');
-}
-
-for (var a in areas) {
-    var area = areas[a];
-    area.reinjectEntityDataFromCreaturesToFile();
-}
-
-for (var i in tfileOriginal.files) {
-    var originalPart = tfileOriginal.files[i];
-    var changedPart = tfile.files[i];
-    let changes = {};
-    let filePath = originalPart.fileName;
-    var anyChange = false;
-    for (var k=0; k<originalPart.bin.length ; k++) {
-        var originalValue = originalPart.originalBin[k];
-        if (changedPart.bin[k] != originalValue) {
-            //console.log("Change " + k.toString(16) + " " + originalValue.toString(16) + " to " + changedPart.bin[k].toString(16));
-            changes[k.toString(16)] = changedPart.bin[k].toString(16);
-            anyChange = true;
-        }
-    }
-    if (anyChange) {
-        changeSet.push({"file":filePath, "bytes":changes});
-    }
-}
-
-fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
-
-}
-
-if (process.argv[1].indexOf("randomize.js") > -1){
+if (process.argv[1].indexOf("randomize.js") > -1) {
     randomize(process.argv[2], process.argv[3]);
 } else {
     module.exports = randomize;
