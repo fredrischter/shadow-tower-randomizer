@@ -3,6 +3,7 @@
 const constants = require('./constants');
 //const { createCanvas } = require("canvas");
 const fs = require('fs');
+const path = require('path');
 
 // area files
 var logo_files = {
@@ -529,6 +530,7 @@ class ItemData  {
 }
 
 var itemData = {};
+global.itemData = itemData;
 global.items = [];
 
 var itemLinesSplit = itemDataString.split("\n");
@@ -647,10 +649,9 @@ for (var i = 0; i<TILE_COUNT; i++) {
       this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapDraw));
     }
 
-    //this.writeMapImage();
   }
 
-  writeMapImage() {
+  writeMapImage(folder) {
 
     const REMOVE_TILE = "REMOVE";
 
@@ -730,7 +731,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
 
     this.canvasWidth = (extendedUpperX + 6) * DRAW_TILE_SIZE;
     this.canvasHeight = (extendedUpperY + 6) * DRAW_TILE_SIZE;
-    /*const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
+    const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
     const drawContext = canvas.getContext("2d");
 
     drawContext.font = "bold 10pt 'Sans'";
@@ -756,8 +757,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
         this.canvasHeight - (this.mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+this.mapDraw[i].x)%5) * 9);
     }
     const buffer = canvas.toBuffer("image/png");
-    fs.writeFile("./maps/" + this.name + ".png", buffer, function() {});
-    */
+    fs.writeFile(folder + path.sep + this.name + ".png", buffer, function() {});
   }
 
   toString() {
@@ -955,10 +955,8 @@ class Collectable {
     this.absoluteIndex = absoluteIndex;
     this.collectableIndex = collectableIndex;
 
-    this.isBlank = this.bin[this.offset_in_file + 0x00]==0xff &&
-    this.bin[this.offset_in_file + 0x01]==0xff;
-
     this.type = new UInt16(this.bin, this.offset_in_file + 0x00);
+
     this.tileX = new UInt8(this.bin, this.offset_in_file + 0x04);
     this.tileY = new UInt8(this.bin, this.offset_in_file + 0x05);
     this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x06);
@@ -968,9 +966,9 @@ class Collectable {
     this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x0f);
     this.tileId = new UInt8(this.bin, this.offset_in_file + 0x16);
 
-    this.name = (itemData[this.type.get()] ? itemData[this.type.get()].name : "bad_id");
+    this.name = (!this.isBlank() ? itemData[this.type.get()].name : "bad_id");
 
-    if (mapDraw && this.name!="bad_id") {
+    if (mapDraw && !this.isBlank()) {
       mapDraw.push({
         color: "#108010", 
         x: this.tileX.get(),
@@ -981,7 +979,7 @@ class Collectable {
 
     }
 
-    //if (!this.isBlank) {
+    //if (!this.isBlank()) {
       console.log(this.toReadableString());
     //}
   }
@@ -1032,6 +1030,10 @@ class Collectable {
     binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, COLLECTABLE_SIZE);
   }
 
+  isBlank() {
+    return !itemData[this.type.get()];
+  }
+
   blank() {
     binSet(this.bin, this.offset_in_file, COLLECTABLE_SIZE, 0x00);
     binSet(this.bin, this.offset_in_file, 0x2, 0xff);
@@ -1058,7 +1060,7 @@ class ScenarioObject {
     this.isBlank = this.id.isNull();
 
     if (!this.isBlank) {
-      
+
       if (mapTiles) {
         mapTiles.push({
           color: "#b60abc",
@@ -1519,7 +1521,7 @@ function fullJSON() {
 }
 
 function setup(FDAT) {
-  
+
   console.log("\n** Item info dump");
   for (var i in items) {
     items[i].setup(FDAT);

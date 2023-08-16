@@ -7,8 +7,12 @@ const path = require('path');
 const util = require('util');
 
 function randomize(paramsFile, stDir) {
+    let params = JSON.parse(fs.readFileSync(paramsFile));
+    let changeSetPath = path.dirname(paramsFile);
+    let changeSetFile = changeSetPath + path.sep + "changeset.json"
+    console.log(params);
 
-    const logFileRandomize = fs.createWriteStream(stDir + path.sep + 'randomize.log', {
+    const logFileRandomize = fs.createWriteStream(changeSetPath + path.sep + 'randomize.log', {
         flags: 'w+'
     });
     console.log = function() {
@@ -44,23 +48,23 @@ function randomize(paramsFile, stDir) {
         "even-harder": 4
     };
 
-    let params = JSON.parse(fs.readFileSync(paramsFile));
-    let changeSetPath = path.dirname(paramsFile);
-    let changeSetFile = changeSetPath + path.sep + "changeset.json"
-    console.log("changeSetFile " + changeSetFile);
-    console.log(params);
+	const mapFolder = changeSetPath + path.sep + 'map';
+	fs.mkdirSync(mapFolder);
+	fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
 
-    const logFile2 = fs.createWriteStream(stDir + path.sep + 'readable.log', {
-        flags: 'w+'
-    });
-    console.log = function() {
-        logFile2.write(util.format.apply(null, arguments) + '\n');
-    }
+    var difficultyFactor = factorByDificultyParam[params.difficulty];
 
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
     var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
     var tfile = new TFILEReader(tFilePath).readTFormat();
     data_model.setup(tfile);
+
+    const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.log', {
+        flags: 'w+'
+    });
+    console.log = function() {
+        logFile2.write(util.format.apply(null, arguments) + '\n');
+    }
 
     function swapCreatures(creature1, creature2, changeSet) {
         if (creature1 == creature2) {
@@ -106,6 +110,7 @@ function randomize(paramsFile, stDir) {
     var forEachCreatureSpawn = [];
     var forEachValidCreature = [];
     var forEachItem = [];
+    var forEachCollectable = [];
 
     function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
         if (spawn.creature.name.includes("king_hopper")) {
@@ -148,8 +153,8 @@ function randomize(paramsFile, stDir) {
         }
     }
 
-    var equipsAttributeFactor = 1 / factorByDificultyParam[params.difficulty];
-    var creatureAttributeFactor = factorByDificultyParam[params.difficulty];
+    var equipsAttributeFactor = 1 / difficultyFactor;
+    var creatureAttributeFactor = difficultyFactor;
 
     function applyDifficultyForEachValidCreature(creature, area, index) {
         creature.str.set(Math.min(256, Math.ceil(creature.str.get() * creatureAttributeFactor)));
@@ -170,6 +175,7 @@ function randomize(paramsFile, stDir) {
         console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get() + " spd " + creature.spd.get() + " def " + creature.def.get() + " bal " + creature.bal.get() + " sla " + creature.sla.get() + " smh " + creature.smh.get() + " pir " + creature.pir.get() + " spr " + creature.spr.get() + " foc " + creature.foc.get() + " ham " + creature.ham.get() + " pur " + creature.pur.get() + " par " + creature.par.get() + " mel " + creature.mel.get() + " sol " + creature.sol.get());
         //It is too much, makes the game to take too long
         //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
+
     }
 
     function applyDifficultyForEachItem(item) {
@@ -194,6 +200,41 @@ function randomize(paramsFile, stDir) {
 
         console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
             " dura " + item.dura.get());
+    }
+
+    var dropRemovalLoop=0;
+    function applyDifficultyForEachSpawn(spawn, area, index) {
+        if (spawn.drop1.isNull()) {
+            return;
+        }
+
+        dropRemovalLoop++;
+        if (dropRemovalLoop > difficultyFactor) {
+            dropRemovalLoop = 0;
+            return;
+        }
+
+        console.log("Applying difficulty by removing drop " + items[spawn.drop1.get()] + " of creature " + spawn.creature.name);
+
+        spawn.drop1.set(0);
+        spawn.drop1Chance.set(0);
+    }
+
+    var collectableRemovalLoop=0;
+    function applyDifficultyForEachCollectable(collectable, area) {
+    	if (collectable.isBlank()) {
+    		return;
+    	}
+
+        collectableRemovalLoop++;
+        if (collectableRemovalLoop > difficultyFactor) {
+            collectableRemovalLoop = 0;
+            return;
+        }
+
+        console.log("Applying difficulty by removing collectable " + itemData[collectable.type.get()].name + " of area " + area.name);
+
+        collectable.blank();
     }
 
     function operate() {
@@ -225,11 +266,17 @@ function randomize(paramsFile, stDir) {
         if (params.difficulty && params.difficulty != DIFFICULTY_MEDIUM) {
             forEachValidCreature.push(applyDifficultyForEachValidCreature);
             forEachItem.push(applyDifficultyForEachItem);
+            forEachCreatureSpawn.push(applyDifficultyForEachSpawn);
+            forEachCollectable.push(applyDifficultyForEachCollectable);
         }
 
     }
 
     operate();
+
+    for (var i in items) {
+        forEachItem.forEach((func) => func(items[i]));
+    }
 
     for (var a in areas) {
         var area = areas[a];
@@ -250,15 +297,18 @@ function randomize(paramsFile, stDir) {
                 forEachValidCreature.forEach((func) => func(creature, area, index));
             }
         }
-        for (var i in items) {
-            forEachItem.forEach((func) => func(items[i]));
-        }
 
+        for (var index = 0; index < COLLECTABLE_COUNT; index++) {
+            var collectable = area.collectables[index];
+            forEachCollectable.forEach((func) => func(collectable, area));
+        }
     }
 
     console.log = function() {
         logFileRandomize.write(util.format.apply(null, arguments) + '\n');
     }
+
+    //data_model.writeMapImage(mapFolder);
 
     for (var a in areas) {
         var area = areas[a];
