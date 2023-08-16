@@ -32,3 +32,5 @@ npm run mod "C:\path\imagefile.bin" ".\params\only-apply-directives.json"
 
 npm run mod "C:\path\imagefile.bin" ".\params\only-fix-king-hopper.json"
 
+npm run mod "C:\path\imagefile.bin" ".\params\no-change.json"
+

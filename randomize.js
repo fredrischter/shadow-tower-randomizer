@@ -483,20 +483,20 @@ var equipsAttributeFactor=1/factorByDificultyParam[params.difficulty];
 var creatureAttributeFactor=factorByDificultyParam[params.difficulty];
 
 function applyDifficultyForEachValidCreature(creature, area, index) {
-	creature.str.set(Math.min(256, Math.floor(creature.str.get() * creatureAttributeFactor)));
-	creature.spd.set(Math.min(256, Math.floor(creature.spd.get() * creatureAttributeFactor)));
-	creature.def.set(Math.min(256, Math.floor(creature.def.get() * creatureAttributeFactor)));
-	creature.bal.set(Math.min(256, Math.floor(creature.bal.get() * creatureAttributeFactor)));
-	creature.sla.set(Math.min(256, Math.floor(creature.sla.get() * creatureAttributeFactor)));
-	creature.smh.set(Math.min(256, Math.floor(creature.smh.get() * creatureAttributeFactor)));
-	creature.pir.set(Math.min(256, Math.floor(creature.pir.get() * creatureAttributeFactor)));
-	creature.spr.set(Math.min(256, Math.floor(creature.spr.get() * creatureAttributeFactor)));
-	creature.foc.set(Math.min(256, Math.floor(creature.foc.get() * creatureAttributeFactor)));
-	creature.ham.set(Math.min(256, Math.floor(creature.ham.get() * creatureAttributeFactor)));
-	creature.pur.set(Math.min(256, Math.floor(creature.pur.get() * creatureAttributeFactor)));
-	creature.par.set(Math.min(256, Math.floor(creature.par.get() * creatureAttributeFactor)));
-	creature.mel.set(Math.min(256, Math.floor(creature.mel.get() * creatureAttributeFactor)));
-	creature.sol.set(Math.min(256, Math.floor(creature.sol.get() * creatureAttributeFactor)));
+	creature.str.set(Math.min(256, Math.ceil(creature.str.get() * creatureAttributeFactor)));
+	creature.spd.set(Math.min(256, Math.ceil(creature.spd.get() * creatureAttributeFactor)));
+	creature.def.set(Math.min(256, Math.ceil(creature.def.get() * creatureAttributeFactor)));
+	creature.bal.set(Math.min(256, Math.ceil(creature.bal.get() * creatureAttributeFactor)));
+	creature.sla.set(Math.min(256, Math.ceil(creature.sla.get() * creatureAttributeFactor)));
+	creature.smh.set(Math.min(256, Math.ceil(creature.smh.get() * creatureAttributeFactor)));
+	creature.pir.set(Math.min(256, Math.ceil(creature.pir.get() * creatureAttributeFactor)));
+	creature.spr.set(Math.min(256, Math.ceil(creature.spr.get() * creatureAttributeFactor)));
+	creature.foc.set(Math.min(256, Math.ceil(creature.foc.get() * creatureAttributeFactor)));
+	creature.ham.set(Math.min(256, Math.ceil(creature.ham.get() * creatureAttributeFactor)));
+	creature.pur.set(Math.min(256, Math.ceil(creature.pur.get() * creatureAttributeFactor)));
+	creature.par.set(Math.min(256, Math.ceil(creature.par.get() * creatureAttributeFactor)));
+	creature.mel.set(Math.min(256, Math.ceil(creature.mel.get() * creatureAttributeFactor)));
+	creature.sol.set(Math.min(256, Math.ceil(creature.sol.get() * creatureAttributeFactor)));
 
 	console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get()+" spd " + creature.spd.get()+" def " + creature.def.get()+" bal " + creature.bal.get()+" sla " + creature.sla.get()+" smh " + creature.smh.get()+" pir " + creature.pir.get()+" spr " + creature.spr.get()+" foc " + creature.foc.get()+" ham " + creature.ham.get()+" pur " + creature.pur.get()+" par " + creature.par.get()+" mel " + creature.mel.get()+" sol " + creature.sol.get());
 	//It is too much, makes the game to take too long
@@ -504,32 +504,30 @@ function applyDifficultyForEachValidCreature(creature, area, index) {
 }
 
 function applyDifficultyForEachItem(item) {
-	item.str.set(Math.min(256, Math.floor(item.str.get()*equipsAttributeFactor)));
-	item.spd.set(Math.min(256, Math.floor(item.spd.get()*equipsAttributeFactor)));
-	item.def.set(Math.min(256, Math.floor(item.def.get()*equipsAttributeFactor)));
-	item.bal.set(Math.min(256, Math.floor(item.bal.get()*equipsAttributeFactor)));
-	item.sla.set(Math.min(256, Math.floor(item.sla.get()*equipsAttributeFactor)));
-	item.smh.set(Math.min(256, Math.floor(item.smh.get()*equipsAttributeFactor)));
-	item.pir.set(Math.min(256, Math.floor(item.pir.get()*equipsAttributeFactor)));
-	item.spr.set(Math.min(256, Math.floor(item.spr.get()*equipsAttributeFactor)));
-	item.foc.set(Math.min(256, Math.floor(item.foc.get()*equipsAttributeFactor)));
-	item.ham.set(Math.min(256, Math.floor(item.ham.get()*equipsAttributeFactor)));
-	item.pur.set(Math.min(256, Math.floor(item.pur.get()*equipsAttributeFactor)));
-	item.par.set(Math.min(256, Math.floor(item.par.get()*equipsAttributeFactor)));
-	item.mel.set(Math.min(256, Math.floor(item.mel.get()*equipsAttributeFactor)));
-	item.sol.set(Math.min(256, Math.floor(item.sol.get()*equipsAttributeFactor)));
-	item.hp.set(Math.min(256, Math.floor(item.hp.get()*equipsAttributeFactor)));
-	item.weight.set(Math.min(256, Math.floor(item.weight.get()/equipsAttributeFactor)));
-	item.max_dura.set(Math.min(256, Math.floor(item.max_dura.get()*equipsAttributeFactor)));
-	item.dura.set(Math.min(256, Math.floor(item.dura.get()*equipsAttributeFactor)));
+	item.str.set(Math.min(100, Math.ceil(item.str.get()*equipsAttributeFactor)));
+	item.spd.set(Math.min(100, Math.ceil(item.spd.get()*equipsAttributeFactor)));
+	item.def.set(Math.min(100, Math.ceil(item.def.get()*equipsAttributeFactor)));
+	item.bal.set(Math.min(100, Math.ceil(item.bal.get()*equipsAttributeFactor)));
+	item.sla.set(Math.min(100, Math.ceil(item.sla.get()*equipsAttributeFactor)));
+	item.smh.set(Math.min(100, Math.ceil(item.smh.get()*equipsAttributeFactor)));
+	item.pir.set(Math.min(100, Math.ceil(item.pir.get()*equipsAttributeFactor)));
+	item.spr.set(Math.min(100, Math.ceil(item.spr.get()*equipsAttributeFactor)));
+	item.foc.set(Math.min(100, Math.ceil(item.foc.get()*equipsAttributeFactor)));
+	item.ham.set(Math.min(100, Math.ceil(item.ham.get()*equipsAttributeFactor)));
+	item.pur.set(Math.min(100, Math.ceil(item.pur.get()*equipsAttributeFactor)));
+	item.par.set(Math.min(100, Math.ceil(item.par.get()*equipsAttributeFactor)));
+	item.mel.set(Math.min(100, Math.ceil(item.mel.get()*equipsAttributeFactor)));
+	item.sol.set(Math.min(100, Math.ceil(item.sol.get()*equipsAttributeFactor)));
+	item.hp.set(Math.min(100, Math.ceil(item.hp.get()*equipsAttributeFactor)));
+	item.weight.set(Math.min(100, Math.ceil(item.weight.get()/equipsAttributeFactor)));
+	item.max_dura.set(Math.min(100, Math.ceil(item.max_dura.get()*equipsAttributeFactor)));
+	item.dura.set(Math.min(100, Math.ceil(item.dura.get()*equipsAttributeFactor)));
 
 	console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str "+item.str.get()+" spd "+item.spd.get()+" def "+item.def.get()+" bal "+item.bal.get()+" sla "+item.sla.get()+" smh "+item.smh.get()+" pir "+item.pir.get()+" spr "+item.spr.get()+" foc "+item.foc.get()+" ham "+item.ham.get()+" pur "+item.pur.get()+" par "+item.par.get()+" mel "+item.mel.get()+" sol "+item.sol.get()+" hp "+item.hp.get()+" weight "+item.weight.get()+" max_dura "+item.max_dura.get()+
 " dura "+item.dura.get());
 }
 
 if (params.difficulty && params.difficulty != DIFFICULTY_MEDIUM) {
-	forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
-	forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
 	forEachValidCreature.push(applyDifficultyForEachValidCreature);
 	forEachItem.push(applyDifficultyForEachItem);
 }
