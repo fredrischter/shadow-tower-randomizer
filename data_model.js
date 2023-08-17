@@ -599,7 +599,6 @@ console.log("\nTiles");
 console.log("idx                                                                     x       y       z     rot      tile xyz  ----");
 
 this.mapTiles = [];
-this.mapDraw = [];
 
 for (var i = 0; i<TILE_COUNT; i++) {
   var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
@@ -619,7 +618,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
     }
 
     //1-spawns
-    this.setupSpawns(this, this.map_file, this.mapDraw);
+    this.setupSpawns(this, this.map_file);
 
     //2-300 entries 0x18 bytes each     
     
@@ -632,7 +631,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
     for (var i = 0; i<OBJECTS_COUNT; i++) {
       var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
-      this.objects.push(new ScenarioObject(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles, this.mapDraw));
+      this.objects.push(new ScenarioObject(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
     }
 
     //4-collectables
@@ -644,12 +643,31 @@ for (var i = 0; i<TILE_COUNT; i++) {
     for (var i = 0; i<COLLECTABLE_COUNT; i++) {
       var offset_in_file = 16 + COLLECTABLE_START_OFFSET + COLLECTABLE_SIZE * i;
       var absoluteIndex = this.map_file.startOffset + offset_in_file;
-      this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapDraw));
+      this.collectables.push(new Collectable(this.map_file.bin, this, offset_in_file, absoluteIndex, i));
+    }
+
+  }
+
+  draw(mapDraw) {
+    for (var i in this.spawns) {
+      this.spawns[i].draw(mapDraw);
+    }
+
+    for (var i in this.objects) {
+      this.objects[i].draw(mapDraw);
+    }
+
+    for (var i in this.collectables) {
+      this.collectables[i].draw(mapDraw);
     }
 
   }
 
   writeMapImage(createCanvas, folder) {
+
+    var mapDraw = [];
+
+    this.draw(mapDraw);
 
     const REMOVE_TILE = "REMOVE";
 
@@ -710,7 +728,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
 
     // Normalize all tiles for the lowest to be on zero
     this.mapTiles.forEach(processTile);
-    this.mapDraw.forEach(processTile);
+    mapDraw.forEach(processTile);
 
     var removeBadZTiles = tile => {
       var toInclude = zHandling[this.name][tile.z]!=REMOVE_TILE;
@@ -722,7 +740,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
     };
 
     this.mapTiles = this.mapTiles.filter(removeBadZTiles);
-    this.mapDraw = this.mapDraw.filter(removeBadZTiles);
+    mapDraw = mapDraw.filter(removeBadZTiles);
 
     var extendedUpperX = this.mapTiles.reduce((a, b) => { return {x:Math.max(a.x, b.x)}; }, {x:0}).x;
     var extendedUpperY = this.mapTiles.reduce((a, b) => { return {y:Math.max(a.y, b.y)}; }, {y:0}).y;
@@ -746,13 +764,13 @@ for (var i = 0; i<TILE_COUNT; i++) {
         (this.mapTiles[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
         this.canvasHeight -2 - (this.mapTiles[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE);
     }
-    for (var i in this.mapDraw) {
-      drawContext.fillStyle = this.mapDraw[i].color;
-      var key = ""+this.mapDraw[i].x + "-" + this.mapDraw[i].y;
+    for (var i in mapDraw) {
+      drawContext.fillStyle = mapDraw[i].color;
+      var key = ""+mapDraw[i].x + "-" + mapDraw[i].y;
       tileTexts[key] = tileTexts[key] != undefined ? tileTexts[key] + 1 : 0;
-      drawContext.fillText(this.mapDraw[i].text, 
-        (this.mapDraw[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
-        this.canvasHeight - (this.mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+this.mapDraw[i].x)%5) * 9);
+      drawContext.fillText(mapDraw[i].text, 
+        (mapDraw[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
+        this.canvasHeight - (mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+mapDraw[i].x)%5) * 9);
     }
     const buffer = canvas.toBuffer("image/png");
     fs.writeFile(folder + path.sep + this.name + ".png", buffer, function() {});
@@ -776,7 +794,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
     }
   }
 
-  setupSpawns(area, tfile, mapDraw) {
+  setupSpawns(area, tfile) {
     this.spawns = [];
     console.log("\nSpawns");
     console.log("idx chance name                                                      drop1                                     drop2                                     drop3                                      chance typ  tile drop1 drop2 drop3 mx %1 %2 %2 ---------    x     y     z --");
@@ -786,7 +804,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
       var offset_in_file = SPAWN_ABSOLUTE_OFFSET + offset;
       var entryPos = 0x2C04 /* 2nd sixed mix part */ + 4 /*sized mix part size first uint32*/ + offset;
 
-      this.spawns.push(new Spawn(area, tfile, entryPos, offset_in_file, i, mapDraw));
+      this.spawns.push(new Spawn(area, tfile, entryPos, offset_in_file, i));
     }
   }
 
@@ -958,7 +976,7 @@ global.COLLECTABLE_SIZE = 0x18;
 global.COLLECTABLE_COUNT = 0x20;
 
 class Collectable {
-  constructor(bin, area, offset_in_file, absoluteIndex, collectableIndex, mapDraw) {
+  constructor(bin, area, offset_in_file, absoluteIndex, collectableIndex) {
     this.bin = bin;
     this.area = area;
     this.offset_in_file = offset_in_file;
@@ -978,20 +996,22 @@ class Collectable {
 
     this.name = (!this.isBlank() ? itemData[this.type.get()].name : "bad_id");
 
-    if (mapDraw && !this.isBlank()) {
+
+    //if (!this.isBlank()) {
+      console.log(this.toReadableString());
+    //}
+  }
+
+  draw(mapDraw) {
+    if (!this.isBlank()) {
       mapDraw.push({
         color: "#108010", 
         x: this.tileX.get(),
         y: this.tileZ.get(),
         z: this.tileY.get(),
-        text: "" + collectableIndex.toString(16) + " " + this.name
+        text: "" + this.collectableIndex.toString(16) + " " + this.name
       });
-
     }
-
-    //if (!this.isBlank()) {
-      console.log(this.toReadableString());
-    //}
   }
 
   toReadableString() {
@@ -1054,7 +1074,7 @@ global.OBJECTS_SIZE = 0x18;
 global.OBJECTS_COUNT = 0x15E;
 
 class ScenarioObject {
-  constructor(bin, area, offset_in_file, absoluteIndex, index, mapTiles, mapDraw) {
+  constructor(bin, area, offset_in_file, absoluteIndex, index, mapTiles) {
     this.bin = bin;
     this.area = area;
     this.offset_in_file = offset_in_file;
@@ -1070,7 +1090,6 @@ class ScenarioObject {
     this.isBlank = this.id.isNull();
 
     if (!this.isBlank) {
-
       if (mapTiles) {
         mapTiles.push({
           color: "#b60abc",
@@ -1078,15 +1097,20 @@ class ScenarioObject {
           y: this.tileZ.get(),
           z: this.tileY.get()
         });
-        mapDraw.push({
-          color: "#000000", 
-          x: this.tileX.get(), 
-          y: this.tileZ.get(), 
-          z: this.tileY.get(), 
-          text: "object index " + this.index});
       }
 
       console.log(this.toReadableString());
+    }
+  }
+
+  draw(mapDraw) {
+    if (!this.isBlank) {
+      mapDraw.push({
+        color: "#000000", 
+        x: this.tileX.get(), 
+        y: this.tileZ.get(), 
+        z: this.tileY.get(), 
+        text: "object index " + this.index});
     }
   }
 
@@ -1387,7 +1411,7 @@ for (var logo_index in logo_files) {
 }
 
 class Spawn {
-  constructor(area, tfile, offset, offset_in_file, index, mapDraw) {
+  constructor(area, tfile, offset, offset_in_file, index) {
     this.area = area;
     this.tfile = tfile;
     this.offset = offset;
@@ -1409,18 +1433,6 @@ class Spawn {
       this.name = "other_stuff";
     }
 
-    if (mapDraw && !this.chance.isNull()
-      && !this.tileId.isNull()
-      && !area.tiles[this.tileId.get()].tileX.isNull()
-      && !area.tiles[this.tileId.get()].tileY.isNull()) {
-      mapDraw.push({
-        color: "#ff0000", 
-        x: area.tiles[this.tileId.get()].tileX.get(), 
-        y: area.tiles[this.tileId.get()].tileZ.get(), 
-        z: area.tiles[this.tileId.get()].tileY.get(), 
-        text: "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name});
-  }
-
   if (this.chance.isNull()) {
     var otherBytesZero = true;
     for (var i=11; i<SPAWN_ENTRY_SIZE; i++) {
@@ -1440,42 +1452,67 @@ class Spawn {
     this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
     this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
     this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
-    if (!this.chance.isNull() && !this.drop1.isNull()) {
-      this.drop1Item = itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
-      mapDraw.push({
-        color: "#ffff00", 
-        x: area.tiles[this.tileId.get()].tileX.get(), 
-        y: area.tiles[this.tileId.get()].tileZ.get(), 
-        z: area.tiles[this.tileId.get()].tileY.get(), 
-        text: (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item.name
-      });
-    }
     this.drop2 = new UInt16(this.tfile.bin, this.offset_in_file + 0x06);
     this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
-    if (!this.chance.isNull() && !this.drop2.isNull()) {
-      this.drop2Item = itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
-      mapDraw.push({
-        color: "#ffff00", 
-        x: area.tiles[this.tileId.get()].tileX.get(), 
-        y: area.tiles[this.tileId.get()].tileZ.get(), 
-        z: area.tiles[this.tileId.get()].tileY.get(), 
-        text: (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item.name
-      });
-    }
     this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
     this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
-    if (!this.chance.isNull() && !this.drop3.isNull()) {
-      this.drop3Item = itemData[this.drop3.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
+
+    console.log(this.toReadableString());
+  }
+
+  drop1Item() {
+    return itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
+  }
+
+  drop2Item() {
+    return itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
+  }
+
+  drop3Item() {
+    return itemData[this.drop3.get()] || {"name":"unknown "+this.drop3.get().toString(16)};
+  }
+
+  draw(mapDraw) {
+    if (!mapDraw || this.chance.isNull()) {
+      return;
+    }
+
+    mapDraw.push({
+      color: "#ff0000", 
+      x: this.area.tiles[this.tileId.get()].tileX.get(), 
+      y: this.area.tiles[this.tileId.get()].tileZ.get(), 
+      z: this.area.tiles[this.tileId.get()].tileY.get(), 
+      text: "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name});
+
+    if (!this.drop1.isNull()) {
       mapDraw.push({
         color: "#ffff00", 
-        x: area.tiles[this.tileId.get()].tileX.get(), 
-        y: area.tiles[this.tileId.get()].tileZ.get(), 
-        z: area.tiles[this.tileId.get()].tileY.get(), 
-        text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item.name
+        x: this.area.tiles[this.tileId.get()].tileX.get(), 
+        y: this.area.tiles[this.tileId.get()].tileZ.get(), 
+        z: this.area.tiles[this.tileId.get()].tileY.get(), 
+        text: (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item().name
       });
     }
 
-    console.log(this.toReadableString());
+    if (!this.drop2.isNull()) {
+      mapDraw.push({
+        color: "#ffff00", 
+        x: this.area.tiles[this.tileId.get()].tileX.get(), 
+        y: this.area.tiles[this.tileId.get()].tileZ.get(), 
+        z: this.area.tiles[this.tileId.get()].tileY.get(), 
+        text: (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item().name
+      });
+    }
+
+    if (!this.drop3.isNull()) {
+      mapDraw.push({
+        color: "#ffff00", 
+        x: this.area.tiles[this.tileId.get()].tileX.get(), 
+        y: this.area.tiles[this.tileId.get()].tileZ.get(), 
+        z: this.area.tiles[this.tileId.get()].tileY.get(), 
+        text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item().name
+      });
+    }
   }
 
   toReadableString() {
@@ -1483,9 +1520,9 @@ class Spawn {
     + " "
     + "  tileId("+this.tileId.get().toString(16).padStart(4)+") "
     + "  pos("+this.x.get().toString(16).padStart(4)+","+this.y.get().toString(16).padStart(4)+","+this.z.get().toString(16).padStart(4)+") "
-    + (this.drop1Item ? "[drop "+(""+this.drop1Chance.get()).padStart(3)+"% " + this.drop1Item.name.padEnd(30) + "]": "".padEnd(42))
-    + (this.drop2Item ? "[drop "+(""+this.drop2Chance.get()).padStart(3)+"% " + this.drop2Item.name.padEnd(30) + "]": "".padEnd(42))
-    + (this.drop3Item ? "[drop "+(""+this.drop3Chance.get()).padStart(3)+"% " + this.drop3Item.name.padEnd(30) + "]": "".padEnd(42))
+    + (!this.drop1.isNull() ? "[drop "+(""+this.drop1Chance.get()).padStart(3)+"% " + this.drop1Item().name.padEnd(30) + "]": "".padEnd(42))
+    + (!this.drop2.isNull() ? "[drop "+(""+this.drop2Chance.get()).padStart(3)+"% " + this.drop2Item().name.padEnd(30) + "]": "".padEnd(42))
+    + (!this.drop3.isNull() ? "[drop "+(""+this.drop3Chance.get()).padStart(3)+"% " + this.drop3Item().name.padEnd(30) + "]": "".padEnd(42))
     + " bin "+binToStr(this.tfile.bin.slice(this.offset_in_file, this.offset_in_file+SPAWN_ENTRY_SIZE));
   }
 
@@ -1499,9 +1536,9 @@ class Spawn {
     + ",\"z\":" + (this.z.get() + "").padEnd(10)
     + (!this.mutexGroup.isNull() ? ",\"group\":" + this.mutexGroup.get(): "")
     + ",\"drop\":["
-    + (this.drop1Item ? ("{\"chance\":" + (this.drop1Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop1Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop1 + "\"}").padEnd(48) : "")
-    + (this.drop2Item ? (",{\"chance\":" + (this.drop2Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop2Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop2 + "\"}").padEnd(48) : "")
-    + (this.drop3Item ? (",{\"chance\":" + (this.drop3Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop3Item.name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop3 + "\"}").padEnd(48) : "")
+    + (!this.drop1.isNull() ? ("{\"chance\":" + (this.drop1Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop1Item().name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop1 + "\"}").padEnd(48) : "")
+    + (!this.drop2.isNull() ? (",{\"chance\":" + (this.drop2Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop2Item().name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop2 + "\"}").padEnd(48) : "")
+    + (!this.drop3.isNull() ? (",{\"chance\":" + (this.drop3Chance.get() +",").padEnd(4) + "\"name\":\"" + (this.drop3Item().name+"\"").padEnd(30) + ",\"itemId\":\"" + this.drop3 + "\"}").padEnd(48) : "")
     + "]}";
   }
 

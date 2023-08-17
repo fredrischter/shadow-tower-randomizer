@@ -210,7 +210,8 @@ function randomize(paramsFile, stDir) {
 
         var thisItem = itemData[spawn.drop1.get()];
 
-        if (thisItem.type.get() == KEY) {
+        if (thisItem.type.get() == KEY ||
+        	thisItem.name.includes("vaccine")) {
         	return;
         }
 
