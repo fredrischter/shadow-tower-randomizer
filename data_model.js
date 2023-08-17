@@ -648,26 +648,29 @@ for (var i = 0; i<TILE_COUNT; i++) {
 
   }
 
-  draw(mapDraw) {
+  draw(mapDraw, mapSummary) {
     for (var i in this.spawns) {
-      this.spawns[i].draw(mapDraw);
+      this.spawns[i].draw(mapDraw, mapSummary);
     }
 
     for (var i in this.objects) {
-      this.objects[i].draw(mapDraw);
+      this.objects[i].draw(mapDraw, mapSummary);
     }
 
     for (var i in this.collectables) {
-      this.collectables[i].draw(mapDraw);
+      this.collectables[i].draw(mapDraw, mapSummary);
     }
 
   }
 
   writeMapImage(createCanvas, folder) {
 
-    var mapDraw = [];
+    var filesFolder = folder + path.sep + 'maps';
 
-    this.draw(mapDraw);
+    var mapDraw = [];
+    this.mapSummary = [];
+
+    this.draw(mapDraw, this.mapSummary);
 
     const REMOVE_TILE = "REMOVE";
 
@@ -773,7 +776,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
         this.canvasHeight - (mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+mapDraw[i].x)%5) * 9);
     }
     const buffer = canvas.toBuffer("image/png");
-    fs.writeFile(folder + path.sep + this.name + ".png", buffer, function() {});
+    fs.writeFile(filesFolder + path.sep + this.name + ".png", buffer, function() {});
   }
 
   toString() {
@@ -1002,15 +1005,17 @@ class Collectable {
     //}
   }
 
-  draw(mapDraw) {
+  draw(mapDraw, mapSummary) {
     if (!this.isBlank()) {
+      var text = "" + this.collectableIndex.toString(16) + " " + this.name;
       mapDraw.push({
         color: "#108010", 
         x: this.tileX.get(),
         y: this.tileZ.get(),
         z: this.tileY.get(),
-        text: "" + this.collectableIndex.toString(16) + " " + this.name
+        text: text
       });
+      mapSummary.push('<span style="background:#108010">'+text+'</span>');
     }
   }
 
@@ -1103,7 +1108,7 @@ class ScenarioObject {
     }
   }
 
-  draw(mapDraw) {
+  draw(mapDraw, mapSummary) {
     if (!this.isBlank) {
       mapDraw.push({
         color: "#000000", 
@@ -1472,47 +1477,58 @@ class Spawn {
     return itemData[this.drop3.get()] || {"name":"unknown "+this.drop3.get().toString(16)};
   }
 
-  draw(mapDraw) {
-    if (!mapDraw || this.chance.isNull()) {
+  draw(mapDraw, mapSummary) {
+    if (!mapDraw || this.chance.isNull() || this.name.includes("door")) {
       return;
     }
+
+    var text = "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name;
+    var summary = '<span style="background:#ff0000">'+text+'</span>';
 
     mapDraw.push({
       color: "#ff0000", 
       x: this.area.tiles[this.tileId.get()].tileX.get(), 
       y: this.area.tiles[this.tileId.get()].tileZ.get(), 
       z: this.area.tiles[this.tileId.get()].tileY.get(), 
-      text: "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name});
+      text: text});
 
     if (!this.drop1.isNull()) {
+      var text = (" "+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item().name;
       mapDraw.push({
         color: "#ffff00", 
         x: this.area.tiles[this.tileId.get()].tileX.get(), 
         y: this.area.tiles[this.tileId.get()].tileZ.get(), 
         z: this.area.tiles[this.tileId.get()].tileY.get(), 
-        text: (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item().name
+        text: text
       });
+      summary += '<span style="background:#ffff00">'+text+'</span>';
     }
 
     if (!this.drop2.isNull()) {
+      var text = (" "+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item().name;
       mapDraw.push({
         color: "#ffff00", 
         x: this.area.tiles[this.tileId.get()].tileX.get(), 
         y: this.area.tiles[this.tileId.get()].tileZ.get(), 
         z: this.area.tiles[this.tileId.get()].tileY.get(), 
-        text: (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item().name
+        text: text
       });
+      summary += '<span style="background:#ffff00">'+text+'</span>';
     }
 
     if (!this.drop3.isNull()) {
+      var text = (" "+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item().name;
       mapDraw.push({
         color: "#ffff00", 
         x: this.area.tiles[this.tileId.get()].tileX.get(), 
         y: this.area.tiles[this.tileId.get()].tileZ.get(), 
         z: this.area.tiles[this.tileId.get()].tileY.get(), 
-        text: (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item().name
+        text: text
       });
+      summary += '<span style="color:#ffff00">'+text+'</span>';
     }
+
+    mapSummary.push(summary);
   }
 
   toReadableString() {

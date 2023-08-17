@@ -48,8 +48,8 @@ function randomize(paramsFile, stDir) {
         "even-harder": 4
     };
 
-	const mapFolder = changeSetPath + path.sep + 'maps';
-	fs.mkdirSync(mapFolder);
+	const mapFolder = changeSetPath;
+	fs.mkdirSync(mapFolder + path.sep + 'maps');
 	fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
 
     var difficultyFactor = factorByDificultyParam[params.difficulty];
@@ -315,12 +315,19 @@ function randomize(paramsFile, stDir) {
         logFileRandomize.write(util.format.apply(null, arguments) + '\n');
     }
 
+    var htmlFile = mapFolder + path.sep + "maps.html";
+    var mapsHTML = ""+fs.readFileSync(htmlFile);
     const { createCanvas } = require("canvas");
     for (var a in areas) {
         var area = areas[a];
 	    area.writeMapImage(createCanvas, mapFolder);
+	    var summary = "";
+	    for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
+	    mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
+
         area.reinjectEntityDataFromCreaturesToFile();
     }
+    fs.writeFile(htmlFile, mapsHTML, function() {});
 
     for (var i in tfileOriginal.files) {
         var originalPart = tfileOriginal.files[i];
