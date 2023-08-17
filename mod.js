@@ -53,7 +53,7 @@ function exec(cmd, callback) {
 	});
 }
 
-exec('dumpsxiso.exe "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"', function() {
+exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"', function() {
 
 	var tFile = extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
 	exec('npm run unpack "'+tFile+'"', function() {
@@ -64,7 +64,7 @@ exec('dumpsxiso.exe "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescrip
 
 				exec('npm run pack "'+tFile+'"', function() {
 
-					exec('mkpsxiso.exe "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
+					exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
 						console.log("Finished, output " + outputImage);
 						console.log("Extraced modified files " + extractedPath);
 						console.log("Spoilers " + spoilersPath);
