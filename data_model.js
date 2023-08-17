@@ -750,33 +750,36 @@ for (var i = 0; i<TILE_COUNT; i++) {
 
     this.canvasWidth = (extendedUpperX + 6) * DRAW_TILE_SIZE;
     this.canvasHeight = (extendedUpperY + 6) * DRAW_TILE_SIZE;
-    const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
-    const drawContext = canvas.getContext("2d");
 
-    drawContext.font = "bold 10pt 'Sans'";
-    drawContext.textAlign = "left";
-    var tileTexts = {};
-    for (var i in this.mapTiles) {
-      drawContext.fillStyle = this.mapTiles[i].color;
-      drawContext.fillRect(
-        DRAW_TILE_SIZE * (this.mapTiles[i].x + TILE_SHIFT_X), 
-        this.canvasHeight - DRAW_TILE_SIZE * (this.mapTiles[i].y + TILE_SHIFT_Y),
-        DRAW_TILE_SIZE-2,
-        DRAW_TILE_SIZE-2);
-      drawContext.fillText("x="+this.mapTiles[i].originalX.toString(16) + " y="+this.mapTiles[i].originalY.toString(16) + " z="+this.mapTiles[i].originalZ.toString(16), 
-        (this.mapTiles[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
-        this.canvasHeight -2 - (this.mapTiles[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE);
+    if (!global.toNotGenerateImages) {
+      const canvas = createCanvas(this.canvasWidth, this.canvasHeight);
+      const drawContext = canvas.getContext("2d");
+
+      drawContext.font = "bold 10pt 'Sans'";
+      drawContext.textAlign = "left";
+      var tileTexts = {};
+      for (var i in this.mapTiles) {
+        drawContext.fillStyle = this.mapTiles[i].color;
+        drawContext.fillRect(
+          DRAW_TILE_SIZE * (this.mapTiles[i].x + TILE_SHIFT_X), 
+          this.canvasHeight - DRAW_TILE_SIZE * (this.mapTiles[i].y + TILE_SHIFT_Y),
+          DRAW_TILE_SIZE-2,
+          DRAW_TILE_SIZE-2);
+        drawContext.fillText("x="+this.mapTiles[i].originalX.toString(16) + " y="+this.mapTiles[i].originalY.toString(16) + " z="+this.mapTiles[i].originalZ.toString(16), 
+          (this.mapTiles[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
+          this.canvasHeight -2 - (this.mapTiles[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE);
+      }
+      for (var i in mapDraw) {
+        drawContext.fillStyle = mapDraw[i].color;
+        var key = ""+mapDraw[i].x + "-" + mapDraw[i].y;
+        tileTexts[key] = tileTexts[key] != undefined ? tileTexts[key] + 1 : 0;
+        drawContext.fillText(mapDraw[i].text, 
+          (mapDraw[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
+          this.canvasHeight - (mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+mapDraw[i].x)%5) * 9);
+      }
+      const buffer = canvas.toBuffer("image/png");
+      fs.writeFile(filesFolder + path.sep + this.name + ".png", buffer, function() {});
     }
-    for (var i in mapDraw) {
-      drawContext.fillStyle = mapDraw[i].color;
-      var key = ""+mapDraw[i].x + "-" + mapDraw[i].y;
-      tileTexts[key] = tileTexts[key] != undefined ? tileTexts[key] + 1 : 0;
-      drawContext.fillText(mapDraw[i].text, 
-        (mapDraw[i].x + TILE_SHIFT_X) * DRAW_TILE_SIZE + 2, 
-        this.canvasHeight - (mapDraw[i].y + TILE_SHIFT_Y) * DRAW_TILE_SIZE + 11 + (tileTexts[key]) * 11);//((tileTexts[key]+mapDraw[i].x)%5) * 9);
-    }
-    const buffer = canvas.toBuffer("image/png");
-    fs.writeFile(filesFolder + path.sep + this.name + ".png", buffer, function() {});
   }
 
   toString() {

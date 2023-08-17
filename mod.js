@@ -18,6 +18,13 @@ if (!originalParamsFile) {
 	return;
 }
 
+for (var i = 2; i < process.argv.length; i++) {
+	if (process.argv[i] == "toNotGenerateImages") {
+		global.toNotGenerateImages = true;
+		console.log("toNotGenerateImages parameter");
+	}
+}
+
 const params = JSON.parse(fs.readFileSync(originalParamsFile));
 
 const onlyPath = path.dirname(file);
@@ -58,7 +65,7 @@ exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor 
 	var tFile = extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
 	exec('npm run unpack "'+tFile+'"', function() {
 
-		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"', function() {
+		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' toNotGenerateImages':''), function() {
 
 			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 

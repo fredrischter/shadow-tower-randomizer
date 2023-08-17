@@ -7,6 +7,13 @@ const path = require('path');
 const util = require('util');
 
 function randomize(paramsFile, stDir) {
+
+	for (var i = 2; i < process.argv.length; i++) {
+		if (process.argv[i] == "toNotGenerateImages") {
+			global.toNotGenerateImages = true;
+		}
+	}
+
     let params = JSON.parse(fs.readFileSync(paramsFile));
     let changeSetPath = path.dirname(paramsFile);
     let changeSetFile = changeSetPath + path.sep + "changeset.json"
@@ -59,7 +66,7 @@ function randomize(paramsFile, stDir) {
     var tfile = new TFILEReader(tFilePath).readTFormat();
     data_model.setup(tfile);
 
-    const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.log', {
+    const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {
         flags: 'w+'
     });
     console.log = function() {
@@ -194,7 +201,7 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(100, Math.ceil(item.mel.get() * equipsAttributeFactor)));
         item.sol.set(Math.min(100, Math.ceil(item.sol.get() * equipsAttributeFactor)));
         item.hp.set(Math.min(100, Math.ceil(item.hp.get() * equipsAttributeFactor)));
-        item.weight.set(Math.min(100, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+        item.weight.set(Math.min(200, Math.ceil(item.weight.get() / equipsAttributeFactor)));
         item.max_dura.set(Math.min(100, Math.ceil(item.max_dura.get() * equipsAttributeFactor)));
         item.dura.set(Math.min(100, Math.ceil(item.dura.get() * equipsAttributeFactor)));
 
@@ -317,7 +324,10 @@ function randomize(paramsFile, stDir) {
 
     var htmlFile = mapFolder + path.sep + "maps.html";
     var mapsHTML = ""+fs.readFileSync(htmlFile);
-    const { createCanvas } = require("canvas");
+    if (!global.toNotGenerateImages) {
+	    var { createCanvas } = require("canvas");
+	}
+
     for (var a in areas) {
         var area = areas[a];
 	    area.writeMapImage(createCanvas, mapFolder);

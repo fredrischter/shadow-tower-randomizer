@@ -45,3 +45,8 @@ npm run mod ".\generated\st.bin" ".\params\no-change.json"
 npm run mod ".\generated\st.bin" ".\params\very-hard.json"
 
 You can also put a image named as st.bin in generated\ folder, run all those commands to verify if produced output is different than one in the repo - that is reference generated files. Any output change indicates there was a code bahavior change, so it works like test.
+
+# Options
+
+toNotGenerateImages Doesn't generate map images, that makes it much quicker to run.
+
