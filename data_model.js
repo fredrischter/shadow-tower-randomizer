@@ -1,7 +1,6 @@
 'use strict';
 
 const constants = require('./constants');
-//const { createCanvas } = require("canvas");
 const fs = require('fs');
 const path = require('path');
 
@@ -529,8 +528,7 @@ class ItemData  {
   }
 }
 
-var itemData = {};
-global.itemData = itemData;
+global.itemData = {};
 global.items = [];
 
 var itemLinesSplit = itemDataString.split("\n");
@@ -651,7 +649,7 @@ for (var i = 0; i<TILE_COUNT; i++) {
 
   }
 
-  writeMapImage(folder) {
+  writeMapImage(createCanvas, folder) {
 
     const REMOVE_TILE = "REMOVE";
 
@@ -822,6 +820,10 @@ class UInt8 {
     target.set(value);
   }
 
+  null() {
+    this.set(0xff);
+  }
+
   isNull() {
     return this.get() == 0xff;
   }
@@ -851,6 +853,10 @@ class UInt16 {
     target.set(value);
   }
 
+  null() {
+    this.set(0xffff);
+  }
+
   isNull() {
     return this.get() == 0xffff;
   }
@@ -872,6 +878,10 @@ class UInt32 {
 
   set(value) {
     return setUInt32(this.bin, this.index, value);
+  }
+
+  null() {
+    this.set(0xffffffff);
   }
 
   isNull() {
@@ -1031,12 +1041,12 @@ class Collectable {
   }
 
   isBlank() {
-    return !itemData[this.type.get()];
+    return this.type.get() == 0xffff;
   }
 
   blank() {
     binSet(this.bin, this.offset_in_file, COLLECTABLE_SIZE, 0x00);
-    binSet(this.bin, this.offset_in_file, 0x2, 0xff);
+    this.type.set(0xffff);
   }
 }
 
@@ -1399,7 +1409,7 @@ class Spawn {
       this.name = "other_stuff";
     }
 
-    if (mapDraw && this.name != "other_stuff"
+    if (mapDraw && !this.chance.isNull()
       && !this.tileId.isNull()
       && !area.tiles[this.tileId.get()].tileX.isNull()
       && !area.tiles[this.tileId.get()].tileY.isNull()) {
@@ -1430,7 +1440,7 @@ class Spawn {
     this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
     this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
     this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);
-    if (!this.drop1.isNull()) {
+    if (!this.chance.isNull() && !this.drop1.isNull()) {
       this.drop1Item = itemData[this.drop1.get()] || {"name":"unknown "+this.drop1.get().toString(16)};
       mapDraw.push({
         color: "#ffff00", 
@@ -1442,7 +1452,7 @@ class Spawn {
     }
     this.drop2 = new UInt16(this.tfile.bin, this.offset_in_file + 0x06);
     this.drop2Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0c);
-    if (!this.drop2.isNull()) {
+    if (!this.chance.isNull() && !this.drop2.isNull()) {
       this.drop2Item = itemData[this.drop2.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
       mapDraw.push({
         color: "#ffff00", 
@@ -1454,7 +1464,7 @@ class Spawn {
     }
     this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
     this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
-    if (!this.drop3.isNull()) {
+    if (!this.chance.isNull() && !this.drop3.isNull()) {
       this.drop3Item = itemData[this.drop3.get()] || {"name":"unknown "+this.drop2.get().toString(16)};
       mapDraw.push({
         color: "#ffff00", 
@@ -1532,7 +1542,7 @@ function setup(FDAT) {
     areas[i].setup(FDAT);
   }
 
-  //fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
+  fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
 
 }
 

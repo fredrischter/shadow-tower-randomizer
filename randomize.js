@@ -48,7 +48,7 @@ function randomize(paramsFile, stDir) {
         "even-harder": 4
     };
 
-	const mapFolder = changeSetPath + path.sep + 'map';
+	const mapFolder = changeSetPath + path.sep + 'maps';
 	fs.mkdirSync(mapFolder);
 	fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
 
@@ -208,15 +208,21 @@ function randomize(paramsFile, stDir) {
             return;
         }
 
+        var thisItem = itemData[spawn.drop1.get()];
+
+        if (thisItem.type.get() == KEY) {
+        	return;
+        }
+
         dropRemovalLoop++;
         if (dropRemovalLoop > difficultyFactor) {
             dropRemovalLoop = 0;
             return;
         }
 
-        console.log("Applying difficulty by removing drop " + items[spawn.drop1.get()] + " of creature " + spawn.creature.name);
+        console.log("Applying difficulty by removing drop " + thisItem.name + " of creature " + spawn.creature.name);
 
-        spawn.drop1.set(0);
+        spawn.drop1.null();
         spawn.drop1Chance.set(0);
     }
 
@@ -308,10 +314,10 @@ function randomize(paramsFile, stDir) {
         logFileRandomize.write(util.format.apply(null, arguments) + '\n');
     }
 
-    //data_model.writeMapImage(mapFolder);
-
+    const { createCanvas } = require("canvas");
     for (var a in areas) {
         var area = areas[a];
+	    area.writeMapImage(createCanvas, mapFolder);
         area.reinjectEntityDataFromCreaturesToFile();
     }
 
