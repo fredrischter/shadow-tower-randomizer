@@ -43,11 +43,11 @@ for (var i in modelFileNames) {
 	for (var c in data_model.areas[i].creatures) {
 		let creature = data_model.areas[i].creatures[c];
 		creature.modelFiles = [
-			modelFile.files[c*5+0].fileName,
 			modelFile.files[c*5+1].fileName,
 			modelFile.files[c*5+2].fileName,
 			modelFile.files[c*5+3].fileName,
 			modelFile.files[c*5+4].fileName,
+			modelFile.files[c*5+5].fileName,
 		]
 	}
 }
@@ -312,7 +312,7 @@ function forEachCreatureSpawn(spawn, area, index) {
 }
 
 function forEachValidCreature(creature, area, index) {
-	creature.hp.set(1);
+//	creature.hp.set(1);
 }
 
 
@@ -517,11 +517,11 @@ let changeSet = [];
 //var part44 = new TFILEReader(file44Path).readTFormatPart();
 //part44.verifyCheckSum();
 
-swapCreatures(human_world_solitary_region["01_acid_slime"],
-	human_world_solitary_region["00_dark_spider"], changeSet);
-
 //swapCreatures(human_world_solitary_region["01_acid_slime"],
-//	earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+//	human_world_solitary_region["00_dark_spider"], changeSet);
+
+swapCreatures(human_world_solitary_region["01_acid_slime"],
+	earth_world_rotting_cavern["00_watcher_plant"], changeSet);
 
 /*
 var spider = human_world_solitary_region["01_acid_slime"];

@@ -115,7 +115,7 @@ class TFormatPart {
     // write sized mix parts
     if (this.sizedMixParts) {
       var sizedPartsDir = this.fileName + "_SIZED_MIX_PARTS";
-      fs.rmSync(sizedPartsDir, { recursive: true, force: true });
+      fs.rmdirSync(sizedPartsDir, { recursive: true, force: true });
       fs.mkdirSync(sizedPartsDir);
       var cursor = 0x04;
       for (var i = 0 ; i < this.sizedMixParts.length ; i++) {
@@ -246,7 +246,7 @@ class TFormat {
 
     if (callback) {
       var finishedCount = 0;
-      fs.rm(this.partsFolderName, { recursive: true, force: true }, (err) => {
+      fs.rmdir(this.partsFolderName, { recursive: true, force: true }, (err) => {
         fs.mkdir(this.partsFolderName, (err) => {
           for (var i = 0 ; i < this.files.length ; i++) {
             this.files[i].write((err) => {
@@ -260,7 +260,7 @@ class TFormat {
       });
 
     } else {
-      fs.rmSync(this.partsFolderName, { recursive: true, force: true });
+      fs.rmdirSync(this.partsFolderName, { recursive: true, force: true });
       fs.mkdirSync(this.partsFolderName);
       for (var i = 0 ; i < this.files.length ; i++) {
         this.files[i].write();

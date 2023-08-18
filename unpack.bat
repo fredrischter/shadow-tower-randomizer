@@ -1,5 +1,5 @@
 
-SET dir=F:\
+SET dir=C:\a\
 
 rm %dir%st.xml
 rm -rf %dir%st

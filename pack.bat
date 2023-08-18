@@ -1,5 +1,5 @@
 
-SET dir=F:\
+SET dir=C:\a\
 
 REM npm run assemble %dir%st\ST\COM\MO.T
 REM npm run assemble %dir%st\ST\COM\STAT.T
