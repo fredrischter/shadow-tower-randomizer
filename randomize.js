@@ -330,7 +330,7 @@ function randomize(paramsFile, stDir) {
         // Randomize creatures
 
         if (params.randomizeCreatures) {
-            for (var i =0; i<300; i++) {
+            for (var i =0; i<100; i++) {
                 swapCreatures(randomElement(randomizableCreatures),randomElement(randomizableCreatures), changeSet);
             }
         }
@@ -350,7 +350,10 @@ function randomize(paramsFile, stDir) {
 
     }
 
-    operate();
+    swapCreatures(human_world_solitary_region["01_acid_slime"],
+        earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+
+    //operate();
 
     for (var i in items) {
         forEachItem.forEach((func) => func(items[i]));

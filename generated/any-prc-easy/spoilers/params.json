@@ -2,6 +2,5 @@
 	"label": "any-prc-easy",
 	"preset": "any%",
 	"difficulty": "easy",
-	"randomizeCreatures": true,
-	"seed": "1234567890"
+	"randomizeCreatures": true
 }
