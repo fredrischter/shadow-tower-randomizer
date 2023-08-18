@@ -42,6 +42,9 @@ for (var i in modelFileNames) {
 	data_model.areas[i].modelFile = modelFile;
 	for (var c in data_model.areas[i].creatures) {
 		let creature = data_model.areas[i].creatures[c];
+        if (!modelFile.files[c*5+5]) {
+            break;
+        }
 		creature.modelFiles = [
 			modelFile.files[c*5+1].fileName,
 			modelFile.files[c*5+2].fileName,
