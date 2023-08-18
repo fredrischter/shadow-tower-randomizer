@@ -41,6 +41,8 @@ function randomize(paramsFile, stDir) {
     const PRESET_NO_CHANGE = "no-change";
     const PRESET_ONLY_FIX_KING_HOPPER = "only-fix-king-hopper";
     const PRESET_ONLY_APPLY_DIRECTIVES = "only-apply-directives";
+    const PRESET_ANY_PRC = "any%";
+    const PRESET_100_PRC = "100%";
     const DIFFICULTY_EASY = "easy";
     const DIFFICULTY_MEDIUM = "medium";
     const DIFFICULTY_HARD = "hard";
@@ -304,6 +306,22 @@ function randomize(paramsFile, stDir) {
         // ------- PRESET Directives
 
         if (params.preset == PRESET_ONLY_APPLY_DIRECTIVES) {
+            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
+            forEachItem.push(presetDirectivesforEachItem);
+        }
+
+        // ------- Any%
+
+        if (params.preset == PRESET_ANY_PRC) {
+            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
+            forEachItem.push(presetDirectivesforEachItem);
+        }
+
+        // ------- 100%
+
+        if (params.preset == PRESET_100_PRC) {
             forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
             forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
             forEachItem.push(presetDirectivesforEachItem);
