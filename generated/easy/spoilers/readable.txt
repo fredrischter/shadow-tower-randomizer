@@ -1,3 +1,4 @@
+Randomization - Using generated seed c5a5ce35-f551-4cb8-958b-8c7b6b3068f9
 Difficulty easy, factor 0.5
 Applying factor 2 to item item_0_short_sword. Attributes str 24 spd 100 def 0 bal 0 sla 96 smh 18 pir 14 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 6 max_dura 24 dura 20
 Applying factor 2 to item item_1_short_sword. Attributes str 26 spd 100 def 0 bal 0 sla 90 smh 16 pir 20 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 6 max_dura 22 dura 10
@@ -428,14 +429,14 @@ Setting spawn change to 100% , creature 0d_saurian_warrior_b
 Setting spawn change to 100% , creature 0d_saurian_warrior_b
 Setting spawn change to 100% , creature 0d_saurian_warrior_b
 Setting spawn change to 100% , creature 02_lizard_servant
-Setting spawn change to 100% , creature 06_dwarfling
+Setting spawn change to 100% , creature 06_lizard_servant
 Applying factor 0.5 to creature 00_night_howler. Attributes str 1 spd 1 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
 Applying factor 0.5 to creature 01_chirper. Attributes str 3 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 2 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 02_lizard_servant. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 04_night_howler. Attributes str 1 spd 1 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
 Applying factor 0.5 to creature 05_master_howler. Attributes str 4 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 1 mel 3 sol 4
-Applying factor 0.5 to creature 06_dwarfling. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_lizard_servant. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 08_hermit_crab. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 0 ham 0 pur 3 par 0 mel 0 sol 2
 Applying factor 0.5 to creature 09_freak. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 3 spr 0 foc 0 ham 2 pur 0 par 0 mel 0 sol 1
@@ -812,11 +813,11 @@ Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-Setting spawn change to 100% , creature 00_old_face
-Setting spawn change to 100% , creature 00_old_face
-Setting spawn change to 100% , creature 00_old_face
-Setting spawn change to 100% , creature 00_old_face
-Setting spawn change to 100% , creature 00_old_face
+Setting spawn change to 100% , creature 00_master_knight
+Setting spawn change to 100% , creature 00_master_knight
+Setting spawn change to 100% , creature 00_master_knight
+Setting spawn change to 100% , creature 00_master_knight
+Setting spawn change to 100% , creature 00_master_knight
 Setting spawn change to 100% , creature 06_warpoor
 Setting spawn change to 100% , creature 06_warpoor
 Setting spawn change to 100% , creature 06_warpoor
@@ -837,7 +838,7 @@ Setting spawn change to 100% , creature 04_wildowess
 Setting spawn change to 100% , creature 01_gorthaur
 Setting spawn change to 100% , creature 08_fester
 Setting spawn change to 100% , creature 02_fat_mole_d
-Applying factor 0.5 to creature 00_old_face. Attributes str 1 spd 1 def 2 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_master_knight. Attributes str 1 spd 1 def 2 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 01_gorthaur. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 5 ham 4 pur 1 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 02_fat_mole_d. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
@@ -853,11 +854,11 @@ Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-Setting spawn change to 100% , creature 01_unknown_f
-Setting spawn change to 100% , creature 01_unknown_f
-Setting spawn change to 100% , creature 01_unknown_f
-Setting spawn change to 100% , creature 01_unknown_f
-Setting spawn change to 100% , creature 01_unknown_f
+Setting spawn change to 100% , creature 01_stack_eyes
+Setting spawn change to 100% , creature 01_stack_eyes
+Setting spawn change to 100% , creature 01_stack_eyes
+Setting spawn change to 100% , creature 01_stack_eyes
+Setting spawn change to 100% , creature 01_stack_eyes
 Setting spawn change to 100% , creature 05_unknown_g
 Setting spawn change to 100% , creature 05_unknown_g
 Setting spawn change to 100% , creature 05_unknown_g
@@ -882,7 +883,7 @@ Setting spawn change to 100% , creature 0d_bugler
 Setting spawn change to 100% , creature 00_unknown_e
 Setting spawn change to 100% , creature 04_blank
 Applying factor 0.5 to creature 00_unknown_e. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-Applying factor 0.5 to creature 01_unknown_f. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 4 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_stack_eyes. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 4 pur 1 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 05_unknown_g. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 2 ham 2 pur 2 par 0 mel 0 sol 1
@@ -1186,10 +1187,10 @@ Setting spawn change to 100% , creature 04_tree_ogre
 Setting spawn change to 100% , creature 04_tree_ogre
 Setting spawn change to 100% , creature 09_armored_warrior
 Setting spawn change to 100% , creature 09_armored_warrior
-Setting spawn change to 100% , creature 0a_descrypha
-Setting spawn change to 100% , creature 0a_descrypha
+Setting spawn change to 100% , creature 0a_armored_slayer
+Setting spawn change to 100% , creature 0a_armored_slayer
 Setting spawn change to 100% , creature 09_armored_warrior
-Setting spawn change to 100% , creature 0a_descrypha
+Setting spawn change to 100% , creature 0a_armored_slayer
 Setting spawn change to 100% , creature 08_armored_guardian
 Applying factor 0.5 to creature 00_hell_hunter. Attributes str 0 spd 3 def 0 bal 0 sla 0 smh 1 pir 2 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
@@ -1201,16 +1202,16 @@ Applying factor 0.5 to creature 06_armored_slayer. Attributes str 0 spd 0 def 2 
 Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 08_armored_guardian. Attributes str 4 spd 0 def 1 bal 0 sla 1 smh 1 pir 0 spr 0 foc 0 ham 0 pur 1 par 1 mel 0 sol 0
 Applying factor 0.5 to creature 09_armored_warrior. Attributes str 2 spd 0 def 1 bal 0 sla 0 smh 1 pir 1 spr 0 foc 0 ham 0 pur 0 par 1 mel 0 sol 0
-Applying factor 0.5 to creature 0a_descrypha. Attributes str 0 spd 0 def 2 bal 0 sla 2 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0a_armored_slayer. Attributes str 0 spd 0 def 2 bal 0 sla 2 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
 Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-Setting spawn change to 100% , creature 05_unknown_c
-Setting spawn change to 100% , creature 05_unknown_c
-Setting spawn change to 100% , creature 05_unknown_c
-Setting spawn change to 100% , creature 05_unknown_c
+Setting spawn change to 100% , creature 05_hell_hunter
+Setting spawn change to 100% , creature 05_hell_hunter
+Setting spawn change to 100% , creature 05_hell_hunter
+Setting spawn change to 100% , creature 05_hell_hunter
 Setting spawn change to 100% , creature 08_claw_head
 Setting spawn change to 100% , creature 08_claw_head
 Setting spawn change to 100% , creature 08_claw_head
@@ -1237,7 +1238,7 @@ Applying factor 0.5 to creature 01_unknown_b. Attributes str 0 spd 0 def 0 bal 0
 Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 04_king_edward. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-Applying factor 0.5 to creature 05_unknown_c. Attributes str 0 spd 0 def 1 bal 1 sla 1 smh 1 pir 1 spr 1 foc 1 ham 1 pur 1 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 05_hell_hunter. Attributes str 0 spd 0 def 1 bal 1 sla 1 smh 1 pir 1 spr 1 foc 1 ham 1 pur 1 par 0 mel 0 sol 1
 Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 Applying factor 0.5 to creature 08_claw_head. Attributes str 0 spd 0 def 2 bal 0 sla 2 smh 3 pir 2 spr 2 foc 1 ham 2 pur 0 par 0 mel 0 sol 0
