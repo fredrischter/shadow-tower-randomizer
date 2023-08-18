@@ -38,11 +38,11 @@ const spoilersPath = productPath + path.sep + 'spoilers';
 const xmlDescriptor = onlyPath + path.sep + 'st.xml';
 const paramsFile = spoilersPath + path.sep + "params.json";
 
-if (fs.existsSync(productPath)) {
-	fs.rmdirSync(productPath, { recursive: true });
-}
-fs.mkdirSync(productPath);
-fs.mkdirSync(spoilersPath);
+//if (fs.existsSync(productPath)) {
+//	fs.rmdirSync(productPath, { recursive: true });
+//}
+//fs.mkdirSync(productPath);
+//fs.mkdirSync(spoilersPath);
 
 fs.copyFileSync(originalParamsFile, paramsFile);
 
@@ -68,7 +68,7 @@ exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor 
 
 	exec('npm run unpack "' + filesFullPath + '"', function() {
 
-		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' toNotGenerateImages':''), function() {
+		//exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' toNotGenerateImages':''), function() {
 
 			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 
@@ -84,7 +84,7 @@ exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor 
 
 			});
 
-		});
+		//});
 
 	});
 

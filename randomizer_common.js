@@ -238,7 +238,7 @@ class TFormat {
       this.files[i] = new TFormatPart(previous, this.bin.slice(previous - this.beginningOfBin, currentEnd - this.beginningOfBin), fileName, reader.baseFileName, i == 0 ? 0 : i - 1);
       previous = currentEnd;
     }
-    //console.log(" TFile with " + this.files.length + " parts loaded");
+    console.log(" TFile with " + this.files.length + " parts loaded");
     
   }
 
@@ -288,7 +288,7 @@ class TFormat {
       var current = this.bin[binPos+i];
       if (newValue!=current) {
         if (indexFromTable == indexFromOffset) {
-          console.log(" injecting change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
+          //console.log(" injecting change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
         }
         this.bin[binPos+i] = newValue;
       }
