@@ -1,4 +1,7 @@
 
+const seedrandom = require('seedrandom');
+const { uuid } = require('uuidv4');
+
 global.getUInt8 = function(bin, offset) {
   return bin[offset];
 };
@@ -69,6 +72,16 @@ global.binToStr = function(bin, padding) {
   return str;
 }
 
+global.seedRandom = function(seed) {
+  seedrandom(seed, { global: true });
+}
+
+global.useRandomSeed = function() {
+  var seed = uuid();
+  seedRandom(seed);
+  return seed;
+}
+
 global.randomIntFromInterval = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -76,3 +89,9 @@ global.randomIntFromInterval = function(min, max) {
 global.randomInt = function(max) {
   return Math.floor(Math.random() * (max + 1))
 }
+
+global.randomElement = function(array) {
+  return array[randomInt(array.length-1)];
+}
+
+exports={};

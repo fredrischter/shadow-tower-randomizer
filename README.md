@@ -36,13 +36,22 @@ FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
 
 Replace st.bin by your image file.
 
+
+npm run mod ".\generated\st.bin" ".\params\any-prc-easy.json"
+npm run mod ".\generated\st.bin" ".\params\any-prc-even-harder.json"
+npm run mod ".\generated\st.bin" ".\params\any-prc-hard.json"
+npm run mod ".\generated\st.bin" ".\params\any-prc-no-change.json"
+npm run mod ".\generated\st.bin" ".\params\any-prc-very-hard.json"
+npm run mod ".\generated\st.bin" ".\params\any-prc-medium.json"
+
 npm run mod ".\generated\st.bin" ".\params\easy.json"
 npm run mod ".\generated\st.bin" ".\params\even-harder.json"
 npm run mod ".\generated\st.bin" ".\params\hard.json"
-npm run mod ".\generated\st.bin" ".\params\only-fix-king-hopper.json"
-npm run mod ".\generated\st.bin" ".\params\only-apply-directives.json"
 npm run mod ".\generated\st.bin" ".\params\no-change.json"
 npm run mod ".\generated\st.bin" ".\params\very-hard.json"
+
+npm run mod ".\generated\st.bin" ".\params\only-fix-king-hopper.json"
+npm run mod ".\generated\st.bin" ".\params\only-apply-directives.json"
 
 You can also put a image named as st.bin in generated\ folder, run all those commands to verify if produced output is different than one in the repo - that is reference generated files. Any output change indicates there was a code bahavior change, so it works like test.
 

@@ -8,11 +8,11 @@ const util = require('util');
 
 function randomize(paramsFile, stDir) {
 
-	for (var i = 2; i < process.argv.length; i++) {
-		if (process.argv[i] == "toNotGenerateImages") {
-			global.toNotGenerateImages = true;
-		}
-	}
+    for (var i = 2; i < process.argv.length; i++) {
+        if (process.argv[i] == "toNotGenerateImages") {
+            global.toNotGenerateImages = true;
+        }
+    }
 
     let params = JSON.parse(fs.readFileSync(paramsFile));
     let changeSetPath = path.dirname(paramsFile);
@@ -38,6 +38,14 @@ function randomize(paramsFile, stDir) {
         return;
     }
 
+    if (params.seed) {
+    	seedRandom(params.seed);
+        console.log("Randomization - Using given seed " + params.seed);
+    } else {
+    	var seed = useRandomSeed();
+        console.log("Randomization - Using generated seed " + seed);
+    }
+
     const PRESET_NO_CHANGE = "no-change";
     const PRESET_ONLY_FIX_KING_HOPPER = "only-fix-king-hopper";
     const PRESET_ONLY_APPLY_DIRECTIVES = "only-apply-directives";
@@ -55,9 +63,9 @@ function randomize(paramsFile, stDir) {
         "even-harder": 4
     };
 
-	const mapFolder = changeSetPath;
-	fs.mkdirSync(mapFolder + path.sep + 'maps');
-	fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
+    const mapFolder = changeSetPath;
+    fs.mkdirSync(mapFolder + path.sep + 'maps');
+    fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
 
     var difficultyFactor = factorByDificultyParam[params.difficulty];
 
@@ -77,6 +85,8 @@ function randomize(paramsFile, stDir) {
         if (creature1 == creature2) {
             return;
         }
+
+        console.log("Swapping creatures " + creature1.name + " ("+creature1.area.name + ") and " + creature2.name + " (" + creature2.area.name + ")");
 
         // model
         for (var i in creature1.modelFiles) {
@@ -120,15 +130,15 @@ function randomize(paramsFile, stDir) {
     var forEachCollectable = [];
 
     function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
-        if (spawn.creature.name.includes("king_hopper")) {
-            console.log("Setting spawn change to 100% and fixing mutex group, creature " + spawn.creature.name);
+        if (spawn.name().includes("king_hopper")) {
+            console.log("Setting spawn change to 100% and fixing mutex group, creature " + spawn.name());
             spawn.chance.set(100);
             spawn.mutexGroup.set(14);
         }
     }
 
     function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
-        console.log("Setting spawn change to 100% , creature " + spawn.creature.name);
+        console.log("Setting spawn change to 100% , creature " + spawn.name());
         spawn.chance.set(100);
         if (!spawn.drop1.isNull()) {
             spawn.drop1Chance.set(100);
@@ -218,8 +228,8 @@ function randomize(paramsFile, stDir) {
         var thisItem = itemData[spawn.drop1.get()];
 
         if (thisItem.type.get() == KEY ||
-        	thisItem.name.includes("vaccine")) {
-        	return;
+            thisItem.name.includes("vaccine")) {
+            return;
         }
 
         dropRemovalLoop++;
@@ -228,7 +238,7 @@ function randomize(paramsFile, stDir) {
             return;
         }
 
-        console.log("Applying difficulty by removing drop " + thisItem.name + " of creature " + spawn.creature.name);
+        console.log("Applying difficulty by removing drop " + thisItem.name + " of spawn " + spawn.name());
 
         spawn.drop1.null();
         spawn.drop1Chance.set(0);
@@ -236,9 +246,9 @@ function randomize(paramsFile, stDir) {
 
     var collectableRemovalLoop=0;
     function applyDifficultyForEachCollectable(collectable, area) {
-    	if (collectable.isBlank()) {
-    		return;
-    	}
+        if (collectable.isBlank()) {
+            return;
+        }
 
         collectableRemovalLoop++;
         if (collectableRemovalLoop > difficultyFactor) {
@@ -273,6 +283,16 @@ function randomize(paramsFile, stDir) {
             forEachItem.push(presetDirectivesforEachItem);
         }
 
+        // Randomize creatures
+
+        if (params.randomizeCreatures) {
+            for (var i =0; i<300; i++) {
+                swapCreatures(randomElement(randomizableCreatures),randomElement(randomizableCreatures), changeSet);
+            }
+        }
+
+        // ------- Adjust creature and equip levels for proper progression
+
         // ------- ApplyDifficulty
 
         console.log("Difficulty " + params.difficulty + ", factor " + factorByDificultyParam[params.difficulty]);
@@ -300,7 +320,7 @@ function randomize(paramsFile, stDir) {
         for (var index = 0; index < SPAWN_ENTRIES_COUNT; index++) {
             var spawn = area.spawns[index];
             if (!spawn.chance.isNull() &&
-                !spawn.name.endsWith("door")) {
+                !spawn.name().endsWith("door")) {
                 forEachCreatureSpawn.forEach((func) => func(spawn, area, index));
             }
         }
@@ -325,15 +345,15 @@ function randomize(paramsFile, stDir) {
     var htmlFile = mapFolder + path.sep + "maps.html";
     var mapsHTML = ""+fs.readFileSync(htmlFile);
     if (!global.toNotGenerateImages) {
-	    var { createCanvas } = require("canvas");
-	}
+        var { createCanvas } = require("canvas");
+    }
 
     for (var a in areas) {
         var area = areas[a];
-	    area.writeMapImage(createCanvas, mapFolder);
-	    var summary = "";
-	    for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
-	    mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
+        area.writeMapImage(createCanvas, mapFolder);
+        var summary = "";
+        for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
+        mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
 
         area.reinjectEntityDataFromCreaturesToFile();
     }
