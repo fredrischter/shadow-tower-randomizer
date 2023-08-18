@@ -3,23 +3,28 @@
 const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 
-function unpack(file) {
+function unpack(files) {
 
-	if (!file || !file.endsWith(".T")) {
-		console.log("ERROR - didn't provide T file as argument.");
+	if (!files) {
+		console.log("ERROR - didn't provide T files argument.");
 		process.exit(1);
 		return;
 	}
 
-	var tfile = new TFILEReader(file).readTFormat();
-	tfile.writeParts();
+	var filesArray = files.split(";");
+
+	filesArray.forEach((fileName) => {
+		if (!fileName.trim().length) {
+			return;
+		}
+		var tfile = new TFILEReader(fileName).readTFormat();
+		tfile.writeParts();
+	});
 
 }
 
 if (process.argv[1].indexOf("unpack.js") > -1){
-	unpack(process.argv[2], function(tfile) {
-		data_model.setup(tfile);
-	});
+	unpack(process.argv[2]);
 } else {
 	module.exports = unpack;
 }

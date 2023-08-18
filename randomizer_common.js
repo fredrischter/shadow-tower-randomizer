@@ -238,7 +238,7 @@ class TFormat {
       this.files[i] = new TFormatPart(previous, this.bin.slice(previous - this.beginningOfBin, currentEnd - this.beginningOfBin), fileName, reader.baseFileName, i == 0 ? 0 : i - 1);
       previous = currentEnd;
     }
-    console.log(" TFile with " + this.files.length + " parts loaded");
+    //console.log(" TFile with " + this.files.length + " parts loaded");
     
   }
 

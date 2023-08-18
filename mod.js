@@ -60,16 +60,19 @@ function exec(cmd, callback) {
 	});
 }
 
+var filesToExtract = ['COM' + path.sep + 'FDAT.T', 'CHR0' + path.sep + 'M00.T', 'CHR0' + path.sep + 'M01.T', 'CHR0' + path.sep + 'M02.T', 'CHR0' + path.sep + 'M03.T', 'CHR0' + path.sep + 'M04.T', 'CHR0' + path.sep + 'M05.T', 'CHR0' + path.sep + 'M06.T', 'CHR0' + path.sep + 'M08.T', 'CHR0' + path.sep + 'M09.T', 'CHR1' + path.sep + 'M10.T', 'CHR1' + path.sep + 'M11.T', 'CHR1' + path.sep + 'M12.T', 'CHR1' + path.sep + 'M13.T', 'CHR1' + path.sep + 'M14.T', 'CHR1' + path.sep + 'M15.T', 'CHR1' + path.sep + 'M17.T', 'CHR1' + path.sep + 'M18.T', 'CHR2' + path.sep + 'M20.T', 'CHR2' + path.sep + 'M21.T', 'CHR2' + path.sep + 'M23.T', 'CHR2' + path.sep + 'M24.T', 'CHR2' + path.sep + 'M25.T', 'CHR2' + path.sep + 'M26.T', 'CHR2' + path.sep + 'M27.T', 'CHR2' + path.sep + 'M28.T', 'CHR3' + path.sep + 'M30.T', 'CHR3' + path.sep + 'M32.T', 'CHR3' + path.sep + 'M33.T', 'CHR3' + path.sep + 'M37.T', 'CHR3' + path.sep + 'M38.T', 'CHR4' + path.sep + 'M40.T', 'CHR4' + path.sep + 'M41.T'];
+var filesFullPath = '';
+filesToExtract.forEach((relativePath) => filesFullPath += extractedPath + path.sep + "ST" + path.sep + relativePath + ';');
+
 exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"', function() {
 
-	var tFile = extractedPath + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";	
-	exec('npm run unpack "'+tFile+'"', function() {
+	exec('npm run unpack "' + filesFullPath + '"', function() {
 
 		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' toNotGenerateImages':''), function() {
 
 			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 
-				exec('npm run pack "'+tFile+'"', function() {
+				exec('npm run pack "' + filesFullPath + '"', function() {
 
 					exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
 						console.log("Finished, output " + outputImage);
@@ -86,6 +89,10 @@ exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor 
 	});
 
 });
+
+
+
+
 
 /*
 \ST\COM\FDAT.T \ST\CHR0\M00.T \ST\CHR0\M01.T \ST\CHR0\M02.T \ST\CHR0\M03.T \ST\CHR0\M04.T \ST\CHR0\M05.T \ST\CHR0\M06.T \ST\CHR0\M08.T \ST\CHR0\M09.T \ST\CHR1\M10.T \ST\CHR1\M11.T \ST\CHR1\M12.T \ST\CHR1\M13.T \ST\CHR1\M14.T \ST\CHR1\M15.T \ST\CHR1\M17.T \ST\CHR1\M18.T \ST\CHR2\M20.T \ST\CHR2\M21.T \ST\CHR2\M23.T \ST\CHR2\M24.T \ST\CHR2\M25.T \ST\CHR2\M26.T \ST\CHR2\M27.T \ST\CHR2\M28.T \ST\CHR3\M30.T \ST\CHR3\M32.T \ST\CHR3\M33.T \ST\CHR3\M37.T \ST\CHR3\M38.T \ST\CHR4\M40.T \ST\CHR4\M41.T
