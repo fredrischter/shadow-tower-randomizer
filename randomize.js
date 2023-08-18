@@ -38,14 +38,6 @@ function randomize(paramsFile, stDir) {
         return;
     }
 
-    if (params.seed) {
-    	seedRandom(params.seed);
-        console.log("Randomization - Using given seed " + params.seed);
-    } else {
-    	var seed = useRandomSeed();
-        console.log("Randomization - Using generated seed " + seed);
-    }
-
     const PRESET_NO_CHANGE = "no-change";
     const PRESET_ONLY_FIX_KING_HOPPER = "only-fix-king-hopper";
     const PRESET_ONLY_APPLY_DIRECTIVES = "only-apply-directives";
@@ -79,6 +71,14 @@ function randomize(paramsFile, stDir) {
     });
     console.log = function() {
         logFile2.write(util.format.apply(null, arguments) + '\n');
+    }
+
+    if (params.seed) {
+        seedRandom(params.seed);
+        console.log("Randomization - Using given seed " + params.seed);
+    } else {
+        var seed = useRandomSeed();
+        console.log("Randomization - Using generated seed " + seed);
     }
 
     function swapCreatures(creature1, creature2, changeSet) {

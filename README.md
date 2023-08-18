@@ -36,7 +36,6 @@ FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
 
 Replace st.bin by your image file.
 
-
 npm run mod ".\generated\st.bin" ".\params\any-prc-easy.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-even-harder.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-hard.json"
