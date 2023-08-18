@@ -619,10 +619,10 @@ for (var a in areas) {
 }
 */
 
-/*for (var a in areas) {
+for (var a in areas) {
 	var area = areas[a];
 	area.reinjectEntityDataFromCreaturesToFile();
-}*/
+}
 
 for (var i in tfileOriginal.files) {
 	var originalPart = tfileOriginal.files[i];
