@@ -1,5 +1,6 @@
 {
 	"label": "very-hard",
 	"preset": "only-apply-directives",
-	"difficulty": "very-hard"
+	"difficulty": "very-hard",
+	"seed": "1234567890"
 }
