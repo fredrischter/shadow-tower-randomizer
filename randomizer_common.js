@@ -70,7 +70,7 @@ class TFormatPart {
     this.indexInTFile = indexInTFile;
     //console.log("     offset   " + this.startOffset.toString(16));
 
-    this.trySizedMix();
+    //this.trySizedMix();
   }
 
   trySizedMix() {
@@ -106,6 +106,8 @@ class TFormatPart {
   }
 
   write(callback) {
+    console.log("DEBUG - Writing to file TFormatPart" + (callback?" with callback ":" without callback ") + this.fileName);
+
     if (callback) {
       fs.writeFileSync(this.fileName, Buffer.from(this.bin), callback);// ,{flag:'a+'}
     } else {
@@ -243,7 +245,6 @@ class TFormat {
   }
 
   writeParts(callback) {
-
     if (callback) {
       var finishedCount = 0;
       fs.rmdir(this.partsFolderName, { recursive: true, force: true }, (err) => {
@@ -276,6 +277,7 @@ class TFormat {
   }
 
   injectPart(file) {
+    console.log("DEBUG - Injecting from TFormatPart " + file.fileName + " into TFormat " + this.fileName);
     var indexFromTable = this.offsetTable[file.indexInTFile];
     var indexFromOffset = file.startOffset / 0x800;
     if (indexFromTable != indexFromOffset) {
@@ -288,7 +290,7 @@ class TFormat {
       var current = this.bin[binPos+i];
       if (newValue!=current) {
         if (indexFromTable == indexFromOffset) {
-          console.log(" injecting change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
+          //console.log(" injecting change ["+ (binPos+this.beginningOfBin+i).toString(16) +"] = " + current.toString(16) + " -> " +newValue.toString(16));
         }
         this.bin[binPos+i] = newValue;
       }
@@ -296,6 +298,7 @@ class TFormat {
   }
 
   write(callback) {
+    console.log("DEBUG - Writing to file TFormat" + (callback?" with callback ":" without callback ") + this.fileName);
     var fd = fs.openSync(this.fileName, 'r+');
 
     if (callback) {
