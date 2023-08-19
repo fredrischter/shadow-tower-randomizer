@@ -926,7 +926,9 @@ const creatureNameByAbsoluteOffset={0x9a804:"dark_spider",0x9a8c4:"shadow_spider
 var nonRandomizableCreatureNames = [
   "unknown", "unused", "door", "blank",
   "dybbuk", "lizard_servant", "mole", "auriel", "akryal", "abraxus", "panak", "king_edward", "pulsating_heart", "duhrin",
+  "dark_imp", "black_imp", "gorgoral", "gargaral", "gordoral",
   "fester", "wildowess", "gorthaur",
+  "demon_bat", "fanged_worm", "rotting_face", "dark_imp", "black_imp", "dark_fairy", "bone_demon", "demons_eye", "claw_head", "hanging_dead", "dragon_turtle", "apocrypha",
   "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
 ];
 
