@@ -106,7 +106,7 @@ class TFormatPart {
   }
 
   write(callback) {
-    console.log("DEBUG - Writing to file TFormatPart" + (callback?" with callback ":" without callback ") + this.fileName);
+    //console.log("DEBUG - Writing to file TFormatPart" + (callback?" with callback ":" without callback ") + this.fileName);
 
     if (callback) {
       fs.writeFileSync(this.fileName, Buffer.from(this.bin), callback);// ,{flag:'a+'}
@@ -278,7 +278,7 @@ class TFormat {
   }
 
   injectPart(file) {
-    console.log("DEBUG - Injecting from TFormatPart " + file.fileName + " into TFormat " + this.fileName);
+    //console.log("DEBUG - Injecting from TFormatPart " + file.fileName + " into TFormat " + this.fileName);
 
     var indexFromTable = this.offsetTable[file.indexInTFile];
     var indexFromOffset = file.startOffset / 0x800;
@@ -300,7 +300,7 @@ class TFormat {
   }
 
   write(callback) {
-    console.log("DEBUG - Writing to file TFormat" + (callback?" with callback ":" without callback ") + this.fileName);
+    //console.log("DEBUG - Writing to file TFormat" + (callback?" with callback ":" without callback ") + this.fileName);
     var fd = fs.openSync(this.fileName, 'r+');
 
     if (callback) {

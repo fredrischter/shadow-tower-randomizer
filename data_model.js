@@ -952,6 +952,12 @@
       this.index = index;
       this.type = this.bin[this.offset_in_file];
 
+      if (this.type == 0x20) {
+        this.weaponAttack1 = new UInt16(this.bin, this.offset_in_file + 0x1a);
+        this.weaponAttack2 = new UInt16(this.bin, this.offset_in_file + 0x1c);
+        this.weaponAttack3 = new UInt16(this.bin, this.offset_in_file + 0x1e);
+      }
+
       /*
   Entity data types
   0 tilt
@@ -965,11 +971,12 @@
   80 giving
   */
 
-  if (!ENTITY_STATE_SIZE_BY_TYPE[this.type]) {
-    console.log("ERROR EntityStateData type size unknown " + this.type.toString(16) + " " + ENTITY_STATE_SIZE_BY_TYPE[this.type]);
-  }
-  this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
-  this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
+    if (!ENTITY_STATE_SIZE_BY_TYPE[this.type]) {
+      console.log("ERROR EntityStateData type size unknown " + this.type.toString(16) + " " + ENTITY_STATE_SIZE_BY_TYPE[this.type]);
+    }
+    this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
+    this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
+
   }
 
   toReadableString() {
@@ -1319,8 +1326,8 @@
       this.attack1 = new UInt8( bin, this.offset_in_file + 0x07);
       this.attack2 = new UInt8( bin, this.offset_in_file + 0x08);
       this.magic1 = new UInt8( bin, this.offset_in_file + 0x09);
-      this.something1 = new UInt16( bin, this.offset_in_file + 0x0b);
-      this.something2 = new UInt16( bin, this.offset_in_file + 0x0d);
+      this.height = new UInt16( bin, this.offset_in_file + 0x0b);
+      this.weight = new UInt16( bin, this.offset_in_file + 0x0d);
       this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
       this.something4 = new UInt16( bin, this.offset_in_file + 0x11);
 
@@ -1339,6 +1346,11 @@
       this.mel = new UInt8( bin, this.offset_in_file + 0x30);
       this.sol = new UInt8( bin, this.offset_in_file + 0x31);
       this.hp  = new UInt16(bin, this.offset_in_file + 0x32);
+
+      this.minWeaponDefense = new UInt16(bin, this.offset_in_file + 0x4a);
+      this.maxWeaponDefense = new UInt16(bin, this.offset_in_file + 0x4c);
+      this.minMagicDefense = new UInt16(bin, this.offset_in_file + 0x52);
+      this.maxMagicDefense = new UInt16(bin, this.offset_in_file + 0x54);
 
       area[this.name] = this;
 
@@ -1385,7 +1397,7 @@
         var address = ENTITY_STATE_DATA_START + entityStateOffset.get();
         this.entityStates[i].offset_in_file = address;
 
-        binCopy(this.entityStates[i].originalBin, 0, this.bin, this.entityStates[i].offset_in_file, this.entityStates[i].length);
+        binCopy(this.entityStates[i].offset_in_file, 0, this.bin, this.entityStates[i].originalBin, this.entityStates[i].length);
       }
 
       return nextEntityDataAddress;

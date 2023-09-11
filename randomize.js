@@ -380,6 +380,26 @@ function randomize(paramsFile, stDir) {
 
     operate();
 
+    forEachValidCreature.push(function(creature, area, index) {
+        console.log("DEBUG - Creature " + creature.name);
+        creature.weight.set(0x1);
+        if (creature.minWeaponDefense) {
+            creature.minWeaponDefense.set(0x1);
+            creature.maxWeaponDefense.set(0x1);
+            creature.minMagicDefense.set(0x1);
+            creature.maxMagicDefense.set(0x1);
+        }
+        creature.entityStates.forEach((entityState) => {
+            if (entityState.type == 0x20) {
+                console.log("DEBUG - Changing attack.");
+                entityState.weaponAttack1.set(0x50);
+                entityState.weaponAttack2.set(0x50);
+                entityState.weaponAttack3.set(0x50);
+            }
+        });
+    });
+
+
     for (var i in items) {
         forEachItem.forEach((func) => func(items[i]));
     }
