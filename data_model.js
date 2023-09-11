@@ -928,9 +928,14 @@ var nonRandomizableCreatureNames = [
   "dybbuk", "lizard_servant", "mole", "auriel", "akryal", "abraxus", "panak", "king_edward", "pulsating_heart", "duhrin",
   "dark_imp", "black_imp", "gorgoral", "gargaral", "gordoral",
   "fester", "wildowess", "gorthaur",
-  "demon_bat", "fanged_worm", "rotting_face", "dark_imp", "black_imp", "dark_fairy", "bone_demon", "demons_eye", "claw_head", "hanging_dead", "dragon_turtle", "apocrypha",
+  "shadow_spider", "demon_bat", "dark_fairy", "bone_demon", "demons_eye", "apocrypha", "rotting_face",
+  "fanged_worm", "dark_imp", "master_howler", "black_imp", "claw_head", "hanging_dead", "dragon_turtle",
   "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
 ];
+
+var flyingRandomizableCreatures = [
+  "shadow_spider", "demon_bat", "dark_fairy", "bone_demon", "demons_eye", "apocrypha", "rotting_face"
+]
 
 const CREATURE_DATA_LENGTH = 93;
 const ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET = 96;
@@ -1240,6 +1245,7 @@ class ScenarioObject {
 
   global.validCreatures = [];
   global.randomizableCreatures = [];
+  global.randomizableFlyingCreatures = [];
 
   var nextExpectedEntityDataAddress;
 
@@ -1288,6 +1294,7 @@ class ScenarioObject {
         if (!this.isBlank) {
           validCreatures.push(this);
           var randomizable = true;
+          var flyingRandomizable = false;
           nonRandomizableCreatureNames.forEach((name) => {
             if (this.name.includes(name)) {
               randomizable = false;
@@ -1296,10 +1303,27 @@ class ScenarioObject {
           if (randomizable) {
             randomizableCreatures.push(this);
           }
+          flyingRandomizableCreatures.forEach((name) => {
+            if (this.name.includes(name)) {
+              randomizable = true;
+              flyingRandomizable = true;
+            };
+          });
+          if (flyingRandomizable) {
+            randomizableFlyingCreatures.push(this);
+          }
         }
       }
 
     //this.maxPresence = new UInt8( bin, this.offset_in_file + 0x10);
+    this.attack1 = new UInt8( bin, this.offset_in_file + 0x07);
+    this.attack2 = new UInt8( bin, this.offset_in_file + 0x08);
+    this.magic1 = new UInt8( bin, this.offset_in_file + 0x09);
+    this.something1 = new UInt16( bin, this.offset_in_file + 0x0b);
+    this.something2 = new UInt16( bin, this.offset_in_file + 0x0d);
+    this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
+    this.something4 = new UInt16( bin, this.offset_in_file + 0x11);
+
     this.str = new UInt8( bin, this.offset_in_file + 0x24);
     this.spd = new UInt8( bin, this.offset_in_file + 0x25);
     this.def = new UInt8( bin, this.offset_in_file + 0x26);

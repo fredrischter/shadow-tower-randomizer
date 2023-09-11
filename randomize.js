@@ -133,6 +133,31 @@ function randomize(paramsFile, stDir) {
         var tmp = creature1.entityStates;
         creature1.entityStates = creature2.entityStates;
         creature2.entityStates = tmp;
+
+        creature1.attack1.swap(creature2.attack1);
+        creature1.attack2.swap(creature2.attack2);
+        creature1.magic1.swap(creature2.magic1);
+        creature1.something1.swap(creature2.something1);
+        creature1.something2.swap(creature2.something2);
+        creature1.something3.swap(creature2.something3);
+        creature1.something4.swap(creature2.something4);
+
+        creature1.str.swap(creature2.str);
+        creature1.spd.swap(creature2.spd);
+        creature1.def.swap(creature2.def);
+        creature1.bal.swap(creature2.bal);
+        creature1.sla.swap(creature2.sla);
+        creature1.smh.swap(creature2.smh);
+        creature1.pir.swap(creature2.pir);
+        creature1.spr.swap(creature2.spr);
+        creature1.foc.swap(creature2.foc);
+        creature1.ham.swap(creature2.ham);
+        creature1.pur.swap(creature2.pur);
+        creature1.par.swap(creature2.par);
+        creature1.mel.swap(creature2.mel);
+        creature1.sol.swap(creature2.sol);
+        creature1.hp.swap(creature2.hp);
+
     }
 
     var goodItems = [
@@ -330,8 +355,11 @@ function randomize(paramsFile, stDir) {
         // Randomize creatures
 
         if (params.randomizeCreatures) {
-            for (var i =0; i<300; i++) {
+            for (var i =0; i<100; i++) {
                 swapCreatures(randomElement(randomizableCreatures),randomElement(randomizableCreatures), changeSet);
+            }
+            for (var i =0; i<5; i++) {
+                swapCreatures(randomElement(randomizableFlyingCreatures),randomElement(randomizableFlyingCreatures), changeSet);
             }
         }
 
