@@ -134,13 +134,13 @@ function randomize(paramsFile, stDir) {
         creature1.entityStates = creature2.entityStates;
         creature2.entityStates = tmp;
 
-        creature1.attack1.swap(creature2.attack1);
-        creature1.attack2.swap(creature2.attack2);
-        creature1.magic1.swap(creature2.magic1);
-        creature1.something1.swap(creature2.something1);
-        creature1.something2.swap(creature2.something2);
-        creature1.something3.swap(creature2.something3);
-        creature1.something4.swap(creature2.something4);
+        //creature1.attack1.swap(creature2.attack1);
+        //creature1.attack2.swap(creature2.attack2);
+        //creature1.magic1.swap(creature2.magic1);
+        //creature1.something1.swap(creature2.something1);
+        //creature1.something2.swap(creature2.something2);
+        //creature1.something3.swap(creature2.something3);
+        //creature1.something4.swap(creature2.something4);
 
         creature1.str.swap(creature2.str);
         creature1.spd.swap(creature2.spd);
@@ -227,20 +227,40 @@ function randomize(paramsFile, stDir) {
     var creatureAttributeFactor = difficultyFactor;
 
     function applyDifficultyForEachValidCreature(creature, area, index) {
-        creature.str.set(Math.min(256, Math.ceil(creature.str.get() * creatureAttributeFactor)));
-        creature.spd.set(Math.min(256, Math.ceil(creature.spd.get() * creatureAttributeFactor)));
-        creature.def.set(Math.min(256, Math.ceil(creature.def.get() * creatureAttributeFactor)));
-        creature.bal.set(Math.min(256, Math.ceil(creature.bal.get() * creatureAttributeFactor)));
-        creature.sla.set(Math.min(256, Math.ceil(creature.sla.get() * creatureAttributeFactor)));
-        creature.smh.set(Math.min(256, Math.ceil(creature.smh.get() * creatureAttributeFactor)));
-        creature.pir.set(Math.min(256, Math.ceil(creature.pir.get() * creatureAttributeFactor)));
-        creature.spr.set(Math.min(256, Math.ceil(creature.spr.get() * creatureAttributeFactor)));
-        creature.foc.set(Math.min(256, Math.ceil(creature.foc.get() * creatureAttributeFactor)));
-        creature.ham.set(Math.min(256, Math.ceil(creature.ham.get() * creatureAttributeFactor)));
-        creature.pur.set(Math.min(256, Math.ceil(creature.pur.get() * creatureAttributeFactor)));
-        creature.par.set(Math.min(256, Math.ceil(creature.par.get() * creatureAttributeFactor)));
-        creature.mel.set(Math.min(256, Math.ceil(creature.mel.get() * creatureAttributeFactor)));
-        creature.sol.set(Math.min(256, Math.ceil(creature.sol.get() * creatureAttributeFactor)));
+        // This is actually attributes increase to be earned once creature is killed.
+        // May be used to tweak progression.
+        //creature.str.set(Math.min(255, Math.ceil(creature.str.get() * creatureAttributeFactor)));
+        //creature.spd.set(Math.min(255, Math.ceil(creature.spd.get() * creatureAttributeFactor)));
+        //creature.def.set(Math.min(255, Math.ceil(creature.def.get() * creatureAttributeFactor)));
+        //creature.bal.set(Math.min(255, Math.ceil(creature.bal.get() * creatureAttributeFactor)));
+        //creature.sla.set(Math.min(255, Math.ceil(creature.sla.get() * creatureAttributeFactor)));
+        //creature.smh.set(Math.min(255, Math.ceil(creature.smh.get() * creatureAttributeFactor)));
+        //creature.pir.set(Math.min(255, Math.ceil(creature.pir.get() * creatureAttributeFactor)));
+        //creature.spr.set(Math.min(255, Math.ceil(creature.spr.get() * creatureAttributeFactor)));
+        //creature.foc.set(Math.min(255, Math.ceil(creature.foc.get() * creatureAttributeFactor)));
+        //creature.ham.set(Math.min(255, Math.ceil(creature.ham.get() * creatureAttributeFactor)));
+        //creature.pur.set(Math.min(255, Math.ceil(creature.pur.get() * creatureAttributeFactor)));
+        //creature.par.set(Math.min(255, Math.ceil(creature.par.get() * creatureAttributeFactor)));
+        //creature.mel.set(Math.min(255, Math.ceil(creature.mel.get() * creatureAttributeFactor)));
+        //creature.sol.set(Math.min(255, Math.ceil(creature.sol.get() * creatureAttributeFactor)));
+
+        console.log("DEBUG - Creature " + creature.name);
+        //creature.weight.set(0x1);
+        if (creature.minWeaponDefense) {
+            console.log("DEBUG - Changing denfese. " + creature.minWeaponDefense.get() + " to " + Math.min(255, creature.minWeaponDefense.get() * creatureAttributeFactor));
+            creature.minWeaponDefense.set(Math.min(255, creature.minWeaponDefense.get() * creatureAttributeFactor));
+            creature.maxWeaponDefense.set(Math.min(255, creature.maxWeaponDefense.get() * creatureAttributeFactor));
+            creature.minMagicDefense.set(Math.min(255, creature.minMagicDefense.get() * creatureAttributeFactor));
+            creature.maxMagicDefense.set(Math.min(255, creature.maxMagicDefense.get() * creatureAttributeFactor));
+        }
+        creature.entityStates.forEach((entityState) => {
+            if (entityState.type == 0x20) {
+                console.log("DEBUG - Changing attack. " + entityState.weaponAttack1.get() + " to " + Math.min(255, entityState.weaponAttack1.get() * creatureAttributeFactor));
+                entityState.weaponAttack1.set(Math.min(255, entityState.weaponAttack1.get() * creatureAttributeFactor));
+                entityState.weaponAttack2.set(Math.min(255, entityState.weaponAttack2.get() * creatureAttributeFactor));
+                entityState.weaponAttack3.set(Math.min(255, entityState.weaponAttack3.get() * creatureAttributeFactor));
+            }
+        });
 
         console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get() + " spd " + creature.spd.get() + " def " + creature.def.get() + " bal " + creature.bal.get() + " sla " + creature.sla.get() + " smh " + creature.smh.get() + " pir " + creature.pir.get() + " spr " + creature.spr.get() + " foc " + creature.foc.get() + " ham " + creature.ham.get() + " pur " + creature.pur.get() + " par " + creature.par.get() + " mel " + creature.mel.get() + " sol " + creature.sol.get());
         //It is too much, makes the game to take too long
@@ -379,26 +399,6 @@ function randomize(paramsFile, stDir) {
     }
 
     operate();
-
-    forEachValidCreature.push(function(creature, area, index) {
-        console.log("DEBUG - Creature " + creature.name);
-        creature.weight.set(0x1);
-        if (creature.minWeaponDefense) {
-            creature.minWeaponDefense.set(0x1);
-            creature.maxWeaponDefense.set(0x1);
-            creature.minMagicDefense.set(0x1);
-            creature.maxMagicDefense.set(0x1);
-        }
-        creature.entityStates.forEach((entityState) => {
-            if (entityState.type == 0x20) {
-                console.log("DEBUG - Changing attack.");
-                entityState.weaponAttack1.set(0x50);
-                entityState.weaponAttack2.set(0x50);
-                entityState.weaponAttack3.set(0x50);
-            }
-        });
-    });
-
 
     for (var i in items) {
         forEachItem.forEach((func) => func(items[i]));
