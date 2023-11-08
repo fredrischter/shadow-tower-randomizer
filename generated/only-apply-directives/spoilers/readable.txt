@@ -38,22 +38,6 @@ Removing ATTR_HP_RECOVERY from equip item_104_priest_amulet
 Removing ATTR_MP_RECOVERY from equip item_104_priest_amulet
 Removing ATTR_HP_RECOVERY from equip item_109_endless_amulet
 Removing ATTR_MP_RECOVERY from equip item_109_endless_amulet
-DEBUG - Creature 00_door
-DEBUG - Creature 01_door
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_door
-DEBUG - Creature 05_door
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 02_tongue_imp
 Setting spawn change to 100% , creature 02_tongue_imp
 Setting spawn change to 100% , creature 00_dark_spider
@@ -73,29 +57,6 @@ Setting spawn change to 100% , creature 09_shadow_spider
 Setting spawn change to 100% , creature 09_shadow_spider
 Setting spawn change to 100% , creature 0a_guardian_a
 Setting spawn change to 100% , creature 04_fat_mole_a
-DEBUG - Creature 00_dark_spider
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_shadow_spider
-DEBUG - Changing attack.
-DEBUG - Creature 02_tongue_imp
-DEBUG - Creature 03_door
-DEBUG - Creature 04_fat_mole_a
-DEBUG - Creature 05_door
-DEBUG - Creature 06_tongue_imp
-DEBUG - Creature 07_door
-DEBUG - Creature 08_dark_spider
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_shadow_spider
-DEBUG - Changing attack.
-DEBUG - Creature 0a_guardian_a
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_night_howler
 Setting spawn change to 100% , creature 00_night_howler
 Setting spawn change to 100% , creature 00_night_howler
@@ -123,32 +84,6 @@ Setting spawn change to 100% , creature 0d_saurian_warrior_b
 Setting spawn change to 100% , creature 0d_saurian_warrior_b
 Setting spawn change to 100% , creature 02_lizard_servant
 Setting spawn change to 100% , creature 06_lizard_servant
-DEBUG - Creature 00_night_howler
-DEBUG - Changing attack.
-DEBUG - Creature 01_chirper
-DEBUG - Creature 02_lizard_servant
-DEBUG - Creature 03_door
-DEBUG - Creature 04_night_howler
-DEBUG - Changing attack.
-DEBUG - Creature 05_master_howler
-DEBUG - Changing attack.
-DEBUG - Creature 06_lizard_servant
-DEBUG - Creature 07_door
-DEBUG - Creature 08_hermit_crab
-DEBUG - Changing attack.
-DEBUG - Creature 09_freak
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_saurian_warrior_a
-DEBUG - Changing attack.
-DEBUG - Creature 0d_saurian_warrior_b
-DEBUG - Changing attack.
-DEBUG - Creature 0e_dinogon
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 02_fire_jinn
 Setting spawn change to 100% , creature 02_fire_jinn
 Setting spawn change to 100% , creature 02_fire_jinn
@@ -170,25 +105,6 @@ Setting spawn change to 100% , creature 06_fire_jinn
 Setting spawn change to 100% , creature 06_fire_jinn
 Setting spawn change to 100% , creature 06_fire_jinn
 Setting spawn change to 100% , creature 06_fire_jinn
-DEBUG - Creature 00_door
-DEBUG - Creature 01_door
-DEBUG - Creature 02_fire_jinn
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_unknown_a
-DEBUG - Creature 05_armored_jinn
-DEBUG - Changing attack.
-DEBUG - Creature 06_fire_jinn
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_acid_slime
 Setting spawn change to 100% , creature 01_acid_slime
 Setting spawn change to 100% , creature 02_blood_slime
@@ -209,33 +125,6 @@ Setting spawn change to 100% , creature 08_dark_spider
 Setting spawn change to 100% , creature 08_dark_spider
 Setting spawn change to 100% , creature 08_dark_spider
 Setting spawn change to 100% , creature 0a_skeleton
-DEBUG - Creature 00_dark_spider
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_acid_slime
-DEBUG - Changing attack.
-DEBUG - Creature 02_blood_slime
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_door
-DEBUG - Creature 05_door
-DEBUG - Creature 06_skeleton
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_dark_spider
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_demon_bat
-DEBUG - Creature 0a_skeleton
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_demon_bat
-DEBUG - Creature 0d_dark_spider
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0e_acid_slime
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_acid_slime
 Setting spawn change to 100% , creature 00_acid_slime
 Setting spawn change to 100% , creature 00_acid_slime
@@ -255,30 +144,6 @@ Setting spawn change to 100% , creature 09_blood_slime
 Setting spawn change to 100% , creature 09_blood_slime
 Setting spawn change to 100% , creature 09_blood_slime
 Setting spawn change to 100% , creature 02_parasite
-DEBUG - Creature 00_acid_slime
-DEBUG - Changing attack.
-DEBUG - Creature 01_blood_slime
-DEBUG - Changing attack.
-DEBUG - Creature 02_parasite
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_acid_slime
-DEBUG - Changing attack.
-DEBUG - Creature 05_blood_slime
-DEBUG - Changing attack.
-DEBUG - Creature 06_fanged_worm
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_casket
-DEBUG - Creature 09_blood_slime
-DEBUG - Changing attack.
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 02_skeleton
 Setting spawn change to 100% , creature 02_skeleton
 Setting spawn change to 100% , creature 02_skeleton
@@ -299,28 +164,6 @@ Setting spawn change to 100% , creature 05_blood_skull
 Setting spawn change to 100% , creature 05_blood_skull
 Setting spawn change to 100% , creature 05_blood_skull
 Setting spawn change to 100% , creature 05_blood_skull
-DEBUG - Creature 00_acid_skull
-DEBUG - Changing attack.
-DEBUG - Creature 01_blood_skull
-DEBUG - Changing attack.
-DEBUG - Creature 02_skeleton
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_acid_skull
-DEBUG - Changing attack.
-DEBUG - Creature 05_blood_skull
-DEBUG - Changing attack.
-DEBUG - Creature 06_skeleton
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_gargaral
 Setting spawn change to 100% , creature 02_gordoral
 Setting spawn change to 100% , creature 02_gordoral
@@ -347,29 +190,6 @@ Setting spawn change to 100% , creature 0c_death_mage
 Setting spawn change to 100% , creature 08_war_demon_1
 Setting spawn change to 100% , creature 09_war_demon_2
 Setting spawn change to 100% , creature 00_gorgoral
-DEBUG - Creature 00_gorgoral
-DEBUG - Creature 01_gargaral
-DEBUG - Creature 02_gordoral
-DEBUG - Creature 03_door
-DEBUG - Creature 04_demon_warrior
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 05_gargaral
-DEBUG - Creature 06_gordoral
-DEBUG - Creature 07_door
-DEBUG - Creature 08_war_demon_1
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_war_demon_2
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_rotting_face
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_death_mage
-DEBUG - Changing attack.
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_rotting_face
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 09_dark_fairy
 Setting spawn change to 100% , creature 09_dark_fairy
 Setting spawn change to 100% , creature 09_dark_fairy
@@ -398,33 +218,6 @@ Setting spawn change to 100% , creature 08_ring_demon
 Setting spawn change to 100% , creature 08_ring_demon
 Setting spawn change to 100% , creature 0d_deha
 Setting spawn change to 100% , creature 0e_blank
-DEBUG - Creature 00_red_puppet
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_dark_spirits
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 02_dark_imp
-DEBUG - Creature 03_door
-DEBUG - Creature 04_dark_spirits
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 05_dark_spirits
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 06_black_imp
-DEBUG - Creature 07_door
-DEBUG - Creature 08_ring_demon
-DEBUG - Creature 09_dark_fairy
-DEBUG - Creature 0a_dark_bishop
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_maristella
-DEBUG - Creature 0d_deha
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_horned_slime
 Setting spawn change to 100% , creature 01_horned_slime
 Setting spawn change to 100% , creature 01_horned_slime
@@ -456,27 +249,6 @@ Setting spawn change to 100% , creature 0c_worm_face
 Setting spawn change to 100% , creature 0c_worm_face
 Setting spawn change to 100% , creature 00_akryal
 Setting spawn change to 100% , creature 04_blank
-DEBUG - Creature 00_akryal
-DEBUG - Creature 01_horned_slime
-DEBUG - Changing attack.
-DEBUG - Creature 02_blood_brain
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 05_horned_slime
-DEBUG - Changing attack.
-DEBUG - Creature 06_dweller
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_dementor
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_dweller
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_worm_face
-DEBUG - Changing attack.
-DEBUG - Creature 0d_hatchlin
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 02_elder
 Setting spawn change to 100% , creature 00_watcher_plant
 Setting spawn change to 100% , creature 00_watcher_plant
@@ -510,29 +282,6 @@ Setting spawn change to 100% , creature 0e_auriel_a
 Setting spawn change to 100% , creature 0e_auriel_a
 Setting spawn change to 100% , creature 05_dwarfling
 Setting spawn change to 100% , creature 0a_blank
-DEBUG - Creature 00_watcher_plant
-DEBUG - Changing attack.
-DEBUG - Creature 01_myconid
-DEBUG - Changing attack.
-DEBUG - Creature 02_elder
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_minor_dwarf
-DEBUG - Changing attack.
-DEBUG - Creature 05_dwarfling
-DEBUG - Creature 06_elder
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_star_serpent
-DEBUG - Changing attack.
-DEBUG - Creature 09_imp
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_barrel_snail
-DEBUG - Creature 0d_tondrom
-DEBUG - Changing attack.
-DEBUG - Creature 0e_auriel_a
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_blue_flicker
 Setting spawn change to 100% , creature 01_blue_flicker
 Setting spawn change to 100% , creature 01_blue_flicker
@@ -561,28 +310,6 @@ Setting spawn change to 100% , creature 08_torg
 Setting spawn change to 100% , creature 02_sand_leech_b
 Setting spawn change to 100% , creature 02_sand_leech_b
 Setting spawn change to 100% , creature 02_sand_leech_b
-DEBUG - Creature 00_sand_leech_a
-DEBUG - Creature 01_blue_flicker
-DEBUG - Creature 02_sand_leech_b
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_kiljoy
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 05_acid_pod
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_torg
-DEBUG - Changing attack.
-DEBUG - Creature 09_cocoon_plant
-DEBUG - Changing attack.
-DEBUG - Creature 0a_cocoon_plant
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_master_knight
 Setting spawn change to 100% , creature 00_master_knight
 Setting spawn change to 100% , creature 00_master_knight
@@ -608,26 +335,6 @@ Setting spawn change to 100% , creature 04_wildowess
 Setting spawn change to 100% , creature 01_gorthaur
 Setting spawn change to 100% , creature 08_fester
 Setting spawn change to 100% , creature 02_fat_mole_d
-DEBUG - Creature 00_master_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_gorthaur
-DEBUG - Changing attack.
-DEBUG - Creature 02_fat_mole_d
-DEBUG - Creature 03_door
-DEBUG - Creature 04_wildowess
-DEBUG - Changing attack.
-DEBUG - Creature 05_door
-DEBUG - Creature 06_warpoor
-DEBUG - Creature 07_door
-DEBUG - Creature 08_fester
-DEBUG - Creature 09_cross_breed
-DEBUG - Creature 0a_warpoor
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_stack_eyes
 Setting spawn change to 100% , creature 01_stack_eyes
 Setting spawn change to 100% , creature 01_stack_eyes
@@ -656,23 +363,6 @@ Setting spawn change to 100% , creature 0a_old_face
 Setting spawn change to 100% , creature 0d_bugler
 Setting spawn change to 100% , creature 00_unknown_e
 Setting spawn change to 100% , creature 04_blank
-DEBUG - Creature 00_unknown_e
-DEBUG - Creature 01_stack_eyes
-DEBUG - Changing attack.
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 05_unknown_g
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_apocrypha
-DEBUG - Creature 09_unknown_h
-DEBUG - Creature 0a_old_face
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_old_face
-DEBUG - Changing attack.
-DEBUG - Creature 0d_bugler
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_earth_knight
 Setting spawn change to 100% , creature 01_acid_pod
 Setting spawn change to 100% , creature 01_acid_pod
@@ -696,29 +386,6 @@ Setting spawn change to 100% , creature 0d_cocoon_plant
 Setting spawn change to 100% , creature 0d_cocoon_plant
 Setting spawn change to 100% , creature 0d_cocoon_plant
 Setting spawn change to 100% , creature 0d_cocoon_plant
-DEBUG - Creature 00_earth_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_acid_pod
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_cannon_snail
-DEBUG - Creature 05_cocoon_plant
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_guardian_b
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_sloth_bug
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_ray_plant
-DEBUG - Creature 0d_cocoon_plant
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% , creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
@@ -742,33 +409,6 @@ Setting spawn change to 100% , creature 0d_death_serpent
 Setting spawn change to 100% , creature 0d_death_serpent
 Setting spawn change to 100% , creature 0e_necron
 Setting spawn change to 100% , creature 01_auriel_c
-DEBUG - Creature 00_door
-DEBUG - Creature 01_auriel_c
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_king_hopper
-DEBUG - Creature 05_warden
-DEBUG - Creature 06_oblid
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_oxelus
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_cursed_demon
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_death_serpent
-DEBUG - Changing attack.
-DEBUG - Creature 0e_necron
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_berzerker
 Setting spawn change to 100% , creature 01_berzerker
 Setting spawn change to 100% , creature 01_berzerker
@@ -794,30 +434,6 @@ Setting spawn change to 100% , creature 09_cerberus
 Setting spawn change to 100% , creature 09_cerberus
 Setting spawn change to 100% , creature 09_cerberus
 Setting spawn change to 100% , creature 0c_ebony_knight
-DEBUG - Creature 00_bone_demon
-DEBUG - Changing attack.
-DEBUG - Creature 01_berzerker
-DEBUG - Changing attack.
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_zygote
-DEBUG - Changing attack.
-DEBUG - Creature 05_horned_skull
-DEBUG - Changing attack.
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_cerberus
-DEBUG - Creature 0a_ruby_demon
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_ebony_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0d_damned_angel
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 02_mystic_tower
 Setting spawn change to 100% , creature 02_mystic_tower
 Setting spawn change to 100% , creature 02_mystic_tower
@@ -845,25 +461,6 @@ Setting spawn change to 100% , creature 0d_dweller
 Setting spawn change to 100% , creature 0d_dweller
 Setting spawn change to 100% , creature 0d_dweller
 Setting spawn change to 100% , creature 0e_mystic_tower
-DEBUG - Creature 00_berzerker
-DEBUG - Changing attack.
-DEBUG - Creature 01_dweller
-DEBUG - Creature 02_mystic_tower
-DEBUG - Creature 03_door
-DEBUG - Creature 04_berzerker
-DEBUG - Changing attack.
-DEBUG - Creature 05_dweller
-DEBUG - Creature 06_mystic_tower
-DEBUG - Creature 07_door
-DEBUG - Creature 08_berzerker
-DEBUG - Changing attack.
-DEBUG - Creature 09_iron_crusher
-DEBUG - Creature 0a_mystic_tower
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_dweller
-DEBUG - Creature 0e_mystic_tower
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_kabasaur
 Setting spawn change to 100% , creature 00_kabasaur
 Setting spawn change to 100% , creature 00_kabasaur
@@ -877,28 +474,6 @@ Setting spawn change to 100% , creature 04_kabasaur
 Setting spawn change to 100% , creature 05_water_knight
 Setting spawn change to 100% , creature 05_water_knight
 Setting spawn change to 100% , creature 05_water_knight
-DEBUG - Creature 00_kabasaur
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_door
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_kabasaur
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 05_water_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_doriwi
 Setting spawn change to 100% , creature 01_doriwi
 Setting spawn change to 100% , creature 02_bone_wolf
@@ -921,29 +496,6 @@ Setting spawn change to 100% , creature 0d_blood_bone
 Setting spawn change to 100% , creature 0d_blood_bone
 Setting spawn change to 100% , creature 0d_blood_bone
 Setting spawn change to 100% , creature 0c_hollow_mage
-DEBUG - Creature 00_unused_a
-DEBUG - Creature 01_doriwi
-DEBUG - Changing attack.
-DEBUG - Creature 02_bone_wolf
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_unused_b
-DEBUG - Creature 05_doriwi
-DEBUG - Changing attack.
-DEBUG - Creature 06_hell_warrior
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_wyvern
-DEBUG - Changing attack.
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_bone_wolf
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_hollow_mage
-DEBUG - Creature 0d_blood_bone
-DEBUG - Changing attack.
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_horned_skull
 Setting spawn change to 100% , creature 01_horned_skull
 Setting spawn change to 100% , creature 01_horned_skull
@@ -971,28 +523,6 @@ Setting spawn change to 100% , creature 02_dead_abraxus
 Setting spawn change to 100% , creature 00_abraxus
 Setting spawn change to 100% , creature 0c_fat_mole_c
 Setting spawn change to 100% , creature 08_fat_mole_b
-DEBUG - Creature 00_abraxus
-DEBUG - Creature 01_horned_skull
-DEBUG - Changing attack.
-DEBUG - Creature 02_dead_abraxus
-DEBUG - Creature 03_door
-DEBUG - Creature 04_berzerker
-DEBUG - Changing attack.
-DEBUG - Creature 05_door
-DEBUG - Creature 06_mystic_tower
-DEBUG - Creature 07_door
-DEBUG - Creature 08_fat_mole_b
-DEBUG - Creature 09_steel_servant
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_fat_mole_c
-DEBUG - Creature 0d_arachness
-DEBUG - Changing attack.
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_hell_hunter
 Setting spawn change to 100% , creature 00_hell_hunter
 Setting spawn change to 100% , creature 00_hell_hunter
@@ -1016,34 +546,6 @@ Setting spawn change to 100% , creature 0a_armored_slayer
 Setting spawn change to 100% , creature 09_armored_warrior
 Setting spawn change to 100% , creature 0a_armored_slayer
 Setting spawn change to 100% , creature 08_armored_guardian
-DEBUG - Creature 00_hell_hunter
-DEBUG - Creature 01_door
-DEBUG - Creature 02_karasu
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_tree_ogre
-DEBUG - Changing attack.
-DEBUG - Creature 05_armored_warrior
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 06_armored_slayer
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 07_door
-DEBUG - Creature 08_armored_guardian
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_armored_warrior
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_armored_slayer
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 05_hell_hunter
 Setting spawn change to 100% , creature 05_hell_hunter
 Setting spawn change to 100% , creature 05_hell_hunter
@@ -1069,30 +571,6 @@ Setting spawn change to 100% , creature 04_king_edward
 Setting spawn change to 100% , creature 01_unknown_b
 Setting spawn change to 100% , creature 09_pulsating_heart
 Setting spawn change to 100% , creature 0d_fat_mole_e
-DEBUG - Creature 00_door
-DEBUG - Creature 01_unknown_b
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_king_edward
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 05_hell_hunter
-DEBUG - Changing attack.
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_claw_head
-DEBUG - Changing attack.
-DEBUG - Creature 09_pulsating_heart
-DEBUG - Changing attack.
-DEBUG - Creature 0a_demons_eye
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_unknown_d
-DEBUG - Creature 0d_fat_mole_e
-DEBUG - Creature 0e_claw_head
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 02_watcher_plant
 Setting spawn change to 100% , creature 02_watcher_plant
 Setting spawn change to 100% , creature 02_watcher_plant
@@ -1129,25 +607,6 @@ Setting spawn change to 100% , creature 05_blank
 Setting spawn change to 100% , creature 04_auriel_b
 Setting spawn change to 100% , creature 0b_blank
 Setting spawn change to 100% , creature 0a_blank
-DEBUG - Creature 00_duhrin
-DEBUG - Creature 01_beak_plant
-DEBUG - Changing attack.
-DEBUG - Creature 02_watcher_plant
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_auriel_b
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_trickster
-DEBUG - Creature 09_dwarf_warrior
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0c_hanging_dead
-DEBUG - Creature 0d_trickster
-DEBUG - Changing attack.
-DEBUG - Creature 0e_watcher_plant
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_demon_bat
 Setting spawn change to 100% , creature 01_demon_bat
 Setting spawn change to 100% , creature 01_demon_bat
@@ -1175,56 +634,12 @@ Setting spawn change to 100% , creature 0d_crying_root
 Setting spawn change to 100% , creature 00_dybbuk
 Setting spawn change to 100% , creature 04_dybbuk
 Setting spawn change to 100% , creature 04_dybbuk
-DEBUG - Creature 00_dybbuk
-DEBUG - Creature 01_demon_bat
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_dybbuk
-DEBUG - Creature 05_hobble_worm
-DEBUG - Changing attack.
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_clay_servant
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_barrel_snail
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_dybbuk
-DEBUG - Creature 0d_crying_root
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_balron_a
 Setting spawn change to 100% , creature 03_balron_b
 Setting spawn change to 100% , creature 08_demon_king
 Setting spawn change to 100% , creature 01_unknown_i
 Setting spawn change to 100% , creature 02_unknown_j
 Setting spawn change to 100% , creature 04_unknown_k
-DEBUG - Creature 00_balron_a
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_unknown_i
-DEBUG - Creature 02_unknown_j
-DEBUG - Creature 03_balron_b
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 04_unknown_k
-DEBUG - Creature 05_door
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_demon_king
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_kabasaur
 Setting spawn change to 100% , creature 02_horned_slime
 Setting spawn change to 100% , creature 00_kabasaur
@@ -1257,32 +672,6 @@ Setting spawn change to 100% , creature 0d_slasher
 Setting spawn change to 100% , creature 0d_slasher
 Setting spawn change to 100% , creature 0d_slasher
 Setting spawn change to 100% , creature 0d_slasher
-DEBUG - Creature 00_kabasaur
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 01_door
-DEBUG - Creature 02_horned_slime
-DEBUG - Changing attack.
-DEBUG - Creature 03_door
-DEBUG - Creature 04_great_frog
-DEBUG - Creature 05_blood_brain
-DEBUG - Changing attack.
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_koazul
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 0a_horned_slime
-DEBUG - Changing attack.
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_gaze_hopper
-DEBUG - Changing attack.
-DEBUG - Creature 0d_slasher
-DEBUG - Changing attack.
-DEBUG - Creature 0e_manna_python
-DEBUG - Changing attack.
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 01_earth_knight
 Setting spawn change to 100% , creature 01_earth_knight
 Setting spawn change to 100% , creature 01_earth_knight
@@ -1295,31 +684,6 @@ Setting spawn change to 100% , creature 00_black_onyx
 Setting spawn change to 100% , creature 00_black_onyx
 Setting spawn change to 100% , creature 00_black_onyx
 Setting spawn change to 100% , creature 04_dread_knight
-DEBUG - Creature 00_black_onyx
-DEBUG - Changing attack.
-DEBUG - Creature 01_earth_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_dread_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 05_earth_knight
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Changing attack.
-DEBUG - Creature 06_dread_knight_unused
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_winged_worm
 Setting spawn change to 100% , creature 00_winged_worm
 Setting spawn change to 100% , creature 00_winged_worm
@@ -1331,72 +695,7 @@ Setting spawn change to 100% , creature 04_dragon_turtle
 Setting spawn change to 100% , creature 04_dragon_turtle
 Setting spawn change to 100% , creature 04_dragon_turtle
 Setting spawn change to 100% , creature 05_magi_magus
-DEBUG - Creature 00_winged_worm
-DEBUG - Creature 01_door
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_dragon_turtle
-DEBUG - Changing attack.
-DEBUG - Creature 05_magi_magus
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
 Setting spawn change to 100% , creature 00_dark_spirits
 Setting spawn change to 100% , creature 00_dark_spirits
 Setting spawn change to 100% , creature 00_dark_spirits
 Setting spawn change to 100% , creature 01_disguise
-DEBUG - Creature 00_dark_spirits
-DEBUG - Creature 01_disguise
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_door
-DEBUG - Creature 05_door
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
-DEBUG - Creature 00_door
-DEBUG - Creature 01_door
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_door
-DEBUG - Creature 05_door
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
-DEBUG - Creature 00_door
-DEBUG - Creature 01_door
-DEBUG - Creature 02_door
-DEBUG - Creature 03_door
-DEBUG - Creature 04_door
-DEBUG - Creature 05_door
-DEBUG - Creature 06_door
-DEBUG - Creature 07_door
-DEBUG - Creature 08_door
-DEBUG - Creature 09_door
-DEBUG - Creature 0a_door
-DEBUG - Creature 0b_door
-DEBUG - Creature 0c_door
-DEBUG - Creature 0d_door
-DEBUG - Creature 0e_door
-DEBUG - Creature 0f_door
