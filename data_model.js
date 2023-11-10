@@ -462,6 +462,17 @@
       this.weight  = new UInt16(this.map_file.bin, this.offset_in_file + 0x24);
 
       this.type     = new UInt8(this.map_file.bin, this.offset_in_file + 0x26);
+
+      // I decided that those are also type key for randomization purposes (0x1e = 30), but in real game data they are regular items(0x14 = 20)
+      if (this.itemIndex==item_113_beast_key ||
+        this.itemIndex==item_12b_pitcher_of_nadya ||
+        this.itemIndex==item_12c_pitcher_of_nadya_hp ||
+        this.itemIndex==item_12d_pitcher_of_nadya_mp ||
+        this.itemIndex==item_12f_spirit_key ||
+        this.itemIndex==item_130_blue_crystal) {
+        this.type.set(KEY);
+      }
+
       this.max_dura = new UInt8(this.map_file.bin, this.offset_in_file + 0x27);
       this.dura     = new UInt8(this.map_file.bin, this.offset_in_file + 0x28);
       //29 2a 2b - zeros
@@ -1001,17 +1012,18 @@
       this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x0f);
       this.tileId = new UInt8(this.bin, this.offset_in_file + 0x16);
 
-      this.name = (!this.isBlank() ? itemData[this.type.get()].name : "blank");
-
-
       //if (!this.isBlank()) {
         console.log(this.toReadableString());
       //}
     }
 
+    name() {
+      return !this.isBlank() ? (!itemData[this.type.get()] ? "invalid-id-"+this.type.get() : itemData[this.type.get()].name) : "blank";
+    }
+
     draw(mapDraw, mapSummary) {
       if (!this.isBlank()) {
-        var text = "" + this.collectableIndex.toString(16) + " " + this.name;
+        var text = "" + this.collectableIndex.toString(16) + " " + this.name();
         mapDraw.push({
           color: "#108010", 
           x: this.tileX.get(),
@@ -1019,13 +1031,13 @@
           z: this.tileY.get(),
           text: text
         });
-        mapSummary.push('<span style="background:#108010">'+text+'</span>');
+        mapSummary.push('<span style="background:#108010">'+text+'</span>\n');
       }
     }
 
     toReadableString() {
       var text = "" + this.collectableIndex.toString(16).padEnd(5)
-      + this.name.padEnd(40)
+      + this.name().padEnd(40)
       + this.offset_in_file.toString(16).padStart(4)
       + this.absoluteIndex.toString(16).padStart(10)
       + "  tileId("+this.tileId.get().toString(16).padStart(4)+") "
@@ -1036,7 +1048,7 @@
     }
 
     toString() {
-      return "{\"name\":\""+(this.name + "\"").padEnd(40)
+      return "{\"name\":\""+(this.name() + "\"").padEnd(40)
       + ", \"type\":" + (this.type.get() + "").padStart(5)
       + ", \"tileX\":" + (this.tileX.get() + "").padStart(5)
       + ", \"tileY\":" + (this.tileY.get() + "").padStart(5)
@@ -1074,7 +1086,7 @@
     }
 
     blank() {
-      binSet(this.bin, this.offset_in_file, COLLECTABLE_SIZE, 0x00);
+      //binSet(this.bin, this.offset_in_file, COLLECTABLE_SIZE, 0x00);
       this.type.set(0xffff);
     }
   }
@@ -1513,7 +1525,7 @@
       }
 
       var text = "" + this.index.toString(16).padEnd(5) + ("" + this.chance.get()).padStart(4) + "% " + this.name();
-      var summary = '<span style="background:#ff0000">'+text+'</span>';
+      var summary = '<span style="background:#ff0000">'+text+'</span>\n';
 
       mapDraw.push({
         color: "#ff0000", 
@@ -1531,7 +1543,7 @@
           z: this.area.tiles[this.tileId.get()].tileY.get(), 
           text: text
         });
-        summary += '<span style="background:#ffff00">'+text+'</span>';
+        summary += '<span style="background:#ffff00">'+text+'</span>\n';
       }
 
       if (!this.drop2.isNull()) {
@@ -1543,7 +1555,7 @@
           z: this.area.tiles[this.tileId.get()].tileY.get(), 
           text: text
         });
-        summary += '<span style="background:#ffff00">'+text+'</span>';
+        summary += '<span style="background:#ffff00">'+text+'</span>\n';
       }
 
       if (!this.drop3.isNull()) {
@@ -1555,7 +1567,7 @@
           z: this.area.tiles[this.tileId.get()].tileY.get(), 
           text: text
         });
-        summary += '<span style="background:#ffff00">'+text+'</span>';
+        summary += '<span style="background:#ffff00">'+text+'</span>\n';
       }
 
       mapSummary.push(summary);

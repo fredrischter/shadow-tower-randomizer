@@ -3,6 +3,6 @@
 	"preset": "any%",
 	"difficulty": "very-hard",
 	"randomizeCreatures": true,
-	"randomizeEquips": true,
+	"randomizeCollectablesAndDrops": true,
 	"seed": "1234567890"
 }

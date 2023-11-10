@@ -3,5 +3,6 @@
 	"preset": "any%",
 	"difficulty": "easy",
 	"randomizeCreatures": true,
-	"seed": "12345678901"
+	"randomizeCollectablesAndDrops": true,
+	"seed": "1234567890"
 }
