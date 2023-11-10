@@ -3,5 +3,6 @@
 	"preset": "any%",
 	"difficulty": "medium",
 	"randomizeCreatures": true,
+	"randomizeEquips": true,
 	"seed": "1234567890"
 }
