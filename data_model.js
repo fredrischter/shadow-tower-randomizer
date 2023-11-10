@@ -5,60 +5,40 @@
   const path = require('path');
 
   // area files
-  var logo_files = {
-    1: "shadow_tower_part1",
-    11: "human_world_cursed_region",
-    21: "monster_world_false_eye_area",
-    31: "fire_world_phoenix_cave",
-    41: "human_world_solitary_region",
-    51: "human_world_hidden_region",
-    61: "human_world_forgotten_region",
-    71: null,
-    81: "illusion_world_bewilderment_domain",
-    91: "illusion_world_gloomy_domain",
-
-    101: "water_world_impure_pool_area",
-    111: "earth_world_rotting_cavern",
-    121: "earth_world_quaking_cavern",
-    131: "illusion_world_worship_domain",
-    141: "death_world_lingering_curse_layer",
-    151: "earth_world_false_pit_cavern",
-    161: null,
-    171: "monster_world_screeching_area",
-    181: "fire_world_ashen_cavern",
-    191: null,
-
-    201: "fire_world_burning_cavern",
-    211: "water_world_sunken_river_area",
-    221: null,
-    231: "death_world_gate_of_the_dead",
-    241: "fire_world_molten_cavern",
-    251: "death_world_dark_castle_layer",
-    261: "death_world_undead_layer",
-    271: "earth_world_poisonous_cavern",
-    281: "earth_world_stone_cavern",
-    291: null,
-
-    301: "void",
-    311: null,
-    321: "water_world_watery_labyrinth_area",
-    331: "earth_world_hostile_rock_cavern",
-    341: null,
-    351: null,
-    361: null,
-    371: "water_world_white_rain_area",
-    381: "illusion_world_dream_domain",
-    391: null,
-
-    401: "shadow_tower_part2",
-    411: "shadow_tower_part3",
-    421: null,
-    431: null,
-    441: null,//"unknown_part1",
-    451: null,//"unknown_part2",
-    461: null,//"unknown_part3",
-    471: null//"unknown_part4"
-  }
+  var logo_files = [
+    { index: 41, name: "human_world_solitary_region" },
+    { index: 51, name: "human_world_hidden_region" },
+    { index: 61, name: "human_world_forgotten_region" },
+    { index: 11, name: "human_world_cursed_region" },
+    { index: 111, name: "earth_world_rotting_cavern" },
+    { index: 121, name: "earth_world_quaking_cavern" },
+    { index: 151, name: "earth_world_false_pit_cavern" },
+    { index: 271, name: "earth_world_poisonous_cavern" },
+    { index: 281, name: "earth_world_stone_cavern" },
+    { index: 331, name: "earth_world_hostile_rock_cavern" },
+    { index: 101, name: "water_world_impure_pool_area" },
+    { index: 211, name: "water_world_sunken_river_area" },
+    { index: 321, name: "water_world_watery_labyrinth_area" },
+    { index: 371, name: "water_world_white_rain_area" },
+    { index: 31, name: "fire_world_phoenix_cave" },
+    { index: 201, name: "fire_world_burning_cavern" },
+    { index: 241, name: "fire_world_molten_cavern" },
+    { index: 181, name: "fire_world_ashen_cavern" },
+    { index: 21, name: "monster_world_false_eye_area" },
+    { index: 171, name: "monster_world_screeching_area" },
+    { index: 81, name: "illusion_world_bewilderment_domain" },
+    { index: 91, name: "illusion_world_gloomy_domain" },
+    { index: 381, name: "illusion_world_dream_domain" },
+    { index: 131, name: "illusion_world_worship_domain" },
+    { index: 251, name: "death_world_dark_castle_layer" },
+    { index: 141, name: "death_world_lingering_curse_layer" },
+    { index: 261, name: "death_world_undead_layer" },
+    { index: 231, name: "death_world_gate_of_the_dead" },
+    { index: 301, name: "void" },
+    { index: 1, name: "shadow_tower_part1" },
+    { index: 401, name: "shadow_tower_part2" },
+    { index: 411, name: "shadow_tower_part3" }
+  ];
 
   //if (index>=0x47) {
   //  index--;
@@ -1021,7 +1001,7 @@
       this.rotation_z = new UInt16(this.bin, this.offset_in_file + 0x0f);
       this.tileId = new UInt8(this.bin, this.offset_in_file + 0x16);
 
-      this.name = (!this.isBlank() ? itemData[this.type.get()].name : "bad_id");
+      this.name = (!this.isBlank() ? itemData[this.type.get()].name : "blank");
 
 
       //if (!this.isBlank()) {
@@ -1456,11 +1436,8 @@
   }
 
   var areaIndexCounter = 0;
-  for (var logo_index in logo_files) {
-    if (!logo_files[logo_index]) {
-      continue;
-    }
-    areas.push(new Area(parseInt(logo_index), logo_files[logo_index], areaIndexCounter++));
+  for (var i in logo_files) {
+    areas.push(new Area(logo_files[i].index, logo_files[i].name, areaIndexCounter++));
   }
 
   class Spawn {

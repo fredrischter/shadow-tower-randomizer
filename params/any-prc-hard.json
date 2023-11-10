@@ -3,5 +3,6 @@
 	"preset": "only-apply-directives",
 	"difficulty": "hard",
 	"randomizeCreatures": true,
+	"randomizeEquips": true,
 	"seed": "1234567890"
 }
