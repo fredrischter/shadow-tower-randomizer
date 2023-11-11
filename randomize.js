@@ -178,6 +178,7 @@ function randomize(paramsFile, stDir) {
     var forEachValidCreature = [];
     var forEachItem = [];
     var forEachCollectable = [];
+    var forEachObject = [];
 
     // Directives
 
@@ -202,23 +203,24 @@ function randomize(paramsFile, stDir) {
             spawn.drop3Chance.set(100);
         }
     }
-
     function presetDirectivesforEachItem(item) {
-        if (item.attribute1.getAttributeType() == ATTR_HP_RECOVERY) {
-            item.attribute1.setAttributeType(ATTR_NONE);
-            console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
-        }
-        if (item.attribute2.getAttributeType() == ATTR_HP_RECOVERY) {
-            item.attribute2.setAttributeType(ATTR_NONE);
-            console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
-        }
-        if (item.attribute1.getAttributeType() == ATTR_MP_RECOVERY) {
-            item.attribute1.setAttributeType(ATTR_NONE);
-            console.log("Removing ATTR_MP_RECOVERY from equip " + item.name);
-        }
-        if (item.attribute2.getAttributeType() == ATTR_MP_RECOVERY) {
-            item.attribute2.setAttributeType(ATTR_NONE);
-            console.log("Removing ATTR_MP_RECOVERY from equip " + item.name);
+        if (difficultyFactor >= 1) {
+            if (item.attribute1.getAttributeType() == ATTR_HP_RECOVERY) {
+                item.attribute1.setAttributeType(ATTR_NONE);
+                console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
+            }
+            if (item.attribute2.getAttributeType() == ATTR_HP_RECOVERY) {
+                item.attribute2.setAttributeType(ATTR_NONE);
+                console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
+            }
+            if (item.attribute1.getAttributeType() == ATTR_MP_RECOVERY) {
+                item.attribute1.setAttributeType(ATTR_NONE);
+                console.log("Removing ATTR_MP_RECOVERY from equip " + item.name);
+            }
+            if (item.attribute2.getAttributeType() == ATTR_MP_RECOVERY) {
+                item.attribute2.setAttributeType(ATTR_NONE);
+                console.log("Removing ATTR_MP_RECOVERY from equip " + item.name);
+            }
         }
     }
 
@@ -515,6 +517,12 @@ function randomize(paramsFile, stDir) {
         if (area.name == "void") {
             return;
         }
+
+        spawn.drop2.null();
+        spawn.drop2Chance.set(0);
+        spawn.drop2.null();
+        spawn.drop2Chance.set(0);
+
         if (!spawn.drop1.isNull()) {
             dropsNames = items[spawn.drop1.get()].name + " ";
             if (items[spawn.drop1.get()].type.get()==KEY) {
@@ -550,11 +558,6 @@ function randomize(paramsFile, stDir) {
             spawn.drop1Chance.set(0);
             console.log("DEBUG - Drop randomization - Updating drop to blank at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
         }
-
-        spawn.drop2.null();
-        spawn.drop2Chance.set(0);
-        spawn.drop2.null();
-        spawn.drop2Chance.set(0);
     }
 
     function distributeDropsDumpInLateWorlds(spawn, area, index) {
@@ -576,6 +579,35 @@ function randomize(paramsFile, stDir) {
                     console.log("DEBUG - Drop randomization adding remaining to late worlds - Adding drop: " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
                 }
             }
+        }
+    }
+
+    function messWithSceneryObjects(object, area) {
+        if (area.exits && area.exits[""+object.index]) {
+            console.log("Mess with scenery - to not mess with exits - " + area.name + " object " + object.index);
+            return;
+        }
+        if (Math.random()<0.3) {
+            console.log("Mess with scenery - removing - " + area.name + " object " + object.index);
+            object.blank();
+        } else if (Math.random()<0.1) {
+            console.log("Mess with scenery - moving X+1 - " + area.name + " object " + object.index);
+            object.tileX.set(object.tileX.get()+1);
+        } else if (Math.random()<0.1) {
+            console.log("Mess with scenery - moving Y+1 - " + area.name + " object " + object.index);
+            object.tileY.set(object.tileY.get()+1);
+        } else if (Math.random()<0.1) {
+            console.log("Mess with scenery - moving Z+1 - " + area.name + " object " + object.index);
+            object.tileZ.set(object.tileZ.get()+1);
+        } else if (Math.random()<0.1) {
+            console.log("Mess with scenery - moving X-1 - " + area.name + " object " + object.index);
+            object.tileX.set(object.tileX.get()-1);
+        } else if (Math.random()<0.1) {
+            console.log("Mess with scenery - moving Y-1 - " + area.name + " object " + object.index);
+            object.tileY.set(object.tileY.get()-1);
+        } else if (Math.random()<0.1) {
+            console.log("Mess with scenery - moving Z-1 - " + area.name + " object " + object.index);
+            object.tileZ.set(object.tileZ.get()-1);
         }
     }
 
@@ -656,6 +688,11 @@ function randomize(paramsFile, stDir) {
                 forEachCollectable.push(applyDifficultyForEachCollectableByRemoving);
             }
         }
+
+        if (params.messWithScenery) {
+            forEachObject.push(messWithSceneryObjects);
+        }
+
     }
 
     operate();
@@ -702,6 +739,10 @@ function randomize(paramsFile, stDir) {
                 });
             }
         }
+
+        area.objects.forEach(object => {
+            forEachObject.forEach((func) => func(object, area));
+        });
     }
 
     console.log("DEBUG - The game has " + forEachCreatureSpawn.length + " spawns.");

@@ -2,6 +2,9 @@
 	"label": "scary-game",
 	"preset": "scary-game",
 	"difficulty": "hard",
-	"randomlyRemoveScenery": true,
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"progressiveness": "crazy",
+	"messWithScenery": true,
 	"seed": "1234567890"
 }

@@ -1,0 +1,8 @@
+{
+	"label": "any-prc-extreme-easy",
+	"preset": "any%",
+	"difficulty": "extreme-easy",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"seed": "1234567890"
+}

@@ -1,4 +1,5 @@
 Randomization - Using given seed 1234567890
+Parameters - {"label":"very-hard","preset":"only-apply-directives","difficulty":"very-hard","seed":"1234567890"}
 Difficulty very-hard, factor 3
 Applying factor 0.3333333333333333 to item item_0_short_sword. Attributes str 4 spd 26 def 0 bal 0 sla 16 smh 3 pir 3 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 33 max_dura 4 dura 4
 Applying factor 0.3333333333333333 to item item_1_short_sword. Attributes str 5 spd 27 def 0 bal 0 sla 15 smh 3 pir 4 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 36 max_dura 4 dura 2

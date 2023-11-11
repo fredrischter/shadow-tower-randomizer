@@ -21,7 +21,6 @@ Applying factor 2 to item item_a_rapier. Attributes str 6 spd 100 def 0 bal 0 sl
 Applying factor 2 to item item_b_lethal_rapier. Attributes str 0 spd 100 def 0 bal 0 sla 14 smh 0 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 4 max_dura 22 dura 16
 Applying factor 2 to item item_c_shadow_blade. Attributes str 34 spd 100 def 0 bal 0 sla 100 smh 100 pir 92 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 14 max_dura 50 dura 32
 Applying factor 2 to item item_d_shadow_wolf. Attributes str 0 spd 100 def 0 bal 0 sla 100 smh 28 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 9 max_dura 42 dura 24
-Removing ATTR_HP_RECOVERY from equip item_e_shadow_tiger
 Applying factor 2 to item item_e_shadow_tiger. Attributes str 0 spd 100 def 0 bal 0 sla 100 smh 100 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 11 max_dura 34 dura 34
 Applying factor 2 to item item_f_broad_sword. Attributes str 84 spd 82 def 0 bal 0 sla 100 smh 68 pir 50 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 10 max_dura 34 dura 28
 Applying factor 2 to item item_10_broad_sword. Attributes str 80 spd 80 def 0 bal 0 sla 100 smh 72 pir 52 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 10 max_dura 36 dura 32
@@ -45,9 +44,7 @@ Applying factor 2 to item item_21_deadly_bastard_sword. Attributes str 28 spd 10
 Applying factor 2 to item item_22_mighty_bastard_sword. Attributes str 56 spd 52 def 0 bal 0 sla 100 smh 100 pir 100 spr 0 foc 0 ham 0 pur 0 par 32 mel 42 sol 36 hp 0 weight 12 max_dura 42 dura 28
 Applying factor 2 to item item_23_guardian_bastard_sword. Attributes str 100 spd 28 def 48 bal 16 sla 100 smh 98 pir 74 spr 0 foc 0 ham 22 pur 16 par 0 mel 0 sol 0 hp 0 weight 12 max_dura 48 dura 0
 Applying factor 2 to item item_24_dark_sword. Attributes str 6 spd 100 def 0 bal 0 sla 100 smh 100 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 16 max_dura 36 dura 12
-Removing ATTR_MP_RECOVERY from equip item_25_magical_bastard_sword
 Applying factor 2 to item item_25_magical_bastard_sword. Attributes str 100 spd 62 def 0 bal 0 sla 100 smh 100 pir 66 spr 62 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 22 max_dura 50 dura 50
-Removing ATTR_HP_RECOVERY from equip item_26_righteous_sword
 Applying factor 2 to item item_26_righteous_sword. Attributes str 20 spd 100 def 0 bal 0 sla 100 smh 100 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 10 max_dura 22 dura 16
 Applying factor 2 to item item_27_great_sword. Attributes str 0 spd 100 def 0 bal 0 sla 100 smh 100 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 19 max_dura 50 dura 20
 Applying factor 2 to item item_28_great_sword. Attributes str 0 spd 100 def 0 bal 0 sla 100 smh 100 pir 100 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 20 max_dura 52 dura 36
@@ -85,7 +82,6 @@ Applying factor 2 to item item_47_cap. Attributes str 12 spd 0 def 28 bal 0 sla 
 Applying factor 2 to item item_48_crown. Attributes str 0 spd 0 def 8 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 16 pur 46 par 16 mel 24 sol 100 hp 0 weight 5 max_dura 22 dura 18
 Applying factor 2 to item item_49_crown_of_resist. Attributes str 0 spd 0 def 12 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 52 pur 96 par 8 mel 12 sol 100 hp 0 weight 6 max_dura 32 dura 30
 Applying factor 2 to item item_4a_crown_of_composure. Attributes str 0 spd 0 def 22 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 22 pur 62 par 32 mel 40 sol 100 hp 0 weight 7 max_dura 42 dura 0
-Removing ATTR_HP_RECOVERY from equip item_4b_wizard_crown
 Applying factor 2 to item item_4b_wizard_crown. Attributes str 0 spd 0 def 16 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 32 pur 50 par 46 mel 36 sol 100 hp 0 weight 5 max_dura 16 dura 16
 Applying factor 2 to item item_4c_devil_crown. Attributes str 86 spd 0 def 42 bal 0 sla 0 smh 0 pir 22 spr 100 foc 100 ham 44 pur 0 par 42 mel 42 sol 100 hp 0 weight 3 max_dura 36 dura 26
 Applying factor 2 to item item_4d_helm. Attributes str 16 spd 0 def 38 bal 0 sla 0 smh 0 pir 0 spr 82 foc 98 ham 0 pur 0 par 0 mel 0 sol 88 hp 0 weight 14 max_dura 68 dura 36
@@ -99,10 +95,8 @@ Applying factor 2 to item item_54_fiery_full_helm. Attributes str 8 spd 0 def 38
 Applying factor 2 to item item_55_great_helm. Attributes str 42 spd 0 def 72 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 19 max_dura 100 dura 30
 Applying factor 2 to item item_56_great_helm. Attributes str 38 spd 0 def 74 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 19 max_dura 92 dura 32
 Applying factor 2 to item item_57_harden_great_helm. Attributes str 62 spd 0 def 100 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 20 max_dura 100 dura 80
-Removing ATTR_MP_RECOVERY from equip item_58_fortune_great_helm
 Applying factor 2 to item item_58_fortune_great_helm. Attributes str 100 spd 0 def 100 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 44 pur 98 par 36 mel 28 sol 100 hp 0 weight 21 max_dura 100 dura 26
 Applying factor 2 to item item_59_mystic_great_helm. Attributes str 100 spd 0 def 100 bal 0 sla 0 smh 0 pir 38 spr 100 foc 100 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 24 max_dura 100 dura 12
-Removing ATTR_HP_RECOVERY from equip item_5a_holy_great_helm
 Applying factor 2 to item item_5a_holy_great_helm. Attributes str 68 spd 0 def 88 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 22 pur 42 par 16 mel 6 sol 64 hp 0 weight 12 max_dura 64 dura 64
 Applying factor 2 to item item_5b_quilted_armor. Attributes str 32 spd 0 def 20 bal 36 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 11 max_dura 12 dura 10
 Applying factor 2 to item item_5c_quilted_armor. Attributes str 28 spd 0 def 26 bal 42 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 10 max_dura 16 dura 4
@@ -117,7 +111,6 @@ Applying factor 2 to item item_64_plate_mail. Attributes str 100 spd 0 def 100 b
 Applying factor 2 to item item_65_harden_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 92 max_dura 88 dura 44
 Applying factor 2 to item item_66_plate_mail_of_resist. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 0 ham 70 pur 0 par 0 mel 0 sol 0 hp 0 weight 92 max_dura 62 dura 18
 Applying factor 2 to item item_67_plate_mail_of_curing. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 50 ham 0 pur 40 par 0 mel 0 sol 0 hp 0 weight 93 max_dura 58 dura 36
-Removing ATTR_HP_RECOVERY from equip item_68_plate_mail
 Applying factor 2 to item item_68_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 42 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 99 max_dura 64 dura 60
 Applying factor 2 to item item_69_magical_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 52 foc 0 ham 20 pur 16 par 0 mel 0 sol 0 hp 0 weight 100 max_dura 68 dura 12
 Applying factor 2 to item item_6a_fiery_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 60 pir 0 spr 0 foc 0 ham 0 pur 0 par 38 mel 0 sol 0 hp 0 weight 99 max_dura 60 dura 12
@@ -126,17 +119,14 @@ Applying factor 2 to item item_6c_caustic_plate_mail. Attributes str 100 spd 0 d
 Applying factor 2 to item item_6d_shining_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 38 foc 0 ham 0 pur 0 par 0 mel 0 sol 32 hp 0 weight 86 max_dura 72 dura 60
 Applying factor 2 to item item_6e_dark_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 60 foc 0 ham 0 pur 0 par 0 mel 0 sol 16 hp 0 weight 87 max_dura 96 dura 10
 Applying factor 2 to item item_6f_plate_mail_of_protect. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 40 sol 0 hp 0 weight 85 max_dura 60 dura 32
-Removing ATTR_MP_RECOVERY from equip item_70_eternal_plate_mail
 Applying factor 2 to item item_70_eternal_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 50 foc 0 ham 0 pur 0 par 30 mel 34 sol 28 hp 0 weight 116 max_dura 52 dura 34
 Applying factor 2 to item item_71_devil_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 0 ham 32 pur 76 par 0 mel 0 sol 0 hp 0 weight 139 max_dura 50 dura 26
 Applying factor 2 to item item_72_holy_plate_mail. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 38 ham 100 pur 0 par 0 mel 0 sol 0 hp 0 weight 74 max_dura 100 dura 96
 Applying factor 2 to item item_73_full_plate. Attributes str 100 spd 100 def 100 bal 100 sla 24 smh 20 pir 30 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 166 max_dura 84 dura 34
 Applying factor 2 to item item_74_plate_mail_of_honor. Attributes str 100 spd 100 def 100 bal 100 sla 28 smh 16 pir 16 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 181 max_dura 92 dura 60
 Applying factor 2 to item item_75_harden_full_plate. Attributes str 100 spd 100 def 100 bal 100 sla 52 smh 26 pir 36 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 179 max_dura 100 dura 30
-Removing ATTR_MP_RECOVERY from equip item_76_god_plate
 Applying factor 2 to item item_76_god_plate. Attributes str 100 spd 100 def 100 bal 100 sla 100 smh 56 pir 62 spr 82 foc 0 ham 0 pur 0 par 24 mel 100 sol 26 hp 0 weight 197 max_dura 100 dura 100
 Applying factor 2 to item item_77_plate_mail_of_rage. Attributes str 100 spd 100 def 100 bal 100 sla 100 smh 100 pir 100 spr 50 foc 0 ham 100 pur 82 par 0 mel 0 sol 100 hp 0 weight 153 max_dura 100 dura 22
-Removing ATTR_HP_RECOVERY from equip item_78_knight_plate_mail
 Applying factor 2 to item item_78_knight_plate_mail. Attributes str 100 spd 100 def 100 bal 100 sla 86 smh 100 pir 100 spr 24 foc 0 ham 0 pur 0 par 100 mel 0 sol 0 hp 0 weight 172 max_dura 98 dura 8
 Applying factor 2 to item item_79_leather_glove. Attributes str 0 spd 82 def 12 bal 0 sla 14 smh 10 pir 26 spr 0 foc 0 ham 0 pur 0 par 68 mel 0 sol 0 hp 0 weight 3 max_dura 20 dura 16
 Applying factor 2 to item item_7a_leather_glove. Attributes str 0 spd 76 def 14 bal 0 sla 12 smh 12 pir 28 spr 0 foc 0 ham 0 pur 0 par 66 mel 0 sol 0 hp 0 weight 2 max_dura 24 dura 8
@@ -152,7 +142,6 @@ Applying factor 2 to item item_83_gauntlet. Attributes str 0 spd 78 def 50 bal 0
 Applying factor 2 to item item_84_gauntlet. Attributes str 0 spd 82 def 50 bal 0 sla 70 smh 30 pir 22 spr 0 foc 0 ham 0 pur 0 par 100 mel 0 sol 0 hp 0 weight 23 max_dura 72 dura 62
 Applying factor 2 to item item_85_harden_gauntlet. Attributes str 52 spd 72 def 82 bal 0 sla 66 smh 32 pir 14 spr 0 foc 0 ham 0 pur 0 par 100 mel 0 sol 0 hp 0 weight 24 max_dura 82 dura 80
 Applying factor 2 to item item_86_gauntlet_of_resist. Attributes str 0 spd 86 def 54 bal 0 sla 60 smh 30 pir 24 spr 0 foc 0 ham 36 pur 0 par 100 mel 0 sol 24 hp 0 weight 21 max_dura 66 dura 28
-Removing ATTR_HP_RECOVERY from equip item_87_swift_gauntlet
 Applying factor 2 to item item_87_swift_gauntlet. Attributes str 0 spd 100 def 50 bal 0 sla 64 smh 26 pir 28 spr 0 foc 0 ham 0 pur 0 par 100 mel 0 sol 86 hp 0 weight 21 max_dura 64 dura 16
 Applying factor 2 to item item_88_deadly_gauntlet. Attributes str 0 spd 100 def 58 bal 0 sla 68 smh 26 pir 30 spr 0 foc 0 ham 0 pur 0 par 100 mel 0 sol 16 hp 0 weight 21 max_dura 70 dura 56
 Applying factor 2 to item item_89_arm_guard. Attributes str 0 spd 100 def 90 bal 0 sla 58 smh 98 pir 34 spr 0 foc 0 ham 0 pur 0 par 100 mel 0 sol 0 hp 0 weight 31 max_dura 80 dura 32
@@ -169,7 +158,6 @@ Applying factor 2 to item item_93_steel_boots_of_curing. Attributes str 66 spd 0
 Applying factor 2 to item item_94_steel_boots_of_resist. Attributes str 56 spd 0 def 50 bal 88 sla 0 smh 0 pir 0 spr 0 foc 0 ham 64 pur 0 par 0 mel 100 sol 30 hp 0 weight 33 max_dura 76 dura 30
 Applying factor 2 to item item_95_caustic_steel_boots. Attributes str 68 spd 0 def 58 bal 94 sla 0 smh 0 pir 0 spr 24 foc 0 ham 0 pur 0 par 0 mel 100 sol 0 hp 0 weight 33 max_dura 80 dura 4
 Applying factor 2 to item item_96_swift_steel_boots. Attributes str 62 spd 64 def 84 bal 100 sla 0 smh 0 pir 66 spr 0 foc 0 ham 0 pur 0 par 0 mel 100 sol 0 hp 0 weight 26 max_dura 60 dura 56
-Removing ATTR_HP_RECOVERY from equip item_97_steel_boots_of_balance
 Applying factor 2 to item item_97_steel_boots_of_balance. Attributes str 78 spd 0 def 96 bal 100 sla 0 smh 96 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 100 sol 0 hp 0 weight 25 max_dura 66 dura 60
 Applying factor 2 to item item_98_steel_boots_of_resist. Attributes str 60 spd 0 def 90 bal 100 sla 0 smh 0 pir 0 spr 0 foc 0 ham 100 pur 0 par 24 mel 100 sol 42 hp 0 weight 25 max_dura 68 dura 16
 Applying factor 2 to item item_99_leg_guard. Attributes str 0 spd 32 def 30 bal 72 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 22 sol 0 hp 0 weight 29 max_dura 88 dura 30
@@ -188,37 +176,29 @@ Applying factor 2 to item item_a5_shield_of_resist. Attributes str 48 spd 0 def 
 Applying factor 2 to item item_a6_large_shield. Attributes str 62 spd 0 def 90 bal 84 sla 0 smh 0 pir 0 spr 0 foc 68 ham 92 pur 100 par 0 mel 0 sol 0 hp 0 weight 18 max_dura 56 dura 42
 Applying factor 2 to item item_a7_large_shield. Attributes str 54 spd 0 def 86 bal 90 sla 0 smh 0 pir 0 spr 0 foc 70 ham 90 pur 100 par 0 mel 0 sol 0 hp 0 weight 18 max_dura 52 dura 16
 Applying factor 2 to item item_a8_harden_large_shield. Attributes str 66 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 60 ham 84 pur 100 par 0 mel 0 sol 0 hp 0 weight 44 max_dura 72 dura 60
-Removing ATTR_HP_RECOVERY from equip item_a9_large_shield_of_balance
 Applying factor 2 to item item_a9_large_shield_of_balance. Attributes str 66 spd 0 def 94 bal 100 sla 0 smh 0 pir 0 spr 0 foc 72 ham 86 pur 100 par 6 mel 10 sol 8 hp 0 weight 44 max_dura 62 dura 10
 Applying factor 2 to item item_aa_fiery_large_shield. Attributes str 50 spd 0 def 78 bal 80 sla 0 smh 0 pir 0 spr 24 foc 78 ham 96 pur 100 par 64 mel 0 sol 0 hp 0 weight 44 max_dura 66 dura 40
 Applying factor 2 to item item_ab_great_shield. Attributes str 54 spd 0 def 84 bal 80 sla 0 smh 0 pir 0 spr 28 foc 74 ham 100 pur 100 par 56 mel 0 sol 0 hp 0 weight 45 max_dura 70 dura 8
 Applying factor 2 to item item_ac_great_shield. Attributes str 44 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 100 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 35 max_dura 76 dura 20
-Removing ATTR_HP_RECOVERY from equip item_ad_great_shield_of_balance
 Applying factor 2 to item item_ad_great_shield_of_balance. Attributes str 48 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 100 ham 100 pur 100 par 20 mel 28 sol 16 hp 0 weight 35 max_dura 70 dura 70
 Applying factor 2 to item item_ae_shining_great_shield. Attributes str 50 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 46 foc 100 ham 100 pur 100 par 0 mel 0 sol 66 hp 0 weight 43 max_dura 80 dura 38
 Applying factor 2 to item item_af_dark_great_shield. Attributes str 50 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 50 foc 100 ham 100 pur 100 par 0 mel 0 sol 74 hp 0 weight 43 max_dura 56 dura 56
 Applying factor 2 to item item_b0_deadly_great_shield. Attributes str 100 spd 0 def 100 bal 100 sla 32 smh 42 pir 36 spr 0 foc 100 ham 100 pur 100 par 52 mel 44 sol 40 hp 0 weight 94 max_dura 10 dura 2
 Applying factor 2 to item item_b1_tower_shield. Attributes str 82 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 72 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 54 max_dura 88 dura 64
 Applying factor 2 to item item_b2_tower_shield. Attributes str 80 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 74 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 54 max_dura 92 dura 60
-Removing ATTR_HP_RECOVERY from equip item_b3_tower_shield_of_honor
 Applying factor 2 to item item_b3_tower_shield_of_honor. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 80 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 54 max_dura 94 dura 0
 Applying factor 2 to item item_b4_harden_tower_shield. Attributes str 88 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 68 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 68 max_dura 100 dura 18
 Applying factor 2 to item item_b5_tower_shield_of_protect. Attributes str 84 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 82 ham 100 pur 100 par 0 mel 80 sol 0 hp 0 weight 68 max_dura 92 dura 74
 Applying factor 2 to item item_b6_caustic_tower_shield. Attributes str 84 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 82 ham 100 pur 100 par 0 mel 72 sol 0 hp 0 weight 68 max_dura 92 dura 26
-Removing ATTR_HP_RECOVERY from equip item_b7_tower_shield_of_balance
 Applying factor 2 to item item_b7_tower_shield_of_balance. Attributes str 92 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 86 ham 100 pur 100 par 26 mel 56 sol 32 hp 0 weight 46 max_dura 100 dura 46
 Applying factor 2 to item item_b8_tower_shield_of_resist. Attributes str 78 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 40 foc 92 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 46 max_dura 96 dura 80
 Applying factor 2 to item item_b9_gothic_shield. Attributes str 70 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 88 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 51 max_dura 100 dura 38
 Applying factor 2 to item item_ba_harden_gothic_shield. Attributes str 74 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 80 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 51 max_dura 100 dura 88
 Applying factor 2 to item item_bb_gothic_shield. Attributes str 68 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 84 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 58 max_dura 100 dura 12
 Applying factor 2 to item item_bc_gothic_shield_of_resist. Attributes str 58 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 64 foc 100 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 59 max_dura 100 dura 18
-Removing ATTR_HP_RECOVERY from equip item_bd_gothic_shield_of_honor
 Applying factor 2 to item item_bd_gothic_shield_of_honor. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 78 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 41 max_dura 100 dura 24
-Removing ATTR_HP_RECOVERY from equip item_be_gothic_shield_of_balance
 Applying factor 2 to item item_be_gothic_shield_of_balance. Attributes str 82 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 82 ham 100 pur 100 par 64 mel 42 sol 30 hp 0 weight 42 max_dura 100 dura 56
 Applying factor 2 to item item_bf_master_gothic_shield. Attributes str 64 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 72 ham 92 pur 100 par 0 mel 0 sol 0 hp 0 weight 59 max_dura 100 dura 6
-Removing ATTR_HP_RECOVERY from equip item_c0_gothic_shield_of_power
-Removing ATTR_MP_RECOVERY from equip item_c0_gothic_shield_of_power
 Applying factor 2 to item item_c0_gothic_shield_of_power. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 0 foc 100 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 74 max_dura 100 dura 100
 Applying factor 2 to item item_c1_gothic_shield_of_rage. Attributes str 78 spd 0 def 56 bal 56 sla 0 smh 0 pir 0 spr 40 foc 96 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 24 max_dura 46 dura 14
 Applying factor 2 to item item_c2_shinning_gothic_shield. Attributes str 100 spd 0 def 100 bal 100 sla 0 smh 0 pir 0 spr 28 foc 100 ham 100 pur 100 par 0 mel 0 sol 80 hp 0 weight 4 max_dura 30 dura 20
@@ -227,27 +207,19 @@ Applying factor 2 to item item_c4_summoner_ring_of_fire. Attributes str 0 spd 0 
 Applying factor 2 to item item_c5_summoner_ring_of_fire. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 64 pir 0 spr 28 foc 20 ham 0 pur 0 par 100 mel 0 sol 0 hp 0 weight 0 max_dura 20 dura 20
 Applying factor 2 to item item_c6_ring_of_fire_resist. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 40 foc 26 ham 68 pur 0 par 100 mel 0 sol 0 hp 0 weight 0 max_dura 46 dura 40
 Applying factor 2 to item item_c7_priest_ring_of_fire. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 48 foc 36 ham 40 pur 46 par 100 mel 0 sol 0 hp 0 weight 0 max_dura 30 dura 26
-Removing ATTR_MP_RECOVERY from equip item_c8_sorcerer_ring_of_fire
 Applying factor 2 to item item_c8_sorcerer_ring_of_fire. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 52 foc 42 ham 0 pur 0 par 100 mel 68 sol 24 hp 0 weight 0 max_dura 24 dura 8
 Applying factor 2 to item item_c9_summoner_ring_of_frost. Attributes str 0 spd 52 def 0 bal 0 sla 0 smh 0 pir 0 spr 20 foc 18 ham 0 pur 0 par 82 mel 0 sol 0 hp 0 weight 0 max_dura 24 dura 22
 Applying factor 2 to item item_ca_summoner_ring_of_frost. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 24 foc 26 ham 0 pur 0 par 72 mel 0 sol 0 hp 0 weight 0 max_dura 32 dura 14
 Applying factor 2 to item item_cb_balance_ring_of_frost. Attributes str 16 spd 0 def 0 bal 40 sla 0 smh 0 pir 32 spr 30 foc 38 ham 0 pur 0 par 100 mel 0 sol 0 hp 0 weight 0 max_dura 20 dura 20
-Removing ATTR_MP_RECOVERY from equip item_cc_priest_ring_of_frost
 Applying factor 2 to item item_cc_priest_ring_of_frost. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 38 foc 32 ham 38 pur 28 par 100 mel 0 sol 0 hp 0 weight 0 max_dura 30 dura 20
 Applying factor 2 to item item_cd_sorcerer_ring_of_frost. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 60 foc 40 ham 0 pur 0 par 100 mel 20 sol 36 hp 0 weight 0 max_dura 22 dura 20
-Removing ATTR_HP_RECOVERY from equip item_ce_soul_ring
 Applying factor 2 to item item_ce_soul_ring. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 26 foc 14 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 14 dura 4
-Removing ATTR_HP_RECOVERY from equip item_cf_soul_ring
 Applying factor 2 to item item_cf_soul_ring. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 32 foc 32 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 28 dura 4
-Removing ATTR_HP_RECOVERY from equip item_d0_holy_ring_of_resist
 Applying factor 2 to item item_d0_holy_ring_of_resist. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 42 foc 26 ham 56 pur 0 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 20 dura 18
-Removing ATTR_HP_RECOVERY from equip item_d1_holy_ring_of_priest
 Applying factor 2 to item item_d1_holy_ring_of_priest. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 52 foc 38 ham 58 pur 32 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 12 dura 12
-Removing ATTR_HP_RECOVERY from equip item_d2_holy_ring
 Applying factor 2 to item item_d2_holy_ring. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 62 foc 40 ham 0 pur 0 par 84 mel 34 sol 100 hp 0 weight 0 max_dura 86 dura 40
 Applying factor 2 to item item_d3_dark_ring. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 16 foc 28 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 22 dura 16
 Applying factor 2 to item item_d4_dark_ring. Attributes str 20 spd 20 def 0 bal 0 sla 0 smh 0 pir 0 spr 36 foc 36 ham 0 pur 0 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 32 dura 30
-Removing ATTR_MP_RECOVERY from equip item_d5_dark_priest_ring
 Applying factor 2 to item item_d5_dark_priest_ring. Attributes str 0 spd 0 def 0 bal 0 sla 30 smh 0 pir 0 spr 46 foc 42 ham 36 pur 62 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 44 dura 38
 Applying factor 2 to item item_d6_dark_sorcerer_ring. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 52 foc 54 ham 0 pur 0 par 100 mel 100 sol 100 hp 0 weight 0 max_dura 56 dura 8
 Applying factor 2 to item item_d7_ring_of_poison. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 8 foc 16 ham 0 pur 0 par 0 mel 100 sol 0 hp 0 weight 0 max_dura 12 dura 6
@@ -263,8 +235,6 @@ Applying factor 2 to item item_e0_ring_of_ice. Attributes str 0 spd 0 def 0 bal 
 Applying factor 2 to item item_e1_ring_of_dark_souls. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 98 mel 100 sol 100 hp 0 weight 0 max_dura 26 dura 16
 Applying factor 2 to item item_e2_black_ring. Attributes str 30 spd 66 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 62 dura 60
 Applying factor 2 to item item_e3_ring_of_seal. Attributes str 24 spd 60 def 0 bal 0 sla 60 smh 56 pir 54 spr 62 foc 62 ham 58 pur 58 par 100 mel 100 sol 100 hp 0 weight 0 max_dura 48 dura 34
-Removing ATTR_HP_RECOVERY from equip item_e4_ring_of_dead_spirit
-Removing ATTR_MP_RECOVERY from equip item_e4_ring_of_dead_spirit
 Applying factor 2 to item item_e4_ring_of_dead_spirit. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 48 foc 36 ham 0 pur 0 par 100 mel 100 sol 100 hp 0 weight 0 max_dura 84 dura 76
 Applying factor 2 to item item_e5_ring_of_rage. Attributes str 0 spd 0 def 0 bal 0 sla 62 smh 58 pir 68 spr 18 foc 26 ham 0 pur 24 par 0 mel 0 sol 40 hp 0 weight 0 max_dura 6 dura 2
 Applying factor 2 to item item_e6_ring_of_drain. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 64 foc 40 ham 40 pur 0 par 0 mel 0 sol 100 hp 0 weight 0 max_dura 6 dura 6
@@ -284,32 +254,24 @@ Applying factor 2 to item item_f3_bracelet_of_movement. Attributes str 0 spd 100
 Applying factor 2 to item item_f4_bracelet_of_composure. Attributes str 0 spd 42 def 0 bal 0 sla 40 smh 46 pir 18 spr 0 foc 100 ham 42 pur 46 par 0 mel 0 sol 0 hp 0 weight 9 max_dura 0 dura 0
 Applying factor 2 to item item_f5_deadly_bracelet. Attributes str 0 spd 66 def 0 bal 0 sla 46 smh 30 pir 44 spr 0 foc 0 ham 38 pur 42 par 0 mel 0 sol 0 hp 0 weight 6 max_dura 0 dura 0
 Applying factor 2 to item item_f6_harden_bracelet. Attributes str 0 spd 16 def 76 bal 38 sla 32 smh 64 pir 12 spr 0 foc 0 ham 48 pur 34 par 0 mel 0 sol 0 hp 0 weight 6 max_dura 0 dura 0
-Removing ATTR_HP_RECOVERY from equip item_f7_priest_bracelet
 Applying factor 2 to item item_f7_priest_bracelet. Attributes str 50 spd 56 def 26 bal 42 sla 72 smh 50 pir 24 spr 0 foc 0 ham 82 pur 62 par 0 mel 0 sol 0 hp 0 weight 7 max_dura 0 dura 0
 Applying factor 2 to item item_f8_holy_bracelet. Attributes str 0 spd 86 def 0 bal 24 sla 48 smh 24 pir 80 spr 46 foc 74 ham 68 pur 74 par 0 mel 0 sol 0 hp 0 weight 7 max_dura 0 dura 0
 Applying factor 2 to item item_f9_king_bracelet. Attributes str 0 spd 88 def 0 bal 0 sla 42 smh 100 pir 30 spr 0 foc 0 ham 32 pur 28 par 0 mel 0 sol 0 hp 0 weight 13 max_dura 0 dura 0
-Removing ATTR_HP_RECOVERY from equip item_fa_moon_bracelet
-Removing ATTR_MP_RECOVERY from equip item_fa_moon_bracelet
 Applying factor 2 to item item_fa_moon_bracelet. Attributes str 26 spd 66 def 0 bal 0 sla 100 smh 46 pir 24 spr 0 foc 46 ham 62 pur 66 par 0 mel 0 sol 34 hp 0 weight 12 max_dura 0 dura 0
 Applying factor 2 to item item_fb_magical_amulet. Attributes str 64 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 66 foc 72 ham 62 pur 84 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_fc_amulet_of_movement. Attributes str 0 spd 58 def 0 bal 0 sla 0 smh 0 pir 64 spr 58 foc 54 ham 60 pur 70 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_fd_amulet_of_guardian. Attributes str 0 spd 0 def 24 bal 60 sla 0 smh 0 pir 0 spr 52 foc 50 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_fe_deadly_amulet. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 50 foc 44 ham 48 pur 54 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_ff_amulet_of_composure. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 82 foc 100 ham 100 pur 100 par 16 mel 24 sol 18 hp 0 weight 0 max_dura 0 dura 0
-Removing ATTR_HP_RECOVERY from equip item_100_amulet_of_curing
 Applying factor 2 to item item_100_amulet_of_curing. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 100 pur 100 par 24 mel 20 sol 30 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_101_amulet_of_resist. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 92 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_102_mind_amulet. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 82 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_103_sorcerer_amulet. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 68 pur 94 par 76 mel 82 sol 94 hp 0 weight 0 max_dura 0 dura 0
-Removing ATTR_HP_RECOVERY from equip item_104_priest_amulet
-Removing ATTR_MP_RECOVERY from equip item_104_priest_amulet
 Applying factor 2 to item item_104_priest_amulet. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_105_amulet_of_balance. Attributes str 0 spd 0 def 12 bal 100 sla 0 smh 96 pir 0 spr 70 foc 64 ham 72 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_106_amulet_of_recovery. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 90 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_107_star_amulet. Attributes str 0 spd 40 def 0 bal 0 sla 94 smh 78 pir 86 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_108_amulet_of_winter. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 100 foc 100 ham 100 pur 100 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
-Removing ATTR_HP_RECOVERY from equip item_109_endless_amulet
-Removing ATTR_MP_RECOVERY from equip item_109_endless_amulet
 Applying factor 2 to item item_109_endless_amulet. Attributes str 46 spd 42 def 38 bal 56 sla 52 smh 48 pir 58 spr 50 foc 56 ham 44 pur 52 par 36 mel 50 sol 42 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_10a_cune. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
 Applying factor 2 to item item_10b_blank_item_1. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 0 max_dura 0 dura 0
@@ -2726,10 +2688,10 @@ Setting spawn change to 100% , creature 0d_blood_bone
 Setting spawn change to 100% , creature 0d_blood_bone
 Setting spawn change to 100% , creature 0d_blood_bone
 Setting spawn change to 100% , creature 0c_hollow_mage
-DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/01_acid_slime where it was item_47_cap item_11e_anti_venom 
+DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/01_acid_slime where it was item_47_cap 
 DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/01_acid_slime where it was item_11e_anti_venom 
 DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at human_world_solitary_region/02_blood_slime where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/00_dark_spider where it was item_32_mace item_35_morning_star 
+DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/00_dark_spider where it was item_32_mace 
 DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/00_dark_spider where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_eb_bracelet_of_curing at human_world_solitary_region/00_dark_spider where it was item_a1_buckler . There are more 254 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/00_dark_spider where it was item_11c_healing_potion 
@@ -2738,19 +2700,19 @@ DEBUG - Drop randomization - Updating drop to consumable item_10c_torch at human
 DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/00_dark_spider where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at human_world_solitary_region/00_dark_spider where it was item_127_acid_vaccine 
 DEBUG - Drop randomization - Updating drop to unique item_b9_gothic_shield at human_world_solitary_region/0a_skeleton where it was blank. There are more 253 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at human_world_solitary_region/09_demon_bat where it was item_2_deadly_short_sword item_4_long_sword 
+DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at human_world_solitary_region/09_demon_bat where it was item_2_deadly_short_sword 
 DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/09_demon_bat where it was item_3_long_sword 
 DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/08_dark_spider where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_2f_mighty_great_sword at human_world_solitary_region/0a_skeleton where it was item_a3_small_shield . There are more 252 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_bd_gothic_shield_of_honor at human_world_solitary_region/08_dark_spider where it was blank. There are more 251 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_d3_dark_ring at human_world_solitary_region/08_dark_spider where it was item_5c_quilted_armor . There are more 250 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_dc_caustic_ring at human_world_solitary_region/08_dark_spider where it was blank. There are more 249 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/0a_skeleton where it was item_5d_leather_armor item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to blank at human_world_solitary_region/0a_skeleton where it was item_5d_leather_armor 
 DEBUG - Drop randomization - Updating drop to unique item_6f_plate_mail_of_protect at human_world_hidden_region/00_acid_slime where it was item_11e_anti_venom . There are more 248 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at human_world_hidden_region/00_acid_slime where it was item_99_leg_guard 
 DEBUG - Drop randomization - Updating drop to blank at human_world_hidden_region/00_acid_slime where it was item_11e_anti_venom 
 DEBUG - Drop randomization - Updating drop to consumable item_123_fire_world_stone at human_world_hidden_region/01_blood_slime where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to unique item_d4_dark_ring at human_world_hidden_region/06_fanged_worm where it was item_f_broad_sword item_9_rapier . There are more 247 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_d4_dark_ring at human_world_hidden_region/06_fanged_worm where it was item_f_broad_sword . There are more 247 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_d1_holy_ring_of_priest at human_world_hidden_region/04_acid_slime where it was blank. There are more 246 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at human_world_hidden_region/05_blood_slime where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_1a_lethal_bastard_sword at human_world_hidden_region/04_acid_slime where it was item_11e_anti_venom . There are more 245 to distribute.
@@ -2758,17 +2720,17 @@ DEBUG - Drop randomization - Updating drop to blank at human_world_hidden_region
 DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at human_world_hidden_region/04_acid_slime where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_ed_mind_bracelet at human_world_hidden_region/04_acid_slime where it was item_11e_anti_venom . There are more 244 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at human_world_hidden_region/05_blood_slime where it was item_5_long_sword 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at human_world_hidden_region/08_casket where it was item_2_deadly_short_sword item_3_long_sword item_10c_torch 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at human_world_hidden_region/08_casket where it was item_2_deadly_short_sword item_10c_torch 
 DEBUG - Drop randomization - Updating drop to blank at human_world_hidden_region/08_casket where it was item_10c_torch 
 DEBUG - Drop randomization - Updating drop to blank at human_world_hidden_region/09_blood_slime where it was item_124_poison_vaccine 
 DEBUG - Drop randomization - Updating drop to unique item_26_righteous_sword at human_world_hidden_region/09_blood_slime where it was item_10a_cune . There are more 243 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_96_swift_steel_boots at human_world_hidden_region/09_blood_slime where it was item_60_scale_mail item_5e_leather_armor . There are more 242 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_96_swift_steel_boots at human_world_hidden_region/09_blood_slime where it was item_60_scale_mail . There are more 242 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at human_world_hidden_region/09_blood_slime where it was item_124_poison_vaccine 
 DEBUG - Drop randomization - Updating drop to unique item_af_dark_great_shield at human_world_hidden_region/02_parasite where it was item_12e_dorados_ashes . There are more 241 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_12f_spirit_key at human_world_forgotten_region/02_skeleton where it was item_92_steel_boots_of_resist . There are more 240 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_c3_holy_gothic_shield at human_world_forgotten_region/02_skeleton where it was item_82_caustic_hand_guard item_81_fiery_gauntlet . There are more 239 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_c3_holy_gothic_shield at human_world_forgotten_region/02_skeleton where it was item_82_caustic_hand_guard . There are more 239 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at human_world_forgotten_region/02_skeleton where it was item_9_rapier 
-DEBUG - Drop randomization - Updating drop to unique item_ee_mighty_ring at human_world_forgotten_region/02_skeleton where it was item_49_crown_of_resist item_48_crown . There are more 238 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_ee_mighty_ring at human_world_forgotten_region/02_skeleton where it was item_49_crown_of_resist . There are more 238 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at human_world_forgotten_region/02_skeleton where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to unique item_e1_ring_of_dark_souls at human_world_forgotten_region/00_acid_skull where it was item_8e_leather_boots . There are more 237 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at human_world_forgotten_region/00_acid_skull where it was item_11e_anti_venom 
@@ -2778,31 +2740,31 @@ DEBUG - Drop randomization - Updating drop to unique item_111_kings_key at human
 DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/00_acid_skull where it was item_11e_anti_venom 
 DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/01_blood_skull where it was item_11f_anti_paralytic 
 DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/01_blood_skull where it was item_11f_anti_paralytic 
-DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/01_blood_skull where it was item_4a_crown_of_composure item_127_acid_vaccine 
+DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/01_blood_skull where it was item_4a_crown_of_composure 
 DEBUG - Drop randomization - Updating drop to unique item_12d_pitcher_of_nadya_mp at human_world_forgotten_region/05_blood_skull where it was item_a4_small_shield . There are more 233 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/05_blood_skull where it was item_126_bottle_of_light 
 DEBUG - Drop randomization - Updating drop to consumable item_138_soul_pod_29_sp at human_world_forgotten_region/05_blood_skull where it was blank
 DEBUG - Drop randomization - Updating drop to blank at human_world_forgotten_region/05_blood_skull where it was item_90_steel_boots 
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at human_world_forgotten_region/05_blood_skull where it was item_11f_anti_paralytic 
-DEBUG - Drop randomization - Updating drop to unique item_9e_leg_guard_of_protect at human_world_forgotten_region/05_blood_skull where it was item_b_lethal_rapier item_23_guardian_bastard_sword . There are more 232 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_9e_leg_guard_of_protect at human_world_forgotten_region/05_blood_skull where it was item_b_lethal_rapier . There are more 232 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at human_world_cursed_region/02_tongue_imp where it was item_a2_buckler 
 DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at human_world_cursed_region/02_tongue_imp where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_113_beast_key at human_world_cursed_region/00_dark_spider where it was item_12e_dorados_ashes . There are more 231 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_3e_living_axe at human_world_cursed_region/00_dark_spider where it was item_8d_leather_boots . There are more 230 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at human_world_cursed_region/01_shadow_spider where it was item_11d_magic_potion 
 DEBUG - Drop randomization - Updating drop to consumable item_10d_lamp at human_world_cursed_region/00_dark_spider where it was item_8f_hard_boots 
-DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/00_dark_spider where it was item_79_leather_glove item_7c_wooden_glove 
+DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/00_dark_spider where it was item_79_leather_glove 
 DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/00_dark_spider where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_70_eternal_plate_mail at human_world_cursed_region/00_dark_spider where it was item_12e_dorados_ashes . There are more 229 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at human_world_cursed_region/06_tongue_imp where it was item_5f_magical_leather_armor item_5e_leather_armor 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at human_world_cursed_region/06_tongue_imp where it was item_5f_magical_leather_armor 
 DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at human_world_cursed_region/06_tongue_imp where it was item_1_short_sword 
 DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/08_dark_spider where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_88_deadly_gauntlet at human_world_cursed_region/08_dark_spider where it was item_124_poison_vaccine . There are more 228 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/09_shadow_spider where it was item_11d_magic_potion 
-DEBUG - Drop randomization - Updating drop to unique item_23_guardian_bastard_sword at human_world_cursed_region/08_dark_spider where it was item_48_crown item_47_cap . There are more 227 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_23_guardian_bastard_sword at human_world_cursed_region/08_dark_spider where it was item_48_crown . There are more 227 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/09_shadow_spider where it was item_10e_sacred_feather 
 DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/09_shadow_spider where it was item_10e_sacred_feather 
-DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at human_world_cursed_region/0a_guardian_a where it was item_36_swift_morning_star item_34_shining_mace 
+DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at human_world_cursed_region/0a_guardian_a where it was item_36_swift_morning_star 
 DEBUG - Drop randomization - Updating drop to blank at human_world_cursed_region/04_fat_mole_a where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_8c_master_arm_guard at earth_world_rotting_cavern/02_elder where it was item_11c_healing_potion . There are more 226 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_25_magical_bastard_sword at earth_world_rotting_cavern/00_watcher_plant where it was blank. There are more 225 to distribute.
@@ -2823,8 +2785,8 @@ DEBUG - Drop randomization - Updating drop to unique item_cc_priest_ring_of_fros
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_rotting_cavern/09_imp where it was item_d9_ring_of_protect 
 DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/09_imp where it was item_c9_summoner_ring_of_frost 
 DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/08_star_serpent where it was item_e8_bracelet_of_balance 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_rotting_cavern/08_star_serpent where it was item_e7_bracelet_of_resist item_d3_dark_ring item_120_divine_symbol 
-DEBUG - Drop randomization - Updating drop to unique item_118_iron_key at earth_world_rotting_cavern/08_star_serpent where it was item_a7_large_shield item_120_divine_symbol . There are more 218 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_rotting_cavern/08_star_serpent where it was item_e7_bracelet_of_resist item_120_divine_symbol 
+DEBUG - Drop randomization - Updating drop to unique item_118_iron_key at earth_world_rotting_cavern/08_star_serpent where it was item_a7_large_shield . There are more 218 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/0d_tondrom where it was blank
 DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/0d_tondrom where it was blank
 DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/0d_tondrom where it was blank
@@ -2834,7 +2796,7 @@ DEBUG - Drop randomization - Updating drop to unique item_1b_swift_bastard_sword
 DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/0e_auriel_a where it was item_49_crown_of_resist 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_rotting_cavern/0e_auriel_a where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at earth_world_rotting_cavern/0e_auriel_a where it was item_120_divine_symbol 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/0e_auriel_a where it was item_63_plate_mail item_62_scale_mail_of_curing 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_rotting_cavern/0e_auriel_a where it was item_63_plate_mail 
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at earth_world_rotting_cavern/05_dwarfling where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_129_sealed_sword_stone at earth_world_rotting_cavern/0a_blank where it was blank. There are more 216 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/01_blue_flicker where it was blank
@@ -2848,7 +2810,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_quaking_cavern/00_sand_leech_a where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at earth_world_quaking_cavern/00_sand_leech_a where it was blank
 DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/00_sand_leech_a where it was item_fb_magical_amulet 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/05_acid_pod where it was item_83_gauntlet item_7c_wooden_glove 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/05_acid_pod where it was item_83_gauntlet 
 DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/04_kiljoy where it was blank. There are more 146 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/04_kiljoy where it was item_cf_soul_ring 
 DEBUG - Drop randomization - Updating drop to unique item_ec_bracelet_of_recovery at earth_world_quaking_cavern/04_kiljoy where it was item_e7_bracelet_of_resist . There are more 145 to distribute.
@@ -2865,7 +2827,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion
 DEBUG - Drop randomization - Updating drop to unique item_d0_holy_ring_of_resist at earth_world_quaking_cavern/02_sand_leech_b where it was item_95_caustic_steel_boots . There are more 142 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_49_crown_of_resist at earth_world_quaking_cavern/02_sand_leech_b where it was item_10a_cune . There are more 141 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_quaking_cavern/02_sand_leech_b where it was item_42_bow 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/00_earth_knight where it was item_a8_harden_large_shield item_a9_large_shield_of_balance 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/00_earth_knight where it was item_a8_harden_large_shield 
 DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_7c_wooden_glove at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion . There are more 140 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
@@ -2875,7 +2837,7 @@ DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cav
 DEBUG - Drop randomization - Updating drop to unique item_110_fiery_key at earth_world_false_pit_cavern/05_cocoon_plant where it was item_11c_healing_potion . There are more 139 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/05_cocoon_plant where it was item_12e_dorados_ashes 
 DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_false_pit_cavern/04_cannon_snail where it was item_81_fiery_gauntlet 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/04_cannon_snail where it was item_95_caustic_steel_boots item_91_steel_boots 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/04_cannon_snail where it was item_95_caustic_steel_boots 
 DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/08_guardian_b where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/08_guardian_b where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/09_sloth_bug where it was item_51_full_helm 
@@ -2930,7 +2892,7 @@ DEBUG - Drop randomization - Updating drop to unique item_90_steel_boots at eart
 DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/05_hobble_worm where it was blank
 DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/05_hobble_worm where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_3_long_sword at earth_world_stone_cavern/05_hobble_worm where it was item_3a_giant_axe . There are more 116 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_dd_caustic_priest_ring at earth_world_stone_cavern/05_hobble_worm where it was item_af_dark_great_shield item_11c_healing_potion . There are more 115 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_dd_caustic_priest_ring at earth_world_stone_cavern/05_hobble_worm where it was item_af_dark_great_shield . There are more 115 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at earth_world_stone_cavern/05_hobble_worm where it was item_4c_devil_crown 
 DEBUG - Drop randomization - Updating drop to unique item_f_broad_sword at earth_world_stone_cavern/05_hobble_worm where it was item_11c_healing_potion . There are more 114 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/05_hobble_worm where it was item_11c_healing_potion 
@@ -2940,7 +2902,7 @@ DEBUG - Drop randomization - Updating drop to unique item_a5_shield_of_resist at
 DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/08_clay_servant where it was item_18_bastard_sword 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_stone_cavern/08_clay_servant where it was item_e9_bracelet_of_movement 
 DEBUG - Drop randomization - Updating drop to unique item_be_gothic_shield_of_balance at earth_world_stone_cavern/08_clay_servant where it was blank. There are more 111 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/0a_barrel_snail where it was item_60_scale_mail item_120_divine_symbol 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/0a_barrel_snail where it was item_60_scale_mail 
 DEBUG - Drop randomization - Updating drop to unique item_5c_quilted_armor at earth_world_stone_cavern/0a_barrel_snail where it was item_120_divine_symbol . There are more 110 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_81_fiery_gauntlet at earth_world_stone_cavern/0a_barrel_snail where it was item_9b_harden_leg_guard . There are more 109 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at earth_world_stone_cavern/0c_dybbuk where it was item_db_caustic_ring 
@@ -2954,7 +2916,7 @@ DEBUG - Drop randomization - Updating drop to unique item_a3_small_shield at ear
 DEBUG - Drop randomization - Updating drop to consumable item_10d_lamp at earth_world_hostile_rock_cavern/01_earth_knight where it was item_11f_anti_paralytic 
 DEBUG - Drop randomization - Updating drop to unique item_14_crushing_broad_sword at earth_world_hostile_rock_cavern/01_earth_knight where it was item_11f_anti_paralytic . There are more 102 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at earth_world_hostile_rock_cavern/01_earth_knight where it was item_11f_anti_paralytic 
-DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at earth_world_hostile_rock_cavern/01_earth_knight where it was item_4f_magical_helm item_11f_anti_paralytic 
+DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at earth_world_hostile_rock_cavern/01_earth_knight where it was item_4f_magical_helm 
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at earth_world_hostile_rock_cavern/05_earth_knight where it was item_10e_sacred_feather 
 DEBUG - Drop randomization - Updating drop to unique item_31_blood_sword at earth_world_hostile_rock_cavern/05_earth_knight where it was item_122_evil_eye . There are more 101 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_hostile_rock_cavern/00_black_onyx where it was item_11c_healing_potion 
@@ -2962,7 +2924,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at earth_world_hostile_rock_cavern/00_black_onyx where it was item_11e_anti_venom 
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at earth_world_hostile_rock_cavern/00_black_onyx where it was item_126_bottle_of_light 
 DEBUG - Drop randomization - Updating drop to consumable item_123_fire_world_stone at earth_world_hostile_rock_cavern/00_black_onyx where it was item_126_bottle_of_light 
-DEBUG - Drop randomization - Updating drop to unique item_77_plate_mail_of_rage at earth_world_hostile_rock_cavern/04_dread_knight where it was item_8_silent_sword item_2c_deadly_great_sword item_27_great_sword . There are more 100 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_77_plate_mail_of_rage at earth_world_hostile_rock_cavern/04_dread_knight where it was item_8_silent_sword item_27_great_sword . There are more 100 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/01_horned_slime where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_32_mace at water_world_impure_pool_area/01_horned_slime where it was item_123_fire_world_stone . There are more 99 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_impure_pool_area/01_horned_slime where it was item_10e_sacred_feather 
@@ -2982,14 +2944,14 @@ DEBUG - Drop randomization - Updating drop to unique item_83_gauntlet at water_w
 DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at water_world_impure_pool_area/0a_dweller where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_4_long_sword at water_world_impure_pool_area/0a_dweller where it was blank. There are more 90 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_impure_pool_area/0a_dweller where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at water_world_impure_pool_area/09_dementor where it was item_80_metal_glove item_127_acid_vaccine 
-DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/09_dementor where it was item_37_frosty_morning_star item_127_acid_vaccine 
+DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at water_world_impure_pool_area/09_dementor where it was item_80_metal_glove 
+DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/09_dementor where it was item_37_frosty_morning_star 
 DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/0c_worm_face where it was item_6c_caustic_plate_mail 
-DEBUG - Drop randomization - Updating drop to unique item_9_rapier at water_world_impure_pool_area/0c_worm_face where it was item_9d_frosty_leg_guard item_127_acid_vaccine . There are more 89 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_9_rapier at water_world_impure_pool_area/0c_worm_face where it was item_9d_frosty_leg_guard . There are more 89 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/0d_hatchlin where it was item_cb_balance_ring_of_frost 
 DEBUG - Drop randomization - Updating drop to unique item_11_broad_sword at water_world_impure_pool_area/0c_worm_face where it was item_12e_dorados_ashes . There are more 88 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_93_steel_boots_of_curing at water_world_impure_pool_area/0c_worm_face where it was item_12e_dorados_ashes . There are more 87 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_impure_pool_area/0c_worm_face where it was item_1f_frosty_bastard_sword item_127_acid_vaccine 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_impure_pool_area/0c_worm_face where it was item_1f_frosty_bastard_sword 
 DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/0c_worm_face where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to blank at water_world_impure_pool_area/0c_worm_face where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to unique item_a0_holy_leg_guard at water_world_impure_pool_area/00_akryal where it was item_127_acid_vaccine . There are more 86 to distribute.
@@ -2998,12 +2960,12 @@ DEBUG - Drop randomization - To leave this one alone since it is key item_114_fl
 DEBUG - Drop randomization - Updating drop to unique item_5f_magical_leather_armor at water_world_sunken_river_area/00_kabasaur where it was item_122_evil_eye . There are more 85 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at water_world_sunken_river_area/00_kabasaur where it was item_11f_anti_paralytic 
 DEBUG - Drop randomization - Updating drop to unique item_78_knight_plate_mail at water_world_sunken_river_area/05_water_knight where it was item_1f_frosty_bastard_sword . There are more 84 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at water_world_sunken_river_area/05_water_knight where it was item_6b_frosty_plate_mail item_9f_caustic_leg_guard 
+DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at water_world_sunken_river_area/05_water_knight where it was item_6b_frosty_plate_mail 
 DEBUG - Drop randomization - Updating drop to blank at water_world_sunken_river_area/04_kabasaur where it was item_f_broad_sword 
-DEBUG - Drop randomization - Updating drop to unique item_35_morning_star at water_world_sunken_river_area/04_kabasaur where it was item_27_great_sword item_122_evil_eye . There are more 83 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at water_world_sunken_river_area/04_kabasaur where it was item_e9_bracelet_of_movement item_11f_anti_paralytic 
-DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at water_world_sunken_river_area/04_kabasaur where it was item_da_sorcerer_ring_of_poison item_122_evil_eye 
-DEBUG - Drop randomization - Updating drop to unique item_7f_metal_glove at water_world_sunken_river_area/04_kabasaur where it was item_ca_summoner_ring_of_frost item_122_evil_eye . There are more 82 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_35_morning_star at water_world_sunken_river_area/04_kabasaur where it was item_27_great_sword . There are more 83 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at water_world_sunken_river_area/04_kabasaur where it was item_e9_bracelet_of_movement 
+DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at water_world_sunken_river_area/04_kabasaur where it was item_da_sorcerer_ring_of_poison 
+DEBUG - Drop randomization - Updating drop to unique item_7f_metal_glove at water_world_sunken_river_area/04_kabasaur where it was item_ca_summoner_ring_of_frost . There are more 82 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_84_gauntlet at water_world_sunken_river_area/05_water_knight where it was item_11c_healing_potion . There are more 81 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at water_world_sunken_river_area/05_water_knight where it was item_11c_healing_potion 
 DEBUG - Drop randomization - To leave this one alone since it is key item_115_mermaid_key at water_world_sunken_river_area/05_water_knight
@@ -3015,9 +2977,9 @@ DEBUG - Drop randomization - Updating drop to blank at water_world_watery_labyri
 DEBUG - Drop randomization - Updating drop to unique item_19_bastard_sword at water_world_watery_labyrinth_area/05_blood_brain where it was item_126_bottle_of_light . There are more 80 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at water_world_watery_labyrinth_area/05_blood_brain where it was blank
 DEBUG - Drop randomization - Updating drop to blank at water_world_watery_labyrinth_area/05_blood_brain where it was item_126_bottle_of_light 
-DEBUG - Drop randomization - Updating drop to blank at water_world_watery_labyrinth_area/04_great_frog where it was item_43_warrior_bow item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to unique item_80_metal_glove at water_world_watery_labyrinth_area/04_great_frog where it was item_53_harden_full_helm item_52_full_helm_of_curing . There are more 79 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_watery_labyrinth_area/04_great_frog where it was item_69_magical_plate_mail item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to blank at water_world_watery_labyrinth_area/04_great_frog where it was item_43_warrior_bow 
+DEBUG - Drop randomization - Updating drop to unique item_80_metal_glove at water_world_watery_labyrinth_area/04_great_frog where it was item_53_harden_full_helm . There are more 79 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_watery_labyrinth_area/04_great_frog where it was item_69_magical_plate_mail 
 DEBUG - Drop randomization - Updating drop to blank at water_world_watery_labyrinth_area/09_koazul where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at water_world_watery_labyrinth_area/09_koazul where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to unique item_7b_leather_glove at water_world_watery_labyrinth_area/09_koazul where it was item_4e_helm . There are more 78 to distribute.
@@ -3046,17 +3008,17 @@ DEBUG - Drop randomization - Updating drop to unique item_ab_great_shield at wat
 DEBUG - Drop randomization - Updating drop to unique item_95_caustic_steel_boots at water_world_white_rain_area/00_winged_worm where it was blank. There are more 69 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at water_world_white_rain_area/00_winged_worm where it was item_12e_dorados_ashes 
 DEBUG - Drop randomization - Updating drop to blank at water_world_white_rain_area/00_winged_worm where it was item_10e_sacred_feather 
-DEBUG - Drop randomization - Updating drop to unique item_9d_frosty_leg_guard at water_world_white_rain_area/04_dragon_turtle where it was item_bc_gothic_shield_of_resist item_a8_harden_large_shield item_a3_small_shield . There are more 68 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_white_rain_area/04_dragon_turtle where it was item_6b_frosty_plate_mail item_127_acid_vaccine 
+DEBUG - Drop randomization - Updating drop to unique item_9d_frosty_leg_guard at water_world_white_rain_area/04_dragon_turtle where it was item_bc_gothic_shield_of_resist item_a3_small_shield . There are more 68 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_white_rain_area/04_dragon_turtle where it was item_6b_frosty_plate_mail 
 DEBUG - Drop randomization - Updating drop to unique item_47_cap at water_world_white_rain_area/04_dragon_turtle where it was item_127_acid_vaccine . There are more 67 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_white_rain_area/05_magi_magus where it was item_d_shadow_wolf item_24_dark_sword item_ee_mighty_ring 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at water_world_white_rain_area/05_magi_magus where it was item_d_shadow_wolf item_ee_mighty_ring 
 DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/02_fire_jinn where it was blank
 DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/02_fire_jinn where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_3b_giant_axe at fire_world_phoenix_cave/02_fire_jinn where it was item_83_gauntlet . There are more 66 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_3d_deadly_axe at fire_world_phoenix_cave/02_fire_jinn where it was item_98_steel_boots_of_resist item_93_steel_boots_of_curing . There are more 65 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_3d_deadly_axe at fire_world_phoenix_cave/02_fire_jinn where it was item_98_steel_boots_of_resist . There are more 65 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at fire_world_phoenix_cave/02_fire_jinn where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_117_brass_key at fire_world_phoenix_cave/02_fire_jinn where it was item_11c_healing_potion . There are more 64 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at fire_world_phoenix_cave/06_fire_jinn where it was item_a_rapier item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at fire_world_phoenix_cave/06_fire_jinn where it was item_a_rapier 
 DEBUG - Drop randomization - Updating drop to unique item_12c_pitcher_of_nadya_hp at fire_world_phoenix_cave/06_fire_jinn where it was item_7_fiery_long_sword . There are more 63 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_40_deadly_battle_axe at fire_world_phoenix_cave/06_fire_jinn where it was item_11c_healing_potion . There are more 62 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at fire_world_phoenix_cave/06_fire_jinn where it was item_c_shadow_blade 
@@ -3065,7 +3027,7 @@ DEBUG - Drop randomization - Updating drop to unique item_d7_ring_of_poison at f
 DEBUG - Drop randomization - Updating drop to unique item_f3_bracelet_of_movement at fire_world_phoenix_cave/05_armored_jinn where it was item_123_fire_world_stone . There are more 60 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/06_fire_jinn where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to unique item_a9_large_shield_of_balance at fire_world_phoenix_cave/05_armored_jinn where it was blank. There are more 59 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/04_unknown_a where it was item_c5_summoner_ring_of_fire item_101_amulet_of_resist item_123_fire_world_stone 
+DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/04_unknown_a where it was item_c5_summoner_ring_of_fire item_123_fire_world_stone 
 DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/06_fire_jinn where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/06_fire_jinn where it was item_16_guardian_broad_sword 
 DEBUG - Drop randomization - Updating drop to blank at fire_world_phoenix_cave/06_fire_jinn where it was blank
@@ -3085,7 +3047,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_122_evil_eye at fi
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at fire_world_burning_cavern/06_mystic_tower where it was item_10d_lamp 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at fire_world_burning_cavern/06_mystic_tower where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at fire_world_burning_cavern/06_mystic_tower where it was blank
-DEBUG - Drop randomization - Updating drop to blank at fire_world_burning_cavern/08_berzerker where it was item_93_steel_boots_of_curing item_94_steel_boots_of_resist 
+DEBUG - Drop randomization - Updating drop to blank at fire_world_burning_cavern/08_berzerker where it was item_93_steel_boots_of_curing 
 DEBUG - Drop randomization - Updating drop to unique item_10_broad_sword at fire_world_burning_cavern/08_berzerker where it was item_c5_summoner_ring_of_fire . There are more 53 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at fire_world_burning_cavern/09_iron_crusher where it was blank
 DEBUG - Drop randomization - Updating drop to blank at fire_world_burning_cavern/08_berzerker where it was blank
@@ -3112,7 +3074,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion
 DEBUG - Drop randomization - Updating drop to blank at fire_world_molten_cavern/04_berzerker where it was item_12e_dorados_ashes 
 DEBUG - Drop randomization - Updating drop to blank at fire_world_molten_cavern/04_berzerker where it was blank
 DEBUG - Drop randomization - Updating drop to blank at fire_world_molten_cavern/04_berzerker where it was blank
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at fire_world_molten_cavern/09_steel_servant where it was item_3d_deadly_axe item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at fire_world_molten_cavern/09_steel_servant where it was item_3d_deadly_axe 
 DEBUG - Drop randomization - Updating drop to unique item_74_plate_mail_of_honor at fire_world_molten_cavern/09_steel_servant where it was item_11c_healing_potion . There are more 49 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_55_great_helm at fire_world_molten_cavern/09_steel_servant where it was item_11c_healing_potion . There are more 48 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at fire_world_molten_cavern/0d_arachness where it was item_51_full_helm 
@@ -3127,7 +3089,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp
 DEBUG - Drop randomization - Updating drop to consumable item_10e_sacred_feather at fire_world_molten_cavern/08_fat_mole_b where it was blank
 DEBUG - Drop randomization - Updating drop to blank at fire_world_ashen_cavern/01_berzerker where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at fire_world_ashen_cavern/01_berzerker where it was item_126_bottle_of_light 
-DEBUG - Drop randomization - Updating drop to unique item_e0_ring_of_ice at fire_world_ashen_cavern/01_berzerker where it was item_96_swift_steel_boots item_126_bottle_of_light . There are more 45 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_e0_ring_of_ice at fire_world_ashen_cavern/01_berzerker where it was item_96_swift_steel_boots . There are more 45 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_39_axe at fire_world_ashen_cavern/00_bone_demon where it was item_10a_cune . There are more 44 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at fire_world_ashen_cavern/00_bone_demon where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to blank at fire_world_ashen_cavern/01_berzerker where it was blank
@@ -3191,10 +3153,10 @@ DEBUG - Drop randomization - Updating drop to unique item_6b_frosty_plate_mail a
 DEBUG - Drop randomization - Updating drop to unique item_106_amulet_of_recovery at monster_world_screeching_area/0a_cursed_demon where it was item_11d_magic_potion . There are more 24 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_2b_fiery_great_sword at monster_world_screeching_area/0a_cursed_demon where it was item_138_soul_pod_29_sp . There are more 23 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_bc_gothic_shield_of_resist at monster_world_screeching_area/0a_cursed_demon where it was item_c2_shinning_gothic_shield . There are more 22 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at monster_world_screeching_area/0a_cursed_demon where it was item_ad_great_shield_of_balance item_bd_gothic_shield_of_honor 
-DEBUG - Drop randomization - Updating drop to blank at monster_world_screeching_area/0d_death_serpent where it was item_9b_harden_leg_guard item_9e_leg_guard_of_protect 
+DEBUG - Drop randomization - Updating drop to blank at monster_world_screeching_area/0a_cursed_demon where it was item_ad_great_shield_of_balance 
+DEBUG - Drop randomization - Updating drop to blank at monster_world_screeching_area/0d_death_serpent where it was item_9b_harden_leg_guard 
 DEBUG - Drop randomization - Updating drop to blank at monster_world_screeching_area/0d_death_serpent where it was item_8a_arm_guard_of_composure 
-DEBUG - Drop randomization - Updating drop to unique item_ea_bracelet_of_composure at monster_world_screeching_area/0d_death_serpent where it was item_70_eternal_plate_mail item_77_plate_mail_of_rage . There are more 21 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_ea_bracelet_of_composure at monster_world_screeching_area/0d_death_serpent where it was item_70_eternal_plate_mail . There are more 21 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_b1_tower_shield at monster_world_screeching_area/0e_necron where it was item_e4_ring_of_dead_spirit . There are more 20 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_87_swift_gauntlet at monster_world_screeching_area/01_auriel_c where it was blank. There are more 19 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_34_shining_mace at illusion_world_bewilderment_domain/01_gargaral where it was item_10a_cune . There are more 18 to distribute.
@@ -3211,7 +3173,7 @@ DEBUG - Drop randomization - Updating drop to unique item_2d_keenest_great_sword
 DEBUG - Drop randomization - Updating drop to unique item_12e_dorados_ashes at illusion_world_bewilderment_domain/04_demon_warrior where it was item_11c_healing_potion . There are more 13 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at illusion_world_bewilderment_domain/04_demon_warrior where it was item_44_bow_gun 
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at illusion_world_bewilderment_domain/04_demon_warrior where it was item_17_dragon_sword 
-DEBUG - Drop randomization - Updating drop to unique item_9b_harden_leg_guard at illusion_world_bewilderment_domain/04_demon_warrior where it was item_f1_sorcerer_bracelet item_f2_priest_bracelet . There are more 12 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_9b_harden_leg_guard at illusion_world_bewilderment_domain/04_demon_warrior where it was item_f1_sorcerer_bracelet . There are more 12 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/0a_rotting_face where it was item_11d_magic_potion 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/08_war_demon_1 where it was item_53_harden_full_helm 
 DEBUG - Drop randomization - Updating drop to unique item_ad_great_shield_of_balance at illusion_world_bewilderment_domain/08_war_demon_1 where it was item_15_keenest_broad_sword . There are more 11 to distribute.
@@ -3220,14 +3182,14 @@ DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderme
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/0c_death_mage where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_b5_tower_shield_of_protect at illusion_world_bewilderment_domain/0c_death_mage where it was item_4b_wizard_crown . There are more 10 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at illusion_world_bewilderment_domain/0c_death_mage where it was item_d4_dark_ring 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/08_war_demon_1 where it was item_6d_shining_plate_mail item_6e_dark_plate_mail 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/08_war_demon_1 where it was item_6d_shining_plate_mail 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/09_war_demon_2 where it was item_26_righteous_sword 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/00_gorgoral where it was item_10a_cune item_116_key_of_delusion 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_bewilderment_domain/00_gorgoral where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to unique item_b7_tower_shield_of_balance at illusion_world_gloomy_domain/09_dark_fairy where it was item_127_acid_vaccine . There are more 9 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_28_great_sword at illusion_world_gloomy_domain/09_dark_fairy where it was item_127_acid_vaccine . There are more 8 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at illusion_world_gloomy_domain/09_dark_fairy where it was item_c6_ring_of_fire_resist 
-DEBUG - Drop randomization - Updating drop to unique item_29_great_sword at illusion_world_gloomy_domain/0a_dark_bishop where it was item_d5_dark_priest_ring item_d0_holy_ring_of_resist . There are more 7 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_c7_priest_ring_of_fire at illusion_world_gloomy_domain/0a_dark_bishop where it was item_d1_holy_ring_of_priest item_cf_soul_ring . There are more 6 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_29_great_sword at illusion_world_gloomy_domain/0a_dark_bishop where it was item_d5_dark_priest_ring . There are more 7 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_c7_priest_ring_of_fire at illusion_world_gloomy_domain/0a_dark_bishop where it was item_d1_holy_ring_of_priest . There are more 6 to distribute.
 DEBUG - Drop randomization - Updating drop to unique item_61_scale_mail at illusion_world_gloomy_domain/0a_dark_bishop where it was item_e6_ring_of_drain . There are more 5 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_10e_sacred_feather at illusion_world_gloomy_domain/09_dark_fairy where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to unique item_27_great_sword at illusion_world_gloomy_domain/09_dark_fairy where it was blank. There are more 4 to distribute.
@@ -3237,29 +3199,29 @@ DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_dom
 DEBUG - Drop randomization - Updating drop to consumable item_123_fire_world_stone at illusion_world_gloomy_domain/0d_deha where it was blank
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/0d_deha where it was item_73_full_plate 
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at illusion_world_gloomy_domain/0d_deha where it was item_125_dust_of_rage 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/0d_deha where it was item_bb_gothic_shield item_b5_tower_shield_of_protect 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/0d_deha where it was item_bb_gothic_shield 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/0d_deha where it was item_125_dust_of_rage 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/0c_maristella where it was item_10a_cune 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/0c_maristella where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at illusion_world_gloomy_domain/02_dark_imp where it was blank
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/00_red_puppet where it was item_103_sorcerer_amulet 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/01_dark_spirits where it was item_86_gauntlet_of_resist item_11f_anti_paralytic 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/01_dark_spirits where it was item_86_gauntlet_of_resist 
 DEBUG - Drop randomization - Updating drop to unique item_66_plate_mail_of_resist at illusion_world_gloomy_domain/06_black_imp where it was blank. There are more 3 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_18_bastard_sword at illusion_world_gloomy_domain/04_dark_spirits where it was item_f4_bracelet_of_composure item_f5_deadly_bracelet . There are more 2 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_18_bastard_sword at illusion_world_gloomy_domain/04_dark_spirits where it was item_f4_bracelet_of_composure . There are more 2 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/05_dark_spirits where it was item_11f_anti_paralytic 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_gloomy_domain/08_ring_demon where it was item_12e_dorados_ashes 
 DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at illusion_world_gloomy_domain/08_ring_demon where it was item_12e_dorados_ashes 
 DEBUG - Drop randomization - Updating drop to unique item_f6_harden_bracelet at illusion_world_gloomy_domain/0d_deha where it was item_56_great_helm . There are more 1 to distribute.
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at illusion_world_gloomy_domain/0e_blank where it was blank
-DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at illusion_world_dream_domain/00_dark_spirits where it was item_f0_guardian_bracelet item_f4_bracelet_of_composure item_122_evil_eye 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_dream_domain/00_dark_spirits where it was item_57_harden_great_helm item_56_great_helm item_10e_sacred_feather 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_dream_domain/00_dark_spirits where it was item_45_fiery_bow_gun item_128_spirit_book 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_dream_domain/01_disguise where it was item_108_amulet_of_winter item_59_mystic_great_helm 
+DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at illusion_world_dream_domain/00_dark_spirits where it was item_f0_guardian_bracelet item_122_evil_eye 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_dream_domain/00_dark_spirits where it was item_57_harden_great_helm item_10e_sacred_feather 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_dream_domain/00_dark_spirits where it was item_45_fiery_bow_gun 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_dream_domain/01_disguise where it was item_108_amulet_of_winter 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at illusion_world_worship_domain/00_master_knight where it was blank
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/00_master_knight where it was item_1a_lethal_bastard_sword 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/00_master_knight where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at illusion_world_worship_domain/00_master_knight where it was item_20_shining_bastard_sword 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/00_master_knight where it was item_1b_swift_bastard_sword item_22_mighty_bastard_sword 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/00_master_knight where it was item_1b_swift_bastard_sword 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at illusion_world_worship_domain/06_warpoor where it was item_52_full_helm_of_curing 
 DEBUG - Drop randomization - Updating drop to consumable item_10d_lamp at illusion_world_worship_domain/06_warpoor where it was item_65_harden_plate_mail 
 DEBUG - Drop randomization - To leave this one alone since it is key item_116_key_of_delusion at illusion_world_worship_domain/06_warpoor
@@ -3268,14 +3230,14 @@ DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_do
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/0a_warpoor where it was item_124_poison_vaccine 
 DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at illusion_world_worship_domain/0a_warpoor where it was item_11d_magic_potion 
 DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at illusion_world_worship_domain/0a_warpoor where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/0a_warpoor where it was item_d8_ring_of_poison item_dc_caustic_ring 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/0a_warpoor where it was item_d8_ring_of_poison 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/0a_warpoor where it was item_d7_ring_of_poison 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/0a_warpoor where it was item_cc_priest_ring_of_frost 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/09_cross_breed where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/09_cross_breed where it was item_126_bottle_of_light 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at illusion_world_worship_domain/09_cross_breed where it was item_102_mind_amulet item_105_amulet_of_balance 
-DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/09_cross_breed where it was item_103_sorcerer_amulet item_126_bottle_of_light 
-DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at illusion_world_worship_domain/09_cross_breed where it was item_104_priest_amulet item_120_divine_symbol 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at illusion_world_worship_domain/09_cross_breed where it was item_102_mind_amulet 
+DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/09_cross_breed where it was item_103_sorcerer_amulet 
+DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at illusion_world_worship_domain/09_cross_breed where it was item_104_priest_amulet 
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at illusion_world_worship_domain/04_wildowess where it was item_da_sorcerer_ring_of_poison 
 DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_domain/01_gorthaur where it was item_e0_ring_of_ice 
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at illusion_world_worship_domain/08_fester where it was item_f7_priest_bracelet 
@@ -3283,11 +3245,11 @@ DEBUG - Drop randomization - Updating drop to blank at illusion_world_worship_do
 DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/00_hell_hunter where it was blank
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at death_world_dark_castle_layer/00_hell_hunter where it was item_43_warrior_bow 
 DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at death_world_dark_castle_layer/00_hell_hunter where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/02_karasu where it was item_107_star_amulet item_128_spirit_book 
-DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at death_world_dark_castle_layer/02_karasu where it was item_f5_deadly_bracelet item_128_spirit_book 
+DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/02_karasu where it was item_107_star_amulet 
+DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at death_world_dark_castle_layer/02_karasu where it was item_f5_deadly_bracelet 
 DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/05_armored_warrior where it was blank
 DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/05_armored_warrior where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/06_armored_slayer where it was item_b8_tower_shield_of_resist item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/06_armored_slayer where it was item_b8_tower_shield_of_resist 
 DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/06_armored_slayer where it was item_8b_deadly_arm_guard 
 DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at death_world_dark_castle_layer/06_armored_slayer where it was item_74_plate_mail_of_honor 
 DEBUG - Drop randomization - Updating drop to blank at death_world_dark_castle_layer/06_armored_slayer where it was item_75_harden_full_plate 
@@ -3311,27 +3273,27 @@ DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion a
 DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at death_world_lingering_curse_layer/05_unknown_g where it was blank
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/05_unknown_g where it was blank
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/05_unknown_g where it was blank
-DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at death_world_lingering_curse_layer/08_apocrypha where it was item_e3_ring_of_seal item_ca_summoner_ring_of_frost 
-DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at death_world_lingering_curse_layer/09_unknown_h where it was item_e0_ring_of_ice item_128_spirit_book 
-DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/08_apocrypha where it was item_df_ring_of_desire item_cc_priest_ring_of_frost item_11d_magic_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at death_world_lingering_curse_layer/08_apocrypha where it was item_e3_ring_of_seal 
+DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at death_world_lingering_curse_layer/09_unknown_h where it was item_e0_ring_of_ice 
+DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/08_apocrypha where it was item_df_ring_of_desire item_11d_magic_potion 
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/09_unknown_h where it was item_c8_sorcerer_ring_of_fire 
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/08_apocrypha where it was item_11d_magic_potion 
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/09_unknown_h where it was item_c6_ring_of_fire_resist 
-DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_78_knight_plate_mail item_73_full_plate 
+DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_78_knight_plate_mail 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at death_world_lingering_curse_layer/0c_old_face where it was item_76_god_plate 
 DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at death_world_lingering_curse_layer/0c_old_face where it was item_5a_holy_great_helm 
-DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_8c_master_arm_guard item_92_steel_boots_of_resist 
+DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_8c_master_arm_guard 
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_10e_sacred_feather 
-DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_e5_ring_of_rage item_11d_magic_potion 
-DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_da_sorcerer_ring_of_poison item_11d_magic_potion 
+DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_e5_ring_of_rage 
+DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_da_sorcerer_ring_of_poison 
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0c_old_face where it was item_bd_gothic_shield_of_honor 
-DEBUG - Drop randomization - Updating drop to consumable item_10c_torch at death_world_lingering_curse_layer/0c_old_face where it was item_bf_master_gothic_shield item_a5_shield_of_resist 
+DEBUG - Drop randomization - Updating drop to consumable item_10c_torch at death_world_lingering_curse_layer/0c_old_face where it was item_bf_master_gothic_shield 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at death_world_lingering_curse_layer/0c_old_face where it was item_c0_gothic_shield_of_power 
-DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0a_old_face where it was item_e6_ring_of_drain item_e2_black_ring item_d3_dark_ring 
+DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/0a_old_face where it was item_e6_ring_of_drain item_d3_dark_ring 
 DEBUG - Drop randomization - Updating drop to consumable item_10d_lamp at death_world_lingering_curse_layer/0d_bugler where it was item_122_evil_eye 
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/00_unknown_e where it was blank
 DEBUG - Drop randomization - Updating drop to blank at death_world_lingering_curse_layer/04_blank where it was blank
-DEBUG - Drop randomization - Updating drop to blank at death_world_undead_layer/05_hell_hunter where it was item_a0_holy_leg_guard item_7f_metal_glove 
+DEBUG - Drop randomization - Updating drop to blank at death_world_undead_layer/05_hell_hunter where it was item_a0_holy_leg_guard 
 DEBUG - Drop randomization - Updating drop to consumable item_122_evil_eye at death_world_undead_layer/05_hell_hunter where it was blank
 DEBUG - Drop randomization - Updating drop to blank at death_world_undead_layer/05_hell_hunter where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to blank at death_world_undead_layer/05_hell_hunter where it was item_120_divine_symbol 
@@ -3361,7 +3323,7 @@ DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp 
 DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at death_world_gate_of_the_dead/02_bone_wolf where it was item_128_spirit_book 
 DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at death_world_gate_of_the_dead/06_hell_warrior where it was item_72_holy_plate_mail 
 DEBUG - Drop randomization - Updating drop to blank at death_world_gate_of_the_dead/06_hell_warrior where it was item_b0_deadly_great_shield 
-DEBUG - Drop randomization - Updating drop to blank at death_world_gate_of_the_dead/06_hell_warrior where it was item_c3_holy_gothic_shield item_c2_shinning_gothic_shield 
+DEBUG - Drop randomization - Updating drop to blank at death_world_gate_of_the_dead/06_hell_warrior where it was item_c3_holy_gothic_shield 
 DEBUG - Drop randomization - Updating drop to blank at death_world_gate_of_the_dead/05_doriwi where it was item_e1_ring_of_dark_souls 
 DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at death_world_gate_of_the_dead/05_doriwi where it was item_ef_deadly_bracelet 
 DEBUG - Drop randomization - Updating drop to blank at death_world_gate_of_the_dead/05_doriwi where it was item_fa_moon_bracelet 

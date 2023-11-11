@@ -3,6 +3,7 @@
   const constants = require('./constants');
   const fs = require('fs');
   const path = require('path');
+  const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
   // area files
   var logo_files = [
@@ -1451,6 +1452,17 @@
   for (var i in logo_files) {
     areas.push(new Area(logo_files[i].index, logo_files[i].name, areaIndexCounter++));
   }
+
+  originalMap.forEach(area => {
+    if (!global[area.name]) {
+      return;
+    }
+    global[area.name].exits = {};
+    area.exits.forEach(exit => {
+      global[area.name].exits[exit.id] = exit;
+    });
+    console.log("Exit objects for area " + global[area.name].name + " - " + JSON.stringify(global[area.name].exits));
+  });
 
   class Spawn {
     constructor(area, tfile, offset, offset_in_file, index) {
