@@ -37,11 +37,16 @@ FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
 Replace st.bin by your image file.
 
 ```
+npm run mod ".\generated\st.bin" ".\params\bonanza.json"
+npm run mod ".\generated\st.bin" ".\params\comedy.json"
+npm run mod ".\generated\st.bin" ".\params\scary-game.json"
+
 npm run mod ".\generated\st.bin" ".\params\any-prc-easy.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-even-harder.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-hard.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-very-hard.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-medium.json"
+npm run mod ".\generated\st.bin" ".\params\any-prc-extreme-easy.json"
 
 npm run mod ".\generated\st.bin" ".\params\100-prc-medium.json"
 

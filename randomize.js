@@ -43,13 +43,24 @@ function randomize(paramsFile, stDir) {
     const PRESET_APPLY_DIRECTIVES = "apply-directives";
     const PRESET_ANY_PRC = "any%";
     const PRESET_100_PRC = "100%";
+    const PRESET_COMEDY = "comedy";
+    const PRESET_BONANZA = "bonanza";
+    const PRESET_SCARY_GAME = "scary-game";
+
     const DIFFICULTY_EASY = "easy";
+    const DIFFICULTY_EXTREME_EASY = "extreme-easy";
     const DIFFICULTY_MEDIUM = "medium";
     const DIFFICULTY_HARD = "hard";
     const DIFFICULTY_VERY_HARD = "very-hard";
     const DIFFICULTY_EVEN_HARDER = "even-harder";
 
+    var PROGRESSIVENESS_FLAT = "flat";
+    var PROGRESSIVENESS_MEDIUM = "medium";
+    var PROGRESSIVENESS_INCREASED = "increased";
+    var PROGRESSIVENESS_CRAZY = "crazy";
+
     var factorByDificultyParam = {
+        "extreme-easy": 0.1,
         "easy": 0.5,
         "medium": 1,
         "hard": 2,
@@ -82,6 +93,7 @@ function randomize(paramsFile, stDir) {
         var seed = useRandomSeed();
         console.log("Randomization - Using generated seed " + seed);
     }
+    console.log("Parameters - " + JSON.stringify(params));
 
 	// model files
 	let modelFileNames = [
@@ -304,6 +316,10 @@ function randomize(paramsFile, stDir) {
 
         spawn.drop1.null();
         spawn.drop1Chance.set(0);
+        spawn.drop2.null();
+        spawn.drop2Chance.set(0);
+        spawn.drop2.null();
+        spawn.drop2Chance.set(0);
     }
 
     var collectableRemovalLoop=0;
@@ -426,11 +442,24 @@ function randomize(paramsFile, stDir) {
     var collectableUniques = [];
     var dropUniques = [];
 
-    var COLLECTABLE_UNIQUES_PROPORTION=0.2; // 10% will be collectable
-    var CHANCE_OF_UNIQUE_DROP=0.20; // 20% each creature has chance of dropping a unique
-    var CHANCE_OF_CONSUMABLE_DROP=0.2; // 20% each creature has chance of dropping consumable
-    var UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=0.4; // at first drop, chance of getting any of 20% first uniques, so on
-    var PROPORTION_OF_COLLECTABLE_BEING_EQUIP=0.2; // 10% of collectables will be uniques, the rest will be consumables
+    var COLLECTABLE_UNIQUES_PROPORTION=0.4; // 40% will be collectable
+    var CHANCE_OF_UNIQUE_DROP=0.4; // 40% each creature has chance of dropping a unique
+    var CHANCE_OF_CONSUMABLE_DROP=0.4; // 40% each creature has chance of dropping consumable
+    var UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=0.2; // at first drop, chance of getting any of 20% first uniques, so on
+    var PROPORTION_OF_COLLECTABLE_BEING_EQUIP=0.2; // 20% of collectables will be uniques, the rest will be consumables
+
+    if (params.preset == PRESET_BONANZA) {
+        allUniqueItems = allUniqueItems.filter(item => goodItems.indexOf(item) == -1);
+        goodItems.forEach(item => allUniqueItems.unshift(item));
+    }
+
+    if (params.progressiveness == PROGRESSIVENESS_FLAT) {
+        UNIQUES_SEQUENCE_RANDOMIZATION_SPAN = 1;
+    } else if (params.progressiveness == PROGRESSIVENESS_INCREASED) {
+        UNIQUES_SEQUENCE_RANDOMIZATION_SPAN = 0.6;
+    } else if (params.progressiveness == PROGRESSIVENESS_CRAZY) {
+        UNIQUES_SEQUENCE_RANDOMIZATION_SPAN = 1;
+    }
 
     if (params.randomizeCollectablesAndDrops) {
         allUniqueItems.forEach((unique) => {
@@ -506,17 +535,26 @@ function randomize(paramsFile, stDir) {
             var chosenItem = dropUniques[chosenIndex];
             dropUniques = dropUniques.filter(item => item !== chosenItem);
             spawn.drop1.set(chosenItem);
+            spawn.drop1Chance.set(100);
+
             var newDropName = items[spawn.drop1.get()].name;
             console.log("DEBUG - Drop randomization - Updating drop to unique " + newDropName + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames + ". There are more " + dropUniques.length + " to distribute.");
         } else if (Math.random()<CHANCE_OF_CONSUMABLE_DROP) {
             var chosen = consumablesForRandomization[Math.floor((Math.random()*consumablesForRandomization.length))];
             spawn.drop1.set(chosen);
+            spawn.drop1Chance.set(100);
             var newDropName = items[spawn.drop1.get()].name;
             console.log("DEBUG - Drop randomization - Updating drop to consumable " + newDropName + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
         } else {
             spawn.drop1.null();
+            spawn.drop1Chance.set(0);
             console.log("DEBUG - Drop randomization - Updating drop to blank at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
         }
+
+        spawn.drop2.null();
+        spawn.drop2Chance.set(0);
+        spawn.drop2.null();
+        spawn.drop2Chance.set(0);
     }
 
     function distributeDropsDumpInLateWorlds(spawn, area, index) {
@@ -534,6 +572,7 @@ function randomize(paramsFile, stDir) {
                         (items[spawn.drop1.get()].type.get()==ITEM &&
                         items[spawn.drop1.get()].name!="item_10a_cune")) {
                     spawn.drop1.set(dropUniques.shift());
+                    spawn.drop1Chance.set(100);
                     console.log("DEBUG - Drop randomization adding remaining to late worlds - Adding drop: " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
                 }
             }
@@ -565,7 +604,10 @@ function randomize(paramsFile, stDir) {
 
         // ------- Any%
 
-        if (params.preset == PRESET_ANY_PRC) {
+        if (params.preset == PRESET_ANY_PRC ||
+            params.preset == PRESET_COMEDY ||
+            params.preset == PRESET_SCARY_GAME ||
+            params.preset == PRESET_BONANZA) {
             forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
             forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
             forEachItem.push(presetDirectivesforEachItem);

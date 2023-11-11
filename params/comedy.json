@@ -1,0 +1,10 @@
+{
+	"label": "comedy",
+	"preset": "comedy",
+	"difficulty": "easy",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"progressiveness": "crazy",
+	"randomlyRemoveScenery": true,
+	"seed": "1234567890"
+}
