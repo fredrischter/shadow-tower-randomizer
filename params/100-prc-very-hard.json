@@ -1,0 +1,8 @@
+{
+	"label": "100-prc-very-hard",
+	"preset": "100%",
+	"difficulty": "very-hard",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"seed": "1234567890"
+}

@@ -63,9 +63,9 @@ function randomize(paramsFile, stDir) {
         "extreme-easy": 0.1,
         "easy": 0.5,
         "medium": 1,
-        "hard": 2,
-        "very-hard": 3,
-        "even-harder": 4
+        "hard": 1.3,
+        "very-hard": 1.6,
+        "even-harder": 2
     };
 
     const mapFolder = changeSetPath;

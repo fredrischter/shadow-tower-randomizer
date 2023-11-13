@@ -1,6 +1,6 @@
 {
 	"label": "any-prc-hard",
-	"preset": "only-apply-directives",
+	"preset": "any%",
 	"difficulty": "hard",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,

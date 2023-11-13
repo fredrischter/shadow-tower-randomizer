@@ -13,8 +13,20 @@ if (!file) {
 
 var originalParamsFile = process.argv[3];
 if (!originalParamsFile) {
-	console.log("ERROR - didn't provide params file as argument.");
-	process.exit(1);
+	console.log("Didn't provide params file as argument. Generating all");
+
+	const params = '.' + path.sep + 'params' + path.sep;
+
+	fs.readdir(params, (err, files) => {
+	  files.forEach(paramsFile => {
+	  	var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"';
+		console.log("Running " + command);
+	    exec(command, function() {
+			console.log("Finished running mod for all params");
+	    });
+	  });
+	});
+
 	return;
 }
 
