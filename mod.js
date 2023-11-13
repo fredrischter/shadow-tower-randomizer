@@ -17,14 +17,27 @@ if (!originalParamsFile) {
 
 	const params = '.' + path.sep + 'params' + path.sep;
 
+
 	fs.readdir(params, (err, files) => {
-	  files.forEach(paramsFile => {
-	  	var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"';
-		console.log("Running " + command);
-	    exec(command, function() {
+	  var paramsList = [];
+
+	  function runOne() {
+		var paramsFile = paramsList.shift();
+		if (paramsFile) {
+			var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"';
+			console.log("Running " + command);
+			exec(command, function() {
+				runOne();
+			});
+		} else {
 			console.log("Finished running mod for all params");
-	    });
+		}
+	  }
+
+	  files.forEach(paramsFile => {
+	  	paramsList.push(paramsFile);
 	  });
+	  runOne();
 	});
 
 	return;
