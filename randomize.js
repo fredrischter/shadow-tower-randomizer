@@ -68,12 +68,38 @@ function randomize(paramsFile, stDir) {
         "even-harder": 2
     };
 
+    var difficultyFactor = factorByDificultyParam[params.difficulty];
+    var smoothDifficultyFactor = (2 + difficultyFactor)/3;
+    var sharpDifficultyFactor = difficultyFactor * difficultyFactor * difficultyFactor;
+
+    var COLLECTABLE_UNIQUES_PROPORTION=0.25; // 25% will be collectable, others will be drops
+    var CHANCE_OF_UNIQUE_DROP=0.45; // 45% each creature has chance of dropping a unique
+    var CHANCE_OF_CONSUMABLE_DROP=0.5; // 50% each creature has chance of dropping consumable
+    var UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=0.2; // at first drop, chance of getting any of 20% first uniques, so on
+    var PROPORTION_OF_COLLECTABLE_BEING_UNIQUES=0.3; // 30% of collectables will be uniques, the rest will be consumables
+    var PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY=Math.min(50,Math.max(20/sharpDifficultyFactor,1));
+
+    // Drops proportion affected by difficulty
+    CHANCE_OF_UNIQUE_DROP=CHANCE_OF_UNIQUE_DROP / smoothDifficultyFactor;
+    PROPORTION_OF_COLLECTABLE_BEING_UNIQUES=PROPORTION_OF_COLLECTABLE_BEING_UNIQUES / smoothDifficultyFactor;
+    UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=UNIQUES_SEQUENCE_RANDOMIZATION_SPAN / smoothDifficultyFactor;
+
+    console.log("DEBUG - Items randomization - Collectables/drops proportion " + 100*COLLECTABLE_UNIQUES_PROPORTION + "% collectables / " + 100*(1-COLLECTABLE_UNIQUES_PROPORTION) + "% drops.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*CHANCE_OF_UNIQUE_DROP + "% of spawns will drop a unique.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*CHANCE_OF_CONSUMABLE_DROP + "% of other spawns will drop a consumable.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*UNIQUES_SEQUENCE_RANDOMIZATION_SPAN + "% from first of total items available from start.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*PROPORTION_OF_COLLECTABLE_BEING_UNIQUES + "% of collectable will be uniques, " + 100*(1-PROPORTION_OF_COLLECTABLE_BEING_UNIQUES) + "% will be consumables.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY + "% of secondary consumables will be replaced by primary.");
+    console.log("");
+
     const mapFolder = changeSetPath;
     fs.mkdirSync(mapFolder + path.sep + 'maps');
     fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
-
-    var difficultyFactor = factorByDificultyParam[params.difficulty];
-    var smoothDifficultyFactor = (1 + difficultyFactor)/3;
 
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
     var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
@@ -193,20 +219,22 @@ function randomize(paramsFile, stDir) {
 
     function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
         console.log("Setting spawn change to 100% , creature " + spawn.name());
-        spawn.chance.set(100);
-        if (!spawn.drop1.isNull()) {
-            spawn.drop1Chance.set(100);
-        }
-        if (!spawn.drop2.isNull()) {
-            spawn.drop2Chance.set(100);
-        }
-        if (!spawn.drop3.isNull()) {
-            spawn.drop3Chance.set(100);
+        if (!params.removeDirectiveRemovalOfRandomness) {
+            spawn.chance.set(100);
+            if (!spawn.drop1.isNull()) {
+                spawn.drop1Chance.set(100);
+            }
+            if (!spawn.drop2.isNull()) {
+                spawn.drop2Chance.set(100);
+            }
+            if (!spawn.drop3.isNull()) {
+                spawn.drop3Chance.set(100);
+            }
         }
     }
     
     function presetDirectivesforEachItem(item) {
-        if (difficultyFactor >= 1) {
+        if (!params.removeDirectiveRemovalOfHPMPRecovery) {
             if (item.attribute1.getAttributeType() == ATTR_HP_RECOVERY) {
                 item.attribute1.setAttributeType(ATTR_NONE);
                 console.log("Removing ATTR_HP_RECOVERY from equip " + item.name);
@@ -274,35 +302,48 @@ function randomize(paramsFile, stDir) {
     }
 
     function applyDifficultyForEachItem(item) {
-        item.str.set(Math.min(100, Math.ceil(item.str.get() * equipsAttributeFactor)));
-        item.spd.set(Math.min(100, Math.ceil(item.spd.get() * equipsAttributeFactor)));
-        item.def.set(Math.min(100, Math.ceil(item.def.get() * equipsAttributeFactor)));
-        item.bal.set(Math.min(100, Math.ceil(item.bal.get() * equipsAttributeFactor)));
-        item.sla.set(Math.min(100, Math.ceil(item.sla.get() * equipsAttributeFactor)));
-        item.smh.set(Math.min(100, Math.ceil(item.smh.get() * equipsAttributeFactor)));
-        item.pir.set(Math.min(100, Math.ceil(item.pir.get() * equipsAttributeFactor)));
-        item.spr.set(Math.min(100, Math.ceil(item.spr.get() * equipsAttributeFactor)));
-        item.foc.set(Math.min(100, Math.ceil(item.foc.get() * equipsAttributeFactor)));
-        item.ham.set(Math.min(100, Math.ceil(item.ham.get() * equipsAttributeFactor)));
-        item.pur.set(Math.min(100, Math.ceil(item.pur.get() * equipsAttributeFactor)));
-        item.par.set(Math.min(100, Math.ceil(item.par.get() * equipsAttributeFactor)));
-        item.mel.set(Math.min(100, Math.ceil(item.mel.get() * equipsAttributeFactor)));
-        item.sol.set(Math.min(100, Math.ceil(item.sol.get() * equipsAttributeFactor)));
-        item.hp.set(Math.min(100, Math.ceil(item.hp.get() * equipsAttributeFactor)));
-        item.weight.set(Math.min(200, Math.ceil(item.weight.get() / equipsAttributeFactor)));
-        item.max_dura.set(Math.min(100, Math.ceil(item.max_dura.get() * equipsAttributeFactor)));
-        item.dura.set(Math.min(100, Math.ceil(item.dura.get() * equipsAttributeFactor)));
+        item.str.set(Math.min(255, Math.ceil(item.str.get() * equipsAttributeFactor)));
+        item.spd.set(Math.min(255, Math.ceil(item.spd.get() * equipsAttributeFactor)));
+        item.def.set(Math.min(255, Math.ceil(item.def.get() * equipsAttributeFactor)));
+        item.bal.set(Math.min(255, Math.ceil(item.bal.get() * equipsAttributeFactor)));
+        item.sla.set(Math.min(255, Math.ceil(item.sla.get() * equipsAttributeFactor)));
+        item.smh.set(Math.min(255, Math.ceil(item.smh.get() * equipsAttributeFactor)));
+        item.pir.set(Math.min(255, Math.ceil(item.pir.get() * equipsAttributeFactor)));
+        item.spr.set(Math.min(255, Math.ceil(item.spr.get() * equipsAttributeFactor)));
+        item.foc.set(Math.min(255, Math.ceil(item.foc.get() * equipsAttributeFactor)));
+        item.ham.set(Math.min(255, Math.ceil(item.ham.get() * equipsAttributeFactor)));
+        item.pur.set(Math.min(255, Math.ceil(item.pur.get() * equipsAttributeFactor)));
+        item.par.set(Math.min(255, Math.ceil(item.par.get() * equipsAttributeFactor)));
+        item.mel.set(Math.min(255, Math.ceil(item.mel.get() * equipsAttributeFactor)));
+        item.sol.set(Math.min(255, Math.ceil(item.sol.get() * equipsAttributeFactor)));
+        item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
+        item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+        item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor)));
+        item.dura.set(Math.min(255, Math.ceil(item.dura.get() * equipsAttributeFactor)));
 
         console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
             " dura " + item.dura.get());
     }
 
+    function gotLuckToReplaceSecondaryByPrimaryConsumable() {
+        return Math.random()*100 < PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY;
+    }
+
     var dropRemovalLoop=0;
-    function applyDifficultyForEachSpawnByRemovingDrop(spawn, area, index) {
+    function applyDifficultyForEachSpawn(spawn, area, index) {
+
+        var originalItem = spawn.drop1.get();
+        if (secondaryConsumables.indexOf(originalItem)!=-1) {
+            if (gotLuckToReplaceSecondaryByPrimaryConsumable()) {
+                spawn.drop1.set(primaryConsumables[Math.floor((Math.random()*primaryConsumables.length))]);
+                console.log("Moderating difficulty by replacing drop secondary consumable (" + itemData[originalItem].name + ") by a primary consumable (" + itemData[spawn.drop1.get()].name + ") of " + area.name + "/" + spawn.name());
+            }
+        }
+
+/*
         if (spawn.drop1.isNull()) {
             return;
         }
-/*
         var thisItem = itemData[spawn.drop1.get()];
 
         if (thisItem.type.get() == KEY ||
@@ -327,11 +368,21 @@ function randomize(paramsFile, stDir) {
     }
 
     var collectableRemovalLoop=0;
-    function applyDifficultyForEachCollectableByRemoving(collectable, area) {
-        /*if (collectable.isBlank()) {
+    function applyDifficultyForEachCollectable(collectable, area) {
+        if (collectable.isBlank()) {
             return;
         }
 
+        var originalItem = collectable.type.get();
+        if (secondaryConsumables.indexOf(originalItem)!=-1) {
+            if (gotLuckToReplaceSecondaryByPrimaryConsumable()) {
+                collectable.type.set(primaryConsumables[Math.floor((Math.random()*primaryConsumables.length))]);
+                console.log("Moderating difficulty by replacing secondary consumable (" + itemData[originalItem].name + ") by a primary consumable (" + itemData[collectable.type.get()].name + ") of area " + area.name);
+            }
+        }
+
+        /*
+        // removing equips, not doing it anymore since it was too hard
         collectableRemovalLoop++;
         if (collectableRemovalLoop > difficultyFactor) {
             collectableRemovalLoop = 0;
@@ -373,6 +424,18 @@ function randomize(paramsFile, stDir) {
         item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_113_beast_key, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_117_brass_key, item_118_iron_key, item_12a_young_dragon_gem, item_12b_pitcher_of_nadya, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key, item_129_sealed_sword_stone
     ];
 
+    var primaryConsumables = [
+        item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion,
+        item_11e_anti_venom, item_124_poison_vaccine, item_11d_magic_potion,
+        difficultyFactor == 1 ? item_138_soul_pod_29_sp : (difficultyFactor > 1 ? item_136_soul_pod_5_sp : item_137_soul_pod_53_sp )
+    ];
+
+    var secondaryConsumables = [
+        item_10c_torch, item_10d_lamp, item_10e_sacred_feather, item_11f_anti_paralytic, item_120_divine_symbol, 
+        item_122_evil_eye, item_123_fire_world_stone, item_125_dust_of_rage, item_126_bottle_of_light, 
+        item_127_acid_vaccine, item_128_spirit_book, item_12e_dorados_ashes
+    ];
+
     var goodItems = [
         item_109_endless_amulet, item_58_fortune_great_helm, item_45_fiery_bow_gun, item_e4_ring_of_dead_spirit, item_f9_king_bracelet, item_fa_moon_bracelet, item_c_shadow_blade, item_17_dragon_sword, item_b3_tower_shield_of_honor,
         item_c9_summoner_ring_of_frost, item_ca_summoner_ring_of_frost, item_cb_balance_ring_of_frost, item_cc_priest_ring_of_frost, item_cd_sorcerer_ring_of_frost, item_ce_soul_ring,
@@ -390,15 +453,6 @@ function randomize(paramsFile, stDir) {
 
     var collectableUniques = [];
     var dropUniques = [];
-
-    var COLLECTABLE_UNIQUES_PROPORTION=0.3; // 30% will be collectable
-    var CHANCE_OF_UNIQUE_DROP=0.5; // 50% each creature has chance of dropping a unique
-    var CHANCE_OF_CONSUMABLE_DROP=0.5; // 50% each creature has chance of dropping consumable
-    var UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=0.2; // at first drop, chance of getting any of 20% first uniques, so on
-    var PROPORTION_OF_COLLECTABLE_BEING_EQUIP=0.3; // 20% of collectables will be uniques, the rest will be consumables
-
-    // Collectable proportion affected by difficulty
-    COLLECTABLE_UNIQUES_PROPORTION=COLLECTABLE_UNIQUES_PROPORTION / smoothDifficultyFactor;
 
     if (params.preset == PRESET_BONANZA) {
         allUniqueItems = allUniqueItems.filter(item => goodItems.indexOf(item) == -1);
@@ -424,11 +478,9 @@ function randomize(paramsFile, stDir) {
                 dropUniques.push(unique);
             }
         });
-        console.log("DEBUG - Equips randomization - Deciding " + COLLECTABLE_UNIQUES_PROPORTION + " of unique items will be collectable, others will be drops.");
+        console.log("DEBUG - Items randomization - Collectable uniques " + collectableUniques.map(i => items[i].name));
         console.log("");
-        console.log("DEBUG - Equips randomization - Collectable uniques " + collectableUniques.map(i => items[i].name));
-        console.log("");
-        console.log("DEBUG - Equips randomization - Drop uniques " + dropUniques.map(i => items[i].name));
+        console.log("DEBUG - Items randomization - Drop uniques " + dropUniques.map(i => items[i].name));
         console.log("");
     }
     var COLLECTABLE_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE=collectableUniques.length * UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
@@ -437,11 +489,21 @@ function randomize(paramsFile, stDir) {
         var previous = collectable.type.get();
         collectable.blank();
 
-        if (Math.random()<PROPORTION_OF_COLLECTABLE_BEING_EQUIP && collectableUniques.length > 1) {
+        if (Math.random()<PROPORTION_OF_COLLECTABLE_BEING_UNIQUES && collectableUniques.length > 1) {
             var randomRange = Math.min(COLLECTABLE_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE, collectableUniques.length);
             var chosenIndex = Math.floor(Math.random()*randomRange);
             var chosenItem = collectableUniques[chosenIndex];
-            collectableUniques = collectableUniques.filter(item => item !== chosenItem);
+            var tookCune = false;
+            collectableUniques = collectableUniques.filter(item => {
+                var toKeep = item !== chosenItem;
+                if (!toKeep && chosenItem == item_10a_cune) {
+                    if (tookCune) {
+                        return true;
+                    }
+                    tookCune = true;
+                }
+                return toKeep;
+            });
             collectable.type.set(chosenItem);
             console.log("DEBUG - Collectable randomization - Placing collectable unique " + items[collectable.type.get()].name + " at " + area.name + " where it was a " + items[previous].name + ". There are more " + collectableUniques.length + " to distribute.");
         } else {
@@ -494,7 +556,19 @@ function randomize(paramsFile, stDir) {
             var randomRange = Math.min(DROP_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE, dropUniques.length);
             var chosenIndex = Math.floor(Math.random()*randomRange);
             var chosenItem = dropUniques[chosenIndex];
-            dropUniques = dropUniques.filter(item => item !== chosenItem);
+
+            var tookCune = false;
+            dropUniques = dropUniques.filter(item => {
+                var toKeep = item !== chosenItem;
+                if (!toKeep && chosenItem == item_10a_cune) {
+                    if (tookCune) {
+                        return true;
+                    }
+                    tookCune = true;
+                }
+                return toKeep;
+            });
+
             spawn.drop1.set(chosenItem);
             spawn.drop1Chance.set(100);
 
@@ -589,14 +663,6 @@ function randomize(paramsFile, stDir) {
             forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
         }
 
-        // ------- PRESET Directives
-
-        if (params.preset == PRESET_APPLY_DIRECTIVES) {
-            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
-            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
-            forEachItem.push(presetDirectivesforEachItem);
-        }
-
         // ------- Any%
 
         if (params.preset == PRESET_ANY_PRC ||
@@ -646,10 +712,8 @@ function randomize(paramsFile, stDir) {
         if (params.difficulty && params.difficulty != DIFFICULTY_MEDIUM) {
             forEachValidCreature.push(applyDifficultyForEachValidCreature);
             forEachItem.push(applyDifficultyForEachItem);
-            if (params.preset != PRESET_100_PRC) {
-                forEachCreatureSpawn.push(applyDifficultyForEachSpawnByRemovingDrop);
-                forEachCollectable.push(applyDifficultyForEachCollectableByRemoving);
-            }
+            forEachCreatureSpawn.push(applyDifficultyForEachSpawn);
+            forEachCollectable.push(applyDifficultyForEachCollectable);
         }
 
         if (params.messWithScenery) {
@@ -658,6 +722,14 @@ function randomize(paramsFile, stDir) {
 
         if (params.removeScenery) {
             forEachObject.push(removeSceneryObjects);
+        }
+
+        // ------- PRESET Directives
+
+        if (params.preset == PRESET_APPLY_DIRECTIVES) {
+            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
+            forEachItem.push(presetDirectivesforEachItem);
         }
 
     }
@@ -712,7 +784,7 @@ function randomize(paramsFile, stDir) {
         });
     }
 
-    console.log("DEBUG - The game has " + forEachCreatureSpawn.length + " spawns.");
+    console.log("DEBUG - The game has " + allSpawnsInDefaultGame.length + " spawns.");
 
     forEachCreatureSpawn.forEach((func) => {
         allSpawnsInDefaultGame.forEach((spawn) => {

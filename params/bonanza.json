@@ -4,5 +4,6 @@
 	"difficulty": "easy",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
+	"removeDirectiveRemovalOfHPMPRecovery": true,
 	"seed": "1234567890"
 }

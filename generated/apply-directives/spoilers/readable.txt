@@ -39,7 +39,7 @@ Removing ATTR_HP_RECOVERY from equip item_104_priest_amulet
 Removing ATTR_MP_RECOVERY from equip item_104_priest_amulet
 Removing ATTR_HP_RECOVERY from equip item_109_endless_amulet
 Removing ATTR_MP_RECOVERY from equip item_109_endless_amulet
-DEBUG - The game has 2 spawns.
+DEBUG - The game has 652 spawns.
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
@@ -382,7 +382,7 @@ Setting spawn change to 100% , creature 05_armored_jinn
 Setting spawn change to 100% , creature 05_armored_jinn
 Setting spawn change to 100% , creature 06_fire_jinn
 Setting spawn change to 100% , creature 05_armored_jinn
-Setting spawn change to 100% , creature 04_unknown_a
+Setting spawn change to 100% , creature 04_jinn_lord
 Setting spawn change to 100% , creature 06_fire_jinn
 Setting spawn change to 100% , creature 06_fire_jinn
 Setting spawn change to 100% , creature 06_fire_jinn
