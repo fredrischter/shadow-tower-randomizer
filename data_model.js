@@ -1327,6 +1327,9 @@
       this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
       this.something4 = new UInt16( bin, this.offset_in_file + 0x11);
 
+      this.centerPositionHeight = new UInt16( bin, this.offset_in_file + 0x19);
+      this.shadowSize = new UInt8( bin, this.offset_in_file + 0x1b);
+
       this.str = new UInt8( bin, this.offset_in_file + 0x24);
       this.spd = new UInt8( bin, this.offset_in_file + 0x25);
       this.def = new UInt8( bin, this.offset_in_file + 0x26);
