@@ -218,16 +218,21 @@ function randomize(paramsFile, stDir) {
     }
 
     function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
-        console.log("Setting spawn change to 100% , creature " + spawn.name());
         if (!params.removeDirectiveRemovalOfRandomness) {
-            spawn.chance.set(100);
-            if (!spawn.drop1.isNull()) {
+            if (spawn.chance.get() != 100) {
+                console.log("Setting spawn change to 100%, creature " + spawn.name());
+                spawn.chance.set(100);
+            }
+            if (!spawn.drop1.isNull() && spawn.drop1Chance.get() != 100) {
+                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop1.get()].name);
                 spawn.drop1Chance.set(100);
             }
-            if (!spawn.drop2.isNull()) {
+            if (!spawn.drop2.isNull() && spawn.drop2Chance.get() != 100) {
+                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop2.get()].name);
                 spawn.drop2Chance.set(100);
             }
-            if (!spawn.drop3.isNull()) {
+            if (!spawn.drop3.isNull() && spawn.drop3Chance.get() != 100) {
+                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop3.get()].name);
                 spawn.drop3Chance.set(100);
             }
         }
@@ -317,9 +322,13 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * equipsAttributeFactor)));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * equipsAttributeFactor)));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
-        item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
-        item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor)));
-        item.dura.set(Math.min(255, Math.ceil(item.dura.get() * equipsAttributeFactor)));
+        if (!item.weight.isNull()) {
+            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+        }
+        if (!item.dura.isNull()) {
+            item.max_dura.set(Math.max(5, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
+            item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * equipsAttributeFactor)));
+        }
 
         console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Attributes " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
             " dura " + item.dura.get());
@@ -485,6 +494,37 @@ function randomize(paramsFile, stDir) {
     }
     var COLLECTABLE_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE=collectableUniques.length * UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
+    function randomizeEquipsStats(item) {
+        console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Old values " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
+            " dura " + item.dura.get());
+
+        item.str.set(Math.min(255, Math.ceil(item.str.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.spd.set(Math.min(255, Math.ceil(item.spd.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.def.set(Math.min(255, Math.ceil(item.def.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.bal.set(Math.min(255, Math.ceil(item.bal.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.sla.set(Math.min(255, Math.ceil(item.sla.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.smh.set(Math.min(255, Math.ceil(item.smh.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.pir.set(Math.min(255, Math.ceil(item.pir.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.spr.set(Math.min(255, Math.ceil(item.spr.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.foc.set(Math.min(255, Math.ceil(item.foc.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.ham.set(Math.min(255, Math.ceil(item.ham.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.pur.set(Math.min(255, Math.ceil(item.pur.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.par.set(Math.min(255, Math.ceil(item.par.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.mel.set(Math.min(255, Math.ceil(item.mel.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 5))));
+        if (!item.weight.isNull()) {
+            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 5))));
+        }
+        if (!item.dura.isNull()) {
+            item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 5))));
+            item.dura.set(Math.min(255, Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 5))));
+        }
+        
+        console.log("     New values " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
+            " dura " + item.dura.get());
+    }
+
     function distributeCollectablesRandomly(collectable, area) {
         var previous = collectable.type.get();
         collectable.blank();
@@ -516,8 +556,7 @@ function randomize(paramsFile, stDir) {
     function distributeCollectablesDumpInLateWorlds(collectable, area) {
         if (area.name.startsWith("monster") || area.name.startsWith("death") || area.name.startsWith("illusion")) {
             if (collectableUniques.length > 0) {
-                if (items[collectable.type.get()].type.get()==ITEM &&
-                    items[collectable.type.get()].name!="item_10a_cune") {
+                if (secondaryConsumables.indexOf(collectable.type.get())!=-1) {
                     collectable.type.set(collectableUniques.shift());
                     console.log("DEBUG - Collectable randomization - Adding collectable to late worlds: " + items[collectable.type.get()].name + " at " + area.name);
                 }
@@ -581,9 +620,11 @@ function randomize(paramsFile, stDir) {
             var newDropName = items[spawn.drop1.get()].name;
             console.log("DEBUG - Drop randomization - Updating drop to consumable " + newDropName + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
         } else {
-            spawn.drop1.null();
-            spawn.drop1Chance.set(0);
-            console.log("DEBUG - Drop randomization - Updating drop to blank at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
+            if (!spawn.drop1.isNull()) {
+                console.log("DEBUG - Drop randomization - Updating drop to blank at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
+                spawn.drop1.null();
+                spawn.drop1Chance.set(0);
+            }
         }
     }
 
@@ -593,8 +634,8 @@ function randomize(paramsFile, stDir) {
                 var dropsNames = "blank";
                 if (!spawn.drop1.isNull()) {
                     dropsNames = items[spawn.drop1.get()].name + " ";
-                    if (items[spawn.drop1.get()].type.get()==KEY) {
-                        console.log("DEBUG - Drop randomization adding remaining to late worlds - To leave this one alone since it is key " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
+                    if (secondaryConsumables.indexOf(spawn.drop1.get())==-1) {
+                        console.log("DEBUG - Drop randomization adding remaining to late worlds - To leave this one alone since it is not secondary consumable " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
                         return;
                     }
                 }
@@ -672,6 +713,8 @@ function randomize(paramsFile, stDir) {
             forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
             forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
             forEachItem.push(presetDirectivesforEachItem);
+            forEachItem.push(randomizeEquipsStats);
+
             if (params.randomizeCollectablesAndDrops) {
                 forEachCollectable.push(distributeCollectablesRandomly);
                 forEachCreatureSpawn.push(distributeDropsRandomly);
@@ -684,6 +727,7 @@ function randomize(paramsFile, stDir) {
             forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
             forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
             forEachItem.push(presetDirectivesforEachItem);
+            forEachItem.push(randomizeEquipsStats);
             if (params.randomizeCollectablesAndDrops) {
                 forEachCollectable.push(distributeCollectablesRandomly);
                 forEachCollectable.push(distributeCollectablesDumpInLateWorlds);
