@@ -484,6 +484,24 @@
       console.log(this.toReadableString());
     }
 
+    score() {
+      return Math.ceil(((Number.isInteger(this.str.get())?this.str.get()*6:0)+
+      (Number.isInteger(this.spd.get())?this.spd.get():0)+
+      (Number.isInteger(this.def.get())?this.def.get():0)+
+      (Number.isInteger(this.bal.get())?this.bal.get():0)+
+      (Number.isInteger(this.sla.get())?this.sla.get()*2:0)+
+      (Number.isInteger(this.smh.get())?this.smh.get()*2:0)+
+      (Number.isInteger(this.pir.get())?this.pir.get()*2:0)+
+      (Number.isInteger(this.spr.get())?this.spr.get():0)+
+      (Number.isInteger(this.foc.get())?this.foc.get():0)+
+      (Number.isInteger(this.ham.get())?this.ham.get():0)+
+      (Number.isInteger(this.pur.get())?this.pur.get():0)+
+      (Number.isInteger(this.par.get())?this.par.get()*2:0)+
+      (Number.isInteger(this.mel.get())?this.mel.get()*2:0)+
+      (Number.isInteger(this.sol.get())?this.sol.get()*2:0)+
+      (Number.isInteger(this.max_dura.get())?this.max_dura.get()*3:0))/100);
+    }
+
     toReadableString() {
       return this.offset_in_file.toString(16).padEnd(6)
       + this.absoluteIndex.toString(16).padEnd(10)

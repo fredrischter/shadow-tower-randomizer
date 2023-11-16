@@ -325,7 +325,7 @@ function randomize(paramsFile, stDir) {
         if (!item.weight.isNull()) {
             item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
         }
-        if (!item.dura.isNull()) {
+        if (!item.max_dura.isNull() && item.max_dura.get()) {
             item.max_dura.set(Math.max(5, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * equipsAttributeFactor)));
         }
@@ -495,8 +495,8 @@ function randomize(paramsFile, stDir) {
     var COLLECTABLE_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE=collectableUniques.length * UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
     function randomizeEquipsStats(item) {
-        console.log("Applying factor " + equipsAttributeFactor + " to item " + item.name + ". Old values " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
-            " dura " + item.dura.get());
+        console.log(("Randomizing " + equipsAttributeFactor + " to item " + item.name + ". Old values ").padEnd(70) + 
+                "score " + (""+item.score()).padStart(3) + " str " + (""+item.str.get()).padStart(3) + " spd " + (""+item.spd.get()).padStart(3) + " def " + (""+item.def.get()).padStart(3) + " bal " + (""+item.bal.get()).padStart(3) + " sla " + (""+item.sla.get()).padStart(3) + " smh " + (""+item.smh.get()).padStart(3) + " pir " + (""+item.pir.get()).padStart(3) + " spr " + (""+item.spr.get()).padStart(3) + " foc " + (""+item.foc.get()).padStart(3) + " ham " + (""+item.ham.get()).padStart(3) + " pur " + (""+item.pur.get()).padStart(3) + " par " + (""+item.par.get()).padStart(3) + " mel " + (""+item.mel.get()).padStart(3) + " sol " + (""+item.sol.get()).padStart(3) + " hp " + (""+item.hp.get() ).padStart(3)+ " weight " + (""+item.weight.get()).padStart(3) + " max_dura " + (""+item.max_dura.get()).padStart(3) + " dura " + (""+item.dura.get()).padStart(3) + " price " + (""+item.price.get()).padStart(3));
 
         item.str.set(Math.min(255, Math.ceil(item.str.get() * Math.pow(Math.random() + 0.5, 5))));
         item.spd.set(Math.min(255, Math.ceil(item.spd.get() * Math.pow(Math.random() + 0.5, 5))));
@@ -516,13 +516,21 @@ function randomize(paramsFile, stDir) {
         if (!item.weight.isNull()) {
             item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 5))));
         }
-        if (!item.dura.isNull()) {
+        if (!item.max_dura.isNull() && item.max_dura.get()) {
             item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 5))));
             item.dura.set(Math.min(255, Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 5))));
         }
-        
-        console.log("     New values " + "str " + item.str.get() + " spd " + item.spd.get() + " def " + item.def.get() + " bal " + item.bal.get() + " sla " + item.sla.get() + " smh " + item.smh.get() + " pir " + item.pir.get() + " spr " + item.spr.get() + " foc " + item.foc.get() + " ham " + item.ham.get() + " pur " + item.pur.get() + " par " + item.par.get() + " mel " + item.mel.get() + " sol " + item.sol.get() + " hp " + item.hp.get() + " weight " + item.weight.get() + " max_dura " + item.max_dura.get() +
-            " dura " + item.dura.get());
+        if (primaryConsumables.indexOf(item.itemIndex) == -1) {
+            if (Math.random()<0.1/sharpDifficultyFactor) {
+                item.price.set(Math.floor(item.score()/400));
+                item.price.set(Math.min(30, Math.ceil(item.price.get() * Math.pow(Math.random() + 0.5, 5))));
+            } else {
+                item.price.set(0);
+            }
+        }
+
+        console.log("New values ".padEnd(70) + 
+                "score " + (""+item.score()).padStart(3) + " str " + (""+item.str.get()).padStart(3) + " spd " + (""+item.spd.get()).padStart(3) + " def " + (""+item.def.get()).padStart(3) + " bal " + (""+item.bal.get()).padStart(3) + " sla " + (""+item.sla.get()).padStart(3) + " smh " + (""+item.smh.get()).padStart(3) + " pir " + (""+item.pir.get()).padStart(3) + " spr " + (""+item.spr.get()).padStart(3) + " foc " + (""+item.foc.get()).padStart(3) + " ham " + (""+item.ham.get()).padStart(3) + " pur " + (""+item.pur.get()).padStart(3) + " par " + (""+item.par.get()).padStart(3) + " mel " + (""+item.mel.get()).padStart(3) + " sol " + (""+item.sol.get()).padStart(3) + " hp " + (""+item.hp.get() ).padStart(3)+ " weight " + (""+item.weight.get()).padStart(3) + " max_dura " + (""+item.max_dura.get()).padStart(3) + " dura " + (""+item.dura.get()).padStart(3) + " price " + (""+item.price.get()).padStart(3));
     }
 
     function distributeCollectablesRandomly(collectable, area) {
