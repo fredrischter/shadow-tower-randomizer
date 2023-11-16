@@ -1156,6 +1156,8 @@
           y: this.tileZ.get(), 
           z: this.tileY.get(), 
           text: "object index " + this.index});
+        var summary = '<span style="background:#808080">'+"object index " + this.index+'</span>\n';
+        mapSummary.push(summary);
       }
     }
 
