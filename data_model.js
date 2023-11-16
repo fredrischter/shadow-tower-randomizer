@@ -5,6 +5,8 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
+  //global.toNotGenerateImages=true;
+
   // area files
   var logo_files = [
     { index: 41, name: "human_world_solitary_region" },

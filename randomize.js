@@ -220,19 +220,19 @@ function randomize(paramsFile, stDir) {
     function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
         if (!params.removeDirectiveRemovalOfRandomness) {
             if (spawn.chance.get() != 100) {
-                console.log("Setting spawn change to 100%, creature " + spawn.name());
+                console.log("Setting spawn change to 100%, creature " + spawn.name() + " where it was " + spawn.chance.get());
                 spawn.chance.set(100);
             }
             if (!spawn.drop1.isNull() && spawn.drop1Chance.get() != 100) {
-                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop1.get()].name);
+                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop1.get()].name + " where it was " + spawn.chance.get());
                 spawn.drop1Chance.set(100);
             }
             if (!spawn.drop2.isNull() && spawn.drop2Chance.get() != 100) {
-                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop2.get()].name);
+                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop2.get()].name + " where it was " + spawn.drop2Chance.get());
                 spawn.drop2Chance.set(100);
             }
             if (!spawn.drop3.isNull() && spawn.drop3Chance.get() != 100) {
-                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop3.get()].name);
+                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop3.get()].name + " where it was " + spawn.drop3Chance.get());
                 spawn.drop3Chance.set(100);
             }
         }
@@ -307,6 +307,11 @@ function randomize(paramsFile, stDir) {
     }
 
     function applyDifficultyForEachItem(item) {
+        if (keyItems.indexOf(item.itemIndex) != -1 ||
+            primaryConsumables.indexOf(item.itemIndex) != -1 ||
+            secondaryConsumables.indexOf(item.itemIndex) != -1) {
+            return;
+        }
         item.str.set(Math.min(255, Math.ceil(item.str.get() * equipsAttributeFactor)));
         item.spd.set(Math.min(255, Math.ceil(item.spd.get() * equipsAttributeFactor)));
         item.def.set(Math.min(255, Math.ceil(item.def.get() * equipsAttributeFactor)));
@@ -495,35 +500,43 @@ function randomize(paramsFile, stDir) {
     var COLLECTABLE_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE=collectableUniques.length * UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
     function randomizeEquipsStats(item) {
-        console.log(("Randomizing " + equipsAttributeFactor + " to item " + item.name + ". Old values ").padEnd(70) + 
+        if (primaryConsumables.indexOf(item.itemIndex) != -1 ||
+            secondaryConsumables.indexOf(item.itemIndex) != -1 ||
+            keyItems.indexOf(item.itemIndex) != -1 ||
+            item_10a_cune == item.itemIndex
+            ) {
+            return;
+        }
+
+        console.log(("Randomizing item " + item.name + ". Old values ").padEnd(70) + 
                 "score " + (""+item.score()).padStart(3) + " str " + (""+item.str.get()).padStart(3) + " spd " + (""+item.spd.get()).padStart(3) + " def " + (""+item.def.get()).padStart(3) + " bal " + (""+item.bal.get()).padStart(3) + " sla " + (""+item.sla.get()).padStart(3) + " smh " + (""+item.smh.get()).padStart(3) + " pir " + (""+item.pir.get()).padStart(3) + " spr " + (""+item.spr.get()).padStart(3) + " foc " + (""+item.foc.get()).padStart(3) + " ham " + (""+item.ham.get()).padStart(3) + " pur " + (""+item.pur.get()).padStart(3) + " par " + (""+item.par.get()).padStart(3) + " mel " + (""+item.mel.get()).padStart(3) + " sol " + (""+item.sol.get()).padStart(3) + " hp " + (""+item.hp.get() ).padStart(3)+ " weight " + (""+item.weight.get()).padStart(3) + " max_dura " + (""+item.max_dura.get()).padStart(3) + " dura " + (""+item.dura.get()).padStart(3) + " price " + (""+item.price.get()).padStart(3));
 
-        item.str.set(Math.min(255, Math.ceil(item.str.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.spd.set(Math.min(255, Math.ceil(item.spd.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.def.set(Math.min(255, Math.ceil(item.def.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.bal.set(Math.min(255, Math.ceil(item.bal.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.sla.set(Math.min(255, Math.ceil(item.sla.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.smh.set(Math.min(255, Math.ceil(item.smh.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.pir.set(Math.min(255, Math.ceil(item.pir.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.spr.set(Math.min(255, Math.ceil(item.spr.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.foc.set(Math.min(255, Math.ceil(item.foc.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.ham.set(Math.min(255, Math.ceil(item.ham.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.pur.set(Math.min(255, Math.ceil(item.pur.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.par.set(Math.min(255, Math.ceil(item.par.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.mel.set(Math.min(255, Math.ceil(item.mel.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 5))));
-        item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 5))));
+        item.str.set(Math.min(255, Math.ceil(item.str.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.spd.set(Math.min(255, Math.ceil(item.spd.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.def.set(Math.min(255, Math.ceil(item.def.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.bal.set(Math.min(255, Math.ceil(item.bal.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.sla.set(Math.min(255, Math.ceil(item.sla.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.smh.set(Math.min(255, Math.ceil(item.smh.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.pir.set(Math.min(255, Math.ceil(item.pir.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.spr.set(Math.min(255, Math.ceil(item.spr.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.foc.set(Math.min(255, Math.ceil(item.foc.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.ham.set(Math.min(255, Math.ceil(item.ham.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.pur.set(Math.min(255, Math.ceil(item.pur.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.par.set(Math.min(255, Math.ceil(item.par.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.mel.set(Math.min(255, Math.ceil(item.mel.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 3))));
+        item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 3))));
         if (!item.weight.isNull()) {
-            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 5))));
+            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 3))));
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 5))));
-            item.dura.set(Math.min(255, Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 5))));
+            item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3))));
+            item.dura.set(Math.min(255, Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
         }
         if (primaryConsumables.indexOf(item.itemIndex) == -1) {
             if (Math.random()<0.1/sharpDifficultyFactor) {
                 item.price.set(Math.floor(item.score()/400));
-                item.price.set(Math.min(30, Math.ceil(item.price.get() * Math.pow(Math.random() + 0.5, 5))));
+                item.price.set(Math.min(30, Math.ceil(item.price.get() * Math.pow(Math.random() + 0.5, 3))));
             } else {
                 item.price.set(0);
             }
@@ -576,9 +589,6 @@ function randomize(paramsFile, stDir) {
 
     function distributeDropsRandomly(spawn, area, index) {
         var dropsNames = "blank";
-        if (area.name == "void") {
-            return;
-        }
 
         spawn.drop2.null();
         spawn.drop2Chance.set(0);
@@ -636,9 +646,32 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    var remainingCunesToAddAsDrops = null;
+    function guarantee99CunesPlacingTheRemainingAsDrops(spawn, area, index) {
+        if (remainingCunesToAddAsDrops == null) { // time to define the remaining cunes
+            remainingCunesToAddAsDrops = dropUniques.filter(item => item == item_10a_cune);
+            dropUniques = dropUniques.filter(item => item != item_10a_cune);
+
+            collectableUniques.filter(item => item == item_10a_cune).forEach(item => remainingCunesToAddAsDrops.push(item));
+            collectableUniques = collectableUniques.filter(item => item != item_10a_cune);
+
+            console.log("DEBUG - Drop randomization - Remaining cunes to distribute: " + remainingCunesToAddAsDrops.length);
+        }
+
+        if ((area.name.startsWith("water") || area.name.startsWith("fire") || area.name.startsWith("monster") || area.name.startsWith("death") || area.name.startsWith("illusion")) 
+            && remainingCunesToAddAsDrops.length && !spawn.drop1.isNull() && secondaryConsumables.indexOf(spawn.drop1.get())!=-1) {
+            console.log("DEBUG - Drop randomization - Remaining cune put at " + area.name + "/" + spawn.name() + " where it was " + items[spawn.drop1.get()].name);
+            spawn.drop1.set(remainingCunesToAddAsDrops.shift());
+            spawn.drop1Chance.set(100);
+        }
+    }
+
     function distributeDropsDumpInLateWorlds(spawn, area, index) {
         if (area.name.startsWith("monster") || area.name.startsWith("death") || area.name.startsWith("illusion")) {
-            if (dropUniques.length > 0) {
+
+            var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
+
+            if (arrayToRemoveFrom.length > 0) {
                 var dropsNames = "blank";
                 if (!spawn.drop1.isNull()) {
                     dropsNames = items[spawn.drop1.get()].name + " ";
@@ -650,7 +683,7 @@ function randomize(paramsFile, stDir) {
                 if (spawn.drop1.isNull() || 
                         (items[spawn.drop1.get()].type.get()==ITEM &&
                         items[spawn.drop1.get()].name!="item_10a_cune")) {
-                    spawn.drop1.set(dropUniques.shift());
+                    spawn.drop1.set(arrayToRemoveFrom.shift());
                     spawn.drop1Chance.set(100);
                     console.log("DEBUG - Drop randomization adding remaining to late worlds - Adding drop: " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
                 }
@@ -726,6 +759,7 @@ function randomize(paramsFile, stDir) {
             if (params.randomizeCollectablesAndDrops) {
                 forEachCollectable.push(distributeCollectablesRandomly);
                 forEachCreatureSpawn.push(distributeDropsRandomly);
+                forEachCreatureSpawn.push(guarantee99CunesPlacingTheRemainingAsDrops);
             }
         }
 
@@ -740,6 +774,7 @@ function randomize(paramsFile, stDir) {
                 forEachCollectable.push(distributeCollectablesRandomly);
                 forEachCollectable.push(distributeCollectablesDumpInLateWorlds);
                 forEachCreatureSpawn.push(distributeDropsRandomly);
+                forEachCreatureSpawn.push(guarantee99CunesPlacingTheRemainingAsDrops);
                 forEachCreatureSpawn.push(distributeDropsDumpInLateWorlds);
             }
         }
@@ -804,6 +839,8 @@ function randomize(paramsFile, stDir) {
             var spawn = area.spawns[index];
             if (!spawn.chance.isNull() &&
                 !spawn.name().endsWith("door") &&
+                !spawn.name().includes("blank") &&
+                !spawn.name().includes("unknown") &&
                 area.name!="void") {
                 allSpawnsInDefaultGame.push({
                     spawn: spawn,
