@@ -7,7 +7,7 @@ itemsList=("item_47_cap" "item_32_mace" "item_35_morning_star" "item_a1_buckler"
 folderPath="./generated"
 
 # Specify the output CSV file
-outputFile="item_uniques_test.csv"
+outputFile="test_item_uniques_test.csv"
 
 # Create CSV file with header
 echo "Preset,Status,MissingItems" > "$outputFile"

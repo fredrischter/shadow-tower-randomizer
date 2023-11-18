@@ -10,7 +10,7 @@ item_list=("item_10a_cune" "item_11c_healing_potion" "item_136_soul_pod_5_sp" "i
 echo "Script started at $(date)"
 
 # Output the result to a CSV file
-output_file="item_counts.csv"
+output_file="test_item_counts.csv"
 echo "File,${item_list[*]}" > "$output_file"
 
 # Loop through each HTML file recursively

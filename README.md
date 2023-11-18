@@ -62,6 +62,12 @@ npm run mod ".\generated\st.bin" ".\params\only-apply-directives.json"
 
 You can also put a image named as st.bin in generated\ folder, run all those commands to verify if produced output is different than one in the repo - that is reference generated files. Any output change indicates there was a code bahavior change, so it works like test.
 
+# Tests
+
+Run, verify updated csv files.
+
+./test_item_uniques.sh & ./test_items_count.sh & ./test_assertions.sh
+
 # Options
 
 toNotGenerateImages Doesn't generate map images, that makes it much quicker to run.

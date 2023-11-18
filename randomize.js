@@ -370,8 +370,7 @@ function randomize(paramsFile, stDir) {
         }
         var thisItem = itemData[spawn.drop1.get()];
 
-        if (thisItem.type.get() == KEY ||
-            thisItem.name.includes("vaccine")) {
+        if (thisItem.type.get() == KEY) {
             return;
         }
 
@@ -962,7 +961,7 @@ function randomize(paramsFile, stDir) {
         });
     });
 
-    console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables: " + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
+    console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables."); // + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
 
     forEachCollectable.forEach((func) => {
         allChangeableCollectablesInDefaultGame.forEach((collectable) => {
