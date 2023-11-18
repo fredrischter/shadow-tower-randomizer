@@ -5,24 +5,24 @@ Preset,Status,MissingItems
 ./generated/100-prc-hard/spoilers,OK,
 ./generated/100-prc-medium/spoilers,OK,
 ./generated/100-prc-very-hard/spoilers,OK,
-./generated/any-prc-easy/spoilers,MISSING,item_41_keenest_battle_axe, item_65_harden_plate_mail
-./generated/any-prc-even-harder/spoilers,MISSING,item_50_full_helm, item_3c_crushing_axe, item_44_bow_gun, item_1f_frosty_bastard_sword, item_b6_caustic_tower_shield, item_e8_bracelet_of_balance, item_38_axe, item_43_warrior_bow, item_52_full_helm_of_curing, item_28_great_sword, item_29_great_sword, item_41_keenest_battle_axe, item_ad_great_shield_of_balance, item_8a_arm_guard_of_composure, item_70_eternal_plate_mail, item_77_plate_mail_of_rage, item_d5_dark_priest_ring, item_86_gauntlet_of_resist, item_f5_deadly_bracelet, item_107_star_amulet, item_17_dragon_sword, item_f1_sorcerer_bracelet, item_f2_priest_bracelet, item_15_keenest_broad_sword, item_6e_dark_plate_mail, item_26_righteous_sword, item_1a_lethal_bastard_sword, item_20_shining_bastard_sword, item_1b_swift_bastard_sword, item_65_harden_plate_mail, item_cc_priest_ring_of_frost, item_102_mind_amulet, item_105_amulet_of_balance, item_104_priest_amulet, item_f7_priest_bracelet, item_88_deadly_gauntlet, item_f0_guardian_bracelet, item_45_fiery_bow_gun, item_108_amulet_of_winter, item_59_mystic_great_helm, item_b8_tower_shield_of_resist, item_8b_deadly_arm_guard, item_75_harden_full_plate, item_97_steel_boots_of_balance, item_7f_metal_glove, item_2d_keenest_great_sword, item_2e_crushing_great_sword, item_f6_harden_bracelet, item_72_holy_plate_mail, item_b0_deadly_great_shield, item_c3_holy_gothic_shield, item_fa_moon_bracelet, item_13_broad_sword, item_31_blood_sword, item_2a_swift_great_sword, item_be_gothic_shield_of_balance, item_e3_ring_of_seal, item_78_knight_plate_mail, item_76_god_plate, item_5a_holy_great_helm, item_8c_master_arm_guard, item_e5_ring_of_rage, item_bf_master_gothic_shield, item_c0_gothic_shield_of_power, item_e2_black_ring, item_d6_dark_sorcerer_ring, item_a0_holy_leg_guard, item_71_devil_plate_mail, item_d2_holy_ring, item_25_magical_bastard_sword, item_2b_fiery_great_sword
-./generated/any-prc-extreme-easy/spoilers,MISSING,item_1d_crushing_bastard_sword, item_2a_swift_great_sword
-./generated/any-prc-hard/spoilers,MISSING,item_b4_harden_tower_shield, item_d9_ring_of_protect, item_4e_helm, item_3f_battle_axe, item_89_arm_guard, item_c1_gothic_shield_of_rage, item_bd_gothic_shield_of_honor, item_9e_leg_guard_of_protect, item_d0_holy_ring_of_resist, item_b5_tower_shield_of_protect, item_56_great_helm, item_106_amulet_of_recovery, item_107_star_amulet, item_17_dragon_sword, item_1a_lethal_bastard_sword, item_cc_priest_ring_of_frost, item_f7_priest_bracelet, item_45_fiery_bow_gun, item_b8_tower_shield_of_resist, item_f6_harden_bracelet, item_b0_deadly_great_shield, item_fa_moon_bracelet, item_13_broad_sword, item_2a_swift_great_sword, item_be_gothic_shield_of_balance, item_5a_holy_great_helm, item_8c_master_arm_guard, item_d2_holy_ring, item_2b_fiery_great_sword
-./generated/any-prc-medium/spoilers,MISSING,item_b6_caustic_tower_shield, item_100_amulet_of_curing, item_c1_gothic_shield_of_rage, item_ad_great_shield_of_balance, item_86_gauntlet_of_resist, item_fa_moon_bracelet, item_2a_swift_great_sword, item_c0_gothic_shield_of_power, item_71_devil_plate_mail
-./generated/any-prc-medium2/spoilers,MISSING,item_c_shadow_blade, item_37_frosty_morning_star, item_21_deadly_bastard_sword, item_57_harden_great_helm, item_c0_gothic_shield_of_power, item_d6_dark_sorcerer_ring
+./generated/any-prc-easy/spoilers,OK,
+./generated/any-prc-even-harder/spoilers,OK,
+./generated/any-prc-extreme-easy/spoilers,OK,
+./generated/any-prc-hard/spoilers,OK,
+./generated/any-prc-medium/spoilers,OK,
+./generated/any-prc-medium2/spoilers,OK,
 ./generated/any-prc-medium3/spoilers,OK,
-./generated/any-prc-medium4/spoilers,MISSING,item_b8_tower_shield_of_resist, item_2b_fiery_great_sword
-./generated/any-prc-medium5/spoilers,MISSING,item_f_broad_sword, item_16_guardian_broad_sword, item_21_deadly_bastard_sword, item_2d_keenest_great_sword
-./generated/any-prc-very-hard/spoilers,MISSING,item_44_bow_gun, item_6c_caustic_plate_mail, item_ca_summoner_ring_of_frost, item_e7_bracelet_of_resist, item_3b_giant_axe, item_24_dark_sword, item_55_great_helm, item_c1_gothic_shield_of_rage, item_e_shadow_tiger, item_f9_king_bracelet, item_ad_great_shield_of_balance, item_9e_leg_guard_of_protect, item_77_plate_mail_of_rage, item_d5_dark_priest_ring, item_30_guardian_great_sword, item_17_dragon_sword, item_f2_priest_bracelet, item_15_keenest_broad_sword, item_26_righteous_sword, item_66_plate_mail_of_resist, item_cc_priest_ring_of_frost, item_104_priest_amulet, item_f7_priest_bracelet, item_f0_guardian_bracelet, item_45_fiery_bow_gun, item_59_mystic_great_helm, item_b8_tower_shield_of_resist, item_8b_deadly_arm_guard, item_2d_keenest_great_sword, item_72_holy_plate_mail, item_b0_deadly_great_shield, item_13_broad_sword, item_31_blood_sword, item_2a_swift_great_sword, item_be_gothic_shield_of_balance, item_e3_ring_of_seal, item_76_god_plate, item_5a_holy_great_helm, item_8c_master_arm_guard, item_e5_ring_of_rage, item_bf_master_gothic_shield, item_c0_gothic_shield_of_power, item_e2_black_ring, item_d6_dark_sorcerer_ring, item_a0_holy_leg_guard, item_d2_holy_ring, item_2b_fiery_great_sword
+./generated/any-prc-medium4/spoilers,OK,
+./generated/any-prc-medium5/spoilers,OK,
+./generated/any-prc-very-hard/spoilers,OK,
 ./generated/apply-directives/spoilers,OK,
-./generated/bonanza/spoilers,MISSING,item_aa_fiery_large_shield, item_75_harden_full_plate
-./generated/comedy/spoilers,MISSING,item_b2_tower_shield, item_c_shadow_blade
+./generated/bonanza/spoilers,OK,
+./generated/comedy/spoilers,OK,
 ./generated/easy/spoilers,OK,
 ./generated/even-harder/spoilers,OK,
 ./generated/extreme-easy/spoilers,OK,
 ./generated/fix-king-hopper/spoilers,OK,
 ./generated/hard/spoilers,OK,
 ./generated/no-change/spoilers,OK,
-./generated/scary-game/spoilers,MISSING,item_2_deadly_short_sword, item_9_rapier, item_60_scale_mail, item_8e_leather_boots, item_36_swift_morning_star, item_7a_leather_glove, item_91_steel_boots, item_fb_magical_amulet, item_a5_shield_of_resist, item_7_fiery_long_sword, item_9b_harden_leg_guard, item_a9_large_shield_of_balance, item_fe_deadly_amulet, item_2c_deadly_great_sword, item_68_plate_mail, item_ae_shining_great_shield, item_16_guardian_broad_sword, item_96_swift_steel_boots, item_b4_harden_tower_shield, item_1e_fiery_bastard_sword, item_e8_bracelet_of_balance, item_38_axe, item_4e_helm, item_ab_great_shield, item_f9_king_bracelet, item_1d_crushing_bastard_sword, item_8a_arm_guard_of_composure, item_e6_ring_of_drain, item_103_sorcerer_amulet, item_15_keenest_broad_sword, item_57_harden_great_helm, item_75_harden_full_plate, item_2d_keenest_great_sword, item_bf_master_gothic_shield, item_d2_holy_ring
+./generated/scary-game/spoilers,OK,
 ./generated/very-hard/spoilers,OK,

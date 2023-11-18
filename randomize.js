@@ -220,19 +220,19 @@ function randomize(paramsFile, stDir) {
     function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
         if (!params.removeDirectiveRemovalOfRandomness) {
             if (spawn.chance.get() != 100) {
-                console.log("Setting spawn change to 100%, creature " + spawn.name() + " where it was " + spawn.chance.get());
+                console.log("Setting spawn chance to 100%, creature " + spawn.name() + " where it was " + spawn.chance.get());
                 spawn.chance.set(100);
             }
             if (!spawn.drop1.isNull() && spawn.drop1Chance.get() != 100) {
-                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop1.get()].name + " where it was " + spawn.chance.get());
+                console.log("Setting drop chance to 100%, creature " + spawn.name() + " drop " + items[spawn.drop1.get()].name + " where it was " + spawn.drop1Chance.get());
                 spawn.drop1Chance.set(100);
             }
             if (!spawn.drop2.isNull() && spawn.drop2Chance.get() != 100) {
-                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop2.get()].name + " where it was " + spawn.drop2Chance.get());
+                console.log("Setting drop chance to 100%, creature " + spawn.name() + " drop " + items[spawn.drop2.get()].name + " where it was " + spawn.drop2Chance.get());
                 spawn.drop2Chance.set(100);
             }
             if (!spawn.drop3.isNull() && spawn.drop3Chance.get() != 100) {
-                console.log("Setting drop change to 100%, creature " + spawn.name() + " drop " + items[spawn.drop3.get()].name + " where it was " + spawn.drop3Chance.get());
+                console.log("Setting drop chance to 100%, creature " + spawn.name() + " drop " + items[spawn.drop3.get()].name + " where it was " + spawn.drop3Chance.get());
                 spawn.drop3Chance.set(100);
             }
         }
@@ -533,12 +533,9 @@ function randomize(paramsFile, stDir) {
             item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3))));
             item.dura.set(Math.min(255, Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
         }
-        if (primaryConsumables.indexOf(item.itemIndex) == -1) {
-            if (Math.random()<0.1/sharpDifficultyFactor) {
-                item.price.set(Math.floor(item.score()/400));
-                item.price.set(Math.min(30, Math.ceil(item.price.get() * Math.pow(Math.random() + 0.5, 3))));
-            } else {
-                item.price.set(0);
+        if (primaryConsumables.indexOf(item.itemIndex) == -1 && secondaryConsumables.indexOf(item.itemIndex) == -1) {
+            if (item.price.get() > 0) {
+                item.price.set(Math.min(30, Math.ceil(item.score() * Math.pow(Math.random() + 0.5, 1))));
             }
         }
 
@@ -691,6 +688,30 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    function distributeRemainingUniqueDropsAndConsumablesAsSecondDrop(spawn, area, index) {
+        var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
+
+        if (arrayToRemoveFrom.length > 0) {
+            if (spawn.drop2.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
+                spawn.drop2.set(arrayToRemoveFrom.shift());
+                spawn.drop2Chance.set(100);
+                console.log("DEBUG - Drop randomization adding remaining as second drop - Adding drop: " + items[spawn.drop2.get()].name + " at " + area.name + "/" + spawn.name());
+            }
+        }
+    }
+
+    function distributeRemainingUniqueDropsAndConsumablesAsThirdDrop(spawn, area, index) {
+        var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
+
+        if (arrayToRemoveFrom.length > 0) {
+            if (spawn.drop3.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
+                spawn.drop3.set(arrayToRemoveFrom.shift());
+                spawn.drop3Chance.set(100);
+                console.log("DEBUG - Drop randomization adding remaining as third drop - Adding drop: " + items[spawn.drop3.get()].name + " at " + area.name + "/" + spawn.name());
+            }
+        }
+    }
+
     function removeSceneryObjects(object, area) {
         if (area.name.includes("tower") || area.name.includes("void") || area.exits && area.exits[""+object.index]) {
             console.log("Remove scenery - to not mess with exits - " + area.name + " object " + object.index);
@@ -760,6 +781,8 @@ function randomize(paramsFile, stDir) {
                 forEachCollectable.push(distributeCollectablesRandomly);
                 forEachCreatureSpawn.push(distributeDropsRandomly);
                 forEachCreatureSpawn.push(guarantee99CunesPlacingTheRemainingAsDrops);
+                forEachCreatureSpawn.push(distributeRemainingUniqueDropsAndConsumablesAsSecondDrop);
+                forEachCreatureSpawn.push(distributeRemainingUniqueDropsAndConsumablesAsThirdDrop);
             }
         }
 
@@ -770,6 +793,7 @@ function randomize(paramsFile, stDir) {
             forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
             forEachItem.push(presetDirectivesforEachItem);
             forEachItem.push(randomizeEquipsStats);
+
             if (params.randomizeCollectablesAndDrops) {
                 forEachCollectable.push(distributeCollectablesRandomly);
                 forEachCollectable.push(distributeCollectablesDumpInLateWorlds);

@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  //global.toNotGenerateImages=true;
+  global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
@@ -1156,8 +1156,8 @@
           y: this.tileZ.get(), 
           z: this.tileY.get(), 
           text: "object index " + this.index});
-        var summary = '<span style="background:#808080">'+"object index " + this.index+'</span>\n';
-        mapSummary.push(summary);
+        //var summary = '<span style="background:#808080">'+"object index " + this.index+'</span>\n';
+        //mapSummary.push(summary);
       }
     }
 
