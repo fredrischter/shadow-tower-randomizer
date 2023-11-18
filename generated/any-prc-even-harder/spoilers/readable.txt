@@ -1158,6 +1158,51 @@ Applying factor 2 to creature 0e_auriel_a. Attributes str 0 spd 0 def 0 bal 1 sl
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 00_duhrin
+DEBUG - Changing denfese. 65 to 130
+Applying factor 2 to creature 00_duhrin. Attributes str 0 spd 0 def 0 bal 5 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 01_beak_plant
+DEBUG - Changing denfese. 30 to 60
+DEBUG - Changing attack. 50 to 100
+Applying factor 2 to creature 01_beak_plant. Attributes str 0 spd 1 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 02_watcher_plant
+DEBUG - Changing denfese. 30 to 60
+DEBUG - Changing attack. 42 to 84
+Applying factor 2 to creature 02_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+DEBUG - Creature 03_door
+DEBUG - Changing denfese. 0 to 0
+Applying factor 2 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 04_auriel_b
+DEBUG - Changing denfese. 150 to 255
+Applying factor 2 to creature 04_auriel_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 06_door
+DEBUG - Changing denfese. 0 to 0
+Applying factor 2 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 07_door
+DEBUG - Changing denfese. 0 to 0
+Applying factor 2 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 08_trickster
+DEBUG - Changing denfese. 53 to 106
+Applying factor 2 to creature 08_trickster. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 0 pir 0 spr 0 foc 1 ham 0 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 09_dwarf_warrior
+DEBUG - Changing denfese. 93 to 186
+DEBUG - Changing attack. 64 to 128
+DEBUG - Changing attack. 64 to 128
+Applying factor 2 to creature 09_dwarf_warrior. Attributes str 1 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 0c_hanging_dead
+DEBUG - Changing denfese. 50 to 100
+Applying factor 2 to creature 0c_hanging_dead. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+DEBUG - Creature 0d_trickster
+DEBUG - Changing denfese. 78 to 156
+DEBUG - Changing attack. 50 to 100
+Applying factor 2 to creature 0d_trickster. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 4 sol 2
+DEBUG - Creature 0e_watcher_plant
+DEBUG - Changing denfese. 30 to 60
+DEBUG - Changing attack. 42 to 84
+Applying factor 2 to creature 0e_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+DEBUG - Creature 0f_door
+DEBUG - Changing denfese. 0 to 0
+Applying factor 2 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 DEBUG - Creature 00_sand_leech_a
 DEBUG - Changing denfese. 30 to 60
 Applying factor 2 to creature 00_sand_leech_a. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 2 par 0 mel 0 sol 0
@@ -1264,51 +1309,6 @@ Applying factor 2 to creature 0d_cocoon_plant. Attributes str 0 spd 0 def 0 bal 
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 0f_door
-DEBUG - Changing denfese. 0 to 0
-Applying factor 2 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 00_duhrin
-DEBUG - Changing denfese. 65 to 130
-Applying factor 2 to creature 00_duhrin. Attributes str 0 spd 0 def 0 bal 5 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 01_beak_plant
-DEBUG - Changing denfese. 30 to 60
-DEBUG - Changing attack. 50 to 100
-Applying factor 2 to creature 01_beak_plant. Attributes str 0 spd 1 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 02_watcher_plant
-DEBUG - Changing denfese. 30 to 60
-DEBUG - Changing attack. 42 to 84
-Applying factor 2 to creature 02_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
-DEBUG - Creature 03_door
-DEBUG - Changing denfese. 0 to 0
-Applying factor 2 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 04_auriel_b
-DEBUG - Changing denfese. 150 to 255
-Applying factor 2 to creature 04_auriel_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 06_door
-DEBUG - Changing denfese. 0 to 0
-Applying factor 2 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 07_door
-DEBUG - Changing denfese. 0 to 0
-Applying factor 2 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 08_trickster
-DEBUG - Changing denfese. 53 to 106
-Applying factor 2 to creature 08_trickster. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 0 pir 0 spr 0 foc 1 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 09_dwarf_warrior
-DEBUG - Changing denfese. 93 to 186
-DEBUG - Changing attack. 64 to 128
-DEBUG - Changing attack. 64 to 128
-Applying factor 2 to creature 09_dwarf_warrior. Attributes str 1 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 0c_hanging_dead
-DEBUG - Changing denfese. 50 to 100
-Applying factor 2 to creature 0c_hanging_dead. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 0d_trickster
-DEBUG - Changing denfese. 78 to 156
-DEBUG - Changing attack. 50 to 100
-Applying factor 2 to creature 0d_trickster. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 4 sol 2
-DEBUG - Creature 0e_watcher_plant
-DEBUG - Changing denfese. 30 to 60
-DEBUG - Changing attack. 42 to 84
-Applying factor 2 to creature 0e_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
@@ -2689,6 +2689,21 @@ Setting drop chance to 100%, creature 0e_auriel_a drop item_49_crown_of_resist w
 Setting spawn chance to 100%, creature 0e_auriel_a where it was 25
 Setting drop chance to 100%, creature 0e_auriel_a drop item_63_plate_mail where it was 50
 Setting drop chance to 100%, creature 0e_auriel_a drop item_62_scale_mail_of_curing where it was 50
+Setting drop chance to 100%, creature 01_beak_plant drop item_33_crushing_mace where it was 60
+Setting spawn chance to 100%, creature 01_beak_plant where it was 50
+Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
+Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
+Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
+Setting spawn chance to 100%, creature 02_watcher_plant where it was 25
+Setting drop chance to 100%, creature 09_dwarf_warrior drop item_5f_magical_leather_armor where it was 70
+Setting drop chance to 100%, creature 08_trickster drop item_ec_bracelet_of_recovery where it was 40
+Setting spawn chance to 100%, creature 08_trickster where it was 25
+Setting drop chance to 100%, creature 0c_hanging_dead drop item_d7_ring_of_poison where it was 80
+Setting spawn chance to 100%, creature 0e_watcher_plant where it was 25
+Setting spawn chance to 100%, creature 0d_trickster where it was 50
+Setting drop chance to 100%, creature 0d_trickster drop item_ce_soul_ring where it was 40
+Setting drop chance to 100%, creature 0d_trickster drop item_14_crushing_broad_sword where it was 30
+Setting drop chance to 100%, creature 0d_trickster drop item_fb_magical_amulet where it was 30
 Setting spawn chance to 100%, creature 00_sand_leech_a where it was 50
 Setting drop chance to 100%, creature 00_sand_leech_a drop item_fb_magical_amulet where it was 80
 Setting drop chance to 100%, creature 05_acid_pod drop item_83_gauntlet where it was 20
@@ -2730,21 +2745,6 @@ Setting spawn chance to 100%, creature 09_sloth_bug where it was 50
 Setting drop chance to 100%, creature 09_sloth_bug drop item_4b_wizard_crown where it was 50
 Setting drop chance to 100%, creature 0d_cocoon_plant drop item_11d_magic_potion where it was 50
 Setting spawn chance to 100%, creature 0d_cocoon_plant where it was 10
-Setting drop chance to 100%, creature 01_beak_plant drop item_33_crushing_mace where it was 60
-Setting spawn chance to 100%, creature 01_beak_plant where it was 50
-Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
-Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
-Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
-Setting spawn chance to 100%, creature 02_watcher_plant where it was 25
-Setting drop chance to 100%, creature 09_dwarf_warrior drop item_5f_magical_leather_armor where it was 70
-Setting drop chance to 100%, creature 08_trickster drop item_ec_bracelet_of_recovery where it was 40
-Setting spawn chance to 100%, creature 08_trickster where it was 25
-Setting drop chance to 100%, creature 0c_hanging_dead drop item_d7_ring_of_poison where it was 80
-Setting spawn chance to 100%, creature 0e_watcher_plant where it was 25
-Setting spawn chance to 100%, creature 0d_trickster where it was 50
-Setting drop chance to 100%, creature 0d_trickster drop item_ce_soul_ring where it was 40
-Setting drop chance to 100%, creature 0d_trickster drop item_14_crushing_broad_sword where it was 30
-Setting drop chance to 100%, creature 0d_trickster drop item_fb_magical_amulet where it was 30
 Setting drop chance to 100%, creature 01_demon_bat drop item_5_long_sword where it was 40
 Setting drop chance to 100%, creature 01_demon_bat drop item_7_fiery_long_sword where it was 10
 Setting spawn chance to 100%, creature 05_hobble_worm where it was 50
@@ -3230,86 +3230,84 @@ DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_rotting_cavern/0e_auriel_a where it was item_120_divine_symbol 
 DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_rotting_cavern/0e_auriel_a where it was item_63_plate_mail 
 DEBUG - Drop randomization - Updating drop to consumable item_122_evil_eye at earth_world_rotting_cavern/05_dwarfling where it was blank
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/01_blue_flicker where it was blank. There are more 244 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/01_blue_flicker where it was item_10d_lamp 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/01_blue_flicker where it was item_124_poison_vaccine 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/01_blue_flicker where it was item_10d_lamp 
-DEBUG - Drop randomization - Updating drop to consumable item_10c_torch at earth_world_quaking_cavern/01_blue_flicker where it was item_10d_lamp 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_quaking_cavern/00_sand_leech_a where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/00_sand_leech_a where it was blank. There are more 243 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/00_sand_leech_a where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at earth_world_quaking_cavern/00_sand_leech_a where it was blank
-DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at earth_world_quaking_cavern/00_sand_leech_a where it was item_fb_magical_amulet 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/05_acid_pod where it was item_83_gauntlet . There are more 242 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_4a_crown_of_composure at earth_world_quaking_cavern/04_kiljoy where it was blank. There are more 241 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_7d_wooden_glove at earth_world_quaking_cavern/04_kiljoy where it was item_cf_soul_ring . There are more 240 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/04_kiljoy where it was item_e7_bracelet_of_resist . There are more 239 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_quaking_cavern/05_acid_pod where it was item_12e_dorados_ashes 
-DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at earth_world_quaking_cavern/05_acid_pod where it was item_12e_dorados_ashes 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/05_acid_pod where it was item_12e_dorados_ashes 
-DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom . There are more 238 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_7b_leather_glove at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom . There are more 237 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_49_crown_of_resist at earth_world_quaking_cavern/08_torg where it was item_10_broad_sword . There are more 236 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_quaking_cavern/08_torg where it was item_10d_lamp 
-DEBUG - Drop randomization - Updating drop to unique item_6_keenest_long_sword at earth_world_quaking_cavern/08_torg where it was item_62_scale_mail_of_curing . There are more 235 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/02_sand_leech_b where it was item_95_caustic_steel_boots 
-DEBUG - Drop randomization - Updating drop to consumable item_123_fire_world_stone at earth_world_quaking_cavern/02_sand_leech_b where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/02_sand_leech_b where it was item_42_bow 
-DEBUG - Drop randomization - Updating drop to unique item_ce_soul_ring at earth_world_false_pit_cavern/00_earth_knight where it was item_a8_harden_large_shield . There are more 234 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at earth_world_false_pit_cavern/01_acid_pod where it was item_12e_dorados_ashes 
-DEBUG - Drop randomization - Updating drop to unique item_94_steel_boots_of_resist at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion . There are more 233 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_19_bastard_sword at earth_world_false_pit_cavern/05_cocoon_plant where it was item_12e_dorados_ashes . There are more 232 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_false_pit_cavern/05_cocoon_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at earth_world_false_pit_cavern/05_cocoon_plant where it was item_12e_dorados_ashes 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/04_cannon_snail where it was item_81_fiery_gauntlet 
-DEBUG - Drop randomization - Updating drop to unique item_39_axe at earth_world_false_pit_cavern/04_cannon_snail where it was item_95_caustic_steel_boots . There are more 231 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_6a_fiery_plate_mail at earth_world_false_pit_cavern/08_guardian_b where it was item_10a_cune . There are more 230 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/08_guardian_b where it was item_10a_cune 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/09_sloth_bug where it was item_51_full_helm 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_false_pit_cavern/09_sloth_bug where it was item_64_plate_mail . There are more 229 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/09_sloth_bug where it was item_82_caustic_hand_guard 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_false_pit_cavern/09_sloth_bug where it was item_4b_wizard_crown 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_false_pit_cavern/0c_ray_plant where it was item_fe_deadly_amulet . There are more 228 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11d_magic_potion 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_d9_ring_of_protect . There are more 227 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_68_plate_mail at earth_world_poisonous_cavern/02_watcher_plant where it was item_10a_cune . There are more 226 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_poisonous_cavern/02_watcher_plant where it was blank
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/02_watcher_plant where it was item_10a_cune . There are more 244 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/02_watcher_plant where it was item_11c_healing_potion 
 DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/01_beak_plant where it was item_33_crushing_mace 
-DEBUG - Drop randomization - Updating drop to unique item_9a_leg_guard at earth_world_poisonous_cavern/01_beak_plant where it was blank. There are more 225 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at earth_world_poisonous_cavern/01_beak_plant where it was blank
-DEBUG - Drop randomization - Updating drop to unique item_23_guardian_bastard_sword at earth_world_poisonous_cavern/02_watcher_plant where it was item_10a_cune . There are more 224 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/02_watcher_plant where it was item_10a_cune . There are more 223 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_10d_lamp at earth_world_poisonous_cavern/02_watcher_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/02_watcher_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/09_dwarf_warrior where it was item_5f_magical_leather_armor . There are more 222 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_poisonous_cavern/09_dwarf_warrior where it was item_10c_torch 
-DEBUG - Drop randomization - Updating drop to unique item_4_long_sword at earth_world_poisonous_cavern/08_trickster where it was item_ec_bracelet_of_recovery . There are more 221 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at earth_world_poisonous_cavern/08_trickster where it was blank
-DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at earth_world_poisonous_cavern/0c_hanging_dead where it was blank
-DEBUG - Drop randomization - Updating drop to unique item_98_steel_boots_of_resist at earth_world_poisonous_cavern/0c_hanging_dead where it was blank. There are more 220 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_8_silent_sword at earth_world_poisonous_cavern/0c_hanging_dead where it was blank. There are more 219 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/0c_hanging_dead where it was item_d7_ring_of_poison . There are more 218 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at earth_world_poisonous_cavern/0c_hanging_dead where it was blank
-DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/0e_watcher_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/0e_watcher_plant where it was item_10a_cune . There are more 217 to distribute.
-DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/0e_watcher_plant where it was item_11c_healing_potion 
-DEBUG - Drop randomization - Updating drop to unique item_101_amulet_of_resist at earth_world_poisonous_cavern/0d_trickster where it was blank. There are more 216 to distribute.
-DEBUG - Drop randomization - Updating drop to unique item_a9_large_shield_of_balance at earth_world_poisonous_cavern/0d_trickster where it was item_42_bow . There are more 215 to distribute.
-DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at earth_world_poisonous_cavern/0d_trickster where it was item_ce_soul_ring 
-DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_poisonous_cavern/02_watcher_plant where it was item_124_poison_vaccine 
-DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_poisonous_cavern/0d_trickster where it was item_14_crushing_broad_sword 
-DEBUG - Drop randomization - Updating drop to unique item_fe_deadly_amulet at earth_world_poisonous_cavern/0d_trickster where it was item_fb_magical_amulet . There are more 214 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_10c_torch at earth_world_poisonous_cavern/01_beak_plant where it was blank
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_poisonous_cavern/01_beak_plant where it was blank
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/02_watcher_plant where it was item_10a_cune . There are more 243 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/02_watcher_plant where it was item_10a_cune 
+DEBUG - Drop randomization - Updating drop to consumable item_12e_dorados_ashes at earth_world_poisonous_cavern/02_watcher_plant where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at earth_world_poisonous_cavern/02_watcher_plant where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/09_dwarf_warrior where it was item_5f_magical_leather_armor . There are more 242 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_4a_crown_of_composure at earth_world_poisonous_cavern/09_dwarf_warrior where it was item_10c_torch . There are more 241 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_7d_wooden_glove at earth_world_poisonous_cavern/08_trickster where it was item_ec_bracelet_of_recovery . There are more 240 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/08_trickster where it was blank. There are more 239 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_poisonous_cavern/08_trickster where it was blank
+DEBUG - Drop randomization - Updating drop to consumable item_139_soul_pod_14_sp at earth_world_poisonous_cavern/0c_hanging_dead where it was blank
+DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_poisonous_cavern/0c_hanging_dead where it was blank
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_poisonous_cavern/0c_hanging_dead where it was item_d7_ring_of_poison . There are more 238 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_7b_leather_glove at earth_world_poisonous_cavern/0c_hanging_dead where it was blank. There are more 237 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_49_crown_of_resist at earth_world_poisonous_cavern/0e_watcher_plant where it was item_11c_healing_potion . There are more 236 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_poisonous_cavern/0e_watcher_plant where it was item_10a_cune 
+DEBUG - Drop randomization - Updating drop to unique item_6_keenest_long_sword at earth_world_poisonous_cavern/0e_watcher_plant where it was item_11c_healing_potion . There are more 235 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_123_fire_world_stone at earth_world_poisonous_cavern/0d_trickster where it was item_42_bow 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/0d_trickster where it was item_ce_soul_ring 
+DEBUG - Drop randomization - Updating drop to unique item_ce_soul_ring at earth_world_poisonous_cavern/02_watcher_plant where it was item_124_poison_vaccine . There are more 234 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_poisonous_cavern/0d_trickster where it was item_14_crushing_broad_sword 
+DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_poisonous_cavern/0d_trickster where it was item_fb_magical_amulet 
 DEBUG - Drop randomization - To leave this one alone since it is key item_12f_spirit_key at earth_world_poisonous_cavern/00_duhrin
-DEBUG - Drop randomization - Updating drop to unique item_99_leg_guard at earth_world_poisonous_cavern/04_auriel_b where it was blank. There are more 213 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at earth_world_poisonous_cavern/04_auriel_b where it was blank
+DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at earth_world_quaking_cavern/01_blue_flicker where it was blank
+DEBUG - Drop randomization - Updating drop to unique item_94_steel_boots_of_resist at earth_world_quaking_cavern/01_blue_flicker where it was item_10d_lamp . There are more 233 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_19_bastard_sword at earth_world_quaking_cavern/01_blue_flicker where it was blank. There are more 232 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_quaking_cavern/01_blue_flicker where it was item_124_poison_vaccine 
+DEBUG - Drop randomization - Updating drop to consumable item_11e_anti_venom at earth_world_quaking_cavern/01_blue_flicker where it was item_10d_lamp 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/01_blue_flicker where it was item_10d_lamp 
+DEBUG - Drop randomization - Updating drop to unique item_39_axe at earth_world_quaking_cavern/00_sand_leech_a where it was item_10a_cune . There are more 231 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_6a_fiery_plate_mail at earth_world_quaking_cavern/00_sand_leech_a where it was blank. There are more 230 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/00_sand_leech_a where it was item_10a_cune 
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/00_sand_leech_a where it was item_fb_magical_amulet . There are more 229 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/05_acid_pod where it was item_83_gauntlet 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_quaking_cavern/04_kiljoy where it was blank
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/04_kiljoy where it was item_cf_soul_ring . There are more 228 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_11f_anti_paralytic at earth_world_quaking_cavern/04_kiljoy where it was item_e7_bracelet_of_resist 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/05_acid_pod where it was item_12e_dorados_ashes 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/05_acid_pod where it was item_12e_dorados_ashes 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_quaking_cavern/05_acid_pod where it was item_12e_dorados_ashes 
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom . There are more 227 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_68_plate_mail at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom . There are more 226 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/09_cocoon_plant where it was item_11e_anti_venom 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/08_torg where it was item_10_broad_sword 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_quaking_cavern/08_torg where it was item_10d_lamp 
+DEBUG - Drop randomization - Updating drop to unique item_9a_leg_guard at earth_world_quaking_cavern/08_torg where it was item_62_scale_mail_of_curing . There are more 225 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at earth_world_quaking_cavern/02_sand_leech_b where it was item_95_caustic_steel_boots 
+DEBUG - Drop randomization - Updating drop to unique item_23_guardian_bastard_sword at earth_world_quaking_cavern/02_sand_leech_b where it was item_10a_cune . There are more 224 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_quaking_cavern/02_sand_leech_b where it was item_42_bow . There are more 223 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_10d_lamp at earth_world_false_pit_cavern/00_earth_knight where it was item_a8_harden_large_shield 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion . There are more 222 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_120_divine_symbol at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to unique item_4_long_sword at earth_world_false_pit_cavern/01_acid_pod where it was item_12e_dorados_ashes . There are more 221 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/01_acid_pod where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at earth_world_false_pit_cavern/05_cocoon_plant where it was item_12e_dorados_ashes 
+DEBUG - Drop randomization - Updating drop to consumable item_124_poison_vaccine at earth_world_false_pit_cavern/05_cocoon_plant where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to unique item_98_steel_boots_of_resist at earth_world_false_pit_cavern/05_cocoon_plant where it was item_12e_dorados_ashes . There are more 220 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/04_cannon_snail where it was item_81_fiery_gauntlet 
+DEBUG - Drop randomization - Updating drop to unique item_8_silent_sword at earth_world_false_pit_cavern/04_cannon_snail where it was item_95_caustic_steel_boots . There are more 219 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_false_pit_cavern/08_guardian_b where it was item_10a_cune . There are more 218 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_126_bottle_of_light at earth_world_false_pit_cavern/08_guardian_b where it was item_10a_cune 
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/09_sloth_bug where it was item_51_full_helm 
+DEBUG - Drop randomization - Updating drop to unique item_10a_cune at earth_world_false_pit_cavern/09_sloth_bug where it was item_64_plate_mail . There are more 217 to distribute.
+DEBUG - Drop randomization - Updating drop to blank at earth_world_false_pit_cavern/09_sloth_bug where it was item_82_caustic_hand_guard 
+DEBUG - Drop randomization - Updating drop to unique item_101_amulet_of_resist at earth_world_false_pit_cavern/09_sloth_bug where it was item_4b_wizard_crown . There are more 216 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_a9_large_shield_of_balance at earth_world_false_pit_cavern/0c_ray_plant where it was item_fe_deadly_amulet . There are more 215 to distribute.
+DEBUG - Drop randomization - Updating drop to consumable item_11d_magic_potion at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_11c_healing_potion at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to consumable item_136_soul_pod_5_sp at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11c_healing_potion 
+DEBUG - Drop randomization - Updating drop to unique item_fe_deadly_amulet at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_11d_magic_potion . There are more 214 to distribute.
+DEBUG - Drop randomization - Updating drop to unique item_99_leg_guard at earth_world_false_pit_cavern/0d_cocoon_plant where it was item_d9_ring_of_protect . There are more 213 to distribute.
 DEBUG - Drop randomization - Updating drop to blank at earth_world_stone_cavern/01_demon_bat where it was item_5_long_sword 
 DEBUG - Drop randomization - Updating drop to consumable item_125_dust_of_rage at earth_world_stone_cavern/01_demon_bat where it was item_7_fiery_long_sword 
 DEBUG - Drop randomization - Updating drop to consumable item_127_acid_vaccine at earth_world_stone_cavern/05_hobble_worm where it was blank
@@ -3794,35 +3792,35 @@ DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_5
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_b8_tower_shield_of_resist at earth_world_rotting_cavern/0e_auriel_a
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_8b_deadly_arm_guard at earth_world_rotting_cavern/0e_auriel_a
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_75_harden_full_plate at earth_world_rotting_cavern/05_dwarfling
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_7f_metal_glove at earth_world_quaking_cavern/01_blue_flicker
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2d_keenest_great_sword at earth_world_quaking_cavern/01_blue_flicker
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2e_crushing_great_sword at earth_world_quaking_cavern/00_sand_leech_a
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_f6_harden_bracelet at earth_world_quaking_cavern/00_sand_leech_a
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_72_holy_plate_mail at earth_world_quaking_cavern/05_acid_pod
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_b0_deadly_great_shield at earth_world_quaking_cavern/05_acid_pod
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_fa_moon_bracelet at earth_world_quaking_cavern/05_acid_pod
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_13_broad_sword at earth_world_quaking_cavern/09_cocoon_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_31_blood_sword at earth_world_quaking_cavern/09_cocoon_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2a_swift_great_sword at earth_world_false_pit_cavern/00_earth_knight
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_be_gothic_shield_of_balance at earth_world_false_pit_cavern/01_acid_pod
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e3_ring_of_seal at earth_world_false_pit_cavern/05_cocoon_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_c8_sorcerer_ring_of_fire at earth_world_false_pit_cavern/04_cannon_snail
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_76_god_plate at earth_world_false_pit_cavern/08_guardian_b
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_5a_holy_great_helm at earth_world_false_pit_cavern/09_sloth_bug
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_8c_master_arm_guard at earth_world_false_pit_cavern/0c_ray_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e5_ring_of_rage at earth_world_false_pit_cavern/0d_cocoon_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_bf_master_gothic_shield at earth_world_false_pit_cavern/0d_cocoon_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_c0_gothic_shield_of_power at earth_world_poisonous_cavern/02_watcher_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e2_black_ring at earth_world_poisonous_cavern/02_watcher_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_d6_dark_sorcerer_ring at earth_world_poisonous_cavern/01_beak_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_a0_holy_leg_guard at earth_world_poisonous_cavern/02_watcher_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_d2_holy_ring at earth_world_poisonous_cavern/09_dwarf_warrior
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2b_fiery_great_sword at earth_world_poisonous_cavern/0c_hanging_dead
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_47_cap at earth_world_poisonous_cavern/0c_hanging_dead
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_32_mace at earth_world_poisonous_cavern/0c_hanging_dead
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_a1_buckler at earth_world_poisonous_cavern/0d_trickster
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_1_short_sword at earth_world_poisonous_cavern/02_watcher_plant
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2_deadly_short_sword at earth_world_poisonous_cavern/0d_trickster
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_7f_metal_glove at earth_world_poisonous_cavern/02_watcher_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2d_keenest_great_sword at earth_world_poisonous_cavern/01_beak_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2e_crushing_great_sword at earth_world_poisonous_cavern/02_watcher_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_f6_harden_bracelet at earth_world_poisonous_cavern/02_watcher_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_72_holy_plate_mail at earth_world_poisonous_cavern/09_dwarf_warrior
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_b0_deadly_great_shield at earth_world_poisonous_cavern/08_trickster
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_fa_moon_bracelet at earth_world_poisonous_cavern/0c_hanging_dead
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_13_broad_sword at earth_world_poisonous_cavern/0c_hanging_dead
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_31_blood_sword at earth_world_poisonous_cavern/0c_hanging_dead
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2a_swift_great_sword at earth_world_poisonous_cavern/02_watcher_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_be_gothic_shield_of_balance at earth_world_poisonous_cavern/0d_trickster
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e3_ring_of_seal at earth_world_quaking_cavern/01_blue_flicker
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_c8_sorcerer_ring_of_fire at earth_world_quaking_cavern/01_blue_flicker
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_76_god_plate at earth_world_quaking_cavern/00_sand_leech_a
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_5a_holy_great_helm at earth_world_quaking_cavern/05_acid_pod
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_8c_master_arm_guard at earth_world_quaking_cavern/04_kiljoy
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e5_ring_of_rage at earth_world_quaking_cavern/04_kiljoy
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_bf_master_gothic_shield at earth_world_quaking_cavern/05_acid_pod
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_c0_gothic_shield_of_power at earth_world_quaking_cavern/09_cocoon_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e2_black_ring at earth_world_quaking_cavern/09_cocoon_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_d6_dark_sorcerer_ring at earth_world_quaking_cavern/08_torg
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_a0_holy_leg_guard at earth_world_false_pit_cavern/00_earth_knight
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_d2_holy_ring at earth_world_false_pit_cavern/01_acid_pod
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2b_fiery_great_sword at earth_world_false_pit_cavern/05_cocoon_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_47_cap at earth_world_false_pit_cavern/04_cannon_snail
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_32_mace at earth_world_false_pit_cavern/04_cannon_snail
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_a1_buckler at earth_world_false_pit_cavern/09_sloth_bug
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_1_short_sword at earth_world_false_pit_cavern/0d_cocoon_plant
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_2_deadly_short_sword at earth_world_false_pit_cavern/0d_cocoon_plant
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_5_long_sword at earth_world_stone_cavern/05_hobble_worm
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_92_steel_boots_of_resist at earth_world_stone_cavern/05_hobble_worm
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_90_steel_boots at earth_world_stone_cavern/05_hobble_worm
@@ -3874,10 +3872,12 @@ DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_1
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_78_knight_plate_mail at fire_world_burning_cavern/0e_mystic_tower
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_71_devil_plate_mail at fire_world_burning_cavern/0d_dweller
 DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_25_magical_bastard_sword at fire_world_burning_cavern/0d_dweller
-Moderating difficulty by replacing drop secondary consumable (item_10d_lamp) by a primary consumable (item_124_poison_vaccine) of earth_world_poisonous_cavern/02_watcher_plant
+Moderating difficulty by replacing drop secondary consumable (item_10d_lamp) by a primary consumable (item_124_poison_vaccine) of earth_world_false_pit_cavern/00_earth_knight
 Moderating difficulty by replacing drop secondary consumable (item_128_spirit_book) by a primary consumable (item_11c_healing_potion) of illusion_world_gloomy_domain/0c_maristella
 Moderating difficulty by replacing drop secondary consumable (item_10e_sacred_feather) by a primary consumable (item_136_soul_pod_5_sp) of death_world_undead_layer/0a_demons_eye
-DEBUG - The game has 212 collectables: item_11c_healing_potion at human_world_solitary_region,item_5b_quilted_armor at human_world_solitary_region,item_11c_healing_potion at human_world_solitary_region,item_136_soul_pod_5_sp at human_world_solitary_region,item_10a_cune at human_world_solitary_region,item_11c_healing_potion at human_world_solitary_region,item_136_soul_pod_5_sp at human_world_solitary_region,item_10a_cune at human_world_solitary_region,item_10c_torch at human_world_solitary_region,item_61_scale_mail at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_7e_metal_glove at human_world_hidden_region,item_10a_cune at human_world_hidden_region,item_a6_large_shield at human_world_hidden_region,item_10c_torch at human_world_hidden_region,item_136_soul_pod_5_sp at human_world_hidden_region,item_136_soul_pod_5_sp at human_world_hidden_region,item_10c_torch at human_world_hidden_region,item_12e_dorados_ashes at human_world_hidden_region,item_12e_dorados_ashes at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_ac_great_shield at human_world_forgotten_region,item_136_soul_pod_5_sp at human_world_forgotten_region,item_10a_cune at human_world_forgotten_region,item_11c_healing_potion at human_world_forgotten_region,item_11c_healing_potion at human_world_forgotten_region,item_136_soul_pod_5_sp at human_world_forgotten_region,item_10a_cune at human_world_forgotten_region,item_10a_cune at human_world_forgotten_region,item_126_bottle_of_light at human_world_forgotten_region,item_127_acid_vaccine at human_world_forgotten_region,item_4d_helm at human_world_cursed_region,item_11c_healing_potion at human_world_cursed_region,item_11c_healing_potion at human_world_cursed_region,item_7a_leather_glove at human_world_cursed_region,item_11c_healing_potion at human_world_cursed_region,item_10a_cune at human_world_cursed_region,item_39_axe at human_world_cursed_region,item_12e_dorados_ashes at human_world_cursed_region,item_11_broad_sword at earth_world_rotting_cavern,item_11c_healing_potion at earth_world_rotting_cavern,item_11c_healing_potion at earth_world_rotting_cavern,item_136_soul_pod_5_sp at earth_world_rotting_cavern,item_11e_anti_venom at earth_world_rotting_cavern,item_124_poison_vaccine at earth_world_rotting_cavern,item_11e_anti_venom at earth_world_rotting_cavern,item_7d_wooden_glove at earth_world_quaking_cavern,item_a9_large_shield_of_balance at earth_world_quaking_cavern,item_124_poison_vaccine at earth_world_quaking_cavern,item_125_dust_of_rage at earth_world_quaking_cavern,item_10a_cune at earth_world_quaking_cavern,item_125_dust_of_rage at earth_world_quaking_cavern,item_10a_cune at earth_world_quaking_cavern,item_10a_cune at earth_world_quaking_cavern,item_124_poison_vaccine at earth_world_quaking_cavern,item_125_dust_of_rage at earth_world_quaking_cavern,item_ea_bracelet_of_composure at earth_world_false_pit_cavern,item_10a_cune at earth_world_false_pit_cavern,item_b1_tower_shield at earth_world_false_pit_cavern,item_b3_tower_shield_of_honor at earth_world_false_pit_cavern,item_11d_magic_potion at earth_world_false_pit_cavern,item_11d_magic_potion at earth_world_false_pit_cavern,item_139_soul_pod_14_sp at earth_world_false_pit_cavern,item_139_soul_pod_14_sp at earth_world_false_pit_cavern,item_139_soul_pod_14_sp at earth_world_false_pit_cavern,item_10a_cune at earth_world_false_pit_cavern,item_10a_cune at earth_world_false_pit_cavern,item_12e_dorados_ashes at earth_world_false_pit_cavern,item_12e_dorados_ashes at earth_world_false_pit_cavern,item_10c_torch at earth_world_poisonous_cavern,item_11c_healing_potion at earth_world_poisonous_cavern,item_a5_shield_of_resist at earth_world_poisonous_cavern,item_10a_cune at earth_world_poisonous_cavern,item_11c_healing_potion at earth_world_poisonous_cavern,item_136_soul_pod_5_sp at earth_world_poisonous_cavern,item_136_soul_pod_5_sp at earth_world_poisonous_cavern,item_124_poison_vaccine at earth_world_poisonous_cavern,item_c4_summoner_ring_of_fire at earth_world_poisonous_cavern,item_11c_healing_potion at earth_world_poisonous_cavern,item_3_long_sword at earth_world_poisonous_cavern,item_10a_cune at earth_world_stone_cavern,item_10a_cune at earth_world_stone_cavern,item_126_bottle_of_light at earth_world_stone_cavern,item_126_bottle_of_light at earth_world_stone_cavern,item_126_bottle_of_light at earth_world_stone_cavern,item_11c_healing_potion at earth_world_stone_cavern,item_11c_healing_potion at earth_world_stone_cavern,item_9a_leg_guard at earth_world_hostile_rock_cavern,item_d7_ring_of_poison at earth_world_hostile_rock_cavern,item_67_plate_mail_of_curing at earth_world_hostile_rock_cavern,item_128_spirit_book at earth_world_hostile_rock_cavern,item_136_soul_pod_5_sp at earth_world_hostile_rock_cavern,item_6_keenest_long_sword at water_world_impure_pool_area,item_10a_cune at water_world_impure_pool_area,item_10a_cune at water_world_impure_pool_area,item_127_acid_vaccine at water_world_impure_pool_area,item_10a_cune at water_world_sunken_river_area,item_cd_sorcerer_ring_of_frost at water_world_sunken_river_area,item_b6_caustic_tower_shield at water_world_sunken_river_area,item_ef_deadly_bracelet at water_world_sunken_river_area,item_10a_cune at water_world_sunken_river_area,item_136_soul_pod_5_sp at water_world_sunken_river_area,item_136_soul_pod_5_sp at water_world_sunken_river_area,item_139_soul_pod_14_sp at water_world_sunken_river_area,item_10a_cune at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_ab_great_shield at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_139_soul_pod_14_sp at water_world_watery_labyrinth_area,item_11c_healing_potion at water_world_watery_labyrinth_area,item_127_acid_vaccine at water_world_watery_labyrinth_area,item_127_acid_vaccine at water_world_watery_labyrinth_area,item_127_acid_vaccine at water_world_watery_labyrinth_area,item_55_great_helm at water_world_white_rain_area,item_de_caustic_sorcerer_ring at water_world_white_rain_area,item_136_soul_pod_5_sp at water_world_white_rain_area,item_138_soul_pod_29_sp at water_world_white_rain_area,item_136_soul_pod_5_sp at water_world_white_rain_area,item_aa_fiery_large_shield at fire_world_phoenix_cave,item_67_plate_mail_of_curing at fire_world_phoenix_cave,item_123_fire_world_stone at fire_world_phoenix_cave,item_fd_amulet_of_guardian at fire_world_phoenix_cave,item_54_fiery_full_helm at fire_world_phoenix_cave,item_127_acid_vaccine at fire_world_phoenix_cave,item_12e_dorados_ashes at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_11c_healing_potion at fire_world_burning_cavern,item_11c_healing_potion at fire_world_burning_cavern,item_fc_amulet_of_movement at fire_world_burning_cavern,item_b9_gothic_shield at fire_world_burning_cavern,item_6a_fiery_plate_mail at fire_world_burning_cavern,item_11c_healing_potion at fire_world_molten_cavern,item_139_soul_pod_14_sp at fire_world_molten_cavern,item_11e_anti_venom at fire_world_molten_cavern,item_ae_shining_great_shield at fire_world_molten_cavern,item_9c_fiery_leg_guard at fire_world_molten_cavern,item_11e_anti_venom at fire_world_molten_cavern,item_139_soul_pod_14_sp at fire_world_molten_cavern,item_8_silent_sword at fire_world_molten_cavern,item_84_gauntlet at fire_world_ashen_cavern,item_11d_magic_potion at fire_world_ashen_cavern,item_11d_magic_potion at fire_world_ashen_cavern,item_14_crushing_broad_sword at fire_world_ashen_cavern,item_c7_priest_ring_of_fire at fire_world_ashen_cavern,item_10a_cune at fire_world_ashen_cavern,item_29_great_sword at monster_world_false_eye_area,item_ba_harden_gothic_shield at monster_world_false_eye_area,item_dd_caustic_priest_ring at monster_world_false_eye_area,item_136_soul_pod_5_sp at monster_world_false_eye_area,item_138_soul_pod_29_sp at monster_world_false_eye_area,item_e_shadow_tiger at monster_world_false_eye_area,item_11c_healing_potion at monster_world_false_eye_area,item_10a_cune at monster_world_screeching_area,item_10a_cune at monster_world_screeching_area,item_10a_cune at monster_world_screeching_area,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_ba_harden_gothic_shield at illusion_world_bewilderment_domain,item_21_deadly_bastard_sword at illusion_world_bewilderment_domain,item_66_plate_mail_of_resist at illusion_world_bewilderment_domain,item_125_dust_of_rage at illusion_world_gloomy_domain,item_10d_lamp at illusion_world_gloomy_domain,item_30_guardian_great_sword at illusion_world_gloomy_domain,item_106_amulet_of_recovery at illusion_world_gloomy_domain,item_11f_anti_paralytic at illusion_world_dream_domain,item_139_soul_pod_14_sp at illusion_world_dream_domain,item_138_soul_pod_29_sp at illusion_world_dream_domain,item_88_deadly_gauntlet at illusion_world_worship_domain,item_bb_gothic_shield at illusion_world_worship_domain,item_f6_harden_bracelet at death_world_dark_castle_layer,item_10a_cune at death_world_dark_castle_layer,item_139_soul_pod_14_sp at death_world_dark_castle_layer,item_10a_cune at death_world_dark_castle_layer,item_10a_cune at death_world_dark_castle_layer,item_122_evil_eye at death_world_lingering_curse_layer,item_128_spirit_book at death_world_lingering_curse_layer,item_d6_dark_sorcerer_ring at death_world_lingering_curse_layer,item_10a_cune at death_world_undead_layer,item_138_soul_pod_29_sp at death_world_undead_layer,item_10a_cune at death_world_undead_layer,item_10a_cune at death_world_undead_layer,item_10a_cune at death_world_undead_layer,item_137_soul_pod_53_sp at death_world_undead_layer,item_25_magical_bastard_sword at death_world_undead_layer,item_2b_fiery_great_sword at death_world_undead_layer,item_120_divine_symbol at death_world_undead_layer,item_120_divine_symbol at death_world_undead_layer,item_129_sealed_sword_stone at death_world_undead_layer,item_129_sealed_sword_stone at death_world_undead_layer,item_be_gothic_shield_of_balance at death_world_gate_of_the_dead,item_137_soul_pod_53_sp at death_world_gate_of_the_dead,item_136_soul_pod_5_sp at death_world_gate_of_the_dead
+Guarantee poison vaccine - count 1/1, as found one at human_world_solitary_region/02_blood_slime
+Guarantee poison vaccine - Achieved poison vaccine requirement 1/1
+DEBUG - The game has 212 collectables: item_11c_healing_potion at human_world_solitary_region,item_5b_quilted_armor at human_world_solitary_region,item_11c_healing_potion at human_world_solitary_region,item_136_soul_pod_5_sp at human_world_solitary_region,item_10a_cune at human_world_solitary_region,item_11c_healing_potion at human_world_solitary_region,item_136_soul_pod_5_sp at human_world_solitary_region,item_10a_cune at human_world_solitary_region,item_10c_torch at human_world_solitary_region,item_61_scale_mail at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_7e_metal_glove at human_world_hidden_region,item_10a_cune at human_world_hidden_region,item_a6_large_shield at human_world_hidden_region,item_10c_torch at human_world_hidden_region,item_136_soul_pod_5_sp at human_world_hidden_region,item_136_soul_pod_5_sp at human_world_hidden_region,item_10c_torch at human_world_hidden_region,item_12e_dorados_ashes at human_world_hidden_region,item_12e_dorados_ashes at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_11c_healing_potion at human_world_hidden_region,item_ac_great_shield at human_world_forgotten_region,item_136_soul_pod_5_sp at human_world_forgotten_region,item_10a_cune at human_world_forgotten_region,item_11c_healing_potion at human_world_forgotten_region,item_11c_healing_potion at human_world_forgotten_region,item_136_soul_pod_5_sp at human_world_forgotten_region,item_10a_cune at human_world_forgotten_region,item_10a_cune at human_world_forgotten_region,item_126_bottle_of_light at human_world_forgotten_region,item_127_acid_vaccine at human_world_forgotten_region,item_4d_helm at human_world_cursed_region,item_11c_healing_potion at human_world_cursed_region,item_11c_healing_potion at human_world_cursed_region,item_7a_leather_glove at human_world_cursed_region,item_11c_healing_potion at human_world_cursed_region,item_10a_cune at human_world_cursed_region,item_39_axe at human_world_cursed_region,item_12e_dorados_ashes at human_world_cursed_region,item_11_broad_sword at earth_world_rotting_cavern,item_11c_healing_potion at earth_world_rotting_cavern,item_11c_healing_potion at earth_world_rotting_cavern,item_136_soul_pod_5_sp at earth_world_rotting_cavern,item_11e_anti_venom at earth_world_rotting_cavern,item_124_poison_vaccine at earth_world_rotting_cavern,item_11e_anti_venom at earth_world_rotting_cavern,item_10c_torch at earth_world_poisonous_cavern,item_11c_healing_potion at earth_world_poisonous_cavern,item_a5_shield_of_resist at earth_world_poisonous_cavern,item_10a_cune at earth_world_poisonous_cavern,item_11c_healing_potion at earth_world_poisonous_cavern,item_136_soul_pod_5_sp at earth_world_poisonous_cavern,item_136_soul_pod_5_sp at earth_world_poisonous_cavern,item_124_poison_vaccine at earth_world_poisonous_cavern,item_c4_summoner_ring_of_fire at earth_world_poisonous_cavern,item_11c_healing_potion at earth_world_poisonous_cavern,item_3_long_sword at earth_world_poisonous_cavern,item_7d_wooden_glove at earth_world_quaking_cavern,item_a9_large_shield_of_balance at earth_world_quaking_cavern,item_124_poison_vaccine at earth_world_quaking_cavern,item_125_dust_of_rage at earth_world_quaking_cavern,item_10a_cune at earth_world_quaking_cavern,item_125_dust_of_rage at earth_world_quaking_cavern,item_10a_cune at earth_world_quaking_cavern,item_10a_cune at earth_world_quaking_cavern,item_124_poison_vaccine at earth_world_quaking_cavern,item_125_dust_of_rage at earth_world_quaking_cavern,item_ea_bracelet_of_composure at earth_world_false_pit_cavern,item_10a_cune at earth_world_false_pit_cavern,item_b1_tower_shield at earth_world_false_pit_cavern,item_b3_tower_shield_of_honor at earth_world_false_pit_cavern,item_11d_magic_potion at earth_world_false_pit_cavern,item_11d_magic_potion at earth_world_false_pit_cavern,item_139_soul_pod_14_sp at earth_world_false_pit_cavern,item_139_soul_pod_14_sp at earth_world_false_pit_cavern,item_139_soul_pod_14_sp at earth_world_false_pit_cavern,item_10a_cune at earth_world_false_pit_cavern,item_10a_cune at earth_world_false_pit_cavern,item_12e_dorados_ashes at earth_world_false_pit_cavern,item_12e_dorados_ashes at earth_world_false_pit_cavern,item_10a_cune at earth_world_stone_cavern,item_10a_cune at earth_world_stone_cavern,item_126_bottle_of_light at earth_world_stone_cavern,item_126_bottle_of_light at earth_world_stone_cavern,item_126_bottle_of_light at earth_world_stone_cavern,item_11c_healing_potion at earth_world_stone_cavern,item_11c_healing_potion at earth_world_stone_cavern,item_9a_leg_guard at earth_world_hostile_rock_cavern,item_d7_ring_of_poison at earth_world_hostile_rock_cavern,item_67_plate_mail_of_curing at earth_world_hostile_rock_cavern,item_128_spirit_book at earth_world_hostile_rock_cavern,item_136_soul_pod_5_sp at earth_world_hostile_rock_cavern,item_6_keenest_long_sword at water_world_impure_pool_area,item_10a_cune at water_world_impure_pool_area,item_10a_cune at water_world_impure_pool_area,item_127_acid_vaccine at water_world_impure_pool_area,item_10a_cune at water_world_sunken_river_area,item_cd_sorcerer_ring_of_frost at water_world_sunken_river_area,item_b6_caustic_tower_shield at water_world_sunken_river_area,item_ef_deadly_bracelet at water_world_sunken_river_area,item_10a_cune at water_world_sunken_river_area,item_136_soul_pod_5_sp at water_world_sunken_river_area,item_136_soul_pod_5_sp at water_world_sunken_river_area,item_139_soul_pod_14_sp at water_world_sunken_river_area,item_10a_cune at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_ab_great_shield at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_10a_cune at water_world_watery_labyrinth_area,item_139_soul_pod_14_sp at water_world_watery_labyrinth_area,item_11c_healing_potion at water_world_watery_labyrinth_area,item_127_acid_vaccine at water_world_watery_labyrinth_area,item_127_acid_vaccine at water_world_watery_labyrinth_area,item_127_acid_vaccine at water_world_watery_labyrinth_area,item_55_great_helm at water_world_white_rain_area,item_de_caustic_sorcerer_ring at water_world_white_rain_area,item_136_soul_pod_5_sp at water_world_white_rain_area,item_138_soul_pod_29_sp at water_world_white_rain_area,item_136_soul_pod_5_sp at water_world_white_rain_area,item_aa_fiery_large_shield at fire_world_phoenix_cave,item_67_plate_mail_of_curing at fire_world_phoenix_cave,item_123_fire_world_stone at fire_world_phoenix_cave,item_fd_amulet_of_guardian at fire_world_phoenix_cave,item_54_fiery_full_helm at fire_world_phoenix_cave,item_127_acid_vaccine at fire_world_phoenix_cave,item_12e_dorados_ashes at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_10a_cune at fire_world_phoenix_cave,item_11c_healing_potion at fire_world_burning_cavern,item_11c_healing_potion at fire_world_burning_cavern,item_fc_amulet_of_movement at fire_world_burning_cavern,item_b9_gothic_shield at fire_world_burning_cavern,item_6a_fiery_plate_mail at fire_world_burning_cavern,item_11c_healing_potion at fire_world_molten_cavern,item_139_soul_pod_14_sp at fire_world_molten_cavern,item_11e_anti_venom at fire_world_molten_cavern,item_ae_shining_great_shield at fire_world_molten_cavern,item_9c_fiery_leg_guard at fire_world_molten_cavern,item_11e_anti_venom at fire_world_molten_cavern,item_139_soul_pod_14_sp at fire_world_molten_cavern,item_8_silent_sword at fire_world_molten_cavern,item_84_gauntlet at fire_world_ashen_cavern,item_11d_magic_potion at fire_world_ashen_cavern,item_11d_magic_potion at fire_world_ashen_cavern,item_14_crushing_broad_sword at fire_world_ashen_cavern,item_c7_priest_ring_of_fire at fire_world_ashen_cavern,item_10a_cune at fire_world_ashen_cavern,item_29_great_sword at monster_world_false_eye_area,item_ba_harden_gothic_shield at monster_world_false_eye_area,item_dd_caustic_priest_ring at monster_world_false_eye_area,item_136_soul_pod_5_sp at monster_world_false_eye_area,item_138_soul_pod_29_sp at monster_world_false_eye_area,item_e_shadow_tiger at monster_world_false_eye_area,item_11c_healing_potion at monster_world_false_eye_area,item_10a_cune at monster_world_screeching_area,item_10a_cune at monster_world_screeching_area,item_10a_cune at monster_world_screeching_area,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_10a_cune at illusion_world_bewilderment_domain,item_ba_harden_gothic_shield at illusion_world_bewilderment_domain,item_21_deadly_bastard_sword at illusion_world_bewilderment_domain,item_66_plate_mail_of_resist at illusion_world_bewilderment_domain,item_125_dust_of_rage at illusion_world_gloomy_domain,item_10d_lamp at illusion_world_gloomy_domain,item_30_guardian_great_sword at illusion_world_gloomy_domain,item_106_amulet_of_recovery at illusion_world_gloomy_domain,item_11f_anti_paralytic at illusion_world_dream_domain,item_139_soul_pod_14_sp at illusion_world_dream_domain,item_138_soul_pod_29_sp at illusion_world_dream_domain,item_88_deadly_gauntlet at illusion_world_worship_domain,item_bb_gothic_shield at illusion_world_worship_domain,item_f6_harden_bracelet at death_world_dark_castle_layer,item_10a_cune at death_world_dark_castle_layer,item_139_soul_pod_14_sp at death_world_dark_castle_layer,item_10a_cune at death_world_dark_castle_layer,item_10a_cune at death_world_dark_castle_layer,item_122_evil_eye at death_world_lingering_curse_layer,item_128_spirit_book at death_world_lingering_curse_layer,item_d6_dark_sorcerer_ring at death_world_lingering_curse_layer,item_10a_cune at death_world_undead_layer,item_138_soul_pod_29_sp at death_world_undead_layer,item_10a_cune at death_world_undead_layer,item_10a_cune at death_world_undead_layer,item_10a_cune at death_world_undead_layer,item_137_soul_pod_53_sp at death_world_undead_layer,item_25_magical_bastard_sword at death_world_undead_layer,item_2b_fiery_great_sword at death_world_undead_layer,item_120_divine_symbol at death_world_undead_layer,item_120_divine_symbol at death_world_undead_layer,item_129_sealed_sword_stone at death_world_undead_layer,item_129_sealed_sword_stone at death_world_undead_layer,item_be_gothic_shield_of_balance at death_world_gate_of_the_dead,item_137_soul_pod_53_sp at death_world_gate_of_the_dead,item_136_soul_pod_5_sp at death_world_gate_of_the_dead
 DEBUG - Collectable randomization - Placing collectable consumable item_10e_sacred_feather at human_world_solitary_region where it was a item_11c_healing_potion
 DEBUG - Collectable randomization - Placing collectable consumable item_127_acid_vaccine at human_world_solitary_region where it was a item_5b_quilted_armor
 DEBUG - Collectable randomization - Placing collectable consumable item_11f_anti_paralytic at human_world_solitary_region where it was a item_11c_healing_potion
@@ -3926,40 +3926,40 @@ DEBUG - Collectable randomization - Placing collectable consumable item_124_pois
 DEBUG - Collectable randomization - Placing collectable consumable item_139_soul_pod_14_sp at earth_world_rotting_cavern where it was a item_11e_anti_venom
 DEBUG - Collectable randomization - Placing collectable consumable item_127_acid_vaccine at earth_world_rotting_cavern where it was a item_124_poison_vaccine
 DEBUG - Collectable randomization - Placing collectable consumable item_122_evil_eye at earth_world_rotting_cavern where it was a item_11e_anti_venom
-DEBUG - Collectable randomization - Placing collectable consumable item_127_acid_vaccine at earth_world_quaking_cavern where it was a item_7d_wooden_glove
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_quaking_cavern where it was a item_a9_large_shield_of_balance
+DEBUG - Collectable randomization - Placing collectable consumable item_127_acid_vaccine at earth_world_poisonous_cavern where it was a item_10c_torch
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_poisonous_cavern where it was a item_11c_healing_potion
+DEBUG - Collectable randomization - Placing collectable consumable item_126_bottle_of_light at earth_world_poisonous_cavern where it was a item_a5_shield_of_resist
+DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_poisonous_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_128_spirit_book at earth_world_poisonous_cavern where it was a item_11c_healing_potion
+DEBUG - Collectable randomization - Placing collectable consumable item_138_soul_pod_29_sp at earth_world_poisonous_cavern where it was a item_136_soul_pod_5_sp
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_poisonous_cavern where it was a item_136_soul_pod_5_sp
+DEBUG - Collectable randomization - Placing collectable consumable item_120_divine_symbol at earth_world_poisonous_cavern where it was a item_124_poison_vaccine
+DEBUG - Collectable randomization - Placing collectable consumable item_11e_anti_venom at earth_world_poisonous_cavern where it was a item_c4_summoner_ring_of_fire
+DEBUG - Collectable randomization - Placing collectable consumable item_10c_torch at earth_world_poisonous_cavern where it was a item_11c_healing_potion
+DEBUG - Collectable randomization - Placing collectable consumable item_123_fire_world_stone at earth_world_poisonous_cavern where it was a item_3_long_sword
+DEBUG - Collectable randomization - Placing collectable consumable item_139_soul_pod_14_sp at earth_world_quaking_cavern where it was a item_7d_wooden_glove
+DEBUG - Collectable randomization - Placing collectable consumable item_11f_anti_paralytic at earth_world_quaking_cavern where it was a item_a9_large_shield_of_balance
 DEBUG - Collectable randomization - Placing collectable consumable item_126_bottle_of_light at earth_world_quaking_cavern where it was a item_124_poison_vaccine
-DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_quaking_cavern where it was a item_125_dust_of_rage
-DEBUG - Collectable randomization - Placing collectable consumable item_128_spirit_book at earth_world_quaking_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_138_soul_pod_29_sp at earth_world_quaking_cavern where it was a item_125_dust_of_rage
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_quaking_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_120_divine_symbol at earth_world_quaking_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_11e_anti_venom at earth_world_quaking_cavern where it was a item_124_poison_vaccine
-DEBUG - Collectable randomization - Placing collectable consumable item_10c_torch at earth_world_quaking_cavern where it was a item_125_dust_of_rage
-DEBUG - Collectable randomization - Placing collectable consumable item_123_fire_world_stone at earth_world_false_pit_cavern where it was a item_ea_bracelet_of_composure
-DEBUG - Collectable randomization - Placing collectable consumable item_139_soul_pod_14_sp at earth_world_false_pit_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_11f_anti_paralytic at earth_world_false_pit_cavern where it was a item_b1_tower_shield
-DEBUG - Collectable randomization - Placing collectable consumable item_126_bottle_of_light at earth_world_false_pit_cavern where it was a item_b3_tower_shield_of_honor
-DEBUG - Collectable randomization - Placing collectable consumable item_11e_anti_venom at earth_world_false_pit_cavern where it was a item_11d_magic_potion
-DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_false_pit_cavern where it was a item_11d_magic_potion
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_false_pit_cavern where it was a item_139_soul_pod_14_sp
-DEBUG - Collectable randomization - Placing collectable consumable item_126_bottle_of_light at earth_world_false_pit_cavern where it was a item_139_soul_pod_14_sp
-DEBUG - Collectable randomization - Placing collectable consumable item_10d_lamp at earth_world_false_pit_cavern where it was a item_139_soul_pod_14_sp
-DEBUG - Collectable randomization - Placing collectable consumable item_124_poison_vaccine at earth_world_false_pit_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_124_poison_vaccine at earth_world_false_pit_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_11e_anti_venom at earth_world_false_pit_cavern where it was a item_12e_dorados_ashes
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_false_pit_cavern where it was a item_12e_dorados_ashes
-DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_poisonous_cavern where it was a item_10c_torch
-DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_poisonous_cavern where it was a item_11c_healing_potion
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_poisonous_cavern where it was a item_a5_shield_of_resist
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_poisonous_cavern where it was a item_10a_cune
-DEBUG - Collectable randomization - Placing collectable consumable item_120_divine_symbol at earth_world_poisonous_cavern where it was a item_11c_healing_potion
-DEBUG - Collectable randomization - Placing collectable consumable item_11d_magic_potion at earth_world_poisonous_cavern where it was a item_136_soul_pod_5_sp
-DEBUG - Collectable randomization - Placing collectable consumable item_125_dust_of_rage at earth_world_poisonous_cavern where it was a item_136_soul_pod_5_sp
-DEBUG - Collectable randomization - Placing collectable consumable item_11f_anti_paralytic at earth_world_poisonous_cavern where it was a item_124_poison_vaccine
-DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_poisonous_cavern where it was a item_c4_summoner_ring_of_fire
-DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_poisonous_cavern where it was a item_11c_healing_potion
-DEBUG - Collectable randomization - Placing collectable consumable item_10e_sacred_feather at earth_world_poisonous_cavern where it was a item_3_long_sword
+DEBUG - Collectable randomization - Placing collectable consumable item_11e_anti_venom at earth_world_quaking_cavern where it was a item_125_dust_of_rage
+DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_quaking_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_quaking_cavern where it was a item_125_dust_of_rage
+DEBUG - Collectable randomization - Placing collectable consumable item_126_bottle_of_light at earth_world_quaking_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_10d_lamp at earth_world_quaking_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_124_poison_vaccine at earth_world_quaking_cavern where it was a item_124_poison_vaccine
+DEBUG - Collectable randomization - Placing collectable consumable item_124_poison_vaccine at earth_world_quaking_cavern where it was a item_125_dust_of_rage
+DEBUG - Collectable randomization - Placing collectable consumable item_11e_anti_venom at earth_world_false_pit_cavern where it was a item_ea_bracelet_of_composure
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_false_pit_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_false_pit_cavern where it was a item_b1_tower_shield
+DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_false_pit_cavern where it was a item_b3_tower_shield_of_honor
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_false_pit_cavern where it was a item_11d_magic_potion
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_false_pit_cavern where it was a item_11d_magic_potion
+DEBUG - Collectable randomization - Placing collectable consumable item_120_divine_symbol at earth_world_false_pit_cavern where it was a item_139_soul_pod_14_sp
+DEBUG - Collectable randomization - Placing collectable consumable item_11d_magic_potion at earth_world_false_pit_cavern where it was a item_139_soul_pod_14_sp
+DEBUG - Collectable randomization - Placing collectable consumable item_125_dust_of_rage at earth_world_false_pit_cavern where it was a item_139_soul_pod_14_sp
+DEBUG - Collectable randomization - Placing collectable consumable item_11f_anti_paralytic at earth_world_false_pit_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_false_pit_cavern where it was a item_10a_cune
+DEBUG - Collectable randomization - Placing collectable consumable item_12e_dorados_ashes at earth_world_false_pit_cavern where it was a item_12e_dorados_ashes
+DEBUG - Collectable randomization - Placing collectable consumable item_10e_sacred_feather at earth_world_false_pit_cavern where it was a item_12e_dorados_ashes
 DEBUG - Collectable randomization - Placing collectable consumable item_120_divine_symbol at earth_world_stone_cavern where it was a item_10a_cune
 DEBUG - Collectable randomization - Placing collectable consumable item_126_bottle_of_light at earth_world_stone_cavern where it was a item_10a_cune
 DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at earth_world_stone_cavern where it was a item_126_bottle_of_light
@@ -4091,7 +4091,7 @@ DEBUG - Collectable randomization - Placing collectable consumable item_127_acid
 DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at death_world_gate_of_the_dead where it was a item_137_soul_pod_53_sp
 DEBUG - Collectable randomization - Placing collectable consumable item_11c_healing_potion at death_world_gate_of_the_dead where it was a item_136_soul_pod_5_sp
 Moderating difficulty by replacing secondary consumable (item_120_divine_symbol) by a primary consumable (item_11c_healing_potion) of area human_world_hidden_region
-Moderating difficulty by replacing secondary consumable (item_128_spirit_book) by a primary consumable (item_11d_magic_potion) of area earth_world_quaking_cavern
-Moderating difficulty by replacing secondary consumable (item_12e_dorados_ashes) by a primary consumable (item_11c_healing_potion) of area earth_world_poisonous_cavern
+Moderating difficulty by replacing secondary consumable (item_128_spirit_book) by a primary consumable (item_11d_magic_potion) of area earth_world_poisonous_cavern
+Moderating difficulty by replacing secondary consumable (item_12e_dorados_ashes) by a primary consumable (item_11c_healing_potion) of area earth_world_false_pit_cavern
 Moderating difficulty by replacing secondary consumable (item_120_divine_symbol) by a primary consumable (item_136_soul_pod_5_sp) of area water_world_sunken_river_area
 Moderating difficulty by replacing secondary consumable (item_10c_torch) by a primary consumable (item_11e_anti_venom) of area illusion_world_bewilderment_domain

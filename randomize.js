@@ -147,6 +147,14 @@ function randomize(paramsFile, stDir) {
 			]
 		}
 	}
+
+    var areasBeforePoisonousCavern = [];
+    for (var a in areas) {
+        if (areas[a].name == 'earth_world_poisonous_cavern') {
+            break;
+        }
+        areasBeforePoisonousCavern.unshift(areas[a]);
+    }
 	
     function swapCreatures(creature1, creature2, changeSet) {
         if (creature1 == creature2) {
@@ -202,9 +210,11 @@ function randomize(paramsFile, stDir) {
     let changeSet = [];
 
     var forEachCreatureSpawn = [];
+    var forEachCreatureSpawnFromEndtoStart = [];
     var forEachValidCreature = [];
     var forEachItem = [];
     var forEachCollectable = [];
+    var forEachCollectableFromEndtoStart = [];
     var forEachObject = [];
 
     // Directives
@@ -408,6 +418,54 @@ function randomize(paramsFile, stDir) {
         collectable.blank();*/
     }
 
+    // Guarantee poison vaccine before poisonous cavern
+
+    var poisonVaccinesBeforePoisonousCavern = 0;
+    var poisonVaccinesRequired = Math.ceil(Math.min(Math.max(4/difficultyFactor, 1), 10));
+    function commentAchievedRequirementOfPoisonVaccine() {
+        if (poisonVaccinesBeforePoisonousCavern >= poisonVaccinesRequired) {
+            console.log("Guarantee poison vaccine - Achieved poison vaccine requirement " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired);
+        }
+    }
+
+    function countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern(spawn, area, index) {
+        if (poisonVaccinesBeforePoisonousCavern >= poisonVaccinesRequired || areasBeforePoisonousCavern.indexOf(area)==-1) {
+            return;
+        }
+        var originalItem = spawn.drop1.get();
+        if (originalItem == item_124_poison_vaccine) {
+            poisonVaccinesBeforePoisonousCavern++;
+            console.log("Guarantee poison vaccine - count " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired + ", as found one at " + area.name + "/" + spawn.name());
+            commentAchievedRequirementOfPoisonVaccine();
+        }
+    }
+
+    function countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern(collectable, area) {
+        if (poisonVaccinesBeforePoisonousCavern >= poisonVaccinesRequired || areasBeforePoisonousCavern.indexOf(area)==-1) {
+            return;
+        }
+        if (collectable.type.get() == item_124_poison_vaccine) {
+            poisonVaccinesBeforePoisonousCavern++;
+            console.log("Guarantee poison vaccine - count " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired + ", as found one at " + area.name + " collectable.");
+            commentAchievedRequirementOfPoisonVaccine();
+        }
+    }
+
+    function replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved(spawn, area, index) {
+        if (poisonVaccinesBeforePoisonousCavern >= poisonVaccinesRequired || areasBeforePoisonousCavern.indexOf(area)==-1) {
+            return;
+        }
+        var originalItem = spawn.drop1.get();
+        if ((secondaryConsumables.indexOf(originalItem)!=-1 || primaryConsumables.indexOf(originalItem)!=-1)
+            && Math.random() < 0.5) {
+            spawn.drop1.set(item_124_poison_vaccine);
+            console.log("Guarantee poison vaccine - count " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired + ". Replacing drop consumable (" + itemData[originalItem].name + ") by " + itemData[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
+            poisonVaccinesBeforePoisonousCavern++;
+            commentAchievedRequirementOfPoisonVaccine();
+        }
+    }
+
+
     // Collectables and Drops randomization
 
     var allUniqueItems = [
@@ -572,12 +630,10 @@ function randomize(paramsFile, stDir) {
     }
 
     function distributeCollectablesDumpInLateWorlds(collectable, area) {
-        if (area.name.startsWith("monster") || area.name.startsWith("death") || area.name.startsWith("illusion")) {
-            if (collectableUniques.length > 0) {
-                if (secondaryConsumables.indexOf(collectable.type.get())!=-1) {
-                    collectable.type.set(collectableUniques.shift());
-                    console.log("DEBUG - Collectable randomization - Adding collectable to late worlds: " + items[collectable.type.get()].name + " at " + area.name);
-                }
+        if (collectableUniques.length > 0) {
+            if (secondaryConsumables.indexOf(collectable.type.get())!=-1) {
+                collectable.type.set(collectableUniques.shift());
+                console.log("DEBUG - Collectable randomization - Adding collectable to late worlds: " + items[collectable.type.get()].name + " at " + area.name);
             }
         }
     }
@@ -664,26 +720,23 @@ function randomize(paramsFile, stDir) {
     }
 
     function distributeDropsDumpInLateWorlds(spawn, area, index) {
-        if (area.name.startsWith("monster") || area.name.startsWith("death") || area.name.startsWith("illusion")) {
+        var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
 
-            var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
-
-            if (arrayToRemoveFrom.length > 0) {
-                var dropsNames = "blank";
-                if (!spawn.drop1.isNull()) {
-                    dropsNames = items[spawn.drop1.get()].name + " ";
-                    if (secondaryConsumables.indexOf(spawn.drop1.get())==-1) {
-                        console.log("DEBUG - Drop randomization adding remaining to late worlds - To leave this one alone since it is not secondary consumable " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
-                        return;
-                    }
+        if (arrayToRemoveFrom.length > 0) {
+            var dropsNames = "blank";
+            if (!spawn.drop1.isNull()) {
+                dropsNames = items[spawn.drop1.get()].name + " ";
+                if (secondaryConsumables.indexOf(spawn.drop1.get())==-1) {
+                    console.log("DEBUG - Drop randomization adding remaining to late worlds - To leave this one alone since it is not secondary consumable " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
+                    return;
                 }
-                if (spawn.drop1.isNull() || 
-                        (items[spawn.drop1.get()].type.get()==ITEM &&
-                        items[spawn.drop1.get()].name!="item_10a_cune")) {
-                    spawn.drop1.set(arrayToRemoveFrom.shift());
-                    spawn.drop1Chance.set(100);
-                    console.log("DEBUG - Drop randomization adding remaining to late worlds - Adding drop: " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
-                }
+            }
+            if (spawn.drop1.isNull() || 
+                    (items[spawn.drop1.get()].type.get()==ITEM &&
+                    items[spawn.drop1.get()].name!="item_10a_cune")) {
+                spawn.drop1.set(arrayToRemoveFrom.shift());
+                spawn.drop1Chance.set(100);
+                console.log("DEBUG - Drop randomization adding remaining to late worlds - Adding drop: " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames);
             }
         }
     }
@@ -796,10 +849,10 @@ function randomize(paramsFile, stDir) {
 
             if (params.randomizeCollectablesAndDrops) {
                 forEachCollectable.push(distributeCollectablesRandomly);
-                forEachCollectable.push(distributeCollectablesDumpInLateWorlds);
+                forEachCollectableFromEndtoStart.push(distributeCollectablesDumpInLateWorlds);
                 forEachCreatureSpawn.push(distributeDropsRandomly);
                 forEachCreatureSpawn.push(guarantee99CunesPlacingTheRemainingAsDrops);
-                forEachCreatureSpawn.push(distributeDropsDumpInLateWorlds);
+                forEachCreatureSpawnFromEndtoStart.push(distributeDropsDumpInLateWorlds);
             }
         }
 
@@ -842,6 +895,10 @@ function randomize(paramsFile, stDir) {
             forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
             forEachItem.push(presetDirectivesforEachItem);
         }
+
+        forEachCreatureSpawn.push(countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern);
+        forEachCollectable.push(countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern);
+        forEachCreatureSpawnFromEndtoStart.push(replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved);
 
     }
 
@@ -909,6 +966,18 @@ function randomize(paramsFile, stDir) {
 
     forEachCollectable.forEach((func) => {
         allChangeableCollectablesInDefaultGame.forEach((collectable) => {
+            func(collectable.collectable, collectable.area);
+        });
+    });
+
+    forEachCreatureSpawnFromEndtoStart.forEach((func) => {
+        allSpawnsInDefaultGame.slice().reverse().forEach((spawn) => {
+            func(spawn.spawn, spawn.area, spawn.index);
+        });
+    });
+
+    forEachCollectableFromEndtoStart.forEach((func) => {
+        allChangeableCollectablesInDefaultGame.slice().reverse().forEach((collectable) => {
             func(collectable.collectable, collectable.area);
         });
     });
