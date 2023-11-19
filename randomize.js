@@ -344,7 +344,7 @@ function randomize(paramsFile, stDir) {
     }
 
     function applyDifficultyForEachItem(item) {
-        if (keyItems.indexOf(item.itemIndex) != -1 ||
+        if (irreplacebleKeyItems.indexOf(item.itemIndex) != -1 ||
             primaryConsumables.indexOf(item.itemIndex) != -1 ||
             secondaryConsumables.indexOf(item.itemIndex) != -1) {
             return;
@@ -397,7 +397,7 @@ function randomize(paramsFile, stDir) {
         }
         var thisItem = itemData[spawn.drop1.get()];
 
-        if (thisItem.type.get() == KEY) {
+        if (irreplacebleKeyItems.indexOf(thisItem.type.get())!=-1) {
             return;
         }
 
@@ -558,9 +558,26 @@ function randomize(paramsFile, stDir) {
         item_136_soul_pod_5_sp, item_136_soul_pod_5_sp, item_137_soul_pod_53_sp, item_137_soul_pod_53_sp, item_138_soul_pod_29_sp, item_138_soul_pod_29_sp, item_138_soul_pod_29_sp, item_138_soul_pod_29_sp, item_138_soul_pod_29_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp, item_139_soul_pod_14_sp
     ];
 
-    var keyItems = [
+    var irreplacebleKeyItems = [
         item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_113_beast_key, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_117_brass_key, item_118_iron_key, item_12a_young_dragon_gem, item_12b_pitcher_of_nadya, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key, item_129_sealed_sword_stone
     ];
+
+    var nonEssentialKeyItems = [
+        item_117_brass_key,
+        item_12f_spirit_key, item_118_iron_key, item_130_blue_crystal,
+        item_12b_pitcher_of_nadya, item_114_floodgate_key, item_115_mermaid_key,
+        item_12a_young_dragon_gem, item_113_beast_key,
+        item_112_key_of_knowledge, item_111_kings_key
+    ];
+
+    if (params.randomizeNonEssentialKeys) {
+        var distributionJump = Math.ceil(allUniqueItems.length / nonEssentialKeyItems);
+        for (var i in irreplacebleKeyItems) {
+            var positionToInsert = i * distributionJump;
+            allUniqueItems.splice(positionToInsert, 0, irreplacebleKeyItems[i]);
+        }
+        irreplacebleKeyItems = irreplacebleKeyItems.filter(item => nonEssentialKeyItems.indexOf(item)==-1);
+    }
 
     var primaryConsumables = [
         item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion, item_11c_healing_potion,
@@ -626,7 +643,7 @@ function randomize(paramsFile, stDir) {
     function randomizeEquipsStats(item) {
         if (primaryConsumables.indexOf(item.itemIndex) != -1 ||
             secondaryConsumables.indexOf(item.itemIndex) != -1 ||
-            keyItems.indexOf(item.itemIndex) != -1 ||
+            irreplacebleKeyItems.indexOf(item.itemIndex) != -1 ||
             item_10a_cune == item.itemIndex
             ) {
             return;
@@ -716,7 +733,7 @@ function randomize(paramsFile, stDir) {
 
         if (!spawn.drop1.isNull()) {
             dropsNames = items[spawn.drop1.get()].name + " ";
-            if (items[spawn.drop1.get()].type.get()==KEY) {
+            if (irreplacebleKeyItems.indexOf(items[spawn.drop1.get()].type.get())!=-1) {
                 console.log("DEBUG - Drop randomization - To leave this one alone since it is key " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
                 return;
             }
@@ -1011,7 +1028,7 @@ function randomize(paramsFile, stDir) {
 
         for (var index = 0; index < COLLECTABLE_COUNT; index++) {
             var collectable = area.collectables[index];
-            if (!collectable.isBlank() && itemData[collectable.type.get()].type.get() != KEY) {
+            if (!collectable.isBlank() && irreplacebleKeyItems.indexOf(itemData[collectable.type.get()].type.get())==-1) {
                 // Collecting only valid collectables
                 allChangeableCollectablesInDefaultGame.push({
                     area: area,

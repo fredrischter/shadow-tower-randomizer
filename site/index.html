@@ -370,26 +370,42 @@
 			<div style="font-size: 0.5em;">
 				<p>In the game, you'll find the Fiery Key after defeating Cerberus. This key opens a compartment holding the Flaming Key, which lets you teleport to the Ebony Knight's location. Since beating the Ebony Knight is essential for entering the final room and completing the game, getting the Fiery Key is a must to finish the game.</p>
 				<p>Flaming key in the first area - Makes easier game. You don't need to collect Fiery key. Just collect Flaming key in early game and use it in Ashen cavern to find Ebony Knight.
-				</div>
+			</div>
 
-				<form style="margin-top: 1em;">
-					<h3>Ilusionists</h3>
-					<div id="ilusionists-radioset">
-						<input type="radio" id="ilusionists-radio1" name="radio"><label for="ilusionists-radio1">
-							No change
-						</label>
-						<input type="radio" id="ilusionists-radio2" name="radio" checked="checked"><label for="ilusionists-radio2">
-							Worship domain
-						</label>
-						<input type="radio" id="ilusionists-radio3" name="radio" checked="checked"><label for="ilusionists-radio3">
-							Illusion World
-						</label>
-						<input type="radio" id="ilusionists-radio4" name="radio"><label for="ilusionists-radio4">
-							Anywhere in the game
-						</label>
-					</div>
-				</form>
-				<p style="font-size: 0.5em;">Ilusionists are Gorthaur, Fester and Wildowess, need to be killed in order to make Illusion World boss Disguise to show up. In the regular game they are in the worship area.</p>
+			<form style="margin-top: 1em;">
+				<h3>Non-essential keys randomization</h3>
+				<div id="non-essential-keys-radioset">
+					<input type="radio" id="non-essential-keys-radio1" name="radio checked="checked"><label for="non-essential-keys-radio1">
+						Yes
+					</label>
+					<input type="radio" id="non-essential-keys-radio2" name="radio"><label for="non-essential-keys-radio2">
+						No
+					</label>
+				</div>
+			</form>
+			
+			<div style="font-size: 0.5em;">
+				<p>Randomize non-essential keys</p>
+			</div>
+
+			<form style="margin-top: 1em;">
+				<h3>Ilusionists</h3>
+				<div id="ilusionists-radioset">
+					<input type="radio" id="ilusionists-radio1" name="radio"><label for="ilusionists-radio1">
+						No change
+					</label>
+					<input type="radio" id="ilusionists-radio2" name="radio" checked="checked"><label for="ilusionists-radio2">
+						Worship domain
+					</label>
+					<input type="radio" id="ilusionists-radio3" name="radio" checked="checked"><label for="ilusionists-radio3">
+						Illusion World
+					</label>
+					<input type="radio" id="ilusionists-radio4" name="radio"><label for="ilusionists-radio4">
+						Anywhere in the game
+					</label>
+				</div>
+			</form>
+			<p style="font-size: 0.5em;">Ilusionists are Gorthaur, Fester and Wildowess, need to be killed in order to make Illusion World boss Disguise to show up. In the regular game they are in the worship area.</p>
 
 			</div>
 
@@ -527,6 +543,7 @@
 		$( "#progressivenes-radioset" ).buttonset();
 		$( "#creature-radioset" ).buttonset();
 		$( "#fiery-key-radioset" ).buttonset();
+		$( "#non-essential-keys-radioset" ).buttonset();
 		$( "#remove-randomness-radioset" ).buttonset();
 		$( "#all-equips-radioset" ).buttonset();
 		$( "#no-hp-mp-recovery-radioset" ).buttonset();
