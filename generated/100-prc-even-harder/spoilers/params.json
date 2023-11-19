@@ -4,5 +4,6 @@
 	"difficulty": "even-harder",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "fiery-key-anywhere-before-ashen-cavern",
 	"seed": "1234567890"
 }

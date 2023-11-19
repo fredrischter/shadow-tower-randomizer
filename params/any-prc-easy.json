@@ -4,5 +4,6 @@
 	"difficulty": "easy",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
 	"seed": "1234567890"
 }

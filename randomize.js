@@ -59,6 +59,11 @@ function randomize(paramsFile, stDir) {
     var PROGRESSIVENESS_INCREASED = "increased";
     var PROGRESSIVENESS_CRAZY = "crazy";
 
+    var KEEP_ON_CERBERUS = "keep-on-cerberus";
+    var FIERY_KEY_IN_FIRE_WORLD = "fiery-key-in-fire-world";
+    var FIERY_KEY_ANYWHERE_BEFORE_ASHEN_CAVERN = "fiery-key-anywhere-before-ashen-cavern";
+    var FLAMING_KEY_IN_THE_FIRST_AREA = "flaming-key-in-the-first-area";
+
     var factorByDificultyParam = {
         "extreme-easy": 0.1,
         "easy": 0.5,
@@ -67,6 +72,10 @@ function randomize(paramsFile, stDir) {
         "very-hard": 1.6,
         "even-harder": 2
     };
+
+    if (!params.fieryKeyFlamingKeyDrop) {
+        params.fieryKeyFlamingKeyDrop = KEEP_ON_CERBERUS;
+    }
 
     var difficultyFactor = factorByDificultyParam[params.difficulty];
     var smoothDifficultyFactor = (2 + difficultyFactor)/3;
@@ -155,7 +164,25 @@ function randomize(paramsFile, stDir) {
         }
         areasBeforePoisonousCavern.unshift(areas[a]);
     }
-	
+
+    var areaTargetForFieryKeyFlammingKey=null;
+
+    if (params.fieryKeyFlamingKeyDrop == FIERY_KEY_IN_FIRE_WORLD) {
+        const candidateAreas = areas.filter(area => area.name.includes('fire'));
+        areaTargetForFieryKeyFlammingKey = candidateAreas[Math.floor((Math.random()*candidateAreas.length))];
+    } else if (params.fieryKeyFlamingKeyDrop == FIERY_KEY_ANYWHERE_BEFORE_ASHEN_CAVERN) {
+        var candidateAreas = [];
+        for (var a in areas) {
+            candidateAreas.unshift(areas[a]);
+            if (areas[a].name == 'fire_world_ashen_cavern') {
+                break;
+            }
+        }
+        areaTargetForFieryKeyFlammingKey = candidateAreas[Math.floor((Math.random()*candidateAreas.length))];
+    } else if (params.fieryKeyFlamingKeyDrop == FLAMING_KEY_IN_THE_FIRST_AREA) {
+        areaTargetForFieryKeyFlammingKey = areas[0];
+    }
+
     function swapCreatures(creature1, creature2, changeSet) {
         if (creature1 == creature2) {
             return;
@@ -461,6 +488,36 @@ function randomize(paramsFile, stDir) {
             console.log("Guarantee poison vaccine - count " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired + ". Replacing drop consumable (" + itemData[originalItem].name + ") by " + itemData[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
             poisonVaccinesBeforePoisonousCavern++;
             commentAchievedRequirementOfPoisonVaccine();
+        }
+    }
+
+    // Setting fiery key or flamming key
+    function setFieryKeyOrFlammingKey(spawn, area, index) {
+        if (params.fieryKeyFlamingKeyDrop == FIERY_KEY_IN_FIRE_WORLD ||
+            params.fieryKeyFlamingKeyDrop == FIERY_KEY_ANYWHERE_BEFORE_ASHEN_CAVERN ||
+            params.fieryKeyFlamingKeyDrop == FLAMING_KEY_IN_THE_FIRST_AREA) {
+            if (spawn.drop1.get() == item_110_fiery_key) {
+                console.log("Fiery Key / Flaming Key - removing item_110_fiery_key drop from " + area.name + "/" + spawn.name());
+                spawn.drop1.null();
+                spawn.drop1Chance.set(0);
+            }
+        }
+
+        if (areaTargetForFieryKeyFlammingKey == area) {
+            var originalItem = spawn.drop1.get();
+            if (secondaryConsumables.indexOf(originalItem)!=-1 || spawn.drop1.isNull()) {
+                if (params.fieryKeyFlamingKeyDrop == FIERY_KEY_IN_FIRE_WORLD ||
+                    params.fieryKeyFlamingKeyDrop == FIERY_KEY_ANYWHERE_BEFORE_ASHEN_CAVERN) {
+                    spawn.drop1.set(item_110_fiery_key);
+                    spawn.drop1Chance.set(100);
+                    console.log("Fiery Key / Flaming Key - Replacing drop consumable (" + (itemData[originalItem] ? itemData[originalItem].name : "blank") + ") by " + itemData[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
+                } else if (params.fieryKeyFlamingKeyDrop == FLAMING_KEY_IN_THE_FIRST_AREA) {
+                    spawn.drop1.set(item_131_flaming_key);
+                    spawn.drop1Chance.set(100);
+                    console.log("Fiery Key / Flaming Key - Replacing drop consumable (" + (itemData[originalItem] ? itemData[originalItem].name : "blank") + ") by " + itemData[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
+                }
+                areaTargetForFieryKeyFlammingKey = null;
+            }
         }
     }
 
@@ -895,9 +952,14 @@ function randomize(paramsFile, stDir) {
             forEachItem.push(presetDirectivesforEachItem);
         }
 
+        // Guarantee poison vaccine
+
         forEachCreatureSpawn.push(countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern);
         forEachCollectable.push(countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern);
         forEachCreatureSpawnFromEndtoStart.push(replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved);
+
+        // Switch fiery key or flamming key
+        forEachCreatureSpawn.push(setFieryKeyOrFlammingKey);
 
     }
 

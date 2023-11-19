@@ -1,5 +1,5 @@
 Randomization - Using given seed 1234567890
-Parameters - {"label":"very-hard","preset":"only-apply-directives","difficulty":"very-hard","seed":"1234567890"}
+Parameters - {"label":"very-hard","preset":"only-apply-directives","difficulty":"very-hard","seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 Difficulty very-hard, factor 1.6
 Applying factor 0.625 to item item_0_short_sword. Attributes str 8 spd 49 def 0 bal 0 sla 30 smh 6 pir 5 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 18 max_dura 8 dura 7
 Applying factor 0.625 to item item_1_short_sword. Attributes str 9 spd 50 def 0 bal 0 sla 29 smh 5 pir 7 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 20 max_dura 7 dura 4

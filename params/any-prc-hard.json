@@ -4,5 +4,6 @@
 	"difficulty": "hard",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
 	"seed": "1234567890"
 }

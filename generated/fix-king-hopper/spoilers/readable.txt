@@ -1,5 +1,5 @@
 Randomization - Using given seed 1234567890
-Parameters - {"label":"fix-king-hopper","preset":"fix-king-hopper","difficulty":"medium","seed":"1234567890"}
+Parameters - {"label":"fix-king-hopper","preset":"fix-king-hopper","difficulty":"medium","seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 Difficulty medium, factor 1
 DEBUG - The game has 637 spawns.
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
