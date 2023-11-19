@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the item list
-itemsList=("Guarantee poison vaccine - Achieved poison vaccine requirement")
+itemsList=("Guarantee poison vaccine - Achieved poison vaccine requirement" "Fiery Key / Flaming Key - Skipping Damned Angel" "Fiery Key / Flaming Key - Skipping Ebony Knight")
 
 # Specify the folder containing input files
 folderPath="./generated"

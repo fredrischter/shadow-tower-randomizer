@@ -413,8 +413,8 @@ function randomize(paramsFile, stDir) {
         spawn.drop1Chance.set(0);
         spawn.drop2.null();
         spawn.drop2Chance.set(0);
-        spawn.drop2.null();
-        spawn.drop2Chance.set(0);*/
+        spawn.drop3.null();
+        spawn.drop3Chance.set(0);*/
     }
 
     var collectableRemovalLoop=0;
@@ -502,6 +502,16 @@ function randomize(paramsFile, stDir) {
                 spawn.drop1Chance.set(0);
             }
         }
+
+        if (spawn.name() == '0d_damned_angel') {
+            console.log("Fiery Key / Flaming Key - Skipping Damned Angel");
+            return;
+        }
+        if (spawn.name() == '0c_ebony_knight') {
+            console.log("Fiery Key / Flaming Key - Skipping Ebony Knight");
+            return;
+        }
+
 
         if (areaTargetForFieryKeyFlammingKey == area) {
             var originalItem = spawn.drop1.get();
@@ -701,8 +711,8 @@ function randomize(paramsFile, stDir) {
 
         spawn.drop2.null();
         spawn.drop2Chance.set(0);
-        spawn.drop2.null();
-        spawn.drop2Chance.set(0);
+        spawn.drop3.null();
+        spawn.drop3Chance.set(0);
 
         if (!spawn.drop1.isNull()) {
             dropsNames = items[spawn.drop1.get()].name + " ";
