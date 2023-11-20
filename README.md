@@ -58,6 +58,7 @@ npm run mod ".\generated\st.bin" ".\params\very-hard.json"
 
 npm run mod ".\generated\st.bin" ".\params\only-fix-king-hopper.json"
 npm run mod ".\generated\st.bin" ".\params\only-apply-directives.json"
+npm run mod ".\generated\st.bin" ".\params\only-bosses.json"
 ```
 
 You can also put a image named as st.bin in generated\ folder, run all those commands to verify if produced output is different than one in the repo - that is reference generated files. Any output change indicates there was a code bahavior change, so it works like test.

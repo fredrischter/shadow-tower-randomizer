@@ -24,5 +24,6 @@ Preset,Status,MissingItems
 ./generated/fix-king-hopper/spoilers,OK,
 ./generated/hard/spoilers,OK,
 ./generated/no-change/spoilers,OK,
+./generated/only-bosses/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
 ./generated/scary-game/spoilers,OK,
 ./generated/very-hard/spoilers,OK,

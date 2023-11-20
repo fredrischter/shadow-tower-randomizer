@@ -823,9 +823,9 @@ Applying factor 0.1 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 00_akryal
+DEBUG - Creature 00_fat_mole_f
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.1 to creature 00_akryal. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.1 to creature 00_fat_mole_f. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 DEBUG - Creature 01_horned_slime
 DEBUG - Changing denfese. 80 to 8
 DEBUG - Changing attack. 80 to 8
@@ -1661,9 +1661,9 @@ Applying factor 0.1 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 DEBUG - Creature 08_apocrypha
 DEBUG - Changing denfese. 40 to 4
 Applying factor 0.1 to creature 08_apocrypha. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 2 par 0 mel 0 sol 0
-DEBUG - Creature 09_unknown_h
+DEBUG - Creature 09_descrypha
 DEBUG - Changing denfese. 70 to 7
-Applying factor 0.1 to creature 09_unknown_h. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 0 par 0 mel 2 sol 0
+Applying factor 0.1 to creature 09_descrypha. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 0 par 0 mel 2 sol 0
 DEBUG - Creature 0a_old_face
 DEBUG - Changing denfese. 60 to 6
 Applying factor 0.1 to creature 0a_old_face. Attributes str 0 spd 0 def 2 bal 0 sla 0 smh 0 pir 0 spr 5 foc 3 ham 0 pur 3 par 3 mel 3 sol 1
@@ -1993,7 +1993,7 @@ Applying factor 0.1 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - The game has 637 spawns.
+DEBUG - The game has 640 spawns.
 Moderating difficulty by replacing drop secondary consumable (item_127_acid_vaccine) by a primary consumable (item_11c_healing_potion) of human_world_solitary_region/00_dark_spider
 Moderating difficulty by replacing drop secondary consumable (item_12e_dorados_ashes) by a primary consumable (item_11c_healing_potion) of human_world_hidden_region/02_parasite
 Moderating difficulty by replacing drop secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_11e_anti_venom) of human_world_forgotten_region/01_blood_skull

@@ -39,7 +39,7 @@ Removing ATTR_HP_RECOVERY from equip item_104_priest_amulet
 Removing ATTR_MP_RECOVERY from equip item_104_priest_amulet
 Removing ATTR_HP_RECOVERY from equip item_109_endless_amulet
 Removing ATTR_MP_RECOVERY from equip item_109_endless_amulet
-DEBUG - The game has 637 spawns.
+DEBUG - The game has 640 spawns.
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
@@ -241,7 +241,7 @@ Setting spawn chance to 100%, creature 0c_worm_face where it was 50
 Setting drop chance to 100%, creature 0c_worm_face drop item_1f_frosty_bastard_sword where it was 20
 Setting spawn chance to 100%, creature 0c_worm_face where it was 25
 Setting spawn chance to 100%, creature 0c_worm_face where it was 25
-Setting drop chance to 100%, creature 00_akryal drop item_127_acid_vaccine where it was 0
+Setting drop chance to 100%, creature 00_fat_mole_f drop item_127_acid_vaccine where it was 0
 Setting spawn chance to 100%, creature 00_kabasaur where it was 20
 Setting spawn chance to 100%, creature 00_kabasaur where it was 20
 Setting drop chance to 100%, creature 05_water_knight drop item_1f_frosty_bastard_sword where it was 50
@@ -526,9 +526,13 @@ Setting drop chance to 100%, creature 0a_armored_slayer drop item_af_dark_great_
 Setting drop chance to 100%, creature 01_stack_eyes drop item_12e_dorados_ashes where it was 50
 Setting drop chance to 100%, creature 08_apocrypha drop item_e3_ring_of_seal where it was 10
 Setting drop chance to 100%, creature 08_apocrypha drop item_ca_summoner_ring_of_frost where it was 50
+Setting drop chance to 100%, creature 09_descrypha drop item_e0_ring_of_ice where it was 10
 Setting drop chance to 100%, creature 08_apocrypha drop item_df_ring_of_desire where it was 20
 Setting drop chance to 100%, creature 08_apocrypha drop item_cc_priest_ring_of_frost where it was 40
+Setting drop chance to 100%, creature 09_descrypha drop item_c8_sorcerer_ring_of_fire where it was 10
 Setting spawn chance to 100%, creature 08_apocrypha where it was 50
+Setting spawn chance to 100%, creature 09_descrypha where it was 50
+Setting drop chance to 100%, creature 09_descrypha drop item_c6_ring_of_fire_resist where it was 30
 Setting drop chance to 100%, creature 0c_old_face drop item_78_knight_plate_mail where it was 5
 Setting drop chance to 100%, creature 0c_old_face drop item_73_full_plate where it was 40
 Setting drop chance to 100%, creature 0c_old_face drop item_76_god_plate where it was 15

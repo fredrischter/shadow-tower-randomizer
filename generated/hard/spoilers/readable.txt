@@ -823,9 +823,9 @@ Applying factor 1.3 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 1.3 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - Creature 00_akryal
+DEBUG - Creature 00_fat_mole_f
 DEBUG - Changing denfese. 0 to 0
-Applying factor 1.3 to creature 00_akryal. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 1.3 to creature 00_fat_mole_f. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
 DEBUG - Creature 01_horned_slime
 DEBUG - Changing denfese. 80 to 104
 DEBUG - Changing attack. 80 to 104
@@ -1661,9 +1661,9 @@ Applying factor 1.3 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 DEBUG - Creature 08_apocrypha
 DEBUG - Changing denfese. 40 to 52
 Applying factor 1.3 to creature 08_apocrypha. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 2 par 0 mel 0 sol 0
-DEBUG - Creature 09_unknown_h
+DEBUG - Creature 09_descrypha
 DEBUG - Changing denfese. 70 to 91
-Applying factor 1.3 to creature 09_unknown_h. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 0 par 0 mel 2 sol 0
+Applying factor 1.3 to creature 09_descrypha. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 0 par 0 mel 2 sol 0
 DEBUG - Creature 0a_old_face
 DEBUG - Changing denfese. 60 to 78
 Applying factor 1.3 to creature 0a_old_face. Attributes str 0 spd 0 def 2 bal 0 sla 0 smh 0 pir 0 spr 5 foc 3 ham 0 pur 3 par 3 mel 3 sol 1
@@ -1993,7 +1993,7 @@ Applying factor 1.3 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 1.3 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
-DEBUG - The game has 637 spawns.
+DEBUG - The game has 640 spawns.
 Moderating difficulty by replacing drop secondary consumable (item_126_bottle_of_light) by a primary consumable (item_11e_anti_venom) of human_world_forgotten_region/05_blood_skull
 Moderating difficulty by replacing drop secondary consumable (item_126_bottle_of_light) by a primary consumable (item_11c_healing_potion) of earth_world_hostile_rock_cavern/00_black_onyx
 Moderating difficulty by replacing drop secondary consumable (item_10d_lamp) by a primary consumable (item_11c_healing_potion) of fire_world_burning_cavern/02_mystic_tower

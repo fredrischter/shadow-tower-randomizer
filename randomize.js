@@ -46,6 +46,7 @@ function randomize(paramsFile, stDir) {
     const PRESET_COMEDY = "comedy";
     const PRESET_BONANZA = "bonanza";
     const PRESET_SCARY_GAME = "scary-game";
+    const PRESET_ONLY_BOSSES = "only-bosses";
 
     const DIFFICULTY_EASY = "easy";
     const DIFFICULTY_EXTREME_EASY = "extreme-easy";
@@ -874,9 +875,31 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    function presetOnlyBosses(spawn, area, index) {
+        if (spawn.name().includes("guardian") ||
+                spawn.name().includes("dread_knight") ||
+                spawn.name().includes("cerberus") ||
+                spawn.name().includes("ebony_knight") ||
+                spawn.name().includes("magi_magus") ||
+                spawn.name().includes("necron") ||
+                spawn.name().includes("fester") ||
+                spawn.name().includes("wildowess") ||
+                spawn.name().includes("gorthaur") ||
+                spawn.name().includes("disguise") ||
+                spawn.name().includes("hollow_mage") ||
+                spawn.name().includes("balron") ||
+                spawn.name().includes("demon_king")) {
+            return;
+        }
+        console.log("DEBUG - Spawn removals, to keep only bosses. Removing " + area.name + "/" + spawn.name());
+        spawn.blank();
+    }
+
     function removeSceneryObjects(object, area) {
-        if (area.name.includes("tower") || area.name.includes("void") || area.exits && area.exits[""+object.index]) {
-            console.log("Remove scenery - to not mess with exits - " + area.name + " object " + object.index);
+        if (area.name.includes("tower") || area.name.includes("void") || 
+            (area.exits && area.exits[""+object.index]) || 
+            (area.totems && area.totems[""+object.index])) {
+            console.log("Remove scenery - Skipping, to not mess with tower, exits and totems - " + area.name + " object " + object.index);
             return;
         }
         console.log("Remove scenery - removing - " + area.name + " object " + object.index);
@@ -965,6 +988,13 @@ function randomize(paramsFile, stDir) {
             }
         }
 
+        // ------- Empty game
+
+        if (params.preset == PRESET_ONLY_BOSSES) {
+            forEachCreatureSpawn.push(presetOnlyBosses);
+            return;
+        }
+
         // Randomize creatures
 
         /*if (params.randomizeCreatures) {
@@ -1006,7 +1036,6 @@ function randomize(paramsFile, stDir) {
         }
 
         // Guarantee poison vaccine
-
         forEachCreatureSpawn.push(countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern);
         forEachCollectable.push(countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern);
         forEachCreatureSpawnFromEndtoStart.push(replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved);
