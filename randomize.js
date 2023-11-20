@@ -397,7 +397,7 @@ function randomize(paramsFile, stDir) {
         }
         var thisItem = itemData[spawn.drop1.get()];
 
-        if (irreplacebleKeyItems.indexOf(thisItem.type.get())!=-1) {
+        if (irreplacebleKeyItems.indexOf(thisItem.itemIndex)!=-1) {
             return;
         }
 
@@ -559,7 +559,7 @@ function randomize(paramsFile, stDir) {
     ];
 
     var irreplacebleKeyItems = [
-        item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_113_beast_key, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_117_brass_key, item_118_iron_key, item_12a_young_dragon_gem, item_12b_pitcher_of_nadya, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key, item_129_sealed_sword_stone
+        item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_117_brass_key, item_118_iron_key, item_12a_young_dragon_gem, item_12b_pitcher_of_nadya, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key, item_129_sealed_sword_stone
     ];
 
     var nonEssentialKeyItems = [
@@ -676,7 +676,7 @@ function randomize(paramsFile, stDir) {
         }
         if (primaryConsumables.indexOf(item.itemIndex) == -1 && secondaryConsumables.indexOf(item.itemIndex) == -1) {
             if (item.price.get() > 0) {
-                item.price.set(Math.min(30, Math.ceil(item.score() * Math.pow(Math.random() + 0.5, 1))));
+                item.price.set(Math.max(1, Math.min(30, Math.ceil(item.score() * Math.pow(Math.random() + 0.5, 1)))));
             }
         }
 
@@ -685,10 +685,24 @@ function randomize(paramsFile, stDir) {
     }
 
     function distributeCollectablesRandomly(collectable, area) {
+        if (area.name == 'illusion_world_bewilderment_domain' &&
+            (collectable.collectableIndex == 0xd ||
+                collectable.collectableIndex == 0xe ||
+                collectable.collectableIndex == 0xf ||
+                collectable.collectableIndex == 0x10)) {
+            return;
+        }
+
         var previous = collectable.type.get();
         collectable.blank();
 
-        if (Math.random()<PROPORTION_OF_COLLECTABLE_BEING_UNIQUES && collectableUniques.length > 1) {
+        if (params.preset == PRESET_100_PRC &&
+            area.name == 'death_world_undead_layer' &&
+            (collectable.collectableIndex == 0x7 || collectable.collectableIndex == 0x8)) {
+            var chosen = consumablesForRandomization[Math.floor((Math.random()*consumablesForRandomization.length))];
+            collectable.type.set(chosen);
+            console.log("DEBUG - Collectable randomization - Sealed sword stone place - Placing collectable consumable " + items[collectable.type.get()].name + " at " + area.name + " where it was a " + items[previous].name);
+        } else if (Math.random()<PROPORTION_OF_COLLECTABLE_BEING_UNIQUES && collectableUniques.length > 1) {
             var randomRange = Math.min(COLLECTABLE_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE, collectableUniques.length);
             var chosenIndex = Math.floor(Math.random()*randomRange);
             var chosenItem = collectableUniques[chosenIndex];
@@ -828,7 +842,19 @@ function randomize(paramsFile, stDir) {
         var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
 
         if (arrayToRemoveFrom.length > 0) {
-            if (spawn.drop2.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
+            if (spawn.drop2.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP &&
+                !spawn.drop1.isNull() && (items[spawn.drop1.get()].type.get() == WEAPON ||
+                                          items[spawn.drop1.get()].type.get() == TWO_HANDED ||
+                                          items[spawn.drop1.get()].type.get() == HELMET ||
+                                          items[spawn.drop1.get()].type.get() == ARMOR ||
+                                          items[spawn.drop1.get()].type.get() == FULL_ARMOR ||
+                                          items[spawn.drop1.get()].type.get() == GAUNTLET ||
+                                          items[spawn.drop1.get()].type.get() == BOOTS ||
+                                          items[spawn.drop1.get()].type.get() == SHIELD ||
+                                          items[spawn.drop1.get()].type.get() == RING ||
+                                          items[spawn.drop1.get()].type.get() == BRACELET ||
+                                          items[spawn.drop1.get()].type.get() == AMULET)
+                ) {
                 spawn.drop2.set(arrayToRemoveFrom.shift());
                 spawn.drop2Chance.set(100);
                 console.log("DEBUG - Drop randomization adding remaining as second drop - Adding drop: " + items[spawn.drop2.get()].name + " at " + area.name + "/" + spawn.name());
