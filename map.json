@@ -112,7 +112,7 @@
     { "id":"10", "dest":"earth_world_quaking_cavern", "world": "earth_world", "wayBackId": "3", "type":"door", "direction": "exit-bi"},
     { "id":"17", "dest":"shadow_tower_part1c", "wayBackId": "9", "type":"door"}
   ], "totems": [
-    { "id": "20", "type": "save" },
+    { "id": "4", "type": "save" },
     { "id": "29", "type": "npc" }
   ]},
 

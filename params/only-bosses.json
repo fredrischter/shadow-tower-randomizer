@@ -1,6 +1,7 @@
 {
 	"label": "only-bosses",
 	"preset": "only-bosses",
+	"difficulty": "extreme-easy",
 	"removeScenery": true,
 	"seed": "1234567890"
 }

@@ -642,7 +642,7 @@
       var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
       this.objects = [];
       console.log("\nObjects ");
-      console.log("idx  in_file offset");
+      console.log("idx  in_file offset type     ");
       for (var i = 0; i<OBJECTS_COUNT; i++) {
         var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;
         var absoluteIndex = this.map_file.startOffset + offset_in_file;
@@ -1131,6 +1131,16 @@
       this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x02);
 
       this.id = new UInt16(this.bin, this.offset_in_file + 0x04);
+      this.model = new UInt16(this.bin, this.offset_in_file + 0x0a);
+      this.kindOfText = new UInt8(this.bin, this.offset_in_file + 0x10);
+
+      this.zeroes1 = new UInt8(this.bin, this.offset_in_file + 0x11);
+      this.zeroes2 = new UInt8(this.bin, this.offset_in_file + 0x12);
+      this.zeroes3 = new UInt8(this.bin, this.offset_in_file + 0x13);
+      this.zeroes4 = new UInt8(this.bin, this.offset_in_file + 0x14);
+      this.zeroes5 = new UInt8(this.bin, this.offset_in_file + 0x15);
+      this.zeroes6 = new UInt8(this.bin, this.offset_in_file + 0x16);
+      this.zeroes7 = new UInt8(this.bin, this.offset_in_file + 0x17);
 
       this.isBlank = this.id.isNull();
 
@@ -1148,6 +1158,23 @@
       }
     }
 
+    getType() {
+      if (!this.area || !this.area.exits || !this.area.totems) {
+        return "blank";
+      }
+      if (this.area.exits[''+this.index]) {
+        return "exit-"+this.area.exits[''+this.index].type;
+      };
+      if (this.area.totems[''+this.index]) {
+        return "totem";
+      };
+      if (this.zeroes1.get() == 0 && this.zeroes2.get() == 0 && this.zeroes3.get() == 0 && this.zeroes4.get() == 0 && 
+          this.zeroes5.get() == 0 && this.zeroes6.get() == 0 && this.zeroes7.get() == 0) {
+        return "scenery";
+      };
+      return "unknown";
+    }
+
     draw(mapDraw, mapSummary) {
       if (!this.isBlank) {
         mapDraw.push({
@@ -1162,9 +1189,10 @@
     }
 
     toReadableString() {
-      var text = "" + this.index.toString(16).padEnd(5)
+      var text = "" + this.index.toString().padEnd(5)
       + this.offset_in_file.toString(16).padStart(4)
       + this.absoluteIndex.toString(16).padStart(10)
+      + " " + this.getType().padEnd(12)
       + "  tile("
       + this.tileX.get().toString(16).padStart(4)+","
       + this.tileY.get().toString(16).padStart(4)+","
@@ -1493,6 +1521,7 @@
     area.totems.forEach(totem => {
       global[area.name].totems[totem.id] = totem;
     });
+
     console.log("Exit objects for area " + global[area.name].name + " - " + JSON.stringify(global[area.name].exits));
   });
 

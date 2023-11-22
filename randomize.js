@@ -74,6 +74,7 @@ function randomize(paramsFile, stDir) {
         "even-harder": 2
     };
 
+    params.difficulty = params.difficulty || "medium";
     if (!params.fieryKeyFlamingKeyDrop) {
         params.fieryKeyFlamingKeyDrop = KEEP_ON_CERBERUS;
     }
@@ -94,19 +95,6 @@ function randomize(paramsFile, stDir) {
     PROPORTION_OF_COLLECTABLE_BEING_UNIQUES=PROPORTION_OF_COLLECTABLE_BEING_UNIQUES / smoothDifficultyFactor;
     UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=UNIQUES_SEQUENCE_RANDOMIZATION_SPAN / smoothDifficultyFactor;
 
-    console.log("DEBUG - Items randomization - Collectables/drops proportion " + 100*COLLECTABLE_UNIQUES_PROPORTION + "% collectables / " + 100*(1-COLLECTABLE_UNIQUES_PROPORTION) + "% drops.");
-    console.log("");
-    console.log("DEBUG - Items randomization - " + 100*CHANCE_OF_UNIQUE_DROP + "% of spawns will drop a unique.");
-    console.log("");
-    console.log("DEBUG - Items randomization - " + 100*CHANCE_OF_CONSUMABLE_DROP + "% of other spawns will drop a consumable.");
-    console.log("");
-    console.log("DEBUG - Items randomization - " + 100*UNIQUES_SEQUENCE_RANDOMIZATION_SPAN + "% from first of total items available from start.");
-    console.log("");
-    console.log("DEBUG - Items randomization - " + 100*PROPORTION_OF_COLLECTABLE_BEING_UNIQUES + "% of collectable will be uniques, " + 100*(1-PROPORTION_OF_COLLECTABLE_BEING_UNIQUES) + "% will be consumables.");
-    console.log("");
-    console.log("DEBUG - Items randomization - " + PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY + "% of secondary consumables will be replaced by primary.");
-    console.log("");
-
     const mapFolder = changeSetPath;
     fs.mkdirSync(mapFolder + path.sep + 'maps');
     fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
@@ -122,6 +110,19 @@ function randomize(paramsFile, stDir) {
     console.log = function() {
         logFile2.write(util.format.apply(null, arguments) + '\n');
     }
+
+    console.log("DEBUG - Items randomization - Collectables/drops proportion " + 100*COLLECTABLE_UNIQUES_PROPORTION + "% collectables / " + 100*(1-COLLECTABLE_UNIQUES_PROPORTION) + "% drops.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*CHANCE_OF_UNIQUE_DROP + "% of spawns will drop a unique.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*CHANCE_OF_CONSUMABLE_DROP + "% of other spawns will drop a consumable.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*UNIQUES_SEQUENCE_RANDOMIZATION_SPAN + "% from first of total items available from start.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + 100*PROPORTION_OF_COLLECTABLE_BEING_UNIQUES + "% of collectable will be uniques, " + 100*(1-PROPORTION_OF_COLLECTABLE_BEING_UNIQUES) + "% will be consumables.");
+    console.log("");
+    console.log("DEBUG - Items randomization - " + PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY + "% of secondary consumables will be replaced by primary.");
+    console.log("");
 
     if (params.seed) {
         seedRandom(params.seed);
@@ -338,7 +339,7 @@ function randomize(paramsFile, stDir) {
             }
         });
 
-        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes str " + creature.str.get() + " spd " + creature.spd.get() + " def " + creature.def.get() + " bal " + creature.bal.get() + " sla " + creature.sla.get() + " smh " + creature.smh.get() + " pir " + creature.pir.get() + " spr " + creature.spr.get() + " foc " + creature.foc.get() + " ham " + creature.ham.get() + " pur " + creature.pur.get() + " par " + creature.par.get() + " mel " + creature.mel.get() + " sol " + creature.sol.get());
+        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes minWeaponDefense " + creature.minWeaponDefense.get() + " maxWeaponDefense " + creature.maxWeaponDefense.get() + " minMagicDefense " + creature.minMagicDefense.get() + " maxMagicDefense " + creature.maxMagicDefense.get() + " weaponAttack1 " + creature.weaponAttack1.get() + " weaponAttack2 " + creature.weaponAttack2.get() + " weaponAttack3 " + creature.weaponAttack3.get());
         //It is too much, makes the game to take too long
         //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
 
@@ -875,20 +876,16 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    var nonRemovable = [
+        "unknown", "unused", "door", "blank",
+        "dybbuk", "lizard_servant", "mole", "auriel", "akryal", "abraxus", "panak", "king_edward", "pulsating_heart", "duhrin",
+        "fester", "wildowess", "gorthaur",
+        "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
+    ];
+
     function presetOnlyBosses(spawn, area, index) {
-        if (spawn.name().includes("guardian") ||
-                spawn.name().includes("dread_knight") ||
-                spawn.name().includes("cerberus") ||
-                spawn.name().includes("ebony_knight") ||
-                spawn.name().includes("magi_magus") ||
-                spawn.name().includes("necron") ||
-                spawn.name().includes("fester") ||
-                spawn.name().includes("wildowess") ||
-                spawn.name().includes("gorthaur") ||
-                spawn.name().includes("disguise") ||
-                spawn.name().includes("hollow_mage") ||
-                spawn.name().includes("balron") ||
-                spawn.name().includes("demon_king")) {
+        if (nonRemovable.filter(name => spawn.name().includes(name)).length) {
+            console.log("DEBUG - Spawn removals, to keep only bosses. Not removing " + area.name + "/" + spawn.name());
             return;
         }
         console.log("DEBUG - Spawn removals, to keep only bosses. Removing " + area.name + "/" + spawn.name());
@@ -898,11 +895,14 @@ function randomize(paramsFile, stDir) {
     function removeSceneryObjects(object, area) {
         if (area.name.includes("tower") || area.name.includes("void") || 
             (area.exits && area.exits[""+object.index]) || 
-            (area.totems && area.totems[""+object.index])) {
-            console.log("Remove scenery - Skipping, to not mess with tower, exits and totems - " + area.name + " object " + object.index);
+            (area.totems && area.totems[""+object.index]) || 
+            (object.getType() != "scenery" &&
+                object.id.get() != 0xa9) // Also remove flamming key chest
+            ) {
+            console.log("Remove scenery - Skipping, to preserve necessary scenery - " + area.name + " object " + object.index);
             return;
         }
-        console.log("Remove scenery - removing - " + area.name + " object " + object.index);
+        console.log("Remove scenery - removing - " + area.name + " object " + object.index + " - " + object.getType());
         object.blank();
     }
 
@@ -992,7 +992,6 @@ function randomize(paramsFile, stDir) {
 
         if (params.preset == PRESET_ONLY_BOSSES) {
             forEachCreatureSpawn.push(presetOnlyBosses);
-            return;
         }
 
         // Randomize creatures
