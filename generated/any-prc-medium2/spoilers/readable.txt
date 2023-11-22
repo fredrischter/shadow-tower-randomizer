@@ -1,3 +1,15 @@
+DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
+
+DEBUG - Items randomization - 45% of spawns will drop a unique.
+
+DEBUG - Items randomization - 50% of other spawns will drop a consumable.
+
+DEBUG - Items randomization - 20% from first of total items available from start.
+
+DEBUG - Items randomization - 30% of collectable will be uniques, 70% will be consumables.
+
+DEBUG - Items randomization - 20% of secondary consumables will be replaced by primary.
+
 Randomization - Using given seed 2
 Parameters - {"label":"any-prc-medium2","preset":"any%","difficulty":"medium","randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"fiery-key-in-fire-world","randomizeNonEssentialKeys":true,"seed":"2"}
 DEBUG - Items randomization - Collectable uniques item_112_key_of_knowledge,item_111_kings_key,item_47_cap,item_3_long_sword,item_a3_small_shield,item_5b_quilted_armor,item_10a_cune,item_8e_leather_boots,item_90_steel_boots,item_23_guardian_bastard_sword,item_ac_great_shield,item_a2_buckler,item_79_leather_glove,item_36_swift_morning_star,item_7b_leather_glove,item_63_plate_mail,item_10a_cune,item_10a_cune,item_42_bow,item_ce_soul_ring,item_fb_magical_amulet,item_a5_shield_of_resist,item_c4_summoner_ring_of_fire,item_3a_giant_axe,item_7d_wooden_glove,item_10a_cune,item_a8_harden_large_shield,item_10a_cune,item_10a_cune,item_10a_cune,item_9a_leg_guard,item_6_keenest_long_sword,item_c5_summoner_ring_of_fire,item_19_bastard_sword,item_50_full_helm,item_3c_crushing_axe,item_ed_mind_bracelet,item_101_amulet_of_resist,item_aa_fiery_large_shield,item_54_fiery_full_helm,item_10a_cune,item_10a_cune,item_10a_cune,item_96_swift_steel_boots,item_6f_plate_mail_of_protect,item_1e_fiery_bastard_sword,item_80_metal_glove,item_37_frosty_morning_star,item_cb_balance_ring_of_frost,item_6b_frosty_plate_mail,item_9f_caustic_leg_guard,item_c9_summoner_ring_of_frost,item_e8_bracelet_of_balance,item_e7_bracelet_of_resist,item_ef_deadly_bracelet,item_bc_gothic_shield_of_resist,item_de_caustic_sorcerer_ring,item_53_harden_full_helm,item_4e_helm,item_dd_caustic_priest_ring,item_10a_cune,item_10a_cune,item_28_great_sword,item_87_swift_gauntlet,item_89_arm_guard,item_df_ring_of_desire,item_4c_devil_crown,item_29_great_sword,item_f8_holy_bracelet,item_f9_king_bracelet,item_eb_bracelet_of_curing,item_1d_crushing_bastard_sword,item_c2_shinning_gothic_shield,item_bd_gothic_shield_of_honor,item_77_plate_mail_of_rage,item_10a_cune,item_10a_cune,item_10a_cune,item_b5_tower_shield_of_protect,item_30_guardian_great_sword,item_10a_cune,item_107_star_amulet,item_17_dragon_sword,item_f2_priest_bracelet,item_10a_cune,item_10a_cune,item_10a_cune,item_21_deadly_bastard_sword,item_105_amulet_of_balance,item_104_priest_amulet,item_b8_tower_shield_of_resist,item_10a_cune,item_7f_metal_glove,item_72_holy_plate_mail,item_c3_holy_gothic_shield,item_5a_holy_great_helm,item_bf_master_gothic_shield,item_c0_gothic_shield_of_power,item_d6_dark_sorcerer_ring,item_d2_holy_ring

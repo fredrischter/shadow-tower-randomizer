@@ -1,3 +1,15 @@
+DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
+
+DEBUG - Items randomization - 45% of spawns will drop a unique.
+
+DEBUG - Items randomization - 50% of other spawns will drop a consumable.
+
+DEBUG - Items randomization - 20% from first of total items available from start.
+
+DEBUG - Items randomization - 30% of collectable will be uniques, 70% will be consumables.
+
+DEBUG - Items randomization - 20% of secondary consumables will be replaced by primary.
+
 Randomization - Using given seed 1234567890
 Parameters - {"label":"apply-directives","preset":"apply-directives","difficulty":"medium","seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 Difficulty medium, factor 1

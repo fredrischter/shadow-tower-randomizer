@@ -339,7 +339,16 @@ function randomize(paramsFile, stDir) {
             }
         });
 
-        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes minWeaponDefense " + creature.minWeaponDefense.get() + " maxWeaponDefense " + creature.maxWeaponDefense.get() + " minMagicDefense " + creature.minMagicDefense.get() + " maxMagicDefense " + creature.maxMagicDefense.get() + " weaponAttack1 " + creature.weaponAttack1.get() + " weaponAttack2 " + creature.weaponAttack2.get() + " weaponAttack3 " + creature.weaponAttack3.get());
+        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes " + 
+            (creature.minWeaponDefense? 
+                "minWeaponDefense " + creature.minWeaponDefense.get() + 
+                " maxWeaponDefense " + creature.maxWeaponDefense.get() + 
+                " minMagicDefense " + creature.minMagicDefense.get() + 
+                " maxMagicDefense " + creature.maxMagicDefense.get() : "") + 
+            (creature.weaponAttack1?
+                " weaponAttack1 " + creature.weaponAttack1.get() + 
+                " weaponAttack2 " + creature.weaponAttack2.get() + 
+                " weaponAttack3 " + creature.weaponAttack3.get(): ""));
         //It is too much, makes the game to take too long
         //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
 

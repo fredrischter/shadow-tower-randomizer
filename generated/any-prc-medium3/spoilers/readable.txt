@@ -1,3 +1,15 @@
+DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
+
+DEBUG - Items randomization - 45% of spawns will drop a unique.
+
+DEBUG - Items randomization - 50% of other spawns will drop a consumable.
+
+DEBUG - Items randomization - 20% from first of total items available from start.
+
+DEBUG - Items randomization - 30% of collectable will be uniques, 70% will be consumables.
+
+DEBUG - Items randomization - 20% of secondary consumables will be replaced by primary.
+
 Randomization - Using given seed 3
 Parameters - {"label":"any-prc-medium3","preset":"any%","difficulty":"medium","randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"fiery-key-in-fire-world","randomizeNonEssentialKeys":true,"seed":"3"}
 DEBUG - Items randomization - Collectable uniques item_12c_pitcher_of_nadya_hp,item_110_fiery_key,item_a1_buckler,item_3_long_sword,item_10a_cune,item_10a_cune,item_5e_leather_armor,item_82_caustic_hand_guard,item_48_crown,item_8e_leather_boots,item_a4_small_shield,item_23_guardian_bastard_sword,item_ac_great_shield,item_10a_cune,item_5f_magical_leather_armor,item_4d_helm,item_7a_leather_glove,item_91_steel_boots,item_63_plate_mail,item_62_scale_mail_of_curing,item_ce_soul_ring,item_10a_cune,item_7_fiery_long_sword,item_3a_giant_axe,item_83_gauntlet,item_7d_wooden_glove,item_a9_large_shield_of_balance,item_10a_cune,item_10a_cune,item_b1_tower_shield,item_b3_tower_shield_of_honor,item_10a_cune,item_10a_cune,item_9a_leg_guard,item_b2_tower_shield,item_ae_shining_great_shield,item_a_rapier,item_fd_amulet_of_guardian,item_10a_cune,item_10a_cune,item_10a_cune,item_d8_ring_of_poison,item_c7_priest_ring_of_fire,item_37_frosty_morning_star,item_6b_frosty_plate_mail,item_9f_caustic_leg_guard,item_ca_summoner_ring_of_frost,item_d7_ring_of_poison,item_b6_caustic_tower_shield,item_52_full_helm_of_curing,item_69_magical_plate_mail,item_4e_helm,item_74_plate_mail_of_honor,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_89_arm_guard,item_b7_tower_shield_of_balance,item_ba_harden_gothic_shield,item_e_shadow_tiger,item_10a_cune,item_41_keenest_battle_axe,item_10a_cune,item_10a_cune,item_86_gauntlet_of_resist,item_56_great_helm,item_10a_cune,item_6d_shining_plate_mail,item_26_righteous_sword,item_10a_cune,item_10a_cune,item_21_deadly_bastard_sword,item_1a_lethal_bastard_sword,item_105_amulet_of_balance,item_104_priest_amulet,item_f7_priest_bracelet,item_59_mystic_great_helm,item_2d_keenest_great_sword,item_2e_crushing_great_sword,item_10a_cune,item_5a_holy_great_helm,item_8c_master_arm_guard,item_10a_cune,item_10a_cune

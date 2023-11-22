@@ -1,3 +1,15 @@
+DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
+
+DEBUG - Items randomization - 54% of spawns will drop a unique.
+
+DEBUG - Items randomization - 50% of other spawns will drop a consumable.
+
+DEBUG - Items randomization - 24% from first of total items available from start.
+
+DEBUG - Items randomization - 36% of collectable will be uniques, 64% will be consumables.
+
+DEBUG - Items randomization - 50% of secondary consumables will be replaced by primary.
+
 Randomization - Using given seed 1234567890
 Parameters - {"label":"100-prc-easy","preset":"100%","difficulty":"easy","randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"flaming-key-in-the-first-area","randomizeNonEssentialKeys":true,"seed":"1234567890"}
 DEBUG - Items randomization - Collectable uniques item_129_sealed_sword_stone,item_131_flaming_key,item_12f_spirit_key,item_12d_pitcher_of_nadya_mp,item_12c_pitcher_of_nadya_hp,item_35_morning_star,item_5d_leather_armor,item_10a_cune,item_48_crown,item_10a_cune,item_4a_crown_of_composure,item_10a_cune,item_a2_buckler,item_8d_leather_boots,item_8f_hard_boots,item_10a_cune,item_a7_large_shield,item_11_broad_sword,item_10a_cune,item_33_crushing_mace,item_10a_cune,item_ec_bracelet_of_recovery,item_83_gauntlet,item_64_plate_mail,item_10a_cune,item_b1_tower_shield,item_10a_cune,item_4f_magical_helm,item_27_great_sword,item_67_plate_mail_of_curing,item_93_steel_boots_of_curing,item_94_steel_boots_of_resist,item_c5_summoner_ring_of_fire,item_6a_fiery_plate_mail,item_10a_cune,item_10a_cune,item_1e_fiery_bastard_sword,item_10a_cune,item_da_sorcerer_ring_of_poison,item_d7_ring_of_poison,item_10a_cune,item_43_warrior_bow,item_dc_caustic_ring,item_dd_caustic_priest_ring,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_e1_ring_of_dark_souls,item_87_swift_gauntlet,item_ad_great_shield_of_balance,item_8a_arm_guard_of_composure,item_e4_ring_of_dead_spirit,item_c6_ring_of_fire_resist,item_d5_dark_priest_ring,item_103_sorcerer_amulet,item_56_great_helm,item_30_guardian_great_sword,item_107_star_amulet,item_f2_priest_bracelet,item_15_keenest_broad_sword,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_102_mind_amulet,item_10a_cune,item_97_steel_boots_of_balance,item_2e_crushing_great_sword,item_31_blood_sword,item_be_gothic_shield_of_balance,item_78_knight_plate_mail,item_5a_holy_great_helm,item_e2_black_ring,item_d6_dark_sorcerer_ring,item_10a_cune,item_10a_cune,item_25_magical_bastard_sword
@@ -918,1713 +930,1713 @@ DEBUG - Creature 00_dark_spider
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 9 to 4.5
 DEBUG - Changing attack. 11 to 5.5
-Applying factor 0.5 to creature 00_dark_spider. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_dark_spider. Attributes minWeaponDefense 25 maxWeaponDefense 19 minMagicDefense 25 maxMagicDefense 28.5
 DEBUG - Creature 01_acid_slime
 DEBUG - Changing denfese. 44 to 22
 DEBUG - Changing attack. 10 to 5
-Applying factor 0.5 to creature 01_acid_slime. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_acid_slime. Attributes minWeaponDefense 22 maxWeaponDefense 26 minMagicDefense 35 maxMagicDefense 40
 DEBUG - Creature 02_blood_slime
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 13 to 6.5
-Applying factor 0.5 to creature 02_blood_slime. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 02_blood_slime. Attributes minWeaponDefense 26 maxWeaponDefense 27 minMagicDefense 50.5 maxMagicDefense 171.5
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_skeleton
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 83 to 41.5
-Applying factor 0.5 to creature 06_skeleton. Attributes str 0 spd 1 def 0 bal 1 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 06_skeleton. Attributes minWeaponDefense 27.5 maxWeaponDefense 17 minMagicDefense 36.5 maxMagicDefense 43.5
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_dark_spider
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 9 to 4.5
 DEBUG - Changing attack. 11 to 5.5
-Applying factor 0.5 to creature 08_dark_spider. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_dark_spider. Attributes minWeaponDefense 25 maxWeaponDefense 19 minMagicDefense 25 maxMagicDefense 28.5
 DEBUG - Creature 09_demon_bat
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 09_demon_bat. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 1 pir 1 spr 0 foc 1 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 09_demon_bat. Attributes minWeaponDefense 25 maxWeaponDefense 34 minMagicDefense 40 maxMagicDefense 24
 DEBUG - Creature 0a_skeleton
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 83 to 41.5
-Applying factor 0.5 to creature 0a_skeleton. Attributes str 0 spd 1 def 0 bal 1 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 0a_skeleton. Attributes minWeaponDefense 27.5 maxWeaponDefense 17 minMagicDefense 36.5 maxMagicDefense 43.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_demon_bat
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 0c_demon_bat. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 1 pir 1 spr 0 foc 1 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0c_demon_bat. Attributes minWeaponDefense 25 maxWeaponDefense 34 minMagicDefense 40 maxMagicDefense 24
 DEBUG - Creature 0d_dark_spider
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 9 to 4.5
 DEBUG - Changing attack. 11 to 5.5
-Applying factor 0.5 to creature 0d_dark_spider. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_dark_spider. Attributes minWeaponDefense 25 maxWeaponDefense 19 minMagicDefense 25 maxMagicDefense 28.5
 DEBUG - Creature 0e_acid_slime
 DEBUG - Changing denfese. 44 to 22
 DEBUG - Changing attack. 10 to 5
-Applying factor 0.5 to creature 0e_acid_slime. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_acid_slime. Attributes minWeaponDefense 22 maxWeaponDefense 26 minMagicDefense 35 maxMagicDefense 40
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_acid_slime
 DEBUG - Changing denfese. 44 to 22
 DEBUG - Changing attack. 10 to 5
-Applying factor 0.5 to creature 00_acid_slime. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_acid_slime. Attributes minWeaponDefense 22 maxWeaponDefense 26 minMagicDefense 35 maxMagicDefense 40
 DEBUG - Creature 01_blood_slime
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 13 to 6.5
-Applying factor 0.5 to creature 01_blood_slime. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 01_blood_slime. Attributes minWeaponDefense 26 maxWeaponDefense 27 minMagicDefense 50.5 maxMagicDefense 171.5
 DEBUG - Creature 02_parasite
 DEBUG - Changing denfese. 77 to 38.5
 DEBUG - Changing attack. 78 to 39
 DEBUG - Changing attack. 78 to 39
-Applying factor 0.5 to creature 02_parasite. Attributes str 2 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 0 ham 1 pur 2 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 02_parasite. Attributes minWeaponDefense 38.5 maxWeaponDefense 14 minMagicDefense 37.5 maxMagicDefense 38
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_acid_slime
 DEBUG - Changing denfese. 44 to 22
 DEBUG - Changing attack. 10 to 5
-Applying factor 0.5 to creature 04_acid_slime. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_acid_slime. Attributes minWeaponDefense 22 maxWeaponDefense 26 minMagicDefense 35 maxMagicDefense 40
 DEBUG - Creature 05_blood_slime
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 13 to 6.5
-Applying factor 0.5 to creature 05_blood_slime. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 05_blood_slime. Attributes minWeaponDefense 26 maxWeaponDefense 27 minMagicDefense 50.5 maxMagicDefense 171.5
 DEBUG - Creature 06_fanged_worm
 DEBUG - Changing denfese. 48 to 24
 DEBUG - Changing attack. 24 to 12
-Applying factor 0.5 to creature 06_fanged_worm. Attributes str 1 spd 0 def 0 bal 2 sla 0 smh 0 pir 0 spr 0 foc 1 ham 2 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_fanged_worm. Attributes minWeaponDefense 24 maxWeaponDefense 35 minMagicDefense 20 maxMagicDefense 51
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_casket
 DEBUG - Changing denfese. 70 to 35
-Applying factor 0.5 to creature 08_casket. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 1 ham 1 pur 2 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 08_casket. Attributes minWeaponDefense 35 maxWeaponDefense 40 minMagicDefense 181 maxMagicDefense 242.5
 DEBUG - Creature 09_blood_slime
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 13 to 6.5
-Applying factor 0.5 to creature 09_blood_slime. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 09_blood_slime. Attributes minWeaponDefense 26 maxWeaponDefense 27 minMagicDefense 50.5 maxMagicDefense 171.5
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_acid_skull
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 16 to 8
-Applying factor 0.5 to creature 00_acid_skull. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_acid_skull. Attributes minWeaponDefense 27.5 maxWeaponDefense 30 minMagicDefense 44.5 maxMagicDefense 42.5
 DEBUG - Creature 01_blood_skull
 DEBUG - Changing denfese. 53 to 26.5
 DEBUG - Changing attack. 15 to 7.5
-Applying factor 0.5 to creature 01_blood_skull. Attributes str 0 spd 1 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_blood_skull. Attributes minWeaponDefense 26.5 maxWeaponDefense 28 minMagicDefense 37.5 maxMagicDefense 150
 DEBUG - Creature 02_skeleton
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 83 to 41.5
-Applying factor 0.5 to creature 02_skeleton. Attributes str 0 spd 1 def 0 bal 1 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 02_skeleton. Attributes minWeaponDefense 27.5 maxWeaponDefense 17 minMagicDefense 36.5 maxMagicDefense 43.5
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_acid_skull
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 16 to 8
-Applying factor 0.5 to creature 04_acid_skull. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_acid_skull. Attributes minWeaponDefense 27.5 maxWeaponDefense 30 minMagicDefense 44.5 maxMagicDefense 42.5
 DEBUG - Creature 05_blood_skull
 DEBUG - Changing denfese. 53 to 26.5
 DEBUG - Changing attack. 15 to 7.5
-Applying factor 0.5 to creature 05_blood_skull. Attributes str 0 spd 1 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_blood_skull. Attributes minWeaponDefense 26.5 maxWeaponDefense 28 minMagicDefense 37.5 maxMagicDefense 150
 DEBUG - Creature 06_skeleton
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 83 to 41.5
-Applying factor 0.5 to creature 06_skeleton. Attributes str 0 spd 1 def 0 bal 1 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 06_skeleton. Attributes minWeaponDefense 27.5 maxWeaponDefense 17 minMagicDefense 36.5 maxMagicDefense 43.5
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_dark_spider
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 9 to 4.5
 DEBUG - Changing attack. 11 to 5.5
-Applying factor 0.5 to creature 00_dark_spider. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_dark_spider. Attributes minWeaponDefense 25 maxWeaponDefense 19 minMagicDefense 25 maxMagicDefense 28.5
 DEBUG - Creature 01_shadow_spider
 DEBUG - Changing denfese. 57 to 28.5
 DEBUG - Changing attack. 3 to 1.5
-Applying factor 0.5 to creature 01_shadow_spider. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_shadow_spider. Attributes minWeaponDefense 28.5 maxWeaponDefense 39 minMagicDefense 35 maxMagicDefense 36.5
 DEBUG - Creature 02_tongue_imp
 DEBUG - Changing denfese. 52 to 26
-Applying factor 0.5 to creature 02_tongue_imp. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 02_tongue_imp. Attributes minWeaponDefense 26 maxWeaponDefense 17.5 minMagicDefense 32.5 maxMagicDefense 45
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_fat_mole_a
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_fat_mole_a. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_fat_mole_a. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_tongue_imp
 DEBUG - Changing denfese. 52 to 26
-Applying factor 0.5 to creature 06_tongue_imp. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 06_tongue_imp. Attributes minWeaponDefense 26 maxWeaponDefense 17.5 minMagicDefense 32.5 maxMagicDefense 45
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_dark_spider
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 9 to 4.5
 DEBUG - Changing attack. 11 to 5.5
-Applying factor 0.5 to creature 08_dark_spider. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_dark_spider. Attributes minWeaponDefense 25 maxWeaponDefense 19 minMagicDefense 25 maxMagicDefense 28.5
 DEBUG - Creature 09_shadow_spider
 DEBUG - Changing denfese. 57 to 28.5
 DEBUG - Changing attack. 3 to 1.5
-Applying factor 0.5 to creature 09_shadow_spider. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_shadow_spider. Attributes minWeaponDefense 28.5 maxWeaponDefense 39 minMagicDefense 35 maxMagicDefense 36.5
 DEBUG - Creature 0a_guardian_a
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 30 to 15
-Applying factor 0.5 to creature 0a_guardian_a. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 1 foc 1 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 0a_guardian_a. Attributes minWeaponDefense 40 maxWeaponDefense 21 minMagicDefense 55 maxMagicDefense 46.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_watcher_plant
 DEBUG - Changing denfese. 30 to 15
 DEBUG - Changing attack. 42 to 21
-Applying factor 0.5 to creature 00_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 00_watcher_plant. Attributes minWeaponDefense 15 maxWeaponDefense 26 minMagicDefense 10 maxMagicDefense 16
 DEBUG - Creature 01_myconid
 DEBUG - Changing denfese. 43 to 21.5
 DEBUG - Changing attack. 62 to 31
-Applying factor 0.5 to creature 01_myconid. Attributes str 2 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_myconid. Attributes minWeaponDefense 21.5 maxWeaponDefense 35 minMagicDefense 13 maxMagicDefense 40
 DEBUG - Creature 02_elder
 DEBUG - Changing denfese. 59 to 29.5
 DEBUG - Changing attack. 58 to 29
-Applying factor 0.5 to creature 02_elder. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 1 pir 1 spr 0 foc 0 ham 0 pur 0 par 2 mel 1 sol 0
+Applying factor 0.5 to creature 02_elder. Attributes minWeaponDefense 29.5 maxWeaponDefense 31 minMagicDefense 10 maxMagicDefense 18
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_minor_dwarf
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 45 to 22.5
-Applying factor 0.5 to creature 04_minor_dwarf. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_minor_dwarf. Attributes minWeaponDefense 25 maxWeaponDefense 33 minMagicDefense 15 maxMagicDefense 25
 DEBUG - Creature 05_dwarfling
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 05_dwarfling. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_dwarfling. Attributes minWeaponDefense 25 maxWeaponDefense 25 minMagicDefense 39 maxMagicDefense 22.5
 DEBUG - Creature 06_elder
 DEBUG - Changing denfese. 59 to 29.5
 DEBUG - Changing attack. 58 to 29
-Applying factor 0.5 to creature 06_elder. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 1 pir 1 spr 0 foc 0 ham 0 pur 0 par 2 mel 1 sol 0
+Applying factor 0.5 to creature 06_elder. Attributes minWeaponDefense 29.5 maxWeaponDefense 31 minMagicDefense 10 maxMagicDefense 18
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_star_serpent
 DEBUG - Changing denfese. 42 to 21
 DEBUG - Changing attack. 65 to 32.5
-Applying factor 0.5 to creature 08_star_serpent. Attributes str 0 spd 0 def 0 bal 2 sla 0 smh 1 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_star_serpent. Attributes minWeaponDefense 21 maxWeaponDefense 32.5 minMagicDefense 30 maxMagicDefense 26
 DEBUG - Creature 09_imp
 DEBUG - Changing denfese. 57 to 28.5
-Applying factor 0.5 to creature 09_imp. Attributes str 0 spd 1 def 0 bal 0 sla 2 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_imp. Attributes minWeaponDefense 28.5 maxWeaponDefense 37 minMagicDefense 24 maxMagicDefense 30
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_barrel_snail
 DEBUG - Changing denfese. 68 to 34
-Applying factor 0.5 to creature 0c_barrel_snail. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0c_barrel_snail. Attributes minWeaponDefense 34 maxWeaponDefense 21 minMagicDefense 10 maxMagicDefense 45
 DEBUG - Creature 0d_tondrom
 DEBUG - Changing denfese. 135 to 67.5
 DEBUG - Changing attack. 36 to 18
-Applying factor 0.5 to creature 0d_tondrom. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 2 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_tondrom. Attributes minWeaponDefense 67.5 maxWeaponDefense 51 minMagicDefense 22.5 maxMagicDefense 33
 DEBUG - Creature 0e_auriel_a
 DEBUG - Changing denfese. 59 to 29.5
 DEBUG - Changing attack. 58 to 29
-Applying factor 0.5 to creature 0e_auriel_a. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 1 pir 1 spr 0 foc 0 ham 0 pur 0 par 2 mel 1 sol 0
+Applying factor 0.5 to creature 0e_auriel_a. Attributes minWeaponDefense 29.5 maxWeaponDefense 31 minMagicDefense 10 maxMagicDefense 18
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_duhrin
 DEBUG - Changing denfese. 65 to 32.5
-Applying factor 0.5 to creature 00_duhrin. Attributes str 0 spd 0 def 0 bal 5 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_duhrin. Attributes minWeaponDefense 32.5 maxWeaponDefense 62 minMagicDefense 35 maxMagicDefense 43
 DEBUG - Creature 01_beak_plant
 DEBUG - Changing denfese. 30 to 15
 DEBUG - Changing attack. 50 to 25
-Applying factor 0.5 to creature 01_beak_plant. Attributes str 0 spd 1 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_beak_plant. Attributes minWeaponDefense 15 maxWeaponDefense 30 minMagicDefense 23 maxMagicDefense 20.5
 DEBUG - Creature 02_watcher_plant
 DEBUG - Changing denfese. 30 to 15
 DEBUG - Changing attack. 42 to 21
-Applying factor 0.5 to creature 02_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 02_watcher_plant. Attributes minWeaponDefense 15 maxWeaponDefense 26 minMagicDefense 10 maxMagicDefense 16
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_auriel_b
 DEBUG - Changing denfese. 150 to 75
-Applying factor 0.5 to creature 04_auriel_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_auriel_b. Attributes minWeaponDefense 75 maxWeaponDefense 80 minMagicDefense 32.5 maxMagicDefense 32.5
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_trickster
 DEBUG - Changing denfese. 53 to 26.5
-Applying factor 0.5 to creature 08_trickster. Attributes str 0 spd 0 def 1 bal 1 sla 0 smh 0 pir 0 spr 0 foc 1 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_trickster. Attributes minWeaponDefense 26.5 maxWeaponDefense 33.5 minMagicDefense 15 maxMagicDefense 7
 DEBUG - Creature 09_dwarf_warrior
 DEBUG - Changing denfese. 93 to 46.5
 DEBUG - Changing attack. 64 to 32
 DEBUG - Changing attack. 64 to 32
-Applying factor 0.5 to creature 09_dwarf_warrior. Attributes str 1 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_dwarf_warrior. Attributes minWeaponDefense 46.5 maxWeaponDefense 42.5 minMagicDefense 24 maxMagicDefense 34
 DEBUG - Creature 0c_hanging_dead
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 0c_hanging_dead. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_hanging_dead. Attributes minWeaponDefense 25 maxWeaponDefense 16 minMagicDefense 21 maxMagicDefense 15
 DEBUG - Creature 0d_trickster
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 50 to 25
-Applying factor 0.5 to creature 0d_trickster. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 4 sol 2
+Applying factor 0.5 to creature 0d_trickster. Attributes minWeaponDefense 39 maxWeaponDefense 52.5 minMagicDefense 36 maxMagicDefense 23
 DEBUG - Creature 0e_watcher_plant
 DEBUG - Changing denfese. 30 to 15
 DEBUG - Changing attack. 42 to 21
-Applying factor 0.5 to creature 0e_watcher_plant. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0e_watcher_plant. Attributes minWeaponDefense 15 maxWeaponDefense 26 minMagicDefense 10 maxMagicDefense 16
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_sand_leech_a
 DEBUG - Changing denfese. 30 to 15
-Applying factor 0.5 to creature 00_sand_leech_a. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 2 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_sand_leech_a. Attributes minWeaponDefense 15 maxWeaponDefense 21 minMagicDefense 25 maxMagicDefense 41
 DEBUG - Creature 01_blue_flicker
 DEBUG - Changing denfese. 46 to 23
-Applying factor 0.5 to creature 01_blue_flicker. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_blue_flicker. Attributes minWeaponDefense 23 maxWeaponDefense 25 minMagicDefense 20 maxMagicDefense 20
 DEBUG - Creature 02_sand_leech_b
 DEBUG - Changing denfese. 87 to 43.5
 DEBUG - Changing attack. 82 to 41
-Applying factor 0.5 to creature 02_sand_leech_b. Attributes str 1 spd 0 def 0 bal 0 sla 1 smh 1 pir 1 spr 0 foc 0 ham 0 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_sand_leech_b. Attributes minWeaponDefense 43.5 maxWeaponDefense 50 minMagicDefense 60 maxMagicDefense 255
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_kiljoy
 DEBUG - Changing denfese. 40 to 20
 DEBUG - Changing attack. 180 to 90
 DEBUG - Changing attack. 191 to 95.5
 DEBUG - Changing attack. 201 to 100.5
-Applying factor 0.5 to creature 04_kiljoy. Attributes str 0 spd 2 def 0 bal 0 sla 4 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_kiljoy. Attributes minWeaponDefense 20 maxWeaponDefense 30 minMagicDefense 30 maxMagicDefense 22.5
 DEBUG - Creature 05_acid_pod
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 05_acid_pod. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 05_acid_pod. Attributes minWeaponDefense 25 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 40
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_torg
 DEBUG - Changing denfese. 44 to 22
 DEBUG - Changing attack. 98 to 49
-Applying factor 0.5 to creature 08_torg. Attributes str 2 spd 0 def 1 bal 2 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_torg. Attributes minWeaponDefense 22 maxWeaponDefense 31.5 minMagicDefense 13.5 maxMagicDefense 26.5
 DEBUG - Creature 09_cocoon_plant
 DEBUG - Changing denfese. 62 to 31
 DEBUG - Changing attack. 64 to 32
-Applying factor 0.5 to creature 09_cocoon_plant. Attributes str 0 spd 0 def 0 bal 2 sla 0 smh 0 pir 0 spr 0 foc 0 ham 2 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_cocoon_plant. Attributes minWeaponDefense 31 maxWeaponDefense 51 minMagicDefense 17.5 maxMagicDefense 22.5
 DEBUG - Creature 0a_cocoon_plant
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 0a_cocoon_plant. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0a_cocoon_plant. Attributes minWeaponDefense 25 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 40
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_earth_knight
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 122 to 61
 DEBUG - Changing attack. 65 to 32.5
 DEBUG - Changing attack. 45 to 22.5
-Applying factor 0.5 to creature 00_earth_knight. Attributes str 0 spd 3 def 2 bal 0 sla 2 smh 0 pir 0 spr 1 foc 0 ham 2 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 00_earth_knight. Attributes minWeaponDefense 39 maxWeaponDefense 38 minMagicDefense 35 maxMagicDefense 28
 DEBUG - Creature 01_acid_pod
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 01_acid_pod. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 01_acid_pod. Attributes minWeaponDefense 25 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 40
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_cannon_snail
 DEBUG - Changing denfese. 62 to 31
-Applying factor 0.5 to creature 04_cannon_snail. Attributes str 0 spd 0 def 2 bal 0 sla 0 smh 0 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 2 sol 0
+Applying factor 0.5 to creature 04_cannon_snail. Attributes minWeaponDefense 31 maxWeaponDefense 50 minMagicDefense 22.5 maxMagicDefense 23
 DEBUG - Creature 05_cocoon_plant
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 05_cocoon_plant. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 05_cocoon_plant. Attributes minWeaponDefense 25 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 40
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_guardian_b
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 92 to 46
 DEBUG - Changing attack. 92 to 46
-Applying factor 0.5 to creature 08_guardian_b. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 1 spr 1 foc 1 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 08_guardian_b. Attributes minWeaponDefense 30 maxWeaponDefense 21 minMagicDefense 89 maxMagicDefense 89.5
 DEBUG - Creature 09_sloth_bug
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 93 to 46.5
 DEBUG - Changing attack. 130 to 65
-Applying factor 0.5 to creature 09_sloth_bug. Attributes str 1 spd 0 def 3 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_sloth_bug. Attributes minWeaponDefense 40 maxWeaponDefense 35 minMagicDefense 30 maxMagicDefense 47.5
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_ray_plant
 DEBUG - Changing denfese. 105 to 52.5
-Applying factor 0.5 to creature 0c_ray_plant. Attributes str 0 spd 0 def 0 bal 0 sla 5 smh 0 pir 0 spr 0 foc 5 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_ray_plant. Attributes minWeaponDefense 52.5 maxWeaponDefense 22.5 minMagicDefense 45 maxMagicDefense 35
 DEBUG - Creature 0d_cocoon_plant
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 0d_cocoon_plant. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0d_cocoon_plant. Attributes minWeaponDefense 25 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 40
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_dybbuk
 DEBUG - Changing denfese. 60 to 30
-Applying factor 0.5 to creature 00_dybbuk. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_dybbuk. Attributes minWeaponDefense 30 maxWeaponDefense 35 minMagicDefense 40 maxMagicDefense 39
 DEBUG - Creature 01_demon_bat
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 01_demon_bat. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 1 pir 1 spr 0 foc 1 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 01_demon_bat. Attributes minWeaponDefense 25 maxWeaponDefense 34 minMagicDefense 40 maxMagicDefense 24
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_dybbuk
 DEBUG - Changing denfese. 60 to 30
-Applying factor 0.5 to creature 04_dybbuk. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_dybbuk. Attributes minWeaponDefense 30 maxWeaponDefense 35 minMagicDefense 40 maxMagicDefense 39
 DEBUG - Creature 05_hobble_worm
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 90 to 45
-Applying factor 0.5 to creature 05_hobble_worm. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 0 ham 2 pur 0 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 05_hobble_worm. Attributes minWeaponDefense 30 maxWeaponDefense 42.5 minMagicDefense 22.5 maxMagicDefense 18
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_clay_servant
 DEBUG - Changing denfese. 132 to 66
 DEBUG - Changing attack. 102 to 51
 DEBUG - Changing attack. 128 to 64
-Applying factor 0.5 to creature 08_clay_servant. Attributes str 2 spd 0 def 2 bal 2 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_clay_servant. Attributes minWeaponDefense 66 maxWeaponDefense 69 minMagicDefense 25 maxMagicDefense 35
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_barrel_snail
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 93 to 46.5
 DEBUG - Changing attack. 130 to 65
-Applying factor 0.5 to creature 0a_barrel_snail. Attributes str 1 spd 0 def 3 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_barrel_snail. Attributes minWeaponDefense 40 maxWeaponDefense 35 minMagicDefense 30 maxMagicDefense 47.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_dybbuk
 DEBUG - Changing denfese. 65 to 32.5
-Applying factor 0.5 to creature 0c_dybbuk. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_dybbuk. Attributes minWeaponDefense 32.5 maxWeaponDefense 30 minMagicDefense 40 maxMagicDefense 39
 DEBUG - Creature 0d_crying_root
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 0d_crying_root. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 0d_crying_root. Attributes minWeaponDefense 25 maxWeaponDefense 42 minMagicDefense 10 maxMagicDefense 50
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_black_onyx
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 142 to 71
-Applying factor 0.5 to creature 00_black_onyx. Attributes str 0 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 1 foc 1 ham 0 pur 1 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 00_black_onyx. Attributes minWeaponDefense 35 maxWeaponDefense 20 minMagicDefense 172.5 maxMagicDefense 168
 DEBUG - Creature 01_earth_knight
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 122 to 61
 DEBUG - Changing attack. 65 to 32.5
 DEBUG - Changing attack. 45 to 22.5
-Applying factor 0.5 to creature 01_earth_knight. Attributes str 0 spd 3 def 2 bal 0 sla 2 smh 0 pir 0 spr 1 foc 0 ham 2 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 01_earth_knight. Attributes minWeaponDefense 39 maxWeaponDefense 38 minMagicDefense 35 maxMagicDefense 28
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_dread_knight
 DEBUG - Changing denfese. 115 to 57.5
 DEBUG - Changing attack. 190 to 95
 DEBUG - Changing attack. 110 to 55
-Applying factor 0.5 to creature 04_dread_knight. Attributes str 10 spd 0 def 0 bal 3 sla 8 smh 6 pir 0 spr 0 foc 0 ham 0 pur 0 par 4 mel 0 sol 7
+Applying factor 0.5 to creature 04_dread_knight. Attributes minWeaponDefense 57.5 maxWeaponDefense 50 minMagicDefense 75 maxMagicDefense 65
 DEBUG - Creature 05_earth_knight
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 122 to 61
 DEBUG - Changing attack. 65 to 32.5
 DEBUG - Changing attack. 45 to 22.5
-Applying factor 0.5 to creature 05_earth_knight. Attributes str 0 spd 3 def 2 bal 0 sla 2 smh 0 pir 0 spr 1 foc 0 ham 2 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 05_earth_knight. Attributes minWeaponDefense 39 maxWeaponDefense 38 minMagicDefense 35 maxMagicDefense 28
 DEBUG - Creature 06_dread_knight_unused
 DEBUG - Changing denfese. 110 to 55
-Applying factor 0.5 to creature 06_dread_knight_unused. Attributes str 10 spd 0 def 0 bal 3 sla 8 smh 6 pir 0 spr 0 foc 0 ham 0 pur 0 par 4 mel 0 sol 7
+Applying factor 0.5 to creature 06_dread_knight_unused. Attributes minWeaponDefense 55 maxWeaponDefense 55 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_fat_mole_f
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_fat_mole_f. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_fat_mole_f. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_horned_slime
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 80 to 40
-Applying factor 0.5 to creature 01_horned_slime. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 01_horned_slime. Attributes minWeaponDefense 40 maxWeaponDefense 39 minMagicDefense 44.5 maxMagicDefense 36
 DEBUG - Creature 02_blood_brain
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 50 to 25
-Applying factor 0.5 to creature 02_blood_brain. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 1 sol 0
+Applying factor 0.5 to creature 02_blood_brain. Attributes minWeaponDefense 40 maxWeaponDefense 44 minMagicDefense 39.5 maxMagicDefense 56.5
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_horned_slime
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 80 to 40
-Applying factor 0.5 to creature 05_horned_slime. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 05_horned_slime. Attributes minWeaponDefense 40 maxWeaponDefense 39 minMagicDefense 44.5 maxMagicDefense 36
 DEBUG - Creature 06_dweller
 DEBUG - Changing denfese. 75 to 37.5
-Applying factor 0.5 to creature 06_dweller. Attributes str 1 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 06_dweller. Attributes minWeaponDefense 37.5 maxWeaponDefense 41 minMagicDefense 39.5 maxMagicDefense 47
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_dementor
 DEBUG - Changing denfese. 89 to 44.5
 DEBUG - Changing attack. 250 to 125
 DEBUG - Changing attack. 195 to 97.5
-Applying factor 0.5 to creature 09_dementor. Attributes str 4 spd 0 def 1 bal 0 sla 0 smh 0 pir 3 spr 1 foc 0 ham 0 pur 0 par 1 mel 0 sol 1
+Applying factor 0.5 to creature 09_dementor. Attributes minWeaponDefense 44.5 maxWeaponDefense 37.5 minMagicDefense 34 maxMagicDefense 39.5
 DEBUG - Creature 0a_dweller
 DEBUG - Changing denfese. 75 to 37.5
-Applying factor 0.5 to creature 0a_dweller. Attributes str 1 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0a_dweller. Attributes minWeaponDefense 37.5 maxWeaponDefense 41 minMagicDefense 39.5 maxMagicDefense 47
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_worm_face
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 135 to 67.5
-Applying factor 0.5 to creature 0c_worm_face. Attributes str 3 spd 0 def 0 bal 1 sla 0 smh 0 pir 0 spr 0 foc 2 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0c_worm_face. Attributes minWeaponDefense 30 maxWeaponDefense 50 minMagicDefense 39.5 maxMagicDefense 24
 DEBUG - Creature 0d_hatchlin
 DEBUG - Changing denfese. 118 to 59
-Applying factor 0.5 to creature 0d_hatchlin. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 10 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_hatchlin. Attributes minWeaponDefense 59 maxWeaponDefense 31 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_kabasaur
 DEBUG - Changing denfese. 77 to 38.5
 DEBUG - Changing attack. 305 to 152.5
 DEBUG - Changing attack. 230 to 115
-Applying factor 0.5 to creature 00_kabasaur. Attributes str 3 spd 0 def 0 bal 1 sla 0 smh 2 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 00_kabasaur. Attributes minWeaponDefense 38.5 maxWeaponDefense 45 minMagicDefense 47.5 maxMagicDefense 39.5
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_kabasaur
 DEBUG - Changing denfese. 77 to 38.5
 DEBUG - Changing attack. 305 to 152.5
 DEBUG - Changing attack. 230 to 115
-Applying factor 0.5 to creature 04_kabasaur. Attributes str 3 spd 0 def 0 bal 1 sla 0 smh 2 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 04_kabasaur. Attributes minWeaponDefense 38.5 maxWeaponDefense 45 minMagicDefense 47.5 maxMagicDefense 39.5
 DEBUG - Creature 05_water_knight
 DEBUG - Changing denfese. 75 to 37.5
 DEBUG - Changing attack. 135 to 67.5
 DEBUG - Changing attack. 135 to 67.5
-Applying factor 0.5 to creature 05_water_knight. Attributes str 0 spd 0 def 2 bal 0 sla 0 smh 1 pir 4 spr 0 foc 0 ham 1 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 05_water_knight. Attributes minWeaponDefense 37.5 maxWeaponDefense 32.5 minMagicDefense 39.5 maxMagicDefense 44.5
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_kabasaur
 DEBUG - Changing denfese. 77 to 38.5
 DEBUG - Changing attack. 305 to 152.5
 DEBUG - Changing attack. 230 to 115
-Applying factor 0.5 to creature 00_kabasaur. Attributes str 3 spd 0 def 0 bal 1 sla 0 smh 2 pir 0 spr 1 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 00_kabasaur. Attributes minWeaponDefense 38.5 maxWeaponDefense 45 minMagicDefense 47.5 maxMagicDefense 39.5
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_horned_slime
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 80 to 40
-Applying factor 0.5 to creature 02_horned_slime. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 02_horned_slime. Attributes minWeaponDefense 40 maxWeaponDefense 39 minMagicDefense 44.5 maxMagicDefense 36
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_great_frog
 DEBUG - Changing denfese. 88 to 44
-Applying factor 0.5 to creature 04_great_frog. Attributes str 5 spd 0 def 2 bal 0 sla 0 smh 0 pir 0 spr 1 foc 0 ham 0 pur 4 par 0 mel 4 sol 0
+Applying factor 0.5 to creature 04_great_frog. Attributes minWeaponDefense 44 maxWeaponDefense 59.5 minMagicDefense 44.5 maxMagicDefense 47.5
 DEBUG - Creature 05_blood_brain
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 50 to 25
-Applying factor 0.5 to creature 05_blood_brain. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 1 sol 0
+Applying factor 0.5 to creature 05_blood_brain. Attributes minWeaponDefense 40 maxWeaponDefense 44 minMagicDefense 39.5 maxMagicDefense 56.5
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_koazul
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 260 to 130
 DEBUG - Changing attack. 270 to 135
-Applying factor 0.5 to creature 09_koazul. Attributes str 2 spd 0 def 0 bal 0 sla 1 smh 0 pir 1 spr 3 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 09_koazul. Attributes minWeaponDefense 39 maxWeaponDefense 43 minMagicDefense 90 maxMagicDefense 207.5
 DEBUG - Creature 0a_horned_slime
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 80 to 40
-Applying factor 0.5 to creature 0a_horned_slime. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 0a_horned_slime. Attributes minWeaponDefense 40 maxWeaponDefense 39 minMagicDefense 44.5 maxMagicDefense 36
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_gaze_hopper
 DEBUG - Changing denfese. 79 to 39.5
 DEBUG - Changing attack. 155 to 77.5
-Applying factor 0.5 to creature 0c_gaze_hopper. Attributes str 0 spd 0 def 1 bal 0 sla 0 smh 0 pir 0 spr 1 foc 2 ham 0 pur 0 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 0c_gaze_hopper. Attributes minWeaponDefense 39.5 maxWeaponDefense 35 minMagicDefense 50 maxMagicDefense 51
 DEBUG - Creature 0d_slasher
 DEBUG - Changing denfese. 75 to 37.5
 DEBUG - Changing attack. 255 to 127.5
-Applying factor 0.5 to creature 0d_slasher. Attributes str 0 spd 2 def 0 bal 0 sla 5 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_slasher. Attributes minWeaponDefense 37.5 maxWeaponDefense 32.5 minMagicDefense 39.5 maxMagicDefense 44.5
 DEBUG - Creature 0e_manna_python
 DEBUG - Changing denfese. 90 to 45
 DEBUG - Changing attack. 145 to 72.5
-Applying factor 0.5 to creature 0e_manna_python. Attributes str 2 spd 0 def 0 bal 0 sla 0 smh 2 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 2 sol 0
+Applying factor 0.5 to creature 0e_manna_python. Attributes minWeaponDefense 45 maxWeaponDefense 50 minMagicDefense 58 maxMagicDefense 47
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_winged_worm
 DEBUG - Changing denfese. 45 to 22.5
-Applying factor 0.5 to creature 00_winged_worm. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 2 ham 0 pur 3 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_winged_worm. Attributes minWeaponDefense 22.5 maxWeaponDefense 17.5 minMagicDefense 39.5 maxMagicDefense 44.5
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_dragon_turtle
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 228 to 114
-Applying factor 0.5 to creature 04_dragon_turtle. Attributes str 0 spd 0 def 7 bal 4 sla 0 smh 0 pir 0 spr 1 foc 0 ham 6 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 04_dragon_turtle. Attributes minWeaponDefense 39 maxWeaponDefense 45 minMagicDefense 87.5 maxMagicDefense 34.5
 DEBUG - Creature 05_magi_magus
 DEBUG - Changing denfese. 80 to 40
-Applying factor 0.5 to creature 05_magi_magus. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 10 foc 1 ham 6 pur 0 par 0 mel 12 sol 9
+Applying factor 0.5 to creature 05_magi_magus. Attributes minWeaponDefense 40 maxWeaponDefense 60 minMagicDefense 77.5 maxMagicDefense 181
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_fire_jinn
 DEBUG - Changing denfese. 62 to 31
 DEBUG - Changing attack. 120 to 60
-Applying factor 0.5 to creature 02_fire_jinn. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 1 pir 1 spr 1 foc 0 ham 0 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_fire_jinn. Attributes minWeaponDefense 31 maxWeaponDefense 31 minMagicDefense 27 maxMagicDefense 32.5
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_jinn_lord
 DEBUG - Changing denfese. 80 to 40
-Applying factor 0.5 to creature 04_jinn_lord. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 3 pir 0 spr 1 foc 2 ham 1 pur 0 par 3 mel 0 sol 0
+Applying factor 0.5 to creature 04_jinn_lord. Attributes minWeaponDefense 40 maxWeaponDefense 47 minMagicDefense 27 maxMagicDefense 70
 DEBUG - Creature 05_armored_jinn
 DEBUG - Changing denfese. 100 to 50
 DEBUG - Changing attack. 250 to 125
-Applying factor 0.5 to creature 05_armored_jinn. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 1 pir 1 spr 1 foc 1 ham 0 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 05_armored_jinn. Attributes minWeaponDefense 50 maxWeaponDefense 47.5 minMagicDefense 27 maxMagicDefense 70
 DEBUG - Creature 06_fire_jinn
 DEBUG - Changing denfese. 62 to 31
 DEBUG - Changing attack. 120 to 60
-Applying factor 0.5 to creature 06_fire_jinn. Attributes str 0 spd 0 def 0 bal 0 sla 1 smh 1 pir 1 spr 1 foc 0 ham 0 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_fire_jinn. Attributes minWeaponDefense 31 maxWeaponDefense 31 minMagicDefense 27 maxMagicDefense 32.5
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_berzerker
 DEBUG - Changing denfese. 65 to 32.5
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 00_berzerker. Attributes str 1 spd 1 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 00_berzerker. Attributes minWeaponDefense 32.5 maxWeaponDefense 22.5 minMagicDefense 10 maxMagicDefense 36
 DEBUG - Creature 01_dweller
 DEBUG - Changing denfese. 82 to 41
-Applying factor 0.5 to creature 01_dweller. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 3 pir 0 spr 0 foc 0 ham 0 pur 0 par 1 mel 2 sol 0
+Applying factor 0.5 to creature 01_dweller. Attributes minWeaponDefense 41 maxWeaponDefense 44 minMagicDefense 10 maxMagicDefense 40
 DEBUG - Creature 02_mystic_tower
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 02_mystic_tower. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 02_mystic_tower. Attributes minWeaponDefense 39.5 maxWeaponDefense 27.5 minMagicDefense 25 maxMagicDefense 35
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_berzerker
 DEBUG - Changing denfese. 65 to 32.5
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 04_berzerker. Attributes str 1 spd 1 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 04_berzerker. Attributes minWeaponDefense 32.5 maxWeaponDefense 22.5 minMagicDefense 10 maxMagicDefense 36
 DEBUG - Creature 05_dweller
 DEBUG - Changing denfese. 82 to 41
-Applying factor 0.5 to creature 05_dweller. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 3 pir 0 spr 0 foc 0 ham 0 pur 0 par 1 mel 2 sol 0
+Applying factor 0.5 to creature 05_dweller. Attributes minWeaponDefense 41 maxWeaponDefense 44 minMagicDefense 10 maxMagicDefense 40
 DEBUG - Creature 06_mystic_tower
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 06_mystic_tower. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 06_mystic_tower. Attributes minWeaponDefense 39.5 maxWeaponDefense 27.5 minMagicDefense 25 maxMagicDefense 35
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_berzerker
 DEBUG - Changing denfese. 65 to 32.5
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 08_berzerker. Attributes str 1 spd 1 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 08_berzerker. Attributes minWeaponDefense 32.5 maxWeaponDefense 22.5 minMagicDefense 10 maxMagicDefense 36
 DEBUG - Creature 09_iron_crusher
 DEBUG - Changing denfese. 82 to 41
-Applying factor 0.5 to creature 09_iron_crusher. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 3 pir 0 spr 0 foc 0 ham 0 pur 0 par 1 mel 2 sol 0
+Applying factor 0.5 to creature 09_iron_crusher. Attributes minWeaponDefense 41 maxWeaponDefense 44 minMagicDefense 10 maxMagicDefense 40
 DEBUG - Creature 0a_mystic_tower
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 0a_mystic_tower. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0a_mystic_tower. Attributes minWeaponDefense 39.5 maxWeaponDefense 27.5 minMagicDefense 25 maxMagicDefense 35
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_dweller
 DEBUG - Changing denfese. 82 to 41
-Applying factor 0.5 to creature 0d_dweller. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 3 pir 0 spr 0 foc 0 ham 0 pur 0 par 1 mel 2 sol 0
+Applying factor 0.5 to creature 0d_dweller. Attributes minWeaponDefense 41 maxWeaponDefense 44 minMagicDefense 10 maxMagicDefense 40
 DEBUG - Creature 0e_mystic_tower
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 0e_mystic_tower. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0e_mystic_tower. Attributes minWeaponDefense 39.5 maxWeaponDefense 27.5 minMagicDefense 25 maxMagicDefense 35
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_abraxus
 DEBUG - Changing denfese. 85 to 42.5
-Applying factor 0.5 to creature 00_abraxus. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 5 foc 2 ham 1 pur 0 par 5 mel 0 sol 4
+Applying factor 0.5 to creature 00_abraxus. Attributes minWeaponDefense 42.5 maxWeaponDefense 42.5 minMagicDefense 5 maxMagicDefense 50
 DEBUG - Creature 01_horned_skull
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 120 to 60
-Applying factor 0.5 to creature 01_horned_skull. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 0 pir 2 spr 0 foc 0 ham 0 pur 0 par 1 mel 0 sol 1
+Applying factor 0.5 to creature 01_horned_skull. Attributes minWeaponDefense 30 maxWeaponDefense 25 minMagicDefense 20 maxMagicDefense 35
 DEBUG - Creature 02_dead_abraxus
 DEBUG - Changing denfese. 185 to 92.5
-Applying factor 0.5 to creature 02_dead_abraxus. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 5 foc 2 ham 1 pur 0 par 5 mel 0 sol 4
+Applying factor 0.5 to creature 02_dead_abraxus. Attributes minWeaponDefense 92.5 maxWeaponDefense 92.5 minMagicDefense 20 maxMagicDefense 60
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_berzerker
 DEBUG - Changing denfese. 65 to 32.5
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 04_berzerker. Attributes str 1 spd 1 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 04_berzerker. Attributes minWeaponDefense 32.5 maxWeaponDefense 22.5 minMagicDefense 10 maxMagicDefense 36
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_mystic_tower
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 06_mystic_tower. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 06_mystic_tower. Attributes minWeaponDefense 39.5 maxWeaponDefense 27.5 minMagicDefense 25 maxMagicDefense 35
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_fat_mole_b
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_fat_mole_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_fat_mole_b. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_steel_servant
 DEBUG - Changing denfese. 87 to 43.5
 DEBUG - Changing attack. 155 to 77.5
 DEBUG - Changing attack. 180 to 90
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 09_steel_servant. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 5 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 09_steel_servant. Attributes minWeaponDefense 43.5 maxWeaponDefense 53.5 minMagicDefense 32 maxMagicDefense 49
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_fat_mole_c
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_fat_mole_c. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_fat_mole_c. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_arachness
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 245 to 122.5
-Applying factor 0.5 to creature 0d_arachness. Attributes str 1 spd 1 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 4 ham 0 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0d_arachness. Attributes minWeaponDefense 30 maxWeaponDefense 60 minMagicDefense 70 maxMagicDefense 85
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_bone_demon
 DEBUG - Changing denfese. 88 to 44
 DEBUG - Changing attack. 140 to 70
-Applying factor 0.5 to creature 00_bone_demon. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 1 pir 0 spr 1 foc 0 ham 0 pur 0 par 1 mel 0 sol 3
+Applying factor 0.5 to creature 00_bone_demon. Attributes minWeaponDefense 44 maxWeaponDefense 14 minMagicDefense 9.5 maxMagicDefense 39.5
 DEBUG - Creature 01_berzerker
 DEBUG - Changing denfese. 65 to 32.5
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 01_berzerker. Attributes str 1 spd 1 def 1 bal 1 sla 0 smh 1 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 01_berzerker. Attributes minWeaponDefense 32.5 maxWeaponDefense 22.5 minMagicDefense 10 maxMagicDefense 36
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_zygote
 DEBUG - Changing denfese. 85 to 42.5
 DEBUG - Changing attack. 155 to 77.5
-Applying factor 0.5 to creature 04_zygote. Attributes str 0 spd 0 def 1 bal 0 sla 2 smh 0 pir 0 spr 3 foc 1 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_zygote. Attributes minWeaponDefense 42.5 maxWeaponDefense 49 minMagicDefense 22 maxMagicDefense 39.5
 DEBUG - Creature 05_horned_skull
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 120 to 60
-Applying factor 0.5 to creature 05_horned_skull. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 0 pir 2 spr 0 foc 0 ham 0 pur 0 par 1 mel 0 sol 1
+Applying factor 0.5 to creature 05_horned_skull. Attributes minWeaponDefense 30 maxWeaponDefense 25 minMagicDefense 20 maxMagicDefense 35
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_cerberus
 DEBUG - Changing denfese. 65 to 32.5
-Applying factor 0.5 to creature 09_cerberus. Attributes str 0 spd 5 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 5 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_cerberus. Attributes minWeaponDefense 32.5 maxWeaponDefense 42.5 minMagicDefense 22 maxMagicDefense 42.5
 DEBUG - Creature 0a_ruby_demon
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 188 to 94
-Applying factor 0.5 to creature 0a_ruby_demon. Attributes str 0 spd 1 def 0 bal 0 sla 1 smh 0 pir 0 spr 1 foc 1 ham 1 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0a_ruby_demon. Attributes minWeaponDefense 35 maxWeaponDefense 20 minMagicDefense 10 maxMagicDefense 24
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_ebony_knight
 DEBUG - Changing denfese. 97 to 48.5
 DEBUG - Changing attack. 305 to 152.5
 DEBUG - Changing attack. 225 to 112.5
 DEBUG - Changing attack. 300 to 150
-Applying factor 0.5 to creature 0c_ebony_knight. Attributes str 0 spd 7 def 0 bal 0 sla 0 smh 0 pir 4 spr 11 foc 3 ham 9 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0c_ebony_knight. Attributes minWeaponDefense 48.5 maxWeaponDefense 62.5 minMagicDefense 37.5 maxMagicDefense 54.5
 DEBUG - Creature 0d_damned_angel
 DEBUG - Changing denfese. 60 to 30
-Applying factor 0.5 to creature 0d_damned_angel. Attributes str 3 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 4 ham 0 pur 0 par 0 mel 2 sol 0
+Applying factor 0.5 to creature 0d_damned_angel. Attributes minWeaponDefense 30 maxWeaponDefense 35 minMagicDefense 125 maxMagicDefense 125
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_night_howler
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 320 to 160
-Applying factor 0.5 to creature 00_night_howler. Attributes str 2 spd 2 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 00_night_howler. Attributes minWeaponDefense 26 maxWeaponDefense 32.5 minMagicDefense 41.5 maxMagicDefense 37
 DEBUG - Creature 01_chirper
 DEBUG - Changing denfese. 59 to 29.5
-Applying factor 0.5 to creature 01_chirper. Attributes str 5 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 3 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_chirper. Attributes minWeaponDefense 29.5 maxWeaponDefense 39.5 minMagicDefense 47 maxMagicDefense 35
 DEBUG - Creature 02_lizard_servant
 DEBUG - Changing denfese. 150 to 75
-Applying factor 0.5 to creature 02_lizard_servant. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_lizard_servant. Attributes minWeaponDefense 75 maxWeaponDefense 75 minMagicDefense 75 maxMagicDefense 75
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_night_howler
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 320 to 160
-Applying factor 0.5 to creature 04_night_howler. Attributes str 2 spd 2 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 0
+Applying factor 0.5 to creature 04_night_howler. Attributes minWeaponDefense 26 maxWeaponDefense 32.5 minMagicDefense 41.5 maxMagicDefense 37
 DEBUG - Creature 05_master_howler
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 360 to 180
-Applying factor 0.5 to creature 05_master_howler. Attributes str 8 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 0 ham 0 pur 0 par 1 mel 5 sol 8
+Applying factor 0.5 to creature 05_master_howler. Attributes minWeaponDefense 39 maxWeaponDefense 32 minMagicDefense 16 maxMagicDefense 45
 DEBUG - Creature 06_lizard_servant
 DEBUG - Changing denfese. 150 to 75
-Applying factor 0.5 to creature 06_lizard_servant. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_lizard_servant. Attributes minWeaponDefense 75 maxWeaponDefense 75 minMagicDefense 75 maxMagicDefense 75
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_hermit_crab
 DEBUG - Changing denfese. 57 to 28.5
 DEBUG - Changing attack. 250 to 125
-Applying factor 0.5 to creature 08_hermit_crab. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 0 pur 5 par 0 mel 0 sol 3
+Applying factor 0.5 to creature 08_hermit_crab. Attributes minWeaponDefense 28.5 maxWeaponDefense 33.5 minMagicDefense 67 maxMagicDefense 79
 DEBUG - Creature 09_freak
 DEBUG - Changing denfese. 72 to 36
 DEBUG - Changing attack. 210 to 105
 DEBUG - Changing attack. 210 to 105
 DEBUG - Changing attack. 240 to 120
-Applying factor 0.5 to creature 09_freak. Attributes str 0 spd 0 def 0 bal 2 sla 0 smh 0 pir 6 spr 0 foc 0 ham 4 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 09_freak. Attributes minWeaponDefense 36 maxWeaponDefense 34.5 minMagicDefense 46 maxMagicDefense 60
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_saurian_warrior_a
 DEBUG - Changing denfese. 41 to 20.5
 DEBUG - Changing attack. 355 to 177.5
-Applying factor 0.5 to creature 0c_saurian_warrior_a. Attributes str 0 spd 1 def 3 bal 2 sla 3 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_saurian_warrior_a. Attributes minWeaponDefense 20.5 maxWeaponDefense 36 minMagicDefense 255 maxMagicDefense 172
 DEBUG - Creature 0d_saurian_warrior_b
 DEBUG - Changing denfese. 69 to 34.5
 DEBUG - Changing attack. 255 to 127.5
-Applying factor 0.5 to creature 0d_saurian_warrior_b. Attributes str 1 spd 0 def 3 bal 0 sla 4 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 1 mel 0 sol 0
+Applying factor 0.5 to creature 0d_saurian_warrior_b. Attributes minWeaponDefense 34.5 maxWeaponDefense 42.5 minMagicDefense 255 maxMagicDefense 172
 DEBUG - Creature 0e_dinogon
 DEBUG - Changing denfese. 64 to 32
 DEBUG - Changing attack. 165 to 82.5
-Applying factor 0.5 to creature 0e_dinogon. Attributes str 0 spd 3 def 0 bal 0 sla 0 smh 2 pir 0 spr 0 foc 0 ham 1 pur 0 par 4 mel 0 sol 0
+Applying factor 0.5 to creature 0e_dinogon. Attributes minWeaponDefense 32 maxWeaponDefense 29 minMagicDefense 20 maxMagicDefense 51
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_auriel_c
 DEBUG - Changing denfese. 250 to 125
 DEBUG - Changing attack. 550 to 255
 DEBUG - Changing attack. 550 to 255
-Applying factor 0.5 to creature 01_auriel_c. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_auriel_c. Attributes minWeaponDefense 125 maxWeaponDefense 125 minMagicDefense 245 maxMagicDefense 255
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_king_hopper
 DEBUG - Changing denfese. 45 to 22.5
-Applying factor 0.5 to creature 04_king_hopper. Attributes str 1 spd 0 def 0 bal 0 sla 0 smh 6 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_king_hopper. Attributes minWeaponDefense 22.5 maxWeaponDefense 42.5 minMagicDefense 7 maxMagicDefense 78
 DEBUG - Creature 05_warden
 DEBUG - Changing denfese. 150 to 75
-Applying factor 0.5 to creature 05_warden. Attributes str 0 spd 0 def 5 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 3 mel 0 sol 0
+Applying factor 0.5 to creature 05_warden. Attributes minWeaponDefense 75 maxWeaponDefense 70 minMagicDefense 80 maxMagicDefense 90
 DEBUG - Creature 06_oblid
 DEBUG - Changing denfese. 78 to 39
 DEBUG - Changing attack. 243 to 121.5
 DEBUG - Changing attack. 320 to 160
-Applying factor 0.5 to creature 06_oblid. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 7 pir 0 spr 0 foc 0 ham 0 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_oblid. Attributes minWeaponDefense 39 maxWeaponDefense 40 minMagicDefense 28 maxMagicDefense 16.5
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_oxelus
 DEBUG - Changing denfese. 55 to 27.5
 DEBUG - Changing attack. 395 to 197.5
 DEBUG - Changing attack. 145 to 72.5
-Applying factor 0.5 to creature 08_oxelus. Attributes str 0 spd 3 def 0 bal 0 sla 6 smh 0 pir 2 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_oxelus. Attributes minWeaponDefense 27.5 maxWeaponDefense 30 minMagicDefense 45 maxMagicDefense 40
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_cursed_demon
 DEBUG - Changing denfese. 30 to 15
 DEBUG - Changing attack. 390 to 195
-Applying factor 0.5 to creature 0a_cursed_demon. Attributes str 0 spd 0 def 0 bal 2 sla 0 smh 0 pir 0 spr 4 foc 4 ham 0 pur 2 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_cursed_demon. Attributes minWeaponDefense 15 maxWeaponDefense 12 minMagicDefense 22.5 maxMagicDefense 19.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_death_serpent
 DEBUG - Changing denfese. 98 to 49
 DEBUG - Changing attack. 355 to 177.5
-Applying factor 0.5 to creature 0d_death_serpent. Attributes str 0 spd 0 def 0 bal 6 sla 0 smh 4 pir 0 spr 0 foc 0 ham 0 pur 3 par 5 mel 0 sol 0
+Applying factor 0.5 to creature 0d_death_serpent. Attributes minWeaponDefense 49 maxWeaponDefense 43 minMagicDefense 24 maxMagicDefense 21.5
 DEBUG - Creature 0e_necron
 DEBUG - Changing denfese. 75 to 37.5
 DEBUG - Changing attack. 340 to 170
 DEBUG - Changing attack. 100 to 50
 DEBUG - Changing attack. 350 to 175
-Applying factor 0.5 to creature 0e_necron. Attributes str 12 spd 5 def 0 bal 0 sla 3 smh 2 pir 8 spr 2 foc 2 ham 0 pur 1 par 0 mel 3 sol 3
+Applying factor 0.5 to creature 0e_necron. Attributes minWeaponDefense 37.5 maxWeaponDefense 39 minMagicDefense 202.5 maxMagicDefense 73
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_gorgoral
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 00_gorgoral. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 1 ham 5 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_gorgoral. Attributes minWeaponDefense 39.5 maxWeaponDefense 39.5 minMagicDefense 165 maxMagicDefense 160
 DEBUG - Creature 01_gargaral
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 01_gargaral. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 5 mel 0 sol 0
+Applying factor 0.5 to creature 01_gargaral. Attributes minWeaponDefense 39.5 maxWeaponDefense 39.5 minMagicDefense 165 maxMagicDefense 160
 DEBUG - Creature 02_gordoral
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 02_gordoral. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 5 mel 0 sol 0
+Applying factor 0.5 to creature 02_gordoral. Attributes minWeaponDefense 39.5 maxWeaponDefense 25 minMagicDefense 61 maxMagicDefense 176
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_demon_warrior
 DEBUG - Changing denfese. 65 to 32.5
 DEBUG - Changing attack. 248 to 124
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 04_demon_warrior. Attributes str 2 spd 1 def 0 bal 0 sla 1 smh 1 pir 2 spr 1 foc 0 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 04_demon_warrior. Attributes minWeaponDefense 32.5 maxWeaponDefense 40 minMagicDefense 35 maxMagicDefense 47.5
 DEBUG - Creature 05_gargaral
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 05_gargaral. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 5 mel 0 sol 0
+Applying factor 0.5 to creature 05_gargaral. Attributes minWeaponDefense 39.5 maxWeaponDefense 39.5 minMagicDefense 165 maxMagicDefense 160
 DEBUG - Creature 06_gordoral
 DEBUG - Changing denfese. 79 to 39.5
-Applying factor 0.5 to creature 06_gordoral. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 1 par 5 mel 0 sol 0
+Applying factor 0.5 to creature 06_gordoral. Attributes minWeaponDefense 39.5 maxWeaponDefense 25 minMagicDefense 61 maxMagicDefense 176
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_war_demon_1
 DEBUG - Changing denfese. 85 to 42.5
 DEBUG - Changing attack. 290 to 145
 DEBUG - Changing attack. 295 to 147.5
-Applying factor 0.5 to creature 08_war_demon_1. Attributes str 3 spd 1 def 0 bal 0 sla 1 smh 0 pir 3 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 08_war_demon_1. Attributes minWeaponDefense 42.5 maxWeaponDefense 40.5 minMagicDefense 139 maxMagicDefense 34
 DEBUG - Creature 09_war_demon_2
 DEBUG - Changing denfese. 82 to 41
 DEBUG - Changing attack. 290 to 145
 DEBUG - Changing attack. 205 to 102.5
-Applying factor 0.5 to creature 09_war_demon_2. Attributes str 2 spd 0 def 2 bal 0 sla 0 smh 4 pir 0 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 09_war_demon_2. Attributes minWeaponDefense 41 maxWeaponDefense 36 minMagicDefense 33 maxMagicDefense 39.5
 DEBUG - Creature 0a_rotting_face
 DEBUG - Changing denfese. 160 to 80
-Applying factor 0.5 to creature 0a_rotting_face. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 5 foc 5 ham 1 pur 0 par 0 mel 0 sol 7
+Applying factor 0.5 to creature 0a_rotting_face. Attributes minWeaponDefense 80 maxWeaponDefense 80 minMagicDefense 60 maxMagicDefense 87.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_death_mage
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 170 to 85
-Applying factor 0.5 to creature 0c_death_mage. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 5 ham 0 pur 2 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_death_mage. Attributes minWeaponDefense 35 maxWeaponDefense 33 minMagicDefense 166 maxMagicDefense 255
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_rotting_face
 DEBUG - Changing denfese. 160 to 80
-Applying factor 0.5 to creature 0e_rotting_face. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 5 foc 5 ham 1 pur 0 par 0 mel 0 sol 7
+Applying factor 0.5 to creature 0e_rotting_face. Attributes minWeaponDefense 80 maxWeaponDefense 80 minMagicDefense 60 maxMagicDefense 87.5
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_red_puppet
 DEBUG - Changing denfese. 75 to 37.5
 DEBUG - Changing attack. 120 to 60
 DEBUG - Changing attack. 355 to 177.5
-Applying factor 0.5 to creature 00_red_puppet. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 0 pir 3 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 2
+Applying factor 0.5 to creature 00_red_puppet. Attributes minWeaponDefense 37.5 maxWeaponDefense 32.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 01_dark_spirits
 DEBUG - Changing denfese. 95 to 47.5
 DEBUG - Changing attack. 115 to 57.5
 DEBUG - Changing attack. 375 to 187.5
-Applying factor 0.5 to creature 01_dark_spirits. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 0 pir 3 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 2
+Applying factor 0.5 to creature 01_dark_spirits. Attributes minWeaponDefense 47.5 maxWeaponDefense 32.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 02_dark_imp
 DEBUG - Changing denfese. 75 to 37.5
-Applying factor 0.5 to creature 02_dark_imp. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 4 foc 0 ham 0 pur 7 par 0 mel 0 sol 3
+Applying factor 0.5 to creature 02_dark_imp. Attributes minWeaponDefense 37.5 maxWeaponDefense 32.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_dark_spirits
 DEBUG - Changing denfese. 75 to 37.5
 DEBUG - Changing attack. 120 to 60
 DEBUG - Changing attack. 355 to 177.5
-Applying factor 0.5 to creature 04_dark_spirits. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 0 pir 3 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 2
+Applying factor 0.5 to creature 04_dark_spirits. Attributes minWeaponDefense 37.5 maxWeaponDefense 32.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 05_dark_spirits
 DEBUG - Changing denfese. 95 to 47.5
 DEBUG - Changing attack. 115 to 57.5
 DEBUG - Changing attack. 375 to 187.5
-Applying factor 0.5 to creature 05_dark_spirits. Attributes str 0 spd 2 def 0 bal 0 sla 0 smh 0 pir 3 spr 0 foc 0 ham 0 pur 0 par 0 mel 1 sol 2
+Applying factor 0.5 to creature 05_dark_spirits. Attributes minWeaponDefense 47.5 maxWeaponDefense 32.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 06_black_imp
 DEBUG - Changing denfese. 75 to 37.5
-Applying factor 0.5 to creature 06_black_imp. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 4 foc 0 ham 0 pur 7 par 0 mel 0 sol 3
+Applying factor 0.5 to creature 06_black_imp. Attributes minWeaponDefense 37.5 maxWeaponDefense 37.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_ring_demon
 DEBUG - Changing denfese. 62 to 31
-Applying factor 0.5 to creature 08_ring_demon. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 1 ham 2 pur 3 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_ring_demon. Attributes minWeaponDefense 31 maxWeaponDefense 37.5 minMagicDefense 24 maxMagicDefense 39.5
 DEBUG - Creature 09_dark_fairy
 DEBUG - Changing denfese. 55 to 27.5
-Applying factor 0.5 to creature 09_dark_fairy. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 1 ham 0 pur 2 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 09_dark_fairy. Attributes minWeaponDefense 27.5 maxWeaponDefense 37.5 minMagicDefense 165 maxMagicDefense 255
 DEBUG - Creature 0a_dark_bishop
 DEBUG - Changing denfese. 75 to 37.5
 DEBUG - Changing attack. 130 to 65
-Applying factor 0.5 to creature 0a_dark_bishop. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 3 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 0a_dark_bishop. Attributes minWeaponDefense 37.5 maxWeaponDefense 33.5 minMagicDefense 155 maxMagicDefense 156
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_maristella
 DEBUG - Changing denfese. 45 to 22.5
-Applying factor 0.5 to creature 0c_maristella. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 3 ham 0 pur 2 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_maristella. Attributes minWeaponDefense 22.5 maxWeaponDefense 25 minMagicDefense 29 maxMagicDefense 39
 DEBUG - Creature 0d_deha
 DEBUG - Changing denfese. 72 to 36
 DEBUG - Changing attack. 220 to 110
 DEBUG - Changing attack. 210 to 105
 DEBUG - Changing attack. 120 to 60
-Applying factor 0.5 to creature 0d_deha. Attributes str 2 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 0 ham 0 pur 0 par 0 mel 5 sol 0
+Applying factor 0.5 to creature 0d_deha. Attributes minWeaponDefense 36 maxWeaponDefense 34 minMagicDefense 64.5 maxMagicDefense 69
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_dark_spirits
 DEBUG - Changing denfese. 55 to 27.5
-Applying factor 0.5 to creature 00_dark_spirits. Attributes str 1 spd 1 def 1 bal 1 sla 1 smh 1 pir 1 spr 1 foc 1 ham 1 pur 1 par 1 mel 1 sol 1
+Applying factor 0.5 to creature 00_dark_spirits. Attributes minWeaponDefense 27.5 maxWeaponDefense 32.5 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 01_disguise
 DEBUG - Changing denfese. 108 to 54
-Applying factor 0.5 to creature 01_disguise. Attributes str 0 spd 5 def 0 bal 0 sla 0 smh 0 pir 0 spr 21 foc 7 ham 3 pur 8 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_disguise. Attributes minWeaponDefense 54 maxWeaponDefense 41 minMagicDefense 255 maxMagicDefense 120
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_master_knight
 DEBUG - Changing denfese. 61 to 30.5
 DEBUG - Changing attack. 380 to 190
 DEBUG - Changing attack. 200 to 100
-Applying factor 0.5 to creature 00_master_knight. Attributes str 2 spd 2 def 3 bal 0 sla 2 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_master_knight. Attributes minWeaponDefense 30.5 maxWeaponDefense 36 minMagicDefense 84 maxMagicDefense 39.5
 DEBUG - Creature 01_gorthaur
 DEBUG - Changing denfese. 85 to 42.5
 DEBUG - Changing attack. 195 to 97.5
-Applying factor 0.5 to creature 01_gorthaur. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 10 ham 7 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_gorthaur. Attributes minWeaponDefense 42.5 maxWeaponDefense 35 minMagicDefense 30 maxMagicDefense 90
 DEBUG - Creature 02_fat_mole_d
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_fat_mole_d. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_fat_mole_d. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_wildowess
 DEBUG - Changing denfese. 66 to 33
 DEBUG - Changing attack. 205 to 102.5
-Applying factor 0.5 to creature 04_wildowess. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 6 foc 4 ham 0 pur 5 par 0 mel 0 sol 3
+Applying factor 0.5 to creature 04_wildowess. Attributes minWeaponDefense 33 maxWeaponDefense 42 minMagicDefense 56 maxMagicDefense 200
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_warpoor
 DEBUG - Changing denfese. 80 to 40
-Applying factor 0.5 to creature 06_warpoor. Attributes str 1 spd 0 def 0 bal 3 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 1 mel 2 sol 0
+Applying factor 0.5 to creature 06_warpoor. Attributes minWeaponDefense 40 maxWeaponDefense 17.5 minMagicDefense 47.5 maxMagicDefense 51
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_fester
 DEBUG - Changing denfese. 120 to 60
-Applying factor 0.5 to creature 08_fester. Attributes str 2 spd 3 def 0 bal 0 sla 0 smh 0 pir 6 spr 0 foc 0 ham 0 pur 2 par 5 mel 0 sol 0
+Applying factor 0.5 to creature 08_fester. Attributes minWeaponDefense 60 maxWeaponDefense 28 minMagicDefense 29 maxMagicDefense 255
 DEBUG - Creature 09_cross_breed
 DEBUG - Changing denfese. 125 to 62.5
-Applying factor 0.5 to creature 09_cross_breed. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 1 ham 1 pur 1 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 09_cross_breed. Attributes minWeaponDefense 62.5 maxWeaponDefense 20 minMagicDefense 173 maxMagicDefense 206
 DEBUG - Creature 0a_warpoor
 DEBUG - Changing denfese. 80 to 40
-Applying factor 0.5 to creature 0a_warpoor. Attributes str 1 spd 0 def 0 bal 3 sla 0 smh 0 pir 1 spr 0 foc 0 ham 0 pur 0 par 1 mel 2 sol 0
+Applying factor 0.5 to creature 0a_warpoor. Attributes minWeaponDefense 40 maxWeaponDefense 17.5 minMagicDefense 47.5 maxMagicDefense 51
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_hell_hunter
 DEBUG - Changing denfese. 68 to 34
-Applying factor 0.5 to creature 00_hell_hunter. Attributes str 0 spd 6 def 0 bal 0 sla 0 smh 1 pir 4 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_hell_hunter. Attributes minWeaponDefense 34 maxWeaponDefense 35 minMagicDefense 23 maxMagicDefense 36
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_karasu
 DEBUG - Changing denfese. 62 to 31
 DEBUG - Changing attack. 310 to 155
-Applying factor 0.5 to creature 02_karasu. Attributes str 0 spd 2 def 0 bal 1 sla 0 smh 0 pir 1 spr 0 foc 0 ham 2 pur 1 par 0 mel 1 sol 5
+Applying factor 0.5 to creature 02_karasu. Attributes minWeaponDefense 31 maxWeaponDefense 32.5 minMagicDefense 36 maxMagicDefense 39.5
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_tree_ogre
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 250 to 125
-Applying factor 0.5 to creature 04_tree_ogre. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 2 foc 0 ham 1 pur 2 par 0 mel 3 sol 2
+Applying factor 0.5 to creature 04_tree_ogre. Attributes minWeaponDefense 25 maxWeaponDefense 36 minMagicDefense 50 maxMagicDefense 77.5
 DEBUG - Creature 05_armored_warrior
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 430 to 215
 DEBUG - Changing attack. 350 to 175
-Applying factor 0.5 to creature 05_armored_warrior. Attributes str 3 spd 0 def 1 bal 0 sla 0 smh 2 pir 1 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 05_armored_warrior. Attributes minWeaponDefense 35 maxWeaponDefense 40 minMagicDefense 20 maxMagicDefense 20
 DEBUG - Creature 06_armored_slayer
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 430 to 215
 DEBUG - Changing attack. 340 to 170
-Applying factor 0.5 to creature 06_armored_slayer. Attributes str 0 spd 0 def 3 bal 0 sla 3 smh 2 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 2 sol 0
+Applying factor 0.5 to creature 06_armored_slayer. Attributes minWeaponDefense 30 maxWeaponDefense 39 minMagicDefense 37 maxMagicDefense 41
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_armored_guardian
 DEBUG - Changing denfese. 79 to 39.5
 DEBUG - Changing attack. 380 to 190
 DEBUG - Changing attack. 365 to 182.5
-Applying factor 0.5 to creature 08_armored_guardian. Attributes str 7 spd 0 def 1 bal 0 sla 2 smh 2 pir 0 spr 0 foc 0 ham 0 pur 1 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 08_armored_guardian. Attributes minWeaponDefense 39.5 maxWeaponDefense 34.5 minMagicDefense 135 maxMagicDefense 35
 DEBUG - Creature 09_armored_warrior
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 430 to 215
 DEBUG - Changing attack. 350 to 175
-Applying factor 0.5 to creature 09_armored_warrior. Attributes str 3 spd 0 def 1 bal 0 sla 0 smh 2 pir 1 spr 0 foc 0 ham 0 pur 0 par 2 mel 0 sol 0
+Applying factor 0.5 to creature 09_armored_warrior. Attributes minWeaponDefense 35 maxWeaponDefense 40 minMagicDefense 20 maxMagicDefense 20
 DEBUG - Creature 0a_armored_slayer
 DEBUG - Changing denfese. 60 to 30
 DEBUG - Changing attack. 430 to 215
 DEBUG - Changing attack. 340 to 170
-Applying factor 0.5 to creature 0a_armored_slayer. Attributes str 0 spd 0 def 3 bal 0 sla 3 smh 2 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 2 sol 0
+Applying factor 0.5 to creature 0a_armored_slayer. Attributes minWeaponDefense 30 maxWeaponDefense 39 minMagicDefense 37 maxMagicDefense 41
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_unknown_e
 DEBUG - Changing denfese. 70 to 35
-Applying factor 0.5 to creature 00_unknown_e. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_unknown_e. Attributes minWeaponDefense 35 maxWeaponDefense 31 minMagicDefense 50 maxMagicDefense 50
 DEBUG - Creature 01_stack_eyes
 DEBUG - Changing denfese. 88 to 44
 DEBUG - Changing attack. 310 to 155
-Applying factor 0.5 to creature 01_stack_eyes. Attributes str 0 spd 0 def 2 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 7 pur 1 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_stack_eyes. Attributes minWeaponDefense 44 maxWeaponDefense 76 minMagicDefense 62.5 maxMagicDefense 53
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_unknown_g
 DEBUG - Changing denfese. 60 to 30
-Applying factor 0.5 to creature 05_unknown_g. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 4 ham 3 pur 3 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 05_unknown_g. Attributes minWeaponDefense 30 maxWeaponDefense 25 minMagicDefense 63 maxMagicDefense 115
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_apocrypha
 DEBUG - Changing denfese. 40 to 20
-Applying factor 0.5 to creature 08_apocrypha. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 2 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_apocrypha. Attributes minWeaponDefense 20 maxWeaponDefense 55 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 09_descrypha
 DEBUG - Changing denfese. 70 to 35
-Applying factor 0.5 to creature 09_descrypha. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 3 foc 0 ham 1 pur 0 par 0 mel 2 sol 0
+Applying factor 0.5 to creature 09_descrypha. Attributes minWeaponDefense 35 maxWeaponDefense 50 minMagicDefense 255 maxMagicDefense 85
 DEBUG - Creature 0a_old_face
 DEBUG - Changing denfese. 60 to 30
-Applying factor 0.5 to creature 0a_old_face. Attributes str 0 spd 0 def 2 bal 0 sla 0 smh 0 pir 0 spr 5 foc 3 ham 0 pur 3 par 3 mel 3 sol 1
+Applying factor 0.5 to creature 0a_old_face. Attributes minWeaponDefense 30 maxWeaponDefense 75 minMagicDefense 105 maxMagicDefense 110
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_old_face
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 300 to 150
-Applying factor 0.5 to creature 0c_old_face. Attributes str 2 spd 0 def 3 bal 2 sla 0 smh 0 pir 3 spr 0 foc 1 ham 0 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 0c_old_face. Attributes minWeaponDefense 25 maxWeaponDefense 20 minMagicDefense 105 maxMagicDefense 115
 DEBUG - Creature 0d_bugler
 DEBUG - Changing denfese. 70 to 35
-Applying factor 0.5 to creature 0d_bugler. Attributes str 2 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 10 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_bugler. Attributes minWeaponDefense 35 maxWeaponDefense 35 minMagicDefense 30 maxMagicDefense 178
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_unknown_b
 DEBUG - Changing denfese. 250 to 125
 DEBUG - Changing attack. 520 to 255
 DEBUG - Changing attack. 620 to 255
-Applying factor 0.5 to creature 01_unknown_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_unknown_b. Attributes minWeaponDefense 125 maxWeaponDefense 125 minMagicDefense 245 maxMagicDefense 255
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_king_edward
 DEBUG - Changing denfese. 220 to 110
 DEBUG - Changing attack. 50 to 25
 DEBUG - Changing attack. 40 to 20
 DEBUG - Changing attack. 90 to 45
-Applying factor 0.5 to creature 04_king_edward. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_king_edward. Attributes minWeaponDefense 110 maxWeaponDefense 35 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 05_hell_hunter
 DEBUG - Changing denfese. 52 to 26
 DEBUG - Changing attack. 140 to 70
-Applying factor 0.5 to creature 05_hell_hunter. Attributes str 0 spd 0 def 1 bal 2 sla 1 smh 1 pir 2 spr 1 foc 2 ham 1 pur 1 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 05_hell_hunter. Attributes minWeaponDefense 26 maxWeaponDefense 20 minMagicDefense 40 maxMagicDefense 36
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_claw_head
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 240 to 120
-Applying factor 0.5 to creature 08_claw_head. Attributes str 0 spd 0 def 3 bal 0 sla 3 smh 5 pir 4 spr 4 foc 2 ham 3 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_claw_head. Attributes minWeaponDefense 35 maxWeaponDefense 40 minMagicDefense 62 maxMagicDefense 39.5
 DEBUG - Creature 09_pulsating_heart
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 150 to 75
-Applying factor 0.5 to creature 09_pulsating_heart. Attributes str 6 spd 2 def 0 bal 0 sla 6 smh 0 pir 1 spr 6 foc 0 ham 0 pur 6 par 4 mel 4 sol 4
+Applying factor 0.5 to creature 09_pulsating_heart. Attributes minWeaponDefense 25 maxWeaponDefense 24 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 0a_demons_eye
 DEBUG - Changing denfese. 50 to 25
-Applying factor 0.5 to creature 0a_demons_eye. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 1 ham 0 pur 0 par 2 mel 2 sol 1
+Applying factor 0.5 to creature 0a_demons_eye. Attributes minWeaponDefense 25 maxWeaponDefense 23 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_unknown_d
 DEBUG - Changing denfese. 70 to 35
-Applying factor 0.5 to creature 0c_unknown_d. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 1 ham 1 pur 2 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 0c_unknown_d. Attributes minWeaponDefense 35 maxWeaponDefense 40 minMagicDefense 181 maxMagicDefense 242.5
 DEBUG - Creature 0d_fat_mole_e
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_fat_mole_e. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_fat_mole_e. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_claw_head
 DEBUG - Changing denfese. 68 to 34
-Applying factor 0.5 to creature 0e_claw_head. Attributes str 0 spd 6 def 0 bal 0 sla 0 smh 1 pir 4 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_claw_head. Attributes minWeaponDefense 34 maxWeaponDefense 35 minMagicDefense 23 maxMagicDefense 36
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_unused_a
 DEBUG - Changing denfese. 680 to 255
-Applying factor 0.5 to creature 00_unused_a. Attributes str 2 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 12 par 5 mel 0 sol 1
+Applying factor 0.5 to creature 00_unused_a. Attributes minWeaponDefense 255 maxWeaponDefense 255 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_doriwi
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 300 to 150
-Applying factor 0.5 to creature 01_doriwi. Attributes str 2 spd 0 def 2 bal 2 sla 0 smh 5 pir 0 spr 1 foc 0 ham 0 pur 4 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_doriwi. Attributes minWeaponDefense 35 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 41
 DEBUG - Creature 02_bone_wolf
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 250 to 125
-Applying factor 0.5 to creature 02_bone_wolf. Attributes str 2 spd 0 def 1 bal 3 sla 0 smh 0 pir 0 spr 0 foc 0 ham 4 pur 1 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 02_bone_wolf. Attributes minWeaponDefense 35 maxWeaponDefense 15 minMagicDefense 255 maxMagicDefense 45
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_unused_b
 DEBUG - Changing denfese. 89 to 44.5
-Applying factor 0.5 to creature 04_unused_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 1 foc 3 ham 0 pur 0 par 2 mel 0 sol 2
+Applying factor 0.5 to creature 04_unused_b. Attributes minWeaponDefense 44.5 maxWeaponDefense 45 minMagicDefense 78 maxMagicDefense 90
 DEBUG - Creature 05_doriwi
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 300 to 150
-Applying factor 0.5 to creature 05_doriwi. Attributes str 2 spd 0 def 2 bal 2 sla 0 smh 5 pir 0 spr 1 foc 0 ham 0 pur 4 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_doriwi. Attributes minWeaponDefense 35 maxWeaponDefense 35 minMagicDefense 60 maxMagicDefense 41
 DEBUG - Creature 06_hell_warrior
 DEBUG - Changing denfese. 90 to 45
 DEBUG - Changing attack. 450 to 225
-Applying factor 0.5 to creature 06_hell_warrior. Attributes str 0 spd 4 def 0 bal 1 sla 5 smh 0 pir 0 spr 0 foc 0 ham 2 pur 0 par 3 mel 0 sol 2
+Applying factor 0.5 to creature 06_hell_warrior. Attributes minWeaponDefense 45 maxWeaponDefense 50 minMagicDefense 20 maxMagicDefense 40
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_wyvern
 DEBUG - Changing denfese. 80 to 40
 DEBUG - Changing attack. 180 to 90
-Applying factor 0.5 to creature 08_wyvern. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 7 foc 5 ham 4 pur 0 par 0 mel 0 sol 1
+Applying factor 0.5 to creature 08_wyvern. Attributes minWeaponDefense 40 maxWeaponDefense 60 minMagicDefense 27 maxMagicDefense 95
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_bone_wolf
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 250 to 125
-Applying factor 0.5 to creature 0a_bone_wolf. Attributes str 2 spd 0 def 1 bal 3 sla 0 smh 0 pir 0 spr 0 foc 0 ham 4 pur 1 par 0 mel 0 sol 2
+Applying factor 0.5 to creature 0a_bone_wolf. Attributes minWeaponDefense 35 maxWeaponDefense 15 minMagicDefense 255 maxMagicDefense 45
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_hollow_mage
 DEBUG - Changing denfese. 81 to 40.5
-Applying factor 0.5 to creature 0c_hollow_mage. Attributes str 0 spd 4 def 0 bal 2 sla 0 smh 0 pir 1 spr 16 foc 10 ham 0 pur 5 par 2 mel 0 sol 10
+Applying factor 0.5 to creature 0c_hollow_mage. Attributes minWeaponDefense 40.5 maxWeaponDefense 25 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 0d_blood_bone
 DEBUG - Changing denfese. 70 to 35
 DEBUG - Changing attack. 250 to 125
-Applying factor 0.5 to creature 0d_blood_bone. Attributes str 0 spd 3 def 0 bal 0 sla 3 smh 0 pir 0 spr 1 foc 3 ham 0 pur 2 par 3 mel 0 sol 3
+Applying factor 0.5 to creature 0d_blood_bone. Attributes minWeaponDefense 35 maxWeaponDefense 20 minMagicDefense 30 maxMagicDefense 25
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_balron_a
 DEBUG - Changing denfese. 200 to 100
 DEBUG - Changing attack. 500 to 250
 DEBUG - Changing attack. 550 to 255
-Applying factor 0.5 to creature 00_balron_a. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_balron_a. Attributes minWeaponDefense 100 maxWeaponDefense 110 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 01_unknown_i
 DEBUG - Changing denfese. 110 to 55
-Applying factor 0.5 to creature 01_unknown_i. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_unknown_i. Attributes minWeaponDefense 55 maxWeaponDefense 60 minMagicDefense 42.5 maxMagicDefense 48
 DEBUG - Creature 02_unknown_j
 DEBUG - Changing denfese. 110 to 55
-Applying factor 0.5 to creature 02_unknown_j. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_unknown_j. Attributes minWeaponDefense 55 maxWeaponDefense 60 minMagicDefense 42.5 maxMagicDefense 48
 DEBUG - Creature 03_balron_b
 DEBUG - Changing denfese. 110 to 55
 DEBUG - Changing attack. 550 to 255
 DEBUG - Changing attack. 300 to 150
-Applying factor 0.5 to creature 03_balron_b. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_balron_b. Attributes minWeaponDefense 55 maxWeaponDefense 62 minMagicDefense 194 maxMagicDefense 93
 DEBUG - Creature 04_unknown_k
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_unknown_k. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_unknown_k. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_demon_king
 DEBUG - Changing denfese. 50 to 25
 DEBUG - Changing attack. 50 to 25
 DEBUG - Changing attack. 4 to 2
 DEBUG - Changing attack. 4 to 2
-Applying factor 0.5 to creature 08_demon_king. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_demon_king. Attributes minWeaponDefense 25 maxWeaponDefense 35 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 00_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 00_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 01_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 02_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 03_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 04_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 04_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 05_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 06_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 07_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 08_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 09_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0a_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0b_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0c_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0d_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0e_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
-Applying factor 0.5 to creature 0f_door. Attributes str 0 spd 0 def 0 bal 0 sla 0 smh 0 pir 0 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0
+Applying factor 0.5 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - The game has 640 spawns.
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper

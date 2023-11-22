@@ -1,3 +1,15 @@
+DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
+
+DEBUG - Items randomization - 45% of spawns will drop a unique.
+
+DEBUG - Items randomization - 50% of other spawns will drop a consumable.
+
+DEBUG - Items randomization - 20% from first of total items available from start.
+
+DEBUG - Items randomization - 30% of collectable will be uniques, 70% will be consumables.
+
+DEBUG - Items randomization - 20% of secondary consumables will be replaced by primary.
+
 Randomization - Using given seed 1234567890
 Parameters - {"label":"any-prc-medium","preset":"any%","difficulty":"medium","randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"fiery-key-in-fire-world","randomizeNonEssentialKeys":true,"seed":"1234567890"}
 DEBUG - Items randomization - Collectable uniques item_129_sealed_sword_stone,item_130_blue_crystal,item_12f_spirit_key,item_12d_pitcher_of_nadya_mp,item_32_mace,item_5c_quilted_armor,item_5_long_sword,item_49_crown_of_resist,item_48_crown,item_8e_leather_boots,item_10a_cune,item_10a_cune,item_a2_buckler,item_8d_leather_boots,item_7b_leather_glove,item_10a_cune,item_62_scale_mail_of_curing,item_11_broad_sword,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_51_full_helm,item_ea_bracelet_of_composure,item_10a_cune,item_10a_cune,item_10a_cune,item_2c_deadly_great_sword,item_9a_leg_guard,item_6_keenest_long_sword,item_93_steel_boots_of_curing,item_94_steel_boots_of_resist,item_fc_amulet_of_movement,item_10a_cune,item_10a_cune,item_b4_harden_tower_shield,item_1f_frosty_bastard_sword,item_9f_caustic_leg_guard,item_cd_sorcerer_ring_of_frost,item_ef_deadly_bracelet,item_38_axe,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_d4_dark_ring,item_e1_ring_of_dark_souls,item_c2_shinning_gothic_shield,item_9e_leg_guard_of_protect,item_77_plate_mail_of_rage,item_10a_cune,item_c6_ring_of_fire_resist,item_10a_cune,item_f5_deadly_bracelet,item_56_great_helm,item_10a_cune,item_f1_sorcerer_bracelet,item_f2_priest_bracelet,item_10a_cune,item_10a_cune,item_10a_cune,item_10a_cune,item_cc_priest_ring_of_frost,item_59_mystic_great_helm,item_75_harden_full_plate,item_2d_keenest_great_sword,item_13_broad_sword,item_109_endless_amulet,item_c8_sorcerer_ring_of_fire,item_76_god_plate,item_c0_gothic_shield_of_power,item_e2_black_ring,item_10a_cune,item_10a_cune,item_10a_cune,item_2b_fiery_great_sword
