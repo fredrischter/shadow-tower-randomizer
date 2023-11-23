@@ -46,7 +46,6 @@ function randomize(paramsFile, stDir) {
     const PRESET_COMEDY = "comedy";
     const PRESET_BONANZA = "bonanza";
     const PRESET_SCARY_GAME = "scary-game";
-    const PRESET_ONLY_BOSSES = "only-bosses";
 
     const DIFFICULTY_EASY = "easy";
     const DIFFICULTY_EXTREME_EASY = "extreme-easy";
@@ -892,7 +891,7 @@ function randomize(paramsFile, stDir) {
         "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
     ];
 
-    function presetOnlyBosses(spawn, area, index) {
+    function keepOnlyBosses(spawn, area, index) {
         if (nonRemovable.filter(name => spawn.name().includes(name)).length) {
             console.log("DEBUG - Spawn removals, to keep only bosses. Not removing " + area.name + "/" + spawn.name());
             return;
@@ -999,8 +998,8 @@ function randomize(paramsFile, stDir) {
 
         // ------- Empty game
 
-        if (params.preset == PRESET_ONLY_BOSSES) {
-            forEachCreatureSpawn.push(presetOnlyBosses);
+        if (params.keepOnlyBosses) {
+            forEachCreatureSpawn.push(keepOnlyBosses);
         }
 
         // Randomize creatures

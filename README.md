@@ -48,7 +48,12 @@ npm run mod ".\generated\st.bin" ".\params\any-prc-very-hard.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-medium.json"
 npm run mod ".\generated\st.bin" ".\params\any-prc-extreme-easy.json"
 
+npm run mod ".\generated\st.bin" ".\params\100-prc-easy.json"
+npm run mod ".\generated\st.bin" ".\params\100-prc-even-harder.json"
+npm run mod ".\generated\st.bin" ".\params\100-prc-hard.json"
+npm run mod ".\generated\st.bin" ".\params\100-prc-very-hard.json"
 npm run mod ".\generated\st.bin" ".\params\100-prc-medium.json"
+npm run mod ".\generated\st.bin" ".\params\100-prc-extreme-easy.json"
 
 npm run mod ".\generated\st.bin" ".\params\easy.json"
 npm run mod ".\generated\st.bin" ".\params\even-harder.json"

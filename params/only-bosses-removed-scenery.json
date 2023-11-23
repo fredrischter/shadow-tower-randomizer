@@ -1,11 +1,12 @@
 {
-	"label": "only-bosses",
+	"label": "only-bosses-remove-scenery",
 	"preset": "any-prc",
 	"difficulty": "extreme-easy",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
 	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
 	"randomizeNonEssentialKeys": true,
+	"removeScenery": true,
 	"keepOnlyBosses": true,
 	"seed": "1234567890"
 }
