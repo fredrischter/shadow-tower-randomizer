@@ -1,0 +1,10 @@
+{
+	"label": "randomized-easy",
+	"preset": "any%",
+	"difficulty": "easy",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
+	"randomizeNonEssentialKeys": true,
+	"seed": "1234567890"
+}

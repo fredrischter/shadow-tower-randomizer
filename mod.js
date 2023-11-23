@@ -25,7 +25,6 @@ if (!originalParamsFile) {
 		var paramsFile = paramsList.shift();
 		if (paramsFile) {
 			var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"';
-			console.log("Running " + command);
 			exec(command, function() {
 				runOne();
 			});
@@ -37,10 +36,6 @@ if (!originalParamsFile) {
 	  files.forEach(paramsFile => {
 	  	paramsList.push(paramsFile);
 	  });
-	  runOne();
-	  runOne();
-	  runOne();
-	  runOne();
 	  runOne();
 	});
 
@@ -64,7 +59,7 @@ const outputImage = productPath + path.sep + 'modified-' + params.label + '-' + 
 //const outputCue = productPath + path.sep + 'modified-' + params.label + '-' + onlyFileName.split(".")[0] + '.cue';
 const extractedPath = productPath + path.sep + 'extracted';
 const spoilersPath = productPath + path.sep + 'spoilers';
-const xmlDescriptor = onlyPath + path.sep + 'st.xml';
+const xmlDescriptor = productPath + path.sep + 'st.xml';
 const paramsFile = spoilersPath + path.sep + "params.json";
 
 if (fs.existsSync(productPath)) {

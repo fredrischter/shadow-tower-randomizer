@@ -1,0 +1,10 @@
+{
+	"label": "randomized-very-hard",
+	"preset": "any%",
+	"difficulty": "very-hard",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "fiery-key-anywhere-before-ashen-cavern",
+	"randomizeNonEssentialKeys": true,
+	"seed": "1234567890"
+}

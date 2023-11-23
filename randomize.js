@@ -90,7 +90,7 @@ function randomize(paramsFile, stDir) {
     var PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY=Math.min(50,Math.max(20/sharpDifficultyFactor,1));
 
     // Drops proportion affected by difficulty
-    CHANCE_OF_UNIQUE_DROP=CHANCE_OF_UNIQUE_DROP / smoothDifficultyFactor;
+    //CHANCE_OF_UNIQUE_DROP=CHANCE_OF_UNIQUE_DROP / smoothDifficultyFactor; - Not adding more items for easy modes. -> changing it, so difficulty doesn't affect quantity. Impossible to have many items around, that cause texture glitch and freezes.
     PROPORTION_OF_COLLECTABLE_BEING_UNIQUES=PROPORTION_OF_COLLECTABLE_BEING_UNIQUES / smoothDifficultyFactor;
     UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=UNIQUES_SEQUENCE_RANDOMIZATION_SPAN / smoothDifficultyFactor;
 

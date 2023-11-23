@@ -1,6 +1,6 @@
 {
 	"label": "only-bosses",
-	"preset": "any-prc",
+	"preset": "any%",
 	"difficulty": "extreme-easy",
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
