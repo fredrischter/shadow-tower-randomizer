@@ -59,6 +59,38 @@ class TFILEReader {
   }
 }
 
+class TIMTextureFile {
+  constructor(bin) {
+    this.bin = bin;
+    if (this.bin) {
+      var magic = getUInt32(this.bin, 0x0);
+      if (magic != 0x10) {
+        //console.log("Texture not a texture magic=" + magic);
+        return;
+      }
+      var colorType = getUInt32(this.bin, 0x4);
+      var imageOffset = getUInt32(this.bin, 0x8);
+      var bitsPerPalleteEntry = colorType == 0x08? 4 : colorType == 0x09? 8 : 16; 
+      var palleteOrgX = getUInt16(this.bin, 0xc);
+      var palleteOrgY = getUInt16(this.bin, 0xe);
+      var palette_colors = getUInt16(this.bin, 0x10);
+      var nb_palettes = getUInt16(this.bin, 0x12);
+      var palletesWords = nb_palettes * palette_colors * bitsPerPalleteEntry / 8;
+      var imageWidthIn16BitWords = getUInt16(this.bin, imageOffset);
+      var imageHeightInPixels = getUInt16(this.bin, imageOffset + 0x2);
+      
+      console.log("Texture magic=" + magic + " colorType=" + colorType + " imageOffset=" + imageOffset + " bitsPerPalleteEntry=" + bitsPerPalleteEntry + " palette_colors=" + palette_colors
+        + " palleteOrgX=" + palleteOrgX + " palleteOrgY=" + palleteOrgY
+        + " imageWidthIn16BitWords=" + imageWidthIn16BitWords + " imageHeightInPixels=" + imageHeightInPixels
+        + " nb_palettes=" + nb_palettes + " palletesWords=" + palletesWords
+        + " textureSize=" + this.bin.length);
+      
+      //0x3c
+      //0x3e
+    }
+  }
+}
+
 class TFormatPart {
 
   constructor(startOffset, bin, fileName, originalTFile, indexInTFile) {
@@ -222,6 +254,10 @@ class TFormat {
     //  console.log("File not valid for reading, skipping. Last offset: " + this.effectiveEndOfFileoffset + " " + this.fileName);
     //  return;
     //}
+    if (!(this.effectiveEndOfFileoffset - this.beginningOfBin>0)) {
+      console.log("DEBUG - Skipping to load TFormat, invalid. " + this.fileName);
+      return;
+    }
     this.bin = new Array(this.effectiveEndOfFileoffset - this.beginningOfBin);
     for (var i = 0 ; i < this.bin.length ; i++) {
       this.bin[i] = reader.getUint8();
@@ -321,6 +357,7 @@ class TFormat {
   }
 }
 
+global.TIMTextureFile = TIMTextureFile;
 global.TFILEReader = TFILEReader;
 global.TFormat = TFormat;
 global.TFormatPart = TFormatPart;

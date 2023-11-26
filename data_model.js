@@ -558,6 +558,7 @@
   }
 
   global.areas = [];
+  global.areasByOriginalIndex = [];
 
   global.CREATURE_SIZE = 0xc0;
   global.CREATURE_COUNT = 16;
@@ -586,7 +587,10 @@
   // ? - another_customized_TMD_object_models
   this.name = name;
   this.areaIndexCounter = areaIndexCounter;
-  global[name] = this;
+
+    this.index = (this.logo_index - 1)/10;
+    global[name] = this;
+    areasByOriginalIndex[this.index] = this;
   }
 
   setup(FDAT) {
@@ -596,7 +600,7 @@
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;
     }
-    console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index);
+    console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index + " map index " + this.index);
 
   /*
   0-entity and entity data
@@ -1210,7 +1214,7 @@
         return "gate-"+this.gateIndex.get();
       }
       if (this.gateIdentifier.get() == 0x1 && this.gateIndex.isNull()) {
-        return "gate-index";
+        return "gate-reset";
       }
       if (this.zeroes1.get() == 0 && this.gateIndex.get() == 0 && this.gateIdentifier.get() == 0 && this.zeroes4.get() == 0 && 
           this.zeroes5.get() == 0 && this.zeroes6.get() == 0 && this.zeroes7.get() == 0) {
