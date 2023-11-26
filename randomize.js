@@ -237,14 +237,6 @@ function randomize(paramsFile, stDir) {
 
     let changeSet = [];
 
-    var forEachCreatureSpawn = [];
-    var forEachCreatureSpawnFromEndtoStart = [];
-    var forEachValidCreature = [];
-    var forEachItem = [];
-    var forEachCollectable = [];
-    var forEachCollectableFromEndtoStart = [];
-    var forEachObject = [];
-
     // Directives
 
     function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
@@ -396,8 +388,14 @@ function randomize(paramsFile, stDir) {
         var originalItem = spawn.drop1.get();
         if (secondaryConsumables.indexOf(originalItem)!=-1) {
             if (gotLuckToReplaceSecondaryByPrimaryConsumable()) {
+
+                if (!area.hasFreeItemMemory()) {
+                    console.log("DEBUG - Moderating difficulty - No free memory " + area.usedItemMemory() + ", halting drop replacement of secondary consumable (" + itemData[originalItem].name + ") by primary consumable at " + area.name + "/" + spawn.name());
+                    return;
+                }
+
                 spawn.drop1.set(primaryConsumables[Math.floor((Math.random()*primaryConsumables.length))]);
-                console.log("Moderating difficulty by replacing drop secondary consumable (" + itemData[originalItem].name + ") by a primary consumable (" + itemData[spawn.drop1.get()].name + ") of " + area.name + "/" + spawn.name());
+                console.log("DEBUG - Moderating difficulty - by replacing drop secondary consumable (" + itemData[originalItem].name + ") by a primary consumable (" + itemData[spawn.drop1.get()].name + ") of " + area.name + "/" + spawn.name());
             }
         }
 
@@ -436,8 +434,14 @@ function randomize(paramsFile, stDir) {
         var originalItem = collectable.type.get();
         if (secondaryConsumables.indexOf(originalItem)!=-1) {
             if (gotLuckToReplaceSecondaryByPrimaryConsumable()) {
+
+                if (!area.hasFreeItemMemory()) {
+                    console.log("DEBUG - Moderating difficulty - No free memory " + area.usedItemMemory() + ", halting collectable replacement of secondary consumable (" + itemData[originalItem].name + ") by primary consumable at " + area.name);
+                    return;
+                }
+
                 collectable.type.set(primaryConsumables[Math.floor((Math.random()*primaryConsumables.length))]);
-                console.log("Moderating difficulty by replacing secondary consumable (" + itemData[originalItem].name + ") by a primary consumable (" + itemData[collectable.type.get()].name + ") of area " + area.name);
+                console.log("DEBUG - Moderating difficulty - by replacing secondary consumable (" + itemData[originalItem].name + ") by a primary consumable (" + itemData[collectable.type.get()].name + ") of area " + area.name);
             }
         }
 
@@ -739,6 +743,12 @@ function randomize(paramsFile, stDir) {
     function distributeCollectablesDumpInLateWorlds(collectable, area) {
         if (collectableUniques.length > 0) {
             if (secondaryConsumables.indexOf(collectable.type.get())!=-1) {
+
+                if (!area.hasFreeItemMemory()) {
+                    console.log("WARNING - Collectable randomization - No free memory " + area.usedItemMemory() + ", halting adding collectable to late worlds: " + area.name + " but there are more to add " + collectableUniques.length);
+                    return;
+                }
+
                 collectable.type.set(collectableUniques.shift());
                 console.log("DEBUG - Collectable randomization - Adding collectable to late worlds: " + items[collectable.type.get()].name + " at " + area.name);
             }
@@ -747,13 +757,17 @@ function randomize(paramsFile, stDir) {
 
     var DROP_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE=dropUniques.length * UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
-    function distributeDropsRandomly(spawn, area, index) {
-        var dropsNames = "blank";
-
+    function clearDrops(spawn, area, index) {
+        spawn.drop1.null();
+        spawn.drop1Chance.set(0);
         spawn.drop2.null();
         spawn.drop2Chance.set(0);
         spawn.drop3.null();
         spawn.drop3Chance.set(0);
+    }
+
+    function distributeDropsRandomly(spawn, area, index) {
+        var dropsNames = "blank";
 
         if (!spawn.drop1.isNull()) {
             dropsNames = items[spawn.drop1.get()].name + " ";
@@ -774,6 +788,11 @@ function randomize(paramsFile, stDir) {
             var chosenIndex = Math.floor(Math.random()*randomRange);
             var chosenItem = dropUniques[chosenIndex];
 
+            if (!area.hasFreeItemMemory()) {
+                console.log("DEBUG - Drop randomization - No free memory " + area.usedItemMemory() + ", halting unique drop distribution for " + area.name + "/" + spawn.name());
+                return;
+            }
+
             var tookCune = false;
             dropUniques = dropUniques.filter(item => {
                 var toKeep = item !== chosenItem;
@@ -792,6 +811,12 @@ function randomize(paramsFile, stDir) {
             var newDropName = items[spawn.drop1.get()].name;
             console.log("DEBUG - Drop randomization - Updating drop to unique " + newDropName + " at " + area.name + "/" + spawn.name() + " where it was " + dropsNames + ". There are more " + dropUniques.length + " to distribute.");
         } else if (Math.random()<CHANCE_OF_CONSUMABLE_DROP) {
+
+            if (!area.hasFreeItemMemory()) {
+                console.log("DEBUG - Drop randomization - No free memory " + area.usedItemMemory() + ", halting consumable drop distribution for " + area.name + "/" + spawn.name());
+                return;
+            }
+
             var chosen = consumablesForRandomization[Math.floor((Math.random()*consumablesForRandomization.length))];
             spawn.drop1.set(chosen);
             spawn.drop1Chance.set(100);
@@ -818,8 +843,12 @@ function randomize(paramsFile, stDir) {
             console.log("DEBUG - Drop randomization - Remaining cunes to distribute: " + remainingCunesToAddAsDrops.length);
         }
 
-        if ((area.name.startsWith("water") || area.name.startsWith("fire") || area.name.startsWith("monster") || area.name.startsWith("death") || area.name.startsWith("illusion")) 
-            && remainingCunesToAddAsDrops.length && !spawn.drop1.isNull() && secondaryConsumables.indexOf(spawn.drop1.get())!=-1) {
+        if (remainingCunesToAddAsDrops.length && !spawn.drop1.isNull() && secondaryConsumables.indexOf(spawn.drop1.get())!=-1) {
+            if (!area.hasFreeItemMemory()) {
+                console.log("DEBUG - Drop randomization - No free memory " + area.usedItemMemory() + ", Not putting remaining cune put at " + area.name + "/" + spawn.name());
+                return;
+            }
+
             console.log("DEBUG - Drop randomization - Remaining cune put at " + area.name + "/" + spawn.name() + " where it was " + items[spawn.drop1.get()].name);
             spawn.drop1.set(remainingCunesToAddAsDrops.shift());
             spawn.drop1Chance.set(100);
@@ -830,14 +859,21 @@ function randomize(paramsFile, stDir) {
         var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
 
         if (arrayToRemoveFrom.length > 0) {
+
+            if (!area.hasFreeItemMemory()) {
+                console.log("WARNING - Drop randomization adding remaining to late worlds - No free memory " + area.usedItemMemory() + ", avoiding to add drop replacement for " + area.name + "/" + spawn.name() + " want to add more " + arrayToRemoveFrom.length);
+                return;
+            }
+
             var dropsNames = "blank";
-            if (!spawn.drop1.isNull()) {
+            /*if (!spawn.drop1.isNull()) {
                 dropsNames = items[spawn.drop1.get()].name + " ";
                 if (secondaryConsumables.indexOf(spawn.drop1.get())==-1) {
                     console.log("DEBUG - Drop randomization adding remaining to late worlds - To leave this one alone since it is not secondary consumable " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
                     return;
                 }
-            }
+            }*/
+
             if (spawn.drop1.isNull() || 
                     (items[spawn.drop1.get()].type.get()==ITEM &&
                     items[spawn.drop1.get()].name!="item_10a_cune")) {
@@ -865,6 +901,12 @@ function randomize(paramsFile, stDir) {
                                           items[spawn.drop1.get()].type.get() == BRACELET ||
                                           items[spawn.drop1.get()].type.get() == AMULET)
                 ) {
+
+                if (!area.hasFreeItemMemory()) {
+                    console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding second drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
+                    return;
+                }
+
                 spawn.drop2.set(arrayToRemoveFrom.shift());
                 spawn.drop2Chance.set(100);
                 console.log("DEBUG - Drop randomization adding remaining as second drop - Adding drop: " + items[spawn.drop2.get()].name + " at " + area.name + "/" + spawn.name());
@@ -877,6 +919,12 @@ function randomize(paramsFile, stDir) {
 
         if (arrayToRemoveFrom.length > 0) {
             if (spawn.drop3.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
+
+                if (!area.hasFreeItemMemory()) {
+                    console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding third drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
+                    return;
+                }
+
                 spawn.drop3.set(arrayToRemoveFrom.shift());
                 spawn.drop3Chance.set(100);
                 console.log("DEBUG - Drop randomization adding remaining as third drop - Adding drop: " + items[spawn.drop3.get()].name + " at " + area.name + "/" + spawn.name());
@@ -944,6 +992,64 @@ function randomize(paramsFile, stDir) {
         }*/
     }
 
+    function forEachValidCreature(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachValidCreature - " + func.name + "\n\n");
+        for (var a in areas) {
+            var area = areas[a];
+            for (var index = 0; index < CREATURE_COUNT; index++) {
+                var creature = area.creatures[index];
+                if (!creature.isBlank) {
+                    func(creature, area, index);
+                }
+            }
+        }
+    }
+
+    function forEachObject(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachObject - " + func.name + "\n\n");
+        for (var a in areas) {
+            var area = areas[a];
+            area.objects.forEach(object => {
+                func(object, area);
+            });
+        }
+    }
+
+    function forEachItem(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachItem - " + func.name + "\n\n");
+        for (var i in items) {
+            func(items[i]);
+        }
+    }
+
+    function forEachCollectable(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachCollectable - " + func.name + "\n\n");
+        allChangeableCollectablesInDefaultGame.forEach((collectable) => {
+            func(collectable.collectable, collectable.area);
+        });
+    };
+
+    function forEachCreatureSpawn(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachCreatureSpawn - " + func.name + "\n\n");
+        allSpawnsInDefaultGame.forEach((spawn) => {
+            func(spawn.spawn, spawn.area, spawn.index);
+        });
+    };
+
+    function forEachCollectableFromEndtoStart(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachCollectableFromEndtoStart - " + func.name + "\n\n");
+        allChangeableCollectablesInDefaultGame.slice().reverse().forEach((collectable) => {
+            func(collectable.collectable, collectable.area);
+        });
+    };
+
+    function forEachCreatureSpawnFromEndtoStart(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachCreatureSpawnFromEndtoStart - " + func.name + "\n\n");
+        allSpawnsInDefaultGame.slice().reverse().forEach((spawn) => {
+            func(spawn.spawn, spawn.area, spawn.index);
+        });
+    };
+
     // Running the thing
 
     function operate() {
@@ -956,7 +1062,7 @@ function randomize(paramsFile, stDir) {
         // ------- PRESET King hopper
 
         if (params.preset == PRESET_FIX_KING_HOPPER) {
-            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn(presetKingHopperFixforEachCreatureSpawn);
         }
 
         // ------- Any%
@@ -965,41 +1071,63 @@ function randomize(paramsFile, stDir) {
             params.preset == PRESET_COMEDY ||
             params.preset == PRESET_SCARY_GAME ||
             params.preset == PRESET_BONANZA) {
-            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
-            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
-            forEachItem.push(presetDirectivesforEachItem);
-            forEachItem.push(randomizeEquipsStats);
+            forEachCreatureSpawn(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn(presetDirectivesforEachCreatureSpawn);
+            forEachItem(presetDirectivesforEachItem);
+            forEachItem(randomizeEquipsStats);
 
             if (params.randomizeCollectablesAndDrops) {
-                forEachCollectable.push(distributeCollectablesRandomly);
-                forEachCreatureSpawn.push(distributeDropsRandomly);
-                forEachCreatureSpawn.push(guarantee99CunesPlacingTheRemainingAsDrops);
-                forEachCreatureSpawn.push(distributeRemainingUniqueDropsAndConsumablesAsSecondDrop);
-                forEachCreatureSpawn.push(distributeRemainingUniqueDropsAndConsumablesAsThirdDrop);
+                forEachCreatureSpawn(clearDrops);
+                forEachCollectable(distributeCollectablesRandomly);
+
+                // Switch fiery key or flamming key
+                forEachCreatureSpawn(setFieryKeyOrFlammingKey);
+
+                forEachCreatureSpawn(distributeDropsRandomly);
+                forEachCreatureSpawnFromEndtoStart(guarantee99CunesPlacingTheRemainingAsDrops);
+
+                // Guarantee poison vaccine
+                forEachCreatureSpawn(countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern);
+                forEachCollectable(countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern);
+                forEachCreatureSpawnFromEndtoStart(replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved);
+
+                forEachCreatureSpawn(distributeRemainingUniqueDropsAndConsumablesAsSecondDrop);
+                forEachCreatureSpawn(distributeRemainingUniqueDropsAndConsumablesAsThirdDrop);
             }
         }
 
         // ------- 100%
 
         if (params.preset == PRESET_100_PRC) {
-            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
-            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
-            forEachItem.push(presetDirectivesforEachItem);
-            forEachItem.push(randomizeEquipsStats);
+            forEachCreatureSpawn(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn(presetDirectivesforEachCreatureSpawn);
+            forEachItem(presetDirectivesforEachItem);
+            forEachItem(randomizeEquipsStats);
 
             if (params.randomizeCollectablesAndDrops) {
-                forEachCollectable.push(distributeCollectablesRandomly);
-                forEachCollectableFromEndtoStart.push(distributeCollectablesDumpInLateWorlds);
-                forEachCreatureSpawn.push(distributeDropsRandomly);
-                forEachCreatureSpawn.push(guarantee99CunesPlacingTheRemainingAsDrops);
-                forEachCreatureSpawnFromEndtoStart.push(distributeDropsDumpInLateWorlds);
+                forEachCreatureSpawn(clearDrops);
+                forEachCollectable(distributeCollectablesRandomly);
+                forEachCollectableFromEndtoStart(distributeCollectablesDumpInLateWorlds);
+
+                // Switch fiery key or flamming key
+                forEachCreatureSpawn(setFieryKeyOrFlammingKey);
+
+                forEachCreatureSpawn(distributeDropsRandomly);
+                forEachCreatureSpawnFromEndtoStart(guarantee99CunesPlacingTheRemainingAsDrops);
+
+                // Guarantee poison vaccine
+                forEachCreatureSpawn(countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern);
+                forEachCollectable(countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern);
+                forEachCreatureSpawnFromEndtoStart(replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved);
+
+                forEachCreatureSpawnFromEndtoStart(distributeDropsDumpInLateWorlds);
             }
         }
 
         // ------- Empty game
 
         if (params.keepOnlyBosses) {
-            forEachCreatureSpawn.push(keepOnlyBosses);
+            forEachCreatureSpawn(keepOnlyBosses);
         }
 
         // Randomize creatures
@@ -1020,42 +1148,28 @@ function randomize(paramsFile, stDir) {
         console.log("Difficulty " + params.difficulty + ", factor " + factorByDificultyParam[params.difficulty]);
 
         if (params.difficulty && params.difficulty != DIFFICULTY_MEDIUM) {
-            forEachValidCreature.push(applyDifficultyForEachValidCreature);
-            forEachItem.push(applyDifficultyForEachItem);
-            forEachCreatureSpawn.push(applyDifficultyForEachSpawn);
-            forEachCollectable.push(applyDifficultyForEachCollectable);
+            forEachValidCreature(applyDifficultyForEachValidCreature);
+            forEachItem(applyDifficultyForEachItem);
+            forEachCreatureSpawn(applyDifficultyForEachSpawn);
+            forEachCollectable(applyDifficultyForEachCollectable);
         }
 
         if (params.messWithScenery) {
-            forEachObject.push(messWithSceneryObjects);
+            forEachObject(messWithSceneryObjects);
         }
 
         if (params.removeScenery) {
-            forEachObject.push(removeSceneryObjects);
+            forEachObject(removeSceneryObjects);
         }
 
         // ------- PRESET Directives
 
         if (params.preset == PRESET_APPLY_DIRECTIVES) {
-            forEachCreatureSpawn.push(presetKingHopperFixforEachCreatureSpawn);
-            forEachCreatureSpawn.push(presetDirectivesforEachCreatureSpawn);
-            forEachItem.push(presetDirectivesforEachItem);
+            forEachCreatureSpawn(presetKingHopperFixforEachCreatureSpawn);
+            forEachCreatureSpawn(presetDirectivesforEachCreatureSpawn);
+            forEachItem(presetDirectivesforEachItem);
         }
 
-        // Guarantee poison vaccine
-        forEachCreatureSpawn.push(countDrop1PoisonVaccineIfAreaIsBeforePoisonousCavern);
-        forEachCollectable.push(countCollectablePoisonVaccineIfAreaIsBeforePoisonousCavern);
-        forEachCreatureSpawnFromEndtoStart.push(replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved);
-
-        // Switch fiery key or flamming key
-        forEachCreatureSpawn.push(setFieryKeyOrFlammingKey);
-
-    }
-
-    operate();
-
-    for (var i in items) {
-        forEachItem.forEach((func) => func(items[i]));
     }
 
     var allChangeableCollectablesInDefaultGame = [];
@@ -1081,13 +1195,6 @@ function randomize(paramsFile, stDir) {
             }
         }
 
-        for (var index = 0; index < CREATURE_COUNT; index++) {
-            var creature = area.creatures[index];
-            if (!creature.isBlank) {
-                forEachValidCreature.forEach((func) => func(creature, area, index));
-            }
-        }
-
         for (var index = 0; index < COLLECTABLE_COUNT; index++) {
             var collectable = area.collectables[index];
             if (!collectable.isBlank() && irreplacebleKeyItems.indexOf(itemData[collectable.type.get()].type.get())==-1) {
@@ -1098,39 +1205,13 @@ function randomize(paramsFile, stDir) {
                 });
             }
         }
-
-        area.objects.forEach(object => {
-            forEachObject.forEach((func) => func(object, area));
-        });
     }
 
     console.log("DEBUG - The game has " + allSpawnsInDefaultGame.length + " spawns.");
 
-    forEachCreatureSpawn.forEach((func) => {
-        allSpawnsInDefaultGame.forEach((spawn) => {
-            func(spawn.spawn, spawn.area, spawn.index);
-        });
-    });
-
     console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables."); // + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
 
-    forEachCollectable.forEach((func) => {
-        allChangeableCollectablesInDefaultGame.forEach((collectable) => {
-            func(collectable.collectable, collectable.area);
-        });
-    });
-
-    forEachCreatureSpawnFromEndtoStart.forEach((func) => {
-        allSpawnsInDefaultGame.slice().reverse().forEach((spawn) => {
-            func(spawn.spawn, spawn.area, spawn.index);
-        });
-    });
-
-    forEachCollectableFromEndtoStart.forEach((func) => {
-        allChangeableCollectablesInDefaultGame.slice().reverse().forEach((collectable) => {
-            func(collectable.collectable, collectable.area);
-        });
-    });
+    operate();
 
     console.log = function() {
         logFileRandomize.write(util.format.apply(null, arguments) + '\n');

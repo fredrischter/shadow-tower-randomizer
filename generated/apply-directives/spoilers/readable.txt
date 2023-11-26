@@ -12,49 +12,22 @@ DEBUG - Items randomization - 20% of secondary consumables will be replaced by p
 
 Randomization - Using given seed 1234567890
 Parameters - {"label":"apply-directives","preset":"apply-directives","difficulty":"medium","seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
-Difficulty medium, factor 1
-Removing ATTR_HP_RECOVERY from equip item_e_shadow_tiger
-Removing ATTR_MP_RECOVERY from equip item_25_magical_bastard_sword
-Removing ATTR_HP_RECOVERY from equip item_26_righteous_sword
-Removing ATTR_HP_RECOVERY from equip item_4b_wizard_crown
-Removing ATTR_MP_RECOVERY from equip item_58_fortune_great_helm
-Removing ATTR_HP_RECOVERY from equip item_5a_holy_great_helm
-Removing ATTR_HP_RECOVERY from equip item_68_plate_mail
-Removing ATTR_MP_RECOVERY from equip item_70_eternal_plate_mail
-Removing ATTR_MP_RECOVERY from equip item_76_god_plate
-Removing ATTR_HP_RECOVERY from equip item_78_knight_plate_mail
-Removing ATTR_HP_RECOVERY from equip item_87_swift_gauntlet
-Removing ATTR_HP_RECOVERY from equip item_97_steel_boots_of_balance
-Removing ATTR_HP_RECOVERY from equip item_a9_large_shield_of_balance
-Removing ATTR_HP_RECOVERY from equip item_ad_great_shield_of_balance
-Removing ATTR_HP_RECOVERY from equip item_b3_tower_shield_of_honor
-Removing ATTR_HP_RECOVERY from equip item_b7_tower_shield_of_balance
-Removing ATTR_HP_RECOVERY from equip item_bd_gothic_shield_of_honor
-Removing ATTR_HP_RECOVERY from equip item_be_gothic_shield_of_balance
-Removing ATTR_HP_RECOVERY from equip item_c0_gothic_shield_of_power
-Removing ATTR_MP_RECOVERY from equip item_c0_gothic_shield_of_power
-Removing ATTR_MP_RECOVERY from equip item_c8_sorcerer_ring_of_fire
-Removing ATTR_MP_RECOVERY from equip item_cc_priest_ring_of_frost
-Removing ATTR_HP_RECOVERY from equip item_ce_soul_ring
-Removing ATTR_HP_RECOVERY from equip item_cf_soul_ring
-Removing ATTR_HP_RECOVERY from equip item_d0_holy_ring_of_resist
-Removing ATTR_HP_RECOVERY from equip item_d1_holy_ring_of_priest
-Removing ATTR_HP_RECOVERY from equip item_d2_holy_ring
-Removing ATTR_MP_RECOVERY from equip item_d5_dark_priest_ring
-Removing ATTR_HP_RECOVERY from equip item_e4_ring_of_dead_spirit
-Removing ATTR_MP_RECOVERY from equip item_e4_ring_of_dead_spirit
-Removing ATTR_HP_RECOVERY from equip item_f7_priest_bracelet
-Removing ATTR_HP_RECOVERY from equip item_fa_moon_bracelet
-Removing ATTR_MP_RECOVERY from equip item_fa_moon_bracelet
-Removing ATTR_HP_RECOVERY from equip item_100_amulet_of_curing
-Removing ATTR_HP_RECOVERY from equip item_104_priest_amulet
-Removing ATTR_MP_RECOVERY from equip item_104_priest_amulet
-Removing ATTR_HP_RECOVERY from equip item_109_endless_amulet
-Removing ATTR_MP_RECOVERY from equip item_109_endless_amulet
 DEBUG - The game has 640 spawns.
+DEBUG - The game has 229 collectables.
+Difficulty medium, factor 1
+
+
+DEBUG ------------------ Randomization engine - forEachCreatureSpawn - presetKingHopperFixforEachCreatureSpawn
+
+
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
 Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
+
+
+DEBUG ------------------ Randomization engine - forEachCreatureSpawn - presetDirectivesforEachCreatureSpawn
+
+
 Setting drop chance to 100%, creature 01_acid_slime drop item_47_cap where it was 80
 Setting spawn chance to 100%, creature 02_blood_slime where it was 25
 Setting drop chance to 100%, creature 00_dark_spider drop item_32_mace where it was 40
@@ -591,11 +564,46 @@ Setting drop chance to 100%, creature 0d_blood_bone drop item_31_blood_sword whe
 Setting drop chance to 100%, creature 0d_blood_bone drop item_29_great_sword where it was 60
 Setting drop chance to 100%, creature 0d_blood_bone drop item_2a_swift_great_sword where it was 50
 Setting drop chance to 100%, creature 0c_hollow_mage drop item_109_endless_amulet where it was 80
-Guarantee poison vaccine - count 1/4, as found one at human_world_hidden_region/09_blood_slime
-Guarantee poison vaccine - count 2/4, as found one at human_world_hidden_region/09_blood_slime
-Guarantee poison vaccine - count 3/4, as found one at human_world_cursed_region/08_dark_spider
-Guarantee poison vaccine - count 4/4, as found one at earth_world_rotting_cavern/00_watcher_plant
-Guarantee poison vaccine - Achieved poison vaccine requirement 4/4
-Fiery Key / Flaming Key - Skipping Damned Angel
-Fiery Key / Flaming Key - Skipping Ebony Knight
-DEBUG - The game has 229 collectables.
+
+
+DEBUG ------------------ Randomization engine - forEachItem - presetDirectivesforEachItem
+
+
+Removing ATTR_HP_RECOVERY from equip item_e_shadow_tiger
+Removing ATTR_MP_RECOVERY from equip item_25_magical_bastard_sword
+Removing ATTR_HP_RECOVERY from equip item_26_righteous_sword
+Removing ATTR_HP_RECOVERY from equip item_4b_wizard_crown
+Removing ATTR_MP_RECOVERY from equip item_58_fortune_great_helm
+Removing ATTR_HP_RECOVERY from equip item_5a_holy_great_helm
+Removing ATTR_HP_RECOVERY from equip item_68_plate_mail
+Removing ATTR_MP_RECOVERY from equip item_70_eternal_plate_mail
+Removing ATTR_MP_RECOVERY from equip item_76_god_plate
+Removing ATTR_HP_RECOVERY from equip item_78_knight_plate_mail
+Removing ATTR_HP_RECOVERY from equip item_87_swift_gauntlet
+Removing ATTR_HP_RECOVERY from equip item_97_steel_boots_of_balance
+Removing ATTR_HP_RECOVERY from equip item_a9_large_shield_of_balance
+Removing ATTR_HP_RECOVERY from equip item_ad_great_shield_of_balance
+Removing ATTR_HP_RECOVERY from equip item_b3_tower_shield_of_honor
+Removing ATTR_HP_RECOVERY from equip item_b7_tower_shield_of_balance
+Removing ATTR_HP_RECOVERY from equip item_bd_gothic_shield_of_honor
+Removing ATTR_HP_RECOVERY from equip item_be_gothic_shield_of_balance
+Removing ATTR_HP_RECOVERY from equip item_c0_gothic_shield_of_power
+Removing ATTR_MP_RECOVERY from equip item_c0_gothic_shield_of_power
+Removing ATTR_MP_RECOVERY from equip item_c8_sorcerer_ring_of_fire
+Removing ATTR_MP_RECOVERY from equip item_cc_priest_ring_of_frost
+Removing ATTR_HP_RECOVERY from equip item_ce_soul_ring
+Removing ATTR_HP_RECOVERY from equip item_cf_soul_ring
+Removing ATTR_HP_RECOVERY from equip item_d0_holy_ring_of_resist
+Removing ATTR_HP_RECOVERY from equip item_d1_holy_ring_of_priest
+Removing ATTR_HP_RECOVERY from equip item_d2_holy_ring
+Removing ATTR_MP_RECOVERY from equip item_d5_dark_priest_ring
+Removing ATTR_HP_RECOVERY from equip item_e4_ring_of_dead_spirit
+Removing ATTR_MP_RECOVERY from equip item_e4_ring_of_dead_spirit
+Removing ATTR_HP_RECOVERY from equip item_f7_priest_bracelet
+Removing ATTR_HP_RECOVERY from equip item_fa_moon_bracelet
+Removing ATTR_MP_RECOVERY from equip item_fa_moon_bracelet
+Removing ATTR_HP_RECOVERY from equip item_100_amulet_of_curing
+Removing ATTR_HP_RECOVERY from equip item_104_priest_amulet
+Removing ATTR_MP_RECOVERY from equip item_104_priest_amulet
+Removing ATTR_HP_RECOVERY from equip item_109_endless_amulet
+Removing ATTR_MP_RECOVERY from equip item_109_endless_amulet

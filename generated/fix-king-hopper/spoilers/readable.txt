@@ -12,16 +12,14 @@ DEBUG - Items randomization - 20% of secondary consumables will be replaced by p
 
 Randomization - Using given seed 1234567890
 Parameters - {"label":"fix-king-hopper","preset":"fix-king-hopper","difficulty":"medium","seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
-Difficulty medium, factor 1
 DEBUG - The game has 640 spawns.
-Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
-Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
-Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
-Guarantee poison vaccine - count 1/4, as found one at human_world_hidden_region/09_blood_slime
-Guarantee poison vaccine - count 2/4, as found one at human_world_hidden_region/09_blood_slime
-Guarantee poison vaccine - count 3/4, as found one at human_world_cursed_region/08_dark_spider
-Guarantee poison vaccine - count 4/4, as found one at earth_world_rotting_cavern/00_watcher_plant
-Guarantee poison vaccine - Achieved poison vaccine requirement 4/4
-Fiery Key / Flaming Key - Skipping Damned Angel
-Fiery Key / Flaming Key - Skipping Ebony Knight
 DEBUG - The game has 229 collectables.
+
+
+DEBUG ------------------ Randomization engine - forEachCreatureSpawn - presetKingHopperFixforEachCreatureSpawn
+
+
+Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
+Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
+Setting spawn change to 100% and fixing mutex group, creature 04_king_hopper
+Difficulty medium, factor 1

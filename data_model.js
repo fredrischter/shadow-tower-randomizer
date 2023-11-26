@@ -664,6 +664,8 @@
     }
 
     draw(mapDraw, mapSummary) {
+      mapSummary.push('<span style="background:#f0f0f0">Item Memory used '+this.usedItemMemory()+'</span>\n');
+
       for (var i in this.spawns) {
         this.spawns[i].draw(mapDraw, mapSummary);
       }
@@ -675,7 +677,43 @@
       for (var i in this.collectables) {
         this.collectables[i].draw(mapDraw, mapSummary);
       }
+    }
 
+    hasFreeItemMemory() {
+      return this.usedItemMemory()<16;
+    }
+
+    hasMemoryCrime() {
+      return this.usedItemMemory()>16;
+    }
+
+    usedItemMemory() {
+      let models = new Set();
+      for (var i in this.spawns) {
+        if (this.spawns[i].chance.isNull()) {
+          continue;
+        }
+        if (!this.spawns[i].drop1.isNull()) {
+          models.add(itemData[this.spawns[i].drop1.get()].model.get());
+          //console.log("Item Memory count +1 by drop1 - " + this.spawns[i].name());
+        }
+        if (!this.spawns[i].drop2.isNull()) {
+          models.add(itemData[this.spawns[i].drop2.get()].model.get());
+          //console.log("Item Memory count +1 by drop2 - " + this.spawns[i].name());
+        }
+        if (!this.spawns[i].drop3.isNull()) {
+          models.add(itemData[this.spawns[i].drop3.get()].model.get());
+          //console.log("Item Memory count +1 by drop3 - " + this.spawns[i].name());
+        }
+      }
+      for (var i in this.collectables) {
+        if (!this.collectables[i].type.isNull()) {
+          models.add(itemData[this.collectables[i].type.get()].model.get());
+          //console.log("Item Memory count +1 by collectables - " + itemData[this.collectables[i].type.get()].name);
+        }
+      }
+
+      return models.size;
     }
 
     writeMapImage(createCanvas, folder) {
@@ -1135,8 +1173,8 @@
       this.kindOfText = new UInt8(this.bin, this.offset_in_file + 0x10);
 
       this.zeroes1 = new UInt8(this.bin, this.offset_in_file + 0x11);
-      this.zeroes2 = new UInt8(this.bin, this.offset_in_file + 0x12);
-      this.zeroes3 = new UInt8(this.bin, this.offset_in_file + 0x13);
+      this.gateIndex = new UInt8(this.bin, this.offset_in_file + 0x12);
+      this.gateIdentifier = new UInt8(this.bin, this.offset_in_file + 0x13);
       this.zeroes4 = new UInt8(this.bin, this.offset_in_file + 0x14);
       this.zeroes5 = new UInt8(this.bin, this.offset_in_file + 0x15);
       this.zeroes6 = new UInt8(this.bin, this.offset_in_file + 0x16);
@@ -1168,7 +1206,13 @@
       if (this.area.totems[''+this.index]) {
         return "totem";
       };
-      if (this.zeroes1.get() == 0 && this.zeroes2.get() == 0 && this.zeroes3.get() == 0 && this.zeroes4.get() == 0 && 
+      if (this.gateIdentifier.get() == 0x7f) {
+        return "gate-"+this.gateIndex.get();
+      }
+      if (this.gateIdentifier.get() == 0x1 && this.gateIndex.isNull()) {
+        return "gate-index";
+      }
+      if (this.zeroes1.get() == 0 && this.gateIndex.get() == 0 && this.gateIdentifier.get() == 0 && this.zeroes4.get() == 0 && 
           this.zeroes5.get() == 0 && this.zeroes6.get() == 0 && this.zeroes7.get() == 0) {
         return "scenery";
       };
@@ -1565,7 +1609,32 @@
       this.drop3 = new UInt16(this.tfile.bin, this.offset_in_file + 0x08);
       this.drop3Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0d);
 
+      var thisSpawn = this;
+      const previousSetDrop1 = this.drop1.set.bind(this.drop1);
+      this.drop1.set = function(val) {
+        previousSetDrop1(val);
+        thisSpawn.verifyForMemoryCrime();
+      }
+
+      const previousSetDrop2 = this.drop2.set.bind(this.drop2);
+      this.drop2.set = function(val) {
+        previousSetDrop2(val);
+        thisSpawn.verifyForMemoryCrime();
+      }
+
+      const previousSetDrop3 = this.drop3.set.bind(this.drop3);
+      this.drop3.set = function(val) {
+        previousSetDrop3(val);
+        thisSpawn.verifyForMemoryCrime();
+      }
+
       console.log(this.toReadableString());
+    }
+
+    verifyForMemoryCrime() {
+      if (this.area.hasMemoryCrime()) {
+        console.log("ERROR - memory crime - used " + this.area.usedItemMemory());
+      }
     }
 
     name() {
