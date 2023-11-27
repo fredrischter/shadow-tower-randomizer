@@ -72,7 +72,7 @@ You can also put a image named as st.bin in generated\ folder, run all those com
 
 Run, verify updated csv files.
 
-./test_item_uniques.sh & ./test_items_count.sh & ./test_assertions.sh
+./test_item_uniques.sh & ./test_items_count.sh & ./test_assertions.sh & ./test_failures.sh &
 
 # Options
 

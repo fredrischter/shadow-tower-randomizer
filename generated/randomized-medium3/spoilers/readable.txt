@@ -280,7 +280,7 @@ Loading texture for creature earth_world_rotting_cavern/0c_barrel_snail file .\g
 Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=39304 imageHeightInPixels=37190 nb_palettes=1 palletesWords=8 textureSize=24576
 Loading texture for creature earth_world_rotting_cavern/0d_tondrom file .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\67 164000-16b800.T
 Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=42252 imageHeightInPixels=40138 nb_palettes=1 palletesWords=256 textureSize=30720
-Loading texture for creature earth_world_rotting_cavern/0e_auriel_a file .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\72 186800-18c000.T
+Loading texture for creature earth_world_rotting_cavern/0e_elder file .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\72 186800-18c000.T
 Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=22528
 Loading texture for creature earth_world_quaking_cavern/00_sand_leech_a file .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\2 2000-5800.T
 Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32898 imageHeightInPixels=32963 nb_palettes=1 palletesWords=8 textureSize=14336
@@ -875,10 +875,10 @@ Setting spawn chance to 100%, creature 08_star_serpent where it was 25
 Setting drop chance to 100%, creature 08_star_serpent drop item_a7_large_shield where it was 70
 Setting spawn chance to 100%, creature 0d_tondrom where it was 25
 Setting spawn chance to 100%, creature 0d_tondrom where it was 25
-Setting drop chance to 100%, creature 0e_auriel_a drop item_49_crown_of_resist where it was 80
-Setting spawn chance to 100%, creature 0e_auriel_a where it was 25
-Setting drop chance to 100%, creature 0e_auriel_a drop item_63_plate_mail where it was 50
-Setting drop chance to 100%, creature 0e_auriel_a drop item_62_scale_mail_of_curing where it was 50
+Setting drop chance to 100%, creature 0e_elder drop item_49_crown_of_resist where it was 80
+Setting spawn chance to 100%, creature 0e_elder where it was 25
+Setting drop chance to 100%, creature 0e_elder drop item_63_plate_mail where it was 50
+Setting drop chance to 100%, creature 0e_elder drop item_62_scale_mail_of_curing where it was 50
 Setting drop chance to 100%, creature 01_beak_plant drop item_33_crushing_mace where it was 60
 Setting spawn chance to 100%, creature 01_beak_plant where it was 50
 Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
@@ -2269,9 +2269,9 @@ DEBUG - Drop randomization - No free memory 16, halting consumable drop distribu
 DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0d_tondrom
 DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0c_barrel_snail
 DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0c_barrel_snail
-DEBUG - Drop randomization - No free memory 16, halting consumable drop distribution for earth_world_rotting_cavern/0e_auriel_a
-DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0e_auriel_a
-DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0e_auriel_a
+DEBUG - Drop randomization - No free memory 16, halting consumable drop distribution for earth_world_rotting_cavern/0e_elder
+DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0e_elder
+DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/0e_elder
 DEBUG - Drop randomization - No free memory 16, halting unique drop distribution for earth_world_rotting_cavern/05_dwarfling
 DEBUG - Drop randomization - Updating drop to consumable item_123_fire_world_stone at earth_world_poisonous_cavern/02_watcher_plant where it was blank
 DEBUG - Drop randomization - Updating drop to unique item_112_key_of_knowledge at earth_world_poisonous_cavern/02_watcher_plant where it was blank. There are more 251 to distribute.
@@ -2732,638 +2732,90 @@ Guarantee poison vaccine - count 1/4, as found one at earth_world_rotting_cavern
 DEBUG ------------------ Randomization engine - forEachCreatureSpawnFromEndtoStart - replaceSecondaryDropIfBeforePoisonousCavernBeforeRequirementIsAchieved
 
 
-Guarantee poison vaccine - count 1/4. Replacing drop consumable (item_11d_magic_potion) by item_124_poison_vaccine at earth_world_rotting_cavern/00_watcher_plant
-Guarantee poison vaccine - count 2/4. Replacing drop consumable (item_128_spirit_book) by item_124_poison_vaccine at human_world_forgotten_region/01_blood_skull
-Guarantee poison vaccine - count 3/4. Replacing drop consumable (item_11c_healing_potion) by item_124_poison_vaccine at human_world_forgotten_region/01_blood_skull
-Guarantee poison vaccine - Achieved poison vaccine requirement 4/4
+Guarantee poison vaccine - No free memory 16, halting replacing drop consumable (item_11d_magic_potion) at earth_world_rotting_cavern/00_watcher_plant
+Guarantee poison vaccine - count 1/4. Replacing drop consumable (item_128_spirit_book) by item_124_poison_vaccine at human_world_forgotten_region/01_blood_skull
+Guarantee poison vaccine - No free memory 16, halting replacing drop consumable (item_11c_healing_potion) at human_world_forgotten_region/01_blood_skull
+Guarantee poison vaccine - No free memory 16, halting replacing drop consumable (item_10e_sacred_feather) at human_world_forgotten_region/00_acid_skull
+Guarantee poison vaccine - No free memory 16, halting replacing drop consumable (item_11c_healing_potion) at human_world_hidden_region/05_blood_slime
+Guarantee poison vaccine - No free memory 16, halting replacing drop consumable (item_120_divine_symbol) at human_world_hidden_region/06_fanged_worm
+Guarantee poison vaccine - No free memory 16, halting replacing drop consumable (item_11e_anti_venom) at human_world_solitary_region/0a_skeleton
 
 
 DEBUG ------------------ Randomization engine - forEachCreatureSpawn - distributeRemainingUniqueDropsAndConsumablesAsSecondDrop
 
 
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for human_world_solitary_region/00_dark_spider but there are more to add 53
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for human_world_solitary_region/00_dark_spider but there are more to add 53
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for human_world_forgotten_region/02_skeleton but there are more to add 53
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_4a_crown_of_composure at human_world_cursed_region/00_dark_spider
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_18_bastard_sword at earth_world_rotting_cavern/06_elder
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for human_world_forgotten_region/02_skeleton but there are more to add 53
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_4a_crown_of_composure at human_world_cursed_region/06_tongue_imp
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_18_bastard_sword at human_world_cursed_region/09_shadow_spider
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_rotting_cavern/02_elder but there are more to add 51
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_rotting_cavern/04_minor_dwarf but there are more to add 51
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_rotting_cavern/04_minor_dwarf but there are more to add 51
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 51
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 51
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_poisonous_cavern/01_beak_plant but there are more to add 51
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_poisonous_cavern/01_beak_plant but there are more to add 51
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_quaking_cavern/01_blue_flicker but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_quaking_cavern/00_sand_leech_a but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_quaking_cavern/04_kiljoy but there are more to add 51
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_quaking_cavern/05_acid_pod but there are more to add 51
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_false_pit_cavern/00_earth_knight but there are more to add 51
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_false_pit_cavern/05_cocoon_plant but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_false_pit_cavern/01_acid_pod but there are more to add 51
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 51
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_68_plate_mail at earth_world_hostile_rock_cavern/05_earth_knight
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_impure_pool_area/01_horned_slime but there are more to add 50
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_impure_pool_area/02_blood_brain but there are more to add 50
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_impure_pool_area/05_horned_slime but there are more to add 50
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_d9_ring_of_protect at water_world_sunken_river_area/04_kabasaur
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_bc_gothic_shield_of_resist at water_world_sunken_river_area/04_kabasaur
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_de_caustic_sorcerer_ring at water_world_sunken_river_area/05_water_knight
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/02_horned_slime but there are more to add 47
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/05_blood_brain but there are more to add 47
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/09_koazul but there are more to add 47
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/0d_slasher but there are more to add 47
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/0e_manna_python but there are more to add 47
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_dd_caustic_priest_ring at water_world_white_rain_area/00_winged_worm
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_29_great_sword at water_world_white_rain_area/04_dragon_turtle
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_c2_shinning_gothic_shield at fire_world_phoenix_cave/06_fire_jinn
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_ad_great_shield_of_balance at fire_world_phoenix_cave/06_fire_jinn
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_burning_cavern/06_mystic_tower but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_burning_cavern/09_iron_crusher but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_molten_cavern/01_horned_skull but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_molten_cavern/06_mystic_tower but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_molten_cavern/09_steel_servant but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_molten_cavern/0d_arachness but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/01_berzerker but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/00_bone_demon but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/01_berzerker but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/01_berzerker but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/04_zygote but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/01_chirper but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/04_night_howler but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/09_freak but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/09_freak but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/0c_saurian_warrior_a but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/0c_saurian_warrior_a but there are more to add 43
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for illusion_world_bewilderment_domain/01_gargaral but there are more to add 43
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_8a_arm_guard_of_composure at illusion_world_gloomy_domain/0a_dark_bishop
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e6_ring_of_drain at illusion_world_gloomy_domain/09_dark_fairy
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_b5_tower_shield_of_protect at illusion_world_gloomy_domain/0c_maristella
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for illusion_world_gloomy_domain/0c_maristella but there are more to add 40
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_103_sorcerer_amulet at illusion_world_worship_domain/00_master_knight
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_f4_bracelet_of_composure at illusion_world_worship_domain/09_cross_breed
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_dark_castle_layer/00_hell_hunter but there are more to add 38
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_dark_castle_layer/06_armored_slayer but there are more to add 38
-WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_dark_castle_layer/09_armored_warrior but there are more to add 38
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_107_star_amulet at death_world_lingering_curse_layer/09_descrypha
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_17_dragon_sword at death_world_lingering_curse_layer/0c_old_face
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_impure_pool_area/01_horned_slime but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_impure_pool_area/02_blood_brain but there are more to add 51
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_impure_pool_area/05_horned_slime but there are more to add 51
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_68_plate_mail at water_world_sunken_river_area/04_kabasaur
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_d9_ring_of_protect at water_world_sunken_river_area/05_water_knight
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/05_blood_brain but there are more to add 49
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/05_blood_brain but there are more to add 49
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for water_world_watery_labyrinth_area/09_koazul but there are more to add 49
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_bc_gothic_shield_of_resist at fire_world_phoenix_cave/06_fire_jinn
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_burning_cavern/09_iron_crusher but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_molten_cavern/01_horned_skull but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/01_berzerker but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for fire_world_ashen_cavern/04_zygote but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/01_chirper but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/04_night_howler but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/09_freak but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/09_freak but there are more to add 48
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for monster_world_false_eye_area/0c_saurian_warrior_a but there are more to add 48
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_de_caustic_sorcerer_ring at monster_world_screeching_area/0a_cursed_demon
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_dd_caustic_priest_ring at illusion_world_gloomy_domain/09_dark_fairy
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_29_great_sword at illusion_world_gloomy_domain/09_dark_fairy
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_c2_shinning_gothic_shield at illusion_world_gloomy_domain/0c_maristella
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_ad_great_shield_of_balance at illusion_world_gloomy_domain/0d_deha
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for illusion_world_gloomy_domain/02_dark_imp but there are more to add 43
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_8a_arm_guard_of_composure at illusion_world_worship_domain/00_master_knight
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_e6_ring_of_drain at illusion_world_worship_domain/0a_warpoor
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_b5_tower_shield_of_protect at illusion_world_worship_domain/0a_warpoor
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_103_sorcerer_amulet at illusion_world_worship_domain/09_cross_breed
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_dark_castle_layer/05_armored_warrior but there are more to add 39
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_dark_castle_layer/05_armored_warrior but there are more to add 39
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_dark_castle_layer/06_armored_slayer but there are more to add 39
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_f4_bracelet_of_composure at death_world_lingering_curse_layer/01_stack_eyes
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_107_star_amulet at death_world_lingering_curse_layer/08_apocrypha
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_17_dragon_sword at death_world_lingering_curse_layer/09_descrypha
+WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_undead_layer/08_claw_head but there are more to add 36
 WARNING - Drop randomization - No free memory 16, halting adding second drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 36
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_f1_sorcerer_bracelet at death_world_gate_of_the_dead/06_hell_warrior
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_66_plate_mail_of_resist at death_world_gate_of_the_dead/08_wyvern
-DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_1b_swift_bastard_sword at death_world_gate_of_the_dead/0d_blood_bone
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_f1_sorcerer_bracelet at death_world_gate_of_the_dead/01_doriwi
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_66_plate_mail_of_resist at death_world_gate_of_the_dead/05_doriwi
+DEBUG - Drop randomization adding remaining as second drop - Adding drop: item_1b_swift_bastard_sword at death_world_gate_of_the_dead/08_wyvern
 
 
 DEBUG ------------------ Randomization engine - forEachCreatureSpawn - distributeRemainingUniqueDropsAndConsumablesAsThirdDrop
 
 
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/01_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/00_dark_spider but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/00_dark_spider but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/01_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/00_dark_spider but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/0a_skeleton but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/0a_skeleton but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_solitary_region/0a_skeleton but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/00_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/00_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/00_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/06_fanged_worm but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/04_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/04_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/04_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/04_acid_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/05_blood_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/08_casket but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/09_blood_slime but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_hidden_region/02_parasite but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/02_skeleton but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/02_skeleton but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/00_acid_skull but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/00_acid_skull but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/01_blood_skull but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/01_blood_skull but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/05_blood_skull but there are more to add 33
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_forgotten_region/05_blood_skull but there are more to add 33
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_22_mighty_bastard_sword at human_world_cursed_region/00_dark_spider
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_cursed_region/00_dark_spider but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_cursed_region/00_dark_spider but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_cursed_region/06_tongue_imp but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_cursed_region/09_shadow_spider but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_cursed_region/0a_guardian_a but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/02_elder but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/00_watcher_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/00_watcher_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/01_myconid but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/01_myconid but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/06_elder but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/04_minor_dwarf but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/04_minor_dwarf but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/09_imp but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/08_star_serpent but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/08_star_serpent but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/0c_barrel_snail but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/0e_auriel_a but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/0e_auriel_a but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_rotting_cavern/05_dwarfling but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/02_watcher_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/01_beak_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/01_beak_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/02_watcher_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/08_trickster but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/08_trickster but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0c_hanging_dead but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0c_hanging_dead but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0c_hanging_dead but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0e_watcher_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0d_trickster but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0d_trickster but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_poisonous_cavern/0d_trickster but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/01_blue_flicker but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/00_sand_leech_a but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/00_sand_leech_a but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/00_sand_leech_a but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/05_acid_pod but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/09_cocoon_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/02_sand_leech_b but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_quaking_cavern/02_sand_leech_b but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/00_earth_knight but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/01_acid_pod but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/01_acid_pod but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/05_cocoon_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/08_guardian_b but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/09_sloth_bug but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/0d_cocoon_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/0d_cocoon_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_false_pit_cavern/0d_cocoon_plant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/05_hobble_worm but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/0a_barrel_snail but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/08_clay_servant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/08_clay_servant but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/0a_barrel_snail but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/0c_dybbuk but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/0d_crying_root but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/0d_crying_root but there are more to add 32
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_stone_cavern/00_dybbuk but there are more to add 32
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_cc_priest_ring_of_frost at earth_world_hostile_rock_cavern/01_earth_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e0_ring_of_ice at earth_world_hostile_rock_cavern/01_earth_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_88_deadly_gauntlet at earth_world_hostile_rock_cavern/01_earth_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_f0_guardian_bracelet at earth_world_hostile_rock_cavern/01_earth_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_57_harden_great_helm at earth_world_hostile_rock_cavern/05_earth_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_45_fiery_bow_gun at earth_world_hostile_rock_cavern/00_black_onyx
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_b8_tower_shield_of_resist at earth_world_hostile_rock_cavern/00_black_onyx
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for earth_world_hostile_rock_cavern/04_dread_knight but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/01_horned_slime but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/01_horned_slime but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/01_horned_slime but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/02_blood_brain but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/02_blood_brain but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/02_blood_brain but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/02_blood_brain but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/05_horned_slime but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/06_dweller but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/0a_dweller but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/09_dementor but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/09_dementor but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/0c_worm_face but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/0c_worm_face but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/0c_worm_face but there are more to add 25
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_impure_pool_area/0c_worm_face but there are more to add 25
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_8b_deadly_arm_guard at water_world_sunken_river_area/00_kabasaur
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_75_harden_full_plate at water_world_sunken_river_area/05_water_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_7f_metal_glove at water_world_sunken_river_area/05_water_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_f6_harden_bracelet at water_world_sunken_river_area/04_kabasaur
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_72_holy_plate_mail at water_world_sunken_river_area/04_kabasaur
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_sunken_river_area/05_water_knight but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/02_horned_slime but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/02_horned_slime but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/05_blood_brain but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/04_great_frog but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/04_great_frog but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/09_koazul but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/09_koazul but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/09_koazul but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0a_horned_slime but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0c_gaze_hopper but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0e_manna_python but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0e_manna_python but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0e_manna_python but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0c_gaze_hopper but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0c_gaze_hopper but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0d_slasher but there are more to add 20
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for water_world_watery_labyrinth_area/0d_slasher but there are more to add 20
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_b0_deadly_great_shield at water_world_white_rain_area/00_winged_worm
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_c3_holy_gothic_shield at water_world_white_rain_area/04_dragon_turtle
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_fa_moon_bracelet at water_world_white_rain_area/04_dragon_turtle
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_31_blood_sword at fire_world_phoenix_cave/02_fire_jinn
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/02_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/02_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/02_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/06_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/06_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/06_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/06_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/06_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_phoenix_cave/06_fire_jinn but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/02_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/02_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/02_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/06_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/06_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/04_berzerker but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/06_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/06_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/09_iron_crusher but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/08_berzerker but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/0e_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/0e_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/0d_dweller but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/0d_dweller but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_burning_cavern/0d_dweller but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/01_horned_skull but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/01_horned_skull but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/01_horned_skull but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/06_mystic_tower but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/04_berzerker but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/04_berzerker but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/04_berzerker but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/09_steel_servant but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/09_steel_servant but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/0d_arachness but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/02_dead_abraxus but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/00_abraxus but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_molten_cavern/0c_fat_mole_c but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/00_bone_demon but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/04_zygote but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/05_horned_skull but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/05_horned_skull but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/04_zygote but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/0a_ruby_demon but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/0a_ruby_demon but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for fire_world_ashen_cavern/09_cerberus but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/00_night_howler but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/00_night_howler but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/04_night_howler but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/04_night_howler but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/04_night_howler but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/05_master_howler but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/0c_saurian_warrior_a but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/0c_saurian_warrior_a but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/0e_dinogon but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/0d_saurian_warrior_b but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/0d_saurian_warrior_b but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/0d_saurian_warrior_b but there are more to add 16
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for monster_world_false_eye_area/02_lizard_servant but there are more to add 16
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_109_endless_amulet at monster_world_screeching_area/06_oblid
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_be_gothic_shield_of_balance at monster_world_screeching_area/0a_cursed_demon
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e3_ring_of_seal at monster_world_screeching_area/0d_death_serpent
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_c8_sorcerer_ring_of_fire at monster_world_screeching_area/0d_death_serpent
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/02_gordoral but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/02_gordoral but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/01_gargaral but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/04_demon_warrior but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/05_gargaral but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/04_demon_warrior but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/04_demon_warrior but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/04_demon_warrior but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/04_demon_warrior but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/08_war_demon_1 but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/0c_death_mage but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_bewilderment_domain/08_war_demon_1 but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/09_dark_fairy but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0c_maristella but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0d_deha but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0d_deha but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0d_deha but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0d_deha but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0c_maristella but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0c_maristella but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/02_dark_imp but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/00_red_puppet but there are more to add 12
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/01_dark_spirits but there are more to add 12
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_78_knight_plate_mail at illusion_world_dream_domain/00_dark_spirits
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_76_god_plate at illusion_world_worship_domain/00_master_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e5_ring_of_rage at illusion_world_worship_domain/00_master_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_bf_master_gothic_shield at illusion_world_worship_domain/00_master_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_c0_gothic_shield_of_power at illusion_world_worship_domain/00_master_knight
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e2_black_ring at illusion_world_worship_domain/06_warpoor
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_d6_dark_sorcerer_ring at illusion_world_worship_domain/0a_warpoor
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_a0_holy_leg_guard at illusion_world_worship_domain/0a_warpoor
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_71_devil_plate_mail at illusion_world_worship_domain/0a_warpoor
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_d2_holy_ring at illusion_world_worship_domain/09_cross_breed
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_25_magical_bastard_sword at illusion_world_worship_domain/09_cross_breed
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_worship_domain/09_cross_breed but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_worship_domain/08_fester but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_worship_domain/02_fat_mole_d but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/00_hell_hunter but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/00_hell_hunter but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/05_armored_warrior but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/06_armored_slayer but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/06_armored_slayer but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/06_armored_slayer but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/06_armored_slayer but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/04_tree_ogre but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/09_armored_warrior but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/09_armored_warrior but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/09_armored_warrior but there are more to add 1
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_dark_castle_layer/08_armored_guardian but there are more to add 1
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_2b_fiery_great_sword at death_world_lingering_curse_layer/01_stack_eyes
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_d7_ring_of_poison at death_world_lingering_curse_layer/01_stack_eyes
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_52_full_helm_of_curing at death_world_lingering_curse_layer/01_stack_eyes
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_ba_harden_gothic_shield at death_world_lingering_curse_layer/08_apocrypha
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e_shadow_tiger at death_world_lingering_curse_layer/09_descrypha
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_86_gauntlet_of_resist at death_world_lingering_curse_layer/0c_old_face
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_lingering_curse_layer/0c_old_face but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_lingering_curse_layer/0c_old_face but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_lingering_curse_layer/0a_old_face but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/05_hell_hunter but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/05_hell_hunter but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/08_claw_head but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/08_claw_head but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/08_claw_head but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0a_demons_eye but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/0e_claw_head but there are more to add 7
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_undead_layer/09_pulsating_heart but there are more to add 7
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_21_deadly_bastard_sword at death_world_gate_of_the_dead/02_bone_wolf
-DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_105_amulet_of_balance at death_world_gate_of_the_dead/06_hell_warrior
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/06_hell_warrior but there are more to add 5
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/05_doriwi but there are more to add 5
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/08_wyvern but there are more to add 5
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/0a_bone_wolf but there are more to add 5
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/0d_blood_bone but there are more to add 5
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/0d_blood_bone but there are more to add 5
-WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for death_world_gate_of_the_dead/0d_blood_bone but there are more to add 5
- randomizableCreaturesCost1 00_dark_spider,01_acid_slime,02_blood_slime,06_skeleton,08_dark_spider,0a_skeleton,00_acid_slime,01_blood_slime,02_parasite,04_acid_slime,05_blood_slime,08_casket,09_blood_slime,00_acid_skull,01_blood_skull,02_skeleton,04_acid_skull,05_blood_skull,06_skeleton,00_dark_spider,02_tongue_imp,06_tongue_imp,08_dark_spider,00_watcher_plant,01_myconid,02_elder,04_minor_dwarf,05_dwarfling,06_elder,08_star_serpent,09_imp,0c_barrel_snail,0d_tondrom,01_beak_plant,02_watcher_plant,08_trickster,09_dwarf_warrior,0e_watcher_plant,00_sand_leech_a,01_blue_flicker,02_sand_leech_b,04_kiljoy,05_acid_pod,09_cocoon_plant,0a_cocoon_plant,00_earth_knight,01_acid_pod,04_cannon_snail,05_cocoon_plant,09_sloth_bug,0c_ray_plant,0d_cocoon_plant,05_hobble_worm,08_clay_servant,0a_barrel_snail,0d_crying_root,00_black_onyx,01_earth_knight,05_earth_knight,01_horned_slime,02_blood_brain,05_horned_slime,06_dweller,09_dementor,0a_dweller,0c_worm_face,0d_hatchlin,05_water_knight,02_horned_slime,04_great_frog,05_blood_brain,09_koazul,0a_horned_slime,0d_slasher,00_winged_worm,02_mystic_tower,06_mystic_tower,09_iron_crusher,0d_dweller,0e_mystic_tower,01_horned_skull,06_mystic_tower,05_horned_skull,09_cerberus,00_night_howler,04_night_howler,08_hermit_crab,0c_saurian_warrior_a,0d_saurian_warrior_b,0e_dinogon,05_warden,06_oblid,0a_cursed_demon,04_demon_warrior,08_war_demon_1,09_war_demon_2,00_red_puppet,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0a_dark_bishop,0c_maristella,00_master_knight,06_warpoor,09_cross_breed,0a_warpoor,02_karasu,05_armored_warrior,06_armored_slayer,09_armored_warrior,0a_armored_slayer,01_stack_eyes,09_descrypha,0c_old_face,05_hell_hunter,01_doriwi,02_bone_wolf,05_doriwi,06_hell_warrior,08_wyvern,0a_bone_wolf,0d_blood_bone randomizableCreaturesCost2 0d_trickster,08_torg,00_kabasaur,04_kabasaur,00_kabasaur,0c_gaze_hopper,0e_manna_python,02_fire_jinn,04_jinn_lord,05_armored_jinn,06_fire_jinn,04_berzerker,08_berzerker,04_berzerker,09_steel_servant,0d_arachness,01_berzerker,04_zygote,0a_ruby_demon,0d_damned_angel,01_chirper,04_king_hopper,08_oxelus,0d_death_serpent,0c_death_mage,0d_deha,00_dark_spirits,00_hell_hunter,04_tree_ogre,0a_old_face,0d_bugler randomizableFlyingCreaturesCost1 09_demon_bat,01_shadow_spider,09_shadow_spider,01_demon_bat,0a_rotting_face,0e_rotting_face,08_apocrypha,0a_demons_eye randomizableFlyingCreaturesCost2 00_bone_demon,09_dark_fairy
-Swapping creatures 08_wyvern (death_world_gate_of_the_dead) and 0d_tondrom (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
-Swapping creatures 00_master_knight (illusion_world_worship_domain) and 08_ring_demon (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
-Swapping creatures 02_elder (earth_world_rotting_cavern) and 04_acid_skull (human_world_forgotten_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\13 5c800-5d800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Swapping creatures 01_earth_knight (earth_world_hostile_rock_cavern) and 08_trickster (earth_world_poisonous_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T
-Swapping creatures 0c_maristella (illusion_world_gloomy_domain) and 08_trickster (earth_world_hostile_rock_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T
-Swapping creatures 0a_horned_slime (water_world_watery_labyrinth_area) and 06_mystic_tower (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
-Swapping creatures 09_descrypha (death_world_lingering_curse_layer) and 02_elder (human_world_forgotten_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Swapping creatures 00_dark_spider (human_world_cursed_region) and 09_iron_crusher (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
-Swapping creatures 01_blue_flicker (earth_world_quaking_cavern) and 0a_horned_slime (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\8 22800-23800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
-Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 04_dark_spirits (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
-Swapping creatures 00_red_puppet (illusion_world_gloomy_domain) and 04_kiljoy (earth_world_quaking_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
-Swapping creatures 04_cannon_snail (earth_world_false_pit_cavern) and 0c_maristella (earth_world_hostile_rock_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\23 64800-65800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T
-Swapping creatures 01_blue_flicker (fire_world_burning_cavern) and 05_cocoon_plant (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
-Swapping creatures 04_kiljoy (illusion_world_gloomy_domain) and 0c_ray_plant (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
-Swapping creatures 0c_saurian_warrior_a (monster_world_false_eye_area) and 06_skeleton (human_world_solitary_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T
-Swapping creatures 0c_saurian_warrior_a (human_world_solitary_region) and 09_iron_crusher (human_world_cursed_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T
-Swapping creatures 08_star_serpent (earth_world_rotting_cavern) and 05_blood_skull (human_world_forgotten_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T
-Swapping creatures 09_war_demon_2 (illusion_world_bewilderment_domain) and 0a_armored_slayer (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
-Swapping creatures 05_doriwi (death_world_gate_of_the_dead) and 04_cannon_snail (earth_world_hostile_rock_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T
-Swapping creatures 00_earth_knight (earth_world_false_pit_cavern) and 05_dark_spirits (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
-Swapping creatures 00_sand_leech_a (earth_world_quaking_cavern) and 0d_blood_bone (death_world_gate_of_the_dead)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T
-Swapping creatures 02_elder (death_world_lingering_curse_layer) and 00_night_howler (monster_world_false_eye_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
-Swapping creatures 04_dark_spirits (earth_world_quaking_cavern) and 0d_cocoon_plant (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
-Setting similar creature to same as swapped: 09_cocoon_plant getting assigned to be like 0d_cocoon_plant
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T->.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
-Setting similar creature to same as swapped: 0a_cocoon_plant getting assigned to be like 0d_cocoon_plant
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T->.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T
-Setting similar creature to same as swapped: 05_dark_spirits getting assigned to be like 04_dark_spirits
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T->.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T
-Swapping creatures 09_iron_crusher (human_world_solitary_region) and 04_cannon_snail (death_world_gate_of_the_dead)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T
-Swapping creatures 09_blood_slime (human_world_hidden_region) and 05_acid_pod (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
-Swapping creatures 09_dementor (water_world_impure_pool_area) and 02_mystic_tower (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T
-Swapping creatures 09_blood_slime (illusion_world_gloomy_domain) and 02_sand_leech_b (earth_world_quaking_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T
-Swapping creatures 0d_dweller (fire_world_burning_cavern) and 01_myconid (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
-Swapping creatures 06_skeleton (monster_world_false_eye_area) and 00_acid_slime (human_world_hidden_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
-Swapping creatures 06_dweller (water_world_impure_pool_area) and 06_armored_slayer (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
-Swapping creatures 0e_mystic_tower (fire_world_burning_cavern) and 09_blood_slime (earth_world_quaking_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T
-Swapping creatures 01_horned_slime (water_world_impure_pool_area) and 08_casket (human_world_hidden_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T
-Swapping creatures 01_beak_plant (earth_world_poisonous_cavern) and 09_cross_breed (illusion_world_worship_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
-Swapping creatures 05_water_knight (water_world_sunken_river_area) and 01_doriwi (death_world_gate_of_the_dead)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T
-Swapping creatures 0d_saurian_warrior_b (monster_world_false_eye_area) and 01_horned_slime (human_world_hidden_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T
-Swapping creatures 05_hell_hunter (death_world_undead_layer) and 0a_barrel_snail (earth_world_stone_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M28.T_PARTS\53 ee000-ef000.T
-Swapping creatures 08_dark_spider (human_world_solitary_region) and 08_casket (water_world_impure_pool_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
-Swapping creatures 00_night_howler (death_world_lingering_curse_layer) and 05_blood_skull (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T
-Swapping creatures 0e_mystic_tower (earth_world_quaking_cavern) and 01_blue_flicker (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
-Swapping creatures 09_imp (earth_world_rotting_cavern) and 06_mystic_tower (fire_world_molten_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T
-Swapping creatures 09_imp (fire_world_molten_cavern) and 02_bone_wolf (death_world_gate_of_the_dead)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T
-Swapping creatures 01_earth_knight (earth_world_poisonous_cavern) and 08_clay_servant (earth_world_stone_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T
-Swapping creatures 01_blood_skull (human_world_forgotten_region) and 01_stack_eyes (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T
-Setting similar creature to same as swapped: 05_blood_skull getting assigned to be like 01_blood_skull
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T->.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T
-Swapping creatures 08_dark_spider (water_world_impure_pool_area) and 06_hell_warrior (death_world_gate_of_the_dead)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
-Swapping creatures 02_sand_leech_b (illusion_world_gloomy_domain) and 0a_dweller (water_world_impure_pool_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
-Swapping creatures 05_hobble_worm (earth_world_stone_cavern) and 0c_barrel_snail (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M28.T_PARTS\28 9a800-9b800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\63 157000-158000.T
-Swapping creatures 00_dark_spider (fire_world_burning_cavern) and 00_earth_knight (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
-Swapping creatures 06_armored_slayer (water_world_impure_pool_area) and 00_winged_worm (water_world_white_rain_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
-Swapping creatures 00_dark_spider (illusion_world_gloomy_domain) and 05_blood_slime (human_world_hidden_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
-Swapping creatures 0a_dweller (illusion_world_gloomy_domain) and 04_acid_skull (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\13 5c800-5d800.T
-Setting similar creature to same as swapped: 0d_dweller getting assigned to be like 0a_dweller
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T->.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
-Swapping creatures 02_elder (monster_world_false_eye_area) and 0a_bone_wolf (death_world_gate_of_the_dead)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
-Swapping creatures 0d_saurian_warrior_b (human_world_hidden_region) and 02_horned_slime (water_world_watery_labyrinth_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T
-Swapping creatures 06_elder (earth_world_rotting_cavern) and 05_warden (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T
-Swapping creatures 06_dweller (death_world_dark_castle_layer) and 02_sand_leech_b (water_world_impure_pool_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
-Swapping creatures 06_hell_warrior (water_world_impure_pool_area) and 09_war_demon_2 (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
-Swapping creatures 0a_skeleton (human_world_solitary_region) and 00_earth_knight (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
-Swapping creatures 01_acid_pod (earth_world_false_pit_cavern) and 05_dwarfling (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
-Swapping creatures 09_blood_slime (fire_world_burning_cavern) and 01_horned_skull (fire_world_molten_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
-Swapping creatures 08_clay_servant (earth_world_poisonous_cavern) and 06_armored_slayer (water_world_white_rain_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
-Swapping creatures 05_earth_knight (earth_world_hostile_rock_cavern) and 02_blood_slime (human_world_solitary_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T
-Setting similar creature to same as swapped: 00_earth_knight getting assigned to be like 05_earth_knight
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T->.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
-Swapping creatures 0e_watcher_plant (earth_world_poisonous_cavern) and 0d_cocoon_plant (earth_world_quaking_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T
-Swapping creatures 05_horned_slime (water_world_impure_pool_area) and 05_warden (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T
-Swapping creatures 02_blood_slime (earth_world_hostile_rock_cavern) and 06_oblid (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T
-Swapping creatures 04_dark_spirits (earth_world_false_pit_cavern) and 00_master_knight (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
-Setting similar creature to same as swapped: 01_dark_spirits getting assigned to be like 04_dark_spirits
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T->.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T
-Swapping creatures 0a_armored_slayer (illusion_world_bewilderment_domain) and 0a_dark_bishop (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
-Swapping creatures 0c_barrel_snail (earth_world_stone_cavern) and 02_karasu (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M28.T_PARTS\28 9a800-9b800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
-Swapping creatures 0c_maristella (earth_world_false_pit_cavern) and 09_war_demon_2 (water_world_impure_pool_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\23 64800-65800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
-Swapping creatures 05_acid_pod (human_world_hidden_region) and 0a_armored_slayer (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
-Swapping creatures 06_oblid (earth_world_hostile_rock_cavern) and 0d_cocoon_plant (earth_world_quaking_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
-Swapping creatures 00_black_onyx (earth_world_hostile_rock_cavern) and 02_blood_brain (water_world_impure_pool_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
-Swapping creatures 04_cannon_snail (human_world_solitary_region) and 01_horned_skull (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
-Swapping creatures 0c_ray_plant (illusion_world_gloomy_domain) and 0c_old_face (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\63 136800-137800.T
-Swapping creatures 08_wyvern (earth_world_rotting_cavern) and 08_star_serpent (human_world_forgotten_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T
-Swapping creatures 09_imp (death_world_gate_of_the_dead) and 0a_cursed_demon (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T
-Swapping creatures 00_dark_spider (human_world_hidden_region) and 0e_dinogon (monster_world_false_eye_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\73 1d1000-1d2000.T
-Swapping creatures 01_acid_pod (earth_world_rotting_cavern) and 0c_ray_plant (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\63 136800-137800.T
-Swapping creatures 02_watcher_plant (earth_world_poisonous_cavern) and 06_hell_warrior (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
-Swapping creatures 05_earth_knight (human_world_solitary_region) and 05_armored_warrior (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
-Swapping creatures 0d_cocoon_plant (earth_world_quaking_cavern) and 0c_old_face (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
-Swapping creatures 0e_watcher_plant (earth_world_quaking_cavern) and 04_great_frog (water_world_watery_labyrinth_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
-Swapping creatures 05_cocoon_plant (fire_world_burning_cavern) and 00_master_knight (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
-Swapping creatures 06_mystic_tower (earth_world_rotting_cavern) and 02_blood_slime (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T
-Swapping creatures 00_winged_worm (water_world_impure_pool_area) and 05_earth_knight (human_world_solitary_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
-Swapping creatures 05_blood_brain (water_world_watery_labyrinth_area) and 0c_saurian_warrior_a (human_world_cursed_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T
-Swapping creatures 00_acid_skull (human_world_forgotten_region) and 09_descrypha (human_world_forgotten_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Swapping creatures 06_hell_warrior (earth_world_poisonous_cavern) and 02_blood_brain (earth_world_hostile_rock_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
-Swapping creatures 09_dwarf_warrior (earth_world_poisonous_cavern) and 01_blood_skull (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T
-Swapping creatures 02_horned_slime (human_world_hidden_region) and 0e_mystic_tower (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
-Swapping creatures 0a_dweller (earth_world_rotting_cavern) and 08_casket (human_world_solitary_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T
-Swapping creatures 09_war_demon_2 (earth_world_false_pit_cavern) and 08_clay_servant (water_world_white_rain_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\23 64800-65800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
-Swapping creatures 09_cross_breed (earth_world_poisonous_cavern) and 06_hell_warrior (earth_world_hostile_rock_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
-Swapping creatures 05_water_knight (death_world_gate_of_the_dead) and 01_blue_flicker (earth_world_quaking_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T
-Swapping creatures 00_black_onyx (water_world_impure_pool_area) and 02_blood_slime (earth_world_rotting_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
-Swapping creatures 0e_dinogon (human_world_hidden_region) and 02_skeleton (human_world_forgotten_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T
-Setting similar creature to same as swapped: 06_skeleton getting assigned to be like 02_skeleton
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T->.\generated\randomized-medium3\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
-Swapping creatures 0a_dweller (human_world_solitary_region) and 09_cross_breed (earth_world_hostile_rock_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
-Swapping creatures 00_black_onyx (earth_world_rotting_cavern) and 0d_cocoon_plant (earth_world_poisonous_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T
-Swapping creatures 00_night_howler (earth_world_rotting_cavern) and 05_armored_warrior (human_world_solitary_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T
-Swapping creatures 0c_barrel_snail (death_world_dark_castle_layer) and 01_blood_skull (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T
-Swapping creatures 09_dwarf_warrior (death_world_lingering_curse_layer) and 02_horned_slime (earth_world_false_pit_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
-Swapping creatures 06_fire_jinn (fire_world_phoenix_cave) and 04_king_hopper (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
-Swapping creatures 0c_gaze_hopper (water_world_watery_labyrinth_area) and 0a_old_face (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T
-Swapping creatures 0d_arachness (fire_world_molten_cavern) and 04_jinn_lord (fire_world_phoenix_cave)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
-Swapping creatures 0d_trickster (earth_world_poisonous_cavern) and 0d_bugler (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
-Swapping creatures 00_hell_hunter (death_world_dark_castle_layer) and 01_chirper (monster_world_false_eye_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\3 30800-31800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
-Swapping creatures 0a_old_face (water_world_watery_labyrinth_area) and 04_kabasaur (water_world_sunken_river_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M21.T_PARTS\23 64800-65800.T
-Setting similar creature to same as swapped: 00_kabasaur getting assigned to be like 04_kabasaur
-  fileCopy .\generated\randomized-medium3\extracted\ST\CHR2\M21.T_PARTS\23 64800-65800.T->.\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T
-Swapping creatures 04_zygote (fire_world_ashen_cavern) and 00_hell_hunter (monster_world_false_eye_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M18.T_PARTS\23 71800-72800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
-Swapping creatures 01_chirper (death_world_dark_castle_layer) and 00_dark_spirits (illusion_world_dream_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\3 30800-31800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T
-Swapping creatures 02_fire_jinn (fire_world_phoenix_cave) and 0d_bugler (earth_world_poisonous_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T
-Swapping creatures 0e_manna_python (water_world_watery_labyrinth_area) and 09_steel_servant (fire_world_molten_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\randomized-medium3\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T
-Swapping creatures 0d_death_serpent (monster_world_screeching_area) and 01_chirper (illusion_world_dream_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T-.\generated\randomized-medium3\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T
-Swapping creatures 04_jinn_lord (fire_world_molten_cavern) and 04_tree_ogre (death_world_dark_castle_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T
-Swapping creatures 0d_trickster (death_world_lingering_curse_layer) and 01_berzerker (fire_world_ashen_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M18.T_PARTS\8 44800-45800.T
-Swapping creatures 08_torg (earth_world_quaking_cavern) and 06_fire_jinn (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M12.T_PARTS\43 c5000-c6000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
-Swapping creatures 0d_damned_angel (fire_world_ashen_cavern) and 08_torg (monster_world_screeching_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
-Swapping creatures 0a_ruby_demon (fire_world_ashen_cavern) and 04_berzerker (fire_world_burning_cavern)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T-.\generated\randomized-medium3\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
-Swapping creatures 04_jinn_lord (death_world_dark_castle_layer) and 04_kabasaur (water_world_watery_labyrinth_area)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T-.\generated\randomized-medium3\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T
-Swapping creatures 08_oxelus (monster_world_screeching_area) and 0c_gaze_hopper (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T
-Swapping creatures 08_oxelus (death_world_lingering_curse_layer) and 0d_deha (illusion_world_gloomy_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
-Swapping creatures 0d_death_serpent (illusion_world_dream_domain) and 01_berzerker (death_world_lingering_curse_layer)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T-.\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
-Swapping creatures 08_apocrypha (death_world_lingering_curse_layer) and 0a_rotting_face (illusion_world_bewilderment_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\43 cf000-d0000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T
-Swapping creatures 0e_rotting_face (illusion_world_bewilderment_domain) and 01_shadow_spider (human_world_cursed_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M01.T_PARTS\8 36800-37800.T
-Swapping creatures 0a_rotting_face (death_world_lingering_curse_layer) and 08_apocrypha (illusion_world_bewilderment_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR1\M14.T_PARTS\43 cf000-d0000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T
-Swapping creatures 01_shadow_spider (illusion_world_bewilderment_domain) and 0a_rotting_face (illusion_world_bewilderment_domain)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T-.\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T
-Swapping creatures 01_shadow_spider (illusion_world_bewilderment_domain) and 09_demon_bat (human_world_solitary_region)
-  fileSwap .\generated\randomized-medium3\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T-.\generated\randomized-medium3\extracted\ST\CHR0\M04.T_PARTS\48 c4000-c5000.T
+WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for human_world_cursed_region/09_shadow_spider but there are more to add 33
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_22_mighty_bastard_sword at monster_world_screeching_area/0a_cursed_demon
+WARNING - Drop randomization - No free memory 16, halting adding third drop replacement for illusion_world_gloomy_domain/0d_deha but there are more to add 32
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_cc_priest_ring_of_frost at illusion_world_worship_domain/00_master_knight
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e0_ring_of_ice at illusion_world_worship_domain/0a_warpoor
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_88_deadly_gauntlet at illusion_world_worship_domain/0a_warpoor
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_f0_guardian_bracelet at death_world_lingering_curse_layer/01_stack_eyes
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_57_harden_great_helm at death_world_lingering_curse_layer/08_apocrypha
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_45_fiery_bow_gun at death_world_gate_of_the_dead/05_doriwi
+DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_b8_tower_shield_of_resist at death_world_gate_of_the_dead/08_wyvern
+ randomizableCreaturesCost1 00_dark_spider,01_acid_slime,02_blood_slime,06_skeleton,08_dark_spider,0a_skeleton,00_acid_slime,01_blood_slime,02_parasite,04_acid_slime,05_blood_slime,08_casket,09_blood_slime,00_acid_skull,01_blood_skull,02_skeleton,04_acid_skull,05_blood_skull,06_skeleton,00_dark_spider,02_tongue_imp,06_tongue_imp,08_dark_spider,00_watcher_plant,01_myconid,02_elder,04_minor_dwarf,05_dwarfling,06_elder,08_star_serpent,09_imp,0c_barrel_snail,0d_tondrom,0e_elder,01_beak_plant,02_watcher_plant,08_trickster,09_dwarf_warrior,0e_watcher_plant,00_sand_leech_a,01_blue_flicker,02_sand_leech_b,04_kiljoy,05_acid_pod,09_cocoon_plant,0a_cocoon_plant,00_earth_knight,01_acid_pod,04_cannon_snail,05_cocoon_plant,09_sloth_bug,0c_ray_plant,0d_cocoon_plant,05_hobble_worm,08_clay_servant,0a_barrel_snail,0d_crying_root,00_black_onyx,01_earth_knight,05_earth_knight,01_horned_slime,02_blood_brain,05_horned_slime,06_dweller,09_dementor,0a_dweller,0c_worm_face,0d_hatchlin,05_water_knight,02_horned_slime,04_great_frog,05_blood_brain,09_koazul,0a_horned_slime,0d_slasher,00_winged_worm,02_mystic_tower,06_mystic_tower,09_iron_crusher,0d_dweller,0e_mystic_tower,01_horned_skull,06_mystic_tower,05_horned_skull,09_cerberus,00_night_howler,04_night_howler,08_hermit_crab,0c_saurian_warrior_a,0d_saurian_warrior_b,0e_dinogon,05_warden,06_oblid,0a_cursed_demon,01_gargaral,02_gordoral,04_demon_warrior,05_gargaral,06_gordoral,08_war_demon_1,09_war_demon_2,00_red_puppet,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0a_dark_bishop,0c_maristella,00_master_knight,06_warpoor,09_cross_breed,0a_warpoor,02_karasu,05_armored_warrior,06_armored_slayer,09_armored_warrior,0a_armored_slayer,01_stack_eyes,09_descrypha,0c_old_face,05_hell_hunter,01_doriwi,02_bone_wolf,05_doriwi,06_hell_warrior,08_wyvern,0a_bone_wolf,0d_blood_bone randomizableCreaturesCost2 0d_trickster,08_torg,00_kabasaur,04_kabasaur,00_kabasaur,0c_gaze_hopper,0e_manna_python,02_fire_jinn,04_jinn_lord,05_armored_jinn,06_fire_jinn,04_berzerker,08_berzerker,04_berzerker,09_steel_servant,0d_arachness,01_berzerker,04_zygote,0a_ruby_demon,0d_damned_angel,01_chirper,04_king_hopper,08_oxelus,0d_death_serpent,0c_death_mage,0d_deha,00_dark_spirits,00_hell_hunter,04_tree_ogre,0a_old_face,0d_bugler randomizableFlyingCreaturesCost1 09_demon_bat,01_shadow_spider,09_shadow_spider,01_demon_bat,01_gargaral,02_gordoral,05_gargaral,06_gordoral,0a_rotting_face,0e_rotting_face,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0c_maristella,06_warpoor,09_cross_breed,0a_warpoor,08_apocrypha,09_descrypha,0a_demons_eye randomizableFlyingCreaturesCost2 00_bone_demon,09_dark_fairy,00_dark_spirits randomizableGateKeeperCreaturesCost1 02_elder,06_elder,0e_elder,02_sand_leech_b,08_claw_head randomizableGateKeeperCreaturesCost2 0e_claw_head
 Difficulty medium, factor 1
+ERROR - Couldn't distribute collectable uniques 215,82,186,14,134,33,261,247,45,46,90,140
+ERROR - Couldn't distribute drop uniques 139,117,127,246,114,176,195,250,49,265,190,227,200,120,118,229,191,192,226,214,160,113,210,37,43

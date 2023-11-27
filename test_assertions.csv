@@ -1,6 +1,6 @@
 Preset,Status,MissingItems
 ./generated/apply-directives/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
-./generated/bonanza/spoilers,OK,
+./generated/bonanza/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
 ./generated/comedy/spoilers,OK,
 ./generated/easy/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
 ./generated/even-harder/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
@@ -8,18 +8,18 @@ Preset,Status,MissingItems
 ./generated/fix-king-hopper/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
 ./generated/hard/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
 ./generated/no-change/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight
-./generated/only-bosses/spoilers,OK,
-./generated/only-bosses-remove-scenery/spoilers,OK,
+./generated/only-bosses/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
+./generated/only-bosses-remove-scenery/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
 ./generated/randomized-easy/spoilers,OK,
 ./generated/randomized-even-harder/spoilers,OK,
-./generated/randomized-extreme-easy/spoilers,OK,
+./generated/randomized-extreme-easy/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
 ./generated/randomized-hard/spoilers,OK,
 ./generated/randomized-medium/spoilers,OK,
-./generated/randomized-medium2/spoilers,OK,
-./generated/randomized-medium3/spoilers,OK,
-./generated/randomized-medium4/spoilers,OK,
+./generated/randomized-medium2/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
+./generated/randomized-medium3/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
+./generated/randomized-medium4/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
 ./generated/randomized-medium5/spoilers,OK,
 ./generated/randomized-very-hard/spoilers,OK,
-./generated/remove-scenery/spoilers,OK,
+./generated/remove-scenery/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement
 ./generated/scary-game/spoilers,OK,
 ./generated/very-hard/spoilers,MISSING,Guarantee poison vaccine - Achieved poison vaccine requirement, Fiery Key / Flaming Key - Skipping Damned Angel, Fiery Key / Flaming Key - Skipping Ebony Knight

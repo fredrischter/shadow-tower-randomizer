@@ -1,0 +1,29 @@
+
+Result for ERROR: Found problems
+./generated/bonanza/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 123,17,51,20,168,81,103,80,132,257,170,253,84,55,108,215,232,59,256,83,105,78,116,64,40,137,183,41,173,138,198,259,244,245,86,262,263,102,34,258,260,247,264,117,151,127,19,43
+./generated/comedy/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 168,75,254,179,44,154,6,25,115,61,132,207,174,156,152,10,253,128,55,157,203,159,217,231,56,83,82,105,78,40,212,223,193,186,248,249,189,112,119,208,32,27,34,224,247,136,69,89,139,246,176,42,140,160,210,43
+./generated/only-bosses/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 13,83,82,40,62,183,223,193,76,29,209,187,181,244,245,109,110,38,102,26,32,27,34,101,261,260,224,247,136,240,69,89,184,117,127,45,246,114,176,195,250,19,42,265,227,200,118,140,229,191,192,160,113,210,43
+./generated/only-bosses-remove-scenery/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 13,83,82,40,62,183,223,193,76,29,209,187,181,244,245,109,110,38,102,26,32,27,34,101,261,260,224,247,136,240,69,89,184,117,127,45,246,114,176,195,250,19,42,265,227,200,118,140,229,191,192,160,113,210,43
+./generated/randomized-easy/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 63,171,40,183,223,185,248,112,208,230,187,181,134,241,38,33,102,26,32,27,34,101,204,261,224,136,240,87,69,264,89,184,139,117,127,45,246,114,176,195,250,19,42,265,227,200,118,140,229,191,192,160,113,210,43
+./generated/randomized-even-harder/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 225,119,198,245,86,241,242,204,89,117,45,19,265,200,118,192,226,43
+./generated/randomized-even-harder/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 263,23,109,38,33,102,26,32,27,34,101,258,261,260,224,247,136,240,87,69,264,184,139,151,127,46,246,114,176,195,250,49,42,190,227,120,90,140,229,191,214,160,113,210,37
+./generated/randomized-extreme-easy/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 13,83,82,40,62,183,223,193,76,29,209,187,181,244,245,109,110,38,102,26,32,27,34,101,261,260,224,247,136,240,69,89,184,117,127,45,246,114,176,195,250,19,42,265,227,200,118,140,229,191,192,160,113,210,43
+./generated/randomized-hard/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 119,198,241,117,45,19,265,200,118,192,226,43
+./generated/randomized-hard/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 21,109,110,38,33,26,32,27,34,101,258,261,260,224,247,136,240,87,69,264,184,139,151,127,46,246,114,176,195,250,49,42,190,227,120,90,140,229,191,214,160,113,210,37
+./generated/randomized-medium/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 148,200
+./generated/randomized-medium/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 29,173,228,208,187,134,244,262,263,23,21,109,110,38,33,102,26,32,27,34,101,258,261,260,224,247,136,240,87,69,264,184,139,151,127,46,246,114,176,195,250,49,42,190,227,120,90,140,229,191,214,160,113,210,37
+./generated/randomized-medium2/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 107,232,239,188,83,223,189,48,263,242,261,260,184,127,114,195,90,191,192,214,210
+./generated/randomized-medium2/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 246,250,19,42,265,190,227,120,118,140,229,226,160,113,37,43
+./generated/randomized-medium3/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 215,82,186,14,134,33,261,247,45,46,90,140
+./generated/randomized-medium3/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 139,117,127,246,114,176,195,250,49,265,190,227,200,120,118,229,191,192,226,214,160,113,210,37,43
+./generated/randomized-medium4/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 261,89,139
+./generated/randomized-medium4/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 127,45,246,114,176,195,250,49,265,190,227,200,118,90,140,192,226,214,113,210,37,43
+./generated/randomized-medium5/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 10,30,201,56,62,212,193,185,76,41,14,65,194,173,158,228,198,181,48,242,109,101,261,260,89,127,49,42,200,191,192,214
+./generated/randomized-medium5/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 264,117,45,46,246,114,176,195,250,19,265,190,227,120,118,90,140,229,226,160,113,210,37,43
+./generated/randomized-very-hard/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 212,194,119,198,245,241,242,204,89,117,45,19,265,200,118,192,226,43
+./generated/randomized-very-hard/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 136,240,87,69,264,184,139,151,127,46,246,114,176,195,250,49,42,190,227,120,90,140,229,191,214,160,113,210,37
+./generated/remove-scenery/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 13,83,82,40,62,183,223,193,76,29,209,187,181,244,245,109,110,38,102,26,32,27,34,101,261,260,224,247,136,240,69,89,184,117,127,45,246,114,176,195,250,19,42,265,227,200,118,140,229,191,192,160,113,210,43
+./generated/scary-game/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques 92,162,141,123,44,148,31,56,158,245,45,265,192,226
+./generated/scary-game/spoilers/readable.txt:ERROR - Couldn't distribute drop uniques 125,168,100,75,79,8,80,60,255,61,219,207,174,156,10,170,68,203,218,215,201,231,59,221,171,185,76,14,248,173,189,112,208,209,181,38,32,27,101,224,247,136,87,246,195,42,113,37
+
+Result for memory crime: Didn't find failures.

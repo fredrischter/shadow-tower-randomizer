@@ -499,7 +499,7 @@ function randomize(paramsFile, stDir) {
     // Guarantee poison vaccine before poisonous cavern
 
     var poisonVaccinesBeforePoisonousCavern = 0;
-    var poisonVaccinesRequired = Math.ceil(Math.min(Math.max(4/difficultyFactor, 1), 10));
+    var poisonVaccinesRequired = Math.ceil(Math.min(Math.max(4/difficultyFactor, 1), 5));
     function commentAchievedRequirementOfPoisonVaccine() {
         if (poisonVaccinesBeforePoisonousCavern >= poisonVaccinesRequired) {
             console.log("Guarantee poison vaccine - Achieved poison vaccine requirement " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired);
@@ -536,6 +536,12 @@ function randomize(paramsFile, stDir) {
         var originalItem = spawn.drop1.get();
         if ((secondaryConsumables.indexOf(originalItem)!=-1 || primaryConsumables.indexOf(originalItem)!=-1)
             && Math.random() < 0.5) {
+
+            if (!area.hasFreeItemMemory()) {
+                console.log("Guarantee poison vaccine - No free memory " + area.usedItemMemory() + ", halting replacing drop consumable (" + itemData[originalItem].name + ") at " + area.name + "/" + spawn.name());
+                return;
+            }
+
             spawn.drop1.set(item_124_poison_vaccine);
             console.log("Guarantee poison vaccine - count " + poisonVaccinesBeforePoisonousCavern + "/" + poisonVaccinesRequired + ". Replacing drop consumable (" + itemData[originalItem].name + ") by " + itemData[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
             poisonVaccinesBeforePoisonousCavern++;
@@ -956,7 +962,7 @@ function randomize(paramsFile, stDir) {
         var arrayToRemoveFrom = dropUniques.length > 0 ? dropUniques : collectableUniques;
 
         if (arrayToRemoveFrom.length > 0) {
-            if (spawn.drop3.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
+            if (spawn.drop3.isNull() && !spawn.drop2.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
 
                 if (!area.hasFreeItemMemory()) {
                     console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding third drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
@@ -1175,29 +1181,33 @@ function randomize(paramsFile, stDir) {
         var randomizableCreaturesCost2 = randomizableCreatures.filter(creature => creature.textureCost == 2);
         var randomizableFlyingCreaturesCost1 = randomizableFlyingCreatures.filter(creature => creature.textureCost == 1);
         var randomizableFlyingCreaturesCost2 = randomizableFlyingCreatures.filter(creature => creature.textureCost == 2);
+        var randomizableGateKeeperCreaturesCost1 = randomizableGateKeeperCreatures.filter(creature => creature.textureCost == 1);
+        var randomizableGateKeeperCreaturesCost2 = randomizableGateKeeperCreatures.filter(creature => creature.textureCost == 2);
         console.log(
             " randomizableCreaturesCost1 " + randomizableCreaturesCost1.map(creature => creature.name) +
             " randomizableCreaturesCost2 " + randomizableCreaturesCost2.map(creature => creature.name) +
             " randomizableFlyingCreaturesCost1 " + randomizableFlyingCreaturesCost1.map(creature => creature.name) +
-            " randomizableFlyingCreaturesCost2 " + randomizableFlyingCreaturesCost2.map(creature => creature.name)
+            " randomizableFlyingCreaturesCost2 " + randomizableFlyingCreaturesCost2.map(creature => creature.name) +
+            " randomizableGateKeeperCreaturesCost1 " + randomizableGateKeeperCreaturesCost1.map(creature => creature.name) +
+            " randomizableGateKeeperCreaturesCost2 " + randomizableGateKeeperCreaturesCost2.map(creature => creature.name)
             );
 
-        if (params.randomizeCreatures) {
-            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
-        
-            for (var i =0; i<100; i++) {
-                swapCreatures(randomElement(randomizableCreaturesCost1),randomElement(randomizableCreaturesCost1), changeSet);
-            }
-            for (var i =0; i<20; i++) {
-                swapCreatures(randomElement(randomizableCreaturesCost2),randomElement(randomizableCreaturesCost2), changeSet);
-            }
-            for (var i =0; i<5; i++) {
-                swapCreatures(randomElement(randomizableFlyingCreaturesCost1),randomElement(randomizableFlyingCreaturesCost1), changeSet);
-            }
-            for (var i =0; i<1; i++) {
-                swapCreatures(randomElement(randomizableFlyingCreaturesCost2),randomElement(randomizableFlyingCreaturesCost2), changeSet);
-            }
-        }
+//        if (params.randomizeCreatures) {
+//            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+//        
+//            for (var i =0; i<100; i++) {
+//                swapCreatures(randomElement(randomizableCreaturesCost1),randomElement(randomizableCreaturesCost1), changeSet);
+//            }
+//            for (var i =0; i<20; i++) {
+//                swapCreatures(randomElement(randomizableCreaturesCost2),randomElement(randomizableCreaturesCost2), changeSet);
+//            }
+//            for (var i =0; i<5; i++) {
+//                swapCreatures(randomElement(randomizableFlyingCreaturesCost1),randomElement(randomizableFlyingCreaturesCost1), changeSet);
+//            }
+//            for (var i =0; i<1; i++) {
+//                swapCreatures(randomElement(randomizableFlyingCreaturesCost2),randomElement(randomizableFlyingCreaturesCost2), changeSet);
+//            }
+//        }
 
         // ------- Adjust creature and equip levels for proper progression
 
@@ -1270,6 +1280,13 @@ function randomize(paramsFile, stDir) {
     console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables."); // + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
 
     operate();
+
+    if (collectableUniques.length) {
+        console.log("ERROR - Couldn't distribute collectable uniques " + collectableUniques);
+    }
+    if (dropUniques.length) {
+        console.log("ERROR - Couldn't distribute drop uniques " + dropUniques);
+    }
 
     console.log = function() {
         logFileRandomize.write(util.format.apply(null, arguments) + '\n');

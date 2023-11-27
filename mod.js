@@ -37,6 +37,9 @@ if (!originalParamsFile) {
 	  	paramsList.push(paramsFile);
 	  });
 	  runOne();
+	  runOne();
+	  runOne();
+	  runOne();
 	});
 
 	return;
