@@ -161,6 +161,7 @@ function randomize(paramsFile, stDir) {
 
             console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
             creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
+            creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
 		}
 	}
 
@@ -199,6 +200,9 @@ function randomize(paramsFile, stDir) {
 
         // model
         for (var i in creature1.modelFiles) {
+            if (i==2) {
+                console.log("  fileSwap " + creature1.modelFiles[i] + "-" + creature2.modelFiles[i]);
+            }
             changeSet.push({
                 "fileSwap": {
                     "file1": creature1.modelFiles[i],
@@ -214,6 +218,9 @@ function randomize(paramsFile, stDir) {
         var tmp = creature1.entityStates;
         creature1.entityStates = creature2.entityStates;
         creature2.entityStates = tmp;
+/*
+        // entity bin
+        creature1.swap(creature2);
 
         //creature1.attack1.swap(creature2.attack1);
         //creature1.attack2.swap(creature2.attack2);
@@ -222,23 +229,48 @@ function randomize(paramsFile, stDir) {
         //creature1.something2.swap(creature2.something2);
         //creature1.something3.swap(creature2.something3);
         //creature1.something4.swap(creature2.something4);
+*/
+        for (var i in creature1.area.creatures) {
+            var candidateForSimilar2 = creature1.area.creatures[i];
+            if (candidateForSimilar2 != creature1 &&
+                candidateForSimilar2.name.substring(3) == creature1.name.substring(3)) {
+                console.log("Setting similar creature to same as swapped: " + candidateForSimilar2.name + " getting assigned to be like " + creature1.name);
+                candidateForSimilar2.set(creature1);
 
-        creature1.str.swap(creature2.str);
-        creature1.spd.swap(creature2.spd);
-        creature1.def.swap(creature2.def);
-        creature1.bal.swap(creature2.bal);
-        creature1.sla.swap(creature2.sla);
-        creature1.smh.swap(creature2.smh);
-        creature1.pir.swap(creature2.pir);
-        creature1.spr.swap(creature2.spr);
-        creature1.foc.swap(creature2.foc);
-        creature1.ham.swap(creature2.ham);
-        creature1.pur.swap(creature2.pur);
-        creature1.par.swap(creature2.par);
-        creature1.mel.swap(creature2.mel);
-        creature1.sol.swap(creature2.sol);
-        creature1.hp.swap(creature2.hp);
+                for (var i in creature2.modelFiles) {
+                    if (i==2) {
+                        console.log("  fileCopy " + creature2.modelFiles[i] + "->" + candidateForSimilar2.modelFiles[i]);
+                    }
+                    changeSet.push({
+                        "fileCopy": {
+                            "from": creature2.modelFiles[i],
+                            "to": candidateForSimilar2.modelFiles[i]
+                        }
+                    });
+                }
+            }
+        }
 
+        for (var i in creature2.area.creatures) {
+            var candidateForSimilar1 = creature2.area.creatures[i];
+            if (candidateForSimilar1 != creature2 &&
+                candidateForSimilar1.name.substring(3) == creature2.name.substring(3)) {
+                console.log("Setting similar creature to same as swapped: " + candidateForSimilar1.name + " getting assigned to be like " + creature2.name);
+                candidateForSimilar1.set(creature2);
+
+                for (var i in creature1.modelFiles) {
+                    if (i==2) {
+                        console.log("  fileCopy " + creature1.modelFiles[i] + "->" + candidateForSimilar1.modelFiles[i]);
+                    }
+                    changeSet.push({
+                        "fileCopy": {
+                            "from": creature1.modelFiles[i],
+                            "to": candidateForSimilar1.modelFiles[i]
+                        }
+                    });
+                }
+            }
+        }
     }
 
     let changeSet = [];
@@ -1139,14 +1171,33 @@ function randomize(paramsFile, stDir) {
 
         // Randomize creatures
 
-        //if (params.randomizeCreatures) {
-        //    for (var i =0; i<100; i++) {
-        //        swapCreatures(randomElement(randomizableCreatures),randomElement(randomizableCreatures), changeSet);
-        //    }
-        //    for (var i =0; i<5; i++) {
-        //        swapCreatures(randomElement(randomizableFlyingCreatures),randomElement(randomizableFlyingCreatures), changeSet);
-        //    }
-        //}
+        var randomizableCreaturesCost1 = randomizableCreatures.filter(creature => creature.textureCost == 1);
+        var randomizableCreaturesCost2 = randomizableCreatures.filter(creature => creature.textureCost == 2);
+        var randomizableFlyingCreaturesCost1 = randomizableFlyingCreatures.filter(creature => creature.textureCost == 1);
+        var randomizableFlyingCreaturesCost2 = randomizableFlyingCreatures.filter(creature => creature.textureCost == 2);
+        console.log(
+            " randomizableCreaturesCost1 " + randomizableCreaturesCost1.map(creature => creature.name) +
+            " randomizableCreaturesCost2 " + randomizableCreaturesCost2.map(creature => creature.name) +
+            " randomizableFlyingCreaturesCost1 " + randomizableFlyingCreaturesCost1.map(creature => creature.name) +
+            " randomizableFlyingCreaturesCost2 " + randomizableFlyingCreaturesCost2.map(creature => creature.name)
+            );
+
+        if (params.randomizeCreatures) {
+            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+        
+            for (var i =0; i<100; i++) {
+                swapCreatures(randomElement(randomizableCreaturesCost1),randomElement(randomizableCreaturesCost1), changeSet);
+            }
+            for (var i =0; i<20; i++) {
+                swapCreatures(randomElement(randomizableCreaturesCost2),randomElement(randomizableCreaturesCost2), changeSet);
+            }
+            for (var i =0; i<5; i++) {
+                swapCreatures(randomElement(randomizableFlyingCreaturesCost1),randomElement(randomizableFlyingCreaturesCost1), changeSet);
+            }
+            for (var i =0; i<1; i++) {
+                swapCreatures(randomElement(randomizableFlyingCreaturesCost2),randomElement(randomizableFlyingCreaturesCost2), changeSet);
+            }
+        }
 
         // ------- Adjust creature and equip levels for proper progression
 

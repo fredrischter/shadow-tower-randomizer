@@ -1494,7 +1494,7 @@
         var address = ENTITY_STATE_DATA_START + entityStateOffset.get();
         this.entityStates[i].offset_in_file = address;
 
-        binCopy(this.entityStates[i].offset_in_file, 0, this.bin, this.entityStates[i].originalBin, this.entityStates[i].length);
+        binCopy(this.entityStates[i].originalBin, 0, this.bin, this.entityStates[i].offset_in_file, this.entityStates[i].length);
       }
 
       return nextEntityDataAddress;
@@ -1537,6 +1537,30 @@
 
   set(source) {
     binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
+    this.name = source.name;
+
+    /*this.str.set(source.str);
+    this.spd.set(source.spd);
+    this.def.set(source.def);
+    this.bal.set(source.bal);
+    this.sla.set(source.sla);
+    this.smh.set(source.smh);
+    this.pir.set(source.pir);
+    this.spr.set(source.spr);
+    this.foc.set(source.foc);
+    this.ham.set(source.ham);
+    this.pur.set(source.pur);
+    this.par.set(source.par);
+    this.mel.set(source.mel);
+    this.sol.set(source.sol);
+    this.hp.set(source.hp);*/
+
+    this.entityStates = source.entityStates;
+    
+    /*for (var i in this.modelFiles) {
+        this.modelFiles[i] = source.modelFiles[i];
+    }*/
+
   }
 
   swap(source) {
@@ -1544,6 +1568,38 @@
     var tmp = this.name;
     this.name = source.name;
     source.name = tmp;
+/*
+    binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, CREATURE_SIZE);
+    var tmp = this.name;
+    this.name = source.name;
+    source.name = tmp;
+
+    /*this.str.swap(source.str);
+    this.spd.swap(source.spd);
+    this.def.swap(source.def);
+    this.bal.swap(source.bal);
+    this.sla.swap(source.sla);
+    this.smh.swap(source.smh);
+    this.pir.swap(source.pir);
+    this.spr.swap(source.spr);
+    this.foc.swap(source.foc);
+    this.ham.swap(source.ham);
+    this.pur.swap(source.pur);
+    this.par.swap(source.par);
+    this.mel.swap(source.mel);
+    this.sol.swap(source.sol);
+    this.hp.swap(source.hp);*/
+/*
+    // entity states list of objects - this swap requires area to rewrite that entity states section redefining the offsets
+    var tmp = this.entityStates;
+    this.entityStates = source.entityStates;
+    source.entityStates = tmp;
+*/
+    /*for (var i in this.modelFiles) {
+        tmp = source.modelFiles[i];
+        source.modelFiles[i] = this.modelFiles[i];
+        this.modelFiles[i] = tmp;
+    }*/
 
   }
 

@@ -12,8 +12,764 @@ DEBUG - Items randomization - 9.103322712790167% of secondary consumables will b
 
 Randomization - Using given seed 1234567890
 Parameters - {"label":"hard","preset":"only-apply-directives","difficulty":"hard","seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+Loading texture for creature shadow_tower_part1/00_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\2 6800-b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature shadow_tower_part1/01_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\7 13000-17800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature shadow_tower_part1/02_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\12 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/03_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\17 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/04_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\22 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/05_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\27 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/06_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\32 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/07_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\37 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/08_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\42 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/09_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\47 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/0a_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\52 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/0b_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\57 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/0c_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\62 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/0d_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\67 1b800-1b800.T
+Loading texture for creature shadow_tower_part1/0e_door file .\generated\hard\extracted\ST\CHR0\M00.T_PARTS\72 1b800-1b800.T
+Loading texture for creature human_world_cursed_region/00_dark_spider file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\2 17800-1c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=47535 imageHeightInPixels=43307 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_cursed_region/01_shadow_spider file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\7 2f800-36800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=48623 imageHeightInPixels=49680 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature human_world_cursed_region/02_tongue_imp file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\12 4b800-52000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature human_world_cursed_region/03_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\17 61800-66000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_cursed_region/04_fat_mole_a file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\22 7e000-84800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature human_world_cursed_region/05_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\27 84800-84800.T
+Loading texture for creature human_world_cursed_region/06_tongue_imp file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\32 90000-96800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature human_world_cursed_region/07_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\37 a0000-a0000.T
+Loading texture for creature human_world_cursed_region/08_dark_spider file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\42 b7000-bb800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=47535 imageHeightInPixels=43307 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_cursed_region/09_shadow_spider file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\47 cf000-d6000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=48623 imageHeightInPixels=49680 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature human_world_cursed_region/0a_guardian_a file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\52 fe800-106000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=36868 imageHeightInPixels=34819 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_cursed_region/0b_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\57 112000-112000.T
+Loading texture for creature human_world_cursed_region/0c_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\62 112000-112000.T
+Loading texture for creature human_world_cursed_region/0d_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\67 112000-112000.T
+Loading texture for creature human_world_cursed_region/0e_door file .\generated\hard\extracted\ST\CHR0\M01.T_PARTS\72 112000-112000.T
+Loading texture for creature monster_world_false_eye_area/00_night_howler file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\2 19800-21000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/01_chirper file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\7 43000-4b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32772 imageHeightInPixels=32771 nb_palettes=1 palletesWords=256 textureSize=32768
+Loading texture for creature monster_world_false_eye_area/02_lizard_servant file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\12 64000-6b800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/03_door file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\17 79800-81000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/04_night_howler file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\22 9e000-a5800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/05_master_howler file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\27 c6800-ce000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/06_lizard_servant file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\32 e9800-f1000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/07_door file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\37 fa000-fa000.T
+Loading texture for creature monster_world_false_eye_area/08_hermit_crab file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\42 104000-10b000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=35910 imageHeightInPixels=34853 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature monster_world_false_eye_area/09_freak file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\47 147000-158000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=40233 imageHeightInPixels=39176 nb_palettes=1 palletesWords=8 textureSize=69632
+Loading texture for creature monster_world_false_eye_area/0a_door file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\52 162800-162800.T
+Loading texture for creature monster_world_false_eye_area/0b_door file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\57 162800-162800.T
+Loading texture for creature monster_world_false_eye_area/0c_saurian_warrior_a file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\62 176800-17e000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/0d_saurian_warrior_b file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\67 1a0000-1a7800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_false_eye_area/0e_dinogon file .\generated\hard\extracted\ST\CHR0\M02.T_PARTS\72 1c9800-1d1000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_phoenix_cave/00_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\2 800-800.T
+Loading texture for creature fire_world_phoenix_cave/01_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\7 2000-2000.T
+Loading texture for creature fire_world_phoenix_cave/02_fire_jinn file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\12 1b000-29800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=488 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=59392
+Loading texture for creature fire_world_phoenix_cave/03_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\17 39800-3e000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature fire_world_phoenix_cave/04_jinn_lord file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\22 57800-65800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=486 imageWidthIn16BitWords=32836 imageHeightInPixels=32904 nb_palettes=1 palletesWords=8 textureSize=57344
+Loading texture for creature fire_world_phoenix_cave/05_armored_jinn file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\27 84800-93800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=483 imageWidthIn16BitWords=43741 imageHeightInPixels=46878 nb_palettes=1 palletesWords=8 textureSize=61440
+Loading texture for creature fire_world_phoenix_cave/06_fire_jinn file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\32 b6800-c5000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=488 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=59392
+Loading texture for creature fire_world_phoenix_cave/07_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\37 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/08_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\42 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/09_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\47 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/0a_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\52 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/0b_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\57 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/0c_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\62 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/0d_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\67 d0000-d0000.T
+Loading texture for creature fire_world_phoenix_cave/0e_door file .\generated\hard\extracted\ST\CHR0\M03.T_PARTS\72 d0000-d0000.T
+Loading texture for creature human_world_solitary_region/00_dark_spider file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\2 17800-1c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=47535 imageHeightInPixels=43307 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_solitary_region/01_acid_slime file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\7 2a800-32000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_solitary_region/02_blood_slime file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\12 43800-4b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32865 imageHeightInPixels=32800 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_solitary_region/03_door file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\17 5b800-60000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_solitary_region/04_door file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\22 64000-64000.T
+Loading texture for creature human_world_solitary_region/05_door file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\27 64000-64000.T
+Loading texture for creature human_world_solitary_region/06_skeleton file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\32 7b000-82800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_solitary_region/07_door file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\37 8b800-8b800.T
+Loading texture for creature human_world_solitary_region/08_dark_spider file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\42 a2800-a7000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=47535 imageHeightInPixels=43307 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_solitary_region/09_demon_bat file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\47 be000-c4000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=47281 imageHeightInPixels=39977 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature human_world_solitary_region/0a_skeleton file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\52 e4000-eb800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_solitary_region/0b_door file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\57 fa800-ff000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_solitary_region/0c_demon_bat file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\62 103000-103000.T
+Loading texture for creature human_world_solitary_region/0d_dark_spider file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\67 103000-103000.T
+Loading texture for creature human_world_solitary_region/0e_acid_slime file .\generated\hard\extracted\ST\CHR0\M04.T_PARTS\72 103000-103000.T
+Loading texture for creature human_world_hidden_region/00_acid_slime file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\2 8800-10000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_hidden_region/01_blood_slime file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\7 21800-29000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32865 imageHeightInPixels=32800 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_hidden_region/02_parasite file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\12 51000-58800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=33159 imageHeightInPixels=33224 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_hidden_region/03_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\17 68000-6c800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_hidden_region/04_acid_slime file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\22 78800-80000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_hidden_region/05_blood_slime file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\27 91800-99000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32865 imageHeightInPixels=32800 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_hidden_region/06_fanged_worm file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\32 b1000-bc800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature human_world_hidden_region/07_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\37 c6800-c6800.T
+Loading texture for creature human_world_hidden_region/08_casket file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\42 d3800-d9000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=34882 imageHeightInPixels=34882 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature human_world_hidden_region/09_blood_slime file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\47 ea800-f2000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32865 imageHeightInPixels=32800 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_hidden_region/0a_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\52 fc800-fc800.T
+Loading texture for creature human_world_hidden_region/0b_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\57 fc800-fc800.T
+Loading texture for creature human_world_hidden_region/0c_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\62 fc800-fc800.T
+Loading texture for creature human_world_hidden_region/0d_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\67 fc800-fc800.T
+Loading texture for creature human_world_hidden_region/0e_door file .\generated\hard\extracted\ST\CHR0\M05.T_PARTS\72 fc800-fc800.T
+Loading texture for creature human_world_forgotten_region/00_acid_skull file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\2 9800-10800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32867 imageHeightInPixels=32966 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature human_world_forgotten_region/01_blood_skull file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\7 22000-29000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=45623 imageHeightInPixels=44566 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature human_world_forgotten_region/02_skeleton file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\12 49000-50800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_forgotten_region/03_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\17 5f800-64000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_forgotten_region/04_acid_skull file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\22 71000-78000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32867 imageHeightInPixels=32966 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature human_world_forgotten_region/05_blood_skull file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\27 89800-90800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=45623 imageHeightInPixels=44566 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature human_world_forgotten_region/06_skeleton file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\32 b0800-b8000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature human_world_forgotten_region/07_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\37 c1000-c1000.T
+Loading texture for creature human_world_forgotten_region/08_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\42 c7000-cb800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature human_world_forgotten_region/09_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\47 cf800-cf800.T
+Loading texture for creature human_world_forgotten_region/0a_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\52 cf800-cf800.T
+Loading texture for creature human_world_forgotten_region/0b_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\57 cf800-cf800.T
+Loading texture for creature human_world_forgotten_region/0c_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\62 cf800-cf800.T
+Loading texture for creature human_world_forgotten_region/0d_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\67 cf800-cf800.T
+Loading texture for creature human_world_forgotten_region/0e_door file .\generated\hard\extracted\ST\CHR0\M06.T_PARTS\72 cf800-cf800.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR0\M07.T
+Loading texture for creature illusion_world_bewilderment_domain/00_gorgoral file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\2 8000-c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=36236 imageHeightInPixels=35113 nb_palettes=1 palletesWords=256 textureSize=16384
+Loading texture for creature illusion_world_bewilderment_domain/01_gargaral file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\7 1c800-23000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=26624
+Loading texture for creature illusion_world_bewilderment_domain/02_gordoral file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\12 38000-3f800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=36868 imageHeightInPixels=34819 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_bewilderment_domain/03_door file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\17 4e000-53800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature illusion_world_bewilderment_domain/04_demon_warrior file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\22 6f000-76000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=47566 imageHeightInPixels=48623 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature illusion_world_bewilderment_domain/05_gargaral file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\27 87800-8e000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=26624
+Loading texture for creature illusion_world_bewilderment_domain/06_gordoral file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\32 a3000-aa800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=36868 imageHeightInPixels=34819 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_bewilderment_domain/07_door file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\37 b4800-b4800.T
+Loading texture for creature illusion_world_bewilderment_domain/08_war_demon_1 file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\42 d0000-d6800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature illusion_world_bewilderment_domain/09_war_demon_2 file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\47 fa000-100800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature illusion_world_bewilderment_domain/0a_rotting_face file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\52 10f000-116800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=50765 imageHeightInPixels=47594 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature illusion_world_bewilderment_domain/0b_door file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\57 121000-121000.T
+Loading texture for creature illusion_world_bewilderment_domain/0c_death_mage file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\62 132800-13b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=34816
+Loading texture for creature illusion_world_bewilderment_domain/0d_door file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\67 145000-145000.T
+Loading texture for creature illusion_world_bewilderment_domain/0e_rotting_face file .\generated\hard\extracted\ST\CHR0\M08.T_PARTS\72 14a800-152000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=50765 imageHeightInPixels=47594 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/00_red_puppet file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\2 18800-20000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/01_dark_spirits file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\7 41000-48800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/02_dark_imp file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\12 5c800-64000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=36930 imageHeightInPixels=44197 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/03_door file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\17 72800-78000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature illusion_world_gloomy_domain/04_dark_spirits file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\22 94000-9b800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/05_dark_spirits file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\27 bc800-c4000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/06_black_imp file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\32 d7800-df000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=36930 imageHeightInPixels=44197 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/07_door file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\37 e9000-e9000.T
+Loading texture for creature illusion_world_gloomy_domain/08_ring_demon file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\42 ef000-f6800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=58301 imageHeightInPixels=55196 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature illusion_world_gloomy_domain/09_dark_fairy file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\47 109800-114800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=483 imageWidthIn16BitWords=32800 imageHeightInPixels=32832 nb_palettes=1 palletesWords=256 textureSize=45056
+Loading texture for creature illusion_world_gloomy_domain/0a_dark_bishop file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\52 135800-13c800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=33109 imageHeightInPixels=35288 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature illusion_world_gloomy_domain/0b_door file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\57 14b800-151000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature illusion_world_gloomy_domain/0c_maristella file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\62 15d800-163800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=24576
+Loading texture for creature illusion_world_gloomy_domain/0d_deha file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\67 186800-190000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=38912
+Loading texture for creature illusion_world_gloomy_domain/0e_blank file .\generated\hard\extracted\ST\CHR0\M09.T_PARTS\72 1ad000-1b5000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=51764 imageHeightInPixels=48593 nb_palettes=1 palletesWords=256 textureSize=32768
+Loading texture for creature water_world_impure_pool_area/00_fat_mole_f file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\2 14800-1b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature water_world_impure_pool_area/01_horned_slime file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\7 25000-2c800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_impure_pool_area/02_blood_brain file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\12 41000-48800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_impure_pool_area/03_door file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\17 53000-53000.T
+Loading texture for creature water_world_impure_pool_area/04_blank file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\22 6a800-71000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature water_world_impure_pool_area/05_horned_slime file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\27 82000-89800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_impure_pool_area/06_dweller file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\32 9b000-a2000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=41189 imageHeightInPixels=35905 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature water_world_impure_pool_area/07_door file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\37 ad000-ad000.T
+Loading texture for creature water_world_impure_pool_area/08_door file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\42 ad000-ad000.T
+Loading texture for creature water_world_impure_pool_area/09_dementor file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\47 c2000-c9800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=37987 imageHeightInPixels=38021 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_impure_pool_area/0a_dweller file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\52 da800-e1800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=41189 imageHeightInPixels=35905 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature water_world_impure_pool_area/0b_door file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\57 f1000-f5800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature water_world_impure_pool_area/0c_worm_face file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\62 111000-118800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_impure_pool_area/0d_hatchlin file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\67 129800-131000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=38085 imageHeightInPixels=35971 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_impure_pool_area/0e_door file .\generated\hard\extracted\ST\CHR1\M10.T_PARTS\72 13a800-13a800.T
+Loading texture for creature earth_world_rotting_cavern/00_watcher_plant file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\2 13800-1b000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=32935 imageHeightInPixels=32868 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature earth_world_rotting_cavern/01_myconid file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\7 34800-3c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_rotting_cavern/02_elder file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\12 57000-5c800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature earth_world_rotting_cavern/03_door file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\17 69800-6e000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature earth_world_rotting_cavern/04_minor_dwarf file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\22 83800-8b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_rotting_cavern/05_dwarfling file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\27 b5800-bd000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_rotting_cavern/06_elder file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\32 d7000-dc800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature earth_world_rotting_cavern/07_door file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\37 e5800-e5800.T
+Loading texture for creature earth_world_rotting_cavern/08_star_serpent file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\42 ed000-f3000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=40134 imageHeightInPixels=41192 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature earth_world_rotting_cavern/09_imp file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\47 10a800-110800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=50533 imageHeightInPixels=42145 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature earth_world_rotting_cavern/0a_blank file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\52 13b000-142800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_rotting_cavern/0b_door file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\57 148000-148000.T
+Loading texture for creature earth_world_rotting_cavern/0c_barrel_snail file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\62 151000-157000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=39304 imageHeightInPixels=37190 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature earth_world_rotting_cavern/0d_tondrom file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\67 164000-16b800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=42252 imageHeightInPixels=40138 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_rotting_cavern/0e_auriel_a file .\generated\hard\extracted\ST\CHR1\M11.T_PARTS\72 186800-18c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature earth_world_quaking_cavern/00_sand_leech_a file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\2 2000-5800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=32898 imageHeightInPixels=32963 nb_palettes=1 palletesWords=8 textureSize=14336
+Loading texture for creature earth_world_quaking_cavern/01_blue_flicker file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\7 1d000-22800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=62264 imageHeightInPixels=61141 nb_palettes=1 palletesWords=8 textureSize=22528
+Loading texture for creature earth_world_quaking_cavern/02_sand_leech_b file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\12 33800-3b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=59326 imageHeightInPixels=58302 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_quaking_cavern/03_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\17 47800-4c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature earth_world_quaking_cavern/04_kiljoy file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\22 69000-70800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=48619 imageHeightInPixels=46505 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_quaking_cavern/05_acid_pod file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\27 89000-90800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_quaking_cavern/06_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\32 9a800-9a800.T
+Loading texture for creature earth_world_quaking_cavern/07_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\37 9a800-9a800.T
+Loading texture for creature earth_world_quaking_cavern/08_torg file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\42 b9800-c5000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature earth_world_quaking_cavern/09_cocoon_plant file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\47 e3800-ea800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=38026 imageHeightInPixels=35912 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature earth_world_quaking_cavern/0a_cocoon_plant file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\52 103800-10b000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_quaking_cavern/0b_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\57 115000-115000.T
+Loading texture for creature earth_world_quaking_cavern/0c_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\62 115000-115000.T
+Loading texture for creature earth_world_quaking_cavern/0d_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\67 115000-115000.T
+Loading texture for creature earth_world_quaking_cavern/0e_door file .\generated\hard\extracted\ST\CHR1\M12.T_PARTS\72 115000-115000.T
+Loading texture for creature illusion_world_worship_domain/00_master_knight file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\2 16800-1e000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=36864 imageHeightInPixels=37888 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_worship_domain/01_gorthaur file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\7 4c000-57800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=50765 imageHeightInPixels=47594 nb_palettes=1 palletesWords=8 textureSize=47104
+Loading texture for creature illusion_world_worship_domain/02_fat_mole_d file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\12 75800-7c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature illusion_world_worship_domain/03_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\17 80800-86000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature illusion_world_worship_domain/04_wildowess file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\22 ad000-b4000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=28672
+Loading texture for creature illusion_world_worship_domain/05_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\27 be800-be800.T
+Loading texture for creature illusion_world_worship_domain/06_warpoor file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\32 cb000-d2800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_worship_domain/07_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\37 de800-de800.T
+Loading texture for creature illusion_world_worship_domain/08_fester file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\42 10f000-122000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=483 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=77824
+Loading texture for creature illusion_world_worship_domain/09_cross_breed file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\47 132800-13a000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature illusion_world_worship_domain/0a_warpoor file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\52 152000-159800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature illusion_world_worship_domain/0b_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\57 165800-165800.T
+Loading texture for creature illusion_world_worship_domain/0c_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\62 165800-165800.T
+Loading texture for creature illusion_world_worship_domain/0d_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\67 165800-165800.T
+Loading texture for creature illusion_world_worship_domain/0e_door file .\generated\hard\extracted\ST\CHR1\M13.T_PARTS\72 165800-165800.T
+Loading texture for creature death_world_lingering_curse_layer/00_unknown_e file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\2 13000-1a800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_lingering_curse_layer/01_stack_eyes file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\7 4c000-52800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_lingering_curse_layer/02_door file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\12 62000-68800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_lingering_curse_layer/03_door file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\17 6c800-6c800.T
+Loading texture for creature death_world_lingering_curse_layer/04_blank file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\22 84800-8c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_lingering_curse_layer/05_unknown_g file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\27 a6000-ae800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=51893 imageHeightInPixels=50836 nb_palettes=1 palletesWords=256 textureSize=34816
+Loading texture for creature death_world_lingering_curse_layer/06_door file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\32 b7000-b7000.T
+Loading texture for creature death_world_lingering_curse_layer/07_door file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\37 b7000-b7000.T
+Loading texture for creature death_world_lingering_curse_layer/08_apocrypha file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\42 c7800-cf000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=48888 imageHeightInPixels=46741 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature death_world_lingering_curse_layer/09_descrypha file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\47 eb000-f2800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=40992 imageHeightInPixels=34816 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature death_world_lingering_curse_layer/0a_old_face file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\52 10a000-116000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=48623 imageHeightInPixels=49680 nb_palettes=1 palletesWords=8 textureSize=49152
+Loading texture for creature death_world_lingering_curse_layer/0b_door file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\57 121000-121000.T
+Loading texture for creature death_world_lingering_curse_layer/0c_old_face file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\62 130000-136800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_lingering_curse_layer/0d_bugler file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\67 15a800-162800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=32768
+Loading texture for creature death_world_lingering_curse_layer/0e_door file .\generated\hard\extracted\ST\CHR1\M14.T_PARTS\72 16b800-16b800.T
+Loading texture for creature earth_world_false_pit_cavern/00_earth_knight file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\2 17000-1e800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_false_pit_cavern/01_acid_pod file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\7 38000-3f800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_false_pit_cavern/02_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\12 4d800-52000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature earth_world_false_pit_cavern/03_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\17 56000-56000.T
+Loading texture for creature earth_world_false_pit_cavern/04_cannon_snail file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\22 5e800-64800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=42642 imageHeightInPixels=40528 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature earth_world_false_pit_cavern/05_cocoon_plant file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\27 7e000-85800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_false_pit_cavern/06_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\32 8f800-8f800.T
+Loading texture for creature earth_world_false_pit_cavern/07_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\37 8f800-8f800.T
+Loading texture for creature earth_world_false_pit_cavern/08_guardian_b file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\42 ab000-b2800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=36868 imageHeightInPixels=34819 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_false_pit_cavern/09_sloth_bug file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\47 d9000-e0800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_false_pit_cavern/0a_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\52 ea800-ea800.T
+Loading texture for creature earth_world_false_pit_cavern/0b_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\57 ea800-ea800.T
+Loading texture for creature earth_world_false_pit_cavern/0c_ray_plant file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\62 f8800-ff000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=58367 imageHeightInPixels=56319 nb_palettes=1 palletesWords=8 textureSize=26624
+Loading texture for creature earth_world_false_pit_cavern/0d_cocoon_plant file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\67 118800-120000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_false_pit_cavern/0e_door file .\generated\hard\extracted\ST\CHR1\M15.T_PARTS\72 12a000-12a000.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR1\M16.T
+Loading texture for creature monster_world_screeching_area/00_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\2 800-800.T
+Loading texture for creature monster_world_screeching_area/01_auriel_c file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\7 3b800-67000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=489 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=178176
+Loading texture for creature monster_world_screeching_area/02_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\12 73000-73000.T
+Loading texture for creature monster_world_screeching_area/03_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\17 73000-73000.T
+Loading texture for creature monster_world_screeching_area/04_king_hopper file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\22 81800-8c800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=40233 imageHeightInPixels=39176 nb_palettes=1 palletesWords=8 textureSize=45056
+Loading texture for creature monster_world_screeching_area/05_warden file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\27 9a800-9f800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=35910 imageHeightInPixels=34853 nb_palettes=1 palletesWords=8 textureSize=20480
+Loading texture for creature monster_world_screeching_area/06_oblid file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\32 cf800-d7000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=40135 imageHeightInPixels=39078 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_screeching_area/07_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\37 e3800-eb000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_screeching_area/08_oxelus file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\42 110800-11a800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=40960
+Loading texture for creature monster_world_screeching_area/09_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\47 126000-126000.T
+Loading texture for creature monster_world_screeching_area/0a_cursed_demon file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\52 145000-14c800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=40136 imageHeightInPixels=35908 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature monster_world_screeching_area/0b_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\57 157000-157000.T
+Loading texture for creature monster_world_screeching_area/0c_door file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\62 157000-157000.T
+Loading texture for creature monster_world_screeching_area/0d_death_serpent file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\67 169000-176000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=483 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=53248
+Loading texture for creature monster_world_screeching_area/0e_necron file .\generated\hard\extracted\ST\CHR1\M17.T_PARTS\72 1af800-1bd800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=485 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=57344
+Loading texture for creature fire_world_ashen_cavern/00_bone_demon file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\2 b800-15800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=40960
+Loading texture for creature fire_world_ashen_cavern/01_berzerker file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\7 36000-44800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=484 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=59392
+Loading texture for creature fire_world_ashen_cavern/02_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\12 50800-50800.T
+Loading texture for creature fire_world_ashen_cavern/03_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\17 50800-50800.T
+Loading texture for creature fire_world_ashen_cavern/04_zygote file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\22 67800-71800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=485 imageWidthIn16BitWords=35453 imageHeightInPixels=35551 nb_palettes=1 palletesWords=8 textureSize=40960
+Loading texture for creature fire_world_ashen_cavern/05_horned_skull file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\27 83800-89800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature fire_world_ashen_cavern/06_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\32 95000-95000.T
+Loading texture for creature fire_world_ashen_cavern/07_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\37 95000-95000.T
+Loading texture for creature fire_world_ashen_cavern/08_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\42 95000-95000.T
+Loading texture for creature fire_world_ashen_cavern/09_cerberus file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\47 bc800-c4000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_ashen_cavern/0a_ruby_demon file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\52 e0800-eb000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=288 palleteOrgY=485 imageWidthIn16BitWords=36409 imageHeightInPixels=37631 nb_palettes=1 palletesWords=8 textureSize=43008
+Loading texture for creature fire_world_ashen_cavern/0b_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\57 f5000-f5000.T
+Loading texture for creature fire_world_ashen_cavern/0c_ebony_knight file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\62 11a000-128000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=59327 imageHeightInPixels=54142 nb_palettes=1 palletesWords=8 textureSize=57344
+Loading texture for creature fire_world_ashen_cavern/0d_damned_angel file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\67 145800-153000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=483 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=55296
+Loading texture for creature fire_world_ashen_cavern/0e_door file .\generated\hard\extracted\ST\CHR1\M18.T_PARTS\72 15d000-15d000.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR1\M19.T
+Loading texture for creature fire_world_burning_cavern/00_berzerker file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\2 800-800.T
+Loading texture for creature fire_world_burning_cavern/01_dweller file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\7 800-800.T
+Loading texture for creature fire_world_burning_cavern/02_mystic_tower file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\12 5800-d000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=35255 imageHeightInPixels=34027 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_burning_cavern/03_door file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\17 1c000-20800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature fire_world_burning_cavern/04_berzerker file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\22 39000-47800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=484 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=59392
+Loading texture for creature fire_world_burning_cavern/05_dweller file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\27 53800-53800.T
+Loading texture for creature fire_world_burning_cavern/06_mystic_tower file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\32 58800-60000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=35255 imageHeightInPixels=34027 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_burning_cavern/07_door file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\37 6a000-6a000.T
+Loading texture for creature fire_world_burning_cavern/08_berzerker file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\42 7e800-8d000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=484 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=59392
+Loading texture for creature fire_world_burning_cavern/09_iron_crusher file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\47 af000-b6800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_burning_cavern/0a_mystic_tower file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\52 c3000-c3000.T
+Loading texture for creature fire_world_burning_cavern/0b_door file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\57 c3000-c3000.T
+Loading texture for creature fire_world_burning_cavern/0c_door file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\62 c3000-c3000.T
+Loading texture for creature fire_world_burning_cavern/0d_dweller file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\67 d9000-e0800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_burning_cavern/0e_mystic_tower file .\generated\hard\extracted\ST\CHR2\M20.T_PARTS\72 f2000-f9800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=35255 imageHeightInPixels=34027 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature water_world_sunken_river_area/00_kabasaur file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\2 1b800-27000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature water_world_sunken_river_area/01_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\7 35800-3a000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature water_world_sunken_river_area/02_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\12 3e000-3e000.T
+Loading texture for creature water_world_sunken_river_area/03_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\17 3e000-3e000.T
+Loading texture for creature water_world_sunken_river_area/04_kabasaur file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\22 59000-64800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature water_world_sunken_river_area/05_water_knight file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\27 8a800-92000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=45416 imageHeightInPixels=38018 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_sunken_river_area/06_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\32 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/07_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\37 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/08_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\42 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/09_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\47 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/0a_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\52 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/0b_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\57 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/0c_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\62 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/0d_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\67 9b800-9b800.T
+Loading texture for creature water_world_sunken_river_area/0e_door file .\generated\hard\extracted\ST\CHR2\M21.T_PARTS\72 9b800-9b800.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR2\M22.T
+Loading texture for creature death_world_gate_of_the_dead/00_unused_a file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\2 800-800.T
+Loading texture for creature death_world_gate_of_the_dead/01_doriwi file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\7 24800-2c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=36971 imageHeightInPixels=35913 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/02_bone_wolf file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\12 58000-5f800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/03_door file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\17 69800-69800.T
+Loading texture for creature death_world_gate_of_the_dead/04_unused_b file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\22 77800-7f000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/05_doriwi file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\27 ad000-b4800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=36971 imageHeightInPixels=35913 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/06_hell_warrior file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\32 dc800-e4000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/07_door file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\37 f2800-f9000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_gate_of_the_dead/08_wyvern file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\42 10f800-116800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=54205 imageHeightInPixels=51133 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature death_world_gate_of_the_dead/09_door file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\47 11e800-11e800.T
+Loading texture for creature death_world_gate_of_the_dead/0a_bone_wolf file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\52 140000-147800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/0b_door file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\57 151800-151800.T
+Loading texture for creature death_world_gate_of_the_dead/0c_hollow_mage file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\62 168800-175800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=53248
+Loading texture for creature death_world_gate_of_the_dead/0d_blood_bone file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\67 197000-19e800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=41290 imageHeightInPixels=40233 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_gate_of_the_dead/0e_door file .\generated\hard\extracted\ST\CHR2\M23.T_PARTS\72 1a8000-1a8000.T
+Loading texture for creature fire_world_molten_cavern/00_abraxus file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\2 1d000-2a800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=485 imageWidthIn16BitWords=33343 imageHeightInPixels=0 nb_palettes=1 palletesWords=8 textureSize=55296
+Loading texture for creature fire_world_molten_cavern/01_horned_skull file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\7 3b800-41800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=49982 imageHeightInPixels=45854 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature fire_world_molten_cavern/02_dead_abraxus file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\12 56800-65800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=483 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=61440
+Loading texture for creature fire_world_molten_cavern/03_door file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\17 6e000-6e000.T
+Loading texture for creature fire_world_molten_cavern/04_berzerker file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\22 82800-91000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=484 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=59392
+Loading texture for creature fire_world_molten_cavern/05_door file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\27 9d000-9d000.T
+Loading texture for creature fire_world_molten_cavern/06_mystic_tower file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\32 a2000-a9800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=35255 imageHeightInPixels=34027 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature fire_world_molten_cavern/07_door file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\37 b3800-b3800.T
+Loading texture for creature fire_world_molten_cavern/08_fat_mole_b file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\42 c7800-ce000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature fire_world_molten_cavern/09_steel_servant file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\47 e9800-f3800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=485 imageWidthIn16BitWords=33109 imageHeightInPixels=35288 nb_palettes=1 palletesWords=8 textureSize=40960
+Loading texture for creature fire_world_molten_cavern/0a_door file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\52 ff000-ff000.T
+Loading texture for creature fire_world_molten_cavern/0b_door file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\57 ff000-ff000.T
+Loading texture for creature fire_world_molten_cavern/0c_fat_mole_c file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\62 113000-119800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature fire_world_molten_cavern/0d_arachness file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\67 13c800-14a000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=484 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=55296
+Loading texture for creature fire_world_molten_cavern/0e_door file .\generated\hard\extracted\ST\CHR2\M24.T_PARTS\72 156800-156800.T
+Loading texture for creature death_world_dark_castle_layer/00_hell_hunter file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\2 24000-30800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=56222 imageHeightInPixels=45885 nb_palettes=1 palletesWords=256 textureSize=51200
+Loading texture for creature death_world_dark_castle_layer/01_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\7 3c000-3c000.T
+Loading texture for creature death_world_dark_castle_layer/02_karasu file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\12 57800-5f000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_dark_castle_layer/03_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\17 6d800-74000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_dark_castle_layer/04_tree_ogre file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\22 8e000-99800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=483 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature death_world_dark_castle_layer/05_armored_warrior file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\27 bb800-c3000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_dark_castle_layer/06_armored_slayer file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\32 e9000-f0800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_dark_castle_layer/07_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\37 fb000-fb000.T
+Loading texture for creature death_world_dark_castle_layer/08_armored_guardian file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\42 117800-11f000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_dark_castle_layer/09_armored_warrior file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\47 140000-147800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_dark_castle_layer/0a_armored_slayer file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\52 16d800-175000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_dark_castle_layer/0b_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\57 184000-18a800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_dark_castle_layer/0c_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\62 18e800-18e800.T
+Loading texture for creature death_world_dark_castle_layer/0d_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\67 18e800-18e800.T
+Loading texture for creature death_world_dark_castle_layer/0e_door file .\generated\hard\extracted\ST\CHR2\M25.T_PARTS\72 18e800-18e800.T
+Loading texture for creature death_world_undead_layer/00_door file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\2 800-800.T
+Loading texture for creature death_world_undead_layer/01_unknown_b file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\7 3e000-78000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=489 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=237568
+Loading texture for creature death_world_undead_layer/02_door file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\12 84000-84000.T
+Loading texture for creature death_world_undead_layer/03_door file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\17 88800-8f000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_undead_layer/04_king_edward file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\22 b3800-bb000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_undead_layer/05_hell_hunter file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\27 dc800-e4000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature death_world_undead_layer/06_door file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\32 ed000-ed000.T
+Loading texture for creature death_world_undead_layer/07_door file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\37 f1800-f8000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_undead_layer/08_claw_head file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\42 105800-10c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=38033 imageHeightInPixels=36975 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_undead_layer/09_pulsating_heart file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\47 12a000-131000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=32794 imageHeightInPixels=32796 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature death_world_undead_layer/0a_demons_eye file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\52 13f800-146800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=34229 imageHeightInPixels=37599 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature death_world_undead_layer/0b_door file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\57 151800-151800.T
+Loading texture for creature death_world_undead_layer/0c_unknown_d file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\62 15e800-164000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=34882 imageHeightInPixels=34882 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature death_world_undead_layer/0d_fat_mole_e file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\67 182800-189000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature death_world_undead_layer/0e_claw_head file .\generated\hard\extracted\ST\CHR2\M26.T_PARTS\72 1ac800-1b9000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=56222 imageHeightInPixels=45885 nb_palettes=1 palletesWords=256 textureSize=51200
+Loading texture for creature earth_world_poisonous_cavern/00_duhrin file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\2 1a800-22000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=35873 imageHeightInPixels=41192 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_poisonous_cavern/01_beak_plant file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\7 34800-3c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=38029 imageHeightInPixels=38030 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_poisonous_cavern/02_watcher_plant file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\12 59800-61000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=32935 imageHeightInPixels=32868 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature earth_world_poisonous_cavern/03_door file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\17 6f800-74000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature earth_world_poisonous_cavern/04_auriel_b file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\22 9d800-b0000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=486 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=75776
+Loading texture for creature earth_world_poisonous_cavern/05_blank file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\27 c2000-c8800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature earth_world_poisonous_cavern/06_door file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\32 c8800-c8800.T
+Loading texture for creature earth_world_poisonous_cavern/07_door file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\37 c8800-c8800.T
+Loading texture for creature earth_world_poisonous_cavern/08_trickster file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\42 d5800-dc800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=34984 imageHeightInPixels=38188 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature earth_world_poisonous_cavern/09_dwarf_warrior file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\47 f7000-fe800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=41257 imageHeightInPixels=39143 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_poisonous_cavern/0a_blank file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\52 120000-127800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_poisonous_cavern/0b_blank file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\57 12c800-134000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_poisonous_cavern/0c_hanging_dead file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\62 148800-154000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature earth_world_poisonous_cavern/0d_trickster file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\67 183800-18e800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=45056
+Loading texture for creature earth_world_poisonous_cavern/0e_watcher_plant file .\generated\hard\extracted\ST\CHR2\M27.T_PARTS\72 1ae000-1b5800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=481 imageWidthIn16BitWords=32935 imageHeightInPixels=32868 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature earth_world_stone_cavern/00_dybbuk file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\2 1e000-26800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=34816
+Loading texture for creature earth_world_stone_cavern/01_demon_bat file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\7 41800-47800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=47281 imageHeightInPixels=39977 nb_palettes=1 palletesWords=8 textureSize=24576
+Loading texture for creature earth_world_stone_cavern/02_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\12 50800-50800.T
+Loading texture for creature earth_world_stone_cavern/03_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\17 50800-50800.T
+Loading texture for creature earth_world_stone_cavern/04_dybbuk file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\22 6e000-76800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=34816
+Loading texture for creature earth_world_stone_cavern/05_hobble_worm file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\27 95800-9a800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=37261 imageHeightInPixels=32801 nb_palettes=1 palletesWords=8 textureSize=20480
+Loading texture for creature earth_world_stone_cavern/06_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\32 a1800-a1800.T
+Loading texture for creature earth_world_stone_cavern/07_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\37 a1800-a1800.T
+Loading texture for creature earth_world_stone_cavern/08_clay_servant file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\42 bc000-c2800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature earth_world_stone_cavern/09_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\47 cc000-cc000.T
+Loading texture for creature earth_world_stone_cavern/0a_barrel_snail file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\52 e6800-ee000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_stone_cavern/0b_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\57 f8000-f8000.T
+Loading texture for creature earth_world_stone_cavern/0c_dybbuk file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\62 112800-11c800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=48623 imageHeightInPixels=49680 nb_palettes=1 palletesWords=8 textureSize=40960
+Loading texture for creature earth_world_stone_cavern/0d_crying_root file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\67 138800-140000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_stone_cavern/0e_door file .\generated\hard\extracted\ST\CHR2\M28.T_PARTS\72 14a000-14a000.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR2\M29.T
+Loading texture for creature void/00_balron_a file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\2 2e000-3d000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=486 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=61440
+Loading texture for creature void/01_unknown_i file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\7 4c800-4c800.T
+Loading texture for creature void/02_unknown_j file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\12 54800-54800.T
+Loading texture for creature void/03_balron_b file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\17 9b800-ac800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=488 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=69632
+Loading texture for creature void/04_unknown_k file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\22 cd000-d3800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature void/05_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\27 d6800-d6800.T
+Loading texture for creature void/06_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\32 d6800-d6800.T
+Loading texture for creature void/07_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\37 d6800-d6800.T
+Loading texture for creature void/08_demon_king file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\42 109000-11c000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=484 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=77824
+Loading texture for creature void/09_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\47 126000-126000.T
+Loading texture for creature void/0a_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\52 126000-126000.T
+Loading texture for creature void/0b_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\57 126000-126000.T
+Loading texture for creature void/0c_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\62 126000-126000.T
+Loading texture for creature void/0d_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\67 126000-126000.T
+Loading texture for creature void/0e_door file .\generated\hard\extracted\ST\CHR3\M30.T_PARTS\72 126000-126000.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR3\M31.T
+Loading texture for creature water_world_watery_labyrinth_area/00_kabasaur file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\2 1b800-27000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=482 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=47104
+Loading texture for creature water_world_watery_labyrinth_area/01_door file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\7 31000-31000.T
+Loading texture for creature water_world_watery_labyrinth_area/02_horned_slime file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\12 3b000-42800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_watery_labyrinth_area/03_door file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\17 51800-56000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature water_world_watery_labyrinth_area/04_great_frog file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\22 6f000-76800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=49711 imageHeightInPixels=45483 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_watery_labyrinth_area/05_blood_brain file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\27 8b800-93000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_watery_labyrinth_area/06_door file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\32 9d800-9d800.T
+Loading texture for creature water_world_watery_labyrinth_area/07_door file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\37 9d800-9d800.T
+Loading texture for creature water_world_watery_labyrinth_area/08_door file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\42 9d800-9d800.T
+Loading texture for creature water_world_watery_labyrinth_area/09_koazul file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\47 bb800-c3000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_watery_labyrinth_area/0a_horned_slime file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\52 d9000-e0800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=481 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature water_world_watery_labyrinth_area/0b_door file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\57 ef800-f4000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature water_world_watery_labyrinth_area/0c_gaze_hopper file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\62 106000-10e000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=32998 imageHeightInPixels=32899 nb_palettes=1 palletesWords=8 textureSize=32768
+Loading texture for creature water_world_watery_labyrinth_area/0d_slasher file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\67 136000-13d000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=48623 imageHeightInPixels=49680 nb_palettes=1 palletesWords=8 textureSize=28672
+Loading texture for creature water_world_watery_labyrinth_area/0e_manna_python file .\generated\hard\extracted\ST\CHR3\M32.T_PARTS\72 15f800-16a800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=50703 imageHeightInPixels=53874 nb_palettes=1 palletesWords=8 textureSize=45056
+Loading texture for creature earth_world_hostile_rock_cavern/00_black_onyx file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\2 11000-18800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_hostile_rock_cavern/01_earth_knight file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\7 3b000-42800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_hostile_rock_cavern/02_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\12 51000-55800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature earth_world_hostile_rock_cavern/03_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\17 59800-59800.T
+Loading texture for creature earth_world_hostile_rock_cavern/04_dread_knight file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\22 88000-96000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=485 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=57344
+Loading texture for creature earth_world_hostile_rock_cavern/05_earth_knight file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\27 b6000-bd800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature earth_world_hostile_rock_cavern/06_dread_knight_unused file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\32 d6800-e4800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=485 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=57344
+Loading texture for creature earth_world_hostile_rock_cavern/07_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\37 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/08_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\42 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/09_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\47 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/0a_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\52 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/0b_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\57 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/0c_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\62 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/0d_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\67 ee000-ee000.T
+Loading texture for creature earth_world_hostile_rock_cavern/0e_door file .\generated\hard\extracted\ST\CHR3\M33.T_PARTS\72 ee000-ee000.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR3\M34.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR3\M35.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR3\M36.T
+Loading texture for creature water_world_white_rain_area/00_winged_worm file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\2 15000-1b800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=32928 imageHeightInPixels=33056 nb_palettes=1 palletesWords=8 textureSize=26624
+Loading texture for creature water_world_white_rain_area/01_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\7 26800-26800.T
+Loading texture for creature water_world_white_rain_area/02_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\12 26800-26800.T
+Loading texture for creature water_world_white_rain_area/03_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\17 2b000-2f800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature water_world_white_rain_area/04_dragon_turtle file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\22 49800-51000.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=482 imageWidthIn16BitWords=50703 imageHeightInPixels=53874 nb_palettes=1 palletesWords=8 textureSize=30720
+Loading texture for creature water_world_white_rain_area/05_magi_magus file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\27 8a800-93800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=485 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=36864
+Loading texture for creature water_world_white_rain_area/06_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\32 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/07_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\37 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/08_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\42 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/09_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\47 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/0a_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\52 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/0b_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\57 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/0c_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\62 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/0d_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\67 9e800-9e800.T
+Loading texture for creature water_world_white_rain_area/0e_door file .\generated\hard\extracted\ST\CHR3\M37.T_PARTS\72 9e800-9e800.T
+Loading texture for creature illusion_world_dream_domain/00_dark_spirits file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\2 12800-21800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=48623 imageHeightInPixels=49680 nb_palettes=1 palletesWords=8 textureSize=61440
+Loading texture for creature illusion_world_dream_domain/01_disguise file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\7 44000-51800.T
+Texture magic=16 colorType=8 imageOffset=44 bitsPerPalleteEntry=4 palette_colors=16 palleteOrgX=528 palleteOrgY=480 imageWidthIn16BitWords=33077 imageHeightInPixels=35288 nb_palettes=1 palletesWords=8 textureSize=55296
+Loading texture for creature illusion_world_dream_domain/02_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\12 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/03_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\17 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/04_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\22 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/05_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\27 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/06_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\32 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/07_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\37 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/08_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\42 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/09_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\47 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/0a_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\52 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/0b_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\57 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/0c_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\62 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/0d_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\67 5d000-5d000.T
+Loading texture for creature illusion_world_dream_domain/0e_door file .\generated\hard\extracted\ST\CHR3\M38.T_PARTS\72 5d000-5d000.T
+DEBUG - Skipping to load TFormat, invalid. .\generated\hard\extracted\ST\CHR3\M39.T
+Loading texture for creature shadow_tower_part2/00_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\2 4800-9000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature shadow_tower_part2/01_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\7 12000-16800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature shadow_tower_part2/02_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\12 1f000-23800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature shadow_tower_part2/03_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\17 27800-27800.T
+Loading texture for creature shadow_tower_part2/04_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\22 27800-27800.T
+Loading texture for creature shadow_tower_part2/05_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\27 27800-27800.T
+Loading texture for creature shadow_tower_part2/06_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\32 27800-27800.T
+Loading texture for creature shadow_tower_part2/07_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\37 27800-27800.T
+Loading texture for creature shadow_tower_part2/08_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\42 27800-27800.T
+Loading texture for creature shadow_tower_part2/09_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\47 27800-27800.T
+Loading texture for creature shadow_tower_part2/0a_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\52 27800-27800.T
+Loading texture for creature shadow_tower_part2/0b_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\57 27800-27800.T
+Loading texture for creature shadow_tower_part2/0c_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\62 27800-27800.T
+Loading texture for creature shadow_tower_part2/0d_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\67 27800-27800.T
+Loading texture for creature shadow_tower_part2/0e_door file .\generated\hard\extracted\ST\CHR4\M40.T_PARTS\72 27800-27800.T
+Loading texture for creature shadow_tower_part3/00_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\2 5000-9800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=0 imageHeightInPixels=0 nb_palettes=1 palletesWords=256 textureSize=18432
+Loading texture for creature shadow_tower_part3/01_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\7 12000-17800.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=22528
+Loading texture for creature shadow_tower_part3/02_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\12 20800-28000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=32768 imageHeightInPixels=32768 nb_palettes=1 palletesWords=256 textureSize=30720
+Loading texture for creature shadow_tower_part3/03_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\17 30800-37000.T
+Texture magic=16 colorType=9 imageOffset=524 bitsPerPalleteEntry=8 palette_colors=256 palleteOrgX=256 palleteOrgY=480 imageWidthIn16BitWords=4196 imageHeightInPixels=3139 nb_palettes=1 palletesWords=256 textureSize=26624
+Loading texture for creature shadow_tower_part3/04_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\22 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/05_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\27 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/06_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\32 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/07_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\37 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/08_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\42 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/09_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\47 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/0a_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\52 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/0b_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\57 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/0c_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\62 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/0d_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
+Loading texture for creature shadow_tower_part3/0e_door file .\generated\hard\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 DEBUG - The game has 640 spawns.
 DEBUG - The game has 229 collectables.
+ randomizableCreaturesCost1 00_dark_spider,01_acid_slime,02_blood_slime,06_skeleton,08_dark_spider,0a_skeleton,00_acid_slime,01_blood_slime,02_parasite,04_acid_slime,05_blood_slime,08_casket,09_blood_slime,00_acid_skull,01_blood_skull,02_skeleton,04_acid_skull,05_blood_skull,06_skeleton,00_dark_spider,02_tongue_imp,06_tongue_imp,08_dark_spider,00_watcher_plant,01_myconid,02_elder,04_minor_dwarf,05_dwarfling,06_elder,08_star_serpent,09_imp,0c_barrel_snail,0d_tondrom,01_beak_plant,02_watcher_plant,08_trickster,09_dwarf_warrior,0e_watcher_plant,00_sand_leech_a,01_blue_flicker,02_sand_leech_b,04_kiljoy,05_acid_pod,09_cocoon_plant,0a_cocoon_plant,00_earth_knight,01_acid_pod,04_cannon_snail,05_cocoon_plant,09_sloth_bug,0c_ray_plant,0d_cocoon_plant,05_hobble_worm,08_clay_servant,0a_barrel_snail,0d_crying_root,00_black_onyx,01_earth_knight,05_earth_knight,01_horned_slime,02_blood_brain,05_horned_slime,06_dweller,09_dementor,0a_dweller,0c_worm_face,0d_hatchlin,05_water_knight,02_horned_slime,04_great_frog,05_blood_brain,09_koazul,0a_horned_slime,0d_slasher,00_winged_worm,02_mystic_tower,06_mystic_tower,09_iron_crusher,0d_dweller,0e_mystic_tower,01_horned_skull,06_mystic_tower,05_horned_skull,09_cerberus,00_night_howler,04_night_howler,08_hermit_crab,0c_saurian_warrior_a,0d_saurian_warrior_b,0e_dinogon,05_warden,06_oblid,0a_cursed_demon,04_demon_warrior,08_war_demon_1,09_war_demon_2,00_red_puppet,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0a_dark_bishop,0c_maristella,00_master_knight,06_warpoor,09_cross_breed,0a_warpoor,02_karasu,05_armored_warrior,06_armored_slayer,09_armored_warrior,0a_armored_slayer,01_stack_eyes,09_descrypha,0c_old_face,05_hell_hunter,01_doriwi,02_bone_wolf,05_doriwi,06_hell_warrior,08_wyvern,0a_bone_wolf,0d_blood_bone randomizableCreaturesCost2 0d_trickster,08_torg,00_kabasaur,04_kabasaur,00_kabasaur,0c_gaze_hopper,0e_manna_python,02_fire_jinn,04_jinn_lord,05_armored_jinn,06_fire_jinn,04_berzerker,08_berzerker,04_berzerker,09_steel_servant,0d_arachness,01_berzerker,04_zygote,0a_ruby_demon,0d_damned_angel,01_chirper,04_king_hopper,08_oxelus,0d_death_serpent,0c_death_mage,0d_deha,00_dark_spirits,00_hell_hunter,04_tree_ogre,0a_old_face,0d_bugler randomizableFlyingCreaturesCost1 09_demon_bat,01_shadow_spider,09_shadow_spider,01_demon_bat,0a_rotting_face,0e_rotting_face,08_apocrypha,0a_demons_eye randomizableFlyingCreaturesCost2 00_bone_demon,09_dark_fairy
 Difficulty hard, factor 1.3
 
 

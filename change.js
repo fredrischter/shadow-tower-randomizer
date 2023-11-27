@@ -29,6 +29,8 @@ function change(changeFile) {
 			fs.renameSync(change.fileSwap.file1, change.fileSwap.file1 + ".tmp");
 			fs.renameSync(change.fileSwap.file2, change.fileSwap.file1);
 			fs.renameSync(change.fileSwap.file1 + ".tmp", change.fileSwap.file2);
+		} else if (change.fileCopy) {
+			fs.copyFileSync(change.fileCopy.from, change.fileCopy.to);
 		} else if (change.textToTexture) {
 			if (!textureFiles[change.textToTexture.file]) {
 				textureFiles[change.textToTexture.file] = new TFILEReader(change.textToTexture.file).readTFormat();
