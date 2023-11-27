@@ -1192,22 +1192,22 @@ function randomize(paramsFile, stDir) {
             " randomizableGateKeeperCreaturesCost2 " + randomizableGateKeeperCreaturesCost2.map(creature => creature.name)
             );
 
-//        if (params.randomizeCreatures) {
-//            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
-//        
-//            for (var i =0; i<100; i++) {
-//                swapCreatures(randomElement(randomizableCreaturesCost1),randomElement(randomizableCreaturesCost1), changeSet);
-//            }
-//            for (var i =0; i<20; i++) {
-//                swapCreatures(randomElement(randomizableCreaturesCost2),randomElement(randomizableCreaturesCost2), changeSet);
-//            }
-//            for (var i =0; i<5; i++) {
-//                swapCreatures(randomElement(randomizableFlyingCreaturesCost1),randomElement(randomizableFlyingCreaturesCost1), changeSet);
-//            }
-//            for (var i =0; i<1; i++) {
-//                swapCreatures(randomElement(randomizableFlyingCreaturesCost2),randomElement(randomizableFlyingCreaturesCost2), changeSet);
-//            }
-//        }
+        if (params.randomizeCreatures) {
+            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+        
+            for (var i =0; i<100; i++) {
+                swapCreatures(randomElement(randomizableCreaturesCost1),randomElement(randomizableCreaturesCost1), changeSet);
+            }
+            for (var i =0; i<20; i++) {
+                swapCreatures(randomElement(randomizableCreaturesCost2),randomElement(randomizableCreaturesCost2), changeSet);
+            }
+            for (var i =0; i<5; i++) {
+                swapCreatures(randomElement(randomizableFlyingCreaturesCost1),randomElement(randomizableFlyingCreaturesCost1), changeSet);
+            }
+            for (var i =0; i<1; i++) {
+                swapCreatures(randomElement(randomizableFlyingCreaturesCost2),randomElement(randomizableFlyingCreaturesCost2), changeSet);
+            }
+        }
 
         // ------- Adjust creature and equip levels for proper progression
 

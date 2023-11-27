@@ -2795,17 +2795,285 @@ DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e8
 DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_e7_bracelet_of_resist at death_world_dark_castle_layer/00_hell_hunter
 DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_ef_deadly_bracelet at death_world_dark_castle_layer/08_armored_guardian
  randomizableCreaturesCost1 00_dark_spider,01_acid_slime,02_blood_slime,06_skeleton,08_dark_spider,0a_skeleton,00_acid_slime,01_blood_slime,02_parasite,04_acid_slime,05_blood_slime,08_casket,09_blood_slime,00_acid_skull,01_blood_skull,02_skeleton,04_acid_skull,05_blood_skull,06_skeleton,00_dark_spider,02_tongue_imp,06_tongue_imp,08_dark_spider,00_watcher_plant,01_myconid,02_elder,04_minor_dwarf,05_dwarfling,06_elder,08_star_serpent,09_imp,0c_barrel_snail,0d_tondrom,0e_elder,01_beak_plant,02_watcher_plant,08_trickster,09_dwarf_warrior,0e_watcher_plant,00_sand_leech_a,01_blue_flicker,02_sand_leech_b,04_kiljoy,05_acid_pod,09_cocoon_plant,0a_cocoon_plant,00_earth_knight,01_acid_pod,04_cannon_snail,05_cocoon_plant,09_sloth_bug,0c_ray_plant,0d_cocoon_plant,05_hobble_worm,08_clay_servant,0a_barrel_snail,0d_crying_root,00_black_onyx,01_earth_knight,05_earth_knight,01_horned_slime,02_blood_brain,05_horned_slime,06_dweller,09_dementor,0a_dweller,0c_worm_face,0d_hatchlin,05_water_knight,02_horned_slime,04_great_frog,05_blood_brain,09_koazul,0a_horned_slime,0d_slasher,00_winged_worm,02_mystic_tower,06_mystic_tower,09_iron_crusher,0d_dweller,0e_mystic_tower,01_horned_skull,06_mystic_tower,05_horned_skull,09_cerberus,00_night_howler,04_night_howler,08_hermit_crab,0c_saurian_warrior_a,0d_saurian_warrior_b,0e_dinogon,05_warden,06_oblid,0a_cursed_demon,01_gargaral,02_gordoral,04_demon_warrior,05_gargaral,06_gordoral,08_war_demon_1,09_war_demon_2,00_red_puppet,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0a_dark_bishop,0c_maristella,00_master_knight,06_warpoor,09_cross_breed,0a_warpoor,02_karasu,05_armored_warrior,06_armored_slayer,09_armored_warrior,0a_armored_slayer,01_stack_eyes,09_descrypha,0c_old_face,05_hell_hunter,01_doriwi,02_bone_wolf,05_doriwi,06_hell_warrior,08_wyvern,0a_bone_wolf,0d_blood_bone randomizableCreaturesCost2 0d_trickster,08_torg,00_kabasaur,04_kabasaur,00_kabasaur,0c_gaze_hopper,0e_manna_python,02_fire_jinn,04_jinn_lord,05_armored_jinn,06_fire_jinn,04_berzerker,08_berzerker,04_berzerker,09_steel_servant,0d_arachness,01_berzerker,04_zygote,0a_ruby_demon,0d_damned_angel,01_chirper,04_king_hopper,08_oxelus,0d_death_serpent,0c_death_mage,0d_deha,00_dark_spirits,00_hell_hunter,04_tree_ogre,0a_old_face,0d_bugler randomizableFlyingCreaturesCost1 09_demon_bat,01_shadow_spider,09_shadow_spider,01_demon_bat,01_gargaral,02_gordoral,05_gargaral,06_gordoral,0a_rotting_face,0e_rotting_face,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0c_maristella,06_warpoor,09_cross_breed,0a_warpoor,08_apocrypha,09_descrypha,0a_demons_eye randomizableFlyingCreaturesCost2 00_bone_demon,09_dark_fairy,00_dark_spirits randomizableGateKeeperCreaturesCost1 02_elder,06_elder,0e_elder,02_sand_leech_b,08_claw_head randomizableGateKeeperCreaturesCost2 0e_claw_head
+Swapping creatures 0a_horned_slime (water_world_watery_labyrinth_area) and 05_gargaral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
+Swapping creatures 09_dwarf_warrior (earth_world_poisonous_cavern) and 05_blood_brain (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T
+Swapping creatures 06_dweller (water_world_impure_pool_area) and 0d_dweller (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
+Setting similar creature to same as swapped: 0a_dweller getting assigned to be like 0d_dweller
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
+Setting similar creature to same as swapped: 01_dweller getting assigned to be like 06_dweller
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T->.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\8 800-800.T
+Setting similar creature to same as swapped: 05_dweller getting assigned to be like 06_dweller
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T->.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\28 53800-53800.T
+Swapping creatures 09_blood_slime (human_world_hidden_region) and 09_sloth_bug (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
+Swapping creatures 02_tongue_imp (human_world_cursed_region) and 05_dark_spirits (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
+Swapping creatures 0a_cursed_demon (monster_world_screeching_area) and 08_dark_spider (human_world_solitary_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T
+Swapping creatures 0d_saurian_warrior_b (monster_world_false_eye_area) and 0d_tondrom (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
+Swapping creatures 00_red_puppet (illusion_world_gloomy_domain) and 01_horned_skull (fire_world_molten_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
+Swapping creatures 09_sloth_bug (human_world_hidden_region) and 0d_crying_root (earth_world_stone_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
+Swapping creatures 08_dark_spider (human_world_cursed_region) and 09_blood_slime (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
+Swapping creatures 00_dark_spider (human_world_solitary_region) and 09_dementor (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T
+Swapping creatures 0d_cocoon_plant (earth_world_false_pit_cavern) and 09_sloth_bug (earth_world_stone_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
+Swapping creatures 02_parasite (human_world_hidden_region) and 00_acid_skull (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
+Swapping creatures 04_acid_skull (human_world_forgotten_region) and 09_iron_crusher (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
+Swapping creatures 01_acid_pod (earth_world_false_pit_cavern) and 08_casket (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T
+Swapping creatures 09_cross_breed (illusion_world_worship_domain) and 05_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T
+Swapping creatures 0a_skeleton (human_world_solitary_region) and 09_armored_warrior (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 02_blood_brain (water_world_impure_pool_area) and 02_sand_leech_b (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T
+Swapping creatures 00_dark_spider (human_world_cursed_region) and 0a_dark_bishop (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
+Swapping creatures 08_dark_spider (earth_world_false_pit_cavern) and 01_beak_plant (earth_world_poisonous_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
+Swapping creatures 04_night_howler (monster_world_false_eye_area) and 08_hermit_crab (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
+Setting similar creature to same as swapped: 00_night_howler getting assigned to be like 04_night_howler
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
+Swapping creatures 05_cocoon_plant (earth_world_false_pit_cavern) and 00_acid_skull (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
+Swapping creatures 04_night_howler (monster_world_false_eye_area) and 0a_horned_slime (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
+Swapping creatures 05_gargaral (water_world_watery_labyrinth_area) and 0c_saurian_warrior_a (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 0a_skeleton (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 0a_horned_slime (monster_world_false_eye_area) and 00_acid_slime (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
+Swapping creatures 08_dark_spider (earth_world_poisonous_cavern) and 02_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T
+Swapping creatures 04_kiljoy (earth_world_quaking_cavern) and 00_sand_leech_a (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
+Swapping creatures 06_oblid (monster_world_screeching_area) and 0d_saurian_warrior_b (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
+Swapping creatures 0c_worm_face (water_world_impure_pool_area) and 05_dark_spirits (human_world_cursed_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T
+Swapping creatures 09_cocoon_plant (earth_world_quaking_cavern) and 08_war_demon_1 (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\43 d6800-d7800.T
+Swapping creatures 04_night_howler (illusion_world_bewilderment_domain) and 01_horned_skull (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
+Swapping creatures 08_star_serpent (earth_world_rotting_cavern) and 00_master_knight (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T
+Swapping creatures 09_descrypha (death_world_lingering_curse_layer) and 06_skeleton (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\33 b8000-b9000.T
+Swapping creatures 02_tongue_imp (illusion_world_gloomy_domain) and 0d_crying_root (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T
+Swapping creatures 06_warpoor (illusion_world_worship_domain) and 04_acid_slime (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T
+Swapping creatures 09_dwarf_warrior (water_world_watery_labyrinth_area) and 08_hermit_crab (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T
+Swapping creatures 05_dark_spirits (water_world_impure_pool_area) and 02_karasu (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
+Swapping creatures 04_great_frog (water_world_watery_labyrinth_area) and 09_dwarf_warrior (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T
+Swapping creatures 06_armored_slayer (death_world_dark_castle_layer) and 02_skeleton (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T
+Swapping creatures 0c_saurian_warrior_a (water_world_watery_labyrinth_area) and 06_hell_warrior (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
+Swapping creatures 05_blood_skull (human_world_forgotten_region) and 00_winged_worm (water_world_white_rain_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
+Swapping creatures 05_dwarfling (earth_world_rotting_cavern) and 09_cross_breed (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T
+Swapping creatures 08_war_demon_1 (earth_world_quaking_cavern) and 05_acid_pod (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
+Swapping creatures 02_gordoral (earth_world_poisonous_cavern) and 01_blood_skull (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T
+Swapping creatures 05_horned_skull (fire_world_ashen_cavern) and 06_mystic_tower (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 00_black_onyx (earth_world_hostile_rock_cavern) and 04_kiljoy (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
+Swapping creatures 00_acid_slime (monster_world_false_eye_area) and 0d_slasher (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T
+Swapping creatures 0c_saurian_warrior_a (death_world_gate_of_the_dead) and 0d_cocoon_plant (earth_world_stone_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
+Swapping creatures 06_skeleton (human_world_solitary_region) and 0e_watcher_plant (earth_world_poisonous_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T
+Swapping creatures 04_acid_skull (fire_world_burning_cavern) and 01_beak_plant (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
+Setting similar creature to same as swapped: 00_acid_skull getting assigned to be like 04_acid_skull
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
+Swapping creatures 08_trickster (earth_world_poisonous_cavern) and 05_armored_warrior (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
+Swapping creatures 01_myconid (earth_world_rotting_cavern) and 08_ring_demon (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
+Swapping creatures 0a_skeleton (fire_world_burning_cavern) and 09_dwarf_warrior (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
+Swapping creatures 08_casket (earth_world_false_pit_cavern) and 09_blood_slime (human_world_cursed_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T
+Swapping creatures 09_war_demon_2 (illusion_world_bewilderment_domain) and 00_red_puppet (fire_world_molten_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
+Swapping creatures 09_blood_slime (earth_world_false_pit_cavern) and 0c_ray_plant (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
+Swapping creatures 04_acid_slime (illusion_world_worship_domain) and 02_skeleton (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
+Swapping creatures 04_night_howler (illusion_world_gloomy_domain) and 04_acid_skull (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
+Swapping creatures 04_acid_slime (death_world_dark_castle_layer) and 04_acid_skull (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
+Swapping creatures 0d_blood_bone (death_world_gate_of_the_dead) and 01_blood_slime (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
+Swapping creatures 01_blue_flicker (earth_world_quaking_cavern) and 00_acid_slime (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\8 22800-23800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T
+Swapping creatures 05_horned_slime (illusion_world_worship_domain) and 0e_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
+Swapping creatures 01_acid_pod (human_world_hidden_region) and 04_night_howler (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
+Swapping creatures 0a_bone_wolf (death_world_gate_of_the_dead) and 00_watcher_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T
+Swapping creatures 0a_skeleton (water_world_watery_labyrinth_area) and 08_wyvern (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T
+Swapping creatures 00_black_onyx (earth_world_quaking_cavern) and 05_water_knight (water_world_sunken_river_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T
+Swapping creatures 05_blood_slime (human_world_hidden_region) and 06_hell_warrior (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
+Swapping creatures 00_sand_leech_a (earth_world_quaking_cavern) and 02_horned_slime (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T
+Swapping creatures 04_acid_skull (earth_world_false_pit_cavern) and 02_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T
+Swapping creatures 0a_warpoor (illusion_world_worship_domain) and 0e_dinogon (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\73 1d1000-1d2000.T
+Swapping creatures 02_elder (earth_world_rotting_cavern) and 06_tongue_imp (human_world_cursed_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\13 5c800-5d800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\33 96800-97800.T
+Swapping creatures 06_warpoor (human_world_hidden_region) and 02_parasite (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
+Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 00_dark_spider (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
+Setting similar creature to same as swapped: 04_dark_spirits getting assigned to be like 01_dark_spirits
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
+Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 09_sloth_bug (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
+Swapping creatures 00_winged_worm (human_world_forgotten_region) and 0d_dweller (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
+Swapping creatures 08_wyvern (water_world_watery_labyrinth_area) and 08_trickster (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
+Swapping creatures 04_acid_skull (death_world_dark_castle_layer) and 06_dweller (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
+Setting similar creature to same as swapped: 04_acid_skull getting assigned to be like 04_acid_skull
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T
+Swapping creatures 04_acid_slime (illusion_world_gloomy_domain) and 09_cross_breed (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
+Swapping creatures 00_winged_worm (water_world_impure_pool_area) and 09_armored_warrior (human_world_solitary_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
+Swapping creatures 0d_tondrom (monster_world_false_eye_area) and 04_acid_skull (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
+Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 0e_dinogon (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T
+Swapping creatures 05_horned_skull (death_world_dark_castle_layer) and 0e_mystic_tower (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
+Swapping creatures 08_hermit_crab (water_world_watery_labyrinth_area) and 05_warden (monster_world_screeching_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T
+Swapping creatures 02_elder (human_world_cursed_region) and 05_dark_spirits (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\33 96800-97800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
+Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 0e_mystic_tower (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 01_acid_pod (monster_world_false_eye_area) and 09_descrypha (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\33 b8000-b9000.T
+Swapping creatures 08_casket (human_world_cursed_region) and 08_war_demon_1 (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
+Swapping creatures 00_earth_knight (earth_world_false_pit_cavern) and 00_red_puppet (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T
+Swapping creatures 05_warden (water_world_watery_labyrinth_area) and 08_dark_spider (monster_world_screeching_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T
+Swapping creatures 09_imp (earth_world_rotting_cavern) and 09_cross_breed (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
+Swapping creatures 06_mystic_tower (fire_world_ashen_cavern) and 06_tongue_imp (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M11.T_PARTS\13 5c800-5d800.T
+Swapping creatures 0e_dinogon (earth_world_quaking_cavern) and 0d_blood_bone (human_world_hidden_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
+Swapping creatures 09_war_demon_2 (fire_world_molten_cavern) and 00_watcher_plant (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
+Swapping creatures 06_hell_warrior (human_world_hidden_region) and 01_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
+Setting similar creature to same as swapped: 0a_horned_slime getting assigned to be like 01_horned_slime
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
+Swapping creatures 0e_mystic_tower (illusion_world_gloomy_domain) and 04_acid_skull (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
+Swapping creatures 0c_ray_plant (earth_world_false_pit_cavern) and 09_blood_slime (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
+Swapping creatures 09_descrypha (monster_world_false_eye_area) and 01_acid_pod (human_world_forgotten_region)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M06.T_PARTS\33 b8000-b9000.T
+Swapping creatures 09_blood_slime (earth_world_false_pit_cavern) and 06_tongue_imp (fire_world_ashen_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T
+Swapping creatures 0a_old_face (death_world_lingering_curse_layer) and 0d_arachness (fire_world_molten_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T
+Swapping creatures 04_tree_ogre (death_world_dark_castle_layer) and 0d_death_serpent (monster_world_screeching_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T
+Swapping creatures 04_zygote (fire_world_ashen_cavern) and 06_fire_jinn (fire_world_phoenix_cave)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M18.T_PARTS\23 71800-72800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T
+Swapping creatures 0d_arachness (death_world_lingering_curse_layer) and 0e_manna_python (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
+Swapping creatures 04_jinn_lord (fire_world_phoenix_cave) and 0c_death_mage (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\63 13b000-13c000.T
+Swapping creatures 04_berzerker (fire_world_molten_cavern) and 0d_bugler (death_world_lingering_curse_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
+Swapping creatures 04_berzerker (fire_world_burning_cavern) and 0a_old_face (fire_world_molten_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T
+Swapping creatures 0d_arachness (water_world_watery_labyrinth_area) and 08_oxelus (monster_world_screeching_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T
+Swapping creatures 0d_deha (illusion_world_gloomy_domain) and 02_fire_jinn (fire_world_phoenix_cave)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T
+Swapping creatures 08_oxelus (water_world_watery_labyrinth_area) and 0d_death_serpent (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T
+Swapping creatures 0d_death_serpent (water_world_watery_labyrinth_area) and 05_armored_jinn (fire_world_phoenix_cave)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T
+Swapping creatures 02_fire_jinn (illusion_world_gloomy_domain) and 04_king_hopper (monster_world_screeching_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
+Swapping creatures 04_jinn_lord (illusion_world_bewilderment_domain) and 00_kabasaur (water_world_sunken_river_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\63 13b000-13c000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M21.T_PARTS\3 27000-28000.T
+Swapping creatures 0d_arachness (monster_world_screeching_area) and 0a_old_face (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
+Swapping creatures 09_steel_servant (fire_world_molten_cavern) and 00_kabasaur (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\63 13b000-13c000.T
+Swapping creatures 0c_gaze_hopper (water_world_watery_labyrinth_area) and 01_chirper (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
+Swapping creatures 0d_death_serpent (fire_world_phoenix_cave) and 04_berzerker (death_world_lingering_curse_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
+Swapping creatures 0d_trickster (earth_world_poisonous_cavern) and 00_kabasaur (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T
+Setting similar creature to same as swapped: 08_trickster getting assigned to be like 0d_trickster
+  fileCopy .\generated\randomized-extreme-easy\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T->.\generated\randomized-extreme-easy\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
+Swapping creatures 0d_damned_angel (fire_world_ashen_cavern) and 0c_death_mage (fire_world_phoenix_cave)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
+Swapping creatures 0d_bugler (fire_world_molten_cavern) and 0d_death_serpent (death_world_lingering_curse_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
+Swapping creatures 0a_rotting_face (illusion_world_bewilderment_domain) and 0c_maristella (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T
+Swapping creatures 00_dark_spider (illusion_world_gloomy_domain) and 0d_crying_root (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
+Swapping creatures 0c_maristella (illusion_world_bewilderment_domain) and 01_horned_skull (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
+Swapping creatures 01_demon_bat (earth_world_stone_cavern) and 0a_demons_eye (death_world_undead_layer)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M28.T_PARTS\8 47800-48800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR2\M26.T_PARTS\53 146800-147800.T
+Swapping creatures 0a_demons_eye (earth_world_stone_cavern) and 00_dark_spider (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR2\M28.T_PARTS\8 47800-48800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
+Swapping creatures 00_dark_spirits (illusion_world_dream_domain) and 00_bone_demon (fire_world_ashen_cavern)
+  fileSwap .\generated\randomized-extreme-easy\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T-.\generated\randomized-extreme-easy\extracted\ST\CHR1\M18.T_PARTS\3 15800-16800.T
 Difficulty extreme-easy, factor 0.1
 
 
 DEBUG ------------------ Randomization engine - forEachValidCreature - applyDifficultyForEachValidCreature
 
 
-DEBUG - Creature 00_dark_spider
-DEBUG - Changing denfese. 50 to 5
-DEBUG - Changing attack. 9 to 0.9
-DEBUG - Changing attack. 11 to 1.1
-Applying factor 0.1 to creature 00_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
+DEBUG - Creature 09_dementor
+DEBUG - Changing denfese. 89 to 8.9
+DEBUG - Changing attack. 250 to 25
+DEBUG - Changing attack. 195 to 19.5
+Applying factor 0.1 to creature 09_dementor. Attributes minWeaponDefense 8.9 maxWeaponDefense 7.5 minMagicDefense 6.800000000000001 maxMagicDefense 7.9
 DEBUG - Creature 01_acid_slime
 DEBUG - Changing denfese. 44 to 4.4
 DEBUG - Changing attack. 10 to 1
@@ -2823,25 +3091,23 @@ Applying factor 0.1 to creature 04_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 06_skeleton
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 83 to 8.3
-Applying factor 0.1 to creature 06_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
+DEBUG - Creature 0e_watcher_plant
+DEBUG - Changing denfese. 30 to 3
+DEBUG - Changing attack. 42 to 4.2
+Applying factor 0.1 to creature 0e_watcher_plant. Attributes minWeaponDefense 3 maxWeaponDefense 5.2 minMagicDefense 2 maxMagicDefense 3.2
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_dark_spider
-DEBUG - Changing denfese. 50 to 5
-DEBUG - Changing attack. 9 to 0.9
-DEBUG - Changing attack. 11 to 1.1
-Applying factor 0.1 to creature 08_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
+DEBUG - Creature 0a_cursed_demon
+DEBUG - Changing denfese. 30 to 3
+DEBUG - Changing attack. 390 to 39
+Applying factor 0.1 to creature 0a_cursed_demon. Attributes minWeaponDefense 3 maxWeaponDefense 2.4000000000000004 minMagicDefense 4.5 maxMagicDefense 3.9000000000000004
 DEBUG - Creature 09_demon_bat
 DEBUG - Changing denfese. 50 to 5
 Applying factor 0.1 to creature 09_demon_bat. Attributes minWeaponDefense 5 maxWeaponDefense 6.800000000000001 minMagicDefense 8 maxMagicDefense 4.800000000000001
-DEBUG - Creature 0a_skeleton
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 83 to 8.3
-Applying factor 0.1 to creature 0a_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
+DEBUG - Creature 00_winged_worm
+DEBUG - Changing denfese. 45 to 4.5
+Applying factor 0.1 to creature 00_winged_worm. Attributes minWeaponDefense 4.5 maxWeaponDefense 3.5 minMagicDefense 7.9 maxMagicDefense 8.9
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -2860,30 +3126,29 @@ Applying factor 0.1 to creature 0e_acid_slime. Attributes minWeaponDefense 4.4 m
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_acid_slime
-DEBUG - Changing denfese. 44 to 4.4
-DEBUG - Changing attack. 10 to 1
-Applying factor 0.1 to creature 00_acid_slime. Attributes minWeaponDefense 4.4 maxWeaponDefense 5.2 minMagicDefense 7 maxMagicDefense 8
-DEBUG - Creature 01_blood_slime
-DEBUG - Changing denfese. 52 to 5.2
-DEBUG - Changing attack. 13 to 1.3
-Applying factor 0.1 to creature 01_blood_slime. Attributes minWeaponDefense 5.2 maxWeaponDefense 5.4 minMagicDefense 10.100000000000001 maxMagicDefense 34.300000000000004
+DEBUG - Creature 01_horned_slime
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 80 to 8
+Applying factor 0.1 to creature 01_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
+DEBUG - Creature 0e_dinogon
+DEBUG - Changing denfese. 64 to 6.4
+DEBUG - Changing attack. 165 to 16.5
+Applying factor 0.1 to creature 0e_dinogon. Attributes minWeaponDefense 6.4 maxWeaponDefense 5.800000000000001 minMagicDefense 4 maxMagicDefense 10.200000000000001
+DEBUG - Creature 05_cocoon_plant
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 05_cocoon_plant. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
+DEBUG - Creature 03_door
+DEBUG - Changing denfese. 0 to 0
+Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 02_parasite
 DEBUG - Changing denfese. 77 to 7.7
 DEBUG - Changing attack. 78 to 7.800000000000001
 DEBUG - Changing attack. 78 to 7.800000000000001
 Applying factor 0.1 to creature 02_parasite. Attributes minWeaponDefense 7.7 maxWeaponDefense 2.8000000000000003 minMagicDefense 7.5 maxMagicDefense 7.6000000000000005
-DEBUG - Creature 03_door
-DEBUG - Changing denfese. 0 to 0
-Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_acid_slime
-DEBUG - Changing denfese. 44 to 4.4
-DEBUG - Changing attack. 10 to 1
-Applying factor 0.1 to creature 04_acid_slime. Attributes minWeaponDefense 4.4 maxWeaponDefense 5.2 minMagicDefense 7 maxMagicDefense 8
-DEBUG - Creature 05_blood_slime
-DEBUG - Changing denfese. 52 to 5.2
-DEBUG - Changing attack. 13 to 1.3
-Applying factor 0.1 to creature 05_blood_slime. Attributes minWeaponDefense 5.2 maxWeaponDefense 5.4 minMagicDefense 10.100000000000001 maxMagicDefense 34.300000000000004
+DEBUG - Creature 01_horned_slime
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 8 to 0.8
+Applying factor 0.1 to creature 01_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
 DEBUG - Creature 06_fanged_worm
 DEBUG - Changing denfese. 48 to 4.800000000000001
 DEBUG - Changing attack. 24 to 2.4000000000000004
@@ -2891,13 +3156,13 @@ Applying factor 0.1 to creature 06_fanged_worm. Attributes minWeaponDefense 4.80
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_casket
-DEBUG - Changing denfese. 70 to 7
-Applying factor 0.1 to creature 08_casket. Attributes minWeaponDefense 7 maxWeaponDefense 8 minMagicDefense 36.2 maxMagicDefense 48.5
-DEBUG - Creature 09_blood_slime
+DEBUG - Creature 04_night_howler
 DEBUG - Changing denfese. 52 to 5.2
-DEBUG - Changing attack. 13 to 1.3
-Applying factor 0.1 to creature 09_blood_slime. Attributes minWeaponDefense 5.2 maxWeaponDefense 5.4 minMagicDefense 10.100000000000001 maxMagicDefense 34.300000000000004
+DEBUG - Changing attack. 320 to 32
+Applying factor 0.1 to creature 04_night_howler. Attributes minWeaponDefense 5.2 maxWeaponDefense 6.5 minMagicDefense 8.3 maxMagicDefense 7.4
+DEBUG - Creature 02_tongue_imp
+DEBUG - Changing denfese. 52 to 5.2
+Applying factor 0.1 to creature 02_tongue_imp. Attributes minWeaponDefense 5.2 maxWeaponDefense 3.5 minMagicDefense 6.5 maxMagicDefense 9
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -2916,33 +3181,29 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_acid_skull
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 16 to 1.6
-Applying factor 0.1 to creature 00_acid_skull. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 8.9 maxMagicDefense 8.5
-DEBUG - Creature 01_blood_skull
-DEBUG - Changing denfese. 53 to 5.300000000000001
-DEBUG - Changing attack. 15 to 1.5
-Applying factor 0.1 to creature 01_blood_skull. Attributes minWeaponDefense 5.300000000000001 maxWeaponDefense 5.6000000000000005 minMagicDefense 7.5 maxMagicDefense 30
-DEBUG - Creature 02_skeleton
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 83 to 8.3
-Applying factor 0.1 to creature 02_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
+DEBUG - Creature 06_warpoor
+DEBUG - Changing denfese. 80 to 8
+Applying factor 0.1 to creature 06_warpoor. Attributes minWeaponDefense 8 maxWeaponDefense 3.5 minMagicDefense 9.5 maxMagicDefense 10.200000000000001
+DEBUG - Creature 02_gordoral
+DEBUG - Changing denfese. 79 to 7.9
+Applying factor 0.1 to creature 02_gordoral. Attributes minWeaponDefense 7.9 maxWeaponDefense 5 minMagicDefense 12.200000000000001 maxMagicDefense 35.2
+DEBUG - Creature 06_armored_slayer
+DEBUG - Changing denfese. 60 to 6
+DEBUG - Changing attack. 430 to 43
+DEBUG - Changing attack. 340 to 34
+Applying factor 0.1 to creature 06_armored_slayer. Attributes minWeaponDefense 6 maxWeaponDefense 7.800000000000001 minMagicDefense 7.4 maxMagicDefense 8.200000000000001
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_acid_skull
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 16 to 1.6
-Applying factor 0.1 to creature 04_acid_skull. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 8.9 maxMagicDefense 8.5
-DEBUG - Creature 05_blood_skull
-DEBUG - Changing denfese. 53 to 5.300000000000001
-DEBUG - Changing attack. 15 to 1.5
-Applying factor 0.1 to creature 05_blood_skull. Attributes minWeaponDefense 5.300000000000001 maxWeaponDefense 5.6000000000000005 minMagicDefense 7.5 maxMagicDefense 30
-DEBUG - Creature 06_skeleton
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 83 to 8.3
-Applying factor 0.1 to creature 06_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
+DEBUG - Creature 09_iron_crusher
+DEBUG - Changing denfese. 82 to 8.200000000000001
+Applying factor 0.1 to creature 09_iron_crusher. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
+DEBUG - Creature 0d_dweller
+DEBUG - Changing denfese. 82 to 8.200000000000001
+Applying factor 0.1 to creature 0d_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
+DEBUG - Creature 09_descrypha
+DEBUG - Changing denfese. 70 to 7
+Applying factor 0.1 to creature 09_descrypha. Attributes minWeaponDefense 7 maxWeaponDefense 10 minMagicDefense 60 maxMagicDefense 17
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -2970,18 +3231,18 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_dark_spider
-DEBUG - Changing denfese. 50 to 5
-DEBUG - Changing attack. 9 to 0.9
-DEBUG - Changing attack. 11 to 1.1
-Applying factor 0.1 to creature 00_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
+DEBUG - Creature 0a_dark_bishop
+DEBUG - Changing denfese. 75 to 7.5
+DEBUG - Changing attack. 130 to 13
+Applying factor 0.1 to creature 0a_dark_bishop. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.7 minMagicDefense 31 maxMagicDefense 31.200000000000003
 DEBUG - Creature 01_shadow_spider
 DEBUG - Changing denfese. 57 to 5.7
 DEBUG - Changing attack. 3 to 0.30000000000000004
 Applying factor 0.1 to creature 01_shadow_spider. Attributes minWeaponDefense 5.7 maxWeaponDefense 7.800000000000001 minMagicDefense 7 maxMagicDefense 7.300000000000001
-DEBUG - Creature 02_tongue_imp
-DEBUG - Changing denfese. 52 to 5.2
-Applying factor 0.1 to creature 02_tongue_imp. Attributes minWeaponDefense 5.2 maxWeaponDefense 3.5 minMagicDefense 6.5 maxMagicDefense 9
+DEBUG - Creature 0c_worm_face
+DEBUG - Changing denfese. 60 to 6
+DEBUG - Changing attack. 135 to 13.5
+Applying factor 0.1 to creature 0c_worm_face. Attributes minWeaponDefense 6 maxWeaponDefense 10 minMagicDefense 7.9 maxMagicDefense 4.800000000000001
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -2991,17 +3252,19 @@ Applying factor 0.1 to creature 04_fat_mole_a. Attributes minWeaponDefense 0 max
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 06_tongue_imp
-DEBUG - Changing denfese. 52 to 5.2
-Applying factor 0.1 to creature 06_tongue_imp. Attributes minWeaponDefense 5.2 maxWeaponDefense 3.5 minMagicDefense 6.5 maxMagicDefense 9
+DEBUG - Creature 05_dark_spirits
+DEBUG - Changing denfese. 95 to 9.5
+DEBUG - Changing attack. 115 to 11.5
+DEBUG - Changing attack. 375 to 37.5
+Applying factor 0.1 to creature 05_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_dark_spider
-DEBUG - Changing denfese. 50 to 5
-DEBUG - Changing attack. 9 to 0.9
-DEBUG - Changing attack. 11 to 1.1
-Applying factor 0.1 to creature 08_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
+DEBUG - Creature 08_war_demon_1
+DEBUG - Changing denfese. 85 to 8.5
+DEBUG - Changing attack. 290 to 29
+DEBUG - Changing attack. 295 to 29.5
+Applying factor 0.1 to creature 08_war_demon_1. Attributes minWeaponDefense 8.5 maxWeaponDefense 8.1 minMagicDefense 27.8 maxMagicDefense 6.800000000000001
 DEBUG - Creature 09_shadow_spider
 DEBUG - Changing denfese. 57 to 5.7
 DEBUG - Changing attack. 3 to 0.30000000000000004
@@ -3025,18 +3288,16 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_watcher_plant
-DEBUG - Changing denfese. 30 to 3
-DEBUG - Changing attack. 42 to 4.2
-Applying factor 0.1 to creature 00_watcher_plant. Attributes minWeaponDefense 3 maxWeaponDefense 5.2 minMagicDefense 2 maxMagicDefense 3.2
-DEBUG - Creature 01_myconid
-DEBUG - Changing denfese. 43 to 4.3
-DEBUG - Changing attack. 62 to 6.2
-Applying factor 0.1 to creature 01_myconid. Attributes minWeaponDefense 4.3 maxWeaponDefense 7 minMagicDefense 2.6 maxMagicDefense 8
-DEBUG - Creature 02_elder
-DEBUG - Changing denfese. 59 to 5.9
-DEBUG - Changing attack. 58 to 5.800000000000001
-Applying factor 0.1 to creature 02_elder. Attributes minWeaponDefense 5.9 maxWeaponDefense 6.2 minMagicDefense 2 maxMagicDefense 3.6
+DEBUG - Creature 0a_bone_wolf
+DEBUG - Changing denfese. 70 to 7
+DEBUG - Changing attack. 250 to 25
+Applying factor 0.1 to creature 0a_bone_wolf. Attributes minWeaponDefense 7 maxWeaponDefense 3 minMagicDefense 99.9 maxMagicDefense 9
+DEBUG - Creature 08_ring_demon
+DEBUG - Changing denfese. 62 to 6.2
+Applying factor 0.1 to creature 08_ring_demon. Attributes minWeaponDefense 6.2 maxWeaponDefense 7.5 minMagicDefense 4.800000000000001 maxMagicDefense 7.9
+DEBUG - Creature 06_mystic_tower
+DEBUG - Changing denfese. 79 to 7.9
+Applying factor 0.1 to creature 06_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3044,9 +3305,10 @@ DEBUG - Creature 04_minor_dwarf
 DEBUG - Changing denfese. 50 to 5
 DEBUG - Changing attack. 45 to 4.5
 Applying factor 0.1 to creature 04_minor_dwarf. Attributes minWeaponDefense 5 maxWeaponDefense 6.6000000000000005 minMagicDefense 3 maxMagicDefense 5
-DEBUG - Creature 05_dwarfling
-DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 05_dwarfling. Attributes minWeaponDefense 5 maxWeaponDefense 5 minMagicDefense 7.800000000000001 maxMagicDefense 4.5
+DEBUG - Creature 04_acid_slime
+DEBUG - Changing denfese. 44 to 4.4
+DEBUG - Changing attack. 10 to 1
+Applying factor 0.1 to creature 04_acid_slime. Attributes minWeaponDefense 4.4 maxWeaponDefense 5.2 minMagicDefense 7 maxMagicDefense 8
 DEBUG - Creature 06_elder
 DEBUG - Changing denfese. 59 to 5.9
 DEBUG - Changing attack. 58 to 5.800000000000001
@@ -3054,23 +3316,25 @@ Applying factor 0.1 to creature 06_elder. Attributes minWeaponDefense 5.9 maxWea
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_star_serpent
-DEBUG - Changing denfese. 42 to 4.2
-DEBUG - Changing attack. 65 to 6.5
-Applying factor 0.1 to creature 08_star_serpent. Attributes minWeaponDefense 4.2 maxWeaponDefense 6.5 minMagicDefense 6 maxMagicDefense 5.2
-DEBUG - Creature 09_imp
-DEBUG - Changing denfese. 57 to 5.7
-Applying factor 0.1 to creature 09_imp. Attributes minWeaponDefense 5.7 maxWeaponDefense 7.4 minMagicDefense 4.800000000000001 maxMagicDefense 6
+DEBUG - Creature 00_master_knight
+DEBUG - Changing denfese. 61 to 6.1000000000000005
+DEBUG - Changing attack. 380 to 38
+DEBUG - Changing attack. 200 to 20
+Applying factor 0.1 to creature 00_master_knight. Attributes minWeaponDefense 6.1000000000000005 maxWeaponDefense 7.2 minMagicDefense 16.8 maxMagicDefense 7.9
+DEBUG - Creature 09_cross_breed
+DEBUG - Changing denfese. 125 to 12.5
+Applying factor 0.1 to creature 09_cross_breed. Attributes minWeaponDefense 12.5 maxWeaponDefense 4 minMagicDefense 34.6 maxMagicDefense 41.2
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_barrel_snail
 DEBUG - Changing denfese. 68 to 6.800000000000001
 Applying factor 0.1 to creature 0c_barrel_snail. Attributes minWeaponDefense 6.800000000000001 maxWeaponDefense 4.2 minMagicDefense 2 maxMagicDefense 9
-DEBUG - Creature 0d_tondrom
-DEBUG - Changing denfese. 135 to 13.5
-DEBUG - Changing attack. 36 to 3.6
-Applying factor 0.1 to creature 0d_tondrom. Attributes minWeaponDefense 13.5 maxWeaponDefense 10.200000000000001 minMagicDefense 4.5 maxMagicDefense 6.6000000000000005
+DEBUG - Creature 06_oblid
+DEBUG - Changing denfese. 78 to 7.800000000000001
+DEBUG - Changing attack. 243 to 24.3
+DEBUG - Changing attack. 320 to 32
+Applying factor 0.1 to creature 06_oblid. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 8 minMagicDefense 5.6000000000000005 maxMagicDefense 3.3000000000000003
 DEBUG - Creature 0e_elder
 DEBUG - Changing denfese. 59 to 5.9
 DEBUG - Changing attack. 58 to 5.800000000000001
@@ -3081,10 +3345,10 @@ Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 00_duhrin
 DEBUG - Changing denfese. 65 to 6.5
 Applying factor 0.1 to creature 00_duhrin. Attributes minWeaponDefense 6.5 maxWeaponDefense 12.4 minMagicDefense 7 maxMagicDefense 8.6
-DEBUG - Creature 01_beak_plant
-DEBUG - Changing denfese. 30 to 3
-DEBUG - Changing attack. 50 to 5
-Applying factor 0.1 to creature 01_beak_plant. Attributes minWeaponDefense 3 maxWeaponDefense 6 minMagicDefense 4.6000000000000005 maxMagicDefense 4.1000000000000005
+DEBUG - Creature 01_blood_skull
+DEBUG - Changing denfese. 53 to 5.300000000000001
+DEBUG - Changing attack. 15 to 1.5
+Applying factor 0.1 to creature 01_blood_skull. Attributes minWeaponDefense 5.300000000000001 maxWeaponDefense 5.6000000000000005 minMagicDefense 7.5 maxMagicDefense 30
 DEBUG - Creature 02_watcher_plant
 DEBUG - Changing denfese. 30 to 3
 DEBUG - Changing attack. 42 to 4.2
@@ -3101,50 +3365,53 @@ Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_trickster
-DEBUG - Changing denfese. 53 to 5.300000000000001
-Applying factor 0.1 to creature 08_trickster. Attributes minWeaponDefense 5.300000000000001 maxWeaponDefense 6.7 minMagicDefense 3 maxMagicDefense 1.4000000000000001
-DEBUG - Creature 09_dwarf_warrior
-DEBUG - Changing denfese. 93 to 9.3
-DEBUG - Changing attack. 64 to 6.4
-DEBUG - Changing attack. 64 to 6.4
-Applying factor 0.1 to creature 09_dwarf_warrior. Attributes minWeaponDefense 9.3 maxWeaponDefense 8.5 minMagicDefense 4.800000000000001 maxMagicDefense 6.800000000000001
+DEBUG - Creature 05_armored_warrior
+DEBUG - Changing denfese. 70 to 7
+DEBUG - Changing attack. 430 to 43
+DEBUG - Changing attack. 350 to 35
+Applying factor 0.1 to creature 05_armored_warrior. Attributes minWeaponDefense 7 maxWeaponDefense 8 minMagicDefense 4 maxMagicDefense 4
+DEBUG - Creature 05_blood_brain
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 50 to 5
+Applying factor 0.1 to creature 05_blood_brain. Attributes minWeaponDefense 8 maxWeaponDefense 8.8 minMagicDefense 7.9 maxMagicDefense 11.3
 DEBUG - Creature 0c_hanging_dead
 DEBUG - Changing denfese. 50 to 5
 Applying factor 0.1 to creature 0c_hanging_dead. Attributes minWeaponDefense 5 maxWeaponDefense 3.2 minMagicDefense 4.2 maxMagicDefense 3
-DEBUG - Creature 0d_trickster
-DEBUG - Changing denfese. 78 to 7.800000000000001
-DEBUG - Changing attack. 50 to 5
-Applying factor 0.1 to creature 0d_trickster. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 10.5 minMagicDefense 7.2 maxMagicDefense 4.6000000000000005
-DEBUG - Creature 0e_watcher_plant
-DEBUG - Changing denfese. 30 to 3
-DEBUG - Changing attack. 42 to 4.2
-Applying factor 0.1 to creature 0e_watcher_plant. Attributes minWeaponDefense 3 maxWeaponDefense 5.2 minMagicDefense 2 maxMagicDefense 3.2
+DEBUG - Creature 00_kabasaur
+DEBUG - Changing denfese. 77 to 7.7
+DEBUG - Changing attack. 305 to 30.5
+DEBUG - Changing attack. 230 to 23
+Applying factor 0.1 to creature 00_kabasaur. Attributes minWeaponDefense 7.7 maxWeaponDefense 9 minMagicDefense 9.5 maxMagicDefense 7.9
+DEBUG - Creature 06_skeleton
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 83 to 8.3
+Applying factor 0.1 to creature 06_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_sand_leech_a
-DEBUG - Changing denfese. 30 to 3
-Applying factor 0.1 to creature 00_sand_leech_a. Attributes minWeaponDefense 3 maxWeaponDefense 4.2 minMagicDefense 5 maxMagicDefense 8.200000000000001
-DEBUG - Creature 01_blue_flicker
-DEBUG - Changing denfese. 46 to 4.6000000000000005
-Applying factor 0.1 to creature 01_blue_flicker. Attributes minWeaponDefense 4.6000000000000005 maxWeaponDefense 5 minMagicDefense 4 maxMagicDefense 4
-DEBUG - Creature 02_sand_leech_b
-DEBUG - Changing denfese. 87 to 8.700000000000001
-DEBUG - Changing attack. 82 to 8.200000000000001
-Applying factor 0.1 to creature 02_sand_leech_b. Attributes minWeaponDefense 8.700000000000001 maxWeaponDefense 10 minMagicDefense 12 maxMagicDefense 60
+DEBUG - Creature 05_water_knight
+DEBUG - Changing denfese. 75 to 7.5
+DEBUG - Changing attack. 135 to 13.5
+DEBUG - Changing attack. 135 to 13.5
+Applying factor 0.1 to creature 05_water_knight. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 7.9 maxMagicDefense 8.9
+DEBUG - Creature 00_acid_slime
+DEBUG - Changing denfese. 44 to 4.4
+DEBUG - Changing attack. 10 to 1
+Applying factor 0.1 to creature 00_acid_slime. Attributes minWeaponDefense 4.4 maxWeaponDefense 5.2 minMagicDefense 7 maxMagicDefense 8
+DEBUG - Creature 02_blood_brain
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 50 to 5
+Applying factor 0.1 to creature 02_blood_brain. Attributes minWeaponDefense 8 maxWeaponDefense 8.8 minMagicDefense 7.9 maxMagicDefense 11.3
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_kiljoy
-DEBUG - Changing denfese. 40 to 4
-DEBUG - Changing attack. 180 to 18
-DEBUG - Changing attack. 191 to 19.1
-DEBUG - Changing attack. 201 to 20.1
-Applying factor 0.1 to creature 04_kiljoy. Attributes minWeaponDefense 4 maxWeaponDefense 6 minMagicDefense 6 maxMagicDefense 4.5
-DEBUG - Creature 05_acid_pod
-DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 05_acid_pod. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
+DEBUG - Creature 02_horned_slime
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 80 to 8
+Applying factor 0.1 to creature 02_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
+DEBUG - Creature 08_casket
+DEBUG - Changing denfese. 70 to 7
+Applying factor 0.1 to creature 08_casket. Attributes minWeaponDefense 7 maxWeaponDefense 8 minMagicDefense 36.2 maxMagicDefense 48.5
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3155,10 +3422,10 @@ DEBUG - Creature 08_torg
 DEBUG - Changing denfese. 44 to 4.4
 DEBUG - Changing attack. 98 to 9.8
 Applying factor 0.1 to creature 08_torg. Attributes minWeaponDefense 4.4 maxWeaponDefense 6.300000000000001 minMagicDefense 2.7 maxMagicDefense 5.300000000000001
-DEBUG - Creature 09_cocoon_plant
-DEBUG - Changing denfese. 62 to 6.2
-DEBUG - Changing attack. 64 to 6.4
-Applying factor 0.1 to creature 09_cocoon_plant. Attributes minWeaponDefense 6.2 maxWeaponDefense 10.200000000000001 minMagicDefense 3.5 maxMagicDefense 4.5
+DEBUG - Creature 0d_blood_bone
+DEBUG - Changing denfese. 70 to 7
+DEBUG - Changing attack. 250 to 25
+Applying factor 0.1 to creature 0d_blood_bone. Attributes minWeaponDefense 7 maxWeaponDefense 4 minMagicDefense 6 maxMagicDefense 5
 DEBUG - Creature 0a_cocoon_plant
 DEBUG - Changing denfese. 50 to 5
 Applying factor 0.1 to creature 0a_cocoon_plant. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
@@ -3177,15 +3444,14 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_earth_knight
-DEBUG - Changing denfese. 78 to 7.800000000000001
-DEBUG - Changing attack. 122 to 12.200000000000001
-DEBUG - Changing attack. 65 to 6.5
-DEBUG - Changing attack. 45 to 4.5
-Applying factor 0.1 to creature 00_earth_knight. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 7.6000000000000005 minMagicDefense 7 maxMagicDefense 5.6000000000000005
-DEBUG - Creature 01_acid_pod
-DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 01_acid_pod. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
+DEBUG - Creature 00_red_puppet
+DEBUG - Changing denfese. 75 to 7.5
+DEBUG - Changing attack. 120 to 12
+DEBUG - Changing attack. 355 to 35.5
+Applying factor 0.1 to creature 00_red_puppet. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
+DEBUG - Creature 06_tongue_imp
+DEBUG - Changing denfese. 52 to 5.2
+Applying factor 0.1 to creature 06_tongue_imp. Attributes minWeaponDefense 5.2 maxWeaponDefense 3.5 minMagicDefense 6.5 maxMagicDefense 9
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3195,9 +3461,10 @@ Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 04_cannon_snail
 DEBUG - Changing denfese. 62 to 6.2
 Applying factor 0.1 to creature 04_cannon_snail. Attributes minWeaponDefense 6.2 maxWeaponDefense 10 minMagicDefense 4.5 maxMagicDefense 4.6000000000000005
-DEBUG - Creature 05_cocoon_plant
-DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 05_cocoon_plant. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
+DEBUG - Creature 04_night_howler
+DEBUG - Changing denfese. 52 to 5.2
+DEBUG - Changing attack. 32 to 3.2
+Applying factor 0.1 to creature 04_night_howler. Attributes minWeaponDefense 5.2 maxWeaponDefense 6.5 minMagicDefense 8.3 maxMagicDefense 7.4
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3209,11 +3476,9 @@ DEBUG - Changing denfese. 60 to 6
 DEBUG - Changing attack. 92 to 9.200000000000001
 DEBUG - Changing attack. 92 to 9.200000000000001
 Applying factor 0.1 to creature 08_guardian_b. Attributes minWeaponDefense 6 maxWeaponDefense 4.2 minMagicDefense 17.8 maxMagicDefense 17.900000000000002
-DEBUG - Creature 09_sloth_bug
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 93 to 9.3
-DEBUG - Changing attack. 130 to 13
-Applying factor 0.1 to creature 09_sloth_bug. Attributes minWeaponDefense 8 maxWeaponDefense 7 minMagicDefense 6 maxMagicDefense 9.5
+DEBUG - Creature 02_mystic_tower
+DEBUG - Changing denfese. 79 to 7.9
+Applying factor 0.1 to creature 02_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3223,9 +3488,11 @@ Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0c_ray_plant
 DEBUG - Changing denfese. 105 to 10.5
 Applying factor 0.1 to creature 0c_ray_plant. Attributes minWeaponDefense 10.5 maxWeaponDefense 4.5 minMagicDefense 9 maxMagicDefense 7
-DEBUG - Creature 0d_cocoon_plant
-DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 0d_cocoon_plant. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
+DEBUG - Creature 01_dark_spirits
+DEBUG - Changing denfese. 95 to 9.5
+DEBUG - Changing attack. 115 to 11.5
+DEBUG - Changing attack. 375 to 37.5
+Applying factor 0.1 to creature 01_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3235,9 +3502,11 @@ Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 00_dybbuk
 DEBUG - Changing denfese. 60 to 6
 Applying factor 0.1 to creature 00_dybbuk. Attributes minWeaponDefense 6 maxWeaponDefense 7 minMagicDefense 8 maxMagicDefense 7.800000000000001
-DEBUG - Creature 01_demon_bat
+DEBUG - Creature 00_dark_spider
 DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 01_demon_bat. Attributes minWeaponDefense 5 maxWeaponDefense 6.800000000000001 minMagicDefense 8 maxMagicDefense 4.800000000000001
+DEBUG - Changing attack. 9 to 0.9
+DEBUG - Changing attack. 11 to 1.1
+Applying factor 0.1 to creature 00_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
 DEBUG - Creature 02_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 02_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3276,19 +3545,22 @@ Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0c_dybbuk
 DEBUG - Changing denfese. 65 to 6.5
 Applying factor 0.1 to creature 0c_dybbuk. Attributes minWeaponDefense 6.5 maxWeaponDefense 6 minMagicDefense 8 maxMagicDefense 7.800000000000001
-DEBUG - Creature 0d_crying_root
-DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 0d_crying_root. Attributes minWeaponDefense 5 maxWeaponDefense 8.4 minMagicDefense 2 maxMagicDefense 10
+DEBUG - Creature 0c_saurian_warrior_a
+DEBUG - Changing denfese. 41 to 4.1000000000000005
+DEBUG - Changing attack. 355 to 35.5
+Applying factor 0.1 to creature 0c_saurian_warrior_a. Attributes minWeaponDefense 4.1000000000000005 maxWeaponDefense 7.2 minMagicDefense 54 maxMagicDefense 34.4
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_black_onyx
-DEBUG - Changing denfese. 70 to 7
-DEBUG - Changing attack. 142 to 14.200000000000001
-Applying factor 0.1 to creature 00_black_onyx. Attributes minWeaponDefense 7 maxWeaponDefense 4 minMagicDefense 34.5 maxMagicDefense 33.6
+DEBUG - Creature 04_kiljoy
+DEBUG - Changing denfese. 40 to 4
+DEBUG - Changing attack. 180 to 18
+DEBUG - Changing attack. 191 to 19.1
+DEBUG - Changing attack. 201 to 20.1
+Applying factor 0.1 to creature 04_kiljoy. Attributes minWeaponDefense 4 maxWeaponDefense 6 minMagicDefense 6 maxMagicDefense 4.5
 DEBUG - Creature 01_earth_knight
 DEBUG - Changing denfese. 78 to 7.800000000000001
 DEBUG - Changing attack. 122 to 12.200000000000001
@@ -3345,45 +3617,46 @@ Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 00_fat_mole_f
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 00_fat_mole_f. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 01_horned_slime
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 80 to 8
-Applying factor 0.1 to creature 01_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
-DEBUG - Creature 02_blood_brain
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 50 to 5
-Applying factor 0.1 to creature 02_blood_brain. Attributes minWeaponDefense 8 maxWeaponDefense 8.8 minMagicDefense 7.9 maxMagicDefense 11.3
+DEBUG - Creature 06_hell_warrior
+DEBUG - Changing denfese. 90 to 9
+DEBUG - Changing attack. 450 to 45
+Applying factor 0.1 to creature 06_hell_warrior. Attributes minWeaponDefense 9 maxWeaponDefense 10 minMagicDefense 4 maxMagicDefense 8
+DEBUG - Creature 02_sand_leech_b
+DEBUG - Changing denfese. 87 to 8.700000000000001
+DEBUG - Changing attack. 82 to 8.200000000000001
+Applying factor 0.1 to creature 02_sand_leech_b. Attributes minWeaponDefense 8.700000000000001 maxWeaponDefense 10 minMagicDefense 12 maxMagicDefense 60
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 05_horned_slime
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 80 to 8
-Applying factor 0.1 to creature 05_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
-DEBUG - Creature 06_dweller
-DEBUG - Changing denfese. 75 to 7.5
-Applying factor 0.1 to creature 06_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
+DEBUG - Creature 05_dwarfling
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 05_dwarfling. Attributes minWeaponDefense 5 maxWeaponDefense 5 minMagicDefense 7.800000000000001 maxMagicDefense 4.5
+DEBUG - Creature 0d_dweller
+DEBUG - Changing denfese. 82 to 8.200000000000001
+Applying factor 0.1 to creature 0d_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 09_dementor
-DEBUG - Changing denfese. 89 to 8.9
-DEBUG - Changing attack. 250 to 25
-DEBUG - Changing attack. 195 to 19.5
-Applying factor 0.1 to creature 09_dementor. Attributes minWeaponDefense 8.9 maxWeaponDefense 7.5 minMagicDefense 6.800000000000001 maxMagicDefense 7.9
-DEBUG - Creature 0a_dweller
-DEBUG - Changing denfese. 75 to 7.5
-Applying factor 0.1 to creature 0a_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
+DEBUG - Creature 00_dark_spider
+DEBUG - Changing denfese. 50 to 5
+DEBUG - Changing attack. 9 to 0.9
+DEBUG - Changing attack. 11 to 1.1
+Applying factor 0.1 to creature 00_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
+DEBUG - Creature 09_armored_warrior
+DEBUG - Changing denfese. 70 to 7
+DEBUG - Changing attack. 430 to 43
+DEBUG - Changing attack. 350 to 35
+Applying factor 0.1 to creature 09_armored_warrior. Attributes minWeaponDefense 7 maxWeaponDefense 8 minMagicDefense 4 maxMagicDefense 4
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0c_worm_face
-DEBUG - Changing denfese. 60 to 6
-DEBUG - Changing attack. 135 to 13.5
-Applying factor 0.1 to creature 0c_worm_face. Attributes minWeaponDefense 6 maxWeaponDefense 10 minMagicDefense 7.9 maxMagicDefense 4.800000000000001
+DEBUG - Creature 02_karasu
+DEBUG - Changing denfese. 62 to 6.2
+DEBUG - Changing attack. 310 to 31
+Applying factor 0.1 to creature 02_karasu. Attributes minWeaponDefense 6.2 maxWeaponDefense 6.5 minMagicDefense 7.2 maxMagicDefense 7.9
 DEBUG - Creature 0d_hatchlin
 DEBUG - Changing denfese. 118 to 11.8
 Applying factor 0.1 to creature 0d_hatchlin. Attributes minWeaponDefense 11.8 maxWeaponDefense 6.2 minMagicDefense 255 maxMagicDefense 255
@@ -3393,11 +3666,9 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_kabasaur
-DEBUG - Changing denfese. 77 to 7.7
-DEBUG - Changing attack. 305 to 30.5
-DEBUG - Changing attack. 230 to 23
-Applying factor 0.1 to creature 00_kabasaur. Attributes minWeaponDefense 7.7 maxWeaponDefense 9 minMagicDefense 9.5 maxMagicDefense 7.9
+DEBUG - Creature 04_jinn_lord
+DEBUG - Changing denfese. 80 to 8
+Applying factor 0.1 to creature 04_jinn_lord. Attributes minWeaponDefense 8 maxWeaponDefense 9.4 minMagicDefense 5.4 maxMagicDefense 14
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3412,11 +3683,10 @@ DEBUG - Changing denfese. 77 to 7.7
 DEBUG - Changing attack. 305 to 30.5
 DEBUG - Changing attack. 230 to 23
 Applying factor 0.1 to creature 04_kabasaur. Attributes minWeaponDefense 7.7 maxWeaponDefense 9 minMagicDefense 9.5 maxMagicDefense 7.9
-DEBUG - Creature 05_water_knight
-DEBUG - Changing denfese. 75 to 7.5
-DEBUG - Changing attack. 135 to 13.5
-DEBUG - Changing attack. 135 to 13.5
-Applying factor 0.1 to creature 05_water_knight. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 7.9 maxMagicDefense 8.9
+DEBUG - Creature 00_black_onyx
+DEBUG - Changing denfese. 70 to 7
+DEBUG - Changing attack. 142 to 14.200000000000001
+Applying factor 0.1 to creature 00_black_onyx. Attributes minWeaponDefense 7 maxWeaponDefense 4 minMagicDefense 34.5 maxMagicDefense 33.6
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3447,28 +3717,28 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_kabasaur
-DEBUG - Changing denfese. 77 to 7.7
-DEBUG - Changing attack. 305 to 30.5
-DEBUG - Changing attack. 230 to 23
-Applying factor 0.1 to creature 00_kabasaur. Attributes minWeaponDefense 7.7 maxWeaponDefense 9 minMagicDefense 9.5 maxMagicDefense 7.9
+DEBUG - Creature 0d_trickster
+DEBUG - Changing denfese. 78 to 7.800000000000001
+DEBUG - Changing attack. 50 to 5
+Applying factor 0.1 to creature 0d_trickster. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 10.5 minMagicDefense 7.2 maxMagicDefense 4.6000000000000005
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 02_horned_slime
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 80 to 8
-Applying factor 0.1 to creature 02_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
+DEBUG - Creature 00_sand_leech_a
+DEBUG - Changing denfese. 30 to 3
+Applying factor 0.1 to creature 00_sand_leech_a. Attributes minWeaponDefense 3 maxWeaponDefense 4.2 minMagicDefense 5 maxMagicDefense 8.200000000000001
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_great_frog
-DEBUG - Changing denfese. 88 to 8.8
-Applying factor 0.1 to creature 04_great_frog. Attributes minWeaponDefense 8.8 maxWeaponDefense 11.9 minMagicDefense 8.9 maxMagicDefense 9.5
-DEBUG - Creature 05_blood_brain
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 50 to 5
-Applying factor 0.1 to creature 05_blood_brain. Attributes minWeaponDefense 8 maxWeaponDefense 8.8 minMagicDefense 7.9 maxMagicDefense 11.3
+DEBUG - Creature 0d_trickster
+DEBUG - Changing denfese. 78 to 7.800000000000001
+DEBUG - Changing attack. 5 to 0.5
+Applying factor 0.1 to creature 0d_trickster. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 10.5 minMagicDefense 7.2 maxMagicDefense 4.6000000000000005
+DEBUG - Creature 08_dark_spider
+DEBUG - Changing denfese. 50 to 5
+DEBUG - Changing attack. 9 to 0.9
+DEBUG - Changing attack. 11 to 1.1
+Applying factor 0.1 to creature 08_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3483,31 +3753,30 @@ DEBUG - Changing denfese. 78 to 7.800000000000001
 DEBUG - Changing attack. 260 to 26
 DEBUG - Changing attack. 270 to 27
 Applying factor 0.1 to creature 09_koazul. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 8.6 minMagicDefense 18 maxMagicDefense 41.5
-DEBUG - Creature 0a_horned_slime
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 80 to 8
-Applying factor 0.1 to creature 0a_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
+DEBUG - Creature 05_blood_slime
+DEBUG - Changing denfese. 52 to 5.2
+DEBUG - Changing attack. 13 to 1.3
+Applying factor 0.1 to creature 05_blood_slime. Attributes minWeaponDefense 5.2 maxWeaponDefense 5.4 minMagicDefense 10.100000000000001 maxMagicDefense 34.300000000000004
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0c_gaze_hopper
-DEBUG - Changing denfese. 79 to 7.9
-DEBUG - Changing attack. 155 to 15.5
-Applying factor 0.1 to creature 0c_gaze_hopper. Attributes minWeaponDefense 7.9 maxWeaponDefense 7 minMagicDefense 10 maxMagicDefense 10.200000000000001
-DEBUG - Creature 0d_slasher
-DEBUG - Changing denfese. 75 to 7.5
-DEBUG - Changing attack. 255 to 25.5
-Applying factor 0.1 to creature 0d_slasher. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 7.9 maxMagicDefense 8.9
-DEBUG - Creature 0e_manna_python
-DEBUG - Changing denfese. 90 to 9
-DEBUG - Changing attack. 145 to 14.5
-Applying factor 0.1 to creature 0e_manna_python. Attributes minWeaponDefense 9 maxWeaponDefense 10 minMagicDefense 11.600000000000001 maxMagicDefense 9.4
+DEBUG - Creature 01_chirper
+DEBUG - Changing denfese. 59 to 5.9
+Applying factor 0.1 to creature 01_chirper. Attributes minWeaponDefense 5.9 maxWeaponDefense 7.9 minMagicDefense 9.4 maxMagicDefense 7
+DEBUG - Creature 01_blue_flicker
+DEBUG - Changing denfese. 46 to 4.6000000000000005
+Applying factor 0.1 to creature 01_blue_flicker. Attributes minWeaponDefense 4.6000000000000005 maxWeaponDefense 5 minMagicDefense 4 maxMagicDefense 4
+DEBUG - Creature 05_armored_jinn
+DEBUG - Changing denfese. 100 to 10
+DEBUG - Changing attack. 250 to 25
+Applying factor 0.1 to creature 05_armored_jinn. Attributes minWeaponDefense 10 maxWeaponDefense 9.5 minMagicDefense 5.4 maxMagicDefense 14
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_winged_worm
-DEBUG - Changing denfese. 45 to 4.5
-Applying factor 0.1 to creature 00_winged_worm. Attributes minWeaponDefense 4.5 maxWeaponDefense 3.5 minMagicDefense 7.9 maxMagicDefense 8.9
+DEBUG - Creature 05_blood_skull
+DEBUG - Changing denfese. 53 to 5.300000000000001
+DEBUG - Changing attack. 15 to 1.5
+Applying factor 0.1 to creature 05_blood_skull. Attributes minWeaponDefense 5.300000000000001 maxWeaponDefense 5.6000000000000005 minMagicDefense 7.5 maxMagicDefense 30
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3560,24 +3829,26 @@ Applying factor 0.1 to creature 00_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 02_fire_jinn
-DEBUG - Changing denfese. 62 to 6.2
+DEBUG - Creature 0d_deha
+DEBUG - Changing denfese. 72 to 7.2
+DEBUG - Changing attack. 220 to 22
+DEBUG - Changing attack. 210 to 21
 DEBUG - Changing attack. 120 to 12
-Applying factor 0.1 to creature 02_fire_jinn. Attributes minWeaponDefense 6.2 maxWeaponDefense 6.2 minMagicDefense 5.4 maxMagicDefense 6.5
+Applying factor 0.1 to creature 0d_deha. Attributes minWeaponDefense 7.2 maxWeaponDefense 6.800000000000001 minMagicDefense 12.9 maxMagicDefense 13.8
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_jinn_lord
-DEBUG - Changing denfese. 80 to 8
-Applying factor 0.1 to creature 04_jinn_lord. Attributes minWeaponDefense 8 maxWeaponDefense 9.4 minMagicDefense 5.4 maxMagicDefense 14
-DEBUG - Creature 05_armored_jinn
-DEBUG - Changing denfese. 100 to 10
-DEBUG - Changing attack. 250 to 25
-Applying factor 0.1 to creature 05_armored_jinn. Attributes minWeaponDefense 10 maxWeaponDefense 9.5 minMagicDefense 5.4 maxMagicDefense 14
-DEBUG - Creature 06_fire_jinn
-DEBUG - Changing denfese. 62 to 6.2
-DEBUG - Changing attack. 120 to 12
-Applying factor 0.1 to creature 06_fire_jinn. Attributes minWeaponDefense 6.2 maxWeaponDefense 6.2 minMagicDefense 5.4 maxMagicDefense 6.5
+DEBUG - Creature 0d_damned_angel
+DEBUG - Changing denfese. 60 to 6
+Applying factor 0.1 to creature 0d_damned_angel. Attributes minWeaponDefense 6 maxWeaponDefense 7 minMagicDefense 25 maxMagicDefense 25
+DEBUG - Creature 04_berzerker
+DEBUG - Changing denfese. 65 to 6.5
+DEBUG - Changing attack. 180 to 18
+Applying factor 0.1 to creature 04_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
+DEBUG - Creature 04_zygote
+DEBUG - Changing denfese. 85 to 8.5
+DEBUG - Changing attack. 155 to 15.5
+Applying factor 0.1 to creature 04_zygote. Attributes minWeaponDefense 8.5 maxWeaponDefense 9.8 minMagicDefense 4.4 maxMagicDefense 7.9
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3609,25 +3880,28 @@ DEBUG - Creature 00_berzerker
 DEBUG - Changing denfese. 65 to 6.5
 DEBUG - Changing attack. 180 to 18
 Applying factor 0.1 to creature 00_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
-DEBUG - Creature 01_dweller
-DEBUG - Changing denfese. 82 to 8.200000000000001
-Applying factor 0.1 to creature 01_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
-DEBUG - Creature 02_mystic_tower
-DEBUG - Changing denfese. 79 to 7.9
-Applying factor 0.1 to creature 02_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
+DEBUG - Creature 06_dweller
+DEBUG - Changing denfese. 75 to 7.5
+Applying factor 0.1 to creature 06_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
+DEBUG - Creature 04_acid_skull
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 16 to 1.6
+Applying factor 0.1 to creature 04_acid_skull. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 8.9 maxMagicDefense 8.5
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_berzerker
-DEBUG - Changing denfese. 65 to 6.5
-DEBUG - Changing attack. 180 to 18
-Applying factor 0.1 to creature 04_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
-DEBUG - Creature 05_dweller
-DEBUG - Changing denfese. 82 to 8.200000000000001
-Applying factor 0.1 to creature 05_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
-DEBUG - Creature 06_mystic_tower
-DEBUG - Changing denfese. 79 to 7.9
-Applying factor 0.1 to creature 06_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
+DEBUG - Creature 0d_arachness
+DEBUG - Changing denfese. 60 to 6
+DEBUG - Changing attack. 245 to 24.5
+Applying factor 0.1 to creature 0d_arachness. Attributes minWeaponDefense 6 maxWeaponDefense 12 minMagicDefense 14 maxMagicDefense 17
+DEBUG - Creature 06_dweller
+DEBUG - Changing denfese. 75 to 7.5
+Applying factor 0.1 to creature 06_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
+DEBUG - Creature 09_dwarf_warrior
+DEBUG - Changing denfese. 93 to 9.3
+DEBUG - Changing attack. 64 to 6.4
+DEBUG - Changing attack. 64 to 6.4
+Applying factor 0.1 to creature 09_dwarf_warrior. Attributes minWeaponDefense 9.3 maxWeaponDefense 8.5 minMagicDefense 4.800000000000001 maxMagicDefense 6.800000000000001
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3635,9 +3909,10 @@ DEBUG - Creature 08_berzerker
 DEBUG - Changing denfese. 65 to 6.5
 DEBUG - Changing attack. 180 to 18
 Applying factor 0.1 to creature 08_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
-DEBUG - Creature 09_iron_crusher
-DEBUG - Changing denfese. 82 to 8.200000000000001
-Applying factor 0.1 to creature 09_iron_crusher. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
+DEBUG - Creature 01_beak_plant
+DEBUG - Changing denfese. 30 to 3
+DEBUG - Changing attack. 50 to 5
+Applying factor 0.1 to creature 01_beak_plant. Attributes minWeaponDefense 3 maxWeaponDefense 6 minMagicDefense 4.6000000000000005 maxMagicDefense 4.1000000000000005
 DEBUG - Creature 0a_mystic_tower
 DEBUG - Changing denfese. 79 to 7.9
 Applying factor 0.1 to creature 0a_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
@@ -3647,32 +3922,34 @@ Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0d_dweller
-DEBUG - Changing denfese. 82 to 8.200000000000001
-Applying factor 0.1 to creature 0d_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
-DEBUG - Creature 0e_mystic_tower
-DEBUG - Changing denfese. 79 to 7.9
-Applying factor 0.1 to creature 0e_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
+DEBUG - Creature 0d_tondrom
+DEBUG - Changing denfese. 135 to 13.5
+DEBUG - Changing attack. 36 to 3.6
+Applying factor 0.1 to creature 0d_tondrom. Attributes minWeaponDefense 13.5 maxWeaponDefense 10.200000000000001 minMagicDefense 4.5 maxMagicDefense 6.6000000000000005
+DEBUG - Creature 05_horned_slime
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 80 to 8
+Applying factor 0.1 to creature 05_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 00_abraxus
 DEBUG - Changing denfese. 85 to 8.5
 Applying factor 0.1 to creature 00_abraxus. Attributes minWeaponDefense 8.5 maxWeaponDefense 8.5 minMagicDefense 1 maxMagicDefense 10
-DEBUG - Creature 01_horned_skull
-DEBUG - Changing denfese. 60 to 6
-DEBUG - Changing attack. 120 to 12
-Applying factor 0.1 to creature 01_horned_skull. Attributes minWeaponDefense 6 maxWeaponDefense 5 minMagicDefense 4 maxMagicDefense 7
+DEBUG - Creature 00_watcher_plant
+DEBUG - Changing denfese. 30 to 3
+DEBUG - Changing attack. 42 to 4.2
+Applying factor 0.1 to creature 00_watcher_plant. Attributes minWeaponDefense 3 maxWeaponDefense 5.2 minMagicDefense 2 maxMagicDefense 3.2
 DEBUG - Creature 02_dead_abraxus
 DEBUG - Changing denfese. 185 to 18.5
 Applying factor 0.1 to creature 02_dead_abraxus. Attributes minWeaponDefense 18.5 maxWeaponDefense 18.5 minMagicDefense 4 maxMagicDefense 12
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_berzerker
-DEBUG - Changing denfese. 65 to 6.5
-DEBUG - Changing attack. 180 to 18
-Applying factor 0.1 to creature 04_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
+DEBUG - Creature 0d_death_serpent
+DEBUG - Changing denfese. 98 to 9.8
+DEBUG - Changing attack. 355 to 35.5
+Applying factor 0.1 to creature 0d_death_serpent. Attributes minWeaponDefense 9.8 maxWeaponDefense 8.6 minMagicDefense 4.800000000000001 maxMagicDefense 4.3
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3685,12 +3962,11 @@ Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 08_fat_mole_b
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 08_fat_mole_b. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 09_steel_servant
-DEBUG - Changing denfese. 87 to 8.700000000000001
-DEBUG - Changing attack. 155 to 15.5
-DEBUG - Changing attack. 180 to 18
-DEBUG - Changing attack. 180 to 18
-Applying factor 0.1 to creature 09_steel_servant. Attributes minWeaponDefense 8.700000000000001 maxWeaponDefense 10.700000000000001 minMagicDefense 6.4 maxMagicDefense 9.8
+DEBUG - Creature 00_kabasaur
+DEBUG - Changing denfese. 77 to 7.7
+DEBUG - Changing attack. 305 to 30.5
+DEBUG - Changing attack. 230 to 23
+Applying factor 0.1 to creature 00_kabasaur. Attributes minWeaponDefense 7.7 maxWeaponDefense 9 minMagicDefense 9.5 maxMagicDefense 7.9
 DEBUG - Creature 0a_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0a_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3700,20 +3976,19 @@ Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0c_fat_mole_c
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0c_fat_mole_c. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0d_arachness
-DEBUG - Changing denfese. 60 to 6
-DEBUG - Changing attack. 245 to 24.5
-Applying factor 0.1 to creature 0d_arachness. Attributes minWeaponDefense 6 maxWeaponDefense 12 minMagicDefense 14 maxMagicDefense 17
+DEBUG - Creature 04_berzerker
+DEBUG - Changing denfese. 65 to 6.5
+DEBUG - Changing attack. 180 to 18
+Applying factor 0.1 to creature 04_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_bone_demon
-DEBUG - Changing denfese. 88 to 8.8
-DEBUG - Changing attack. 140 to 14
-Applying factor 0.1 to creature 00_bone_demon. Attributes minWeaponDefense 8.8 maxWeaponDefense 2.8000000000000003 minMagicDefense 1.9000000000000001 maxMagicDefense 7.9
+DEBUG - Creature 00_dark_spirits
+DEBUG - Changing denfese. 55 to 5.5
+Applying factor 0.1 to creature 00_dark_spirits. Attributes minWeaponDefense 5.5 maxWeaponDefense 6.5 minMagicDefense 99.9 maxMagicDefense 99.9
 DEBUG - Creature 01_berzerker
 DEBUG - Changing denfese. 65 to 6.5
 DEBUG - Changing attack. 180 to 18
@@ -3724,14 +3999,14 @@ Applying factor 0.1 to creature 02_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_zygote
-DEBUG - Changing denfese. 85 to 8.5
-DEBUG - Changing attack. 155 to 15.5
-Applying factor 0.1 to creature 04_zygote. Attributes minWeaponDefense 8.5 maxWeaponDefense 9.8 minMagicDefense 4.4 maxMagicDefense 7.9
-DEBUG - Creature 05_horned_skull
-DEBUG - Changing denfese. 60 to 6
+DEBUG - Creature 06_fire_jinn
+DEBUG - Changing denfese. 62 to 6.2
 DEBUG - Changing attack. 120 to 12
-Applying factor 0.1 to creature 05_horned_skull. Attributes minWeaponDefense 6 maxWeaponDefense 5 minMagicDefense 4 maxMagicDefense 7
+Applying factor 0.1 to creature 06_fire_jinn. Attributes minWeaponDefense 6.2 maxWeaponDefense 6.2 minMagicDefense 5.4 maxMagicDefense 6.5
+DEBUG - Creature 09_blood_slime
+DEBUG - Changing denfese. 52 to 5.2
+DEBUG - Changing attack. 13 to 1.3
+Applying factor 0.1 to creature 09_blood_slime. Attributes minWeaponDefense 5.2 maxWeaponDefense 5.4 minMagicDefense 10.100000000000001 maxMagicDefense 34.300000000000004
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3757,32 +4032,33 @@ DEBUG - Changing attack. 305 to 30.5
 DEBUG - Changing attack. 225 to 22.5
 DEBUG - Changing attack. 300 to 30
 Applying factor 0.1 to creature 0c_ebony_knight. Attributes minWeaponDefense 9.700000000000001 maxWeaponDefense 12.5 minMagicDefense 7.5 maxMagicDefense 10.9
-DEBUG - Creature 0d_damned_angel
-DEBUG - Changing denfese. 60 to 6
-Applying factor 0.1 to creature 0d_damned_angel. Attributes minWeaponDefense 6 maxWeaponDefense 7 minMagicDefense 25 maxMagicDefense 25
+DEBUG - Creature 0c_death_mage
+DEBUG - Changing denfese. 70 to 7
+DEBUG - Changing attack. 170 to 17
+Applying factor 0.1 to creature 0c_death_mage. Attributes minWeaponDefense 7 maxWeaponDefense 6.6000000000000005 minMagicDefense 33.2 maxMagicDefense 85.5
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_night_howler
-DEBUG - Changing denfese. 52 to 5.2
-DEBUG - Changing attack. 320 to 32
-Applying factor 0.1 to creature 00_night_howler. Attributes minWeaponDefense 5.2 maxWeaponDefense 6.5 minMagicDefense 8.3 maxMagicDefense 7.4
-DEBUG - Creature 01_chirper
-DEBUG - Changing denfese. 59 to 5.9
-Applying factor 0.1 to creature 01_chirper. Attributes minWeaponDefense 5.9 maxWeaponDefense 7.9 minMagicDefense 9.4 maxMagicDefense 7
+DEBUG - Creature 0d_slasher
+DEBUG - Changing denfese. 75 to 7.5
+DEBUG - Changing attack. 255 to 25.5
+Applying factor 0.1 to creature 0d_slasher. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 7.9 maxMagicDefense 8.9
+DEBUG - Creature 0c_gaze_hopper
+DEBUG - Changing denfese. 79 to 7.9
+DEBUG - Changing attack. 155 to 15.5
+Applying factor 0.1 to creature 0c_gaze_hopper. Attributes minWeaponDefense 7.9 maxWeaponDefense 7 minMagicDefense 10 maxMagicDefense 10.200000000000001
 DEBUG - Creature 02_lizard_servant
 DEBUG - Changing denfese. 150 to 15
 Applying factor 0.1 to creature 02_lizard_servant. Attributes minWeaponDefense 15 maxWeaponDefense 15 minMagicDefense 15 maxMagicDefense 15
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_night_howler
-DEBUG - Changing denfese. 52 to 5.2
-DEBUG - Changing attack. 320 to 32
-Applying factor 0.1 to creature 04_night_howler. Attributes minWeaponDefense 5.2 maxWeaponDefense 6.5 minMagicDefense 8.3 maxMagicDefense 7.4
+DEBUG - Creature 04_great_frog
+DEBUG - Changing denfese. 88 to 8.8
+Applying factor 0.1 to creature 04_great_frog. Attributes minWeaponDefense 8.8 maxWeaponDefense 11.9 minMagicDefense 8.9 maxMagicDefense 9.5
 DEBUG - Creature 05_master_howler
 DEBUG - Changing denfese. 78 to 7.800000000000001
 DEBUG - Changing attack. 360 to 36
@@ -3793,10 +4069,9 @@ Applying factor 0.1 to creature 06_lizard_servant. Attributes minWeaponDefense 1
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_hermit_crab
-DEBUG - Changing denfese. 57 to 5.7
-DEBUG - Changing attack. 250 to 25
-Applying factor 0.1 to creature 08_hermit_crab. Attributes minWeaponDefense 5.7 maxWeaponDefense 6.7 minMagicDefense 13.4 maxMagicDefense 15.8
+DEBUG - Creature 01_acid_pod
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 01_acid_pod. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
 DEBUG - Creature 09_freak
 DEBUG - Changing denfese. 72 to 7.2
 DEBUG - Changing attack. 210 to 21
@@ -3809,18 +4084,15 @@ Applying factor 0.1 to creature 0a_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0c_saurian_warrior_a
-DEBUG - Changing denfese. 41 to 4.1000000000000005
-DEBUG - Changing attack. 355 to 35.5
-Applying factor 0.1 to creature 0c_saurian_warrior_a. Attributes minWeaponDefense 4.1000000000000005 maxWeaponDefense 7.2 minMagicDefense 54 maxMagicDefense 34.4
-DEBUG - Creature 0d_saurian_warrior_b
-DEBUG - Changing denfese. 69 to 6.9
-DEBUG - Changing attack. 255 to 25.5
-Applying factor 0.1 to creature 0d_saurian_warrior_b. Attributes minWeaponDefense 6.9 maxWeaponDefense 8.5 minMagicDefense 54 maxMagicDefense 34.4
-DEBUG - Creature 0e_dinogon
-DEBUG - Changing denfese. 64 to 6.4
-DEBUG - Changing attack. 165 to 16.5
-Applying factor 0.1 to creature 0e_dinogon. Attributes minWeaponDefense 6.4 maxWeaponDefense 5.800000000000001 minMagicDefense 4 maxMagicDefense 10.200000000000001
+DEBUG - Creature 05_gargaral
+DEBUG - Changing denfese. 79 to 7.9
+Applying factor 0.1 to creature 05_gargaral. Attributes minWeaponDefense 7.9 maxWeaponDefense 7.9 minMagicDefense 33 maxMagicDefense 32
+DEBUG - Creature 0e_mystic_tower
+DEBUG - Changing denfese. 79 to 7.9
+Applying factor 0.1 to creature 0e_mystic_tower. Attributes minWeaponDefense 7.9 maxWeaponDefense 5.5 minMagicDefense 5 maxMagicDefense 7
+DEBUG - Creature 0a_warpoor
+DEBUG - Changing denfese. 80 to 8
+Applying factor 0.1 to creature 0a_warpoor. Attributes minWeaponDefense 8 maxWeaponDefense 3.5 minMagicDefense 9.5 maxMagicDefense 10.200000000000001
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3838,42 +4110,40 @@ Applying factor 0.1 to creature 02_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_king_hopper
-DEBUG - Changing denfese. 45 to 4.5
-Applying factor 0.1 to creature 04_king_hopper. Attributes minWeaponDefense 4.5 maxWeaponDefense 8.5 minMagicDefense 1.4000000000000001 maxMagicDefense 15.600000000000001
-DEBUG - Creature 05_warden
-DEBUG - Changing denfese. 150 to 15
-Applying factor 0.1 to creature 05_warden. Attributes minWeaponDefense 15 maxWeaponDefense 14 minMagicDefense 16 maxMagicDefense 18
-DEBUG - Creature 06_oblid
-DEBUG - Changing denfese. 78 to 7.800000000000001
-DEBUG - Changing attack. 243 to 24.3
-DEBUG - Changing attack. 320 to 32
-Applying factor 0.1 to creature 06_oblid. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 8 minMagicDefense 5.6000000000000005 maxMagicDefense 3.3000000000000003
+DEBUG - Creature 02_fire_jinn
+DEBUG - Changing denfese. 62 to 6.2
+DEBUG - Changing attack. 120 to 12
+Applying factor 0.1 to creature 02_fire_jinn. Attributes minWeaponDefense 6.2 maxWeaponDefense 6.2 minMagicDefense 5.4 maxMagicDefense 6.5
+DEBUG - Creature 08_hermit_crab
+DEBUG - Changing denfese. 57 to 5.7
+DEBUG - Changing attack. 250 to 25
+Applying factor 0.1 to creature 08_hermit_crab. Attributes minWeaponDefense 5.7 maxWeaponDefense 6.7 minMagicDefense 13.4 maxMagicDefense 15.8
+DEBUG - Creature 0d_saurian_warrior_b
+DEBUG - Changing denfese. 69 to 6.9
+DEBUG - Changing attack. 255 to 25.5
+Applying factor 0.1 to creature 0d_saurian_warrior_b. Attributes minWeaponDefense 6.9 maxWeaponDefense 8.5 minMagicDefense 54 maxMagicDefense 34.4
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_oxelus
-DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 395 to 39.5
-DEBUG - Changing attack. 145 to 14.5
-Applying factor 0.1 to creature 08_oxelus. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 9 maxMagicDefense 8
+DEBUG - Creature 0a_old_face
+DEBUG - Changing denfese. 60 to 6
+Applying factor 0.1 to creature 0a_old_face. Attributes minWeaponDefense 6 maxWeaponDefense 15 minMagicDefense 21 maxMagicDefense 22
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0a_cursed_demon
-DEBUG - Changing denfese. 30 to 3
-DEBUG - Changing attack. 390 to 39
-Applying factor 0.1 to creature 0a_cursed_demon. Attributes minWeaponDefense 3 maxWeaponDefense 2.4000000000000004 minMagicDefense 4.5 maxMagicDefense 3.9000000000000004
+DEBUG - Creature 05_warden
+DEBUG - Changing denfese. 150 to 15
+Applying factor 0.1 to creature 05_warden. Attributes minWeaponDefense 15 maxWeaponDefense 14 minMagicDefense 16 maxMagicDefense 18
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0d_death_serpent
-DEBUG - Changing denfese. 98 to 9.8
-DEBUG - Changing attack. 355 to 35.5
-Applying factor 0.1 to creature 0d_death_serpent. Attributes minWeaponDefense 9.8 maxWeaponDefense 8.6 minMagicDefense 4.800000000000001 maxMagicDefense 4.3
+DEBUG - Creature 04_tree_ogre
+DEBUG - Changing denfese. 50 to 5
+DEBUG - Changing attack. 250 to 25
+Applying factor 0.1 to creature 04_tree_ogre. Attributes minWeaponDefense 5 maxWeaponDefense 7.2 minMagicDefense 10 maxMagicDefense 15.5
 DEBUG - Creature 0e_necron
 DEBUG - Changing denfese. 75 to 7.5
 DEBUG - Changing attack. 340 to 34
@@ -3889,9 +4159,11 @@ Applying factor 0.1 to creature 00_gorgoral. Attributes minWeaponDefense 7.9 max
 DEBUG - Creature 01_gargaral
 DEBUG - Changing denfese. 79 to 7.9
 Applying factor 0.1 to creature 01_gargaral. Attributes minWeaponDefense 7.9 maxWeaponDefense 7.9 minMagicDefense 33 maxMagicDefense 32
-DEBUG - Creature 02_gordoral
-DEBUG - Changing denfese. 79 to 7.9
-Applying factor 0.1 to creature 02_gordoral. Attributes minWeaponDefense 7.9 maxWeaponDefense 5 minMagicDefense 12.200000000000001 maxMagicDefense 35.2
+DEBUG - Creature 08_dark_spider
+DEBUG - Changing denfese. 50 to 5
+DEBUG - Changing attack. 9 to 0.9
+DEBUG - Changing attack. 11 to 1.1
+Applying factor 0.1 to creature 08_dark_spider. Attributes minWeaponDefense 5 maxWeaponDefense 3.8000000000000003 minMagicDefense 5 maxMagicDefense 5.7
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3900,35 +4172,38 @@ DEBUG - Changing denfese. 65 to 6.5
 DEBUG - Changing attack. 248 to 24.8
 DEBUG - Changing attack. 180 to 18
 Applying factor 0.1 to creature 04_demon_warrior. Attributes minWeaponDefense 6.5 maxWeaponDefense 8 minMagicDefense 7 maxMagicDefense 9.5
-DEBUG - Creature 05_gargaral
-DEBUG - Changing denfese. 79 to 7.9
-Applying factor 0.1 to creature 05_gargaral. Attributes minWeaponDefense 7.9 maxWeaponDefense 7.9 minMagicDefense 33 maxMagicDefense 32
+DEBUG - Creature 0c_maristella
+DEBUG - Changing denfese. 45 to 4.5
+Applying factor 0.1 to creature 0c_maristella. Attributes minWeaponDefense 4.5 maxWeaponDefense 5 minMagicDefense 5.800000000000001 maxMagicDefense 7.800000000000001
 DEBUG - Creature 06_gordoral
 DEBUG - Changing denfese. 79 to 7.9
 Applying factor 0.1 to creature 06_gordoral. Attributes minWeaponDefense 7.9 maxWeaponDefense 5 minMagicDefense 12.200000000000001 maxMagicDefense 35.2
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_war_demon_1
-DEBUG - Changing denfese. 85 to 8.5
-DEBUG - Changing attack. 290 to 29
-DEBUG - Changing attack. 295 to 29.5
-Applying factor 0.1 to creature 08_war_demon_1. Attributes minWeaponDefense 8.5 maxWeaponDefense 8.1 minMagicDefense 27.8 maxMagicDefense 6.800000000000001
-DEBUG - Creature 09_war_demon_2
-DEBUG - Changing denfese. 82 to 8.200000000000001
-DEBUG - Changing attack. 290 to 29
-DEBUG - Changing attack. 205 to 20.5
-Applying factor 0.1 to creature 09_war_demon_2. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 7.2 minMagicDefense 6.6000000000000005 maxMagicDefense 7.9
-DEBUG - Creature 0a_rotting_face
-DEBUG - Changing denfese. 160 to 16
-Applying factor 0.1 to creature 0a_rotting_face. Attributes minWeaponDefense 16 maxWeaponDefense 16 minMagicDefense 12 maxMagicDefense 17.5
+DEBUG - Creature 09_cocoon_plant
+DEBUG - Changing denfese. 62 to 6.2
+DEBUG - Changing attack. 64 to 6.4
+Applying factor 0.1 to creature 09_cocoon_plant. Attributes minWeaponDefense 6.2 maxWeaponDefense 10.200000000000001 minMagicDefense 3.5 maxMagicDefense 4.5
+DEBUG - Creature 00_earth_knight
+DEBUG - Changing denfese. 78 to 7.800000000000001
+DEBUG - Changing attack. 122 to 12.200000000000001
+DEBUG - Changing attack. 65 to 6.5
+DEBUG - Changing attack. 45 to 4.5
+Applying factor 0.1 to creature 00_earth_knight. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 7.6000000000000005 minMagicDefense 7 maxMagicDefense 5.6000000000000005
+DEBUG - Creature 01_horned_skull
+DEBUG - Changing denfese. 60 to 6
+DEBUG - Changing attack. 120 to 12
+Applying factor 0.1 to creature 01_horned_skull. Attributes minWeaponDefense 6 maxWeaponDefense 5 minMagicDefense 4 maxMagicDefense 7
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0c_death_mage
-DEBUG - Changing denfese. 70 to 7
-DEBUG - Changing attack. 170 to 17
-Applying factor 0.1 to creature 0c_death_mage. Attributes minWeaponDefense 7 maxWeaponDefense 6.6000000000000005 minMagicDefense 33.2 maxMagicDefense 85.5
+DEBUG - Creature 09_steel_servant
+DEBUG - Changing denfese. 87 to 8.700000000000001
+DEBUG - Changing attack. 155 to 15.5
+DEBUG - Changing attack. 180 to 18
+DEBUG - Changing attack. 180 to 18
+Applying factor 0.1 to creature 09_steel_servant. Attributes minWeaponDefense 8.700000000000001 maxWeaponDefense 10.700000000000001 minMagicDefense 6.4 maxMagicDefense 9.8
 DEBUG - Creature 0d_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0d_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3938,66 +4213,59 @@ Applying factor 0.1 to creature 0e_rotting_face. Attributes minWeaponDefense 16 
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_red_puppet
-DEBUG - Changing denfese. 75 to 7.5
-DEBUG - Changing attack. 120 to 12
-DEBUG - Changing attack. 355 to 35.5
-Applying factor 0.1 to creature 00_red_puppet. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
-DEBUG - Creature 01_dark_spirits
-DEBUG - Changing denfese. 95 to 9.5
-DEBUG - Changing attack. 115 to 11.5
-DEBUG - Changing attack. 375 to 37.5
-Applying factor 0.1 to creature 01_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
+DEBUG - Creature 09_imp
+DEBUG - Changing denfese. 57 to 5.7
+Applying factor 0.1 to creature 09_imp. Attributes minWeaponDefense 5.7 maxWeaponDefense 7.4 minMagicDefense 4.800000000000001 maxMagicDefense 6
+DEBUG - Creature 0d_crying_root
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 0d_crying_root. Attributes minWeaponDefense 5 maxWeaponDefense 8.4 minMagicDefense 2 maxMagicDefense 10
 DEBUG - Creature 02_dark_imp
 DEBUG - Changing denfese. 75 to 7.5
 Applying factor 0.1 to creature 02_dark_imp. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_dark_spirits
-DEBUG - Changing denfese. 75 to 7.5
-DEBUG - Changing attack. 120 to 12
-DEBUG - Changing attack. 355 to 35.5
-Applying factor 0.1 to creature 04_dark_spirits. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
-DEBUG - Creature 05_dark_spirits
-DEBUG - Changing denfese. 95 to 9.5
-DEBUG - Changing attack. 115 to 11.5
-DEBUG - Changing attack. 375 to 37.5
-Applying factor 0.1 to creature 05_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
+DEBUG - Creature 09_sloth_bug
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 93 to 9.3
+DEBUG - Changing attack. 130 to 13
+Applying factor 0.1 to creature 09_sloth_bug. Attributes minWeaponDefense 8 maxWeaponDefense 7 minMagicDefense 6 maxMagicDefense 9.5
+DEBUG - Creature 0a_demons_eye
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 0a_demons_eye. Attributes minWeaponDefense 5 maxWeaponDefense 4.6000000000000005 minMagicDefense 255 maxMagicDefense 255
 DEBUG - Creature 06_black_imp
 DEBUG - Changing denfese. 75 to 7.5
 Applying factor 0.1 to creature 06_black_imp. Attributes minWeaponDefense 7.5 maxWeaponDefense 7.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_ring_demon
-DEBUG - Changing denfese. 62 to 6.2
-Applying factor 0.1 to creature 08_ring_demon. Attributes minWeaponDefense 6.2 maxWeaponDefense 7.5 minMagicDefense 4.800000000000001 maxMagicDefense 7.9
+DEBUG - Creature 01_myconid
+DEBUG - Changing denfese. 43 to 4.3
+DEBUG - Changing attack. 62 to 6.2
+Applying factor 0.1 to creature 01_myconid. Attributes minWeaponDefense 4.3 maxWeaponDefense 7 minMagicDefense 2.6 maxMagicDefense 8
 DEBUG - Creature 09_dark_fairy
 DEBUG - Changing denfese. 55 to 5.5
 Applying factor 0.1 to creature 09_dark_fairy. Attributes minWeaponDefense 5.5 maxWeaponDefense 7.5 minMagicDefense 33 maxMagicDefense 60
-DEBUG - Creature 0a_dark_bishop
-DEBUG - Changing denfese. 75 to 7.5
-DEBUG - Changing attack. 130 to 13
-Applying factor 0.1 to creature 0a_dark_bishop. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.7 minMagicDefense 31 maxMagicDefense 31.200000000000003
+DEBUG - Creature 04_acid_skull
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 1.6 to 0.16000000000000003
+Applying factor 0.1 to creature 04_acid_skull. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 8.9 maxMagicDefense 8.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0c_maristella
+DEBUG - Creature 0a_rotting_face
+DEBUG - Changing denfese. 160 to 16
+Applying factor 0.1 to creature 0a_rotting_face. Attributes minWeaponDefense 16 maxWeaponDefense 16 minMagicDefense 12 maxMagicDefense 17.5
+DEBUG - Creature 04_king_hopper
 DEBUG - Changing denfese. 45 to 4.5
-Applying factor 0.1 to creature 0c_maristella. Attributes minWeaponDefense 4.5 maxWeaponDefense 5 minMagicDefense 5.800000000000001 maxMagicDefense 7.800000000000001
-DEBUG - Creature 0d_deha
-DEBUG - Changing denfese. 72 to 7.2
-DEBUG - Changing attack. 220 to 22
-DEBUG - Changing attack. 210 to 21
-DEBUG - Changing attack. 120 to 12
-Applying factor 0.1 to creature 0d_deha. Attributes minWeaponDefense 7.2 maxWeaponDefense 6.800000000000001 minMagicDefense 12.9 maxMagicDefense 13.8
+Applying factor 0.1 to creature 04_king_hopper. Attributes minWeaponDefense 4.5 maxWeaponDefense 8.5 minMagicDefense 1.4000000000000001 maxMagicDefense 15.600000000000001
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_dark_spirits
-DEBUG - Changing denfese. 55 to 5.5
-Applying factor 0.1 to creature 00_dark_spirits. Attributes minWeaponDefense 5.5 maxWeaponDefense 6.5 minMagicDefense 99.9 maxMagicDefense 99.9
+DEBUG - Creature 00_bone_demon
+DEBUG - Changing denfese. 88 to 8.8
+DEBUG - Changing attack. 140 to 14
+Applying factor 0.1 to creature 00_bone_demon. Attributes minWeaponDefense 8.8 maxWeaponDefense 2.8000000000000003 minMagicDefense 1.9000000000000001 maxMagicDefense 7.9
 DEBUG - Creature 01_disguise
 DEBUG - Changing denfese. 108 to 10.8
 Applying factor 0.1 to creature 01_disguise. Attributes minWeaponDefense 10.8 maxWeaponDefense 8.200000000000001 minMagicDefense 60 maxMagicDefense 24
@@ -4043,11 +4311,10 @@ Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 00_master_knight
-DEBUG - Changing denfese. 61 to 6.1000000000000005
-DEBUG - Changing attack. 380 to 38
-DEBUG - Changing attack. 200 to 20
-Applying factor 0.1 to creature 00_master_knight. Attributes minWeaponDefense 6.1000000000000005 maxWeaponDefense 7.2 minMagicDefense 16.8 maxMagicDefense 7.9
+DEBUG - Creature 08_star_serpent
+DEBUG - Changing denfese. 42 to 4.2
+DEBUG - Changing attack. 65 to 6.5
+Applying factor 0.1 to creature 08_star_serpent. Attributes minWeaponDefense 4.2 maxWeaponDefense 6.5 minMagicDefense 6 maxMagicDefense 5.2
 DEBUG - Creature 01_gorthaur
 DEBUG - Changing denfese. 85 to 8.5
 DEBUG - Changing attack. 195 to 19.5
@@ -4065,21 +4332,23 @@ Applying factor 0.1 to creature 04_wildowess. Attributes minWeaponDefense 6.6000
 DEBUG - Creature 05_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 05_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 06_warpoor
-DEBUG - Changing denfese. 80 to 8
-Applying factor 0.1 to creature 06_warpoor. Attributes minWeaponDefense 8 maxWeaponDefense 3.5 minMagicDefense 9.5 maxMagicDefense 10.200000000000001
+DEBUG - Creature 02_skeleton
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 83 to 8.3
+Applying factor 0.1 to creature 02_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_fester
 DEBUG - Changing denfese. 120 to 12
 Applying factor 0.1 to creature 08_fester. Attributes minWeaponDefense 12 maxWeaponDefense 5.6000000000000005 minMagicDefense 5.800000000000001 maxMagicDefense 57.900000000000006
-DEBUG - Creature 09_cross_breed
-DEBUG - Changing denfese. 125 to 12.5
-Applying factor 0.1 to creature 09_cross_breed. Attributes minWeaponDefense 12.5 maxWeaponDefense 4 minMagicDefense 34.6 maxMagicDefense 41.2
-DEBUG - Creature 0a_warpoor
-DEBUG - Changing denfese. 80 to 8
-Applying factor 0.1 to creature 0a_warpoor. Attributes minWeaponDefense 8 maxWeaponDefense 3.5 minMagicDefense 9.5 maxMagicDefense 10.200000000000001
+DEBUG - Creature 05_horned_skull
+DEBUG - Changing denfese. 60 to 6
+DEBUG - Changing attack. 120 to 12
+Applying factor 0.1 to creature 05_horned_skull. Attributes minWeaponDefense 6 maxWeaponDefense 5 minMagicDefense 4 maxMagicDefense 7
+DEBUG - Creature 05_acid_pod
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 05_acid_pod. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4101,27 +4370,25 @@ Applying factor 0.1 to creature 00_hell_hunter. Attributes minWeaponDefense 6.80
 DEBUG - Creature 01_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 01_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 02_karasu
-DEBUG - Changing denfese. 62 to 6.2
-DEBUG - Changing attack. 310 to 31
-Applying factor 0.1 to creature 02_karasu. Attributes minWeaponDefense 6.2 maxWeaponDefense 6.5 minMagicDefense 7.2 maxMagicDefense 7.9
+DEBUG - Creature 02_elder
+DEBUG - Changing denfese. 59 to 5.9
+DEBUG - Changing attack. 58 to 5.800000000000001
+Applying factor 0.1 to creature 02_elder. Attributes minWeaponDefense 5.9 maxWeaponDefense 6.2 minMagicDefense 2 maxMagicDefense 3.6
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_tree_ogre
-DEBUG - Changing denfese. 50 to 5
-DEBUG - Changing attack. 250 to 25
-Applying factor 0.1 to creature 04_tree_ogre. Attributes minWeaponDefense 5 maxWeaponDefense 7.2 minMagicDefense 10 maxMagicDefense 15.5
-DEBUG - Creature 05_armored_warrior
-DEBUG - Changing denfese. 70 to 7
-DEBUG - Changing attack. 430 to 43
-DEBUG - Changing attack. 350 to 35
-Applying factor 0.1 to creature 05_armored_warrior. Attributes minWeaponDefense 7 maxWeaponDefense 8 minMagicDefense 4 maxMagicDefense 4
-DEBUG - Creature 06_armored_slayer
-DEBUG - Changing denfese. 60 to 6
-DEBUG - Changing attack. 430 to 43
-DEBUG - Changing attack. 340 to 34
-Applying factor 0.1 to creature 06_armored_slayer. Attributes minWeaponDefense 6 maxWeaponDefense 7.800000000000001 minMagicDefense 7.4 maxMagicDefense 8.200000000000001
+DEBUG - Creature 08_oxelus
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 395 to 39.5
+DEBUG - Changing attack. 145 to 14.5
+Applying factor 0.1 to creature 08_oxelus. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 9 maxMagicDefense 8
+DEBUG - Creature 08_wyvern
+DEBUG - Changing denfese. 80 to 8
+DEBUG - Changing attack. 180 to 18
+Applying factor 0.1 to creature 08_wyvern. Attributes minWeaponDefense 8 maxWeaponDefense 12 minMagicDefense 5.4 maxMagicDefense 19
+DEBUG - Creature 06_dweller
+DEBUG - Changing denfese. 75 to 7.5
+Applying factor 0.1 to creature 06_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4130,11 +4397,11 @@ DEBUG - Changing denfese. 79 to 7.9
 DEBUG - Changing attack. 380 to 38
 DEBUG - Changing attack. 365 to 36.5
 Applying factor 0.1 to creature 08_armored_guardian. Attributes minWeaponDefense 7.9 maxWeaponDefense 6.9 minMagicDefense 27 maxMagicDefense 7
-DEBUG - Creature 09_armored_warrior
-DEBUG - Changing denfese. 70 to 7
-DEBUG - Changing attack. 430 to 43
-DEBUG - Changing attack. 350 to 35
-Applying factor 0.1 to creature 09_armored_warrior. Attributes minWeaponDefense 7 maxWeaponDefense 8 minMagicDefense 4 maxMagicDefense 4
+DEBUG - Creature 01_dark_spirits
+DEBUG - Changing denfese. 95 to 9.5
+DEBUG - Changing attack. 11.5 to 1.1500000000000001
+DEBUG - Changing attack. 37.5 to 3.75
+Applying factor 0.1 to creature 01_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 0a_armored_slayer
 DEBUG - Changing denfese. 60 to 6
 DEBUG - Changing attack. 430 to 43
@@ -4180,12 +4447,14 @@ Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 08_apocrypha
 DEBUG - Changing denfese. 40 to 4
 Applying factor 0.1 to creature 08_apocrypha. Attributes minWeaponDefense 4 maxWeaponDefense 11 minMagicDefense 60 maxMagicDefense 60
-DEBUG - Creature 09_descrypha
-DEBUG - Changing denfese. 70 to 7
-Applying factor 0.1 to creature 09_descrypha. Attributes minWeaponDefense 7 maxWeaponDefense 10 minMagicDefense 60 maxMagicDefense 17
-DEBUG - Creature 0a_old_face
-DEBUG - Changing denfese. 60 to 6
-Applying factor 0.1 to creature 0a_old_face. Attributes minWeaponDefense 6 maxWeaponDefense 15 minMagicDefense 21 maxMagicDefense 22
+DEBUG - Creature 06_skeleton
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 83 to 8.3
+Applying factor 0.1 to creature 06_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
+DEBUG - Creature 0e_manna_python
+DEBUG - Changing denfese. 90 to 9
+DEBUG - Changing attack. 145 to 14.5
+Applying factor 0.1 to creature 0e_manna_python. Attributes minWeaponDefense 9 maxWeaponDefense 10 minMagicDefense 11.600000000000001 maxMagicDefense 9.4
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4240,9 +4509,9 @@ DEBUG - Creature 09_pulsating_heart
 DEBUG - Changing denfese. 50 to 5
 DEBUG - Changing attack. 150 to 15
 Applying factor 0.1 to creature 09_pulsating_heart. Attributes minWeaponDefense 5 maxWeaponDefense 4.800000000000001 minMagicDefense 99.9 maxMagicDefense 99.9
-DEBUG - Creature 0a_demons_eye
+DEBUG - Creature 01_demon_bat
 DEBUG - Changing denfese. 50 to 5
-Applying factor 0.1 to creature 0a_demons_eye. Attributes minWeaponDefense 5 maxWeaponDefense 4.6000000000000005 minMagicDefense 255 maxMagicDefense 255
+Applying factor 0.1 to creature 01_demon_bat. Attributes minWeaponDefense 5 maxWeaponDefense 6.800000000000001 minMagicDefense 8 maxMagicDefense 4.800000000000001
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4279,34 +4548,34 @@ DEBUG - Creature 05_doriwi
 DEBUG - Changing denfese. 70 to 7
 DEBUG - Changing attack. 300 to 30
 Applying factor 0.1 to creature 05_doriwi. Attributes minWeaponDefense 7 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8.200000000000001
-DEBUG - Creature 06_hell_warrior
-DEBUG - Changing denfese. 90 to 9
-DEBUG - Changing attack. 450 to 45
-Applying factor 0.1 to creature 06_hell_warrior. Attributes minWeaponDefense 9 maxWeaponDefense 10 minMagicDefense 4 maxMagicDefense 8
+DEBUG - Creature 0d_cocoon_plant
+DEBUG - Changing denfese. 50 to 5
+Applying factor 0.1 to creature 0d_cocoon_plant. Attributes minWeaponDefense 5 maxWeaponDefense 7 minMagicDefense 12 maxMagicDefense 8
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 08_wyvern
-DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 180 to 18
-Applying factor 0.1 to creature 08_wyvern. Attributes minWeaponDefense 8 maxWeaponDefense 12 minMagicDefense 5.4 maxMagicDefense 19
+DEBUG - Creature 0a_skeleton
+DEBUG - Changing denfese. 55 to 5.5
+DEBUG - Changing attack. 83 to 8.3
+Applying factor 0.1 to creature 0a_skeleton. Attributes minWeaponDefense 5.5 maxWeaponDefense 3.4000000000000004 minMagicDefense 7.300000000000001 maxMagicDefense 8.700000000000001
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0a_bone_wolf
-DEBUG - Changing denfese. 70 to 7
-DEBUG - Changing attack. 250 to 25
-Applying factor 0.1 to creature 0a_bone_wolf. Attributes minWeaponDefense 7 maxWeaponDefense 3 minMagicDefense 99.9 maxMagicDefense 9
+DEBUG - Creature 09_war_demon_2
+DEBUG - Changing denfese. 82 to 8.200000000000001
+DEBUG - Changing attack. 290 to 29
+DEBUG - Changing attack. 205 to 20.5
+Applying factor 0.1 to creature 09_war_demon_2. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 7.2 minMagicDefense 6.6000000000000005 maxMagicDefense 7.9
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 0c_hollow_mage
 DEBUG - Changing denfese. 81 to 8.1
 Applying factor 0.1 to creature 0c_hollow_mage. Attributes minWeaponDefense 8.1 maxWeaponDefense 5 minMagicDefense 99.9 maxMagicDefense 99.9
-DEBUG - Creature 0d_blood_bone
-DEBUG - Changing denfese. 70 to 7
-DEBUG - Changing attack. 250 to 25
-Applying factor 0.1 to creature 0d_blood_bone. Attributes minWeaponDefense 7 maxWeaponDefense 4 minMagicDefense 6 maxMagicDefense 5
+DEBUG - Creature 01_blood_slime
+DEBUG - Changing denfese. 52 to 5.2
+DEBUG - Changing attack. 13 to 1.3
+Applying factor 0.1 to creature 01_blood_slime. Attributes minWeaponDefense 5.2 maxWeaponDefense 5.4 minMagicDefense 10.100000000000001 maxMagicDefense 34.300000000000004
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4813,70 +5082,72 @@ Applying factor 10 to item item_139_soul_pod_14_sp. Attributes str 0 spd 0 def 0
 DEBUG ------------------ Randomization engine - forEachCreatureSpawn - applyDifficultyForEachSpawn
 
 
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_122_evil_eye) by primary consumable at human_world_forgotten_region/02_skeleton
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at human_world_forgotten_region/00_acid_skull
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_forgotten_region/05_blood_skull
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at human_world_forgotten_region/05_blood_skull
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_rotting_cavern/01_myconid
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at earth_world_poisonous_cavern/01_beak_plant
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10d_lamp) by primary consumable at earth_world_quaking_cavern/01_blue_flicker
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at earth_world_quaking_cavern/05_acid_pod
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_stone_cavern/01_demon_bat
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10d_lamp) by primary consumable at human_world_solitary_region/09_dementor
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_122_evil_eye) by primary consumable at human_world_forgotten_region/06_armored_slayer
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at human_world_forgotten_region/06_armored_slayer
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at human_world_forgotten_region/06_warpoor
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_forgotten_region/0d_dweller
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at human_world_forgotten_region/0d_dweller
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_rotting_cavern/08_ring_demon
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at earth_world_rotting_cavern/0a_bone_wolf
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at earth_world_rotting_cavern/06_elder
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_poisonous_cavern/01_blood_skull
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at earth_world_quaking_cavern/08_casket
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_stone_cavern/00_dark_spider
 DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_stone_cavern/05_hobble_worm
 DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_stone_cavern/0a_barrel_snail
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at earth_world_stone_cavern/00_dybbuk
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at water_world_impure_pool_area/01_horned_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at water_world_impure_pool_area/01_horned_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at water_world_impure_pool_area/06_dweller
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_sunken_river_area/00_kabasaur
+DEBUG - Moderating difficulty - by replacing drop secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_137_soul_pod_53_sp) of earth_world_hostile_rock_cavern/04_kiljoy
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at water_world_impure_pool_area/06_hell_warrior
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at water_world_impure_pool_area/0d_dweller
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_sunken_river_area/04_jinn_lord
 DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_122_evil_eye) by primary consumable at water_world_sunken_river_area/04_kabasaur
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at water_world_watery_labyrinth_area/04_great_frog
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at water_world_watery_labyrinth_area/04_great_frog
-DEBUG - Moderating difficulty - by replacing drop secondary consumable (item_10d_lamp) by a primary consumable (item_11c_healing_potion) of water_world_white_rain_area/00_winged_worm
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_phoenix_cave/02_fire_jinn
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_phoenix_cave/06_fire_jinn
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at fire_world_phoenix_cave/06_fire_jinn
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at fire_world_burning_cavern/02_mystic_tower
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_burning_cavern/02_mystic_tower
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at water_world_watery_labyrinth_area/0d_trickster
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_phoenix_cave/0d_deha
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at fire_world_phoenix_cave/04_zygote
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at fire_world_burning_cavern/04_acid_skull
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_molten_cavern/04_berzerker
 DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_ashen_cavern/01_berzerker
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at fire_world_ashen_cavern/05_horned_skull
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at death_world_gate_of_the_dead/02_bone_wolf
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at death_world_gate_of_the_dead/0a_bone_wolf
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at fire_world_ashen_cavern/09_blood_slime
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_ashen_cavern/09_blood_slime
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at illusion_world_bewilderment_domain/06_gordoral
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at death_world_gate_of_the_dead/09_war_demon_2
 
 
 DEBUG ------------------ Randomization engine - forEachCollectable - applyDifficultyForEachCollectable
 
 
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at human_world_hidden_region
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at human_world_solitary_region
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at human_world_hidden_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at human_world_hidden_region
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at human_world_hidden_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_forgotten_region
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at human_world_forgotten_region
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at human_world_cursed_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at earth_world_rotting_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_rotting_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_rotting_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_poisonous_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_false_pit_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at earth_world_poisonous_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_poisonous_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_poisonous_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_false_pit_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_false_pit_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_122_evil_eye) by primary consumable at earth_world_stone_cavern
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_11c_healing_potion) of area earth_world_hostile_rock_cavern
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_137_soul_pod_53_sp) of area earth_world_hostile_rock_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at water_world_impure_pool_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at water_world_sunken_river_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at water_world_sunken_river_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at water_world_sunken_river_area
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_watery_labyrinth_area
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_12e_dorados_ashes) by a primary consumable (item_11e_anti_venom) of area water_world_white_rain_area
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_12e_dorados_ashes) by a primary consumable (item_11c_healing_potion) of area water_world_white_rain_area
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_phoenix_cave
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at fire_world_burning_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at water_world_watery_labyrinth_area
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at water_world_watery_labyrinth_area
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_12e_dorados_ashes) by a primary consumable (item_137_soul_pod_53_sp) of area water_world_white_rain_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at fire_world_burning_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at fire_world_burning_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at fire_world_molten_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_molten_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at fire_world_molten_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_122_evil_eye) by primary consumable at fire_world_ashen_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at illusion_world_bewilderment_domain
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at monster_world_false_eye_area
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_127_acid_vaccine) by a primary consumable (item_11d_magic_potion) of area monster_world_screeching_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at illusion_world_bewilderment_domain
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at illusion_world_bewilderment_domain
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_11c_healing_potion) of area illusion_world_worship_domain
 DEBUG - Moderating difficulty - by replacing secondary consumable (item_126_bottle_of_light) by a primary consumable (item_11c_healing_potion) of area death_world_dark_castle_layer
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at death_world_undead_layer
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_122_evil_eye) by primary consumable at death_world_undead_layer
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at death_world_gate_of_the_dead
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at death_world_gate_of_the_dead
 ERROR - Couldn't distribute drop uniques 13,83,82,40,62,183,223,193,76,29,209,187,181,244,245,109,110,38,102,26,32,27,34,101,261,260,224,247,136,240,69,89,184,117,127,45,246,114,176,195,250,19,42,265,227,200,118,140,229,191,192,160,113,210,43
