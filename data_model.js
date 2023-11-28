@@ -669,8 +669,8 @@
 
     draw(mapDraw, mapSummary) {
       mapSummary.push('<span style="background:#f0f0f0">Item Memory used '+this.usedItemMemory()+'</span>\n');
-      var creaturesAttributes = this.creaturesAttributesRanges();
-      mapSummary.push('<span style="background:#f0f0f0">Creatures attributes '+creaturesAttributes.averageAttack + "/" + creaturesAttributes.averageDefense + "/" + creaturesAttributes.averageMagicDefense+'</span>\n');
+      var creaturesScore = this.creaturesScore();
+      mapSummary.push('<span style="background:#f0f0f0">Creatures score '+creaturesScore+'</span>\n');
 
       for (var i in this.spawns) {
         this.spawns[i].draw(mapDraw, mapSummary);
@@ -722,21 +722,45 @@
       return models.size;
     }
 
-    creaturesAttributesRanges() {
-      var minWeaponDefense = 100000;
-      var minMagicDefense = 100000;
-      var maxWeaponDefense = 0;
-      var maxMagicDefense = 0;
+    creaturesScore() {
       var attackSum = 0;
       var count = 0;
 
       for (var i in this.spawns) {
         var spawn = this.spawns[i];
-        if (spawn.creature().minWeaponDefense) {
-          minWeaponDefense = Math.min(minWeaponDefense, spawn.creature().minWeaponDefense.get());
-          minMagicDefense = Math.min(minMagicDefense, spawn.creature().minMagicDefense.get());
-          maxWeaponDefense = Math.max(maxWeaponDefense, spawn.creature().maxWeaponDefense.get());
-          maxMagicDefense = Math.max(maxMagicDefense, spawn.creature().maxMagicDefense.get());
+        if (spawn.creature().weaponDefense1) {
+          if (spawn.creature().weaponDefense1.get()) {
+            attackSum += spawn.creature().weaponDefense1.get();
+            count++;
+          }
+          if (spawn.creature().weaponDefense2.get()) {
+            attackSum += spawn.creature().weaponDefense2.get();
+            count++;
+          }
+          if (spawn.creature().weaponDefense3.get()) {
+            attackSum += spawn.creature().weaponDefense3.get();
+            count++;
+          }
+          if (spawn.creature().magDefense1.get()) {
+            attackSum += spawn.creature().magDefense1.get();
+            count++;
+          }
+          if (spawn.creature().magDefense2.get()) {
+            attackSum += spawn.creature().magDefense2.get();
+            count++;
+          }
+          if (spawn.creature().magDefense3.get()) {
+            attackSum += spawn.creature().magDefense3.get();
+            count++;
+          }
+          if (spawn.creature().magDefense4.get()) {
+            attackSum += spawn.creature().magDefense4.get();
+            count++;
+          }
+          if (spawn.creature().magDefense5.get()) {
+            attackSum += spawn.creature().magDefense5.get();
+            count++;
+          }
           if (spawn.creature().attack1.get()) {
             attackSum += spawn.creature().attack1.get();
             count++;
@@ -745,20 +769,16 @@
             attackSum += spawn.creature().attack2.get();
             count++;
           }
+          if (spawn.creature().magic1.get()) {
+            attackSum += spawn.creature().magic1.get();
+            count++;
+          }
         }
       }
 
       var averageAttack = count ? Math.round(attackSum/count) : 0;
 
-      return {
-        minWeaponDefense: Math.round(minWeaponDefense),
-        minMagicDefense: Math.round(minMagicDefense),
-        maxWeaponDefense: Math.round(maxWeaponDefense),
-        maxMagicDefense: Math.round(maxMagicDefense),
-        averageDefense: Math.round((minWeaponDefense + maxWeaponDefense)/2),
-        averageMagicDefense: Math.round((minMagicDefense + maxMagicDefense)/2),
-        averageAttack: averageAttack
-      };
+      return averageAttack;
     }
 
     writeMapImage(createCanvas, folder) {
@@ -1505,10 +1525,14 @@
       this.sol = new UInt8( bin, this.offset_in_file + 0x31);
       this.hp  = new UInt16(bin, this.offset_in_file + 0x32);
 
-      this.minWeaponDefense = new UInt16(bin, this.offset_in_file + 0x4a);
-      this.maxWeaponDefense = new UInt16(bin, this.offset_in_file + 0x4c);
-      this.minMagicDefense = new UInt16(bin, this.offset_in_file + 0x52);
-      this.maxMagicDefense = new UInt16(bin, this.offset_in_file + 0x54);
+      this.weaponDefense1 = new UInt16(bin, this.offset_in_file + 0x4a);
+      this.weaponDefense2 = new UInt16(bin, this.offset_in_file + 0x4c);
+      this.weaponDefense3 = new UInt16(bin, this.offset_in_file + 0x4e);
+      this.magDefense1 = new UInt16(bin, this.offset_in_file + 0x50);
+      this.magDefense2 = new UInt16(bin, this.offset_in_file + 0x52);
+      this.magDefense3 = new UInt16(bin, this.offset_in_file + 0x54);
+      this.magDefense4 = new UInt16(bin, this.offset_in_file + 0x56);
+      this.magDefense5 = new UInt16(bin, this.offset_in_file + 0x58);
 
       area[this.name] = this;
 
@@ -1590,7 +1614,22 @@
       + ", \"par\":" + (this.par.get() + "").padStart(5)
       + ", \"mel\":" + (this.mel.get() + "").padStart(5)
       + ", \"sol\":" + (this.sol.get() + "").padStart(5)
-      + ", \"hp\":" + (this.hp.get() + "").padStart(5)
+
+      + ", \"attack1\":" + (this.attack1.get() + "").padStart(5)
+      + ", \"attack2\":" + (this.attack2.get() + "").padStart(5)
+      + ", \"magic1\":" + (this.magic1.get() + "").padStart(5)
+      + ", \"height\":" + (this.height.get() + "").padStart(5)
+      + ", \"weight\":" + (this.weight.get() + "").padStart(5)
+      + ", \"something3\":" + (this.something3.get() + "").padStart(5)
+      + ", \"something4\":" + (this.something4.get() + "").padStart(5)
+      + ", \"weaponDefense1\":" + (this.weaponDefense1.get() + "").padStart(5)
+      + ", \"weaponDefense2\":" + (this.weaponDefense2.get() + "").padStart(5)
+      + ", \"weaponDefense3\":" + (this.weaponDefense3.get() + "").padStart(5)
+      + ", \"magDefense1\":" + (this.magDefense1.get() + "").padStart(5)
+      + ", \"magDefense2\":" + (this.magDefense2.get() + "").padStart(5)
+      + ", \"magDefense3\":" + (this.magDefense3.get() + "").padStart(5)
+      + ", \"magDefense4\":" + (this.magDefense4.get() + "").padStart(5)
+      + ", \"magDefense5\":" + (this.magDefense5.get() + "").padStart(5)
   //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
   //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
   + ",\"isDoor\":" + this.isDoor + "}";
@@ -1789,8 +1828,15 @@
 
       var text = "" + this.index.toString(16).padEnd(5) 
         + (" " + this.chance.get()).padStart(4) + "% 0x" + this.mutexGroup.get() + " " + this.name()
-        + " wd" + Math.round(this.creature().minWeaponDefense.get()) + "-" + Math.round(this.creature().maxWeaponDefense.get())
-        + " md" + Math.round(this.creature().minMagicDefense.get()) + "-" + Math.round(this.creature().maxMagicDefense.get())
+        + " pw"
+         + Math.round(this.creature().weaponDefense1.get()) + " "
+         + Math.round(this.creature().weaponDefense2.get()) + " "
+         + Math.round(this.creature().weaponDefense3.get()) + " "
+         + Math.round(this.creature().magDefense1.get()) + " "
+         + Math.round(this.creature().magDefense2.get()) + " "
+         + Math.round(this.creature().magDefense3.get()) + " "
+         + Math.round(this.creature().magDefense4.get()) + " "
+         + Math.round(this.creature().magDefense5.get()) + " "
         + " a" + Math.round(this.creature().attack1.get()) + " a" + Math.round(this.creature().attack2.get())
         + " m" + Math.round(this.creature().magic1.get());
       var summary = '<span style="background:#ff8080">'+text+'</span>\n';

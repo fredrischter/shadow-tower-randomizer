@@ -218,6 +218,19 @@ function randomize(paramsFile, stDir) {
         var tmp = creature1.entityStates;
         creature1.entityStates = creature2.entityStates;
         creature2.entityStates = tmp;
+
+        creature1.attack1.swap(creature2.attack1);
+        creature1.attack2.swap(creature2.attack2);
+        creature1.magic1.swap(creature2.magic1);
+        creature1.weaponDefense1.swap(creature2.weaponDefense1);
+        creature1.weaponDefense2.swap(creature2.weaponDefense2);
+        creature1.weaponDefense3.swap(creature2.weaponDefense3);
+        creature1.magDefense1.swap(creature2.magDefense1);
+        creature1.magDefense2.swap(creature2.magDefense2);
+        creature1.magDefense3.swap(creature2.magDefense3);
+        creature1.magDefense4.swap(creature2.magDefense4);
+        creature1.magDefense5.swap(creature2.magDefense5);
+
 /*
         // entity bin
         creature1.swap(creature2);
@@ -353,10 +366,10 @@ function randomize(paramsFile, stDir) {
 
         console.log("DEBUG - Creature " + creature.name);
         //creature.weight.set(0x1);
-        if (creature.minWeaponDefense) {
-            console.log("DEBUG - Changing denfese. " + creature.minWeaponDefense.get() + " to " + Math.min(255, creature.minWeaponDefense.get() * creatureAttributeFactor));
-            creature.minWeaponDefense.set(Math.min(255, creature.minWeaponDefense.get() * creatureAttributeFactor));
-            creature.maxWeaponDefense.set(Math.min(255, creature.maxWeaponDefense.get() * creatureAttributeFactor));
+        if (creature.weaponDefense1) {
+            console.log("DEBUG - Changing denfese. " + creature.weaponDefense1.get() + " to " + Math.min(255, creature.weaponDefense1.get() * creatureAttributeFactor));
+            creature.weaponDefense1.set(Math.min(255, creature.weaponDefense1.get() * creatureAttributeFactor));
+            creature.weaponDefense2.set(Math.min(255, creature.weaponDefense2.get() * creatureAttributeFactor));
             creature.minMagicDefense.set(Math.min(255, creature.minMagicDefense.get() * creatureAttributeFactor));
             creature.maxMagicDefense.set(Math.min(255, creature.maxMagicDefense.get() * creatureAttributeFactor));
         }
@@ -370,9 +383,9 @@ function randomize(paramsFile, stDir) {
         });
 
         console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes " + 
-            (creature.minWeaponDefense? 
-                "minWeaponDefense " + creature.minWeaponDefense.get() + 
-                " maxWeaponDefense " + creature.maxWeaponDefense.get() + 
+            (creature.weaponDefense1? 
+                "weaponDefense1 " + creature.weaponDefense1.get() + 
+                " weaponDefense2 " + creature.weaponDefense2.get() + 
                 " minMagicDefense " + creature.minMagicDefense.get() + 
                 " maxMagicDefense " + creature.maxMagicDefense.get() : "") + 
             (creature.weaponAttack1?
