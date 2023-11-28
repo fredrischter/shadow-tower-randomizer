@@ -219,17 +219,31 @@ function randomize(paramsFile, stDir) {
         creature1.entityStates = creature2.entityStates;
         creature2.entityStates = tmp;
 
-        creature1.attack1.swap(creature2.attack1);
-        creature1.attack2.swap(creature2.attack2);
-        creature1.magic1.swap(creature2.magic1);
-        creature1.weaponDefense1.swap(creature2.weaponDefense1);
-        creature1.weaponDefense2.swap(creature2.weaponDefense2);
-        creature1.weaponDefense3.swap(creature2.weaponDefense3);
-        creature1.magDefense1.swap(creature2.magDefense1);
-        creature1.magDefense2.swap(creature2.magDefense2);
-        creature1.magDefense3.swap(creature2.magDefense3);
-        creature1.magDefense4.swap(creature2.magDefense4);
-        creature1.magDefense5.swap(creature2.magDefense5);
+        creature1.attack1.set(1);
+        creature1.attack2.set(1);
+        creature1.magic1.set(1);
+        creature1.weaponDefense1.set(1);
+        creature1.weaponDefense2.set(1);
+        creature1.weaponDefense3.set(1);
+        creature1.magDefense1.set(1);
+        creature1.magDefense2.set(1);
+        creature1.magDefense3.set(1);
+        creature1.magDefense4.set(1);
+        creature1.magDefense5.set(1);
+        creature1.attacks.forEach(attack => attack.set(1));
+
+        creature2.attack1.set(1);
+        creature2.attack2.set(1);
+        creature2.magic1.set(1);
+        creature2.weaponDefense1.set(1);
+        creature2.weaponDefense2.set(1);
+        creature2.weaponDefense3.set(1);
+        creature2.magDefense1.set(1);
+        creature2.magDefense2.set(1);
+        creature2.magDefense3.set(1);
+        creature2.magDefense4.set(1);
+        creature2.magDefense5.set(1);
+        creature2.attacks.forEach(attack => attack.set(1));
 
 /*
         // entity bin
@@ -366,7 +380,7 @@ function randomize(paramsFile, stDir) {
 
         console.log("DEBUG - Creature " + creature.name);
         //creature.weight.set(0x1);
-        if (creature.weaponDefense1) {
+        /*if (creature.weaponDefense1) {
             console.log("DEBUG - Changing denfese. " + creature.weaponDefense1.get() + " to " + Math.min(255, creature.weaponDefense1.get() * creatureAttributeFactor));
             creature.weaponDefense1.set(Math.min(255, creature.weaponDefense1.get() * creatureAttributeFactor));
             creature.weaponDefense2.set(Math.min(255, creature.weaponDefense2.get() * creatureAttributeFactor));
@@ -394,7 +408,7 @@ function randomize(paramsFile, stDir) {
                 " weaponAttack3 " + creature.weaponAttack3.get(): ""));
         //It is too much, makes the game to take too long
         //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
-
+*/
     }
 
     function applyDifficultyForEachItem(item) {

@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  //global.toNotGenerateImages=true;
+  global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
@@ -1078,10 +1078,19 @@
       this.index = index;
       this.type = this.bin[this.offset_in_file];
 
-      if (this.type == 0x20) {
-        this.weaponAttack1 = new UInt16(this.bin, this.offset_in_file + 0x1a);
-        this.weaponAttack2 = new UInt16(this.bin, this.offset_in_file + 0x1c);
-        this.weaponAttack3 = new UInt16(this.bin, this.offset_in_file + 0x1e);
+      if (ENTITY_STATE_SIZE_BY_TYPE[this.type] == 0x30) {
+        var att = new UInt16(this.bin, this.offset_in_file + 0x1a);
+        if (!att.isNull()) {
+          this.attack1 = att;
+        }
+        att = new UInt16(this.bin, this.offset_in_file + 0x1c);
+        if (!att.isNull()) {
+          this.attack2 = att;
+        }
+        att = new UInt16(this.bin, this.offset_in_file + 0x1e);
+        if (!att.isNull()) {
+          this.attack3 = att;
+        }
       }
 
       /*
@@ -1538,6 +1547,7 @@
 
       this.entityStateOffsets = uInt32Array(this.bin, this.offset_in_file + ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET, ENTITY_STATE_OFFSETS_ARRAY_LENGTH);
       this.entityStates = [];
+      this.attacks = [];
       
       for (var i = 0 ; i < this.entityStateOffsets.length ; i++) {
         var entityStateOffset = this.entityStateOffsets[i];
@@ -1555,6 +1565,16 @@
           nextExpectedEntityDataAddress = address;
         }
         this.entityStates.push(entityStateData);
+        if (entityStateData.attack1) {
+          this.attacks.push(entityStateData.attack1);
+        }
+        if (entityStateData.attack2) {
+          this.attacks.push(entityStateData.attack2);
+        }
+        if (entityStateData.attack3) {
+          this.attacks.push(entityStateData.attack3);
+        }
+
         nextExpectedEntityDataAddress += entityStateData.length;
       }
       console.log(this.toReadableString());
@@ -1630,6 +1650,7 @@
       + ", \"magDefense3\":" + (this.magDefense3.get() + "").padStart(5)
       + ", \"magDefense4\":" + (this.magDefense4.get() + "").padStart(5)
       + ", \"magDefense5\":" + (this.magDefense5.get() + "").padStart(5)
+      + ", \"attacks\": [" + (this.attacks.map(attack => attack.get())) + "]"
   //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
   //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
   + ",\"isDoor\":" + this.isDoor + "}";
