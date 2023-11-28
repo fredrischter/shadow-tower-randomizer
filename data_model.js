@@ -1078,21 +1078,6 @@
       this.index = index;
       this.type = this.bin[this.offset_in_file];
 
-      if (ENTITY_STATE_SIZE_BY_TYPE[this.type] == 0x30) {
-        var att = new UInt16(this.bin, this.offset_in_file + 0x1a);
-        if (!att.isNull()) {
-          this.attack1 = att;
-        }
-        att = new UInt16(this.bin, this.offset_in_file + 0x1c);
-        if (!att.isNull()) {
-          this.attack2 = att;
-        }
-        att = new UInt16(this.bin, this.offset_in_file + 0x1e);
-        if (!att.isNull()) {
-          this.attack3 = att;
-        }
-      }
-
       /*
   Entity data types
   0 tilt
@@ -1112,6 +1097,20 @@
     this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
     this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
 
+      if (ENTITY_STATE_SIZE_BY_TYPE[this.type] == 0x30) {
+        var att = new UInt16(this.originalBin, 0x1a);
+        if (!att.isNull()) {
+          this.attack1 = att;
+        }
+        att = new UInt16(this.originalBin, 0x1c);
+        if (!att.isNull()) {
+          this.attack2 = att;
+        }
+        att = new UInt16(this.originalBin, 0x1e);
+        if (!att.isNull()) {
+          this.attack3 = att;
+        }
+      }
   }
 
   toReadableString() {
@@ -1510,6 +1509,7 @@
       this.attack1 = new UInt8( bin, this.offset_in_file + 0x07);
       this.attack2 = new UInt8( bin, this.offset_in_file + 0x08);
       this.magic1 = new UInt8( bin, this.offset_in_file + 0x09);
+
       this.height = new UInt16( bin, this.offset_in_file + 0x0b);
       this.weight = new UInt16( bin, this.offset_in_file + 0x0d);
       this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
@@ -1860,6 +1860,8 @@
          + Math.round(this.creature().magDefense5.get()) + " "
         + " a" + Math.round(this.creature().attack1.get()) + " a" + Math.round(this.creature().attack2.get())
         + " m" + Math.round(this.creature().magic1.get());
+
+      this.creature().attacks.forEach(attack => text+=" a"+attack.get());
       var summary = '<span style="background:#ff8080">'+text+'</span>\n';
 
       mapDraw.push({
