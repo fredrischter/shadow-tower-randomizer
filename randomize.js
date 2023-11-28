@@ -230,6 +230,7 @@ function randomize(paramsFile, stDir) {
         //creature1.something3.swap(creature2.something3);
         //creature1.something4.swap(creature2.something4);
 */
+/*
         for (var i in creature1.area.creatures) {
             var candidateForSimilar2 = creature1.area.creatures[i];
             if (candidateForSimilar2 != creature1 &&
@@ -270,7 +271,7 @@ function randomize(paramsFile, stDir) {
                     });
                 }
             }
-        }
+        }*/
     }
 
     let changeSet = [];

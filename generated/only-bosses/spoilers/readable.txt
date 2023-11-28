@@ -3446,12 +3446,6 @@ Swapping creatures 09_dwarf_warrior (earth_world_poisonous_cavern) and 05_blood_
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\only-bosses\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T
 Swapping creatures 06_dweller (water_world_impure_pool_area) and 0d_dweller (fire_world_burning_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
-Setting similar creature to same as swapped: 0a_dweller getting assigned to be like 0d_dweller
-  fileCopy .\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T->.\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
-Setting similar creature to same as swapped: 01_dweller getting assigned to be like 06_dweller
-  fileCopy .\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T->.\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\8 800-800.T
-Setting similar creature to same as swapped: 05_dweller getting assigned to be like 06_dweller
-  fileCopy .\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T->.\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\28 53800-53800.T
 Swapping creatures 09_blood_slime (human_world_hidden_region) and 09_sloth_bug (earth_world_false_pit_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
 Swapping creatures 02_tongue_imp (human_world_cursed_region) and 05_dark_spirits (illusion_world_gloomy_domain)
@@ -3488,11 +3482,9 @@ Swapping creatures 08_dark_spider (earth_world_false_pit_cavern) and 01_beak_pla
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\only-bosses\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
 Swapping creatures 04_night_howler (monster_world_false_eye_area) and 08_hermit_crab (monster_world_false_eye_area)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T-.\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
-Setting similar creature to same as swapped: 00_night_howler getting assigned to be like 04_night_howler
-  fileCopy .\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T->.\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
 Swapping creatures 05_cocoon_plant (earth_world_false_pit_cavern) and 00_acid_skull (human_world_hidden_region)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T-.\generated\only-bosses\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
-Swapping creatures 04_night_howler (monster_world_false_eye_area) and 0a_horned_slime (illusion_world_bewilderment_domain)
+Swapping creatures 00_night_howler (monster_world_false_eye_area) and 0a_horned_slime (illusion_world_bewilderment_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\only-bosses\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
 Swapping creatures 05_gargaral (water_world_watery_labyrinth_area) and 0c_saurian_warrior_a (monster_world_false_eye_area)
   fileSwap .\generated\only-bosses\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T
@@ -3510,7 +3502,7 @@ Swapping creatures 0c_worm_face (water_world_impure_pool_area) and 05_dark_spiri
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T-.\generated\only-bosses\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T
 Swapping creatures 09_cocoon_plant (earth_world_quaking_cavern) and 08_war_demon_1 (illusion_world_bewilderment_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\only-bosses\extracted\ST\CHR0\M08.T_PARTS\43 d6800-d7800.T
-Swapping creatures 04_night_howler (illusion_world_bewilderment_domain) and 01_horned_skull (illusion_world_gloomy_domain)
+Swapping creatures 00_night_howler (illusion_world_bewilderment_domain) and 01_horned_skull (illusion_world_gloomy_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
 Swapping creatures 08_star_serpent (earth_world_rotting_cavern) and 00_master_knight (illusion_world_worship_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T-.\generated\only-bosses\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T
@@ -3550,8 +3542,6 @@ Swapping creatures 06_skeleton (human_world_solitary_region) and 0e_watcher_plan
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T-.\generated\only-bosses\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T
 Swapping creatures 04_acid_skull (fire_world_burning_cavern) and 01_beak_plant (earth_world_false_pit_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T-.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
-Setting similar creature to same as swapped: 00_acid_skull getting assigned to be like 04_acid_skull
-  fileCopy .\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T->.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
 Swapping creatures 08_trickster (earth_world_poisonous_cavern) and 05_armored_warrior (death_world_dark_castle_layer)
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\only-bosses\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
 Swapping creatures 01_myconid (earth_world_rotting_cavern) and 08_ring_demon (illusion_world_gloomy_domain)
@@ -3566,9 +3556,9 @@ Swapping creatures 09_blood_slime (earth_world_false_pit_cavern) and 0c_ray_plan
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
 Swapping creatures 04_acid_slime (illusion_world_worship_domain) and 02_skeleton (death_world_dark_castle_layer)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T-.\generated\only-bosses\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
-Swapping creatures 04_night_howler (illusion_world_gloomy_domain) and 04_acid_skull (earth_world_false_pit_cavern)
+Swapping creatures 00_night_howler (illusion_world_gloomy_domain) and 00_acid_skull (earth_world_false_pit_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
-Swapping creatures 04_acid_slime (death_world_dark_castle_layer) and 04_acid_skull (illusion_world_gloomy_domain)
+Swapping creatures 04_acid_slime (death_world_dark_castle_layer) and 00_acid_skull (illusion_world_gloomy_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
 Swapping creatures 0d_blood_bone (death_world_gate_of_the_dead) and 01_blood_slime (human_world_hidden_region)
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T-.\generated\only-bosses\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
@@ -3598,23 +3588,19 @@ Swapping creatures 06_warpoor (human_world_hidden_region) and 02_parasite (human
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\only-bosses\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
 Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 00_dark_spider (illusion_world_gloomy_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T-.\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
-Setting similar creature to same as swapped: 04_dark_spirits getting assigned to be like 01_dark_spirits
-  fileCopy .\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T->.\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
-Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 09_sloth_bug (earth_world_false_pit_cavern)
+Swapping creatures 04_dark_spirits (illusion_world_gloomy_domain) and 09_sloth_bug (earth_world_false_pit_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
-Swapping creatures 00_winged_worm (human_world_forgotten_region) and 0d_dweller (water_world_impure_pool_area)
+Swapping creatures 00_winged_worm (human_world_forgotten_region) and 0a_dweller (water_world_impure_pool_area)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T-.\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
 Swapping creatures 08_wyvern (water_world_watery_labyrinth_area) and 08_trickster (death_world_dark_castle_layer)
   fileSwap .\generated\only-bosses\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\only-bosses\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
-Swapping creatures 04_acid_skull (death_world_dark_castle_layer) and 06_dweller (fire_world_burning_cavern)
+Swapping creatures 00_acid_skull (death_world_dark_castle_layer) and 06_dweller (fire_world_burning_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
-Setting similar creature to same as swapped: 04_acid_skull getting assigned to be like 04_acid_skull
-  fileCopy .\generated\only-bosses\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T->.\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T
 Swapping creatures 04_acid_slime (illusion_world_gloomy_domain) and 09_cross_breed (earth_world_rotting_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\only-bosses\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
 Swapping creatures 00_winged_worm (water_world_impure_pool_area) and 09_armored_warrior (human_world_solitary_region)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T-.\generated\only-bosses\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
-Swapping creatures 0d_tondrom (monster_world_false_eye_area) and 04_acid_skull (fire_world_burning_cavern)
+Swapping creatures 0d_tondrom (monster_world_false_eye_area) and 00_acid_skull (fire_world_burning_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\only-bosses\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
 Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 0e_dinogon (illusion_world_worship_domain)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\only-bosses\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T
@@ -3644,9 +3630,7 @@ Swapping creatures 09_war_demon_2 (fire_world_molten_cavern) and 00_watcher_plan
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T-.\generated\only-bosses\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
 Swapping creatures 06_hell_warrior (human_world_hidden_region) and 01_horned_slime (water_world_impure_pool_area)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T-.\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
-Setting similar creature to same as swapped: 0a_horned_slime getting assigned to be like 01_horned_slime
-  fileCopy .\generated\only-bosses\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T->.\generated\only-bosses\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
-Swapping creatures 0e_mystic_tower (illusion_world_gloomy_domain) and 04_acid_skull (monster_world_false_eye_area)
+Swapping creatures 0e_mystic_tower (illusion_world_gloomy_domain) and 00_acid_skull (monster_world_false_eye_area)
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T-.\generated\only-bosses\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
 Swapping creatures 0c_ray_plant (earth_world_false_pit_cavern) and 09_blood_slime (earth_world_false_pit_cavern)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\only-bosses\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
@@ -3690,8 +3674,6 @@ Swapping creatures 0d_death_serpent (fire_world_phoenix_cave) and 04_berzerker (
   fileSwap .\generated\only-bosses\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\only-bosses\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
 Swapping creatures 0d_trickster (earth_world_poisonous_cavern) and 00_kabasaur (water_world_watery_labyrinth_area)
   fileSwap .\generated\only-bosses\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T-.\generated\only-bosses\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T
-Setting similar creature to same as swapped: 08_trickster getting assigned to be like 0d_trickster
-  fileCopy .\generated\only-bosses\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T->.\generated\only-bosses\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
 Swapping creatures 0d_damned_angel (fire_world_ashen_cavern) and 0c_death_mage (fire_world_phoenix_cave)
   fileSwap .\generated\only-bosses\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\only-bosses\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
 Swapping creatures 0d_bugler (fire_world_molten_cavern) and 0d_death_serpent (death_world_lingering_curse_layer)
@@ -3771,10 +3753,10 @@ Applying factor 0.1 to creature 0e_acid_slime. Attributes minWeaponDefense 4.4 m
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 01_horned_slime
+DEBUG - Creature 0a_horned_slime
 DEBUG - Changing denfese. 80 to 8
 DEBUG - Changing attack. 80 to 8
-Applying factor 0.1 to creature 01_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
+Applying factor 0.1 to creature 0a_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
 DEBUG - Creature 0e_dinogon
 DEBUG - Changing denfese. 64 to 6.4
 DEBUG - Changing attack. 165 to 16.5
@@ -3792,7 +3774,7 @@ DEBUG - Changing attack. 78 to 7.800000000000001
 Applying factor 0.1 to creature 02_parasite. Attributes minWeaponDefense 7.7 maxWeaponDefense 2.8000000000000003 minMagicDefense 7.5 maxMagicDefense 7.6000000000000005
 DEBUG - Creature 01_horned_slime
 DEBUG - Changing denfese. 80 to 8
-DEBUG - Changing attack. 8 to 0.8
+DEBUG - Changing attack. 80 to 8
 Applying factor 0.1 to creature 01_horned_slime. Attributes minWeaponDefense 8 maxWeaponDefense 7.800000000000001 minMagicDefense 8.9 maxMagicDefense 7.2
 DEBUG - Creature 06_fanged_worm
 DEBUG - Changing denfese. 48 to 4.800000000000001
@@ -3843,9 +3825,9 @@ Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 09_iron_crusher
 DEBUG - Changing denfese. 82 to 8.200000000000001
 Applying factor 0.1 to creature 09_iron_crusher. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
-DEBUG - Creature 0d_dweller
-DEBUG - Changing denfese. 82 to 8.200000000000001
-Applying factor 0.1 to creature 0d_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
+DEBUG - Creature 0a_dweller
+DEBUG - Changing denfese. 75 to 7.5
+Applying factor 0.1 to creature 0a_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
 DEBUG - Creature 09_descrypha
 DEBUG - Changing denfese. 70 to 7
 Applying factor 0.1 to creature 09_descrypha. Attributes minWeaponDefense 7 maxWeaponDefense 10 minMagicDefense 60 maxMagicDefense 17
@@ -4106,10 +4088,10 @@ Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 04_cannon_snail
 DEBUG - Changing denfese. 62 to 6.2
 Applying factor 0.1 to creature 04_cannon_snail. Attributes minWeaponDefense 6.2 maxWeaponDefense 10 minMagicDefense 4.5 maxMagicDefense 4.6000000000000005
-DEBUG - Creature 04_night_howler
+DEBUG - Creature 00_night_howler
 DEBUG - Changing denfese. 52 to 5.2
-DEBUG - Changing attack. 32 to 3.2
-Applying factor 0.1 to creature 04_night_howler. Attributes minWeaponDefense 5.2 maxWeaponDefense 6.5 minMagicDefense 8.3 maxMagicDefense 7.4
+DEBUG - Changing attack. 320 to 32
+Applying factor 0.1 to creature 00_night_howler. Attributes minWeaponDefense 5.2 maxWeaponDefense 6.5 minMagicDefense 8.3 maxMagicDefense 7.4
 DEBUG - Creature 06_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 06_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4133,11 +4115,11 @@ Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeapon
 DEBUG - Creature 0c_ray_plant
 DEBUG - Changing denfese. 105 to 10.5
 Applying factor 0.1 to creature 0c_ray_plant. Attributes minWeaponDefense 10.5 maxWeaponDefense 4.5 minMagicDefense 9 maxMagicDefense 7
-DEBUG - Creature 01_dark_spirits
-DEBUG - Changing denfese. 95 to 9.5
-DEBUG - Changing attack. 115 to 11.5
-DEBUG - Changing attack. 375 to 37.5
-Applying factor 0.1 to creature 01_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
+DEBUG - Creature 04_dark_spirits
+DEBUG - Changing denfese. 75 to 7.5
+DEBUG - Changing attack. 120 to 12
+DEBUG - Changing attack. 355 to 35.5
+Applying factor 0.1 to creature 04_dark_spirits. Attributes minWeaponDefense 7.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 0e_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4375,10 +4357,9 @@ Applying factor 0.1 to creature 00_sand_leech_a. Attributes minWeaponDefense 3 m
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0d_trickster
-DEBUG - Changing denfese. 78 to 7.800000000000001
-DEBUG - Changing attack. 5 to 0.5
-Applying factor 0.1 to creature 0d_trickster. Attributes minWeaponDefense 7.800000000000001 maxWeaponDefense 10.5 minMagicDefense 7.2 maxMagicDefense 4.6000000000000005
+DEBUG - Creature 08_trickster
+DEBUG - Changing denfese. 53 to 5.300000000000001
+Applying factor 0.1 to creature 08_trickster. Attributes minWeaponDefense 5.300000000000001 maxWeaponDefense 6.7 minMagicDefense 3 maxMagicDefense 1.4000000000000001
 DEBUG - Creature 08_dark_spider
 DEBUG - Changing denfese. 50 to 5
 DEBUG - Changing attack. 9 to 0.9
@@ -4525,9 +4506,9 @@ DEBUG - Creature 00_berzerker
 DEBUG - Changing denfese. 65 to 6.5
 DEBUG - Changing attack. 180 to 18
 Applying factor 0.1 to creature 00_berzerker. Attributes minWeaponDefense 6.5 maxWeaponDefense 4.5 minMagicDefense 2 maxMagicDefense 7.2
-DEBUG - Creature 06_dweller
-DEBUG - Changing denfese. 75 to 7.5
-Applying factor 0.1 to creature 06_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
+DEBUG - Creature 01_dweller
+DEBUG - Changing denfese. 82 to 8.200000000000001
+Applying factor 0.1 to creature 01_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
 DEBUG - Creature 04_acid_skull
 DEBUG - Changing denfese. 55 to 5.5
 DEBUG - Changing attack. 16 to 1.6
@@ -4539,9 +4520,9 @@ DEBUG - Creature 0d_arachness
 DEBUG - Changing denfese. 60 to 6
 DEBUG - Changing attack. 245 to 24.5
 Applying factor 0.1 to creature 0d_arachness. Attributes minWeaponDefense 6 maxWeaponDefense 12 minMagicDefense 14 maxMagicDefense 17
-DEBUG - Creature 06_dweller
-DEBUG - Changing denfese. 75 to 7.5
-Applying factor 0.1 to creature 06_dweller. Attributes minWeaponDefense 7.5 maxWeaponDefense 8.200000000000001 minMagicDefense 7.9 maxMagicDefense 9.4
+DEBUG - Creature 05_dweller
+DEBUG - Changing denfese. 82 to 8.200000000000001
+Applying factor 0.1 to creature 05_dweller. Attributes minWeaponDefense 8.200000000000001 maxWeaponDefense 8.8 minMagicDefense 2 maxMagicDefense 8
 DEBUG - Creature 09_dwarf_warrior
 DEBUG - Changing denfese. 93 to 9.3
 DEBUG - Changing attack. 64 to 6.4
@@ -4891,10 +4872,10 @@ Applying factor 0.1 to creature 01_myconid. Attributes minWeaponDefense 4.3 maxW
 DEBUG - Creature 09_dark_fairy
 DEBUG - Changing denfese. 55 to 5.5
 Applying factor 0.1 to creature 09_dark_fairy. Attributes minWeaponDefense 5.5 maxWeaponDefense 7.5 minMagicDefense 33 maxMagicDefense 60
-DEBUG - Creature 04_acid_skull
+DEBUG - Creature 00_acid_skull
 DEBUG - Changing denfese. 55 to 5.5
-DEBUG - Changing attack. 1.6 to 0.16000000000000003
-Applying factor 0.1 to creature 04_acid_skull. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 8.9 maxMagicDefense 8.5
+DEBUG - Changing attack. 16 to 1.6
+Applying factor 0.1 to creature 00_acid_skull. Attributes minWeaponDefense 5.5 maxWeaponDefense 6 minMagicDefense 8.9 maxMagicDefense 8.5
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 0.1 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -5044,8 +5025,8 @@ DEBUG - Changing attack. 365 to 36.5
 Applying factor 0.1 to creature 08_armored_guardian. Attributes minWeaponDefense 7.9 maxWeaponDefense 6.9 minMagicDefense 27 maxMagicDefense 7
 DEBUG - Creature 01_dark_spirits
 DEBUG - Changing denfese. 95 to 9.5
-DEBUG - Changing attack. 11.5 to 1.1500000000000001
-DEBUG - Changing attack. 37.5 to 3.75
+DEBUG - Changing attack. 115 to 11.5
+DEBUG - Changing attack. 375 to 37.5
 Applying factor 0.1 to creature 01_dark_spirits. Attributes minWeaponDefense 9.5 maxWeaponDefense 6.5 minMagicDefense 60 maxMagicDefense 60
 DEBUG - Creature 0a_armored_slayer
 DEBUG - Changing denfese. 60 to 6

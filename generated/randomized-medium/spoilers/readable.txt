@@ -2838,20 +2838,12 @@ Swapping creatures 06_mystic_tower (fire_world_molten_cavern) and 06_skeleton (h
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T-.\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\33 b8000-b9000.T
 Swapping creatures 01_acid_pod (earth_world_false_pit_cavern) and 0a_cocoon_plant (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T
-Setting similar creature to same as swapped: 0d_cocoon_plant getting assigned to be like 0a_cocoon_plant
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T->.\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
-Setting similar creature to same as swapped: 05_acid_pod getting assigned to be like 01_acid_pod
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T->.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
 Swapping creatures 09_war_demon_2 (death_world_gate_of_the_dead) and 0a_horned_slime (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T-.\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
 Swapping creatures 05_gargaral (illusion_world_bewilderment_domain) and 09_dwarf_warrior (earth_world_poisonous_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\randomized-medium\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T
 Swapping creatures 05_blood_brain (water_world_watery_labyrinth_area) and 06_dweller (water_world_impure_pool_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T
-Setting similar creature to same as swapped: 0d_dweller getting assigned to be like 06_dweller
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T->.\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
-Setting similar creature to same as swapped: 02_blood_brain getting assigned to be like 05_blood_brain
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T->.\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
 Swapping creatures 04_great_frog (fire_world_burning_cavern) and 08_hermit_crab (human_world_hidden_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T
 Swapping creatures 09_sloth_bug (earth_world_false_pit_cavern) and 06_mystic_tower (fire_world_burning_cavern)
@@ -2870,25 +2862,19 @@ Swapping creatures 0d_crying_root (earth_world_stone_cavern) and 05_dwarfling (h
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\randomized-medium\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T
 Swapping creatures 06_mystic_tower (earth_world_false_pit_cavern) and 00_dark_spider (human_world_solitary_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\randomized-medium\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
-Swapping creatures 05_armored_warrior (water_world_impure_pool_area) and 0a_cocoon_plant (earth_world_false_pit_cavern)
+Swapping creatures 05_armored_warrior (water_world_impure_pool_area) and 0d_cocoon_plant (earth_world_false_pit_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T-.\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
 Swapping creatures 05_dwarfling (earth_world_stone_cavern) and 02_mystic_tower (human_world_hidden_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
 Swapping creatures 00_acid_skull (human_world_forgotten_region) and 04_acid_skull (human_world_forgotten_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T-.\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Setting similar creature to same as swapped: 00_acid_skull getting assigned to be like 04_acid_skull
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T->.\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Setting similar creature to same as swapped: 04_acid_skull getting assigned to be like 04_acid_skull
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T->.\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
 Swapping creatures 01_earth_knight (fire_world_burning_cavern) and 0a_cocoon_plant (earth_world_false_pit_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T-.\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T
-Setting similar creature to same as swapped: 00_earth_knight getting assigned to be like 01_earth_knight
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T->.\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T
 Swapping creatures 08_casket (human_world_hidden_region) and 09_cross_breed (illusion_world_worship_domain)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\randomized-medium\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
 Swapping creatures 05_horned_slime (water_world_impure_pool_area) and 0a_skeleton (human_world_solitary_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\randomized-medium\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
-Swapping creatures 09_armored_warrior (death_world_dark_castle_layer) and 05_blood_brain (water_world_impure_pool_area)
+Swapping creatures 09_armored_warrior (death_world_dark_castle_layer) and 02_blood_brain (water_world_impure_pool_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
 Swapping creatures 02_sand_leech_b (earth_world_quaking_cavern) and 00_dark_spider (human_world_cursed_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T-.\generated\randomized-medium\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T
@@ -2904,12 +2890,10 @@ Swapping creatures 09_dwarf_warrior (illusion_world_bewilderment_domain) and 09_
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
 Swapping creatures 0c_saurian_warrior_a (monster_world_false_eye_area) and 05_horned_skull (fire_world_burning_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T-.\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
-Swapping creatures 05_blood_brain (death_world_dark_castle_layer) and 05_dwarfling (monster_world_false_eye_area)
+Swapping creatures 02_blood_brain (death_world_dark_castle_layer) and 05_dwarfling (monster_world_false_eye_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
 Swapping creatures 00_acid_slime (human_world_hidden_region) and 04_night_howler (earth_world_poisonous_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T-.\generated\randomized-medium\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
-Setting similar creature to same as swapped: 00_night_howler getting assigned to be like 04_night_howler
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T->.\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
 Swapping creatures 02_gordoral (illusion_world_bewilderment_domain) and 04_kiljoy (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
 Swapping creatures 00_sand_leech_a (earth_world_quaking_cavern) and 06_oblid (monster_world_screeching_area)
@@ -2932,7 +2916,7 @@ Swapping creatures 04_acid_slime (human_world_hidden_region) and 06_dweller (wat
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T
 Swapping creatures 01_beak_plant (monster_world_false_eye_area) and 00_red_puppet (water_world_impure_pool_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T-.\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T
-Swapping creatures 02_karasu (death_world_dark_castle_layer) and 06_dweller (water_world_watery_labyrinth_area)
+Swapping creatures 02_karasu (death_world_dark_castle_layer) and 0d_dweller (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T-.\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
 Swapping creatures 00_red_puppet (monster_world_false_eye_area) and 06_armored_slayer (death_world_dark_castle_layer)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T-.\generated\randomized-medium\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
@@ -2944,20 +2928,18 @@ Swapping creatures 00_winged_worm (water_world_white_rain_area) and 08_dark_spid
   fileSwap .\generated\randomized-medium\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T-.\generated\randomized-medium\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
 Swapping creatures 0a_skeleton (water_world_impure_pool_area) and 09_sloth_bug (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
-Swapping creatures 01_acid_pod (earth_world_quaking_cavern) and 00_acid_slime (earth_world_poisonous_cavern)
+Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 00_acid_slime (earth_world_poisonous_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\randomized-medium\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
 Swapping creatures 01_blood_skull (human_world_forgotten_region) and 02_tongue_imp (fire_world_ashen_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T-.\generated\randomized-medium\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T
 Swapping creatures 05_dwarfling (death_world_dark_castle_layer) and 00_black_onyx (earth_world_hostile_rock_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-medium\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
-Swapping creatures 06_oblid (earth_world_quaking_cavern) and 05_blood_brain (monster_world_false_eye_area)
+Swapping creatures 06_oblid (earth_world_quaking_cavern) and 02_blood_brain (monster_world_false_eye_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T-.\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
 Swapping creatures 0d_slasher (water_world_watery_labyrinth_area) and 05_blood_skull (death_world_gate_of_the_dead)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\randomized-medium\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
 Swapping creatures 02_mystic_tower (earth_world_stone_cavern) and 06_skeleton (human_world_solitary_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\randomized-medium\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T
-Setting similar creature to same as swapped: 06_mystic_tower getting assigned to be like 02_mystic_tower
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T->.\generated\randomized-medium\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
 Swapping creatures 06_hell_warrior (earth_world_poisonous_cavern) and 0a_cocoon_plant (fire_world_burning_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T-.\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
 Swapping creatures 0a_dark_bishop (earth_world_false_pit_cavern) and 08_trickster (earth_world_poisonous_cavern)
@@ -2990,14 +2972,12 @@ Swapping creatures 09_dementor (monster_world_false_eye_area) and 0a_bone_wolf (
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T-.\generated\randomized-medium\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
 Swapping creatures 00_watcher_plant (earth_world_rotting_cavern) and 01_earth_knight (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T-.\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
-Swapping creatures 08_wyvern (death_world_gate_of_the_dead) and 05_blood_brain (earth_world_quaking_cavern)
+Swapping creatures 08_wyvern (death_world_gate_of_the_dead) and 02_blood_brain (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T-.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
 Swapping creatures 05_water_knight (water_world_sunken_river_area) and 05_blood_slime (human_world_hidden_region)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T-.\generated\randomized-medium\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
 Swapping creatures 02_skeleton (water_world_watery_labyrinth_area) and 02_gordoral (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
-Setting similar creature to same as swapped: 0a_skeleton getting assigned to be like 02_skeleton
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T->.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
 Swapping creatures 02_horned_slime (water_world_watery_labyrinth_area) and 08_trickster (earth_world_false_pit_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T-.\generated\randomized-medium\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
 Swapping creatures 02_parasite (fire_world_burning_cavern) and 0a_warpoor (illusion_world_worship_domain)
@@ -3022,9 +3002,7 @@ Swapping creatures 00_winged_worm (earth_world_rotting_cavern) and 00_watcher_pl
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T-.\generated\randomized-medium\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
 Swapping creatures 05_horned_slime (human_world_solitary_region) and 08_dark_spider (monster_world_false_eye_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
-Setting similar creature to same as swapped: 0d_dark_spider getting assigned to be like 08_dark_spider
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T->.\generated\randomized-medium\extracted\ST\CHR0\M04.T_PARTS\68 103000-103000.T
-Swapping creatures 08_ring_demon (fire_world_burning_cavern) and 02_skeleton (earth_world_quaking_cavern)
+Swapping creatures 08_ring_demon (fire_world_burning_cavern) and 0a_skeleton (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-medium\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
 Swapping creatures 02_parasite (illusion_world_worship_domain) and 00_black_onyx (death_world_dark_castle_layer)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\randomized-medium\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
@@ -3056,8 +3034,6 @@ Swapping creatures 09_steel_servant (fire_world_molten_cavern) and 00_hell_hunte
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T-.\generated\randomized-medium\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
 Swapping creatures 0d_deha (monster_world_screeching_area) and 06_fire_jinn (fire_world_burning_cavern)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T-.\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
-Setting similar creature to same as swapped: 02_fire_jinn getting assigned to be like 06_fire_jinn
-  fileCopy .\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T->.\generated\randomized-medium\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T
 Swapping creatures 08_berzerker (fire_world_burning_cavern) and 06_fire_jinn (monster_world_screeching_area)
   fileSwap .\generated\randomized-medium\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T-.\generated\randomized-medium\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
 Swapping creatures 0c_gaze_hopper (water_world_watery_labyrinth_area) and 0d_deha (fire_world_burning_cavern)

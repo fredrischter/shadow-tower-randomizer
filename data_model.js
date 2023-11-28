@@ -669,6 +669,8 @@
 
     draw(mapDraw, mapSummary) {
       mapSummary.push('<span style="background:#f0f0f0">Item Memory used '+this.usedItemMemory()+'</span>\n');
+      var creaturesAttributes = this.creaturesAttributesRanges();
+      mapSummary.push('<span style="background:#f0f0f0">Creatures attributes '+creaturesAttributes.averageAttack + "/" + creaturesAttributes.averageDefense + "/" + creaturesAttributes.averageMagicDefense+'</span>\n');
 
       for (var i in this.spawns) {
         this.spawns[i].draw(mapDraw, mapSummary);
@@ -718,6 +720,45 @@
       }
 
       return models.size;
+    }
+
+    creaturesAttributesRanges() {
+      var minWeaponDefense = 100000;
+      var minMagicDefense = 100000;
+      var maxWeaponDefense = 0;
+      var maxMagicDefense = 0;
+      var attackSum = 0;
+      var count = 0;
+
+      for (var i in this.spawns) {
+        var spawn = this.spawns[i];
+        if (spawn.creature().minWeaponDefense) {
+          minWeaponDefense = Math.min(minWeaponDefense, spawn.creature().minWeaponDefense.get());
+          minMagicDefense = Math.min(minMagicDefense, spawn.creature().minMagicDefense.get());
+          maxWeaponDefense = Math.max(maxWeaponDefense, spawn.creature().maxWeaponDefense.get());
+          maxMagicDefense = Math.max(maxMagicDefense, spawn.creature().maxMagicDefense.get());
+          if (spawn.creature().attack1.get()) {
+            attackSum += spawn.creature().attack1.get();
+            count++;
+          }
+          if (spawn.creature().attack2.get()) {
+            attackSum += spawn.creature().attack2.get();
+            count++;
+          }
+        }
+      }
+
+      var averageAttack = count ? Math.round(attackSum/count) : 0;
+
+      return {
+        minWeaponDefense: Math.round(minWeaponDefense),
+        minMagicDefense: Math.round(minMagicDefense),
+        maxWeaponDefense: Math.round(maxWeaponDefense),
+        maxMagicDefense: Math.round(maxMagicDefense),
+        averageDefense: Math.round((minWeaponDefense + maxWeaponDefense)/2),
+        averageMagicDefense: Math.round((minMagicDefense + maxMagicDefense)/2),
+        averageAttack: averageAttack
+      };
     }
 
     writeMapImage(createCanvas, folder) {
@@ -1748,10 +1789,10 @@
 
       var text = "" + this.index.toString(16).padEnd(5) 
         + (" " + this.chance.get()).padStart(4) + "% 0x" + this.mutexGroup.get() + " " + this.name()
-        + " wd" + this.creature().minWeaponDefense.get() + "-" + this.creature().maxWeaponDefense.get() 
-        + " md" + this.creature().minMagicDefense.get() + "-" + this.creature().maxMagicDefense.get() 
-        + " a" + this.creature().attack1.get() + " a" + this.creature().attack2.get() 
-        + " m" + this.creature().magic1.get();
+        + " wd" + Math.round(this.creature().minWeaponDefense.get()) + "-" + Math.round(this.creature().maxWeaponDefense.get())
+        + " md" + Math.round(this.creature().minMagicDefense.get()) + "-" + Math.round(this.creature().maxMagicDefense.get())
+        + " a" + Math.round(this.creature().attack1.get()) + " a" + Math.round(this.creature().attack2.get())
+        + " m" + Math.round(this.creature().magic1.get());
       var summary = '<span style="background:#ff8080">'+text+'</span>\n';
 
       mapDraw.push({

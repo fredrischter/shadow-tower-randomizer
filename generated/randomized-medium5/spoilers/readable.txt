@@ -2842,6 +2842,254 @@ DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_f0
 DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_57_harden_great_helm at illusion_world_worship_domain/09_cross_breed
 DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_45_fiery_bow_gun at death_world_lingering_curse_layer/0d_bugler
  randomizableCreaturesCost1 00_dark_spider,01_acid_slime,02_blood_slime,06_skeleton,08_dark_spider,0a_skeleton,00_acid_slime,01_blood_slime,02_parasite,04_acid_slime,05_blood_slime,08_casket,09_blood_slime,00_acid_skull,01_blood_skull,02_skeleton,04_acid_skull,05_blood_skull,06_skeleton,00_dark_spider,02_tongue_imp,06_tongue_imp,08_dark_spider,00_watcher_plant,01_myconid,02_elder,04_minor_dwarf,05_dwarfling,06_elder,08_star_serpent,09_imp,0c_barrel_snail,0d_tondrom,0e_elder,01_beak_plant,02_watcher_plant,08_trickster,09_dwarf_warrior,0e_watcher_plant,00_sand_leech_a,01_blue_flicker,02_sand_leech_b,04_kiljoy,05_acid_pod,09_cocoon_plant,0a_cocoon_plant,00_earth_knight,01_acid_pod,04_cannon_snail,05_cocoon_plant,09_sloth_bug,0c_ray_plant,0d_cocoon_plant,05_hobble_worm,08_clay_servant,0a_barrel_snail,0d_crying_root,00_black_onyx,01_earth_knight,05_earth_knight,01_horned_slime,02_blood_brain,05_horned_slime,06_dweller,09_dementor,0a_dweller,0c_worm_face,0d_hatchlin,05_water_knight,02_horned_slime,04_great_frog,05_blood_brain,09_koazul,0a_horned_slime,0d_slasher,00_winged_worm,02_mystic_tower,06_mystic_tower,09_iron_crusher,0d_dweller,0e_mystic_tower,01_horned_skull,06_mystic_tower,05_horned_skull,09_cerberus,00_night_howler,04_night_howler,08_hermit_crab,0c_saurian_warrior_a,0d_saurian_warrior_b,0e_dinogon,05_warden,06_oblid,0a_cursed_demon,01_gargaral,02_gordoral,04_demon_warrior,05_gargaral,06_gordoral,08_war_demon_1,09_war_demon_2,00_red_puppet,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0a_dark_bishop,0c_maristella,00_master_knight,06_warpoor,09_cross_breed,0a_warpoor,02_karasu,05_armored_warrior,06_armored_slayer,09_armored_warrior,0a_armored_slayer,01_stack_eyes,09_descrypha,0c_old_face,05_hell_hunter,01_doriwi,02_bone_wolf,05_doriwi,06_hell_warrior,08_wyvern,0a_bone_wolf,0d_blood_bone randomizableCreaturesCost2 0d_trickster,08_torg,00_kabasaur,04_kabasaur,00_kabasaur,0c_gaze_hopper,0e_manna_python,02_fire_jinn,04_jinn_lord,05_armored_jinn,06_fire_jinn,04_berzerker,08_berzerker,04_berzerker,09_steel_servant,0d_arachness,01_berzerker,04_zygote,0a_ruby_demon,0d_damned_angel,01_chirper,04_king_hopper,08_oxelus,0d_death_serpent,0c_death_mage,0d_deha,00_dark_spirits,00_hell_hunter,04_tree_ogre,0a_old_face,0d_bugler randomizableFlyingCreaturesCost1 09_demon_bat,01_shadow_spider,09_shadow_spider,01_demon_bat,01_gargaral,02_gordoral,05_gargaral,06_gordoral,0a_rotting_face,0e_rotting_face,01_dark_spirits,04_dark_spirits,05_dark_spirits,08_ring_demon,0c_maristella,06_warpoor,09_cross_breed,0a_warpoor,08_apocrypha,09_descrypha,0a_demons_eye randomizableFlyingCreaturesCost2 00_bone_demon,09_dark_fairy,00_dark_spirits randomizableGateKeeperCreaturesCost1 02_elder,06_elder,0e_elder,02_sand_leech_b,08_claw_head randomizableGateKeeperCreaturesCost2 0e_claw_head
+Swapping creatures 0a_armored_slayer (death_world_dark_castle_layer) and 0a_skeleton (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
+Swapping creatures 00_black_onyx (earth_world_hostile_rock_cavern) and 01_beak_plant (earth_world_poisonous_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
+Swapping creatures 00_earth_knight (earth_world_false_pit_cavern) and 06_tongue_imp (human_world_cursed_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M01.T_PARTS\33 96800-97800.T
+Swapping creatures 04_dark_spirits (illusion_world_gloomy_domain) and 09_cross_breed (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
+Swapping creatures 01_beak_plant (earth_world_hostile_rock_cavern) and 08_hermit_crab (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
+Swapping creatures 02_blood_slime (human_world_solitary_region) and 0c_old_face (death_world_lingering_curse_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M14.T_PARTS\63 136800-137800.T
+Swapping creatures 09_iron_crusher (fire_world_burning_cavern) and 06_elder (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 01_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
+Swapping creatures 09_sloth_bug (earth_world_false_pit_cavern) and 09_iron_crusher (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T
+Swapping creatures 0c_ray_plant (earth_world_false_pit_cavern) and 05_blood_skull (human_world_forgotten_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T
+Swapping creatures 02_karasu (death_world_dark_castle_layer) and 06_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T
+Swapping creatures 01_acid_slime (human_world_solitary_region) and 08_dark_spider (human_world_cursed_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T
+Swapping creatures 08_dark_spider (human_world_solitary_region) and 09_descrypha (death_world_lingering_curse_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T
+Swapping creatures 02_karasu (illusion_world_bewilderment_domain) and 0a_bone_wolf (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
+Swapping creatures 01_doriwi (death_world_gate_of_the_dead) and 08_dark_spider (death_world_lingering_curse_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T
+Swapping creatures 06_mystic_tower (water_world_impure_pool_area) and 0a_cocoon_plant (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T
+Swapping creatures 01_horned_slime (fire_world_burning_cavern) and 06_armored_slayer (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
+Swapping creatures 08_war_demon_1 (illusion_world_bewilderment_domain) and 00_watcher_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\43 d6800-d7800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T
+Swapping creatures 0d_slasher (water_world_watery_labyrinth_area) and 09_sloth_bug (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T
+Swapping creatures 00_master_knight (illusion_world_worship_domain) and 05_hell_hunter (death_world_undead_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 0a_warpoor (illusion_world_worship_domain) and 09_descrypha (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T
+Swapping creatures 06_hell_warrior (death_world_gate_of_the_dead) and 00_master_knight (death_world_undead_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 05_armored_warrior (death_world_dark_castle_layer) and 05_gargaral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
+Swapping creatures 09_cross_breed (illusion_world_gloomy_domain) and 0d_cocoon_plant (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
+Swapping creatures 0a_skeleton (death_world_dark_castle_layer) and 09_koazul (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T-.\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T
+Swapping creatures 02_mystic_tower (fire_world_burning_cavern) and 05_dark_spirits (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
+Swapping creatures 02_parasite (human_world_hidden_region) and 00_acid_skull (human_world_forgotten_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
+Swapping creatures 08_clay_servant (earth_world_stone_cavern) and 06_oblid (monster_world_screeching_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T
+Swapping creatures 00_black_onyx (earth_world_poisonous_cavern) and 04_acid_skull (human_world_forgotten_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
+Swapping creatures 05_warden (monster_world_screeching_area) and 0a_skeleton (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T
+Swapping creatures 08_hermit_crab (earth_world_hostile_rock_cavern) and 02_bone_wolf (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T
+Swapping creatures 04_great_frog (water_world_watery_labyrinth_area) and 06_oblid (earth_world_stone_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T
+Swapping creatures 02_karasu (death_world_gate_of_the_dead) and 0e_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
+Swapping creatures 0d_saurian_warrior_b (monster_world_false_eye_area) and 05_gargaral (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
+Swapping creatures 05_blood_brain (water_world_watery_labyrinth_area) and 04_acid_skull (earth_world_poisonous_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
+Swapping creatures 0d_dweller (fire_world_burning_cavern) and 08_casket (human_world_hidden_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T
+Swapping creatures 0a_skeleton (monster_world_screeching_area) and 09_imp (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
+Swapping creatures 05_water_knight (water_world_sunken_river_area) and 00_black_onyx (human_world_forgotten_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
+Swapping creatures 02_watcher_plant (earth_world_poisonous_cavern) and 00_red_puppet (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
+Swapping creatures 02_gordoral (illusion_world_bewilderment_domain) and 04_great_frog (earth_world_stone_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T
+Swapping creatures 05_blood_brain (earth_world_poisonous_cavern) and 00_dark_spider (human_world_cursed_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T
+Swapping creatures 06_tongue_imp (earth_world_false_pit_cavern) and 01_blood_skull (human_world_forgotten_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T
+Swapping creatures 06_mystic_tower (earth_world_quaking_cavern) and 00_dark_spider (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
+Swapping creatures 09_imp (monster_world_screeching_area) and 06_warpoor (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
+Swapping creatures 08_casket (fire_world_burning_cavern) and 05_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T
+Swapping creatures 05_cocoon_plant (earth_world_false_pit_cavern) and 0a_skeleton (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
+Swapping creatures 0c_old_face (human_world_solitary_region) and 09_dementor (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T
+Swapping creatures 09_blood_slime (human_world_hidden_region) and 05_horned_skull (fire_world_ashen_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T
+Swapping creatures 01_stack_eyes (death_world_lingering_curse_layer) and 00_winged_worm (water_world_white_rain_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T-.\generated\randomized-medium5\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
+Swapping creatures 0d_blood_bone (death_world_gate_of_the_dead) and 0a_cocoon_plant (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
+Swapping creatures 09_blood_slime (fire_world_ashen_cavern) and 05_dwarfling (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
+Swapping creatures 05_blood_skull (earth_world_false_pit_cavern) and 0a_skeleton (earth_world_false_pit_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
+Swapping creatures 05_earth_knight (earth_world_hostile_rock_cavern) and 08_star_serpent (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T
+Swapping creatures 06_oblid (water_world_watery_labyrinth_area) and 0d_cocoon_plant (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
+Swapping creatures 06_armored_slayer (fire_world_burning_cavern) and 0a_dark_bishop (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
+Swapping creatures 0d_saurian_warrior_b (death_world_dark_castle_layer) and 09_dwarf_warrior (earth_world_poisonous_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T
+Swapping creatures 05_doriwi (death_world_gate_of_the_dead) and 09_cocoon_plant (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
+Swapping creatures 08_war_demon_1 (earth_world_rotting_cavern) and 05_earth_knight (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T
+Swapping creatures 0d_hatchlin (water_world_impure_pool_area) and 0a_horned_slime (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
+Swapping creatures 0a_horned_slime (water_world_impure_pool_area) and 0e_elder (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\73 18c000-18d000.T
+Swapping creatures 01_myconid (earth_world_rotting_cavern) and 09_cocoon_plant (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T
+Swapping creatures 08_hermit_crab (death_world_gate_of_the_dead) and 06_hell_warrior (death_world_undead_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 09_descrypha (illusion_world_worship_domain) and 08_casket (water_world_impure_pool_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T
+Swapping creatures 05_earth_knight (earth_world_rotting_cavern) and 0a_cocoon_plant (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T
+Swapping creatures 0a_armored_slayer (human_world_solitary_region) and 01_gargaral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\8 23000-24000.T
+Swapping creatures 0a_armored_slayer (illusion_world_bewilderment_domain) and 06_warpoor (monster_world_screeching_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\8 23000-24000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T
+Swapping creatures 05_horned_skull (human_world_hidden_region) and 04_night_howler (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T
+Swapping creatures 00_red_puppet (earth_world_poisonous_cavern) and 09_war_demon_2 (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T
+Swapping creatures 08_ring_demon (illusion_world_gloomy_domain) and 09_dwarf_warrior (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
+Swapping creatures 04_night_howler (human_world_hidden_region) and 09_dwarf_warrior (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
+Swapping creatures 09_blood_slime (earth_world_rotting_cavern) and 08_dark_spider (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T
+Swapping creatures 09_koazul (death_world_dark_castle_layer) and 04_minor_dwarf (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T
+Swapping creatures 05_armored_warrior (illusion_world_bewilderment_domain) and 01_horned_skull (fire_world_molten_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
+Swapping creatures 0d_hatchlin (water_world_watery_labyrinth_area) and 06_skeleton (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T
+Swapping creatures 00_winged_worm (death_world_lingering_curse_layer) and 09_cocoon_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
+Swapping creatures 09_koazul (earth_world_rotting_cavern) and 01_horned_skull (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
+Swapping creatures 01_acid_pod (earth_world_false_pit_cavern) and 06_warpoor (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\8 23000-24000.T
+Swapping creatures 00_acid_skull (human_world_hidden_region) and 05_hell_hunter (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T
+Swapping creatures 01_blue_flicker (earth_world_quaking_cavern) and 09_armored_warrior (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\8 22800-23800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 00_red_puppet (illusion_world_bewilderment_domain) and 09_armored_warrior (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\8 22800-23800.T
+Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 0d_tondrom (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
+Swapping creatures 02_sand_leech_b (earth_world_quaking_cavern) and 0a_warpoor (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T
+Swapping creatures 01_horned_slime (death_world_dark_castle_layer) and 0d_tondrom (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
+Swapping creatures 0e_elder (water_world_impure_pool_area) and 00_black_onyx (water_world_sunken_river_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T
+Swapping creatures 0d_cocoon_plant (water_world_watery_labyrinth_area) and 09_dementor (human_world_solitary_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T
+Swapping creatures 06_dweller (water_world_impure_pool_area) and 01_myconid (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T
+Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 00_sand_leech_a (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
+Swapping creatures 00_master_knight (death_world_gate_of_the_dead) and 02_karasu (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
+Swapping creatures 09_imp (illusion_world_worship_domain) and 08_star_serpent (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T-.\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T
+Swapping creatures 01_gargaral (human_world_solitary_region) and 06_gordoral (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
+Swapping creatures 02_watcher_plant (illusion_world_gloomy_domain) and 02_karasu (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
+Swapping creatures 0c_old_face (water_world_impure_pool_area) and 01_horned_skull (earth_world_rotting_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T
+Swapping creatures 09_descrypha (water_world_impure_pool_area) and 02_watcher_plant (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
+Swapping creatures 04_great_frog (illusion_world_bewilderment_domain) and 00_dark_spider (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T
+Swapping creatures 01_earth_knight (earth_world_hostile_rock_cavern) and 0d_crying_root (earth_world_stone_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
+Swapping creatures 00_dark_spider (illusion_world_bewilderment_domain) and 01_blood_slime (human_world_hidden_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
+Swapping creatures 01_myconid (water_world_impure_pool_area) and 02_bone_wolf (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T-.\generated\randomized-medium5\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
+Swapping creatures 08_trickster (earth_world_poisonous_cavern) and 0c_saurian_warrior_a (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T
+Swapping creatures 0a_cursed_demon (monster_world_screeching_area) and 01_blue_flicker (death_world_dark_castle_layer)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 05_cocoon_plant (earth_world_rotting_cavern) and 0e_mystic_tower (death_world_gate_of_the_dead)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
+Swapping creatures 06_fire_jinn (fire_world_phoenix_cave) and 01_chirper (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
+Swapping creatures 04_zygote (fire_world_ashen_cavern) and 00_dark_spirits (illusion_world_dream_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\23 71800-72800.T-.\generated\randomized-medium5\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T
+Swapping creatures 0d_arachness (fire_world_molten_cavern) and 0d_damned_angel (fire_world_ashen_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T
+Swapping creatures 05_armored_jinn (fire_world_phoenix_cave) and 08_torg (earth_world_quaking_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\43 c5000-c6000.T
+Swapping creatures 08_torg (fire_world_phoenix_cave) and 0d_arachness (fire_world_ashen_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T
+Swapping creatures 0d_death_serpent (monster_world_screeching_area) and 04_jinn_lord (fire_world_phoenix_cave)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
+Swapping creatures 01_chirper (fire_world_phoenix_cave) and 08_berzerker (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
+Swapping creatures 00_dark_spirits (fire_world_ashen_cavern) and 01_chirper (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\23 71800-72800.T-.\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
+Swapping creatures 08_torg (fire_world_ashen_cavern) and 0c_gaze_hopper (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T
+Swapping creatures 0a_ruby_demon (fire_world_ashen_cavern) and 00_dark_spirits (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
+Swapping creatures 00_hell_hunter (death_world_dark_castle_layer) and 08_torg (water_world_watery_labyrinth_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M25.T_PARTS\3 30800-31800.T-.\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T
+Swapping creatures 05_armored_jinn (earth_world_quaking_cavern) and 06_fire_jinn (monster_world_false_eye_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\43 c5000-c6000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
+Swapping creatures 04_jinn_lord (monster_world_screeching_area) and 0d_deha (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
+Swapping creatures 06_fire_jinn (earth_world_quaking_cavern) and 08_oxelus (monster_world_screeching_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M12.T_PARTS\43 c5000-c6000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T
+Swapping creatures 05_armored_jinn (monster_world_false_eye_area) and 04_berzerker (fire_world_burning_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
+Swapping creatures 0e_manna_python (water_world_watery_labyrinth_area) and 06_fire_jinn (monster_world_screeching_area)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T
+Swapping creatures 00_dark_spirits (fire_world_ashen_cavern) and 09_steel_servant (fire_world_molten_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T-.\generated\randomized-medium5\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T
+Swapping creatures 00_hell_hunter (water_world_watery_labyrinth_area) and 04_zygote (illusion_world_dream_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\randomized-medium5\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T
+Swapping creatures 0a_ruby_demon (fire_world_burning_cavern) and 01_berzerker (fire_world_ashen_cavern)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T-.\generated\randomized-medium5\extracted\ST\CHR1\M18.T_PARTS\8 44800-45800.T
+Swapping creatures 06_oblid (illusion_world_gloomy_domain) and 08_star_serpent (illusion_world_worship_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\randomized-medium5\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
+Swapping creatures 01_blood_slime (illusion_world_bewilderment_domain) and 0e_rotting_face (illusion_world_bewilderment_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
+Swapping creatures 0c_maristella (illusion_world_gloomy_domain) and 04_night_howler (illusion_world_gloomy_domain)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
+Swapping creatures 01_demon_bat (earth_world_stone_cavern) and 09_shadow_spider (human_world_cursed_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR2\M28.T_PARTS\8 47800-48800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M01.T_PARTS\48 d6000-d7000.T
+Swapping creatures 04_night_howler (illusion_world_gloomy_domain) and 01_shadow_spider (human_world_cursed_region)
+  fileSwap .\generated\randomized-medium5\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T-.\generated\randomized-medium5\extracted\ST\CHR0\M01.T_PARTS\8 36800-37800.T
 Difficulty medium, factor 1
 ERROR - Couldn't distribute collectable uniques 10,30,201,56,62,212,193,185,76,41,14,65,194,173,158,228,198,181,48,242,109,101,261,260,89,127,49,42,200,191,192,214
 ERROR - Couldn't distribute drop uniques 264,117,45,46,246,114,176,195,250,19,265,190,227,120,118,90,140,229,226,160,113,210,37,43

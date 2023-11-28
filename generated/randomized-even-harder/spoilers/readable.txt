@@ -2846,18 +2846,12 @@ Swapping creatures 06_mystic_tower (fire_world_molten_cavern) and 06_skeleton (h
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\33 b8000-b9000.T
 Swapping creatures 01_acid_pod (earth_world_false_pit_cavern) and 0a_cocoon_plant (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T
-Setting similar creature to same as swapped: 0d_cocoon_plant getting assigned to be like 0a_cocoon_plant
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\53 10b000-10c000.T->.\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
-Setting similar creature to same as swapped: 05_acid_pod getting assigned to be like 01_acid_pod
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T->.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
 Swapping creatures 01_doriwi (death_world_gate_of_the_dead) and 0a_horned_slime (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
 Swapping creatures 05_gargaral (illusion_world_bewilderment_domain) and 09_dwarf_warrior (earth_world_poisonous_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T
 Swapping creatures 05_blood_brain (water_world_watery_labyrinth_area) and 06_dweller (water_world_impure_pool_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T
-Setting similar creature to same as swapped: 02_blood_brain getting assigned to be like 05_blood_brain
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T->.\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
 Swapping creatures 0d_dweller (fire_world_burning_cavern) and 09_blood_slime (human_world_hidden_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T
 Swapping creatures 09_sloth_bug (earth_world_false_pit_cavern) and 06_mystic_tower (fire_world_burning_cavern)
@@ -2876,23 +2870,19 @@ Swapping creatures 0d_crying_root (earth_world_stone_cavern) and 08_dark_spider 
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T
 Swapping creatures 06_mystic_tower (earth_world_false_pit_cavern) and 00_dark_spider (human_world_solitary_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
-Swapping creatures 05_armored_warrior (water_world_impure_pool_area) and 0a_cocoon_plant (earth_world_false_pit_cavern)
+Swapping creatures 05_armored_warrior (water_world_impure_pool_area) and 0d_cocoon_plant (earth_world_false_pit_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
 Swapping creatures 08_dark_spider (earth_world_stone_cavern) and 02_mystic_tower (human_world_hidden_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
 Swapping creatures 00_acid_skull (human_world_forgotten_region) and 04_acid_skull (human_world_forgotten_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Setting similar creature to same as swapped: 00_acid_skull getting assigned to be like 04_acid_skull
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\23 78000-79000.T
-Setting similar creature to same as swapped: 04_acid_skull getting assigned to be like 04_acid_skull
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
 Swapping creatures 09_iron_crusher (fire_world_burning_cavern) and 0a_cocoon_plant (earth_world_false_pit_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T
 Swapping creatures 08_casket (human_world_hidden_region) and 09_cross_breed (illusion_world_worship_domain)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
 Swapping creatures 05_horned_slime (water_world_impure_pool_area) and 0a_skeleton (human_world_solitary_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
-Swapping creatures 09_armored_warrior (death_world_dark_castle_layer) and 05_blood_brain (water_world_impure_pool_area)
+Swapping creatures 09_armored_warrior (death_world_dark_castle_layer) and 02_blood_brain (water_world_impure_pool_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
 Swapping creatures 02_sand_leech_b (earth_world_quaking_cavern) and 00_dark_spider (human_world_cursed_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T
@@ -2904,18 +2894,14 @@ Swapping creatures 08_hermit_crab (monster_world_false_eye_area) and 09_dementor
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
 Swapping creatures 08_dark_spider (human_world_hidden_region) and 00_night_howler (monster_world_false_eye_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
-Setting similar creature to same as swapped: 08_dark_spider getting assigned to be like 08_dark_spider
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
 Swapping creatures 09_dwarf_warrior (illusion_world_bewilderment_domain) and 01_doriwi (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
 Swapping creatures 0c_saurian_warrior_a (monster_world_false_eye_area) and 05_horned_skull (fire_world_burning_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
-Swapping creatures 05_blood_brain (death_world_dark_castle_layer) and 08_dark_spider (monster_world_false_eye_area)
+Swapping creatures 02_blood_brain (death_world_dark_castle_layer) and 08_dark_spider (monster_world_false_eye_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
 Swapping creatures 00_acid_slime (human_world_hidden_region) and 04_night_howler (earth_world_poisonous_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
-Setting similar creature to same as swapped: 00_night_howler getting assigned to be like 04_night_howler
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
 Swapping creatures 02_gordoral (illusion_world_bewilderment_domain) and 04_kiljoy (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
 Swapping creatures 00_sand_leech_a (earth_world_quaking_cavern) and 06_oblid (monster_world_screeching_area)
@@ -2950,20 +2936,18 @@ Swapping creatures 00_winged_worm (water_world_white_rain_area) and 05_dwarfling
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
 Swapping creatures 0a_skeleton (water_world_impure_pool_area) and 09_sloth_bug (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
-Swapping creatures 01_acid_pod (earth_world_quaking_cavern) and 00_acid_slime (earth_world_poisonous_cavern)
+Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 00_acid_slime (earth_world_poisonous_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
 Swapping creatures 01_blood_skull (human_world_forgotten_region) and 02_tongue_imp (fire_world_ashen_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T
 Swapping creatures 08_dark_spider (death_world_dark_castle_layer) and 00_black_onyx (earth_world_hostile_rock_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
-Swapping creatures 06_oblid (earth_world_quaking_cavern) and 05_blood_brain (monster_world_false_eye_area)
+Swapping creatures 06_oblid (earth_world_quaking_cavern) and 02_blood_brain (monster_world_false_eye_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
 Swapping creatures 0d_slasher (water_world_watery_labyrinth_area) and 05_blood_skull (death_world_gate_of_the_dead)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
 Swapping creatures 02_mystic_tower (earth_world_stone_cavern) and 06_skeleton (human_world_solitary_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M04.T_PARTS\33 82800-83800.T
-Setting similar creature to same as swapped: 06_mystic_tower getting assigned to be like 02_mystic_tower
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
 Swapping creatures 06_hell_warrior (earth_world_poisonous_cavern) and 0a_cocoon_plant (fire_world_burning_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
 Swapping creatures 0a_dark_bishop (earth_world_false_pit_cavern) and 08_trickster (earth_world_poisonous_cavern)
@@ -2996,14 +2980,12 @@ Swapping creatures 09_dementor (monster_world_false_eye_area) and 0a_bone_wolf (
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
 Swapping creatures 00_watcher_plant (earth_world_rotting_cavern) and 09_iron_crusher (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
-Swapping creatures 08_wyvern (death_world_gate_of_the_dead) and 05_blood_brain (earth_world_quaking_cavern)
+Swapping creatures 08_wyvern (death_world_gate_of_the_dead) and 02_blood_brain (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
 Swapping creatures 05_water_knight (water_world_sunken_river_area) and 05_blood_slime (human_world_hidden_region)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
 Swapping creatures 02_skeleton (water_world_watery_labyrinth_area) and 02_gordoral (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
-Setting similar creature to same as swapped: 0a_skeleton getting assigned to be like 02_skeleton
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T->.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
 Swapping creatures 02_horned_slime (water_world_watery_labyrinth_area) and 08_trickster (earth_world_false_pit_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
 Swapping creatures 02_parasite (fire_world_burning_cavern) and 0a_warpoor (illusion_world_worship_domain)
@@ -3028,9 +3010,7 @@ Swapping creatures 00_winged_worm (earth_world_rotting_cavern) and 00_watcher_pl
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
 Swapping creatures 05_horned_slime (human_world_solitary_region) and 08_dark_spider (monster_world_false_eye_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
-Setting similar creature to same as swapped: 0d_dark_spider getting assigned to be like 08_dark_spider
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M04.T_PARTS\68 103000-103000.T
-Swapping creatures 08_ring_demon (fire_world_burning_cavern) and 02_skeleton (earth_world_quaking_cavern)
+Swapping creatures 08_ring_demon (fire_world_burning_cavern) and 0a_skeleton (earth_world_quaking_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
 Swapping creatures 02_parasite (illusion_world_worship_domain) and 00_black_onyx (death_world_dark_castle_layer)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
@@ -3064,8 +3044,6 @@ Swapping creatures 04_king_hopper (monster_world_screeching_area) and 04_berzerk
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
 Swapping creatures 08_berzerker (fire_world_burning_cavern) and 04_berzerker (monster_world_screeching_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
-Setting similar creature to same as swapped: 00_berzerker getting assigned to be like 04_berzerker
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T->.\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\3 800-800.T
 Swapping creatures 00_kabasaur (water_world_watery_labyrinth_area) and 04_king_hopper (fire_world_burning_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
 Swapping creatures 0c_death_mage (monster_world_false_eye_area) and 0a_old_face (death_world_lingering_curse_layer)
@@ -3078,8 +3056,6 @@ Swapping creatures 0e_manna_python (fire_world_phoenix_cave) and 0c_death_mage (
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T
 Swapping creatures 06_fire_jinn (water_world_watery_labyrinth_area) and 04_jinn_lord (fire_world_phoenix_cave)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
-Setting similar creature to same as swapped: 02_fire_jinn getting assigned to be like 06_fire_jinn
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T
 Swapping creatures 01_chirper (illusion_world_bewilderment_domain) and 04_berzerker (fire_world_molten_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\63 13b000-13c000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T
 Swapping creatures 00_kabasaur (death_world_lingering_curse_layer) and 00_kabasaur (fire_world_burning_cavern)
@@ -3088,9 +3064,9 @@ Swapping creatures 04_tree_ogre (fire_world_molten_cavern) and 04_jinn_lord (wat
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
 Swapping creatures 08_oxelus (monster_world_screeching_area) and 09_steel_servant (illusion_world_gloomy_domain)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
-Swapping creatures 06_fire_jinn (fire_world_phoenix_cave) and 04_tree_ogre (water_world_watery_labyrinth_area)
+Swapping creatures 02_fire_jinn (fire_world_phoenix_cave) and 04_tree_ogre (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
-Swapping creatures 0d_arachness (death_world_dark_castle_layer) and 06_fire_jinn (water_world_watery_labyrinth_area)
+Swapping creatures 0d_arachness (death_world_dark_castle_layer) and 02_fire_jinn (water_world_watery_labyrinth_area)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T-.\generated\randomized-even-harder\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
 Swapping creatures 05_armored_jinn (fire_world_phoenix_cave) and 08_oxelus (illusion_world_gloomy_domain)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
@@ -3100,8 +3076,6 @@ Swapping creatures 01_shadow_spider (human_world_cursed_region) and 0c_ray_plant
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M01.T_PARTS\8 36800-37800.T-.\generated\randomized-even-harder\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
 Swapping creatures 06_gordoral (illusion_world_bewilderment_domain) and 0e_rotting_face (illusion_world_bewilderment_domain)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T-.\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
-Setting similar creature to same as swapped: 0a_rotting_face getting assigned to be like 0e_rotting_face
-  fileCopy .\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T->.\generated\randomized-even-harder\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T
 Swapping creatures 0c_maristella (illusion_world_worship_domain) and 01_demon_bat (earth_world_stone_cavern)
   fileSwap .\generated\randomized-even-harder\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T-.\generated\randomized-even-harder\extracted\ST\CHR2\M28.T_PARTS\8 47800-48800.T
 Swapping creatures 04_acid_slime (illusion_world_gloomy_domain) and 08_war_demon_1 (illusion_world_bewilderment_domain)
@@ -3114,9 +3088,9 @@ Difficulty even-harder, factor 2
 DEBUG ------------------ Randomization engine - forEachValidCreature - applyDifficultyForEachValidCreature
 
 
-DEBUG - Creature 02_mystic_tower
+DEBUG - Creature 06_mystic_tower
 DEBUG - Changing denfese. 79 to 158
-Applying factor 2 to creature 02_mystic_tower. Attributes minWeaponDefense 158 maxWeaponDefense 110 minMagicDefense 100 maxMagicDefense 140
+Applying factor 2 to creature 06_mystic_tower. Attributes minWeaponDefense 158 maxWeaponDefense 110 minMagicDefense 100 maxMagicDefense 140
 DEBUG - Creature 01_acid_slime
 DEBUG - Changing denfese. 44 to 88
 DEBUG - Changing attack. 10 to 20
@@ -3158,11 +3132,11 @@ Applying factor 2 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDe
 DEBUG - Creature 0c_demon_bat
 DEBUG - Changing denfese. 50 to 100
 Applying factor 2 to creature 0c_demon_bat. Attributes minWeaponDefense 100 maxWeaponDefense 136 minMagicDefense 160 maxMagicDefense 96
-DEBUG - Creature 08_dark_spider
+DEBUG - Creature 0d_dark_spider
 DEBUG - Changing denfese. 50 to 100
-DEBUG - Changing attack. 18 to 36
-DEBUG - Changing attack. 22 to 44
-Applying factor 2 to creature 08_dark_spider. Attributes minWeaponDefense 100 maxWeaponDefense 76 minMagicDefense 100 maxMagicDefense 114
+DEBUG - Changing attack. 9 to 18
+DEBUG - Changing attack. 11 to 22
+Applying factor 2 to creature 0d_dark_spider. Attributes minWeaponDefense 100 maxWeaponDefense 76 minMagicDefense 100 maxMagicDefense 114
 DEBUG - Creature 0e_acid_slime
 DEBUG - Changing denfese. 44 to 88
 DEBUG - Changing attack. 10 to 20
@@ -3177,10 +3151,10 @@ Applying factor 2 to creature 04_night_howler. Attributes minWeaponDefense 104 m
 DEBUG - Creature 01_blue_flicker
 DEBUG - Changing denfese. 46 to 92
 Applying factor 2 to creature 01_blue_flicker. Attributes minWeaponDefense 92 maxWeaponDefense 100 minMagicDefense 80 maxMagicDefense 80
-DEBUG - Creature 04_night_howler
+DEBUG - Creature 00_night_howler
 DEBUG - Changing denfese. 52 to 104
-DEBUG - Changing attack. 255 to 255
-Applying factor 2 to creature 04_night_howler. Attributes minWeaponDefense 104 maxWeaponDefense 130 minMagicDefense 166 maxMagicDefense 148
+DEBUG - Changing attack. 320 to 255
+Applying factor 2 to creature 00_night_howler. Attributes minWeaponDefense 104 maxWeaponDefense 130 minMagicDefense 166 maxMagicDefense 148
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -3239,10 +3213,10 @@ Applying factor 2 to creature 09_dwarf_warrior. Attributes minWeaponDefense 186 
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_acid_skull
+DEBUG - Creature 00_acid_skull
 DEBUG - Changing denfese. 55 to 110
 DEBUG - Changing attack. 16 to 32
-Applying factor 2 to creature 04_acid_skull. Attributes minWeaponDefense 110 maxWeaponDefense 120 minMagicDefense 178 maxMagicDefense 170
+Applying factor 2 to creature 00_acid_skull. Attributes minWeaponDefense 110 maxWeaponDefense 120 minMagicDefense 178 maxMagicDefense 170
 DEBUG - Creature 05_armored_warrior
 DEBUG - Changing denfese. 70 to 140
 DEBUG - Changing attack. 430 to 255
@@ -3390,9 +3364,9 @@ Applying factor 2 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDe
 DEBUG - Creature 00_duhrin
 DEBUG - Changing denfese. 65 to 130
 Applying factor 2 to creature 00_duhrin. Attributes minWeaponDefense 130 maxWeaponDefense 248 minMagicDefense 140 maxMagicDefense 172
-DEBUG - Creature 01_acid_pod
+DEBUG - Creature 05_acid_pod
 DEBUG - Changing denfese. 50 to 100
-Applying factor 2 to creature 01_acid_pod. Attributes minWeaponDefense 100 maxWeaponDefense 140 minMagicDefense 240 maxMagicDefense 160
+Applying factor 2 to creature 05_acid_pod. Attributes minWeaponDefense 100 maxWeaponDefense 140 minMagicDefense 240 maxMagicDefense 160
 DEBUG - Creature 02_watcher_plant
 DEBUG - Changing denfese. 30 to 60
 DEBUG - Changing attack. 42 to 84
@@ -3596,8 +3570,8 @@ DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 08_dark_spider
 DEBUG - Changing denfese. 50 to 100
-DEBUG - Changing attack. 36 to 72
-DEBUG - Changing attack. 44 to 88
+DEBUG - Changing attack. 9 to 18
+DEBUG - Changing attack. 11 to 22
 Applying factor 2 to creature 08_dark_spider. Attributes minWeaponDefense 100 maxWeaponDefense 76 minMagicDefense 100 maxMagicDefense 114
 DEBUG - Creature 01_earth_knight
 DEBUG - Changing denfese. 78 to 156
@@ -3682,9 +3656,9 @@ Applying factor 2 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDe
 DEBUG - Creature 08_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 08_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 0a_cocoon_plant
+DEBUG - Creature 0d_cocoon_plant
 DEBUG - Changing denfese. 50 to 100
-Applying factor 2 to creature 0a_cocoon_plant. Attributes minWeaponDefense 100 maxWeaponDefense 140 minMagicDefense 240 maxMagicDefense 160
+Applying factor 2 to creature 0d_cocoon_plant. Attributes minWeaponDefense 100 maxWeaponDefense 140 minMagicDefense 240 maxMagicDefense 160
 DEBUG - Creature 00_winged_worm
 DEBUG - Changing denfese. 45 to 90
 Applying factor 2 to creature 00_winged_worm. Attributes minWeaponDefense 90 maxWeaponDefense 70 minMagicDefense 158 maxMagicDefense 178
@@ -3909,10 +3883,10 @@ Applying factor 2 to creature 0e_door. Attributes minWeaponDefense 0 maxWeaponDe
 DEBUG - Creature 0f_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0f_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 04_berzerker
+DEBUG - Creature 00_berzerker
 DEBUG - Changing denfese. 65 to 130
 DEBUG - Changing attack. 180 to 255
-Applying factor 2 to creature 04_berzerker. Attributes minWeaponDefense 130 maxWeaponDefense 90 minMagicDefense 40 maxMagicDefense 144
+Applying factor 2 to creature 00_berzerker. Attributes minWeaponDefense 130 maxWeaponDefense 90 minMagicDefense 40 maxMagicDefense 144
 DEBUG - Creature 01_dweller
 DEBUG - Changing denfese. 82 to 164
 Applying factor 2 to creature 01_dweller. Attributes minWeaponDefense 164 maxWeaponDefense 176 minMagicDefense 40 maxMagicDefense 160
@@ -3939,7 +3913,7 @@ DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
 DEBUG - Creature 04_berzerker
 DEBUG - Changing denfese. 65 to 130
-DEBUG - Changing attack. 255 to 255
+DEBUG - Changing attack. 180 to 255
 Applying factor 2 to creature 04_berzerker. Attributes minWeaponDefense 130 maxWeaponDefense 90 minMagicDefense 40 maxMagicDefense 144
 DEBUG - Creature 06_hell_warrior
 DEBUG - Changing denfese. 90 to 180
@@ -3954,10 +3928,10 @@ Applying factor 2 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDe
 DEBUG - Creature 0c_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0c_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 02_skeleton
+DEBUG - Creature 0a_skeleton
 DEBUG - Changing denfese. 55 to 110
-DEBUG - Changing attack. 166 to 255
-Applying factor 2 to creature 02_skeleton. Attributes minWeaponDefense 110 maxWeaponDefense 68 minMagicDefense 146 maxMagicDefense 174
+DEBUG - Changing attack. 83 to 166
+Applying factor 2 to creature 0a_skeleton. Attributes minWeaponDefense 110 maxWeaponDefense 68 minMagicDefense 146 maxMagicDefense 174
 DEBUG - Creature 09_cross_breed
 DEBUG - Changing denfese. 125 to 250
 Applying factor 2 to creature 09_cross_breed. Attributes minWeaponDefense 250 maxWeaponDefense 80 minMagicDefense 255 maxMagicDefense 255
@@ -4230,9 +4204,9 @@ DEBUG - Creature 05_blood_skull
 DEBUG - Changing denfese. 53 to 106
 DEBUG - Changing attack. 15 to 30
 Applying factor 2 to creature 05_blood_skull. Attributes minWeaponDefense 106 maxWeaponDefense 112 minMagicDefense 150 maxMagicDefense 255
-DEBUG - Creature 0e_rotting_face
+DEBUG - Creature 0a_rotting_face
 DEBUG - Changing denfese. 160 to 255
-Applying factor 2 to creature 0e_rotting_face. Attributes minWeaponDefense 255 maxWeaponDefense 255 minMagicDefense 240 maxMagicDefense 255
+Applying factor 2 to creature 0a_rotting_face. Attributes minWeaponDefense 255 maxWeaponDefense 255 minMagicDefense 240 maxMagicDefense 255
 DEBUG - Creature 0b_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 0b_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
@@ -4255,7 +4229,7 @@ DEBUG - Changing attack. 13 to 26
 Applying factor 2 to creature 09_blood_slime. Attributes minWeaponDefense 104 maxWeaponDefense 108 minMagicDefense 202 maxMagicDefense 255
 DEBUG - Creature 04_acid_skull
 DEBUG - Changing denfese. 55 to 110
-DEBUG - Changing attack. 32 to 64
+DEBUG - Changing attack. 16 to 32
 Applying factor 2 to creature 04_acid_skull. Attributes minWeaponDefense 110 maxWeaponDefense 120 minMagicDefense 178 maxMagicDefense 170
 DEBUG - Creature 02_dark_imp
 DEBUG - Changing denfese. 75 to 150
@@ -4417,10 +4391,10 @@ Applying factor 2 to creature 04_dark_spirits. Attributes minWeaponDefense 150 m
 DEBUG - Creature 03_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 03_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 06_fire_jinn
+DEBUG - Creature 02_fire_jinn
 DEBUG - Changing denfese. 62 to 124
-DEBUG - Changing attack. 240 to 255
-Applying factor 2 to creature 06_fire_jinn. Attributes minWeaponDefense 124 maxWeaponDefense 124 minMagicDefense 108 maxMagicDefense 130
+DEBUG - Changing attack. 120 to 240
+Applying factor 2 to creature 02_fire_jinn. Attributes minWeaponDefense 124 maxWeaponDefense 124 minMagicDefense 108 maxMagicDefense 130
 DEBUG - Creature 08_hermit_crab
 DEBUG - Changing denfese. 57 to 114
 DEBUG - Changing attack. 250 to 255
@@ -4597,10 +4571,10 @@ Applying factor 2 to creature 0d_slasher. Attributes minWeaponDefense 150 maxWea
 DEBUG - Creature 07_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 07_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
-DEBUG - Creature 05_blood_brain
+DEBUG - Creature 02_blood_brain
 DEBUG - Changing denfese. 80 to 160
-DEBUG - Changing attack. 100 to 200
-Applying factor 2 to creature 05_blood_brain. Attributes minWeaponDefense 160 maxWeaponDefense 176 minMagicDefense 158 maxMagicDefense 226
+DEBUG - Changing attack. 50 to 100
+Applying factor 2 to creature 02_blood_brain. Attributes minWeaponDefense 160 maxWeaponDefense 176 minMagicDefense 158 maxMagicDefense 226
 DEBUG - Creature 09_door
 DEBUG - Changing denfese. 0 to 0
 Applying factor 2 to creature 09_door. Attributes minWeaponDefense 0 maxWeaponDefense 0 minMagicDefense 0 maxMagicDefense 0
