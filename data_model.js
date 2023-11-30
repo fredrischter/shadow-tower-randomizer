@@ -1097,7 +1097,7 @@
     this.length = ENTITY_STATE_SIZE_BY_TYPE[this.type];
     this.originalBin = this.bin.slice(this.offset_in_file, this.offset_in_file + this.length);
 
-      if (ENTITY_STATE_SIZE_BY_TYPE[this.type] == 0x30) {
+      if (this.type == 0x20) {
         var att = new UInt16(this.originalBin, 0x1a);
         if (!att.isNull()) {
           this.attack1 = att;

@@ -1,0 +1,537 @@
+** Map info dump
+ 
+Setup Area human_world_solitary_region in FDAT file index 44 map index 4
+
+00_dark_spider 
+01_acid_slime 
+ -> 31  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_blood_slime 
+ -> 32  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+06_skeleton 
+08_dark_spider 
+09_demon_bat 
+ -> 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0 
+ -> 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0 
+0a_skeleton 
+0c_demon_bat 
+ -> 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0 
+ -> 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0 
+0d_dark_spider 
+0e_acid_slime 
+ -> 31  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area human_world_hidden_region in FDAT file index 54 map index 5
+
+00_acid_slime 
+ -> 31  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_blood_slime 
+ -> 32  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_parasite 
+04_acid_slime 
+ -> 31  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_blood_slime 
+ -> 32  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+06_fanged_worm 
+ -> 33  0 96  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0 f8  0  0 
+08_casket 
+ -> f3  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+09_blood_slime 
+ -> 32  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area human_world_forgotten_region in FDAT file index 64 map index 6
+
+00_acid_skull 
+ -> 36  0 ff ff ff ff ff ff ff ff ff ff ff ff b8 ff 73 fe b5 ff  0  0 
+01_blood_skull 
+ -> 37  0 ff ff ff ff ff ff ff ff ff ff ff ff cc ff 5f fe 4e fe  0  0 
+02_skeleton 
+04_acid_skull 
+ -> 36  0 ff ff ff ff ff ff ff ff ff ff ff ff b8 ff 73 fe b5 ff  0  0 
+05_blood_skull 
+ -> 37  0 ff ff ff ff ff ff ff ff ff ff ff ff cc ff 5f fe 4e fe  0  0 
+06_skeleton 
+
+Setup Area human_world_cursed_region in FDAT file index 14 map index 1
+
+00_dark_spider 
+01_shadow_spider 
+ -> 34  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_tongue_imp 
+ -> f3  0 ff ff ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0 
+04_fat_mole_a 
+06_tongue_imp 
+ -> f3  0 ff ff ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0 
+08_dark_spider 
+09_shadow_spider 
+ -> 34  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_guardian_a 
+ -> c8  0  1  0 ff ff ff ff 18  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area earth_world_rotting_cavern in FDAT file index 114 map index 11
+
+00_watcher_plant 
+ -> ca  0  e  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_myconid 
+ -> 3c  0  4  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_elder 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_minor_dwarf 
+05_dwarfling 
+06_elder 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_star_serpent 
+ -> 3a  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 c0 f9  0 ff  0  0 
+09_imp 
+ -> 38  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 c0 f9 df fd  0  0 
+0a_blank 
+0c_barrel_snail
+ -> 39  0  2  0  4  0  7  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_tondrom 
+0e_elder 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area earth_world_poisonous_cavern in FDAT file index 274 map index 27
+
+00_duhrin 
+01_beak_plant 
+ -> 44  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_watcher_plant 
+ -> ca  0  e  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_auriel_b 
+05_blank 
+08_trickster 
+ -> 43  0 3b  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+09_dwarf_warrior 
+0a_blank 
+0b_blank 
+0c_hanging_dead 
+ -> 41  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_trickster 
+ -> 3e  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 2e fc 4c fb  0  0 
+ -> f2  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0e_watcher_plant 
+ -> ca  0  e  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area earth_world_quaking_cavern in FDAT file index 124 map index 12
+
+00_sand_leech_a 
+ -> 45  0 10  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_blue_flicker 
+ -> cd  0  8  0 ff ff ff ff  9  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+02_sand_leech_b 
+04_kiljoy 
+05_acid_pod 
+ -> 3e  0 50  0 ff ff ff ff ff ff ff ff ff ff  0  0  0 ff  0  0  0  0 
+08_torg 
+ -> 47  0 ad  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+09_cocoon_plant 
+ -> 4a  0 13  1 3e  1 ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_cocoon_plant 
+ -> 3e  0 50  0 ff ff ff ff ff ff ff ff ff ff  0  0  0 ff  0  0  0  0 
+
+Setup Area earth_world_false_pit_cavern in FDAT file index 154 map index 15
+
+00_earth_knight 
+01_acid_pod 
+ -> 3e  0 50  0 ff ff ff ff ff ff ff ff ff ff  0  0  0 ff  0  0  0  0 
+04_cannon_snail 
+ -> 51  0  2  0  4  0  7  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_cocoon_plant 
+ -> 3e  0 50  0 ff ff ff ff ff ff ff ff ff ff  0  0  0 ff  0  0  0  0 
+08_guardian_b 
+ -> c8  0  1  0 ff ff ff ff 18  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+09_sloth_bug 
+ -> 4f  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0 fb 44 fd  0  0 
+0c_ray_plant 
+ -> d0  0 af  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> f5  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_cocoon_plant 
+ -> 3e  0 50  0 ff ff ff ff ff ff ff ff ff ff  0  0  0 ff  0  0  0  0 
+
+Setup Area earth_world_stone_cavern in FDAT file index 284 map index 28
+
+00_dybbuk 
+01_demon_bat 
+ -> 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0 
+ -> 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0 
+04_dybbuk 
+05_hobble_worm 
+ -> 4d  0 48  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 4e  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_clay_servant 
+0a_barrel_snail 
+ -> 4f  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0 fb 44 fd  0  0 
+0c_dybbuk 
+ -> 4b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_crying_root 
+ -> 50  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area earth_world_hostile_rock_cavern in FDAT file index 334 map index 33
+
+00_black_onyx 
+ -> d3  0 37  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_earth_knight 
+04_dread_knight 
+ -> 54  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_earth_knight 
+06_dread_knight_unused 
+
+Setup Area water_world_impure_pool_area in FDAT file index 104 map index 10
+
+00_fat_mole_f 
+01_horned_slime 
+ -> 6a  0 66  0 ff ff ff ff ff ff ff ff ff ff  0  0 96  0  0  0  0  0 
+02_blood_brain 
+ -> 6b  0 21  0 ff ff ff ff ff ff ff ff ff ff  0  0 96  0  0  0  0  0 
+04_blank 
+05_horned_slime 
+ -> 6a  0 66  0 ff ff ff ff ff ff ff ff ff ff  0  0 96  0  0  0  0  0 
+06_dweller 
+ -> 6e  0 ff ff ff ff ff ff ff ff ff ff ff ff 11  0 8c fc ba ff  0  0 
+09_dementor 
+0a_dweller 
+ -> 6e  0 ff ff ff ff ff ff ff ff ff ff ff ff 11  0 8c fc ba ff  0  0 
+0c_worm_face 
+ -> 6c  0 7e  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_hatchlin 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area water_world_sunken_river_area in FDAT file index 214 map index 21
+
+00_kabasaur 
+04_kabasaur 
+05_water_knight 
+
+Setup Area water_world_watery_labyrinth_area in FDAT file index 324 map index 32
+
+00_kabasaur 
+02_horned_slime 
+ -> 6a  0 66  0 ff ff ff ff ff ff ff ff ff ff  0  0 96  0  0  0  0  0 
+04_great_frog 
+05_blood_brain 
+ -> 6b  0 21  0 ff ff ff ff ff ff ff ff ff ff  0  0 96  0  0  0  0  0 
+09_koazul 
+ -> 71  0 26  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_horned_slime 
+ -> 6a  0 66  0 ff ff ff ff ff ff ff ff ff ff  0  0 96  0  0  0  0  0 
+0c_gaze_hopper 
+ -> 6f  0 23  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_slasher 
+ -> 73  0 8e  1 95  1 ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0e_manna_python 
+ -> 70  0  3  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area water_world_white_rain_area in FDAT file index 374 map index 37
+
+00_winged_worm 
+ -> 77  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 3e fd 8c fe  0  0 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_dragon_turtle 
+ -> 74  0 73  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_magi_magus 
+ -> 75  0 2a  1 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 76  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area fire_world_phoenix_cave in FDAT file index 34 map index 3
+
+02_fire_jinn 
+ -> 58  0 1b  0 ff ff ff ff  8  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+04_jinn_lord 
+ -> 56  0 14  0 ff ff ff ff  b  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 55  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_armored_jinn 
+ -> 57  0  7  0 ff ff ff ff  b  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+06_fire_jinn 
+ -> 58  0 1b  0 ff ff ff ff  8  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area fire_world_burning_cavern in FDAT file index 204 map index 20
+
+00_berzerker 
+ -> 59  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_dweller 
+ -> 5d  0  0  0 ff ff ff ff  7  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5c  0 73  0 74  0 ff ff  a  0  a  0 ff ff  0  0  0  0  0  0  0  0 
+02_mystic_tower 
+ -> d8  0  d  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_berzerker 
+ -> 59  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_dweller 
+ -> 5d  0  0  0 ff ff ff ff  7  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5c  0 73  0 74  0 ff ff  a  0  a  0 ff ff  0  0  0  0  0  0  0  0 
+06_mystic_tower 
+ -> d8  0  d  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_berzerker 
+ -> 59  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+09_iron_crusher 
+ -> 5d  0  0  0 ff ff ff ff  7  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5c  0 73  0 74  0 ff ff  a  0  a  0 ff ff  0  0  0  0  0  0  0  0 
+0a_mystic_tower 
+ -> d8  0  d  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_dweller 
+ -> 5d  0  0  0 ff ff ff ff  7  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5c  0 73  0 74  0 ff ff  a  0  a  0 ff ff  0  0  0  0  0  0  0  0 
+0e_mystic_tower 
+ -> d8  0  d  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area fire_world_molten_cavern in FDAT file index 244 map index 24
+
+00_abraxus 
+ -> 5f  0 b5  0 b5  0 b5  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5f  0 b5  0 b5  0 b5  0 ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_horned_skull 
+ -> 58  0 18  0 ff ff ff ff  8  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+02_dead_abraxus 
+04_berzerker 
+ -> 59  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+06_mystic_tower 
+ -> d8  0  d  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 5b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_fat_mole_b 
+09_steel_servant 
+ -> 5e  0  2  0 ff ff ff ff  5  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_fat_mole_c 
+0d_arachness 
+ -> 60  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 d8 fd d4 fb  0  0 
+ -> 57  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 f6 fc 33 fc  0  0 
+
+Setup Area fire_world_ashen_cavern in FDAT file index 184 map index 18
+
+00_bone_demon 
+ -> 63  0 64  0 65  0 66  0  5  0  5  0  5  0  0  0  0  0  0  0  0  0 
+01_berzerker 
+ -> 59  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_zygote 
+ -> 66  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 50 fb 70 fe  0  0 
+ -> ff ff ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> f4  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_horned_skull 
+ -> 58  0 18  0 ff ff ff ff  8  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+09_cerberus 
+ -> 63  0  3  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_ruby_demon 
+ -> db  0 37  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_ebony_knight 
+ -> 68  0 ff ff ff ff ff ff ff ff ff ff ff ff d8 ff de fa d5 fd  0  0 
+ -> 69  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ec fa  0  0  0  0 
+0d_damned_angel
+ -> 65  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area monster_world_false_eye_area in FDAT file index 24 map index 2
+
+00_night_howler 
+01_chirper 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_lizard_servant 
+04_night_howler 
+05_master_howler 
+06_lizard_servant 
+08_hermit_crab 
+ -> 9d  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 62 ff 7d ff  0  0 
+09_freak 
+ -> 47  0 e8  0 7c  1 ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_saurian_warrior_a 
+0d_saurian_warrior_b 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0e_dinogon 
+ -> 9c  0 39  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area monster_world_screeching_area in FDAT file index 174 map index 17
+
+01_auriel_c 
+ -> a0  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0 fc 80 fe  0  0 
+ -> a1  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 50 fb  0  0  0  0 
+04_king_hopper 
+ -> 9f  0  1  0 ff ff ff ff  6  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+05_warden 
+ -> a5  0 1a  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+06_oblid 
+08_oxelus 
+ -> 9e  0 18  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_cursed_demon 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_death_serpent 
+ -> a6  0 52  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0e_necron 
+ -> a4  0 34  1 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> a3  0 17  1 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> a2  0 6d  1 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area illusion_world_bewilderment_domain in FDAT file index 84 map index 8
+
+00_gorgoral 
+01_gargaral 
+ -> 8c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_gordoral 
+ -> ee  0  0  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_demon_warrior 
+ -> 8f  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 64 fb d4 fe  0  0 
+05_gargaral 
+ -> 8c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+06_gordoral 
+ -> ee  0  0  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_war_demon_1 
+09_war_demon_2 
+0a_rotting_face 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 90  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0 d4 fe  0  0 
+0c_death_mage 
+ -> 8e  0 ff ff ff ff ff ff ff ff ff ff ff ff  9  0 48 f9 46 fc  0  0 
+0e_rotting_face 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 90  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0 d4 fe  0  0 
+
+Setup Area illusion_world_gloomy_domain in FDAT file index 94 map index 9
+
+00_red_puppet 
+01_dark_spirits 
+02_dark_imp 
+ -> f5  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_dark_spirits 
+05_dark_spirits 
+06_black_imp 
+ -> f5  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_ring_demon 
+ -> eb  0  7  0 ff ff ff ff  0  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+09_dark_fairy 
+ -> 87  0 7a  0 9f  0 ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_dark_bishop 
+ -> 89  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_maristella 
+ -> 88  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 44  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_deha 
+ -> 8b  0 89  0 ff ff ff ff ff ff ff ff ff ff  0  0 50 fb  0  0  0  0 
+0e_blank 
+
+Setup Area illusion_world_dream_domain in FDAT file index 384 map index 38
+
+00_dark_spirits 
+ -> 99  0  8  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 9a  0 5b  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 98  0 5c  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_disguise 
+ -> 97  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 96  0 17  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area illusion_world_worship_domain in FDAT file index 134 map index 13
+
+00_master_knight 
+01_gorthaur 
+ -> 92  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 50 fb d4 fe  0  0 
+02_fat_mole_d 
+04_wildowess 
+ -> f2  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+06_warpoor 
+ -> 93  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 18 fc d4 fe  0  0 
+ -> f6  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+08_fester 
+ -> 91  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 50 fb d4 fe  0  0 
+09_cross_breed 
+ -> 95  0 38  0 59  0 ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_warpoor 
+ -> 93  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 18 fc d4 fe  0  0 
+ -> f6  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area death_world_dark_castle_layer in FDAT file index 254 map index 25
+
+00_hell_hunter 
+ -> 78  0  b  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 79  0  b  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_karasu 
+04_tree_ogre 
+ -> 7a  0  c  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_armored_warrior 
+06_armored_slayer 
+08_armored_guardian 
+09_armored_warrior 
+0a_armored_slayer 
+
+Setup Area death_world_lingering_curse_layer in FDAT file index 144 map index 14
+
+00_unknown_e 
+01_stack_eyes 
+ -> 83  0  b  0 ff ff ff ff  9  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 83  0  b  0 ff ff ff ff  9  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 83  0  b  0 ff ff ff ff  9  0 ff ff ff ff  0  0  0  0  0  0  0  0 
+04_blank 
+05_unknown_g 
+ -> 80  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 d8 f9 a4 fd  0  0 
+08_apocrypha 
+ -> e1  0 64  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> e1  0 64  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+09_descrypha 
+ -> e4  0 64  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> e4  0 64  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_old_face 
+ -> 85  0 18  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 84  0 18  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_old_face 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 44  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_bugler 
+ -> f0  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area death_world_undead_layer in FDAT file index 264 map index 26
+
+01_unknown_b 
+ -> 7c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0 fc 80 fe  0  0 
+ -> 7d  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 50 fb  0  0  0  0 
+04_king_edward 
+ ->  f6  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0
+05_hell_hunter 
+08_claw_head 
+09_pulsating_heart 
+ -> 7f  0 28  0 54  0 ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_demons_eye
+ -> de  0  1  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_unknown_d 
+ -> f3  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_fat_mole_e 
+0e_claw_head 
+ -> 78  0  b  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 79  0  b  0 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area death_world_gate_of_the_dead in FDAT file index 234 map index 23
+
+00_unused_a 
+ -> ff ff ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+01_doriwi 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+02_bone_wolf 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+04_unused_b 
+ -> 44  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 44  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+05_doriwi 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+06_hell_warrior 
+08_wyvern 
+ -> e6  0 25  1 ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0a_bone_wolf 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0c_hollow_mage 
+ -> 3b  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+ -> 40  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+0d_blood_bone 
+ -> 4c  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
+
+Setup Area void in FDAT file index 304 map index 30
+
+00_balron_a 
+ -> a9  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ec fa d4 fe  0  0 
+01_unknown_i 
+02_unknown_j 
+03_balron_b 
+ -> a7  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 50 fb d4 fe  0  0 
+ -> a8  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0  0  0  0  0  0  0 
