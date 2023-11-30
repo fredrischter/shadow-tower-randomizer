@@ -185,7 +185,7 @@ function randomize(paramsFile, stDir) {
         var tmp = creature1.entityStates;
         creature1.entityStates = creature2.entityStates;
         creature2.entityStates = tmp;
-
+/*
         creature1.attack1.set(1);
         creature1.attack2.set(1);
         creature1.magic1.set(1);
@@ -211,7 +211,7 @@ function randomize(paramsFile, stDir) {
         creature2.magDefense4.set(1);
         creature2.magDefense5.set(1);
         creature2.attacks.forEach(attack => attack.set(1));
-
+*/
 /*
         // entity bin
         creature1.swap(creature2);
