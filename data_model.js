@@ -1472,34 +1472,34 @@
 
           if (!this.isBlank) {
             validCreatures.push(this);
-            var randomizable = true;
-            var flyingRandomizable = false;
+            this.randomizable = true;
+            this.flyingRandomizable = false;
             nonRandomizableCreatureNames.forEach((name) => {
               if (this.name.includes(name)) {
-                randomizable = false;
+                this.randomizable = false;
               };
             });
-            if (randomizable) {
+            if (this.randomizable) {
               randomizableCreatures.push(this);
             }
             flyingRandomizableCreatures.forEach((name) => {
               if (this.name.includes(name)) {
-                randomizable = true;
-                flyingRandomizable = true;
+                this.randomizable = true;
+                this.flyingRandomizable = true;
               };
             });
-            if (flyingRandomizable) {
+            if (this.flyingRandomizable) {
               randomizableFlyingCreatures.push(this);
             }
 
-            var gateKeeperRandomizable = false;
+            this.gateKeeperRandomizable = false;
             geteKeeperRandomizableCreatures.forEach((name) => {
               if (this.name.includes(name)) {
-                randomizable = true;
-                gateKeeperRandomizable = true;
+                this.randomizable = true;
+                this.gateKeeperRandomizable = true;
               };
             });
-            if (gateKeeperRandomizable) {
+            if (this.gateKeeperRandomizable) {
               randomizableGateKeeperCreatures.push(this);
             }
           }
@@ -1653,7 +1653,8 @@
       + ", \"attacks\": [" + (this.attacks.map(attack => attack.get())) + "]"
   //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
   //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
-  + ",\"isDoor\":" + this.isDoor + "}";
+  + ",\"isDoor\":" + this.isDoor
+  + ",\"randomizationGroup\": \"" + this.randomizationGroup() + "\"}";
   }
 
   set(source) {
@@ -1682,6 +1683,26 @@
         this.modelFiles[i] = source.modelFiles[i];
     }*/
 
+  }
+
+  randomizationGroup() {
+    if (!this.randomizable) {
+      return null;
+    }
+
+    var group = this.area.name.split("_world")[0] + "_world";
+
+    if (this.flyingRandomizable) {
+      group += "-flying";
+    }
+
+    if (this.gateKeeperRandomizable) {
+      group += "-gateKeeper";
+    }
+
+    group += "-textureCost"+this.textureCost;
+
+    return group;
   }
 
   swap(source) {
@@ -1962,7 +1983,42 @@
     return str;
   }
 
-  function setup(FDAT) {
+  function loadCreatureTextureFiles(stDir) {
+    // model files
+    let modelFileNames = [
+      stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M00.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M01.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M02.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M03.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M06.T",stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M07.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M08.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M09.T",
+      stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M10.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M11.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M12.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M13.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M14.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M15.T",stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M16.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M17.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M18.T",stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M19.T",
+      stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M20.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M21.T",stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M22.T",stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M23.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M24.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M26.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M27.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M28.T",stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M29.T",
+      stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M30.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M31.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M32.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M33.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M34.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M35.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M36.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M37.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M38.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M39.T",
+      stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M40.T", stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M41.T"
+    ];
+    for (var i in modelFileNames) {
+      let modelFile = new TFILEReader(modelFileNames[i]).readTFormat();
+          if (!areasByOriginalIndex[i]) {
+              continue;
+          }
+      areasByOriginalIndex[i].modelFile = modelFile;
+      for (var c in areasByOriginalIndex[i].creatures) {
+        if (c>14) {
+          continue;
+        }
+        let creature = areasByOriginalIndex[i].creatures[c];
+        creature.modelFiles = [
+          modelFile.files[c*5+1].fileName,
+          modelFile.files[c*5+2].fileName,
+          modelFile.files[c*5+3].fileName,
+          modelFile.files[c*5+4].fileName,
+          modelFile.files[c*5+5].fileName,
+        ]
+
+              console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
+              creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
+              creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
+      }
+    }
+  }
+
+  function setup(FDAT, stDir) {
 
     console.log("\n** Item info dump");
     for (var i in items) {
@@ -1973,6 +2029,8 @@
     for (var i in areas) {
       areas[i].setup(FDAT);
     }
+
+    loadCreatureTextureFiles(stDir);
 
     fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
 
