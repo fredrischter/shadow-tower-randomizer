@@ -101,7 +101,7 @@ function randomize(paramsFile, stDir) {
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
     var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
     var tfile = new TFILEReader(tFilePath).readTFormat();
-    data_model.setup(tfile);
+    data_model.setup(tfile, stDir);
 
     const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {
         flags: 'w+'
@@ -131,39 +131,6 @@ function randomize(paramsFile, stDir) {
         console.log("Randomization - Using generated seed " + seed);
     }
     console.log("Parameters - " + JSON.stringify(params));
-
-	// model files
-	let modelFileNames = [
-		stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M00.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M01.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M02.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M03.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M06.T",stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M07.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M08.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M09.T",
-		stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M10.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M11.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M12.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M13.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M14.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M15.T",stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M16.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M17.T", stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M18.T",stDir + path.sep + "ST" + path.sep + "CHR1" + path.sep + "M19.T",
-		stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M20.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M21.T",stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M22.T",stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M23.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M24.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M25.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M26.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M27.T", stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M28.T",stDir + path.sep + "ST" + path.sep + "CHR2" + path.sep + "M29.T",
-		stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M30.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M31.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M32.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M33.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M34.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M35.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M36.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M37.T", stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M38.T",stDir + path.sep + "ST" + path.sep + "CHR3" + path.sep + "M39.T",
-		stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M40.T", stDir + path.sep + "ST" + path.sep + "CHR4" + path.sep + "M41.T"
-	];
-	for (var i in modelFileNames) {
-		let modelFile = new TFILEReader(modelFileNames[i]).readTFormat();
-        if (!areasByOriginalIndex[i]) {
-            continue;
-        }
-		areasByOriginalIndex[i].modelFile = modelFile;
-		for (var c in areasByOriginalIndex[i].creatures) {
-			if (c>14) {
-				continue;
-			}
-			let creature = areasByOriginalIndex[i].creatures[c];
-			creature.modelFiles = [
-				modelFile.files[c*5+1].fileName,
-				modelFile.files[c*5+2].fileName,
-				modelFile.files[c*5+3].fileName,
-				modelFile.files[c*5+4].fileName,
-				modelFile.files[c*5+5].fileName,
-			]
-
-            console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
-            creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
-            creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
-		}
-	}
 
     var areasBeforePoisonousCavern = [];
     for (var a in areas) {
@@ -1123,8 +1090,31 @@ function randomize(paramsFile, stDir) {
         });
     };
 
-    // Running the thing
+    function groupObjectsByKey(objects) {
+      return objects.reduce((groupedObject, obj) => {
+        const keyValue = obj.randomizationGroup();
+        groupedObject[keyValue] = (groupedObject[keyValue] || []).concat(obj);
+        return groupedObject;
+      }, {});
+    }
 
+    var allRandomizableCreatures = [];
+    function addCreaturesToRandomizableList(creature, area, index) {
+        if (creature.randomizable) {
+            allRandomizableCreatures.push(creature);
+        }
+    }
+    forEachValidCreature(addCreaturesToRandomizableList);
+    console.log(" allRandomizableCreatures " + allRandomizableCreatures);
+
+    var creatureRandomizableGroups = groupObjectsByKey(allRandomizableCreatures);
+    console.log(" creatureRandomizableGroups " + JSON.stringify(Object.keys(creatureRandomizableGroups)));
+    console.log(" creatureRandomizableGroups " + JSON.stringify(Object.keys(creatureRandomizableGroups).reduce((result, key) => {
+          result[key] = creatureRandomizableGroups[key].map(creature => creature.name);
+          return result;
+        }, {})));
+
+    // Running the thing
     function operate() {
 
         // ------- PRESET No Change
@@ -1204,36 +1194,12 @@ function randomize(paramsFile, stDir) {
         }
 
         // Randomize creatures
-
-        var randomizableCreaturesCost1 = randomizableCreatures.filter(creature => creature.textureCost == 1);
-        var randomizableCreaturesCost2 = randomizableCreatures.filter(creature => creature.textureCost == 2);
-        var randomizableFlyingCreaturesCost1 = randomizableFlyingCreatures.filter(creature => creature.textureCost == 1);
-        var randomizableFlyingCreaturesCost2 = randomizableFlyingCreatures.filter(creature => creature.textureCost == 2);
-        var randomizableGateKeeperCreaturesCost1 = randomizableGateKeeperCreatures.filter(creature => creature.textureCost == 1);
-        var randomizableGateKeeperCreaturesCost2 = randomizableGateKeeperCreatures.filter(creature => creature.textureCost == 2);
-        console.log(
-            " randomizableCreaturesCost1 " + randomizableCreaturesCost1.map(creature => creature.name) +
-            " randomizableCreaturesCost2 " + randomizableCreaturesCost2.map(creature => creature.name) +
-            " randomizableFlyingCreaturesCost1 " + randomizableFlyingCreaturesCost1.map(creature => creature.name) +
-            " randomizableFlyingCreaturesCost2 " + randomizableFlyingCreaturesCost2.map(creature => creature.name) +
-            " randomizableGateKeeperCreaturesCost1 " + randomizableGateKeeperCreaturesCost1.map(creature => creature.name) +
-            " randomizableGateKeeperCreaturesCost2 " + randomizableGateKeeperCreaturesCost2.map(creature => creature.name)
-            );
-
         if (params.randomizeCreatures) {
             //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
-        
             for (var i =0; i<100; i++) {
-                swapCreatures(randomElement(randomizableCreaturesCost1),randomElement(randomizableCreaturesCost1), changeSet);
-            }
-            for (var i =0; i<20; i++) {
-                swapCreatures(randomElement(randomizableCreaturesCost2),randomElement(randomizableCreaturesCost2), changeSet);
-            }
-            for (var i =0; i<5; i++) {
-                swapCreatures(randomElement(randomizableFlyingCreaturesCost1),randomElement(randomizableFlyingCreaturesCost1), changeSet);
-            }
-            for (var i =0; i<1; i++) {
-                swapCreatures(randomElement(randomizableFlyingCreaturesCost2),randomElement(randomizableFlyingCreaturesCost2), changeSet);
+                var creature1 = randomElement(allRandomizableCreatures);
+                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
+                swapCreatures(creature1, creature2, changeSet);
             }
         }
 
