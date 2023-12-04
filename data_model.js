@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  //global.toNotGenerateImages=true;
+  global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
@@ -1771,6 +1771,7 @@
     }
     global[area.name].exits = {};
     area.exits.forEach(exit => {
+      console.log("Setting exit " + area.name + " - " + exit.id);
       global[area.name].exits[exit.id] = exit;
     });
     global[area.name].totems = {};
@@ -1778,7 +1779,7 @@
       global[area.name].totems[totem.id] = totem;
     });
 
-    console.log("Exit objects for area " + global[area.name].name + " - " + JSON.stringify(global[area.name].exits));
+    //console.log("Exit objects for area " + global[area.name].name + " - " + JSON.stringify(global[area.name].exits));
   });
 
   class Spawn {

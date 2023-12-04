@@ -2,6 +2,7 @@
 
 const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
+const randomizer_map = require('./randomizer_map');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
@@ -109,6 +110,10 @@ function randomize(paramsFile, stDir) {
     console.log = function() {
         logFile2.write(util.format.apply(null, arguments) + '\n');
     }
+
+    const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
+    var map = new MapShuffle(shuffle);
+    map.applyMap(data_model);
 
     console.log("DEBUG - Items randomization - Collectables/drops proportion " + 100*COLLECTABLE_UNIQUES_PROPORTION + "% collectables / " + 100*(1-COLLECTABLE_UNIQUES_PROPORTION) + "% drops.");
     console.log("");

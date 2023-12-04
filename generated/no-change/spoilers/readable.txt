@@ -1,3 +1,98 @@
+DEBUG ------------------ Randomization engine - Defining map
+  Not found object to copy from leading to death_world_lingering_curse_layer/1. wanted to set to shadow_tower_part1a object 0
+  Setting exit for shadow_tower_part1b object 4 as one leading to water_world_watery_labyrinth_area/9
+  Setting exit for shadow_tower_part1b object 8 as one leading to shadow_tower_part3c/10
+  Not found object to copy from leading to shadow_tower_part1c/undefined. wanted to set to shadow_tower_part1b object jump
+  Setting exit for shadow_tower_part1c object 5 as one leading to human_world_solitary_region/31
+  Setting exit for shadow_tower_part1c object 11 as one leading to earth_world_false_pit_cavern/1
+  Setting exit for shadow_tower_part1c object 9 as one leading to water_world_white_rain_area/4
+  Setting exit for shadow_tower_part2a object 0 as one leading to illusion_world_bewilderment_domain/18
+  Setting exit for shadow_tower_part2a object 4 as one leading to human_world_solitary_region/35
+  Not found object to copy from leading to shadow_tower_part2b/undefined. wanted to set to shadow_tower_part2a object jump
+  Not found object to copy from leading to earth_world_rotting_cavern/13. wanted to set to shadow_tower_part2b object 9
+  Setting exit for shadow_tower_part2b object 7 as one leading to human_world_hidden_region/9
+  Not found object to copy from leading to monster_world_false_eye_area/9. wanted to set to shadow_tower_part2b object 5
+  Setting exit for shadow_tower_part3a object 0 as one leading to illusion_world_worship_domain/1
+  Not found object to copy from leading to water_world_impure_pool_area/11. wanted to set to shadow_tower_part3a object 3
+  Setting exit for shadow_tower_part3a object 9 as one leading to death_world_gate_of_the_dead/1
+  Not found object to copy from leading to shadow_tower_part3b/undefined. wanted to set to shadow_tower_part3a object jump
+  Setting exit for shadow_tower_part3b object 5 as one leading to illusion_world_gloomy_domain/3
+  Not found object to copy from leading to illusion_world_gloomy_domain/1. wanted to set to shadow_tower_part3b object 7
+  Setting exit for shadow_tower_part3b object 13 as one leading to earth_world_hostile_rock_cavern/1
+  Not found object to copy from leading to shadow_tower_part3c/undefined. wanted to set to shadow_tower_part3b object jump
+  Setting exit for shadow_tower_part3c object 10 as one leading to shadow_tower_part1b/8
+  Setting exit for human_world_solitary_region object 31 as one leading to shadow_tower_part1c/5
+  Setting exit for human_world_solitary_region object 34 as one leading to human_world_cursed_region/3
+  Setting exit for human_world_solitary_region object 35 as one leading to shadow_tower_part2a/4
+  Not found object to copy from leading to fire_world_burning_cavern/37. wanted to set to human_world_solitary_region object 38
+  Setting exit for human_world_hidden_region object 9 as one leading to shadow_tower_part2b/7
+  Not found object to copy from leading to earth_world_poisonous_cavern/17. wanted to set to human_world_hidden_region object 13
+  Setting exit for human_world_hidden_region object 26 as one leading to death_world_dark_castle_layer/4
+  Setting exit for human_world_cursed_region object 3 as one leading to human_world_solitary_region/34
+  Not found object to copy from leading to fire_world_phoenix_cave/0. wanted to set to human_world_cursed_region object 31
+  Not found object to copy from leading to death_world_dark_castle_layer/2. wanted to set to human_world_forgotten_region object 34
+  Not found object to copy from leading to fire_world_phoenix_cave/1. wanted to set to human_world_forgotten_region object 37
+  Setting exit for human_world_forgotten_region object 18 as one leading to water_world_impure_pool_area/14
+  Setting exit for human_world_forgotten_region object 41 as one leading to monster_world_false_eye_area/10
+  Setting exit for earth_world_rotting_cavern object 13 as one leading to shadow_tower_part2b/9
+  Setting exit for earth_world_stone_cavern object 4 as one leading to water_world_watery_labyrinth_area/8
+  Setting exit for earth_world_stone_cavern object 7 as one leading to water_world_sunken_river_area/5
+  Setting exit for earth_world_quaking_cavern object 3 as one leading to death_world_undead_layer/15
+  Not found object to copy from leading to water_world_sunken_river_area/1. wanted to set to earth_world_poisonous_cavern object 13
+  Not found object to copy from leading to monster_world_screeching_area/0. wanted to set to earth_world_poisonous_cavern object 10
+  Setting exit for earth_world_poisonous_cavern object 17 as one leading to human_world_hidden_region/13
+  Not found object to copy from leading to water_world_impure_pool_area/9. wanted to set to earth_world_false_pit_cavern object 3
+  Setting exit for earth_world_false_pit_cavern object 1 as one leading to shadow_tower_part1c/11
+  Setting exit for earth_world_false_pit_cavern object 11 as one leading to illusion_world_bewilderment_domain/20
+  Setting exit for earth_world_false_pit_cavern object 19 as one leading to death_world_gate_of_the_dead/4
+  Setting exit for earth_world_false_pit_cavern object 16 as one leading to earth_world_hostile_rock_cavern/3
+  Setting exit for earth_world_hostile_rock_cavern object 1 as one leading to shadow_tower_part3b/13
+  Setting exit for earth_world_hostile_rock_cavern object 3 as one leading to earth_world_false_pit_cavern/16
+  Not found object to copy from leading to human_world_cursed_region/31. wanted to set to fire_world_phoenix_cave object 0
+  Not found object to copy from leading to human_world_forgotten_region/37. wanted to set to fire_world_phoenix_cave object 1
+  Not found object to copy from leading to human_world_solitary_region/38. wanted to set to fire_world_burning_cavern object 37
+  Setting exit for fire_world_burning_cavern object 94 as one leading to illusion_world_worship_domain/10
+  Setting exit for fire_world_burning_cavern object 93 as one leading to illusion_world_dream_domain/3
+  Setting exit for fire_world_molten_cavern object 27 as one leading to fire_world_ashen_cavern/17
+  Setting exit for fire_world_molten_cavern object 19 as one leading to illusion_world_worship_domain/6
+  Setting exit for fire_world_ashen_cavern object 17 as one leading to fire_world_molten_cavern/27
+  Setting exit for fire_world_ashen_cavern object 6 as one leading to illusion_world_worship_domain/8
+  Setting exit for water_world_sunken_river_area object 5 as one leading to earth_world_stone_cavern/7
+  Setting exit for water_world_sunken_river_area object 1 as one leading to earth_world_poisonous_cavern/13
+  Setting exit for water_world_impure_pool_area object 9 as one leading to earth_world_false_pit_cavern/3
+  Setting exit for water_world_impure_pool_area object 11 as one leading to shadow_tower_part3a/3
+  Setting exit for water_world_impure_pool_area object 14 as one leading to human_world_forgotten_region/18
+  Setting exit for water_world_watery_labyrinth_area object 9 as one leading to shadow_tower_part1b/4
+  Setting exit for water_world_watery_labyrinth_area object 8 as one leading to earth_world_stone_cavern/4
+  Setting exit for water_world_white_rain_area object 4 as one leading to shadow_tower_part1c/9
+  Setting exit for water_world_white_rain_area object 6 as one leading to death_world_dark_castle_layer/10
+  Setting exit for monster_world_false_eye_area object 9 as one leading to shadow_tower_part2b/5
+  Setting exit for monster_world_false_eye_area object 10 as one leading to human_world_forgotten_region/41
+  Setting exit for monster_world_screeching_area object 0 as one leading to earth_world_poisonous_cavern/10
+  Setting exit for monster_world_screeching_area object 3 as one leading to illusion_world_gloomy_domain/10
+  Setting exit for monster_world_screeching_area object 6 as one leading to death_world_dark_castle_layer/7
+  Setting exit for illusion_world_gloomy_domain object 3 as one leading to shadow_tower_part3b/5
+  Setting exit for illusion_world_gloomy_domain object 1 as one leading to shadow_tower_part3b/7
+  Setting exit for illusion_world_gloomy_domain object 10 as one leading to monster_world_screeching_area/3
+  Setting exit for illusion_world_bewilderment_domain object 18 as one leading to shadow_tower_part2a/0
+  Not found object to copy from leading to earth_world_false_pit_cavern/11. wanted to set to illusion_world_bewilderment_domain object 20
+  Setting exit for illusion_world_worship_domain object 1 as one leading to shadow_tower_part3a/0
+  Setting exit for illusion_world_worship_domain object 6 as one leading to fire_world_molten_cavern/19
+  Setting exit for illusion_world_worship_domain object 10 as one leading to fire_world_burning_cavern/94
+  Setting exit for illusion_world_worship_domain object 8 as one leading to fire_world_ashen_cavern/6
+  Setting exit for illusion_world_dream_domain object 4 as one leading to death_world_lingering_curse_layer/2
+  Setting exit for illusion_world_dream_domain object 3 as one leading to fire_world_burning_cavern/93
+  Setting exit for death_world_lingering_curse_layer object 1 as one leading to shadow_tower_part1a/0
+  Setting exit for death_world_lingering_curse_layer object 2 as one leading to illusion_world_dream_domain/4
+  Setting exit for death_world_gate_of_the_dead object 1 as one leading to shadow_tower_part3a/9
+  Setting exit for death_world_gate_of_the_dead object 4 as one leading to earth_world_false_pit_cavern/19
+  Setting exit for death_world_dark_castle_layer object 0 as one leading to death_world_undead_layer/12
+  Not found object to copy from leading to human_world_forgotten_region/34. wanted to set to death_world_dark_castle_layer object 2
+  Setting exit for death_world_dark_castle_layer object 4 as one leading to human_world_hidden_region/26
+  Setting exit for death_world_dark_castle_layer object 7 as one leading to monster_world_screeching_area/6
+  Setting exit for death_world_dark_castle_layer object 10 as one leading to water_world_white_rain_area/6
+  Setting exit for death_world_undead_layer object 12 as one leading to death_world_dark_castle_layer/0
+  Setting exit for death_world_undead_layer object 15 as one leading to earth_world_quaking_cavern/3
 DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
 
 DEBUG - Items randomization - 45% of spawns will drop a unique.
