@@ -41,6 +41,9 @@ class MapShuffle {
 
     	this.source.map.forEach(targetArea => {
 			targetArea.exits.forEach(targetExit => {
+				if (targetExit.id == "jump") {
+					return;
+				}
 				var objectToCopyFrom = originalEntranceTo(targetExit.dest, targetExit.wayBackId);
 
 				var recipientArea = data_model.areas.find(originalArea => targetArea.name.includes(originalArea.name));

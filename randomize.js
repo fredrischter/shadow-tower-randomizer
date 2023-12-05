@@ -2,6 +2,7 @@
 
 const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
+const map_shuffler = require('./map_shuffler');
 const randomizer_map = require('./randomizer_map');
 const fs = require('fs');
 const path = require('path');
@@ -111,7 +112,18 @@ function randomize(paramsFile, stDir) {
         logFile2.write(util.format.apply(null, arguments) + '\n');
     }
 
-    const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
+    if (params.seed) {
+        seedRandom(params.seed);
+        console.log("Randomization - Using given seed " + params.seed);
+    } else {
+        var seed = useRandomSeed();
+        console.log("Randomization - Using generated seed " + seed);
+    }
+    console.log("Parameters - " + JSON.stringify(params));
+
+    //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
+    const shuffle = map_shuffler();
+
     var map = new MapShuffle(shuffle);
     map.applyMap(data_model);
 
@@ -127,15 +139,6 @@ function randomize(paramsFile, stDir) {
     console.log("");
     console.log("DEBUG - Items randomization - " + PERCENTAGE_FOR_REPLACEMENT_SECONDARY_BY_PRIMARY + "% of secondary consumables will be replaced by primary.");
     console.log("");
-
-    if (params.seed) {
-        seedRandom(params.seed);
-        console.log("Randomization - Using given seed " + params.seed);
-    } else {
-        var seed = useRandomSeed();
-        console.log("Randomization - Using generated seed " + seed);
-    }
-    console.log("Parameters - " + JSON.stringify(params));
 
     var areasBeforePoisonousCavern = [];
     for (var a in areas) {

@@ -10,24 +10,30 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 		});
 	});
 
+	var failed = false;
+
 	areas.forEach(area => {
 		area.exits.forEach(exit => {
 			if (exit.wayBackId) {
 				if (!areasMap[exit.dest][exit.wayBackId]) {
 					console.error("ERROR - inconsistent wayBackId "+exit.wayBackId+" doesnt exist in area "+exit.dest);
 					console.error("ERROR detail area - "+JSON.stringify(areasMap[exit.dest]));
-					process.exit(1);
+					failed = true;
 				} 
 
 				if (!skipWayBackVerification && areasMap[exit.dest][exit.wayBackId].dest != area.name) {
 					console.error("ERROR - inconsistent wayBackId "+exit.wayBackId+" of expected area "+exit.dest+" doesnt match "+area.name+" exit "+exit.id+": ");
 					console.error("ERROR detail - "+areasMap[exit.dest][exit.wayBackId].dest +"!="+ area.name);
 					console.error("ERROR map - "+JSON.stringify(areas));
-					process.exit(1);
+					failed = true;
 				}
 			}
 		});
-	});		
+	});
+
+	if (failed) {
+		return null;
+	}
 
 	var startArea = "shadow_tower_part1a";
 	var currentArea = startArea;
