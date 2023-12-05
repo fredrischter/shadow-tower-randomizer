@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  global.toNotGenerateImages=true;
+  //global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
