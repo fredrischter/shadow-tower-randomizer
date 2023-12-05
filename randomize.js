@@ -123,6 +123,7 @@ function randomize(paramsFile, stDir) {
 
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
     const shuffle = map_shuffler();
+    fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
 
     var map = new MapShuffle(shuffle);
     map.applyMap(data_model);
@@ -1199,6 +1200,10 @@ function randomize(paramsFile, stDir) {
 
         if (params.keepOnlyBosses) {
             forEachCreatureSpawn(keepOnlyBosses);
+            items[item_0_short_sword].attribute1.setAttributeType(0x8);
+            items[item_0_short_sword].attribute1.getAttributeValue(ATTR_HP_RECOVERY);
+            items[item_0_short_sword].attribute2.setAttributeType(ATTR_LIGHTING_ILLUMINATING);
+            items[item_0_short_sword].attribute2.getAttributeValue(ATTR_LIGHTING);
         }
 
         // Randomize creatures

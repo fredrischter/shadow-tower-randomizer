@@ -94,4 +94,11 @@ global.randomElement = function(array) {
   return array[randomInt(array.length-1)];
 }
 
+global.normalizeAreaName = function(areaName) {
+  areaName = areaName.replace("1a", "1"); areaName = areaName.replace("1b", "1"); areaName = areaName.replace("1c", "1"); areaName = areaName.replace("1d", "1"); areaName = areaName.replace("1e", "1");
+  areaName = areaName.replace("2a", "2"); areaName = areaName.replace("2b", "2"); areaName = areaName.replace("2c", "2"); areaName = areaName.replace("2d", "2"); areaName = areaName.replace("2e", "2");
+  areaName = areaName.replace("3a", "3"); areaName = areaName.replace("3b", "3"); areaName = areaName.replace("3c", "3"); areaName = areaName.replace("3d", "3"); areaName = areaName.replace("3e", "3");
+  return areaName;
+}
+
 exports={};

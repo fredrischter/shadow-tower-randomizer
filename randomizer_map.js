@@ -24,14 +24,14 @@ class MapShuffle {
     	var cloneRegistryPerDestination = {};
 
 		data_model.areas.forEach(area => {
+			console.log("Area " + area.name);
 			if (!area.exits) {
 				return;
 			}
-			console.log("Area " + area.name);
 			Object.keys(area.exits).forEach(e => {
 				var exit = area.exits[e];
-				console.log(" cloneRegistryPerDestination[" + exit.dest + "/" + exit.wayBackId +"] set to " + area.name + ".objects["+exit.id+"]");
-				cloneRegistryPerDestination[exit.dest + "/" + exit.wayBackId] = clone(area.objects[parseInt(exit.id)]);
+				console.log(" cloneRegistryPerDestination[" + normalizeAreaName(exit.dest) + "/" + exit.wayBackId +"] set to " + area.name + "/"+exit.id);
+				cloneRegistryPerDestination[normalizeAreaName(exit.dest) + "/" + exit.wayBackId] = clone(area.objects[parseInt(exit.id)]);
 			});
 		});
 
@@ -49,12 +49,12 @@ class MapShuffle {
 				var recipientArea = data_model.areas.find(originalArea => targetArea.name.includes(originalArea.name));
 				var recipientObject = recipientArea ? recipientArea.objects[parseInt(targetExit.id)] : null;
 				if (!objectToCopyFrom) {
-		    		console.log("  Not found object to copy from leading to " + targetExit.dest + "/" + targetExit.wayBackId+ ". wanted to set to " + targetArea.name + " object " + targetExit.id);
+		    		console.log("  Not found object to copy from leading to " + targetExit.dest + "/" + targetExit.wayBackId+ ". wanted to set to " + targetArea.name + "/" + targetExit.id);
 				} else if (recipientObject) {
-		    		console.log("  Setting exit for " + targetArea.name + " object " + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
+		    		console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 					recipientObject.set(objectToCopyFrom);
 				} else {
-		    		console.log("  Not found recipient " + targetArea.name + " object " + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
+		    		console.log("  Not found recipient " + targetArea.name + "/" + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 				}	
     		});
     	});

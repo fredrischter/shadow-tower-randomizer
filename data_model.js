@@ -1766,20 +1766,29 @@
   }
 
   originalMap.forEach(area => {
-    if (!global[area.name]) {
+    var areaName = normalizeAreaName(area.name);
+    if (!global[areaName]) {
       return;
     }
-    global[area.name].exits = {};
+    global[areaName].exits = {};
+    global[areaName].totems = {};
+//  });
+//
+//  originalMap.forEach(area => {
+//    var areaName = normalizeAreaName(area.name);
+//    if (!global[areaName]) {
+//      return;
+//    }
+    console.error("Setting exits for " + areaName);
     area.exits.forEach(exit => {
-      console.log("Setting exit " + area.name + " - " + exit.id);
-      global[area.name].exits[exit.id] = exit;
+      console.log("Setting exit " + areaName + " - " + exit.id);
+      global[areaName].exits[exit.id] = exit;
     });
-    global[area.name].totems = {};
     area.totems.forEach(totem => {
-      global[area.name].totems[totem.id] = totem;
+      global[areaName].totems[totem.id] = totem;
     });
 
-    //console.log("Exit objects for area " + global[area.name].name + " - " + JSON.stringify(global[area.name].exits));
+    //console.log("Exit objects for area " + global[areaName].name + " - " + JSON.stringify(global[areaName].exits));
   });
 
   class Spawn {
