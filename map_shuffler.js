@@ -230,6 +230,15 @@ function shuffle() {
 		});
 	});
 
+	const groupedMap = walkResult.map.reduce((acc, entry) => {
+	  const key = entry.name;
+	  acc[key] = acc[key] || { name: key, world: entry.world, exits: [], depth: entry.depth };
+	  acc[key].exits = acc[key].exits.concat(entry.exits);
+	  return acc;
+	}, {});
+
+	walkResult.map = Object.values(groupedMap);
+
 	return walkResult;
 }
 

@@ -804,13 +804,7 @@
           "dest": "shadow_tower_part3",
           "wayBackId": "0",
           "type": "door"
-        }
-      ],
-      "depth": 0
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "4",
           "dest": "human_world_hidden_region",
@@ -828,13 +822,7 @@
           "id": "jump",
           "dest": "shadow_tower_part1",
           "type": "jump"
-        }
-      ],
-      "depth": 5
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "earth_world_stone_cavern",
@@ -857,7 +845,7 @@
           "type": "door"
         }
       ],
-      "depth": 7
+      "depth": 0
     },
     {
       "name": "shadow_tower_part2",
@@ -880,13 +868,7 @@
           "id": "jump",
           "dest": "shadow_tower_part2",
           "type": "jump"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "shadow_tower_part2",
-      "exits": [
+        },
         {
           "id": "9",
           "dest": "shadow_tower_part1",
@@ -908,7 +890,7 @@
           "world": "water_world"
         }
       ],
-      "depth": 3
+      "depth": 7
     },
     {
       "name": "shadow_tower_part3",
@@ -937,13 +919,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 1
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "water_world_watery_labyrinth_area",
@@ -969,13 +945,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 2
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "10",
           "dest": "fire_world_phoenix_cave",
@@ -984,7 +954,7 @@
           "world": "fire_world"
         }
       ],
-      "depth": 3
+      "depth": 1
     },
     {
       "name": "human_world_solitary_region",

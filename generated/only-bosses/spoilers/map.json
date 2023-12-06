@@ -839,13 +839,7 @@
           "wayBackId": "0",
           "type": "door",
           "world": "death_world"
-        }
-      ],
-      "depth": 0
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "4",
           "dest": "illusion_world_gloomy_domain",
@@ -864,13 +858,7 @@
           "id": "jump",
           "dest": "shadow_tower_part1",
           "type": "jump"
-        }
-      ],
-      "depth": 3
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "human_world_cursed_region",
@@ -893,7 +881,7 @@
           "world": "death_world"
         }
       ],
-      "depth": 4
+      "depth": 0
     },
     {
       "name": "shadow_tower_part2",
@@ -916,13 +904,7 @@
           "id": "jump",
           "dest": "shadow_tower_part2",
           "type": "jump"
-        }
-      ],
-      "depth": 6
-    },
-    {
-      "name": "shadow_tower_part2",
-      "exits": [
+        },
         {
           "id": "9",
           "dest": "shadow_tower_part3",
@@ -944,7 +926,7 @@
           "world": "illusion_world"
         }
       ],
-      "depth": 4
+      "depth": 6
     },
     {
       "name": "shadow_tower_part3",
@@ -973,13 +955,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 5
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "human_world_cursed_region",
@@ -1005,13 +981,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 6
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "10",
           "dest": "water_world_sunken_river_area",
@@ -1020,11 +990,10 @@
           "world": "water_world"
         }
       ],
-      "depth": 7
+      "depth": 5
     },
     {
       "name": "human_world_solitary_region",
-      "world": "human_world",
       "exits": [
         {
           "id": "31",
@@ -1058,7 +1027,6 @@
     },
     {
       "name": "human_world_hidden_region",
-      "world": "human_world",
       "exits": [
         {
           "id": "9",
@@ -1085,7 +1053,6 @@
     },
     {
       "name": "human_world_cursed_region",
-      "world": "human_world",
       "exits": [
         {
           "id": "3",
@@ -1104,7 +1071,6 @@
     },
     {
       "name": "human_world_forgotten_region",
-      "world": "human_world",
       "exits": [
         {
           "id": "34",
@@ -1140,7 +1106,6 @@
     },
     {
       "name": "earth_world_rotting_cavern",
-      "world": "earth_world",
       "exits": [
         {
           "id": "13",
@@ -1153,7 +1118,6 @@
     },
     {
       "name": "earth_world_stone_cavern",
-      "world": "earth_world",
       "exits": [
         {
           "id": "4",
@@ -1176,7 +1140,6 @@
     },
     {
       "name": "earth_world_quaking_cavern",
-      "world": "earth_world",
       "exits": [
         {
           "id": "3",
@@ -1189,7 +1152,6 @@
     },
     {
       "name": "earth_world_poisonous_cavern",
-      "world": "earth_world",
       "exits": [
         {
           "id": "13",
@@ -1217,7 +1179,6 @@
     },
     {
       "name": "earth_world_false_pit_cavern",
-      "world": "earth_world",
       "exits": [
         {
           "id": "3",
@@ -1258,7 +1219,6 @@
     },
     {
       "name": "earth_world_hostile_rock_cavern",
-      "world": "earth_world",
       "exits": [
         {
           "id": "1",
@@ -1279,7 +1239,6 @@
     },
     {
       "name": "fire_world_phoenix_cave",
-      "world": "fire_world",
       "exits": [
         {
           "id": "0",
@@ -1299,7 +1258,6 @@
     },
     {
       "name": "fire_world_burning_cavern",
-      "world": "fire_world",
       "exits": [
         {
           "id": "37",
@@ -1328,7 +1286,6 @@
     },
     {
       "name": "fire_world_molten_cavern",
-      "world": "fire_world",
       "exits": [
         {
           "id": "27",
@@ -1349,7 +1306,6 @@
     },
     {
       "name": "fire_world_ashen_cavern",
-      "world": "fire_world",
       "exits": [
         {
           "id": "17",
@@ -1370,7 +1326,6 @@
     },
     {
       "name": "water_world_sunken_river_area",
-      "world": "water_world",
       "exits": [
         {
           "id": "5",
@@ -1391,7 +1346,6 @@
     },
     {
       "name": "water_world_impure_pool_area",
-      "world": "water_world",
       "exits": [
         {
           "id": "9",
@@ -1421,7 +1375,6 @@
     },
     {
       "name": "water_world_watery_labyrinth_area",
-      "world": "water_world",
       "exits": [
         {
           "id": "9",
@@ -1442,7 +1395,6 @@
     },
     {
       "name": "water_world_white_rain_area",
-      "world": "water_world",
       "exits": [
         {
           "id": "4",
@@ -1463,7 +1415,6 @@
     },
     {
       "name": "monster_world_false_eye_area",
-      "world": "monster_world",
       "exits": [
         {
           "id": "9",
@@ -1485,7 +1436,6 @@
     },
     {
       "name": "monster_world_screeching_area",
-      "world": "monster_world",
       "exits": [
         {
           "id": "0",
@@ -1513,7 +1463,6 @@
     },
     {
       "name": "illusion_world_gloomy_domain",
-      "world": "illusion_world",
       "exits": [
         {
           "id": "3",
@@ -1540,7 +1489,6 @@
     },
     {
       "name": "illusion_world_bewilderment_domain",
-      "world": "illusion_world",
       "exits": [
         {
           "id": "18",
@@ -1560,7 +1508,6 @@
     },
     {
       "name": "illusion_world_worship_domain",
-      "world": "illusion_world",
       "exits": [
         {
           "id": "1",
@@ -1595,7 +1542,6 @@
     },
     {
       "name": "illusion_world_dream_domain",
-      "world": "illusion_world",
       "exits": [
         {
           "id": "4",
@@ -1616,7 +1562,6 @@
     },
     {
       "name": "death_world_lingering_curse_layer",
-      "world": "death_world",
       "exits": [
         {
           "id": "1",
@@ -1637,7 +1582,6 @@
     },
     {
       "name": "death_world_gate_of_the_dead",
-      "world": "death_world",
       "exits": [
         {
           "id": "1",
@@ -1658,7 +1602,6 @@
     },
     {
       "name": "death_world_dark_castle_layer",
-      "world": "death_world",
       "exits": [
         {
           "id": "0",
@@ -1701,7 +1644,6 @@
     },
     {
       "name": "death_world_undead_layer",
-      "world": "death_world",
       "exits": [
         {
           "id": "12",

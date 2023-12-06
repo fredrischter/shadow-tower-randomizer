@@ -1305,6 +1305,59 @@ function randomize(paramsFile, stDir) {
         var { createCanvas } = require("canvas");
     }
 
+    var readableName={"human_world_solitary_region":"Human World\nSolitary Region",
+        "human_world_hidden_region":"Human World\nHidden Region",
+        "human_world_forgotten_region":"Human World\nForgotten Region",
+        "human_world_cursed_region":"Human World\nCursed Region",
+        "earth_world_rotting_cavern":"Earth World\nRotting Cavern",
+        "earth_world_poisonous_cavern":"Earth World\nPoisonous Cavern",
+        "earth_world_quaking_cavern":"Earth World\nQuaking Cavern",
+        "earth_world_false_pit_cavern":"Earth World\nFalse Pit Cavern",
+        "earth_world_stone_cavern":"Earth World\nStone Cavern",
+        "earth_world_hostile_rock_cavern":"Earth World\nHostile Rock Cavern",
+        "water_world_impure_pool_area":"Water World\nImpure Pool Area",
+        "water_world_sunken_river_area":"Water World\nSunken River Area",
+        "water_world_watery_labyrinth_area":"Water World\nWatery Labyrinth Area",
+        "water_world_white_rain_area":"Water World\nWhite Rain Area",
+        "fire_world_phoenix_cave":"Fire World\nPhoenix Cave",
+        "fire_world_burning_cavern":"Fire World\nBurning Cavern",
+        "fire_world_molten_cavern":"Fire World\nMolten Cavern",
+        "fire_world_ashen_cavern":"Fire World\nAshen Cavern",
+        "monster_world_false_eye Area":"Monster World\nFalse Eye Area",
+        "monster_world_screeching_area":"Monster World\nScreeching Area",
+        "illusion_world_bewilderment_domain":"Illusion World\nBewilderment Domain",
+        "illusion_world_gloomy_domain":"Illusion World\nGloomy Domain",
+        "illusion_world_dream_domain":"Illusion World\nDream Domain",
+        "illusion_world_worship_domain":"Illusion World\nWorship Domain",
+        "death_world_dark_castle_layer":"Death World\nDark Castle Layer",
+        "death_world_lingering_curse_layer":"Death World\nLingering Curse Layer",
+        "death_world_undead_layer":"Death World\nUndead Layer",
+        "death_world_gate_of_the_dead":"Death World\nGate Of The Dead",
+        "void":"Void",
+        "shadow_tower_part1":"Shadow Tower Part1",
+        "shadow_tower_part2":"Shadow Tower Part2",
+        "shadow_tower_part3":"Shadow Tower Part3",
+        "shadow_tower_part1a":"Shadow Tower Part1 A",
+        "shadow_tower_part1b":"Shadow Tower Part1 B",
+        "shadow_tower_part1c":"Shadow Tower Part1 C",
+        "shadow_tower_part2a":"Shadow Tower Part2 A",
+        "shadow_tower_part2b":"Shadow Tower Part2 B",
+        "shadow_tower_part3a":"Shadow Tower Part3 A",
+        "shadow_tower_part3b":"Shadow Tower Part3 B",
+"shadow_tower_part3c":"Shadow Tower Part3 C"}
+
+    var mermaidChart = "graph TD\n";
+    areas.forEach(area => {
+        if (area.exits) {
+            Object.values(area.exits).forEach((exit) => {
+                if (exit) {
+                    mermaidChart+="  " + area.name + "[" + (readableName[area.name] || area.name) + "] --> "+exit.dest+"["+(readableName[exit.dest] || exit.dest)+"]\n";
+                }
+            });
+        }
+    });
+    mapsHTML = mapsHTML.replace("<!--mermaid-->", mermaidChart);
+
     for (var a in areas) {
         var area = areas[a];
         area.writeMapImage(createCanvas, mapFolder);

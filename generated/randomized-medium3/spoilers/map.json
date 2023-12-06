@@ -740,13 +740,7 @@
           "wayBackId": "10",
           "type": "door",
           "world": "earth_world"
-        }
-      ],
-      "depth": 0
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "4",
           "dest": "death_world_dark_castle_layer",
@@ -764,13 +758,7 @@
           "id": "jump",
           "dest": "shadow_tower_part1",
           "type": "jump"
-        }
-      ],
-      "depth": 9
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "human_world_forgotten_region",
@@ -793,7 +781,7 @@
           "world": "fire_world"
         }
       ],
-      "depth": 6
+      "depth": 0
     },
     {
       "name": "shadow_tower_part2",
@@ -816,13 +804,7 @@
           "id": "jump",
           "dest": "shadow_tower_part2",
           "type": "jump"
-        }
-      ],
-      "depth": 2
-    },
-    {
-      "name": "shadow_tower_part2",
-      "exits": [
+        },
         {
           "id": "9",
           "dest": "death_world_lingering_curse_layer",
@@ -844,7 +826,7 @@
           "type": "door"
         }
       ],
-      "depth": 8
+      "depth": 2
     },
     {
       "name": "shadow_tower_part3",
@@ -873,13 +855,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 8
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "shadow_tower_part2",
@@ -904,13 +880,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 9
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "10",
           "dest": "earth_world_rotting_cavern",
@@ -919,7 +889,7 @@
           "world": "earth_world"
         }
       ],
-      "depth": 10
+      "depth": 8
     },
     {
       "name": "human_world_solitary_region",

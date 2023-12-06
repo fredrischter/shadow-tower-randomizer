@@ -13,9 +13,6 @@ function clone(orig) {
 class MapShuffle {
     constructor(source) {
     	this.source = source;
-    	/*this.source.map.forEach(area => {
-
-    	});*/
     }
 
     applyMap(data_model) {
@@ -33,6 +30,8 @@ class MapShuffle {
 				console.log(" cloneRegistryPerDestination[" + normalizeAreaName(exit.dest) + "/" + exit.wayBackId +"] set to " + area.name + "/"+exit.id);
 				cloneRegistryPerDestination[normalizeAreaName(exit.dest) + "/" + exit.wayBackId] = clone(area.objects[parseInt(exit.id)]);
 			});
+
+			area.exits = {};
 		});
 
     	function originalEntranceTo(dest, wayBackId) {
@@ -52,6 +51,7 @@ class MapShuffle {
 		    		console.log("  Not found object to copy from leading to " + targetExit.dest + "/" + targetExit.wayBackId+ ". wanted to set to " + targetArea.name + "/" + targetExit.id);
 				} else if (recipientObject) {
 		    		console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
+					data_model.areas.find(area => area.name == targetArea.name).exits[targetExit.id] = targetExit;
 					recipientObject.set(objectToCopyFrom);
 				} else {
 		    		console.log("  Not found recipient " + targetArea.name + "/" + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);

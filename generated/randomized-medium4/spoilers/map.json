@@ -849,13 +849,7 @@
           "world": "earth_world",
           "wayBackId": "4",
           "type": "door"
-        }
-      ],
-      "depth": 0
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "4",
           "dest": "water_world_impure_pool_area",
@@ -873,13 +867,7 @@
           "id": "jump",
           "dest": "shadow_tower_part1",
           "type": "jump"
-        }
-      ],
-      "depth": 4
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "human_world_forgotten_region",
@@ -900,7 +888,7 @@
           "type": "door"
         }
       ],
-      "depth": 4
+      "depth": 0
     },
     {
       "name": "shadow_tower_part2",
@@ -923,13 +911,7 @@
           "id": "jump",
           "dest": "shadow_tower_part2",
           "type": "jump"
-        }
-      ],
-      "depth": 8
-    },
-    {
-      "name": "shadow_tower_part2",
-      "exits": [
+        },
         {
           "id": "9",
           "dest": "shadow_tower_part1",
@@ -950,7 +932,7 @@
           "type": "door"
         }
       ],
-      "depth": 3
+      "depth": 8
     },
     {
       "name": "shadow_tower_part3",
@@ -979,13 +961,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 5
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "earth_world_poisonous_cavern",
@@ -1011,13 +987,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 6
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "10",
           "dest": "earth_world_false_pit_cavern",
@@ -1026,7 +996,7 @@
           "world": "earth_world"
         }
       ],
-      "depth": 7
+      "depth": 5
     },
     {
       "name": "human_world_solitary_region",

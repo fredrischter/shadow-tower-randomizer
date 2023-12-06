@@ -835,13 +835,7 @@
           "wayBackId": "1",
           "type": "door",
           "world": "death_world"
-        }
-      ],
-      "depth": 0
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "4",
           "dest": "human_world_solitary_region",
@@ -860,13 +854,7 @@
           "id": "jump",
           "dest": "shadow_tower_part1",
           "type": "jump"
-        }
-      ],
-      "depth": 8
-    },
-    {
-      "name": "shadow_tower_part1",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "earth_world_poisonous_cavern",
@@ -888,7 +876,7 @@
           "type": "door"
         }
       ],
-      "depth": 7
+      "depth": 0
     },
     {
       "name": "shadow_tower_part2",
@@ -909,13 +897,7 @@
           "id": "jump",
           "dest": "shadow_tower_part2",
           "type": "jump"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "shadow_tower_part2",
-      "exits": [
+        },
         {
           "id": "9",
           "dest": "shadow_tower_part3",
@@ -936,7 +918,7 @@
           "type": "door"
         }
       ],
-      "depth": 6
+      "depth": 7
     },
     {
       "name": "shadow_tower_part3",
@@ -966,13 +948,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 4
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "5",
           "dest": "earth_world_poisonous_cavern",
@@ -997,13 +973,7 @@
           "id": "jump",
           "dest": "shadow_tower_part3",
           "type": "jump"
-        }
-      ],
-      "depth": 5
-    },
-    {
-      "name": "shadow_tower_part3",
-      "exits": [
+        },
         {
           "id": "10",
           "dest": "human_world_solitary_region",
@@ -1012,7 +982,7 @@
           "type": "door"
         }
       ],
-      "depth": 6
+      "depth": 4
     },
     {
       "name": "human_world_solitary_region",
