@@ -2,6 +2,7 @@
 	"label": "only-bosses",
 	"preset": "any%",
 	"difficulty": "extreme-easy",
+	"randomizeMap": true,
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
 	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",

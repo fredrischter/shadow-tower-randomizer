@@ -2,6 +2,7 @@
 	"label": "randomized-medium2",
 	"preset": "any%",
 	"difficulty": "medium",
+	"randomizeMap": true,
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
 	"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",

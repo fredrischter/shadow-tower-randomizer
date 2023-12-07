@@ -1,5 +1,5 @@
 Randomization - Using given seed 3
-Parameters - {"label":"randomized-medium3","preset":"any%","difficulty":"medium","randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"fiery-key-in-fire-world","randomizeNonEssentialKeys":true,"seed":"3"}
+Parameters - {"label":"randomized-medium3","preset":"any%","difficulty":"medium","randomizeMap":true,"randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"fiery-key-in-fire-world","randomizeNonEssentialKeys":true,"seed":"3"}
 DEBUG ------------------ Randomization engine - Defining map
 Area human_world_solitary_region
  cloneRegistryPerDestination[human_world_hidden_region/9] set to human_world_solitary_region/31

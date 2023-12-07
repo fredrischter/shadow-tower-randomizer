@@ -1767,7 +1767,10 @@
 
   originalMap.forEach(area => {
     var areaName = normalizeAreaName(area.name);
+    console.error("Setting exits for " + areaName);
+
     if (!global[areaName]) {
+      console.error("Skipping since didnt find global var.");
       return;
     }
     global[areaName].exits = {};
@@ -1779,9 +1782,8 @@
 //    if (!global[areaName]) {
 //      return;
 //    }
-    console.error("Setting exits for " + areaName);
     area.exits.forEach(exit => {
-      console.log("Setting exit " + areaName + " - " + exit.id);
+      console.error("Setting exit " + areaName + " - " + exit.id);
       global[areaName].exits[exit.id] = exit;
     });
     area.totems.forEach(totem => {

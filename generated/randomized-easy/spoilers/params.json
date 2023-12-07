@@ -2,6 +2,7 @@
 	"label": "randomized-easy",
 	"preset": "any%",
 	"difficulty": "easy",
+	"randomizeMap": true,
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
 	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
