@@ -37,7 +37,7 @@
     { index: 141, name: "death_world_lingering_curse_layer" },
     { index: 261, name: "death_world_undead_layer" },
     { index: 231, name: "death_world_gate_of_the_dead" },
-    { index: 301, name: "void" },
+//    { index: 301, name: "void" },
     { index: 1, name: "shadow_tower_part1" },
     { index: 401, name: "shadow_tower_part2" },
     { index: 411, name: "shadow_tower_part3" }
@@ -827,7 +827,7 @@
             "death_world_undead_layer": {},
             "earth_world_poisonous_cavern": {},
             "earth_world_stone_cavern": {},
-            "void": {},
+            //"void": {},
             "water_world_watery_labyrinth_area": {},
             "earth_world_hostile_rock_cavern": {},
             "water_world_white_rain_area": {},
@@ -1769,12 +1769,14 @@
     var areaName = normalizeAreaName(area.name);
     console.error("Setting exits for " + areaName);
 
-    if (!global[areaName]) {
-      console.error("Skipping since didnt find global var.");
+    if (!global[normalizeAreaName(areaName)]) {
+      console.error("Skipping since didnt find global var " + areaName);
       return;
     }
-    global[areaName].exits = {};
-    global[areaName].totems = {};
+    if (!global[areaName].exits) {
+      global[areaName].exits = {};
+      global[areaName].totems = {};
+    }
 //  });
 //
 //  originalMap.forEach(area => {
@@ -1783,7 +1785,8 @@
 //      return;
 //    }
     area.exits.forEach(exit => {
-      console.error("Setting exit " + areaName + " - " + exit.id);
+      exit.origin = area.name;
+      console.error("Setting exit " + areaName + " - " + exit.id + " = " + JSON.stringify(exit));
       global[areaName].exits[exit.id] = exit;
     });
     area.totems.forEach(totem => {

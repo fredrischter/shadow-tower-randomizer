@@ -21,14 +21,13 @@ class MapShuffle {
     	var cloneRegistryPerDestination = {};
 
 		data_model.areas.forEach(area => {
-			console.log("Area " + area.name);
-			if (!area.exits) {
-				return;
-			}
+			console.error("Area " + area.name);
 			Object.keys(area.exits).forEach(e => {
 				var exit = area.exits[e];
-				console.log(" cloneRegistryPerDestination[" + normalizeAreaName(exit.dest) + "/" + exit.wayBackId +"] set to " + area.name + "/"+exit.id);
-				cloneRegistryPerDestination[normalizeAreaName(exit.dest) + "/" + exit.wayBackId] = clone(area.objects[parseInt(exit.id)]);
+				if (exit.id != "jump") {
+					console.error(" cloneRegistryPerDestination[" + exit.dest + "/" + exit.wayBackId +"] set to " + area.name + "/"+exit.id);
+					cloneRegistryPerDestination[exit.dest + "/" + exit.wayBackId] = clone(area.objects[parseInt(exit.id)]);
+				}
 			});
 
 			area.exits = {};
@@ -40,21 +39,31 @@ class MapShuffle {
 
     	this.source.map.forEach(targetArea => {
 			targetArea.exits.forEach(targetExit => {
-				if (targetExit.id == "jump") {
-					return;
-				}
 				var objectToCopyFrom = originalEntranceTo(targetExit.dest, targetExit.wayBackId);
 
 				var recipientArea = data_model.areas.find(originalArea => targetArea.name.includes(originalArea.name));
+				recipientArea.score = targetArea.depth;
 				var recipientObject = recipientArea ? recipientArea.objects[parseInt(targetExit.id)] : null;
-				if (!objectToCopyFrom) {
-		    		console.log("  Not found object to copy from leading to " + targetExit.dest + "/" + targetExit.wayBackId+ ". wanted to set to " + targetArea.name + "/" + targetExit.id);
+				if (!objectToCopyFrom && targetExit.id != "jump") {
+		    		console.error("  Not found object to copy from leading to " + targetExit.dest + "/" + targetExit.wayBackId+ ". wanted to set to " + targetArea.name + "/" + targetExit.id);
 				} else if (recipientObject) {
-		    		console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
-					data_model.areas.find(area => area.name == targetArea.name).exits[targetExit.id] = targetExit;
-					recipientObject.set(objectToCopyFrom);
+					var areaToSetExit = data_model.areas.find(area => normalizeAreaName(area.name) == normalizeAreaName(targetArea.name));
+					if (!areaToSetExit) {
+			    		console.error("  ERROR - Not found area for setting exit " + targetArea.name + " " + normalizeAreaName(targetArea.name));
+			    		return;
+					} else if (!areaToSetExit.exits) {
+			    		console.error("  ERROR - Doesnt have exits " + targetArea.name + " " + normalizeAreaName(targetArea.name));
+			    		return;
+					} else {
+			    		console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
+						areaToSetExit.exits[targetExit.id] = targetExit;
+						targetExit.origin = targetArea.name;
+						if (targetExit.id == "jump") {
+							recipientObject.set(objectToCopyFrom);
+						}
+					}
 				} else {
-		    		console.log("  Not found recipient " + targetArea.name + "/" + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
+		    		console.error("  Not found recipient " + targetArea.name + "/" + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 				}	
     		});
     	});

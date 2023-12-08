@@ -1,181 +1,53 @@
 Randomization - Using given seed 5
 Parameters - {"label":"randomized-medium5","preset":"any%","difficulty":"medium","randomizeMap":true,"randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"fieryKeyFlamingKeyDrop":"fiery-key-in-fire-world","randomizeNonEssentialKeys":true,"seed":"5"}
 DEBUG ------------------ Randomization engine - Defining map
-Area human_world_solitary_region
- cloneRegistryPerDestination[human_world_hidden_region/9] set to human_world_solitary_region/31
- cloneRegistryPerDestination[human_world_hidden_region/13] set to human_world_solitary_region/34
- cloneRegistryPerDestination[human_world_cursed_region/3] set to human_world_solitary_region/35
- cloneRegistryPerDestination[shadow_tower_part1/0] set to human_world_solitary_region/38
-Area human_world_hidden_region
- cloneRegistryPerDestination[human_world_solitary_region/31] set to human_world_hidden_region/9
- cloneRegistryPerDestination[human_world_solitary_region/34] set to human_world_hidden_region/13
- cloneRegistryPerDestination[human_world_forgotten_region/18] set to human_world_hidden_region/26
-Area human_world_forgotten_region
- cloneRegistryPerDestination[human_world_hidden_region/26] set to human_world_forgotten_region/18
- cloneRegistryPerDestination[shadow_tower_part1/8] set to human_world_forgotten_region/34
- cloneRegistryPerDestination[shadow_tower_part1/5] set to human_world_forgotten_region/37
- cloneRegistryPerDestination[earth_world_false_pit_cavern/16] set to human_world_forgotten_region/41
-Area human_world_cursed_region
- cloneRegistryPerDestination[human_world_solitary_region/35] set to human_world_cursed_region/3
- cloneRegistryPerDestination[shadow_tower_part1/4] set to human_world_cursed_region/31
-Area earth_world_rotting_cavern
- cloneRegistryPerDestination[shadow_tower_part1/11] set to earth_world_rotting_cavern/13
-Area earth_world_poisonous_cavern
- cloneRegistryPerDestination[earth_world_quaking_cavern/3] set to earth_world_poisonous_cavern/10
- cloneRegistryPerDestination[earth_world_stone_cavern/4] set to earth_world_poisonous_cavern/13
- cloneRegistryPerDestination[shadow_tower_part1/9] set to earth_world_poisonous_cavern/17
-Area earth_world_quaking_cavern
- cloneRegistryPerDestination[earth_world_poisonous_cavern/10] set to earth_world_quaking_cavern/3
-Area earth_world_false_pit_cavern
- cloneRegistryPerDestination[earth_world_hostile_rock_cavern/1] set to earth_world_false_pit_cavern/1
- cloneRegistryPerDestination[earth_world_stone_cavern/7] set to earth_world_false_pit_cavern/3
- cloneRegistryPerDestination[shadow_tower_part2/0] set to earth_world_false_pit_cavern/11
- cloneRegistryPerDestination[human_world_forgotten_region/41] set to earth_world_false_pit_cavern/16
- cloneRegistryPerDestination[earth_world_hostile_rock_cavern/3] set to earth_world_false_pit_cavern/19
-Area earth_world_stone_cavern
- cloneRegistryPerDestination[earth_world_poisonous_cavern/13] set to earth_world_stone_cavern/4
- cloneRegistryPerDestination[earth_world_false_pit_cavern/3] set to earth_world_stone_cavern/7
-Area earth_world_hostile_rock_cavern
- cloneRegistryPerDestination[earth_world_false_pit_cavern/1] set to earth_world_hostile_rock_cavern/1
- cloneRegistryPerDestination[earth_world_false_pit_cavern/19] set to earth_world_hostile_rock_cavern/3
-Area water_world_impure_pool_area
- cloneRegistryPerDestination[shadow_tower_part2/9] set to water_world_impure_pool_area/9
- cloneRegistryPerDestination[shadow_tower_part3/0] set to water_world_impure_pool_area/11
- cloneRegistryPerDestination[monster_world_screeching_area/3] set to water_world_impure_pool_area/14
-Area water_world_sunken_river_area
- cloneRegistryPerDestination[shadow_tower_part3/3] set to water_world_sunken_river_area/1
- cloneRegistryPerDestination[water_world_watery_labyrinth_area/8] set to water_world_sunken_river_area/5
-Area water_world_watery_labyrinth_area
- cloneRegistryPerDestination[water_world_sunken_river_area/5] set to water_world_watery_labyrinth_area/8
- cloneRegistryPerDestination[water_world_white_rain_area/4] set to water_world_watery_labyrinth_area/9
-Area water_world_white_rain_area
- cloneRegistryPerDestination[water_world_watery_labyrinth_area/9] set to water_world_white_rain_area/4
- cloneRegistryPerDestination[illusion_world_gloomy_domain/10] set to water_world_white_rain_area/6
-Area fire_world_phoenix_cave
- cloneRegistryPerDestination[shadow_tower_part2/4] set to fire_world_phoenix_cave/0
- cloneRegistryPerDestination[shadow_tower_part2/5] set to fire_world_phoenix_cave/1
-Area fire_world_burning_cavern
- cloneRegistryPerDestination[shadow_tower_part2/7] set to fire_world_burning_cavern/37
- cloneRegistryPerDestination[fire_world_ashen_cavern/17] set to fire_world_burning_cavern/93
- cloneRegistryPerDestination[fire_world_molten_cavern/19] set to fire_world_burning_cavern/94
-Area fire_world_molten_cavern
- cloneRegistryPerDestination[fire_world_burning_cavern/94] set to fire_world_molten_cavern/19
- cloneRegistryPerDestination[fire_world_ashen_cavern/6] set to fire_world_molten_cavern/27
-Area fire_world_ashen_cavern
- cloneRegistryPerDestination[fire_world_molten_cavern/27] set to fire_world_ashen_cavern/6
- cloneRegistryPerDestination[fire_world_burning_cavern/93] set to fire_world_ashen_cavern/17
-Area monster_world_false_eye_area
- cloneRegistryPerDestination[shadow_tower_part3/5] set to monster_world_false_eye_area/9
- cloneRegistryPerDestination[illusion_world_dream_domain/4] set to monster_world_false_eye_area/10
-Area monster_world_screeching_area
- cloneRegistryPerDestination[shadow_tower_part3/7] set to monster_world_screeching_area/0
- cloneRegistryPerDestination[water_world_impure_pool_area/14] set to monster_world_screeching_area/3
- cloneRegistryPerDestination[death_world_dark_castle_layer/4] set to monster_world_screeching_area/6
-Area illusion_world_bewilderment_domain
- cloneRegistryPerDestination[illusion_world_worship_domain/1] set to illusion_world_bewilderment_domain/18
- cloneRegistryPerDestination[illusion_world_gloomy_domain/3] set to illusion_world_bewilderment_domain/20
-Area illusion_world_gloomy_domain
- cloneRegistryPerDestination[shadow_tower_part3/9] set to illusion_world_gloomy_domain/1
- cloneRegistryPerDestination[illusion_world_bewilderment_domain/20] set to illusion_world_gloomy_domain/3
- cloneRegistryPerDestination[water_world_white_rain_area/6] set to illusion_world_gloomy_domain/10
-Area illusion_world_dream_domain
- cloneRegistryPerDestination[illusion_world_worship_domain/10] set to illusion_world_dream_domain/3
- cloneRegistryPerDestination[monster_world_false_eye_area/10] set to illusion_world_dream_domain/4
-Area illusion_world_worship_domain
- cloneRegistryPerDestination[illusion_world_bewilderment_domain/18] set to illusion_world_worship_domain/1
- cloneRegistryPerDestination[illusion_world_worship_domain/8] set to illusion_world_worship_domain/6
- cloneRegistryPerDestination[illusion_world_worship_domain/6] set to illusion_world_worship_domain/8
- cloneRegistryPerDestination[illusion_world_dream_domain/3] set to illusion_world_worship_domain/10
-Area death_world_dark_castle_layer
- cloneRegistryPerDestination[death_world_undead_layer/15] set to death_world_dark_castle_layer/0
- cloneRegistryPerDestination[shadow_tower_part3/13] set to death_world_dark_castle_layer/2
- cloneRegistryPerDestination[monster_world_screeching_area/6] set to death_world_dark_castle_layer/4
- cloneRegistryPerDestination[death_world_lingering_curse_layer/2] set to death_world_dark_castle_layer/7
- cloneRegistryPerDestination[death_world_gate_of_the_dead/4] set to death_world_dark_castle_layer/10
-Area death_world_lingering_curse_layer
- cloneRegistryPerDestination[shadow_tower_part3/10] set to death_world_lingering_curse_layer/1
- cloneRegistryPerDestination[death_world_dark_castle_layer/7] set to death_world_lingering_curse_layer/2
-Area death_world_undead_layer
- cloneRegistryPerDestination[death_world_gate_of_the_dead/1] set to death_world_undead_layer/12
- cloneRegistryPerDestination[death_world_dark_castle_layer/0] set to death_world_undead_layer/15
-Area death_world_gate_of_the_dead
- cloneRegistryPerDestination[death_world_undead_layer/12] set to death_world_gate_of_the_dead/1
- cloneRegistryPerDestination[death_world_dark_castle_layer/10] set to death_world_gate_of_the_dead/4
-Area void
-Area shadow_tower_part1
- cloneRegistryPerDestination[human_world_forgotten_region/37] set to shadow_tower_part1/5
- cloneRegistryPerDestination[earth_world_poisonous_cavern/17] set to shadow_tower_part1/9
- cloneRegistryPerDestination[earth_world_rotting_cavern/13] set to shadow_tower_part1/11
-Area shadow_tower_part2
- cloneRegistryPerDestination[fire_world_phoenix_cave/1] set to shadow_tower_part2/5
- cloneRegistryPerDestination[fire_world_burning_cavern/37] set to shadow_tower_part2/7
- cloneRegistryPerDestination[water_world_impure_pool_area/9] set to shadow_tower_part2/9
-Area shadow_tower_part3
- cloneRegistryPerDestination[death_world_lingering_curse_layer/1] set to shadow_tower_part3/10
-  Setting exit for shadow_tower_part1/0 as one leading to shadow_tower_part3/0
   Setting exit for shadow_tower_part1/4 as one leading to human_world_hidden_region/9
-  Setting exit for shadow_tower_part1/8 as one leading to shadow_tower_part2/9
   Setting exit for shadow_tower_part1/5 as one leading to earth_world_stone_cavern/4
   Setting exit for shadow_tower_part1/11 as one leading to earth_world_hostile_rock_cavern/1
-  Not found object to copy from leading to death_world_dark_castle_layer/2. wanted to set to shadow_tower_part1/9
+  Setting exit for shadow_tower_part1/9 as one leading to death_world_dark_castle_layer/2
   Setting exit for shadow_tower_part2/0 as one leading to human_world_solitary_region/35
   Setting exit for shadow_tower_part2/4 as one leading to earth_world_false_pit_cavern/3
-  Setting exit for shadow_tower_part2/9 as one leading to shadow_tower_part1/8
   Setting exit for shadow_tower_part2/7 as one leading to earth_world_poisonous_cavern/17
   Setting exit for shadow_tower_part2/5 as one leading to water_world_watery_labyrinth_area/9
-  Setting exit for shadow_tower_part3/0 as one leading to shadow_tower_part1/0
   Setting exit for shadow_tower_part3/3 as one leading to water_world_impure_pool_area/9
   Setting exit for shadow_tower_part3/9 as one leading to earth_world_poisonous_cavern/13
   Setting exit for shadow_tower_part3/5 as one leading to water_world_watery_labyrinth_area/8
   Setting exit for shadow_tower_part3/7 as one leading to water_world_sunken_river_area/5
-  Not found object to copy from leading to monster_world_false_eye_area/9. wanted to set to shadow_tower_part3/13
+  Setting exit for shadow_tower_part3/13 as one leading to monster_world_false_eye_area/9
   Setting exit for shadow_tower_part3/10 as one leading to fire_world_phoenix_cave/1
   Setting exit for human_world_solitary_region/31 as one leading to earth_world_false_pit_cavern/1
   Setting exit for human_world_solitary_region/34 as one leading to death_world_undead_layer/15
-  Setting exit for human_world_solitary_region/35 as one leading to shadow_tower_part2/0
   Setting exit for human_world_solitary_region/38 as one leading to illusion_world_worship_domain/1
-  Setting exit for human_world_hidden_region/9 as one leading to shadow_tower_part1/4
   Setting exit for human_world_hidden_region/13 as one leading to illusion_world_gloomy_domain/3
   Setting exit for human_world_hidden_region/26 as one leading to water_world_white_rain_area/6
-  Not found object to copy from leading to water_world_sunken_river_area/1. wanted to set to human_world_cursed_region/3
-  Not found object to copy from leading to fire_world_phoenix_cave/0. wanted to set to human_world_cursed_region/31
+  Setting exit for human_world_cursed_region/3 as one leading to water_world_sunken_river_area/1
+  Setting exit for human_world_cursed_region/31 as one leading to fire_world_phoenix_cave/0
   Setting exit for human_world_forgotten_region/34 as one leading to death_world_gate_of_the_dead/1
   Setting exit for human_world_forgotten_region/37 as one leading to water_world_white_rain_area/4
   Setting exit for human_world_forgotten_region/18 as one leading to earth_world_false_pit_cavern/16
   Setting exit for human_world_forgotten_region/41 as one leading to monster_world_screeching_area/3
   Setting exit for earth_world_rotting_cavern/13 as one leading to earth_world_stone_cavern/7
-  Setting exit for earth_world_stone_cavern/4 as one leading to shadow_tower_part1/5
   Setting exit for earth_world_stone_cavern/7 as one leading to earth_world_rotting_cavern/13
   Setting exit for earth_world_quaking_cavern/3 as one leading to death_world_undead_layer/12
-  Setting exit for earth_world_poisonous_cavern/13 as one leading to shadow_tower_part3/9
-  Not found object to copy from leading to water_world_impure_pool_area/11. wanted to set to earth_world_poisonous_cavern/10
-  Setting exit for earth_world_poisonous_cavern/17 as one leading to shadow_tower_part2/7
-  Setting exit for earth_world_false_pit_cavern/3 as one leading to shadow_tower_part2/4
+  Setting exit for earth_world_poisonous_cavern/10 as one leading to water_world_impure_pool_area/11
   Setting exit for earth_world_false_pit_cavern/1 as one leading to human_world_solitary_region/31
   Setting exit for earth_world_false_pit_cavern/11 as one leading to death_world_lingering_curse_layer/1
   Setting exit for earth_world_false_pit_cavern/19 as one leading to illusion_world_gloomy_domain/10
   Setting exit for earth_world_false_pit_cavern/16 as one leading to human_world_forgotten_region/18
-  Setting exit for earth_world_hostile_rock_cavern/1 as one leading to shadow_tower_part1/11
   Setting exit for earth_world_hostile_rock_cavern/3 as one leading to death_world_dark_castle_layer/10
-  Not found object to copy from leading to human_world_cursed_region/31. wanted to set to fire_world_phoenix_cave/0
-  Setting exit for fire_world_phoenix_cave/1 as one leading to shadow_tower_part3/10
-  Not found object to copy from leading to illusion_world_gloomy_domain/1. wanted to set to fire_world_burning_cavern/37
+  Setting exit for fire_world_phoenix_cave/0 as one leading to human_world_cursed_region/31
+  Setting exit for fire_world_burning_cavern/37 as one leading to illusion_world_gloomy_domain/1
   Setting exit for fire_world_burning_cavern/94 as one leading to illusion_world_dream_domain/3
   Setting exit for fire_world_burning_cavern/93 as one leading to illusion_world_worship_domain/10
   Setting exit for fire_world_molten_cavern/27 as one leading to fire_world_ashen_cavern/6
   Setting exit for fire_world_molten_cavern/19 as one leading to illusion_world_worship_domain/8
   Setting exit for fire_world_ashen_cavern/17 as one leading to illusion_world_worship_domain/6
   Setting exit for fire_world_ashen_cavern/6 as one leading to fire_world_molten_cavern/27
-  Setting exit for water_world_sunken_river_area/5 as one leading to shadow_tower_part3/7
   Setting exit for water_world_sunken_river_area/1 as one leading to human_world_cursed_region/3
-  Setting exit for water_world_impure_pool_area/9 as one leading to shadow_tower_part3/3
   Setting exit for water_world_impure_pool_area/11 as one leading to earth_world_poisonous_cavern/10
   Setting exit for water_world_impure_pool_area/14 as one leading to death_world_lingering_curse_layer/2
-  Setting exit for water_world_watery_labyrinth_area/9 as one leading to shadow_tower_part2/5
-  Setting exit for water_world_watery_labyrinth_area/8 as one leading to shadow_tower_part3/5
   Setting exit for water_world_white_rain_area/4 as one leading to human_world_forgotten_region/37
   Setting exit for water_world_white_rain_area/6 as one leading to human_world_hidden_region/26
-  Setting exit for monster_world_false_eye_area/9 as one leading to shadow_tower_part3/13
   Setting exit for monster_world_false_eye_area/10 as one leading to monster_world_screeching_area/6
   Setting exit for monster_world_screeching_area/0 as one leading to illusion_world_bewilderment_domain/18
   Setting exit for monster_world_screeching_area/3 as one leading to human_world_forgotten_region/41
@@ -183,20 +55,19 @@ Area shadow_tower_part3
   Setting exit for illusion_world_gloomy_domain/3 as one leading to human_world_hidden_region/13
   Setting exit for illusion_world_gloomy_domain/1 as one leading to fire_world_burning_cavern/37
   Setting exit for illusion_world_gloomy_domain/10 as one leading to earth_world_false_pit_cavern/19
-  Not found object to copy from leading to monster_world_screeching_area/0. wanted to set to illusion_world_bewilderment_domain/18
+  Setting exit for illusion_world_bewilderment_domain/18 as one leading to monster_world_screeching_area/0
   Setting exit for illusion_world_bewilderment_domain/20 as one leading to death_world_dark_castle_layer/0
-  Not found object to copy from leading to human_world_solitary_region/38. wanted to set to illusion_world_worship_domain/1
+  Setting exit for illusion_world_worship_domain/1 as one leading to human_world_solitary_region/38
   Setting exit for illusion_world_worship_domain/6 as one leading to fire_world_ashen_cavern/17
   Setting exit for illusion_world_worship_domain/10 as one leading to fire_world_burning_cavern/93
   Setting exit for illusion_world_worship_domain/8 as one leading to fire_world_molten_cavern/19
   Setting exit for illusion_world_dream_domain/4 as one leading to death_world_dark_castle_layer/7
   Setting exit for illusion_world_dream_domain/3 as one leading to fire_world_burning_cavern/94
-  Not found object to copy from leading to earth_world_false_pit_cavern/11. wanted to set to death_world_lingering_curse_layer/1
+  Setting exit for death_world_lingering_curse_layer/1 as one leading to earth_world_false_pit_cavern/11
   Setting exit for death_world_lingering_curse_layer/2 as one leading to water_world_impure_pool_area/14
-  Not found object to copy from leading to human_world_forgotten_region/34. wanted to set to death_world_gate_of_the_dead/1
+  Setting exit for death_world_gate_of_the_dead/1 as one leading to human_world_forgotten_region/34
   Setting exit for death_world_gate_of_the_dead/4 as one leading to death_world_dark_castle_layer/4
   Setting exit for death_world_dark_castle_layer/0 as one leading to illusion_world_bewilderment_domain/20
-  Setting exit for death_world_dark_castle_layer/2 as one leading to shadow_tower_part1/9
   Setting exit for death_world_dark_castle_layer/4 as one leading to death_world_gate_of_the_dead/4
   Setting exit for death_world_dark_castle_layer/7 as one leading to illusion_world_dream_domain/4
   Setting exit for death_world_dark_castle_layer/10 as one leading to earth_world_hostile_rock_cavern/3

@@ -1336,9 +1336,6 @@ function randomize(paramsFile, stDir) {
         "death_world_undead_layer":"Death World\nUndead Layer",
         "death_world_gate_of_the_dead":"Death World\nGate Of The Dead",
         "void":"Void",
-        "shadow_tower_part1":"Shadow Tower Part1",
-        "shadow_tower_part2":"Shadow Tower Part2",
-        "shadow_tower_part3":"Shadow Tower Part3",
         "shadow_tower_part1a":"Shadow Tower Part1 A",
         "shadow_tower_part1b":"Shadow Tower Part1 B",
         "shadow_tower_part1c":"Shadow Tower Part1 C",
@@ -1425,10 +1422,12 @@ function randomize(paramsFile, stDir) {
         "shadow_tower_part1/5": "Upper",
         "shadow_tower_part1/9": "Edge",
         "shadow_tower_part1/11": "Middle",
+        "shadow_tower_part1/jump": "Jump",
         "shadow_tower_part2/5": "Edge",
         "shadow_tower_part2/7": "Middle",
         "shadow_tower_part2/9": "Upper",
-        "shadow_tower_part3/10": "Fence"
+        "shadow_tower_part3/10": "Fence",
+        "shadow_tower_part3/jump": "Jump"
     }
 
     var mermaidChart = "graph TD\n";
@@ -1436,11 +1435,12 @@ function randomize(paramsFile, stDir) {
         if (area.exits) {
             Object.values(area.exits).forEach((exit) => {
                 if (exit) {
+                    var exitArea = areas.find(area => area.name == normalizeAreaName(exit.dest));
                     var exitName = area.name+"/"+exit.id;
                     mermaidChart+="  " 
-                    + normalizeAreaName(area.name) + "[" + (readableName[normalizeAreaName(area.name)] || area.name) 
+                    + exit.origin + "[" + (readableName[exit.origin] || area.name) + (area.score?" " + area.score:"")
                     + "] -- " + (exitsNames[exitName] || exitName)+ " --> "
-                    + normalizeAreaName(exit.dest)+"["+(readableName[normalizeAreaName(exit.dest)] || exit.dest)+"]\n";
+                    + exit.dest+"["+(readableName[exit.dest] || exit.dest) + (exitArea && exitArea.score?" " + exitArea.score:"") +"]\n";
                 }
             });
         }
