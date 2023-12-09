@@ -313,7 +313,17 @@ global.GAME_DATA={"items":[
  {"id":"137", "name":"item_137_soul_pod_53_sp"        , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":    0, "type":      ITEM, "max_dura":    0, "dura":    0, "weight":   0                                                                                                                                                                                                              , "bin":" ff  2  0  0 78 ae  0  0  0  0 e0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 14  0  0  0  0  0"},
  {"id":"138", "name":"item_138_soul_pod_29_sp"        , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":    0, "type":      ITEM, "max_dura":    0, "dura":    0, "weight":   0                                                                                                                                                                                                              , "bin":" ff  2  5  0 78 ae  0  0  0  0 e0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 14  0  0  0  0  0"},
  {"id":"139", "name":"item_139_soul_pod_14_sp"        , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":    0, "type":      ITEM, "max_dura":    0, "dura":    0, "weight":   0                                                                                                                                                                                                              , "bin":" ff  2  3  0 78 ae  0  0  0  0 e0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 14  0  0  0  0  0"},
-], "areas":[ {"name":"human_world_solitary_region", "creatures":[
+], "areas":[ {"name":"shadow_tower_part1", "creatures":[
+], "spawns":{
+  "spawn_38":{"chance":100,"name":"00_door"             ,"tileId":"188"            ,"x":12        ,"y":1         ,"z":252       ,"group":0,"drop":[]},
+  "spawn_39":{"chance":100,"name":"01_door"             ,"tileId":"506"            ,"x":12        ,"y":1         ,"z":252       ,"group":0,"drop":[]},
+  "spawn_3a":{"chance":100,"name":"00_door"             ,"tileId":"62"             ,"x":0         ,"y":0         ,"z":252       ,"group":0,"drop":[]},
+  "spawn_3b":{"chance":100,"name":"00_door"             ,"tileId":"116"            ,"x":12        ,"y":1         ,"z":252       ,"group":0,"drop":[]},
+  "spawn_3c":{"chance":100,"name":"01_door"             ,"tileId":"502"            ,"x":8         ,"y":0         ,"z":252       ,"group":0,"drop":[]},
+  "spawn_3d":{"chance":100,"name":"00_door"             ,"tileId":"187"            ,"x":4         ,"y":255       ,"z":252       ,"group":0,"drop":[]},
+}, "collectables":{
+}},
+ {"name":"human_world_solitary_region", "creatures":[
   {"name":"00_dark_spider"       , "str":    1, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    1, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "attack1":    8, "attack2":    8, "magic1":    0, "height":23040, "weight": 6400, "something3":  512, "something4":28160, "weaponDefense1":   50, "weaponDefense2":   38, "weaponDefense3":   58, "magDefense1":   55, "magDefense2":   50, "magDefense3":   57, "magDefense4":   47, "magDefense5":   72, "attacks": [9,10,20,11,13,28],"isDoor":false,"randomizationGroup": "human_world-textureCost1"},
   {"name":"01_acid_slime"        , "str":    0, "spd":    0, "def":    0, "bal":    1, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "attack1":    3, "attack2":    2, "magic1":    0, "height":15360, "weight": 2560, "something3":    0, "something4": 8448, "weaponDefense1":   44, "weaponDefense2":   52, "weaponDefense3":   36, "magDefense1":   26, "magDefense2":   70, "magDefense3":   80, "magDefense4":  300, "magDefense5":   47, "attacks": [10,11,13],"isDoor":false,"randomizationGroup": "human_world-textureCost1"},
   {"name":"02_blood_slime"       , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    1, "sol":    0, "attack1":    5, "attack2":    4, "magic1":    0, "height":17920, "weight": 3072, "something3":  256, "something4": 6912, "weaponDefense1":   52, "weaponDefense2":   54, "weaponDefense3":   40, "magDefense1":   43, "magDefense2":  101, "magDefense3":  343, "magDefense4":   97, "magDefense5":  103, "attacks": [13,12,16],"isDoor":false,"randomizationGroup": "human_world-textureCost1"},
@@ -1349,16 +1359,6 @@ global.GAME_DATA={"items":[
   "spawn_14":{"chance":100,"name":"0d_blood_bone"       ,"tileId":"221"            ,"x":0         ,"y":248       ,"z":252       ,"group":60,"drop":[]},
   "spawn_20":{"chance":100,"name":"0c_hollow_mage"      ,"tileId":"161"            ,"x":0         ,"y":0         ,"z":252       ,"group":5,"drop":[{"chance":80, "name":"item_109_endless_amulet"      ,"itemId":"109"}]},
   "spawn_38":{"chance":100,"name":"07_door"             ,"tileId":"485"            ,"x":0         ,"y":0         ,"z":0         ,"group":20,"drop":[]},
-}, "collectables":{
-}},
- {"name":"shadow_tower_part1", "creatures":[
-], "spawns":{
-  "spawn_38":{"chance":100,"name":"00_door"             ,"tileId":"188"            ,"x":12        ,"y":1         ,"z":252       ,"group":0,"drop":[]},
-  "spawn_39":{"chance":100,"name":"01_door"             ,"tileId":"506"            ,"x":12        ,"y":1         ,"z":252       ,"group":0,"drop":[]},
-  "spawn_3a":{"chance":100,"name":"00_door"             ,"tileId":"62"             ,"x":0         ,"y":0         ,"z":252       ,"group":0,"drop":[]},
-  "spawn_3b":{"chance":100,"name":"00_door"             ,"tileId":"116"            ,"x":12        ,"y":1         ,"z":252       ,"group":0,"drop":[]},
-  "spawn_3c":{"chance":100,"name":"01_door"             ,"tileId":"502"            ,"x":8         ,"y":0         ,"z":252       ,"group":0,"drop":[]},
-  "spawn_3d":{"chance":100,"name":"00_door"             ,"tileId":"187"            ,"x":4         ,"y":255       ,"z":252       ,"group":0,"drop":[]},
 }, "collectables":{
 }},
  {"name":"shadow_tower_part2", "creatures":[

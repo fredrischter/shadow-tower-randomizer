@@ -220,15 +220,10 @@ function shuffle() {
 	}
 
 	walkResult.walk.forEach(step => {
-		step.dest = normalizeAreaName(step.dest);
+		step.dest = step.dest;
 	});
 
-	walkResult.map.forEach(area => {
-		area.name = normalizeAreaName(area.name);
-		area.exits.forEach(exit => {
-			exit.dest = normalizeAreaName(exit.dest);
-		});
-	});
+	walkResult.map.sort((area1, area2) => area1.depth - area2.depth);
 
 	const groupedMap = walkResult.map.reduce((acc, entry) => {
 	  const key = entry.name;

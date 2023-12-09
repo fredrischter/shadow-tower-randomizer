@@ -42,7 +42,14 @@ class MapShuffle {
 				var objectToCopyFrom = originalEntranceTo(targetExit.dest, targetExit.wayBackId);
 
 				var recipientArea = data_model.areas.find(originalArea => targetArea.name.includes(originalArea.name));
-				recipientArea.score = targetArea.depth;
+
+				if (recipientArea.name.includes("shadow_tower_part1")) {
+					recipientArea.score = 0;
+				} else {
+					recipientArea.score = targetArea.depth;
+				}
+
+
 				var recipientObject = recipientArea ? recipientArea.objects[parseInt(targetExit.id)] : null;
 				if (!objectToCopyFrom && targetExit.id != "jump") {
 		    		console.error("  Not found object to copy from leading to " + targetExit.dest + "/" + targetExit.wayBackId+ ". wanted to set to " + targetArea.name + "/" + targetExit.id);
@@ -58,15 +65,16 @@ class MapShuffle {
 			    		console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 						areaToSetExit.exits[targetExit.id] = targetExit;
 						targetExit.origin = targetArea.name;
-						if (targetExit.id == "jump") {
-							recipientObject.set(objectToCopyFrom);
-						}
+						recipientObject.set(objectToCopyFrom);
 					}
-				} else {
+				} else if (targetExit.id != "jump") {
 		    		console.error("  Not found recipient " + targetArea.name + "/" + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 				}	
     		});
     	});
+
+    	data_model.areas.sort((area1, area2) => area1.score - area2.score);
+
     	//shadow_tower_part1.objects[0].set(poisonAreaEntry);
     }
 }

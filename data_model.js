@@ -5,10 +5,11 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  global.toNotGenerateImages=true;
+  //global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
+    { index: 1, name: "shadow_tower_part1" },
     { index: 41, name: "human_world_solitary_region" },
     { index: 51, name: "human_world_hidden_region" },
     { index: 61, name: "human_world_forgotten_region" },
@@ -38,7 +39,6 @@
     { index: 261, name: "death_world_undead_layer" },
     { index: 231, name: "death_world_gate_of_the_dead" },
 //    { index: 301, name: "void" },
-    { index: 1, name: "shadow_tower_part1" },
     { index: 401, name: "shadow_tower_part2" },
     { index: 411, name: "shadow_tower_part3" }
   ];
@@ -651,7 +651,7 @@
       //3-objects
       var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
       this.objects = [];
-      console.log("\nObjects ");
+        console.log("\nObjects ");
       console.log("idx  in_file offset type     ");
       for (var i = 0; i<OBJECTS_COUNT; i++) {
         var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;

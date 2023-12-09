@@ -163,7 +163,7 @@
   ]},
 
   { "name":"water_world_sunken_river_area", "world": "water_world", "exits" : [
-    { "id":"5", "dest":"water_world_watery_labyrinth_area", "world": "water_world", "wayBackId": "8", "type":"door", "direction": "exit"},
+    { "id":"5", "dest":"water_world_watery_labyrinth_area", "world": "water_world", "wayBackId": "9", "type":"door", "direction": "exit"},
     { "id":"1", "dest":"shadow_tower_part3a", "wayBackId": "3", "type":"door"}
   ], "totems": [
     { "id": "63", "type": "save" }
@@ -180,8 +180,8 @@
   ]},
 
   { "name":"water_world_watery_labyrinth_area", "world": "water_world", "exits" : [
-    { "id":"9", "dest":"water_world_white_rain_area", "world": "water_world", "wayBackId": "4", "type":"door"},
-    { "id":"8", "dest":"water_world_sunken_river_area", "world": "water_world", "wayBackId": "5", "type":"door"}
+    { "id":"8", "dest":"water_world_white_rain_area", "world": "water_world", "wayBackId": "4", "type":"door"},
+    { "id":"9", "dest":"water_world_sunken_river_area", "world": "water_world", "wayBackId": "5", "type":"door"}
   ], "totems": [
     { "id": "0", "type": "repair" },
     { "id": "1", "type": "save" },
@@ -191,7 +191,7 @@
   ]},
 
   { "name":"water_world_white_rain_area", "world": "water_world", "exits": [
-    { "id":"4", "dest":"water_world_watery_labyrinth_area", "world": "water_world", "wayBackId": "9", "type":"door"},
+    { "id":"4", "dest":"water_world_watery_labyrinth_area", "world": "water_world", "wayBackId": "8", "type":"door"},
     { "id":"6", "dest": "illusion_world_gloomy_domain", "world": "illusion_world", "wayBackId": "10", "type":"totem"}
   ], "totems": [
   ]},
