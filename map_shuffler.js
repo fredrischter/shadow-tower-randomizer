@@ -134,7 +134,7 @@ function hasShadowTowerSamePartConnection(map) {
 }
 
 function goodForDificulty(mapWalkOutput, difficulty) {
-	return Math.abs(mapWalkOutput.pathDifficulty - difficulty) < 10;
+	return Math.abs(mapWalkOutput.pathDifficulty - difficulty) < 50;
 }
 
 function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
@@ -167,10 +167,8 @@ function shuffle() {
 
 			// each random round, do both rotateDoors(map); map);
 			var generated=JSON.parse(JSON.stringify(lastValidMap.map));
-			for (var i=0;i<10;i++) {
+			for (var i=0;i<100;i++) {
 				rotateDoors(generated);
-			}
-			for (var i=0;i<10;i++) {
 				randomPickSwap(generated);			
 			}
 
@@ -205,8 +203,8 @@ function shuffle() {
 		} while((!walkResult || !walkResult.isComplete) && ++attempts<LIMIT_ATTEMPTS);
 
 		if (walkResult && walkResult.isComplete) {
-			if (swapRounds<10) {
-				// First 50 swaps are free, always taking new map if it is just valid;
+			if (swapRounds<0) {
+				// First swaps are free, always taking new map if it is just valid;
 				console.error("" + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");
 				lastValidMap = walkResult;
 			} else {
@@ -216,7 +214,7 @@ function shuffle() {
 				lastValidMap = chooseBetterForDifficulty(walkResult, lastValidMap, difficulty);
 				//console.log(" taken lastValidMap as one with difficulty "+lastValidMap.pathDifficulty);
 
-				// After 50 rounds, try to get as soon as get one suitable for the difficulty
+				// After first rounds, try to get as soon as get one suitable for the difficulty
 				if (goodForDificulty(walkResult, difficulty)) {
 					result = walkResult;
 					//console.log(" resolved as map with difficulty "+walkResult.pathDifficulty);
@@ -232,6 +230,7 @@ function shuffle() {
 	} while(!gaveUp && !result);
 
 	if (gaveUp) {
+		console.error("Gave up after " + attempts + " attempts, " + swapRounds + " swapRounds.");
 		return null;
 	}
 

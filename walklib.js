@@ -66,6 +66,19 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 		}
 	}
 
+	function getAreaExits(area) {
+		// Removing exits that are entrance
+		var exits = area.exits.filter(exit => !exit.direction || !exit.direction.startsWith("entrance"));
+		// Removnig exits whose destination there is an exit
+		exits = exits.filter(exit => {
+			return !exit.wayBackId
+			 	|| !areasMap[exit.dest][exit.wayBackId].direction
+				|| !areasMap[exit.dest][exit.wayBackId].direction.startsWith("exit")
+		});
+
+		return exits;
+	}
+
 	function addToKnownUndiscoveredUndiscoveredWays(exceptId) {
 		var area = Object.assign({}, getAreaByName(currentArea));
 
@@ -83,7 +96,7 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 		mapsWithKnownUndiscoveredWays.push(area);
 	}
 
-	function recombileKnownPathsFor(from, to) {
+	function recombineKnownPathsFor(from, to) {
 		if (!skipLogs) console.error("trying to combine from "+from+" to "+to);
 		var beginnings=[];
 		var ends=[];
@@ -135,7 +148,7 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 
 			if (!skipLogs) console.error("      checking "+key+ ", got path? " + (!!path));
 			if (!path) {
-				recombileKnownPathsFor(from, mapsWithKnownUndiscoveredWays[i].name);
+				recombineKnownPathsFor(from, mapsWithKnownUndiscoveredWays[i].name);
 			}
 			path = knownPaths[key];
 
@@ -162,8 +175,10 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 
 		//1.add direct know Path with only one step from-to for current movement
 		var key=previousArea+"-"+way.dest;
+
 		if (!skipLogs) console.error("addKnownPath direct " + key + " " + JSON.stringify([way]));
 		if (!knownPaths[key] || knownPaths[key].length>1) {
+			recombineKnownPathsFor(previousArea, way.dest);
 			addedNew = true;
 		}
 		knownPaths[key] = [way];
@@ -207,6 +222,7 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 					if (!skipLogs) console.error(" known one was " + JSON.stringify(knownPaths[key]));				
 				}
 				knownPaths[key] = path;
+				recombineKnownPathsFor(key.split("-")[0], key.split("-")[1]);
 				addedNew = true;
 			}
 		}
@@ -304,24 +320,38 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 		}
 		var wayBack = areasMap[currentArea][choosenWay.wayBackId];
 		if (choosenWay.wayBackId && wayBack && wayBack.direction && wayBack.direction=="entrance-bi") {
-			if (!skipLogs) console.error("enrtance turned into bidirectional: "+currentArea+" -> "+JSON.stringify(wayBack));
+			if (!skipLogs) console.error("entrance turned into bidirectional: "+currentArea+" -> "+JSON.stringify(wayBack));
 			wayBack.direction="bi";
 		}
 
+		//9-make the way back also known
+		if (wayBack && currentArea &&
+				getAreaExits(getAreaByName(wayBack.dest))
+					.find(exit => exit.dest && exit.dest==currentArea)
+				/*&& (!wayBack.direction || wayBack.direction=="bi")
+				&& (!choosenWay.direction || choosenWay.direction=="bi")*/) {
+			var addingNew = 200;
+			while (addingNew-->0 && addKnownPath(currentArea, wayBack)) {};
+		}
 	}
 
 	if (!skipLogs) console.error("  mapsWithKnownUndiscoveredWays " + JSON.stringify(mapsWithKnownUndiscoveredWays));
 	if (!skipLogs) console.error("  knownPaths " + JSON.stringify(knownPaths));
+
+	var deadEnds = [];
 
 	for (var i in areas) {
 		let area = areas[i];
 		if (i == 0) {
 			area.depth = 0;
 		} else {
-			var key=areas[0].name+"-"+area.name;
-			var path = knownPaths[key];
+			var path = knownPaths[areas[0].name+"-"+area.name];
 			if (path != null) {
 				area.depth = path.length;
+			}
+			var backPath = knownPaths[area.name+"-"+areas[0].name];
+			if (backPath == null) {
+				deadEnds.push(area.name);
 			}
 		}
 	}
@@ -329,8 +359,12 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 	var walkedAreas = walkPath.map(way => way.dest);
 	var notWalkedAreas = areas.filter(area => area.name!=startArea && !walkedAreas.includes(area.name)).map(area => area.name);
 	if (!skipLogs) console.error("  notWalkedAreas "+JSON.stringify(notWalkedAreas));
-	var isComplete = notWalkedAreas.length == 0;
+	var isComplete = notWalkedAreas.length == 0 && deadEnds.length == 0;
 
+	if (areas.find(area => area.name.includes("earth_world_poisonous_cavern")).depth < 3) {
+		if (!skipLogs) console.error("  earth_world_poisonous_cavern too early");
+		isComplete = false;
+	};
 	/*
 	for (var i in area) {
 	area.depth = length of path from first area to this area;	
@@ -350,6 +384,7 @@ function walk(areas, skipWayBackVerification, skipLogs) {
 //	  "\"knownPaths\":" + JSON.stringify(knownPaths) + ",\n" +
 	  "\"isComplete\":" + isComplete + ",\n" +
 	  "\"pathDifficulty\":" + steps + ",\n" +
+	  "\"deadEnds\":" + JSON.stringify(deadEnds) + ",\n" +
       "\"notWalkedAreas\":" + JSON.stringify(notWalkedAreas) + "\n" +
       "}";
 
