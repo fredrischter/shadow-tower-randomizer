@@ -151,7 +151,9 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 	}
 }
 
-function shuffle() {
+function shuffle(params) {
+	params = params || { randomizeMap: true };
+
 	const LIMIT_ATTEMPTS = 30;
 	const LIMIT_SWAP_ROUNDS = 50;
 
@@ -167,9 +169,12 @@ function shuffle() {
 
 			// each random round, do both rotateDoors(map); map);
 			var generated=JSON.parse(JSON.stringify(lastValidMap.map));
-			for (var i=0;i<100;i++) {
-				rotateDoors(generated);
-				randomPickSwap(generated);			
+
+			if (params.randomizeMap) {
+				for (var i=0;i<100;i++) {
+					rotateDoors(generated);
+					randomPickSwap(generated);			
+				}
 			}
 
 			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
@@ -203,7 +208,9 @@ function shuffle() {
 		} while((!walkResult || !walkResult.isComplete) && ++attempts<LIMIT_ATTEMPTS);
 
 		if (walkResult && walkResult.isComplete) {
-			if (swapRounds<0) {
+			if (!params.randomizeMap) {
+				result = walkResult;
+			} else if (swapRounds<0) {
 				// First swaps are free, always taking new map if it is just valid;
 				console.error("" + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");
 				lastValidMap = walkResult;

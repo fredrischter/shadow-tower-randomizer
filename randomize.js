@@ -122,13 +122,26 @@ function randomize(paramsFile, stDir) {
     console.log("Parameters - " + JSON.stringify(params));
 
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
-    if (params.randomizeMap) {
-        const shuffle = map_shuffler();
-        fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
+    const shuffle = map_shuffler(params);
+    fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
 
-        var map = new MapShuffle(shuffle);
+    var map = new MapShuffle(shuffle);
+    if (params.randomizeMap) {
         map.applyMap(data_model);
     }
+
+    var walkDescription = "Shadow Tower walk";
+    var currentArea = "shadow_tower_part1a";
+    shuffle.walk.forEach(walk => {
+        var exitId = normalizeAreaName(currentArea) + "/" + walk.id;
+        var wayBackId = normalizeAreaName(walk.dest) + "/" + walk.wayBackId;
+        walkDescription += "\n"
+            + (exitsNames[exitId] || exitId) + " -> "
+            + readableName[walk.dest].replace("\n", " ")
+            + (walk.id == "jump" ? "" : " (" + (exitsNames[wayBackId] || wayBackId) + ")");
+        currentArea = walk.dest;
+    });
+    fs.writeFileSync(changeSetPath + path.sep + 'walk.txt', walkDescription);
 
     console.log("DEBUG - Items randomization - Collectables/drops proportion " + 100*COLLECTABLE_UNIQUES_PROPORTION + "% collectables / " + 100*(1-COLLECTABLE_UNIQUES_PROPORTION) + "% drops.");
     console.log("");
@@ -1305,142 +1318,6 @@ function randomize(paramsFile, stDir) {
     var mapsHTML = ""+fs.readFileSync(htmlFile);
     if (!global.toNotGenerateImages) {
         var { createCanvas } = require("canvas");
-    }
-
-    var readableName={"human_world_solitary_region":"Human World\nSolitary Region",
-        "human_world_hidden_region":"Human World\nHidden Region",
-        "human_world_forgotten_region":"Human World\nForgotten Region",
-        "human_world_cursed_region":"Human World\nCursed Region",
-        "earth_world_rotting_cavern":"Earth World\nRotting Cavern",
-        "earth_world_poisonous_cavern":"Earth World\nPoisonous Cavern",
-        "earth_world_quaking_cavern":"Earth World\nQuaking Cavern",
-        "earth_world_false_pit_cavern":"Earth World\nFalse Pit Cavern",
-        "earth_world_stone_cavern":"Earth World\nStone Cavern",
-        "earth_world_hostile_rock_cavern":"Earth World\nHostile Rock Cavern",
-        "water_world_impure_pool_area":"Water World\nImpure Pool Area",
-        "water_world_sunken_river_area":"Water World\nSunken River Area",
-        "water_world_watery_labyrinth_area":"Water World\nWatery Labyrinth Area",
-        "water_world_white_rain_area":"Water World\nWhite Rain Area",
-        "fire_world_phoenix_cave":"Fire World\nPhoenix Cave",
-        "fire_world_burning_cavern":"Fire World\nBurning Cavern",
-        "fire_world_molten_cavern":"Fire World\nMolten Cavern",
-        "fire_world_ashen_cavern":"Fire World\nAshen Cavern",
-        "monster_world_false_eye_area":"Monster World\nFalse Eye Area",
-        "monster_world_screeching_area":"Monster World\nScreeching Area",
-        "illusion_world_bewilderment_domain":"Illusion World\nBewilderment Domain",
-        "illusion_world_gloomy_domain":"Illusion World\nGloomy Domain",
-        "illusion_world_dream_domain":"Illusion World\nDream Domain",
-        "illusion_world_worship_domain":"Illusion World\nWorship Domain",
-        "death_world_dark_castle_layer":"Death World\nDark Castle Layer",
-        "death_world_lingering_curse_layer":"Death World\nLingering Curse Layer",
-        "death_world_undead_layer":"Death World\nUndead Layer",
-        "death_world_gate_of_the_dead":"Death World\nGate Of The Dead",
-        "void":"Void",
-        "shadow_tower_part1a":"Shadow Tower Part1 A",
-        "shadow_tower_part1b":"Shadow Tower Part1 B",
-        "shadow_tower_part1c":"Shadow Tower Part1 C",
-        "shadow_tower_part2a":"Shadow Tower Part2 A",
-        "shadow_tower_part2b":"Shadow Tower Part2 B",
-        "shadow_tower_part3a":"Shadow Tower Part3 A",
-        "shadow_tower_part3b":"Shadow Tower Part3 B",
-        "shadow_tower_part3c":"Shadow Tower Part3 C"
-    }
-
-    var exitsNames={
-        "human_world_solitary_region/31": "Skeleton",
-        "human_world_solitary_region/34": "Cemetery",
-        "human_world_solitary_region/35": "Grave",
-        "human_world_solitary_region/38": "Church",
-        "human_world_hidden_region/9": "Jail",
-        "human_world_hidden_region/13": "Corridor",
-        "human_world_hidden_region/26": "Totem",
-        "human_world_forgotten_region/18": "Totem",
-        "human_world_forgotten_region/34": "Exit",
-        "human_world_forgotten_region/37": "Jump down",
-        "human_world_forgotten_region/41": "Drop in",
-        "human_world_cursed_region/3": "Entrance",
-        "human_world_cursed_region/31": "Guardian side",
-        "earth_world_rotting_cavern/13": "Entrance",
-        "earth_world_poisonous_cavern/10": "Rock guy",
-        "earth_world_poisonous_cavern/13": "Poison",
-        "earth_world_poisonous_cavern/17": "Entrance",
-        "earth_world_quaking_cavern/3": "Entrance",
-        "earth_world_false_pit_cavern/1": "Bridge",
-        "earth_world_false_pit_cavern/3": "Entrance",
-        "earth_world_false_pit_cavern/11": "Exit",
-        "earth_world_false_pit_cavern/16": "Totem",
-        "earth_world_false_pit_cavern/19": "Jump in",
-        "earth_world_stone_cavern/4": "Entrance",
-        "earth_world_stone_cavern/7": "Exit",
-        "earth_world_hostile_rock_cavern/1": "Entrance",
-        "earth_world_hostile_rock_cavern/3": "Boss room",
-        "water_world_impure_pool_area/9": "Entrance",
-        "water_world_impure_pool_area/11": "Flush down",
-        "water_world_impure_pool_area/14": "Totem",
-        "water_world_sunken_river_area/1": "Entrance",
-        "water_world_sunken_river_area/5": "Pool",
-        "water_world_watery_labyrinth_area/8": "Entrance",
-        "water_world_watery_labyrinth_area/9": "Exit",
-        "water_world_white_rain_area/4": "Entrance",
-        "water_world_white_rain_area/6": "Totem",
-        "fire_world_phoenix_cave/0": "Entrance",
-        "fire_world_phoenix_cave/1": "Exit",
-        "fire_world_burning_cavern/37": "Entrance",
-        "fire_world_burning_cavern/93": "Room",
-        "fire_world_burning_cavern/94": "Platform ",
-        "fire_world_molten_cavern/19": "Platform",
-        "fire_world_molten_cavern/27": "Abraxus",
-        "fire_world_ashen_cavern/6": "Start",
-        "fire_world_ashen_cavern/17": "Cerberus",
-        "monster_world_false_eye_area/9": "Entrance",
-        "monster_world_false_eye_area/10": "Totem",
-        "monster_world_screeching_area/0": "Entrance",
-        "monster_world_screeching_area/3": "Totem",
-        "monster_world_screeching_area/6": "Necron",
-        "illusion_world_bewilderment_domain/18": "Exit",
-        "illusion_world_bewilderment_domain/20": "Entrance",
-        "illusion_world_gloomy_domain/1": "Entrance",
-        "illusion_world_gloomy_domain/3": "Ladder down",
-        "illusion_world_gloomy_domain/10": "Totem",
-        "illusion_world_dream_domain/3": "Entrance",
-        "illusion_world_dream_domain/4": "Totem",
-        "illusion_world_worship_domain/1": "Entrance",
-        "illusion_world_worship_domain/6": "Rooms connection",
-        "illusion_world_worship_domain/8": "Boss connection",
-        "illusion_world_worship_domain/10": "Exit",
-        "death_world_dark_castle_layer/0": "Prison",
-        "death_world_dark_castle_layer/2": "Entrance",
-        "death_world_dark_castle_layer/4": "Lower totem 1",
-        "death_world_dark_castle_layer/7": "Lower totem 2",
-        "death_world_dark_castle_layer/10": "Upper totem",
-        "death_world_lingering_curse_layer/1": "Door",
-        "death_world_lingering_curse_layer/2": "Box room",
-        "death_world_undead_layer/12": "King's room",
-        "death_world_undead_layer/15": "Entrance",
-        "death_world_gate_of_the_dead/1": "Entrance",
-        "death_world_gate_of_the_dead/4": "Totem",
-        "shadow_tower_part1/0": "Tower Top",
-        "shadow_tower_part1/4": "Edge",
-        "shadow_tower_part1/4": "Edge",
-        "shadow_tower_part1/5": "Top",
-        "shadow_tower_part1/8": "Middle",
-        "shadow_tower_part1/9": "Edge",
-        "shadow_tower_part1/11": "Middle",
-        "shadow_tower_part1/jump": "Jump",
-        "shadow_tower_part2/0": "Top left",
-        "shadow_tower_part2/4": "Top right",
-        "shadow_tower_part2/jump": "Jump",
-        "shadow_tower_part2/5": "Edge",
-        "shadow_tower_part2/7": "Middle",
-        "shadow_tower_part2/9": "Upper",
-        "shadow_tower_part3/0": "Top right",
-        "shadow_tower_part3/3": "Top left",
-        "shadow_tower_part3/9": "Bottom",
-        "shadow_tower_part3/5": "Bottom middle",
-        "shadow_tower_part3/7": "Bottem edge",
-        "shadow_tower_part3/13": "Bottom end",
-        "shadow_tower_part3/10": "Fence",
-        "shadow_tower_part3/jump": "Jump"
     }
 
     var mermaidChart = "graph TD\n";
