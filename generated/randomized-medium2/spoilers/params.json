@@ -7,5 +7,6 @@
 	"randomizeCollectablesAndDrops": true,
 	"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
 	"randomizeNonEssentialKeys": true,
+	"keepOnlyBosses": true,
 	"seed": "2"
 }

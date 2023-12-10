@@ -90,11 +90,15 @@ function rotateDoors(map) {
 }
 
 function randomPickSwap(map) {
-  var allDoors = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}}).filter(way => way.exit.type == "door")).flat(1);
-  var allTotems = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}}).filter(way => way.exit.type == "totem")).flat(1);
-  var allPortals = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}}).filter(way => way.exit.type == "portal")).flat(1);
+  var typeToPick = Math.random()>0.90 ? 
+  	"portal"
+  	: (Math.random()>0.85 ? 
+	"totem"
+	:
+	"door");
 
-  allWays = Math.random()>0.90 ? allPortals : (Math.random()>0.85 ? allTotems : (allDoors));
+  allWays = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}})
+  	.filter(way => way.exit.type == typeToPick)).flat(1);
 
   var way1 = allWays[Math.floor(Math.random()*allWays.length)];
   var way2 = allWays[Math.floor(Math.random()*allWays.length)];
@@ -125,6 +129,10 @@ function randomPickSwap(map) {
   //consider consistentDoors, swapOnlyDirections (highest respect for gamedesign, only swap bidirectional doors in same area so it has no walk difference)
 }
 
+function hasShadowTowerSamePartConnection(map) {
+  return map.find(area => area.exits.find(function(exit) { return exit.type == 'door' && normalizeAreaName(area.name) == normalizeAreaName(exit.dest); }));
+}
+
 function goodForDificulty(mapWalkOutput, difficulty) {
 	return Math.abs(mapWalkOutput.pathDifficulty - difficulty) < 10;
 }
@@ -152,22 +160,30 @@ function shuffle() {
 	do {
 		var attempts = 0;
 		do {
+			walkResult = null;
 			
 			//console.log("Attempt started");
 			//console.log(" Randomizing");
 
 			// each random round, do both rotateDoors(map); map);
 			var generated=JSON.parse(JSON.stringify(lastValidMap.map));
-			rotateDoors(generated);
-			for (var i=0;i<20;i++) {
+			for (var i=0;i<10;i++) {
+				rotateDoors(generated);
+			}
+			for (var i=0;i<10;i++) {
 				randomPickSwap(generated);			
 			}
 
+			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
+			if (shadowTowerSamePartConnection) {
+				console.error(" - To Reject: Got shadow tower segment linked to same segment. " + JSON.stringify(shadowTowerSamePartConnection));
+				continue;
+			}
 			//console.log(" Walking");
 
 			var stringWalkResult=walklib.walk(generated, !consistentDoors, true);
 			if (!stringWalkResult) {
-				console.error("Got a bad map, skipping it.");
+				console.error(" - To Reject: Got a bad map, skipping it.");
 				continue;
 			}
 
@@ -188,7 +204,7 @@ function shuffle() {
 
 		} while((!walkResult || !walkResult.isComplete) && ++attempts<LIMIT_ATTEMPTS);
 
-		if (walkResult.isComplete) {
+		if (walkResult && walkResult.isComplete) {
 			if (swapRounds<10) {
 				// First 50 swaps are free, always taking new map if it is just valid;
 				console.error("" + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");

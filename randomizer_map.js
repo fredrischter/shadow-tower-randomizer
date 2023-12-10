@@ -21,11 +21,11 @@ class MapShuffle {
     	var cloneRegistryPerDestination = {};
 
 		data_model.areas.forEach(area => {
-			console.error("Area " + area.name);
+			//console.error("Area " + area.name);
 			Object.keys(area.exits).forEach(e => {
 				var exit = area.exits[e];
 				if (exit.id != "jump") {
-					console.error(" cloneRegistryPerDestination[" + exit.dest + "/" + exit.wayBackId +"] set to " + area.name + "/"+exit.id);
+					//console.error(" cloneRegistryPerDestination[" + exit.dest + "/" + exit.wayBackId +"] set to " + area.name + "/"+exit.id);
 					cloneRegistryPerDestination[exit.dest + "/" + exit.wayBackId] = clone(area.objects[parseInt(exit.id)]);
 				}
 			});
@@ -73,7 +73,14 @@ class MapShuffle {
     		});
     	});
 
-    	data_model.areas.sort((area1, area2) => area1.score - area2.score);
+    	data_model.areas.sort((area1, area2) => {
+    		var s1 = area1.score || 0;
+    		var s2 = area2.score || 0;
+    		if (!s1 && !s2) {
+    			return area1.name > area2.name? 1 : -1;
+    		}
+    		return s1 - s2;
+    	});
 
     	//shadow_tower_part1.objects[0].set(poisonAreaEntry);
     }
