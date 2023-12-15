@@ -97,7 +97,7 @@
   ]},
 
   { "name":"earth_world_stone_cavern", "world": "earth_world", "exits": [
-    { "id":"4", "dest":"earth_world_poisonous_cavern", "world": "earth_world", "wayBackId": "13", "type":"door", "direction": "entrance-bi"},
+    { "id":"4", "dest":"earth_world_poisonous_cavern", "world": "earth_world", "wayBackId": "13", "type":"door", "direction": "entrance"},
     { "id":"7", "dest":"earth_world_false_pit_cavern", "world": "earth_world", "wayBackId": "3", "type":"door", "direction": "exit"}
   ], "totems": [
   ]},
@@ -164,7 +164,7 @@
 
   { "name":"water_world_sunken_river_area", "world": "water_world", "exits" : [
     { "id":"5", "dest":"water_world_watery_labyrinth_area", "world": "water_world", "wayBackId": "9", "type":"door", "direction": "exit"},
-    { "id":"1", "dest":"shadow_tower_part3a", "wayBackId": "3", "type":"door"}
+    { "id":"1", "dest":"shadow_tower_part3a", "wayBackId": "3", "type":"door", "direction": "entrance"}
   ], "totems": [
     { "id": "63", "type": "save" }
   ]},
@@ -266,8 +266,8 @@
   ]},
 
   { "name":"death_world_undead_layer", "world": "death_world", "exits" : [
-    { "id":"12", "dest":"death_world_gate_of_the_dead", "world": "death_world", "wayBackId": "1", "type":"door"},
-    { "id":"15", "dest":"death_world_dark_castle_layer", "world": "death_world", "wayBackId": "0", "type":"door"}
+    { "id":"12", "dest":"death_world_gate_of_the_dead", "world": "death_world", "wayBackId": "1", "type":"door", "direction": "exit-bi"},
+    { "id":"15", "dest":"death_world_dark_castle_layer", "world": "death_world", "wayBackId": "0", "type":"door", "direction": "entrance-bi"}
   ], "totems": [
     { "id": "16", "type": "save" },
     { "id": "17", "type": "store" }
