@@ -226,7 +226,7 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 function shuffle(params) {
 	params = params || { randomizeMap: true };
 
-	const LIMIT_ATTEMPTS = 30;
+	const LIMIT_ATTEMPTS = 5;
 	const LIMIT_SWAP_ROUNDS = 50;
 
 	var result;
@@ -238,7 +238,7 @@ function shuffle(params) {
 		do {
 			walkResult = null;
 			
-			//console.log("Attempt started");
+			console.error(new Date().toISOString() + "  Attempt started " + attempts);
 			//console.log(" Randomizing");
 
 			// each random round, do both rotateDoors(map); map);
@@ -256,7 +256,7 @@ function shuffle(params) {
 				console.error(" - To Reject: Got shadow tower segment linked to same segment. " + JSON.stringify(shadowTowerSamePartConnection));
 				continue;
 			}
-			//console.log(" Walking");
+			console.error(new Date().toISOString() + "   Walking");
 
 			var stringWalkResult=walklib.walk(generated, !consistentDoors);
 			if (!stringWalkResult) {
@@ -286,10 +286,10 @@ function shuffle(params) {
 				result = walkResult;
 			} else if (swapRounds<0) {
 				// First swaps are free, always taking new map if it is just valid;
-				console.error("" + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");
+				console.error(new Date().toISOString() + " " + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");
 				lastValidMap = walkResult;
 			} else {
-				console.error("" + swapRounds + " need to get a map, with difficulty around "+difficulty+". lastValidMap "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
+				console.error(new Date().toISOString() + " " + swapRounds + " need to get a map, with difficulty around "+difficulty+". lastValidMap "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
 
 				// Next rounds get new map only if it is better for difficulty, to narrow it towards better map
 				lastValidMap = chooseBetterForDifficulty(walkResult, lastValidMap, difficulty);
@@ -316,6 +316,7 @@ function shuffle(params) {
         fs.writeFileSync("." + path.sep + 'bad_walk.json', JSON.stringify(walkResult, null, 2));
 		return null;
 	}
+	delete walkResult.explanation;
 
 	walkResult.walk.forEach(step => {
 		step.dest = step.dest;

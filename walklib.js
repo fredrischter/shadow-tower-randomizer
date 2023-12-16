@@ -117,6 +117,7 @@ function walk(areas, skipWayBackVerification) {
 
 	function recombineKnownPathsFor(from, to) {
 		explain("trying to combine from "+from+" to "+to);
+		var didSomething = false;
 		var beginnings=[];
 		var ends=[];
 		for (var key in knownPaths) {
@@ -149,10 +150,13 @@ function walk(areas, skipWayBackVerification) {
 						var combined = knownPaths[from+"-"+middle].concat(knownPaths[middle+"-"+dest]);
 						explain("    result "+JSON.stringify(combined));
 						knownPaths[key] = combined;
+						didSomething = true;
 					}
 				}
 			}
 		}
+
+		return didSomething;
 	}
 
 	function getShorterPathToKnownUndiscoveredWays(from) {
@@ -186,6 +190,53 @@ function walk(areas, skipWayBackVerification) {
 		}
 		
 		return path;
+	}
+
+	function recombineAll() {
+		var pairsToAdd = [];
+		var didSomething = false;
+		for (var i1 in knownPaths) {
+			for (var i2 in knownPaths) {
+				if (i1 == i2 || i1.split("-")[1] != i2.split("-")[0]) {
+					continue;
+				}
+				var a = i1.split("-")[0];
+				var b = i2.split("-")[1];
+				var keyToAdd=a+"-"+b;
+				if (a != b && !knownPaths[keyToAdd]) {
+					pairsToAdd.push({k1: i1, k2: i2, keyToAdd: keyToAdd});
+				}
+			}
+		}
+		pairsToAdd.forEach(pair => {
+			var p1 = knownPaths[pair.k1];
+			var p2 = knownPaths[pair.k2];
+			if (!p1 || !p2) {
+				explain(" ERROR - didnt get p1 p2 for " + JSON.stringify(pair));
+				return;
+			}
+			didSomething = true;
+			knownPaths[pair.keyToAdd] = p1.concat(p2);
+			explain(" recombineAll, recombining " + JSON.stringify(pair) + " " + JSON.stringify(knownPaths[pair.keyToAdd]));
+		});
+		return didSomething;
+	}
+
+	function recombineAll_old() {
+		var didSomething = false;
+		for (var i1 in areas) {
+			for (var i2 in areas) {
+				let area1 = areas[i1];
+				let area2 = areas[i2];
+				var keyToAdd=area1.name+"-"+area2.name;
+				if (i1 != i2 && !knownPaths[keyToAdd]) {
+					if (recombineKnownPathsFor(area1.name, area2.name)) {
+						didSomething = true;
+					}
+				}
+			}
+		}
+		return didSomething;
 	}
 
 	//When enter a door addKnownPath: 
@@ -293,6 +344,10 @@ function walk(areas, skipWayBackVerification) {
 		//3-if (chooseDestination) choosenWay=entry from mapsWithKnownUndiscoveredWays with smaller item knownPaths from your point. If there is no entry to choose. The walk is finished.
 		if (chooseDestination && currentArea) {
 			var path = getShorterPathToKnownUndiscoveredWays(currentArea);
+			if (!path) {
+				while (recombineAll()) {};
+			}
+			path = getShorterPathToKnownUndiscoveredWays(currentArea);
 			if (path) {
 				explain("Got to go by " + JSON.stringify(path));
 				choosenWay = path[0];
@@ -357,8 +412,9 @@ function walk(areas, skipWayBackVerification) {
 		if (wayBack && currentArea &&
 				getAreaExits(getAreaByName(wayBack.dest))
 					.find(exit => exit.dest && exit.dest==currentArea)
-				/*&& (!wayBack.direction || wayBack.direction=="bi")
-				&& (!choosenWay.direction || choosenWay.direction=="bi")*/) {
+				&& (!wayBack.direction || !wayBack.direction.startsWith("entrance"))
+				&& (!choosenWay.direction || !choosenWay.direction.startsWith("exit"))) {
+			explain(" adding wayback to known paths from " + currentArea + " returing by " + JSON.stringify(wayBack));
 			var addingNew = 200;
 			while (addingNew-->0 && addKnownPath(currentArea, wayBack)) {};
 		}
@@ -385,6 +441,8 @@ function walk(areas, skipWayBackVerification) {
 		}
 	}
 
+	var comment = null;
+
 	var walkedAreas = walkPath.map(way => way.dest);
 	var notWalkedAreas = areas.filter(area => area.name!=startArea && !walkedAreas.includes(area.name)).map(area => area.name);
 	explain("  notWalkedAreas "+JSON.stringify(notWalkedAreas));
@@ -392,10 +450,12 @@ function walk(areas, skipWayBackVerification) {
 
 	if (areas.find(area => area.name.includes("earth_world_poisonous_cavern")).depth < 4) {
 		explain("  earth_world_poisonous_cavern too early");
+		comment="earth_world_poisonous_cavern too early";
 		isComplete = false;
 	};
 	if (areas.find(area => area.name.includes("water_world_watery_labyrinth_area")).depth < 4) {
 		explain("  water_world_watery_labyrinth_area too early");
+		comment="water_world_watery_labyrinth_area too early";
 		isComplete = false;
 	};
 	/*
@@ -419,7 +479,8 @@ function walk(areas, skipWayBackVerification) {
 	  "\n," + "\"pathDifficulty\":" + steps +
 	  "\n," + "\"deadEnds\":" + JSON.stringify(deadEnds) +
       "\n," + "\"notWalkedAreas\":" + JSON.stringify(notWalkedAreas) + 
-//      "\n," + "\"explanation\":" + JSON.stringify(walkDecisionDetail) + 
+      "\n," + "\"explanation\":" + JSON.stringify(walkDecisionDetail) + 
+      "\n," + "\"comment\":" + JSON.stringify(comment) + 
       "\n" +
       "}";
 

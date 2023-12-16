@@ -62,7 +62,7 @@ class MapShuffle {
 			    		console.error("  ERROR - Doesnt have exits " + targetArea.name + " " + normalizeAreaName(targetArea.name));
 			    		return;
 					} else {
-			    		console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
+			    		//console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 						areaToSetExit.exits[targetExit.id] = targetExit;
 						targetExit.origin = targetArea.name;
 						recipientObject.set(objectToCopyFrom);

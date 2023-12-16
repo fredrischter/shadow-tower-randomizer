@@ -21,11 +21,11 @@ function randomize(paramsFile, stDir) {
     let changeSetFile = changeSetPath + path.sep + "changeset.json"
     console.log(params);
 
-    const logFileRandomize = fs.createWriteStream(changeSetPath + path.sep + 'randomize.log', {
-        flags: 'w+'
-    });
+    const logFileRandomize = fs.openSync(changeSetPath + path.sep + 'randomize.log', 'w');
+    //const logFileRandomize = fs.createWriteStream(changeSetPath + path.sep + 'randomize.log', {flags: 'w+'});
     console.log = function() {
-        logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+        //logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+        fs.writeSync(logFileRandomize, util.format.apply(null, arguments) + '\n');
     }
 
     if (!paramsFile || !paramsFile.endsWith(".json")) {
@@ -105,11 +105,11 @@ function randomize(paramsFile, stDir) {
     var tfile = new TFILEReader(tFilePath).readTFormat();
     data_model.setup(tfile, stDir);
 
-    const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {
-        flags: 'w+'
-    });
+    const logFile2 = fs.openSync('test.log', 'w');
+    //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
     console.log = function() {
-        logFile2.write(util.format.apply(null, arguments) + '\n');
+        //logFile2.write(util.format.apply(null, arguments) + '\n');
+        fs.writeSync(logFile2, util.format.apply(null, arguments) + '\n')
     }
 
     if (params.seed) {
@@ -119,7 +119,7 @@ function randomize(paramsFile, stDir) {
         var seed = useRandomSeed();
         console.log("Randomization - Using generated seed " + seed);
     }
-    console.log("Parameters - " + JSON.stringify(params));
+    console.log(Date.now() + "Parameters - " + JSON.stringify(params));
 
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
     const shuffle = map_shuffler(params);
@@ -1311,7 +1311,8 @@ function randomize(paramsFile, stDir) {
     }
 
     console.log = function() {
-        logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+        //logFileRandomize.write(util.format.apply(null, arguments) + '\n');
+        fs.writeSync(logFileRandomize, util.format.apply(null, arguments) + '\n');
     }
 
     var htmlFile = mapFolder + path.sep + "maps.html";
@@ -1370,6 +1371,7 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    console.log(Date.now() + " writing " + changeSetFile);
     fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
 }
 

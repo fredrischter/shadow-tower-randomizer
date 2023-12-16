@@ -524,7 +524,7 @@ global.exitsNames={
     "shadow_tower_part3/3": "Top left",
     "shadow_tower_part3/9": "Bottom",
     "shadow_tower_part3/5": "Bottom middle",
-    "shadow_tower_part3/7": "Bottem edge",
+    "shadow_tower_part3/7": "Bottom edge",
     "shadow_tower_part3/13": "Bottom end",
     "shadow_tower_part3/10": "Fence",
     "shadow_tower_part3/jump": "Jump"

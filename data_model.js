@@ -1767,7 +1767,7 @@
 
   originalMap.forEach(area => {
     var areaName = normalizeAreaName(area.name);
-    console.error("Setting exits for " + areaName);
+    //console.error("Setting exits for " + areaName);
 
     if (!global[normalizeAreaName(areaName)]) {
       console.error("Skipping since didnt find global var " + areaName);
@@ -1786,7 +1786,7 @@
 //    }
     area.exits.forEach(exit => {
       exit.origin = area.name;
-      console.error("Setting exit " + areaName + " - " + exit.id + " = " + JSON.stringify(exit));
+      //console.error("Setting exit " + areaName + " - " + exit.id + " = " + JSON.stringify(exit));
       global[areaName].exits[exit.id] = exit;
     });
     area.totems.forEach(totem => {
