@@ -226,7 +226,7 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 function shuffle(params) {
 	params = params || { randomizeMap: true };
 
-	const LIMIT_ATTEMPTS = 5;
+	const LIMIT_ATTEMPTS = 10;
 	const LIMIT_SWAP_ROUNDS = 50;
 
 	var result;
@@ -314,9 +314,10 @@ function shuffle(params) {
 		console.error("Gave up after " + attempts + " attempts, " + swapRounds + " swapRounds.");
 
         fs.writeFileSync("." + path.sep + 'bad_walk.json', JSON.stringify(walkResult, null, 2));
-		return null;
+//		return null;
+	} else {
+		delete walkResult.explanation;
 	}
-	delete walkResult.explanation;
 
 	walkResult.walk.forEach(step => {
 		step.dest = step.dest;

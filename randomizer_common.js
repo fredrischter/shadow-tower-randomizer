@@ -341,18 +341,18 @@ class TFormat {
 
     if (callback) {
       fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin, function(err, numberOfBytesWritten) {
-        console.log(" wrote bytes " + numberOfBytesWritten);
+        //console.log(" wrote bytes " + numberOfBytesWritten);
         const tableBin = this.getTableBin();
         fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0, function(err, numberOfBytesWritten) {
-          console.log(" wrote table bytes " + numberOfBytesWritten);
+          //console.log(" wrote table bytes " + numberOfBytesWritten);
         });
       });
     } else {
       var numberOfBytesWritten = fs.writeSync(fd, Buffer.from(this.bin), 0, this.bin.length, this.beginningOfBin);
-      console.log(" wrote bytes " + numberOfBytesWritten);
+      //console.log(" wrote bytes " + numberOfBytesWritten);
       const tableBin = this.getTableBin();
       numberOfBytesWritten = fs.writeSync(fd, Buffer.from(tableBin), 0, tableBin.length, 0);
-      console.log(" wrote table bytes " + numberOfBytesWritten);
+      //console.log(" wrote table bytes " + numberOfBytesWritten);
     }
   }
 }
