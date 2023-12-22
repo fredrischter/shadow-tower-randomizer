@@ -8,480 +8,482 @@
 
 <pre class="mermaid">
 graph TD
-  shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top --> monster_world_false_eye_area[Monster World
-False Eye Area 1]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Edge --> shadow_tower_part2b[Shadow Tower Part2 B 6]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Top --> shadow_tower_part3b[Shadow Tower Part3 B 10]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Middle --> water_world_sunken_river_area[Water World
-Sunken River Area 7]
+  shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top --> shadow_tower_part3a[Shadow Tower Part3 A 3]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Top right --> shadow_tower_part1a[Shadow Tower Part1 A]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Top left --> human_world_solitary_region[Human World
+Solitary Region 6]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom --> shadow_tower_part1c[Shadow Tower Part1 C]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Jump --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Top --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area 3]
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Middle --> shadow_tower_part3a[Shadow Tower Part3 A 3]
   shadow_tower_part1c[Shadow Tower Part1 C] -- Edge --> fire_world_phoenix_cave[Fire World
-Phoenix Cave 7]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Middle --> water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area 6]
-  monster_world_false_eye_area[Monster World
-False Eye Area 1] -- Entrance --> shadow_tower_part1a[Shadow Tower Part1 A]
-  monster_world_false_eye_area[Monster World
-False Eye Area 1] -- Totem --> water_world_impure_pool_area[Water World
-Impure Pool Area 2]
-  water_world_impure_pool_area[Water World
-Impure Pool Area 2] -- Entrance --> earth_world_stone_cavern[Earth World
-Stone Cavern 3]
-  water_world_impure_pool_area[Water World
-Impure Pool Area 2] -- Flush down --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain 3]
-  water_world_impure_pool_area[Water World
-Impure Pool Area 2] -- Totem --> monster_world_false_eye_area[Monster World
-False Eye Area 1]
-  earth_world_stone_cavern[Earth World
-Stone Cavern 3] -- Entrance --> shadow_tower_part3b[Shadow Tower Part3 B 10]
-  earth_world_stone_cavern[Earth World
-Stone Cavern 3] -- Exit --> water_world_impure_pool_area[Water World
-Impure Pool Area 2]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain 3] -- Entrance --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain 4]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain 3] -- Ladder down --> water_world_impure_pool_area[Water World
-Impure Pool Area 2]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain 3] -- Totem --> monster_world_screeching_area[Monster World
-Screeching Area 4]
-  monster_world_screeching_area[Monster World
-Screeching Area 4] -- Entrance --> shadow_tower_part3a[Shadow Tower Part3 A 10]
-  monster_world_screeching_area[Monster World
-Screeching Area 4] -- Totem --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain 3]
-  monster_world_screeching_area[Monster World
-Screeching Area 4] -- Necron --> human_world_forgotten_region[Human World
-Forgotten Region 5]
-  illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain 4] -- Exit --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain 3]
-  illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain 4] -- Entrance --> shadow_tower_part2b[Shadow Tower Part2 B 6]
-  human_world_forgotten_region[Human World
-Forgotten Region 5] -- Totem --> monster_world_screeching_area[Monster World
-Screeching Area 4]
-  human_world_forgotten_region[Human World
-Forgotten Region 5] -- Exit --> human_world_cursed_region[Human World
-Cursed Region 6]
-  human_world_forgotten_region[Human World
-Forgotten Region 5] -- Jump down --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6]
-  human_world_forgotten_region[Human World
-Forgotten Region 5] -- Drop in --> water_world_white_rain_area[Water World
-White Rain Area 6]
-  fire_world_burning_cavern[Fire World
-Burning Cavern 5] -- Entrance --> shadow_tower_part3b[Shadow Tower Part3 B 10]
-  fire_world_burning_cavern[Fire World
-Burning Cavern 5] -- Room --> illusion_world_worship_domain[Illusion World
-Worship Domain 6]
-  fire_world_burning_cavern[Fire World
-Burning Cavern 5] -- Platform  --> illusion_world_worship_domain[Illusion World
-Worship Domain 6]
-  human_world_solitary_region[Human World
-Solitary Region 6] -- Skeleton --> earth_world_quaking_cavern[Earth World
-Quaking Cavern 7]
-  human_world_solitary_region[Human World
-Solitary Region 6] -- Cemetery --> illusion_world_worship_domain[Illusion World
-Worship Domain 6]
-  human_world_solitary_region[Human World
-Solitary Region 6] -- Grave --> human_world_hidden_region[Human World
-Hidden Region 7]
-  human_world_solitary_region[Human World
-Solitary Region 6] -- Church --> shadow_tower_part3a[Shadow Tower Part3 A 10]
-  human_world_cursed_region[Human World
-Cursed Region 6] -- Entrance --> fire_world_phoenix_cave[Fire World
-Phoenix Cave 7]
-  human_world_cursed_region[Human World
-Cursed Region 6] -- Guardian side --> human_world_forgotten_region[Human World
-Forgotten Region 5]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6] -- Bridge --> shadow_tower_part3c[Shadow Tower Part3 C 10]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6] -- Entrance --> human_world_forgotten_region[Human World
-Forgotten Region 5]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6] -- Exit --> death_world_gate_of_the_dead[Death World
-Gate Of The Dead 11]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6] -- Totem --> death_world_dark_castle_layer[Death World
-Dark Castle Layer 7]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6] -- Jump in --> death_world_dark_castle_layer[Death World
-Dark Castle Layer 7]
-  earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern 6] -- Entrance --> shadow_tower_part2b[Shadow Tower Part2 B 6]
-  earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern 6] -- Boss room --> human_world_hidden_region[Human World
-Hidden Region 7]
-  water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area 6] -- Entrance --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern 7]
-  water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area 6] -- Exit --> shadow_tower_part1c[Shadow Tower Part1 C]
-  water_world_white_rain_area[Water World
-White Rain Area 6] -- Entrance --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern 7]
-  water_world_white_rain_area[Water World
-White Rain Area 6] -- Totem --> human_world_forgotten_region[Human World
-Forgotten Region 5]
-  illusion_world_worship_domain[Illusion World
-Worship Domain 6] -- Entrance --> human_world_solitary_region[Human World
-Solitary Region 6]
-  illusion_world_worship_domain[Illusion World
-Worship Domain 6] -- Rooms connection --> fire_world_ashen_cavern[Fire World
-Ashen Cavern 8]
-  illusion_world_worship_domain[Illusion World
-Worship Domain 6] -- Boss connection --> fire_world_burning_cavern[Fire World
-Burning Cavern 5]
-  illusion_world_worship_domain[Illusion World
-Worship Domain 6] -- Exit --> fire_world_burning_cavern[Fire World
-Burning Cavern 5]
-  shadow_tower_part2a[Shadow Tower Part2 A 6] -- Top left --> earth_world_rotting_cavern[Earth World
-Rotting Cavern 7]
-  shadow_tower_part2a[Shadow Tower Part2 A 6] -- Top right --> shadow_tower_part3a[Shadow Tower Part3 A 10]
-  shadow_tower_part2b[Shadow Tower Part2 B 6] -- Edge --> shadow_tower_part1b[Shadow Tower Part1 B]
-  shadow_tower_part2b[Shadow Tower Part2 B 6] -- Middle --> earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern 6]
-  shadow_tower_part2b[Shadow Tower Part2 B 6] -- Upper --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain 4]
-  human_world_hidden_region[Human World
-Hidden Region 7] -- Jail --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer 8]
-  human_world_hidden_region[Human World
-Hidden Region 7] -- Corridor --> human_world_solitary_region[Human World
-Solitary Region 6]
-  human_world_hidden_region[Human World
-Hidden Region 7] -- Totem --> earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern 6]
-  earth_world_rotting_cavern[Earth World
-Rotting Cavern 7] -- Entrance --> shadow_tower_part2a[Shadow Tower Part2 A 6]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern 7] -- Rock guy --> water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area 6]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern 7] -- Poison --> water_world_white_rain_area[Water World
-White Rain Area 6]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern 7] -- Entrance --> death_world_dark_castle_layer[Death World
-Dark Castle Layer 7]
-  earth_world_quaking_cavern[Earth World
-Quaking Cavern 7] -- Entrance --> human_world_solitary_region[Human World
-Solitary Region 6]
-  water_world_sunken_river_area[Water World
-Sunken River Area 7] -- Entrance --> shadow_tower_part1b[Shadow Tower Part1 B]
-  water_world_sunken_river_area[Water World
-Sunken River Area 7] -- Pool --> death_world_undead_layer[Death World
-Undead Layer 8]
+Phoenix Cave 3]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle --> earth_world_stone_cavern[Earth World
+Stone Cavern 7]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge --> illusion_world_worship_domain[Illusion World
+Worship Domain 3]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end --> monster_world_screeching_area[Monster World
+Screeching Area 3]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Jump --> shadow_tower_part3c[Shadow Tower Part3 C 3]
+  shadow_tower_part3c[Shadow Tower Part3 C] -- Fence --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead 4]
   fire_world_phoenix_cave[Fire World
-Phoenix Cave 7] -- Entrance --> shadow_tower_part1c[Shadow Tower Part1 C]
+Phoenix Cave] -- Entrance --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern 4]
   fire_world_phoenix_cave[Fire World
-Phoenix Cave 7] -- Exit --> human_world_cursed_region[Human World
-Cursed Region 6]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer 7] -- Prison --> death_world_undead_layer[Death World
-Undead Layer 8]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer 7] -- Entrance --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern 7]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer 7] -- Lower totem 1 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer 7] -- Lower totem 2 --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer 8]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer 7] -- Upper totem --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern 6]
-  fire_world_ashen_cavern[Fire World
-Ashen Cavern 8] -- Start --> fire_world_molten_cavern[Fire World
-Molten Cavern 9]
-  fire_world_ashen_cavern[Fire World
-Ashen Cavern 8] -- Cerberus --> illusion_world_worship_domain[Illusion World
-Worship Domain 6]
-  death_world_lingering_curse_layer[Death World
-Lingering Curse Layer 8] -- Door --> human_world_hidden_region[Human World
-Hidden Region 7]
-  death_world_lingering_curse_layer[Death World
-Lingering Curse Layer 8] -- Box room --> death_world_dark_castle_layer[Death World
-Dark Castle Layer 7]
-  death_world_undead_layer[Death World
-Undead Layer 8] -- King's room --> death_world_dark_castle_layer[Death World
-Dark Castle Layer 7]
-  death_world_undead_layer[Death World
-Undead Layer 8] -- Entrance --> water_world_sunken_river_area[Water World
+Phoenix Cave] -- Exit --> shadow_tower_part1c[Shadow Tower Part1 C]
+  water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Entrance --> water_world_white_rain_area[Water World
+White Rain Area 4]
+  water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Exit --> shadow_tower_part1c[Shadow Tower Part1 C]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Entrance --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Totem --> human_world_forgotten_region[Human World
+Forgotten Region 4]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Necron --> monster_world_false_eye_area[Monster World
+False Eye Area 4]
+  illusion_world_worship_domain[Illusion World
+Worship Domain] -- Entrance --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+  illusion_world_worship_domain[Illusion World
+Worship Domain] -- Rooms connection --> fire_world_molten_cavern[Fire World
+Molten Cavern 4]
+  illusion_world_worship_domain[Illusion World
+Worship Domain] -- Exit --> fire_world_ashen_cavern[Fire World
+Ashen Cavern 4]
+  illusion_world_worship_domain[Illusion World
+Worship Domain] -- Boss connection --> fire_world_burning_cavern[Fire World
+Burning Cavern 4]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Exit --> human_world_cursed_region[Human World
+Cursed Region 7]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Jump down --> water_world_sunken_river_area[Water World
 Sunken River Area 7]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Totem --> human_world_hidden_region[Human World
+Hidden Region 5]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Drop in --> monster_world_screeching_area[Monster World
+Screeching Area 3]
+  earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Entrance --> fire_world_phoenix_cave[Fire World
+Phoenix Cave 3]
+  earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Boss room --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer 5]
+  fire_world_burning_cavern[Fire World
+Burning Cavern] -- Entrance --> earth_world_quaking_cavern[Earth World
+Quaking Cavern 10]
+  fire_world_burning_cavern[Fire World
+Burning Cavern] -- Platform  --> illusion_world_dream_domain[Illusion World
+Dream Domain 5]
+  fire_world_burning_cavern[Fire World
+Burning Cavern] -- Room --> illusion_world_worship_domain[Illusion World
+Worship Domain 3]
   fire_world_molten_cavern[Fire World
-Molten Cavern 9] -- Platform --> fire_world_ashen_cavern[Fire World
-Ashen Cavern 8]
+Molten Cavern] -- Abraxus --> fire_world_ashen_cavern[Fire World
+Ashen Cavern 4]
   fire_world_molten_cavern[Fire World
-Molten Cavern 9] -- Abraxus --> illusion_world_dream_domain[Illusion World
-Dream Domain 10]
-  illusion_world_dream_domain[Illusion World
-Dream Domain 10] -- Entrance --> fire_world_molten_cavern[Fire World
-Molten Cavern 9]
-  illusion_world_dream_domain[Illusion World
-Dream Domain 10] -- Totem --> death_world_gate_of_the_dead[Death World
-Gate Of The Dead 11]
-  shadow_tower_part3a[Shadow Tower Part3 A 10] -- Top right --> shadow_tower_part2a[Shadow Tower Part2 A 6]
-  shadow_tower_part3a[Shadow Tower Part3 A 10] -- Top left --> human_world_solitary_region[Human World
+Molten Cavern] -- Platform --> illusion_world_worship_domain[Illusion World
+Worship Domain 3]
+  fire_world_ashen_cavern[Fire World
+Ashen Cavern] -- Cerberus --> fire_world_molten_cavern[Fire World
+Molten Cavern 4]
+  fire_world_ashen_cavern[Fire World
+Ashen Cavern] -- Start --> illusion_world_worship_domain[Illusion World
+Worship Domain 3]
+  water_world_white_rain_area[Water World
+White Rain Area] -- Entrance --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area 3]
+  water_world_white_rain_area[Water World
+White Rain Area] -- Totem --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 5]
+  monster_world_false_eye_area[Monster World
+False Eye Area] -- Entrance --> shadow_tower_part2b[Shadow Tower Part2 B 7]
+  monster_world_false_eye_area[Monster World
+False Eye Area] -- Totem --> monster_world_screeching_area[Monster World
+Screeching Area 3]
+  death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Entrance --> shadow_tower_part3c[Shadow Tower Part3 C 3]
+  death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Totem --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain 5]
+  human_world_hidden_region[Human World
+Hidden Region] -- Jail --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 5]
+  human_world_hidden_region[Human World
+Hidden Region] -- Corridor --> shadow_tower_part2a[Shadow Tower Part2 A 7]
+  human_world_hidden_region[Human World
+Hidden Region] -- Totem --> human_world_forgotten_region[Human World
+Forgotten Region 4]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Ladder down --> human_world_solitary_region[Human World
 Solitary Region 6]
-  shadow_tower_part3b[Shadow Tower Part3 B 10] -- Bottom middle --> shadow_tower_part1c[Shadow Tower Part1 C]
-  shadow_tower_part3b[Shadow Tower Part3 B 10] -- Bottem edge --> earth_world_stone_cavern[Earth World
-Stone Cavern 3]
-  shadow_tower_part3a[Shadow Tower Part3 A 10] -- Bottom --> monster_world_screeching_area[Monster World
-Screeching Area 4]
-  shadow_tower_part3c[Shadow Tower Part3 C 10] -- Fence --> earth_world_false_pit_cavern[Earth World
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Entrance --> shadow_tower_part1b[Shadow Tower Part1 B]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Totem --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead 4]
+  illusion_world_dream_domain[Illusion World
+Dream Domain] -- Totem --> earth_world_false_pit_cavern[Earth World
 False Pit Cavern 6]
-  shadow_tower_part3b[Shadow Tower Part3 B 10] -- Bottom end --> fire_world_burning_cavern[Fire World
-Burning Cavern 5]
-  death_world_gate_of_the_dead[Death World
-Gate Of The Dead 11] -- Entrance --> earth_world_false_pit_cavern[Earth World
+  illusion_world_dream_domain[Illusion World
+Dream Domain] -- Entrance --> fire_world_burning_cavern[Fire World
+Burning Cavern 4]
+  death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Door --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern 6]
+  death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Box room --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern 4]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Prison --> death_world_undead_layer[Death World
+Undead Layer 7]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Entrance --> human_world_hidden_region[Human World
+Hidden Region 5]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem 1 --> earth_world_false_pit_cavern[Earth World
 False Pit Cavern 6]
-  death_world_gate_of_the_dead[Death World
-Gate Of The Dead 11] -- Totem --> illusion_world_dream_domain[Illusion World
-Dream Domain 10]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem 2 --> water_world_white_rain_area[Water World
+White Rain Area 4]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem --> water_world_impure_pool_area[Water World
+Impure Pool Area 6]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Edge --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain 5]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Middle --> human_world_cursed_region[Human World
+Cursed Region 7]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Jump --> shadow_tower_part1c[Shadow Tower Part1 C]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Top left --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 6]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Top right --> human_world_hidden_region[Human World
+Hidden Region 5]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Jump --> shadow_tower_part2b[Shadow Tower Part2 B 7]
+  human_world_solitary_region[Human World
+Solitary Region] -- Skeleton --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain 5]
+  human_world_solitary_region[Human World
+Solitary Region] -- Cemetery --> water_world_impure_pool_area[Water World
+Impure Pool Area 6]
+  human_world_solitary_region[Human World
+Solitary Region] -- Grave --> shadow_tower_part3a[Shadow Tower Part3 A 3]
+  human_world_solitary_region[Human World
+Solitary Region] -- Church --> earth_world_stone_cavern[Earth World
+Stone Cavern 7]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Poison --> water_world_sunken_river_area[Water World
+Sunken River Area 7]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Rock guy --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer 5]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Entrance --> shadow_tower_part2b[Shadow Tower Part2 B 7]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Entrance --> death_world_undead_layer[Death World
+Undead Layer 7]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Bridge --> shadow_tower_part2b[Shadow Tower Part2 B 7]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Exit --> shadow_tower_part2a[Shadow Tower Part2 A 7]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Jump in --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 5]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Totem --> illusion_world_dream_domain[Illusion World
+Dream Domain 5]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Entrance --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain 7]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Flush down --> human_world_solitary_region[Human World
+Solitary Region 6]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Totem --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 5]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Upper --> monster_world_false_eye_area[Monster World
+False Eye Area 4]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Middle --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern 6]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Edge --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 6]
+  human_world_cursed_region[Human World
+Cursed Region] -- Entrance --> shadow_tower_part1b[Shadow Tower Part1 B]
+  human_world_cursed_region[Human World
+Cursed Region] -- Guardian side --> human_world_forgotten_region[Human World
+Forgotten Region 4]
+  earth_world_stone_cavern[Earth World
+Stone Cavern] -- Entrance --> human_world_solitary_region[Human World
+Solitary Region 6]
+  earth_world_stone_cavern[Earth World
+Stone Cavern] -- Exit --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+  water_world_sunken_river_area[Water World
+Sunken River Area] -- Pool --> human_world_forgotten_region[Human World
+Forgotten Region 4]
+  water_world_sunken_river_area[Water World
+Sunken River Area] -- Entrance --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern 6]
+  illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Exit --> water_world_impure_pool_area[Water World
+Impure Pool Area 6]
+  illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Entrance --> earth_world_rotting_cavern[Earth World
+Rotting Cavern 8]
+  death_world_undead_layer[Death World
+Undead Layer] -- King's room --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 6]
+  death_world_undead_layer[Death World
+Undead Layer] -- Entrance --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 5]
+  earth_world_rotting_cavern[Earth World
+Rotting Cavern] -- Entrance --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain 7]
+  earth_world_quaking_cavern[Earth World
+Quaking Cavern] -- Entrance --> fire_world_burning_cavern[Fire World
+Burning Cavern 4]
 
 </pre>
 
 <h2>Human World</h2>
 <h3>human_world_solitary_region</h3><br>
-<span style="background:#f0f0f0">Item Memory used 9</span>
-<br><span style="background:#f0f0f0">Creatures score 66</span>
+<span style="background:#f0f0f0">Item Memory used 7</span>
+<br><span style="background:#f0f0f0">Creatures score 44</span>
 <br><span style="background:#30f030">0 item_11c_healing_potion</span>
-<br><span style="background:#30f030">1 item_122_evil_eye</span>
-<br><span style="background:#30f030">2 item_138_soul_pod_29_sp</span>
-<br><span style="background:#30f030">3 item_11d_magic_potion</span>
-<br><span style="background:#30f030">4 item_127_acid_vaccine</span>
-<br><span style="background:#30f030">5 item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">7 item_7d_wooden_glove</span>
-<br><span style="background:#30f030">8 item_14_crushing_broad_sword</span>
-<br><span style="background:#30f030">9 item_128_spirit_book</span>
+<br><span style="background:#30f030">1 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">2 item_11c_healing_potion</span>
+<br><span style="background:#30f030">3 item_10a_cune</span>
+<br><span style="background:#30f030">4 item_ce_soul_ring</span>
+<br><span style="background:#30f030">5 item_11e_anti_venom</span>
+<br><span style="background:#30f030">7 item_ff_amulet_of_composure</span>
+<br><span style="background:#30f030">8 item_11c_healing_potion</span>
+<br><span style="background:#30f030">9 item_136_soul_pod_5_sp</span>
 <br>
 <img src="maps/human_world_solitary_region.png"/><br>
 <h3>human_world_hidden_region</h3><br>
-<span style="background:#f0f0f0">Item Memory used 12</span>
-<br><span style="background:#f0f0f0">Creatures score 84</span>
-<br><span style="background:#30f030">0 item_125_dust_of_rage</span>
-<br><span style="background:#30f030">1 item_127_acid_vaccine</span>
-<br><span style="background:#30f030">2 item_11c_healing_potion</span>
-<br><span style="background:#30f030">3 item_24_dark_sword</span>
-<br><span style="background:#30f030">4 item_125_dust_of_rage</span>
-<br><span style="background:#30f030">5 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6 item_11e_anti_venom</span>
-<br><span style="background:#30f030">7 item_10c_torch</span>
-<br><span style="background:#30f030">8 item_11c_healing_potion</span>
-<br><span style="background:#30f030">9 item_11d_magic_potion</span>
-<br><span style="background:#30f030">a item_10a_cune</span>
-<br><span style="background:#30f030">b item_128_spirit_book</span>
-<br><span style="background:#30f030">c item_1e_fiery_bastard_sword</span>
-<br><span style="background:#30f030">d item_10d_lamp</span>
+<span style="background:#f0f0f0">Item Memory used 13</span>
+<br><span style="background:#f0f0f0">Creatures score 66</span>
+<br><span style="background:#30f030">0 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">1 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">2 item_11d_magic_potion</span>
+<br><span style="background:#30f030">3 item_b_lethal_rapier</span>
+<br><span style="background:#30f030">4 item_3c_crushing_axe</span>
+<br><span style="background:#30f030">5 item_120_divine_symbol</span>
+<br><span style="background:#30f030">6 item_ed_mind_bracelet</span>
+<br><span style="background:#30f030">7 item_138_soul_pod_29_sp</span>
+<br><span style="background:#30f030">8 item_11e_anti_venom</span>
+<br><span style="background:#30f030">9 item_51_full_helm</span>
+<br><span style="background:#30f030">a item_16_guardian_broad_sword</span>
+<br><span style="background:#30f030">b item_11c_healing_potion</span>
+<br><span style="background:#30f030">c item_11e_anti_venom</span>
+<br><span style="background:#30f030">d item_12e_dorados_ashes</span>
 <br>
 <img src="maps/human_world_hidden_region.png"/><br>
 <h3>human_world_forgotten_region</h3><br>
-<span style="background:#f0f0f0">Item Memory used 9</span>
-<br><span style="background:#f0f0f0">Creatures score 52</span>
+<span style="background:#f0f0f0">Item Memory used 10</span>
+<br><span style="background:#f0f0f0">Creatures score 72</span>
 <br><span style="background:#30f030">0 item_11c_healing_potion</span>
-<br><span style="background:#30f030">1 item_123_fire_world_stone</span>
-<br><span style="background:#30f030">2 item_11c_healing_potion</span>
-<br><span style="background:#30f030">3 item_120_divine_symbol</span>
-<br><span style="background:#30f030">4 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5 item_ce_soul_ring</span>
-<br><span style="background:#30f030">6 item_10e_sacred_feather</span>
-<br><span style="background:#30f030">7 item_10d_lamp</span>
-<br><span style="background:#30f030">8 item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">9 item_11c_healing_potion</span>
-<br><span style="background:#30f030">a item_12c_pitcher_of_nadya_hp</span>
+<br><span style="background:#30f030">1 item_11c_healing_potion</span>
+<br><span style="background:#30f030">2 item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">3 item_ac_great_shield</span>
+<br><span style="background:#30f030">4 item_10c_torch</span>
+<br><span style="background:#30f030">5 item_62_scale_mail_of_curing</span>
+<br><span style="background:#30f030">6 item_10a_cune</span>
+<br><span style="background:#30f030">7 item_5f_magical_leather_armor</span>
+<br><span style="background:#30f030">8 item_14_crushing_broad_sword</span>
+<br><span style="background:#30f030">9 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">a item_128_spirit_book</span>
 <br>
 <img src="maps/human_world_forgotten_region.png"/><br>
 <h3>human_world_cursed_region</h3><br>
-<span style="background:#f0f0f0">Item Memory used 9</span>
+<span style="background:#f0f0f0">Item Memory used 7</span>
 <br><span style="background:#f0f0f0">Creatures score 66</span>
 <br><span style="background:#ff8080">21    100% 0x50 0a_guardian_a pw80 42 103 89 110 93 72 36  a15 a16 m0 a30 a33 a91</span>
-<span style="background:#ffff00"><br>100% item_11c_healing_potion</span>
 <br><span style="background:#ff8080">30    100% 0x30 04_fat_mole_a pw0 0 0 0 0 0 0 0  a0 a0 m0</span>
-<span style="background:#ffff00"><br>100% item_9a_leg_guard</span>
-<br><span style="background:#30f030">0 item_11d_magic_potion</span>
-<br><span style="background:#30f030">1 item_48_crown</span>
-<br><span style="background:#30f030">2 item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">3 item_137_soul_pod_53_sp</span>
-<br><span style="background:#30f030">4 item_122_evil_eye</span>
-<br><span style="background:#30f030">5 item_11e_anti_venom</span>
-<br><span style="background:#30f030">6 item_11d_magic_potion</span>
-<br><span style="background:#30f030">7 item_b3_tower_shield_of_honor</span>
+<br><span style="background:#30f030">0 item_10a_cune</span>
+<br><span style="background:#30f030">1 item_10e_sacred_feather</span>
+<br><span style="background:#30f030">2 item_138_soul_pod_29_sp</span>
+<br><span style="background:#30f030">3 item_100_amulet_of_curing</span>
+<br><span style="background:#30f030">4 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">5 item_3b_giant_axe</span>
+<br><span style="background:#30f030">6 item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">7 item_11f_anti_paralytic</span>
 <br>
 <img src="maps/human_world_cursed_region.png"/><br>
 
 <h2>Earth World</h2>
 <h3>earth_world_rotting_cavern</h3><br>
-<span style="background:#f0f0f0">Item Memory used 6</span>
-<br><span style="background:#f0f0f0">Creatures score 57</span>
+<span style="background:#f0f0f0">Item Memory used 7</span>
+<br><span style="background:#f0f0f0">Creatures score 44</span>
 <br><span style="background:#ff8080">30    100% 0x20 0a_blank pw0 0 0 0 0 0 0 0  a0 a0 m5</span>
-<br><span style="background:#30f030">0 item_139_soul_pod_14_sp</span>
+<br><span style="background:#30f030">0 item_10a_cune</span>
 <br><span style="background:#30f030">1 item_11c_healing_potion</span>
-<br><span style="background:#30f030">2 item_11c_healing_potion</span>
-<br><span style="background:#30f030">3 item_11d_magic_potion</span>
-<br><span style="background:#30f030">4 item_d3_dark_ring</span>
-<br><span style="background:#30f030">5 item_11c_healing_potion</span>
-<br><span style="background:#30f030">6 item_11_broad_sword</span>
-<br><span style="background:#30f030">7 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">2 item_11e_anti_venom</span>
+<br><span style="background:#30f030">3 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">4 item_10e_sacred_feather</span>
+<br><span style="background:#30f030">5 item_11d_magic_potion</span>
+<br><span style="background:#30f030">6 item_ab_great_shield</span>
+<br><span style="background:#30f030">7 item_11c_healing_potion</span>
 <br>
 <img src="maps/earth_world_rotting_cavern.png"/><br>
 <h3>earth_world_poisonous_cavern</h3><br>
-<span style="background:#f0f0f0">Item Memory used 10</span>
+<span style="background:#f0f0f0">Item Memory used 11</span>
 <br><span style="background:#f0f0f0">Creatures score 68</span>
 <br><span style="background:#ff8080">20    100% 0x10 00_duhrin pw65 124 92 80 70 86 58 30  a0 a0 m8</span>
 <br><span style="background:#ff8080">30    100% 0x20 05_blank pw0 0 0 0 0 0 0 0  a0 a0 m0</span>
 <br><span style="background:#ff8080">31    100% 0x70 04_auriel_b pw150 160 150 65 65 65 65 65  a75 a70 m9</span>
 <br><span style="background:#ff8080">32    100% 0x50 0b_blank pw0 0 0 0 0 0 0 0  a0 a0 m0</span>
 <br><span style="background:#ff8080">33    100% 0x50 0a_blank pw0 0 0 0 0 0 0 0  a0 a0 m7</span>
-<br><span style="background:#30f030">0 item_a8_harden_large_shield</span>
-<br><span style="background:#30f030">1 item_11c_healing_potion</span>
-<br><span style="background:#30f030">2 item_10a_cune</span>
-<br><span style="background:#30f030">3 item_2c_deadly_great_sword</span>
-<br><span style="background:#30f030">5 item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">6 item_11c_healing_potion</span>
-<br><span style="background:#30f030">7 item_11e_anti_venom</span>
-<br><span style="background:#30f030">8 item_137_soul_pod_53_sp</span>
-<br><span style="background:#30f030">a item_28_great_sword</span>
-<br><span style="background:#30f030">b item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">1c item_80_metal_glove</span>
-<br><span style="background:#30f030">1d item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">0 item_11c_healing_potion</span>
+<br><span style="background:#30f030">1 item_10e_sacred_feather</span>
+<br><span style="background:#30f030">2 item_11d_magic_potion</span>
+<br><span style="background:#30f030">3 item_10a_cune</span>
+<br><span style="background:#30f030">5 item_123_fire_world_stone</span>
+<br><span style="background:#30f030">6 item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">7 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">8 item_10a_cune</span>
+<br><span style="background:#30f030">a item_7b_leather_glove</span>
+<br><span style="background:#30f030">b item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">1c item_125_dust_of_rage</span>
+<br><span style="background:#30f030">1d item_e9_bracelet_of_movement</span>
 <br>
 <img src="maps/earth_world_poisonous_cavern.png"/><br>
 <h3>earth_world_stone_cavern</h3><br>
-<span style="background:#f0f0f0">Item Memory used 8</span>
+<span style="background:#f0f0f0">Item Memory used 7</span>
 <br><span style="background:#f0f0f0">Creatures score 53</span>
 <br><span style="background:#ff8080">13    100% 0x25 0c_dybbuk pw65 60 42 80 80 78 76 68  a12 a14 m10</span>
-<span style="background:#ffff00"><br>100% item_12a_young_dragon_gem</span>
+<span style="background:#ffff00"><br>100% item_11e_anti_venom</span>
 <br><span style="background:#ff8080">30    100% 0x50 00_dybbuk pw60 70 40 80 80 78 76 68  a12 a14 m10</span>
+<span style="background:#ffff00"><br>100% item_10a_cune</span>
 <br><span style="background:#ff8080">31    100% 0x0 04_dybbuk pw60 70 40 80 80 78 76 68  a12 a14 m10</span>
+<span style="background:#ffff00"><br>100% item_10a_cune</span>
 <br><span style="background:#ff8080">32    100% 0x0 04_dybbuk pw60 70 40 80 80 78 76 68  a12 a14 m10</span>
-<br><span style="background:#30f030">0 item_ec_bracelet_of_recovery</span>
-<br><span style="background:#30f030">1 item_b_lethal_rapier</span>
-<br><span style="background:#30f030">2 item_11d_magic_potion</span>
-<br><span style="background:#30f030">3 item_11e_anti_venom</span>
-<br><span style="background:#30f030">4 item_127_acid_vaccine</span>
-<br><span style="background:#30f030">5 item_11d_magic_potion</span>
-<br><span style="background:#30f030">6 item_124_poison_vaccine</span>
-<br><span style="background:#30f030">7 item_10c_torch</span>
+<span style="background:#ffff00"><br>100% item_10a_cune</span>
+<br><span style="background:#30f030">0 item_10a_cune</span>
+<br><span style="background:#30f030">1 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">2 item_11c_healing_potion</span>
+<br><span style="background:#30f030">3 item_125_dust_of_rage</span>
+<br><span style="background:#30f030">4 item_120_divine_symbol</span>
+<br><span style="background:#30f030">5 item_11c_healing_potion</span>
+<br><span style="background:#30f030">6 item_dc_caustic_ring</span>
+<br><span style="background:#30f030">7 item_12e_dorados_ashes</span>
 <br>
 <img src="maps/earth_world_stone_cavern.png"/><br>
 <h3>earth_world_quaking_cavern</h3><br>
 <span style="background:#f0f0f0">Item Memory used 8</span>
 <br><span style="background:#f0f0f0">Creatures score 77</span>
-<br><span style="background:#30f030">0 item_124_poison_vaccine</span>
-<br><span style="background:#30f030">1 item_11e_anti_venom</span>
-<br><span style="background:#30f030">2 item_d4_dark_ring</span>
-<br><span style="background:#30f030">3 item_11c_healing_potion</span>
-<br><span style="background:#30f030">4 item_10a_cune</span>
-<br><span style="background:#30f030">5 item_dc_caustic_ring</span>
-<br><span style="background:#30f030">6 item_ee_mighty_ring</span>
-<br><span style="background:#30f030">7 item_10e_sacred_feather</span>
-<br><span style="background:#30f030">8 item_da_sorcerer_ring_of_poison</span>
-<br><span style="background:#30f030">9 item_138_soul_pod_29_sp</span>
+<br><span style="background:#30f030">0 item_77_plate_mail_of_rage</span>
+<br><span style="background:#30f030">1 item_11c_healing_potion</span>
+<br><span style="background:#30f030">2 item_123_fire_world_stone</span>
+<br><span style="background:#30f030">3 item_9f_caustic_leg_guard</span>
+<br><span style="background:#30f030">4 item_11d_magic_potion</span>
+<br><span style="background:#30f030">5 item_d0_holy_ring_of_resist</span>
+<br><span style="background:#30f030">6 item_11d_magic_potion</span>
+<br><span style="background:#30f030">7 item_11c_healing_potion</span>
+<br><span style="background:#30f030">8 item_120_divine_symbol</span>
+<br><span style="background:#30f030">9 item_136_soul_pod_5_sp</span>
 <br>
 <img src="maps/earth_world_quaking_cavern.png"/><br>
 <h3>earth_world_false_pit_cavern</h3><br>
 <span style="background:#f0f0f0">Item Memory used 12</span>
-<br><span style="background:#f0f0f0">Creatures score 77</span>
+<br><span style="background:#f0f0f0">Creatures score 48</span>
 <br><span style="background:#ff8080">b     100% 0x30 08_guardian_b pw60 42 125 62 178 179 124 63  a15 a16 m0 a92 a70 a148 a92 a70 a218</span>
 <br><span style="background:#ff8080">c     100% 0x30 08_guardian_b pw60 42 125 62 178 179 124 63  a15 a16 m0 a92 a70 a148 a92 a70 a218</span>
-<br><span style="background:#30f030">0 item_10d_lamp</span>
-<br><span style="background:#30f030">1 item_130_blue_crystal</span>
-<br><span style="background:#30f030">2 item_47_cap</span>
-<br><span style="background:#30f030">3 item_122_evil_eye</span>
-<br><span style="background:#30f030">4 item_125_dust_of_rage</span>
-<br><span style="background:#30f030">5 item_11c_healing_potion</span>
-<br><span style="background:#30f030">6 item_c4_summoner_ring_of_fire</span>
-<br><span style="background:#30f030">7 item_128_spirit_book</span>
+<br><span style="background:#30f030">0 item_11d_magic_potion</span>
+<br><span style="background:#30f030">1 item_123_fire_world_stone</span>
+<br><span style="background:#30f030">2 item_ef_deadly_bracelet</span>
+<br><span style="background:#30f030">3 item_11c_healing_potion</span>
+<br><span style="background:#30f030">4 item_a1_buckler</span>
+<br><span style="background:#30f030">5 item_50_full_helm</span>
+<br><span style="background:#30f030">6 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">7 item_125_dust_of_rage</span>
 <br><span style="background:#30f030">8 item_11c_healing_potion</span>
-<br><span style="background:#30f030">9 item_10c_torch</span>
-<br><span style="background:#30f030">a item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">b item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">c item_11c_healing_potion</span>
-<br><span style="background:#30f030">d item_a9_large_shield_of_balance</span>
+<br><span style="background:#30f030">9 item_120_divine_symbol</span>
+<br><span style="background:#30f030">a item_11e_anti_venom</span>
+<br><span style="background:#30f030">b item_10e_sacred_feather</span>
+<br><span style="background:#30f030">c item_fc_amulet_of_movement</span>
+<br><span style="background:#30f030">d item_125_dust_of_rage</span>
 <br>
 <img src="maps/earth_world_false_pit_cavern.png"/><br>
 <h3>earth_world_hostile_rock_cavern</h3><br>
-<span style="background:#f0f0f0">Item Memory used 4</span>
-<br><span style="background:#f0f0f0">Creatures score 68</span>
+<span style="background:#f0f0f0">Item Memory used 5</span>
+<br><span style="background:#f0f0f0">Creatures score 58</span>
 <br><span style="background:#ff8080">21    100% 0x10 04_dread_knight pw115 100 85 102 150 130 128 95  a45 a40 m11 a190 a145 a112 a110 a155 a245</span>
-<span style="background:#ffff00"><br>100% item_11c_healing_potion</span>
-<br><span style="background:#30f030">0 item_d8_ring_of_poison</span>
-<br><span style="background:#30f030">1 item_8d_leather_boots</span>
-<br><span style="background:#30f030">2 item_11c_healing_potion</span>
-<br><span style="background:#30f030">3 item_54_fiery_full_helm</span>
+<br><span style="background:#30f030">0 item_a5_shield_of_resist</span>
+<br><span style="background:#30f030">1 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">2 item_10e_sacred_feather</span>
+<br><span style="background:#30f030">3 item_90_steel_boots</span>
 <br><span style="background:#30f030">4 item_11c_healing_potion</span>
 <br>
 <img src="maps/earth_world_hostile_rock_cavern.png"/><br>
 
 <h2>Fire World</h2>
 <h3>fire_world_burning_cavern</h3><br>
-<span style="background:#f0f0f0">Item Memory used 3</span>
+<span style="background:#f0f0f0">Item Memory used 4</span>
 <br><span style="background:#f0f0f0">Creatures score 102</span>
-<br><span style="background:#30f030">0 item_2_deadly_short_sword</span>
+<br><span style="background:#30f030">0 item_10c_torch</span>
 <br><span style="background:#30f030">1 item_11c_healing_potion</span>
-<br><span style="background:#30f030">2 item_92_steel_boots_of_resist</span>
-<br><span style="background:#30f030">3 item_11c_healing_potion</span>
-<br><span style="background:#30f030">4 item_11c_healing_potion</span>
+<br><span style="background:#30f030">2 item_11c_healing_potion</span>
+<br><span style="background:#30f030">3 item_2_deadly_short_sword</span>
+<br><span style="background:#30f030">4 item_136_soul_pod_5_sp</span>
 <br>
 <img src="maps/fire_world_burning_cavern.png"/><br>
 <h3>fire_world_molten_cavern</h3><br>
-<span style="background:#f0f0f0">Item Memory used 8</span>
+<span style="background:#f0f0f0">Item Memory used 11</span>
 <br><span style="background:#f0f0f0">Creatures score 122</span>
 <br><span style="background:#ff8080">21    100% 0x10 02_dead_abraxus pw185 185 185 200 40 120 130 140  a80 a90 m12</span>
-<span style="background:#ffff00"><br>100% item_f7_priest_bracelet</span>
-<span style="background:#ffff00"><br>100% item_103_sorcerer_amulet</span>
+<span style="background:#ffff00"><br>100% item_db_caustic_ring</span>
 <br><span style="background:#ff8080">30    100% 0x10 00_abraxus pw85 85 85 600 10 100 100 100  a80 a90 m12</span>
-<span style="background:#ffff00"><br>100% item_11c_healing_potion</span>
+<span style="background:#ffff00"><br>100% item_7e_metal_glove</span>
+<span style="background:#ffff00"><br>100% item_bd_gothic_shield_of_honor</span>
 <br><span style="background:#ff8080">31    100% 0x5 0c_fat_mole_c pw0 0 0 0 0 0 0 0  a0 a0 m13</span>
-<span style="background:#ffff00"><br>100% item_10a_cune</span>
 <br><span style="background:#ff8080">32    100% 0x5 08_fat_mole_b pw0 0 0 0 0 0 0 0  a0 a0 m13</span>
-<span style="background:#ffff00"><br>100% item_10a_cune</span>
-<br><span style="background:#30f030">0 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1 item_f5_deadly_bracelet</span>
-<br><span style="background:#30f030">2 item_11e_anti_venom</span>
-<br><span style="background:#30f030">3 item_123_fire_world_stone</span>
-<br><span style="background:#30f030">4 item_11d_magic_potion</span>
-<br><span style="background:#30f030">5 item_11c_healing_potion</span>
-<br><span style="background:#30f030">6 item_11d_magic_potion</span>
+<span style="background:#ffff00"><br>100% item_7d_wooden_glove</span>
+<br><span style="background:#30f030">0 item_33_crushing_mace</span>
+<br><span style="background:#30f030">1 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">2 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">3 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">5 item_122_evil_eye</span>
+<br><span style="background:#30f030">6 item_11c_healing_potion</span>
 <br><span style="background:#30f030">7 item_10a_cune</span>
 <br>
 <img src="maps/fire_world_molten_cavern.png"/><br>
 <h3>fire_world_phoenix_cave</h3><br>
-<span style="background:#f0f0f0">Item Memory used 9</span>
+<span style="background:#f0f0f0">Item Memory used 12</span>
 <br><span style="background:#f0f0f0">Creatures score 0</span>
 <br><span style="background:#30f030">0 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1 item_3e_living_axe</span>
-<br><span style="background:#30f030">2 item_10a_cune</span>
-<br><span style="background:#30f030">3 item_11e_anti_venom</span>
-<br><span style="background:#30f030">4 item_11c_healing_potion</span>
-<br><span style="background:#30f030">5 item_139_soul_pod_14_sp</span>
+<br><span style="background:#30f030">1 item_10d_lamp</span>
+<br><span style="background:#30f030">2 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">3 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">4 item_11e_anti_venom</span>
+<br><span style="background:#30f030">5 item_128_spirit_book</span>
 <br><span style="background:#30f030">6 item_11e_anti_venom</span>
-<br><span style="background:#30f030">7 item_127_acid_vaccine</span>
-<br><span style="background:#30f030">8 item_139_soul_pod_14_sp</span>
-<br><span style="background:#30f030">9 item_122_evil_eye</span>
-<br><span style="background:#30f030">a item_11e_anti_venom</span>
-<br><span style="background:#30f030">b item_126_bottle_of_light</span>
-<br><span style="background:#30f030">c item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">d item_11c_healing_potion</span>
-<br><span style="background:#30f030">e item_11c_healing_potion</span>
+<br><span style="background:#30f030">7 item_11c_healing_potion</span>
+<br><span style="background:#30f030">8 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">9 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">a item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">b item_11c_healing_potion</span>
+<br><span style="background:#30f030">c item_122_evil_eye</span>
+<br><span style="background:#30f030">d item_49_crown_of_resist</span>
+<br><span style="background:#30f030">e item_10a_cune</span>
 <br>
 <img src="maps/fire_world_phoenix_cave.png"/><br>
 <h3>fire_world_ashen_cavern</h3><br>
 <span style="background:#f0f0f0">Item Memory used 6</span>
 <br><span style="background:#f0f0f0">Creatures score 3044</span>
 <br><span style="background:#ff8080">20    100% 0x100 0c_ebony_knight pw97 125 127 9999 75 109 179 198  a70 a50 m14 a305 a252 a230 a225 a230 a305 a300 a190 a128</span>
-<span style="background:#ffff00"><br>100% item_11c_healing_potion</span>
 <br><span style="background:#30f030">0 item_11c_healing_potion</span>
-<br><span style="background:#30f030">1 item_125_dust_of_rage</span>
-<br><span style="background:#30f030">2 item_e1_ring_of_dark_souls</span>
-<br><span style="background:#30f030">3 item_30_guardian_great_sword</span>
-<br><span style="background:#30f030">4 item_125_dust_of_rage</span>
-<br><span style="background:#30f030">6 item_11d_magic_potion</span>
-<br><span style="background:#30f030">7 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1 item_fe_deadly_amulet</span>
+<br><span style="background:#30f030">2 item_116_key_of_delusion</span>
+<br><span style="background:#30f030">3 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">4 item_138_soul_pod_29_sp</span>
+<br><span style="background:#30f030">6 item_95_caustic_steel_boots</span>
+<br><span style="background:#30f030">7 item_11c_healing_potion</span>
 <br>
 <img src="maps/fire_world_ashen_cavern.png"/><br>
 
@@ -490,202 +492,205 @@ Dream Domain 10]
 <span style="background:#f0f0f0">Item Memory used 6</span>
 <br><span style="background:#f0f0f0">Creatures score 27</span>
 <br><span style="background:#ff8080">30    100% 0x5 00_fat_mole_f pw0 0 0 0 0 0 0 0  a0 a0 m24</span>
+<span style="background:#ffff00"><br>100% item_cd_sorcerer_ring_of_frost</span>
 <br><span style="background:#ff8080">31    100% 0x5 04_blank pw90 90 90 90 90 90 90 90  a0 a0 m25</span>
-<br><span style="background:#30f030">0 item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">1 item_120_divine_symbol</span>
-<br><span style="background:#30f030">2 item_10a_cune</span>
-<br><span style="background:#30f030">3 item_10e_sacred_feather</span>
-<br><span style="background:#30f030">4 item_11c_healing_potion</span>
-<br><span style="background:#30f030">5 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">0 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1 item_11d_magic_potion</span>
+<br><span style="background:#30f030">2 item_c7_priest_ring_of_fire</span>
+<br><span style="background:#30f030">3 item_10a_cune</span>
+<br><span style="background:#30f030">4 item_125_dust_of_rage</span>
+<br><span style="background:#30f030">5 item_80_metal_glove</span>
 <br>
 <img src="maps/water_world_impure_pool_area.png"/><br>
 <h3>water_world_sunken_river_area</h3><br>
 <span style="background:#f0f0f0">Item Memory used 9</span>
-<br><span style="background:#f0f0f0">Creatures score 75</span>
-<br><span style="background:#30f030">0 item_122_evil_eye</span>
-<br><span style="background:#30f030">1 item_122_evil_eye</span>
-<br><span style="background:#30f030">2 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3 item_b9_gothic_shield</span>
-<br><span style="background:#30f030">4 item_89_arm_guard</span>
-<br><span style="background:#30f030">5 item_11e_anti_venom</span>
-<br><span style="background:#30f030">6 item_120_divine_symbol</span>
-<br><span style="background:#30f030">7 item_37_frosty_morning_star</span>
-<br><span style="background:#30f030">1c item_9e_leg_guard_of_protect</span>
-<br><span style="background:#30f030">1d item_11d_magic_potion</span>
+<br><span style="background:#f0f0f0">Creatures score 65</span>
+<br><span style="background:#30f030">0 item_e8_bracelet_of_balance</span>
+<br><span style="background:#30f030">1 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">2 item_10a_cune</span>
+<br><span style="background:#30f030">3 item_11d_magic_potion</span>
+<br><span style="background:#30f030">4 item_123_fire_world_stone</span>
+<br><span style="background:#30f030">5 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">6 item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">7 item_11d_magic_potion</span>
+<br><span style="background:#30f030">1c item_122_evil_eye</span>
+<br><span style="background:#30f030">1d item_d_shadow_wolf</span>
 <br>
 <img src="maps/water_world_sunken_river_area.png"/><br>
 <h3>water_world_white_rain_area</h3><br>
-<span style="background:#f0f0f0">Item Memory used 5</span>
+<span style="background:#f0f0f0">Item Memory used 4</span>
 <br><span style="background:#f0f0f0">Creatures score 61</span>
 <br><span style="background:#ff8080">20    100% 0x10 05_magi_magus pw80 120 108 140 155 362 600 180  a150 a170 m19</span>
-<br><span style="background:#30f030">0 item_ae_shining_great_shield</span>
-<br><span style="background:#30f030">1 item_11e_anti_venom</span>
-<br><span style="background:#30f030">2 item_11c_healing_potion</span>
-<br><span style="background:#30f030">3 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4 item_94_steel_boots_of_resist</span>
+<span style="background:#ffff00"><br>100% item_10a_cune</span>
+<br><span style="background:#30f030">0 item_11c_healing_potion</span>
+<br><span style="background:#30f030">1 item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">2 item_128_spirit_book</span>
+<br><span style="background:#30f030">3 item_11c_healing_potion</span>
+<br><span style="background:#30f030">4 item_10a_cune</span>
 <br>
 <img src="maps/water_world_white_rain_area.png"/><br>
 <h3>water_world_watery_labyrinth_area</h3><br>
-<span style="background:#f0f0f0">Item Memory used 9</span>
-<br><span style="background:#f0f0f0">Creatures score 65</span>
+<span style="background:#f0f0f0">Item Memory used 10</span>
+<br><span style="background:#f0f0f0">Creatures score 75</span>
 <br><span style="background:#30f030">0 item_11c_healing_potion</span>
-<br><span style="background:#30f030">1 item_98_steel_boots_of_resist</span>
-<br><span style="background:#30f030">2 item_79_leather_glove</span>
-<br><span style="background:#30f030">3 item_10d_lamp</span>
-<br><span style="background:#30f030">4 item_5_long_sword</span>
-<br><span style="background:#30f030">5 item_11c_healing_potion</span>
+<br><span style="background:#30f030">1 item_128_spirit_book</span>
+<br><span style="background:#30f030">2 item_123_fire_world_stone</span>
+<br><span style="background:#30f030">3 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4 item_117_brass_key</span>
+<br><span style="background:#30f030">5 item_110_fiery_key</span>
 <br><span style="background:#30f030">6 item_11e_anti_venom</span>
-<br><span style="background:#30f030">7 item_123_fire_world_stone</span>
-<br><span style="background:#30f030">8 item_10a_cune</span>
-<br><span style="background:#30f030">9 item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">a item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">7 item_32_mace</span>
+<br><span style="background:#30f030">8 item_11e_anti_venom</span>
+<br><span style="background:#30f030">9 item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">a item_122_evil_eye</span>
 <br>
 <img src="maps/water_world_watery_labyrinth_area.png"/><br>
 
 <h2>Monster World</h2>
 <h3>monster_world_false_eye_area</h3><br>
-<span style="background:#f0f0f0">Item Memory used 6</span>
-<br><span style="background:#f0f0f0">Creatures score 272</span>
+<span style="background:#f0f0f0">Item Memory used 5</span>
+<br><span style="background:#f0f0f0">Creatures score 59</span>
 <br><span style="background:#ff8080">30    100% 0x10 02_lizard_servant pw150 150 150 150 150 150 150 150  a24 a24 m30</span>
+<span style="background:#ffff00"><br>100% item_3d_deadly_axe</span>
 <br><span style="background:#ff8080">31    100% 0x10 06_lizard_servant pw150 150 150 150 150 150 150 150  a24 a24 m30</span>
-<br><span style="background:#30f030">0 item_4a_crown_of_composure</span>
-<br><span style="background:#30f030">1 item_a6_large_shield</span>
-<br><span style="background:#30f030">2 item_36_swift_morning_star</span>
-<br><span style="background:#30f030">3 item_128_spirit_book</span>
-<br><span style="background:#30f030">4 item_11c_healing_potion</span>
-<br><span style="background:#30f030">5 item_10a_cune</span>
+<br><span style="background:#30f030">0 item_11c_healing_potion</span>
+<br><span style="background:#30f030">1 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">3 item_127_acid_vaccine</span>
+<br><span style="background:#30f030">4 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">5 item_11c_healing_potion</span>
 <br><span style="background:#30f030">6 item_11c_healing_potion</span>
 <br>
 <img src="maps/monster_world_false_eye_area.png"/><br>
 <h3>monster_world_screeching_area</h3><br>
-<span style="background:#f0f0f0">Item Memory used 4</span>
+<span style="background:#f0f0f0">Item Memory used 5</span>
 <br><span style="background:#f0f0f0">Creatures score 258</span>
 <br><span style="background:#ff8080">21    100% 0x10 0e_necron pw75 78 132 360 405 146 525 239  a85 a90 m22 a340 a290 a460 a100 a120 a400 a350 a250 a270</span>
+<span style="background:#ffff00"><br>100% item_a2_buckler</span>
 <br><span style="background:#ff8080">30    100% 0x10 01_auriel_c pw250 250 250 520 490 580 590 370  a90 a110 m21 a550 a450 a540 a550 a450 a540</span>
-<br><span style="background:#30f030">0 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1 item_11c_healing_potion</span>
-<br><span style="background:#30f030">2 item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">1c item_33_crushing_mace</span>
+<span style="background:#ffff00"><br>100% item_11d_magic_potion</span>
+<br><span style="background:#30f030">0 item_10d_lamp</span>
+<br><span style="background:#30f030">1 item_11e_anti_venom</span>
+<br><span style="background:#30f030">2 item_11e_anti_venom</span>
+<br><span style="background:#30f030">1c item_8e_leather_boots</span>
 <br>
 <img src="maps/monster_world_screeching_area.png"/><br>
 
 <h2>Illusion World</h2>
 <h3>illusion_world_gloomy_domain</h3><br>
 <span style="background:#f0f0f0">Item Memory used 4</span>
-<br><span style="background:#f0f0f0">Creatures score 182</span>
+<br><span style="background:#f0f0f0">Creatures score 69</span>
 <br><span style="background:#ff8080">30    100% 0x20 0e_blank pw0 0 0 0 0 0 0 0  a0 a0 m39</span>
-<br><span style="background:#30f030">2 item_124_poison_vaccine</span>
-<br><span style="background:#30f030">3 item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">5 item_8e_leather_boots</span>
-<br><span style="background:#30f030">6 item_125_dust_of_rage</span>
+<br><span style="background:#30f030">2 item_11c_healing_potion</span>
+<br><span style="background:#30f030">3 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">5 item_128_spirit_book</span>
+<br><span style="background:#30f030">6 item_120_divine_symbol</span>
 <br>
 <img src="maps/illusion_world_gloomy_domain.png"/><br>
 <h3>illusion_world_bewilderment_domain</h3><br>
-<span style="background:#f0f0f0">Item Memory used 12</span>
+<span style="background:#f0f0f0">Item Memory used 11</span>
 <br><span style="background:#f0f0f0">Creatures score 195</span>
-<br><span style="background:#30f030">0 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1 item_10c_torch</span>
-<br><span style="background:#30f030">2 item_11e_anti_venom</span>
-<br><span style="background:#30f030">3 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">0 item_120_divine_symbol</span>
+<br><span style="background:#30f030">1 item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2 item_130_blue_crystal</span>
+<br><span style="background:#30f030">3 item_11e_anti_venom</span>
 <br><span style="background:#30f030">4 item_11c_healing_potion</span>
-<br><span style="background:#30f030">5 item_120_divine_symbol</span>
-<br><span style="background:#30f030">6 item_124_poison_vaccine</span>
-<br><span style="background:#30f030">7 item_10a_cune</span>
-<br><span style="background:#30f030">8 item_122_evil_eye</span>
+<br><span style="background:#30f030">5 item_10d_lamp</span>
+<br><span style="background:#30f030">6 item_10c_torch</span>
+<br><span style="background:#30f030">7 item_122_evil_eye</span>
+<br><span style="background:#30f030">8 item_10a_cune</span>
 <br><span style="background:#30f030">9 item_11c_healing_potion</span>
-<br><span style="background:#30f030">a item_124_poison_vaccine</span>
-<br><span style="background:#30f030">b item_10a_cune</span>
-<br><span style="background:#30f030">c item_139_soul_pod_14_sp</span>
+<br><span style="background:#30f030">a item_11e_anti_venom</span>
+<br><span style="background:#30f030">b item_10d_lamp</span>
+<br><span style="background:#30f030">c item_10c_torch</span>
 <br><span style="background:#30f030">d item_116_key_of_delusion</span>
 <br><span style="background:#30f030">e item_116_key_of_delusion</span>
 <br><span style="background:#30f030">f item_116_key_of_delusion</span>
 <br><span style="background:#30f030">10 item_116_key_of_delusion</span>
-<br><span style="background:#30f030">11 item_1_short_sword</span>
+<br><span style="background:#30f030">11 item_11f_anti_paralytic</span>
 <br>
 <img src="maps/illusion_world_bewilderment_domain.png"/><br>
 <h3>illusion_world_worship_domain</h3><br>
-<span style="background:#f0f0f0">Item Memory used 6</span>
-<br><span style="background:#f0f0f0">Creatures score 92</span>
+<span style="background:#f0f0f0">Item Memory used 5</span>
+<br><span style="background:#f0f0f0">Creatures score 73</span>
 <br><span style="background:#ff8080">21    100% 0x5 04_wildowess pw66 84 55 300 112 400 98 30  a150 a170 m28 a205 a150 a340</span>
-<span style="background:#ffff00"><br>100% item_c_shadow_blade</span>
+<span style="background:#ffff00"><br>100% item_8d_leather_boots</span>
 <br><span style="background:#ff8080">22    100% 0x10 01_gorthaur pw85 70 50 250 60 180 50 60  a30 a36 m27 a195 a110 a180</span>
-<span style="background:#ffff00"><br>100% item_3c_crushing_axe</span>
 <br><span style="background:#ff8080">23    100% 0x5 08_fester pw120 56 49 559 58 579 59 60  a50 a60 m29</span>
-<span style="background:#ffff00"><br>100% item_93_steel_boots_of_curing</span>
+<span style="background:#ffff00"><br>100% item_120_divine_symbol</span>
 <br><span style="background:#ff8080">30    100% 0x80 02_fat_mole_d pw0 0 0 0 0 0 0 0  a0 a0 m26</span>
-<span style="background:#ffff00"><br>100% item_11e_anti_venom</span>
-<br><span style="background:#30f030">0 item_101_amulet_of_resist</span>
-<br><span style="background:#30f030">1 item_10a_cune</span>
+<span style="background:#ffff00"><br>100% item_1_short_sword</span>
+<br><span style="background:#30f030">0 item_11c_healing_potion</span>
+<br><span style="background:#30f030">1 item_11d_magic_potion</span>
 <br>
 <img src="maps/illusion_world_worship_domain.png"/><br>
 <h3>illusion_world_dream_domain</h3><br>
 <span style="background:#f0f0f0">Item Memory used 4</span>
-<br><span style="background:#f0f0f0">Creatures score 155</span>
+<br><span style="background:#f0f0f0">Creatures score 524</span>
 <br><span style="background:#ff8080">20    100% 0x10 01_disguise pw108 82 121 370 600 240 346 230  a90 a110 m20</span>
-<span style="background:#ffff00"><br>100% item_104_priest_amulet</span>
-<span style="background:#ffff00"><br>100% item_107_star_amulet</span>
-<br><span style="background:#30f030">0 item_55_great_helm</span>
-<br><span style="background:#30f030">1 item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2 item_11c_healing_potion</span>
+<span style="background:#ffff00"><br>100% item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">0 item_c5_summoner_ring_of_fire</span>
+<br><span style="background:#30f030">1 item_11c_healing_potion</span>
+<br><span style="background:#30f030">2 item_10e_sacred_feather</span>
 <br>
 <img src="maps/illusion_world_dream_domain.png"/><br>
 
 <h2>Death World</h2>
 <h3>death_world_dark_castle_layer</h3><br>
-<span style="background:#f0f0f0">Item Memory used 4</span>
+<span style="background:#f0f0f0">Item Memory used 5</span>
 <br><span style="background:#f0f0f0">Creatures score 75</span>
 <br><span style="background:#ff8080">20    100% 0x30 08_armored_guardian pw79 69 71 62 270 70 62 252  a100 a80 m36 a380 a460 a280 a365 a335 a240</span>
-<br><span style="background:#30f030">0 item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">1 item_127_acid_vaccine</span>
-<br><span style="background:#30f030">2 item_118_iron_key</span>
-<br><span style="background:#30f030">3 item_124_poison_vaccine</span>
-<br><span style="background:#30f030">4 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">0 item_b4_harden_tower_shield</span>
+<br><span style="background:#30f030">1 item_120_divine_symbol</span>
+<br><span style="background:#30f030">2 item_123_fire_world_stone</span>
+<br><span style="background:#30f030">3 item_101_amulet_of_resist</span>
+<br><span style="background:#30f030">4 item_11c_healing_potion</span>
 <br>
 <img src="maps/death_world_dark_castle_layer.png"/><br>
 <h3>death_world_gate_of_the_dead</h3><br>
 <span style="background:#f0f0f0">Item Memory used 4</span>
 <br><span style="background:#f0f0f0">Creatures score 492</span>
 <br><span style="background:#ff8080">20    100% 0x5 0c_hollow_mage pw81 50 181 999 999 999 999 999  a44 a144 m23</span>
-<span style="background:#ffff00"><br>100% item_139_soul_pod_14_sp</span>
-<br><span style="background:#30f030">0 item_fa_moon_bracelet</span>
-<br><span style="background:#30f030">1 item_11c_healing_potion</span>
-<br><span style="background:#30f030">2 item_11e_anti_venom</span>
+<span style="background:#ffff00"><br>100% item_10a_cune</span>
+<br><span style="background:#30f030">0 item_10c_torch</span>
+<br><span style="background:#30f030">1 item_67_plate_mail_of_curing</span>
+<br><span style="background:#30f030">2 item_fb_magical_amulet</span>
 <br>
 <img src="maps/death_world_gate_of_the_dead.png"/><br>
 <h3>death_world_lingering_curse_layer</h3><br>
 <span style="background:#f0f0f0">Item Memory used 4</span>
-<br><span style="background:#f0f0f0">Creatures score 62</span>
-<br><span style="background:#ff8080">5     100% 0x40 05_unknown_g pw60 50 70 210 126 230 110 130  a62 a92 m0</span>
-<br><span style="background:#ff8080">6     100% 0x40 05_unknown_g pw60 50 70 210 126 230 110 130  a62 a92 m0</span>
-<br><span style="background:#ff8080">7     100% 0x40 05_unknown_g pw60 50 70 210 126 230 110 130  a62 a92 m0</span>
-<br><span style="background:#ff8080">30    100% 0x20 0d_blood_bone pw70 40 110 40 60 50 42 71  a0 a0 m0</span>
+<br><span style="background:#f0f0f0">Creatures score 91</span>
+<br><span style="background:#ff8080">5     100% 0x40 0d_bugler pw70 70 40 350 60 356 448 449  a170 a180 m0</span>
+<br><span style="background:#ff8080">6     100% 0x40 0d_bugler pw70 70 40 350 60 356 448 449  a170 a180 m0</span>
+<br><span style="background:#ff8080">7     100% 0x40 0d_bugler pw70 70 40 350 60 356 448 449  a170 a180 m0</span>
+<br><span style="background:#ff8080">30    100% 0x20 01_stack_eyes pw88 152 80 122 125 106 22 62  a60 a72 m0</span>
 <br><span style="background:#ff8080">31    100% 0x20 04_blank pw90 90 90 90 90 90 90 90  a0 a0 m31</span>
-<br><span style="background:#30f030">0 item_10a_cune</span>
-<br><span style="background:#30f030">1 item_b7_tower_shield_of_balance</span>
-<br><span style="background:#30f030">2 item_11e_anti_venom</span>
-<br><span style="background:#30f030">3 item_125_dust_of_rage</span>
+<br><span style="background:#30f030">0 item_10e_sacred_feather</span>
+<br><span style="background:#30f030">1 item_10c_torch</span>
+<br><span style="background:#30f030">2 item_5d_leather_armor</span>
+<br><span style="background:#30f030">3 item_123_fire_world_stone</span>
 <br>
 <img src="maps/death_world_lingering_curse_layer.png"/><br>
 <h3>death_world_undead_layer</h3><br>
-<span style="background:#f0f0f0">Item Memory used 11</span>
+<span style="background:#f0f0f0">Item Memory used 10</span>
 <br><span style="background:#f0f0f0">Creatures score 405</span>
 <br><span style="background:#ff8080">21    100% 0x20 04_king_edward pw220 70 230 600 600 600 600 600  a154 a150 m35 a50 a45 a50 a40 a40 a20 a90 a40 a80</span>
 <br><span style="background:#ff8080">30    100% 0x20 01_unknown_b pw250 250 250 520 490 580 590 370  a90 a110 m34 a520 a450 a550 a620 a480 a550</span>
 <br><span style="background:#ff8080">31    100% 0x10 09_pulsating_heart pw50 48 46 999 999 999 999 999  a0 a0 m0 a150 a100 a140</span>
 <br><span style="background:#ff8080">32    100% 0x10 0d_fat_mole_e pw0 0 0 0 0 0 0 0  a0 a0 m33</span>
-<br><span style="background:#30f030">0 item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">1 item_10c_torch</span>
-<br><span style="background:#30f030">2 item_ba_harden_gothic_shield</span>
-<br><span style="background:#30f030">3 item_52_full_helm_of_curing</span>
-<br><span style="background:#30f030">4 item_11c_healing_potion</span>
-<br><span style="background:#30f030">5 item_124_poison_vaccine</span>
-<br><span style="background:#30f030">6 item_10d_lamp</span>
-<br><span style="background:#30f030">7 item_11e_anti_venom</span>
-<br><span style="background:#30f030">8 item_10a_cune</span>
-<br><span style="background:#30f030">9 item_10a_cune</span>
-<br><span style="background:#30f030">a item_11c_healing_potion</span>
-<br><span style="background:#30f030">1c item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">1d item_10e_sacred_feather</span>
+<br><span style="background:#30f030">0 item_11c_healing_potion</span>
+<br><span style="background:#30f030">1 item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">2 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">3 item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">4 item_10a_cune</span>
+<br><span style="background:#30f030">5 item_11c_healing_potion</span>
+<br><span style="background:#30f030">6 item_11c_healing_potion</span>
+<br><span style="background:#30f030">7 item_124_poison_vaccine</span>
+<br><span style="background:#30f030">8 item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">9 item_10e_sacred_feather</span>
+<br><span style="background:#30f030">a item_bc_gothic_shield_of_resist</span>
+<br><span style="background:#30f030">1c item_10c_torch</span>
+<br><span style="background:#30f030">1d item_120_divine_symbol</span>
 <br>
 <img src="maps/death_world_undead_layer.png"/><br>
 

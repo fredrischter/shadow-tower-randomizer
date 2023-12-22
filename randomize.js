@@ -21,8 +21,8 @@ function randomize(paramsFile, stDir) {
     let changeSetFile = changeSetPath + path.sep + "changeset.json"
     console.log(params);
 
-    const logFileRandomize = fs.openSync(changeSetPath + path.sep + 'randomize.log', 'w');
-    //const logFileRandomize = fs.createWriteStream(changeSetPath + path.sep + 'randomize.log', {flags: 'w+'});
+    const logFileRandomize = fs.openSync(changeSetPath + path.sep + 'randomize.txt', 'w');
+    //const logFileRandomize = fs.createWriteStream(changeSetPath + path.sep + 'randomize.txt', {flags: 'w+'});
     console.log = function() {
         //logFileRandomize.write(util.format.apply(null, arguments) + '\n');
         fs.writeSync(logFileRandomize, util.format.apply(null, arguments) + '\n');
@@ -105,7 +105,7 @@ function randomize(paramsFile, stDir) {
     var tfile = new TFILEReader(tFilePath).readTFormat();
     data_model.setup(tfile, stDir);
 
-    const logFile2 = fs.openSync('test.log', 'w');
+    const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
     //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
     console.log = function() {
         //logFile2.write(util.format.apply(null, arguments) + '\n');
@@ -119,7 +119,7 @@ function randomize(paramsFile, stDir) {
         var seed = useRandomSeed();
         console.log("Randomization - Using generated seed " + seed);
     }
-    console.log(Date.now() + "Parameters - " + JSON.stringify(params));
+    console.log("Parameters - " + JSON.stringify(params));
 
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
     const shuffle = map_shuffler(params);
@@ -1322,14 +1322,14 @@ function randomize(paramsFile, stDir) {
     }
 
     var mermaidChart = "graph TD\n";
-    areas.forEach(area => {
+    shuffle.map.forEach(area => {
         if (area.exits) {
             Object.values(area.exits).forEach((exit) => {
                 if (exit) {
-                    var exitArea = areas.find(area => area.name == normalizeAreaName(exit.dest));
-                    var exitName = area.name+"/"+exit.id;
+                    var exitArea = areas.find(area => normalizeAreaName(area.name) == normalizeAreaName(exit.dest));
+                    var exitName = normalizeAreaName(area.name)+"/"+exit.id;
                     mermaidChart+="  " 
-                    + exit.origin + "[" + (readableName[exit.origin] || area.name) + (area.score?" " + area.score:"")
+                    + area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
                     + "] -- " + (exitsNames[exitName] || exitName)+ " --> "
                     + exit.dest+"["+(readableName[exit.dest] || exit.dest) + (exitArea && exitArea.score?" " + exitArea.score:"") +"]\n";
                 }
@@ -1371,7 +1371,7 @@ function randomize(paramsFile, stDir) {
         }
     }
 
-    console.log(Date.now() + " writing " + changeSetFile);
+    console.log(" writing " + changeSetFile);
     fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
 }
 

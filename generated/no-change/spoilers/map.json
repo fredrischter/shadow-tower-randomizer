@@ -763,6 +763,13 @@
       "dest": "shadow_tower_part1a",
       "wayBackId": "0",
       "type": "door"
+    },
+    {
+      "id": "0",
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "38",
+      "type": "door"
     }
   ],
   "map": [
@@ -1664,7 +1671,7 @@
     }
   ],
   "isComplete": true,
-  "pathDifficulty": 112,
+  "pathDifficulty": 113,
   "deadEnds": [],
   "notWalkedAreas": [],
   "comment": null

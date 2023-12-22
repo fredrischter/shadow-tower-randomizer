@@ -2,19 +2,126 @@
   "walk": [
     {
       "id": "0",
-      "dest": "illusion_world_gloomy_domain",
+      "dest": "shadow_tower_part3a",
+      "wayBackId": "0",
+      "type": "door"
+    },
+    {
+      "id": "0",
+      "dest": "shadow_tower_part1a",
+      "wayBackId": "0",
+      "type": "door"
+    },
+    {
+      "id": "0",
+      "dest": "shadow_tower_part3a",
+      "wayBackId": "0",
+      "type": "door"
+    },
+    {
+      "id": "3",
+      "dest": "death_world_gate_of_the_dead",
+      "world": "death_world",
+      "wayBackId": "1",
+      "type": "door"
+    },
+    {
+      "id": "1",
+      "dest": "shadow_tower_part3a",
+      "wayBackId": "3",
+      "type": "door"
+    },
+    {
+      "id": "9",
+      "dest": "earth_world_poisonous_cavern",
+      "world": "earth_world",
+      "wayBackId": "13",
+      "type": "door"
+    },
+    {
+      "id": "13",
+      "dest": "shadow_tower_part3a",
+      "wayBackId": "9",
+      "type": "door"
+    },
+    {
+      "id": "jump",
+      "dest": "shadow_tower_part3b",
+      "type": "jump"
+    },
+    {
+      "id": "5",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "11",
+      "type": "door"
+    },
+    {
+      "id": "5",
+      "dest": "human_world_hidden_region",
+      "world": "human_world",
+      "wayBackId": "13",
+      "type": "door"
+    },
+    {
+      "id": "9",
+      "dest": "death_world_lingering_curse_layer",
+      "world": "death_world",
+      "wayBackId": "1",
+      "type": "door"
+    },
+    {
+      "id": "1",
+      "dest": "human_world_hidden_region",
+      "wayBackId": "9",
+      "type": "door",
+      "world": "human_world"
+    },
+    {
+      "id": "13",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "5",
+      "type": "door"
+    },
+    {
+      "id": "11",
+      "dest": "shadow_tower_part3b",
+      "wayBackId": "5",
+      "type": "door"
+    },
+    {
+      "id": "7",
+      "dest": "fire_world_burning_cavern",
+      "world": "fire_world",
+      "wayBackId": "37",
+      "type": "door"
+    },
+    {
+      "id": "37",
+      "dest": "shadow_tower_part3b",
+      "wayBackId": "7",
+      "type": "door"
+    },
+    {
+      "id": "13",
+      "dest": "shadow_tower_part2b",
+      "wayBackId": "5",
+      "type": "door"
+    },
+    {
+      "id": "9",
+      "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
       "wayBackId": "1",
       "type": "door"
     },
     {
-      "id": "3",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "8",
+      "id": "1",
+      "dest": "shadow_tower_part2b",
+      "wayBackId": "9",
       "type": "door"
     },
     {
-      "id": "4",
+      "id": "7",
       "dest": "death_world_dark_castle_layer",
       "world": "death_world",
       "wayBackId": "2",
@@ -22,115 +129,25 @@
     },
     {
       "id": "0",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "5",
-      "dest": "shadow_tower_part3a",
-      "wayBackId": "3",
-      "type": "door"
-    },
-    {
-      "id": "0",
-      "dest": "water_world_sunken_river_area",
-      "world": "water_world",
-      "wayBackId": "1",
-      "type": "door"
-    },
-    {
-      "id": "5",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "1",
-      "type": "door",
-      "direction": "exit"
-    },
-    {
-      "id": "3",
-      "dest": "human_world_solitary_region",
-      "world": "human_world",
-      "wayBackId": "31",
-      "type": "door"
-    },
-    {
-      "id": "31",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "3",
-      "type": "door"
-    },
-    {
-      "id": "11",
-      "dest": "shadow_tower_part3b",
-      "wayBackId": "13",
-      "type": "door"
-    },
-    {
-      "id": "5",
-      "dest": "death_world_undead_layer",
-      "world": "death_world",
-      "wayBackId": "12",
-      "type": "door"
-    },
-    {
-      "id": "12",
-      "dest": "shadow_tower_part3b",
-      "wayBackId": "5",
-      "type": "door"
-    },
-    {
-      "id": "7",
-      "dest": "monster_world_screeching_area",
-      "world": "monster_world",
+      "dest": "shadow_tower_part2a",
       "wayBackId": "0",
       "type": "door"
     },
     {
       "id": "0",
-      "dest": "shadow_tower_part3b",
+      "dest": "death_world_dark_castle_layer",
+      "world": "death_world",
+      "wayBackId": "0",
+      "type": "door"
+    },
+    {
+      "id": "2",
+      "dest": "shadow_tower_part2b",
       "wayBackId": "7",
       "type": "door"
     },
     {
-      "id": "13",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "11",
-      "type": "door"
-    },
-    {
-      "id": "16",
-      "dest": "monster_world_false_eye_area",
-      "world": "monster_world",
-      "type": "totem",
-      "wayBackId": "10"
-    },
-    {
-      "id": "9",
-      "dest": "death_world_undead_layer",
-      "wayBackId": "15",
-      "type": "door",
-      "world": "death_world"
-    },
-    {
-      "id": "15",
-      "dest": "monster_world_false_eye_area",
-      "world": "monster_world",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "10",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "16",
-      "type": "totem",
-      "direction": "bi"
-    },
-    {
-      "id": "11",
+      "id": "5",
       "dest": "shadow_tower_part3b",
       "wayBackId": "13",
       "type": "door"
@@ -142,286 +159,287 @@
     },
     {
       "id": "10",
-      "dest": "earth_world_poisonous_cavern",
+      "dest": "earth_world_false_pit_cavern",
       "world": "earth_world",
-      "wayBackId": "10",
-      "type": "door"
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part2b",
-      "wayBackId": "7",
-      "type": "door",
-      "direction": "bi"
-    },
-    {
-      "id": "9",
-      "dest": "fire_world_phoenix_cave",
-      "world": "fire_world",
-      "wayBackId": "1",
-      "type": "door"
-    },
-    {
-      "id": "0",
-      "dest": "shadow_tower_part2b",
-      "wayBackId": "5",
-      "type": "door"
-    },
-    {
-      "id": "7",
-      "dest": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door"
-    },
-    {
-      "id": "10",
-      "dest": "shadow_tower_part3c",
-      "wayBackId": "10",
-      "type": "door",
-      "direction": "bi"
-    },
-    {
-      "id": "10",
-      "dest": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "wayBackId": "10",
-      "type": "door"
-    },
-    {
-      "id": "17",
-      "dest": "human_world_solitary_region",
-      "wayBackId": "38",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
-      "id": "34",
-      "dest": "human_world_forgotten_region",
-      "world": "human_world",
-      "wayBackId": "34",
-      "type": "door"
-    },
-    {
-      "id": "34",
-      "dest": "human_world_solitary_region",
-      "wayBackId": "34",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
-      "id": "35",
-      "dest": "illusion_world_bewilderment_domain",
-      "world": "illusion_world",
-      "wayBackId": "20",
-      "type": "door",
-      "direction": "exit"
-    },
-    {
-      "id": "18",
-      "dest": "shadow_tower_part1c",
       "wayBackId": "11",
       "type": "door"
     },
     {
-      "id": "11",
-      "dest": "illusion_world_bewilderment_domain",
-      "world": "illusion_world",
-      "wayBackId": "18",
-      "type": "door"
-    },
-    {
-      "id": "20",
-      "dest": "human_world_solitary_region",
-      "world": "human_world",
-      "wayBackId": "35",
-      "type": "door"
-    },
-    {
-      "id": "38",
-      "dest": "earth_world_poisonous_cavern",
-      "wayBackId": "17",
-      "type": "door",
-      "world": "earth_world"
-    },
-    {
-      "id": "17",
-      "dest": "human_world_solitary_region",
-      "wayBackId": "38",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
-      "id": "34",
-      "dest": "human_world_forgotten_region",
-      "world": "human_world",
-      "wayBackId": "34",
-      "type": "door"
-    },
-    {
-      "id": "37",
-      "dest": "human_world_cursed_region",
-      "wayBackId": "31",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
       "id": "3",
-      "dest": "earth_world_stone_cavern",
-      "world": "earth_world",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "4",
-      "dest": "human_world_cursed_region",
-      "world": "human_world",
-      "wayBackId": "3",
-      "type": "door",
-      "direction": "bi"
-    },
-    {
-      "id": "31",
-      "dest": "human_world_forgotten_region",
-      "wayBackId": "37",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
-      "id": "18",
-      "dest": "monster_world_screeching_area",
-      "world": "monster_world",
-      "wayBackId": "3",
-      "type": "totem"
-    },
-    {
-      "id": "3",
-      "dest": "human_world_forgotten_region",
-      "world": "human_world",
-      "wayBackId": "18",
-      "type": "totem"
-    },
-    {
-      "id": "37",
-      "dest": "human_world_cursed_region",
-      "wayBackId": "31",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
-      "id": "3",
-      "dest": "earth_world_stone_cavern",
-      "world": "earth_world",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "7",
-      "dest": "death_world_gate_of_the_dead",
-      "world": "death_world",
-      "wayBackId": "1",
-      "type": "door",
-      "direction": "exit"
-    },
-    {
-      "id": "4",
-      "dest": "death_world_dark_castle_layer",
-      "world": "death_world",
-      "wayBackId": "7",
-      "type": "totem"
-    },
-    {
-      "id": "2",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "8",
       "type": "door"
     },
     {
       "id": "8",
-      "dest": "illusion_world_gloomy_domain",
-      "world": "illusion_world",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
       "wayBackId": "3",
       "type": "door"
     },
     {
       "id": "1",
-      "dest": "shadow_tower_part1a",
-      "wayBackId": "0",
+      "dest": "death_world_undead_layer",
+      "world": "death_world",
+      "wayBackId": "15",
       "type": "door"
     },
     {
-      "id": "0",
-      "dest": "illusion_world_gloomy_domain",
-      "world": "illusion_world",
+      "id": "12",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
+      "type": "door",
+      "direction": "bi"
+    },
+    {
+      "id": "4",
+      "dest": "death_world_undead_layer",
+      "world": "death_world",
+      "wayBackId": "12",
+      "type": "door"
+    },
+    {
+      "id": "15",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
       "wayBackId": "1",
-      "type": "door"
+      "type": "door",
+      "direction": "bi"
     },
     {
-      "id": "10",
-      "dest": "monster_world_screeching_area",
-      "world": "monster_world",
-      "wayBackId": "6",
-      "type": "totem"
-    },
-    {
-      "id": "6",
-      "dest": "illusion_world_gloomy_domain",
-      "world": "illusion_world",
+      "id": "11",
+      "dest": "shadow_tower_part3c",
       "wayBackId": "10",
-      "type": "totem"
-    },
-    {
-      "id": "10",
-      "dest": "monster_world_screeching_area",
-      "world": "monster_world",
-      "wayBackId": "6",
-      "type": "totem"
-    },
-    {
-      "id": "0",
-      "dest": "shadow_tower_part3b",
-      "wayBackId": "7",
       "type": "door"
     },
     {
-      "id": "13",
+      "id": "10",
       "dest": "earth_world_false_pit_cavern",
       "world": "earth_world",
       "wayBackId": "11",
       "type": "door"
     },
     {
-      "id": "1",
-      "dest": "water_world_sunken_river_area",
+      "id": "16",
+      "dest": "human_world_forgotten_region",
+      "world": "human_world",
+      "wayBackId": "18",
+      "type": "totem"
+    },
+    {
+      "id": "34",
+      "dest": "water_world_impure_pool_area",
+      "wayBackId": "9",
+      "type": "door",
+      "world": "water_world"
+    },
+    {
+      "id": "9",
+      "dest": "human_world_forgotten_region",
+      "wayBackId": "34",
+      "type": "door",
+      "world": "human_world"
+    },
+    {
+      "id": "37",
+      "dest": "earth_world_hostile_rock_cavern",
+      "wayBackId": "1",
+      "type": "door",
+      "direction": "exit",
+      "world": "earth_world"
+    },
+    {
+      "id": "3",
+      "dest": "water_world_impure_pool_area",
       "world": "water_world",
-      "wayBackId": "5",
+      "wayBackId": "14",
+      "type": "totem"
+    },
+    {
+      "id": "11",
+      "dest": "human_world_cursed_region",
+      "wayBackId": "3",
+      "type": "door",
+      "direction": "exit",
+      "world": "human_world"
+    },
+    {
+      "id": "31",
+      "dest": "shadow_tower_part1b",
+      "wayBackId": "8",
       "type": "door"
     },
     {
-      "id": "1",
-      "dest": "shadow_tower_part3a",
-      "wayBackId": "0",
+      "id": "8",
+      "dest": "human_world_cursed_region",
+      "world": "human_world",
+      "wayBackId": "31",
+      "type": "door"
+    },
+    {
+      "id": "31",
+      "dest": "shadow_tower_part1b",
+      "wayBackId": "8",
+      "type": "door"
+    },
+    {
+      "id": "jump",
+      "dest": "shadow_tower_part1c",
+      "type": "jump"
+    },
+    {
+      "id": "9",
+      "dest": "earth_world_quaking_cavern",
+      "world": "earth_world",
+      "wayBackId": "3",
       "type": "door"
     },
     {
       "id": "3",
       "dest": "shadow_tower_part1c",
+      "wayBackId": "9",
+      "type": "door"
+    },
+    {
+      "id": "11",
+      "dest": "shadow_tower_part3b",
       "wayBackId": "5",
       "type": "door"
     },
     {
+      "id": "jump",
+      "dest": "shadow_tower_part3c",
+      "type": "jump"
+    },
+    {
+      "id": "10",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "11",
+      "type": "door"
+    },
+    {
+      "id": "16",
+      "dest": "human_world_forgotten_region",
+      "world": "human_world",
+      "wayBackId": "18",
+      "type": "totem"
+    },
+    {
+      "id": "18",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "16",
+      "type": "totem"
+    },
+    {
+      "id": "16",
+      "dest": "human_world_forgotten_region",
+      "world": "human_world",
+      "wayBackId": "18",
+      "type": "totem"
+    },
+    {
+      "id": "34",
+      "dest": "water_world_impure_pool_area",
+      "wayBackId": "9",
+      "type": "door",
+      "world": "water_world"
+    },
+    {
+      "id": "14",
+      "dest": "earth_world_hostile_rock_cavern",
+      "world": "earth_world",
+      "wayBackId": "3",
+      "type": "totem",
+      "direction": "bi"
+    },
+    {
+      "id": "3",
+      "dest": "water_world_impure_pool_area",
+      "world": "water_world",
+      "wayBackId": "14",
+      "type": "totem"
+    },
+    {
       "id": "9",
-      "dest": "death_world_dark_castle_layer",
+      "dest": "human_world_forgotten_region",
+      "wayBackId": "34",
+      "type": "door",
+      "world": "human_world"
+    },
+    {
+      "id": "18",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "16",
+      "type": "totem"
+    },
+    {
+      "id": "1",
+      "dest": "death_world_undead_layer",
       "world": "death_world",
-      "wayBackId": "0",
+      "wayBackId": "15",
+      "type": "door"
+    },
+    {
+      "id": "12",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
+      "type": "door",
+      "direction": "bi"
+    },
+    {
+      "id": "6",
+      "dest": "monster_world_screeching_area",
+      "world": "monster_world",
+      "wayBackId": "3",
+      "type": "totem"
+    },
+    {
+      "id": "0",
+      "dest": "shadow_tower_part2a",
+      "wayBackId": "4",
       "type": "door"
     },
     {
       "id": "4",
-      "dest": "illusion_world_dream_domain",
-      "world": "illusion_world",
-      "wayBackId": "4",
+      "dest": "monster_world_screeching_area",
+      "world": "monster_world",
+      "wayBackId": "0",
+      "type": "door"
+    },
+    {
+      "id": "3",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "6",
       "type": "totem"
+    },
+    {
+      "id": "6",
+      "dest": "monster_world_screeching_area",
+      "world": "monster_world",
+      "wayBackId": "3",
+      "type": "totem"
+    },
+    {
+      "id": "6",
+      "dest": "death_world_dark_castle_layer",
+      "world": "death_world",
+      "wayBackId": "7",
+      "type": "totem"
+    },
+    {
+      "id": "4",
+      "dest": "death_world_gate_of_the_dead",
+      "world": "death_world",
+      "wayBackId": "4",
+      "type": "totem",
+      "direction": "bi"
     },
     {
       "id": "4",
@@ -432,72 +450,65 @@
     },
     {
       "id": "7",
-      "dest": "death_world_gate_of_the_dead",
-      "world": "death_world",
-      "wayBackId": "4",
+      "dest": "monster_world_screeching_area",
+      "world": "monster_world",
+      "wayBackId": "6",
       "direction": "bi",
       "type": "totem"
     },
     {
-      "id": "4",
-      "dest": "death_world_dark_castle_layer",
-      "world": "death_world",
-      "wayBackId": "7",
+      "id": "3",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "6",
       "type": "totem"
+    },
+    {
+      "id": "4",
+      "dest": "death_world_undead_layer",
+      "world": "death_world",
+      "wayBackId": "12",
+      "type": "door"
+    },
+    {
+      "id": "15",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "1",
+      "type": "door",
+      "direction": "bi"
+    },
+    {
+      "id": "3",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "8",
+      "type": "door"
+    },
+    {
+      "id": "9",
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "34",
+      "type": "door"
+    },
+    {
+      "id": "31",
+      "dest": "earth_world_poisonous_cavern",
+      "world": "earth_world",
+      "wayBackId": "10",
+      "type": "door"
     },
     {
       "id": "10",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "19",
-      "direction": "bi",
-      "type": "totem"
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "31",
+      "type": "door",
+      "direction": "bi"
     },
     {
-      "id": "19",
-      "dest": "death_world_dark_castle_layer",
-      "world": "death_world",
-      "wayBackId": "10",
-      "type": "totem",
-      "direction": "entrance"
-    },
-    {
-      "id": "4",
-      "dest": "illusion_world_dream_domain",
-      "world": "illusion_world",
-      "wayBackId": "4",
-      "type": "totem"
-    },
-    {
-      "id": "3",
-      "dest": "fire_world_ashen_cavern",
-      "world": "fire_world",
-      "wayBackId": "17",
-      "type": "portal"
-    },
-    {
-      "id": "17",
-      "dest": "illusion_world_dream_domain",
-      "world": "illusion_world",
-      "wayBackId": "3",
-      "type": "portal"
-    },
-    {
-      "id": "3",
-      "dest": "fire_world_ashen_cavern",
-      "world": "fire_world",
-      "wayBackId": "17",
-      "type": "portal"
-    },
-    {
-      "id": "6",
-      "dest": "illusion_world_worship_domain",
-      "world": "illusion_world",
-      "wayBackId": "6",
-      "type": "portal"
-    },
-    {
-      "id": "1",
+      "id": "34",
       "dest": "water_world_watery_labyrinth_area",
       "world": "water_world",
       "wayBackId": "9",
@@ -505,6 +516,305 @@
     },
     {
       "id": "9",
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "34",
+      "type": "door"
+    },
+    {
+      "id": "35",
+      "dest": "earth_world_rotting_cavern",
+      "world": "earth_world",
+      "wayBackId": "13",
+      "type": "door",
+      "direction": "exit"
+    },
+    {
+      "id": "13",
+      "dest": "human_world_solitary_region",
+      "wayBackId": "35",
+      "type": "door",
+      "world": "human_world"
+    },
+    {
+      "id": "38",
+      "dest": "fire_world_phoenix_cave",
+      "wayBackId": "1",
+      "type": "door",
+      "world": "fire_world"
+    },
+    {
+      "id": "0",
+      "dest": "water_world_sunken_river_area",
+      "wayBackId": "1",
+      "type": "door",
+      "world": "water_world"
+    },
+    {
+      "id": "5",
+      "dest": "shadow_tower_part1b",
+      "wayBackId": "4",
+      "type": "door",
+      "direction": "exit"
+    },
+    {
+      "id": "jump",
+      "dest": "shadow_tower_part1c",
+      "type": "jump"
+    },
+    {
+      "id": "11",
+      "dest": "shadow_tower_part3b",
+      "wayBackId": "5",
+      "type": "door"
+    },
+    {
+      "id": "jump",
+      "dest": "shadow_tower_part3c",
+      "type": "jump"
+    },
+    {
+      "id": "10",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "11",
+      "type": "door"
+    },
+    {
+      "id": "3",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "8",
+      "type": "door"
+    },
+    {
+      "id": "9",
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "34",
+      "type": "door"
+    },
+    {
+      "id": "38",
+      "dest": "fire_world_phoenix_cave",
+      "wayBackId": "1",
+      "type": "door",
+      "world": "fire_world"
+    },
+    {
+      "id": "1",
+      "dest": "human_world_solitary_region",
+      "wayBackId": "38",
+      "type": "door",
+      "world": "human_world"
+    },
+    {
+      "id": "34",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
+      "type": "door"
+    },
+    {
+      "id": "8",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "3",
+      "type": "door"
+    },
+    {
+      "id": "1",
+      "dest": "death_world_undead_layer",
+      "world": "death_world",
+      "wayBackId": "15",
+      "type": "door"
+    },
+    {
+      "id": "12",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
+      "type": "door",
+      "direction": "bi"
+    },
+    {
+      "id": "6",
+      "dest": "monster_world_screeching_area",
+      "world": "monster_world",
+      "wayBackId": "3",
+      "type": "totem"
+    },
+    {
+      "id": "0",
+      "dest": "shadow_tower_part2a",
+      "wayBackId": "4",
+      "type": "door"
+    },
+    {
+      "id": "jump",
+      "dest": "shadow_tower_part2b",
+      "type": "jump"
+    },
+    {
+      "id": "7",
+      "dest": "death_world_dark_castle_layer",
+      "world": "death_world",
+      "wayBackId": "2",
+      "type": "door"
+    },
+    {
+      "id": "10",
+      "dest": "monster_world_false_eye_area",
+      "world": "monster_world",
+      "wayBackId": "10",
+      "direction": "bi",
+      "type": "totem"
+    },
+    {
+      "id": "9",
+      "dest": "illusion_world_gloomy_domain",
+      "wayBackId": "3",
+      "type": "door",
+      "world": "illusion_world"
+    },
+    {
+      "id": "3",
+      "dest": "monster_world_false_eye_area",
+      "world": "monster_world",
+      "wayBackId": "9",
+      "type": "door"
+    },
+    {
+      "id": "10",
+      "dest": "death_world_dark_castle_layer",
+      "world": "death_world",
+      "wayBackId": "10",
+      "type": "totem",
+      "direction": "bi"
+    },
+    {
+      "id": "10",
+      "dest": "monster_world_false_eye_area",
+      "world": "monster_world",
+      "wayBackId": "10",
+      "direction": "bi",
+      "type": "totem"
+    },
+    {
+      "id": "9",
+      "dest": "illusion_world_gloomy_domain",
+      "wayBackId": "3",
+      "type": "door",
+      "world": "illusion_world"
+    },
+    {
+      "id": "1",
+      "dest": "earth_world_stone_cavern",
+      "wayBackId": "4",
+      "type": "door",
+      "world": "earth_world"
+    },
+    {
+      "id": "7",
+      "dest": "illusion_world_bewilderment_domain",
+      "world": "illusion_world",
+      "wayBackId": "18",
+      "type": "door",
+      "direction": "exit"
+    },
+    {
+      "id": "20",
+      "dest": "earth_world_poisonous_cavern",
+      "world": "earth_world",
+      "wayBackId": "17",
+      "type": "door"
+    },
+    {
+      "id": "17",
+      "dest": "illusion_world_bewilderment_domain",
+      "wayBackId": "20",
+      "type": "door",
+      "world": "illusion_world"
+    },
+    {
+      "id": "20",
+      "dest": "earth_world_poisonous_cavern",
+      "world": "earth_world",
+      "wayBackId": "17",
+      "type": "door"
+    },
+    {
+      "id": "13",
+      "dest": "shadow_tower_part3a",
+      "wayBackId": "9",
+      "type": "door"
+    },
+    {
+      "id": "3",
+      "dest": "death_world_gate_of_the_dead",
+      "world": "death_world",
+      "wayBackId": "1",
+      "type": "door"
+    },
+    {
+      "id": "4",
+      "dest": "death_world_dark_castle_layer",
+      "world": "death_world",
+      "wayBackId": "4",
+      "type": "totem"
+    },
+    {
+      "id": "10",
+      "dest": "monster_world_false_eye_area",
+      "world": "monster_world",
+      "wayBackId": "10",
+      "direction": "bi",
+      "type": "totem"
+    },
+    {
+      "id": "9",
+      "dest": "illusion_world_gloomy_domain",
+      "wayBackId": "3",
+      "type": "door",
+      "world": "illusion_world"
+    },
+    {
+      "id": "10",
+      "dest": "human_world_hidden_region",
+      "world": "human_world",
+      "wayBackId": "26",
+      "type": "totem"
+    },
+    {
+      "id": "26",
+      "dest": "illusion_world_gloomy_domain",
+      "world": "illusion_world",
+      "wayBackId": "10",
+      "type": "totem"
+    },
+    {
+      "id": "3",
+      "dest": "monster_world_false_eye_area",
+      "world": "monster_world",
+      "wayBackId": "9",
+      "type": "door"
+    },
+    {
+      "id": "10",
+      "dest": "death_world_dark_castle_layer",
+      "world": "death_world",
+      "wayBackId": "10",
+      "type": "totem",
+      "direction": "bi"
+    },
+    {
+      "id": "2",
+      "dest": "shadow_tower_part2b",
+      "wayBackId": "7",
+      "type": "door"
+    },
+    {
+      "id": "9",
       "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
       "wayBackId": "1",
@@ -512,13 +822,27 @@
     },
     {
       "id": "6",
-      "dest": "fire_world_ashen_cavern",
-      "world": "fire_world",
-      "wayBackId": "6",
+      "dest": "illusion_world_dream_domain",
+      "world": "illusion_world",
+      "wayBackId": "3",
       "type": "portal"
     },
     {
-      "id": "6",
+      "id": "4",
+      "dest": "death_world_lingering_curse_layer",
+      "world": "death_world",
+      "wayBackId": "2",
+      "type": "totem"
+    },
+    {
+      "id": "2",
+      "dest": "illusion_world_dream_domain",
+      "world": "illusion_world",
+      "wayBackId": "4",
+      "type": "totem"
+    },
+    {
+      "id": "3",
       "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
       "wayBackId": "6",
@@ -526,6 +850,21 @@
     },
     {
       "id": "10",
+      "dest": "fire_world_molten_cavern",
+      "world": "fire_world",
+      "wayBackId": "27",
+      "type": "portal"
+    },
+    {
+      "id": "27",
+      "dest": "illusion_world_worship_domain",
+      "world": "illusion_world",
+      "wayBackId": "10",
+      "type": "portal",
+      "direction": "bi"
+    },
+    {
+      "id": "8",
       "dest": "fire_world_burning_cavern",
       "world": "fire_world",
       "wayBackId": "94",
@@ -535,18 +874,41 @@
       "id": "94",
       "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
-      "wayBackId": "10",
+      "wayBackId": "8",
       "type": "portal"
     },
     {
-      "id": "8",
+      "id": "10",
+      "dest": "fire_world_molten_cavern",
+      "world": "fire_world",
+      "wayBackId": "27",
+      "type": "portal"
+    },
+    {
+      "id": "19",
+      "dest": "fire_world_ashen_cavern",
+      "world": "fire_world",
+      "wayBackId": "17",
+      "type": "portal",
+      "direction": "bi"
+    },
+    {
+      "id": "17",
       "dest": "fire_world_molten_cavern",
       "world": "fire_world",
       "wayBackId": "19",
       "type": "portal"
     },
     {
-      "id": "27",
+      "id": "19",
+      "dest": "fire_world_ashen_cavern",
+      "world": "fire_world",
+      "wayBackId": "17",
+      "type": "portal",
+      "direction": "bi"
+    },
+    {
+      "id": "6",
       "dest": "fire_world_burning_cavern",
       "world": "fire_world",
       "wayBackId": "93",
@@ -554,337 +916,11 @@
     },
     {
       "id": "93",
-      "dest": "fire_world_molten_cavern",
-      "world": "fire_world",
-      "wayBackId": "27",
-      "type": "portal",
-      "direction": "bi"
-    },
-    {
-      "id": "19",
-      "dest": "illusion_world_worship_domain",
-      "world": "illusion_world",
-      "wayBackId": "8",
-      "type": "portal"
-    },
-    {
-      "id": "1",
-      "dest": "water_world_watery_labyrinth_area",
-      "world": "water_world",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "8",
-      "dest": "human_world_hidden_region",
-      "world": "human_world",
-      "wayBackId": "13",
-      "type": "door"
-    },
-    {
-      "id": "9",
-      "dest": "water_world_white_rain_area",
-      "world": "water_world",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "4",
-      "dest": "human_world_hidden_region",
-      "world": "human_world",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "13",
-      "dest": "water_world_watery_labyrinth_area",
-      "world": "water_world",
-      "wayBackId": "8",
-      "type": "door"
-    },
-    {
-      "id": "8",
-      "dest": "human_world_hidden_region",
-      "world": "human_world",
-      "wayBackId": "13",
-      "type": "door"
-    },
-    {
-      "id": "26",
-      "dest": "earth_world_hostile_rock_cavern",
-      "world": "earth_world",
-      "wayBackId": "3",
-      "type": "totem"
-    },
-    {
-      "id": "1",
-      "dest": "water_world_impure_pool_area",
-      "world": "water_world",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "9",
-      "dest": "earth_world_hostile_rock_cavern",
-      "wayBackId": "1",
-      "type": "door",
-      "world": "earth_world"
-    },
-    {
-      "id": "3",
-      "dest": "human_world_hidden_region",
-      "world": "human_world",
-      "wayBackId": "26",
-      "type": "totem"
-    },
-    {
-      "id": "26",
-      "dest": "earth_world_hostile_rock_cavern",
-      "world": "earth_world",
-      "wayBackId": "3",
-      "type": "totem"
-    },
-    {
-      "id": "1",
-      "dest": "water_world_impure_pool_area",
-      "world": "water_world",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "11",
-      "dest": "fire_world_burning_cavern",
-      "wayBackId": "37",
-      "type": "door",
-      "direction": "exit",
-      "world": "fire_world"
-    },
-    {
-      "id": "37",
-      "dest": "water_world_impure_pool_area",
-      "wayBackId": "11",
-      "type": "door",
-      "world": "water_world"
-    },
-    {
-      "id": "14",
-      "dest": "human_world_forgotten_region",
-      "world": "human_world",
-      "wayBackId": "41",
-      "type": "totem",
-      "direction": "bi"
-    },
-    {
-      "id": "41",
-      "dest": "water_world_impure_pool_area",
-      "world": "water_world",
-      "wayBackId": "14",
-      "type": "totem",
-      "direction": "entrance"
-    },
-    {
-      "id": "9",
-      "dest": "earth_world_hostile_rock_cavern",
-      "wayBackId": "1",
-      "type": "door",
-      "world": "earth_world"
-    },
-    {
-      "id": "3",
-      "dest": "human_world_hidden_region",
-      "world": "human_world",
-      "wayBackId": "26",
-      "type": "totem"
-    },
-    {
-      "id": "9",
-      "dest": "water_world_white_rain_area",
-      "world": "water_world",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "6",
-      "dest": "death_world_lingering_curse_layer",
-      "world": "death_world",
-      "wayBackId": "2",
-      "type": "totem"
-    },
-    {
-      "id": "1",
-      "dest": "earth_world_quaking_cavern",
-      "wayBackId": "3",
-      "type": "door",
-      "world": "earth_world"
-    },
-    {
-      "id": "3",
-      "dest": "death_world_lingering_curse_layer",
-      "world": "death_world",
-      "wayBackId": "1",
-      "type": "door"
-    },
-    {
-      "id": "2",
-      "dest": "water_world_white_rain_area",
-      "world": "water_world",
-      "wayBackId": "6",
-      "type": "totem"
-    },
-    {
-      "id": "4",
-      "dest": "human_world_hidden_region",
-      "world": "human_world",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "13",
-      "dest": "water_world_watery_labyrinth_area",
-      "world": "water_world",
-      "wayBackId": "8",
-      "type": "door"
-    },
-    {
-      "id": "9",
-      "dest": "illusion_world_worship_domain",
-      "world": "illusion_world",
-      "wayBackId": "1",
-      "type": "door"
-    },
-    {
-      "id": "6",
       "dest": "fire_world_ashen_cavern",
       "world": "fire_world",
       "wayBackId": "6",
-      "type": "portal"
-    },
-    {
-      "id": "17",
-      "dest": "illusion_world_dream_domain",
-      "world": "illusion_world",
-      "wayBackId": "3",
-      "type": "portal"
-    },
-    {
-      "id": "4",
-      "dest": "death_world_dark_castle_layer",
-      "world": "death_world",
-      "wayBackId": "4",
-      "type": "totem"
-    },
-    {
-      "id": "0",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "5",
-      "dest": "shadow_tower_part3a",
-      "wayBackId": "3",
-      "type": "door"
-    },
-    {
-      "id": "9",
-      "dest": "shadow_tower_part2a",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "0",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door"
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part2a",
-      "wayBackId": "0",
-      "type": "door"
-    },
-    {
-      "id": "4",
-      "dest": "shadow_tower_part3a",
-      "wayBackId": "9",
-      "type": "door"
-    },
-    {
-      "id": "jump",
-      "dest": "shadow_tower_part3b",
-      "type": "jump"
-    },
-    {
-      "id": "13",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "11",
-      "type": "door"
-    },
-    {
-      "id": "1",
-      "dest": "water_world_sunken_river_area",
-      "world": "water_world",
-      "wayBackId": "5",
-      "type": "door"
-    },
-    {
-      "id": "1",
-      "dest": "shadow_tower_part3a",
-      "wayBackId": "0",
-      "type": "door"
-    },
-    {
-      "id": "9",
-      "dest": "shadow_tower_part2a",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "jump",
-      "dest": "shadow_tower_part2b",
-      "type": "jump"
-    },
-    {
-      "id": "7",
-      "dest": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door"
-    },
-    {
-      "id": "17",
-      "dest": "human_world_solitary_region",
-      "wayBackId": "38",
-      "type": "door",
-      "world": "human_world"
-    },
-    {
-      "id": "31",
-      "dest": "earth_world_false_pit_cavern",
-      "world": "earth_world",
-      "wayBackId": "3",
-      "type": "door"
-    },
-    {
-      "id": "19",
-      "dest": "death_world_dark_castle_layer",
-      "world": "death_world",
-      "wayBackId": "10",
-      "type": "totem",
-      "direction": "entrance"
-    },
-    {
-      "id": "2",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "4",
-      "type": "door"
-    },
-    {
-      "id": "jump",
-      "dest": "shadow_tower_part1c",
-      "type": "jump"
+      "type": "portal",
+      "direction": "bi"
     }
   ],
   "map": [
@@ -893,87 +929,117 @@
       "exits": [
         {
           "id": "0",
-          "dest": "illusion_world_gloomy_domain",
-          "world": "illusion_world",
-          "wayBackId": "1",
+          "dest": "shadow_tower_part3a",
+          "wayBackId": "0",
           "type": "door"
         }
       ],
       "depth": 0
     },
     {
-      "name": "illusion_world_gloomy_domain",
-      "world": "illusion_world",
+      "name": "shadow_tower_part3a",
       "exits": [
         {
-          "id": "3",
-          "dest": "shadow_tower_part1b",
-          "wayBackId": "8",
-          "type": "door"
-        },
-        {
-          "id": "1",
+          "id": "0",
           "dest": "shadow_tower_part1a",
           "wayBackId": "0",
           "type": "door"
         },
         {
-          "id": "10",
-          "dest": "monster_world_screeching_area",
-          "world": "monster_world",
-          "wayBackId": "6",
-          "type": "totem"
+          "id": "3",
+          "dest": "death_world_gate_of_the_dead",
+          "world": "death_world",
+          "wayBackId": "1",
+          "type": "door"
+        },
+        {
+          "id": "9",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "13",
+          "type": "door"
+        },
+        {
+          "id": "jump",
+          "dest": "shadow_tower_part3b",
+          "type": "jump"
         }
       ],
       "depth": 1
     },
     {
-      "name": "shadow_tower_part1b",
+      "name": "shadow_tower_part3b",
       "exits": [
         {
-          "id": "4",
-          "dest": "death_world_dark_castle_layer",
-          "world": "death_world",
-          "wayBackId": "2",
+          "id": "5",
+          "dest": "shadow_tower_part1c",
+          "wayBackId": "11",
           "type": "door"
         },
         {
-          "id": "8",
-          "dest": "illusion_world_gloomy_domain",
-          "world": "illusion_world",
-          "wayBackId": "3",
+          "id": "7",
+          "dest": "fire_world_burning_cavern",
+          "world": "fire_world",
+          "wayBackId": "37",
+          "type": "door"
+        },
+        {
+          "id": "13",
+          "dest": "shadow_tower_part2b",
+          "wayBackId": "5",
           "type": "door"
         },
         {
           "id": "jump",
-          "dest": "shadow_tower_part1c",
+          "dest": "shadow_tower_part3c",
           "type": "jump"
         }
       ],
       "depth": 2
     },
     {
-      "name": "monster_world_screeching_area",
-      "world": "monster_world",
+      "name": "earth_world_poisonous_cavern",
+      "world": "earth_world",
       "exits": [
         {
-          "id": "0",
-          "dest": "shadow_tower_part3b",
-          "wayBackId": "7",
+          "id": "13",
+          "dest": "shadow_tower_part3a",
+          "wayBackId": "9",
           "type": "door"
         },
         {
-          "id": "3",
-          "dest": "human_world_forgotten_region",
+          "id": "10",
+          "dest": "human_world_solitary_region",
           "world": "human_world",
-          "wayBackId": "18",
-          "type": "totem"
+          "wayBackId": "31",
+          "type": "door",
+          "direction": "bi"
         },
         {
-          "id": "6",
-          "dest": "illusion_world_gloomy_domain",
-          "world": "illusion_world",
-          "wayBackId": "10",
+          "id": "17",
+          "dest": "illusion_world_bewilderment_domain",
+          "wayBackId": "20",
+          "type": "door",
+          "world": "illusion_world"
+        }
+      ],
+      "depth": 2
+    },
+    {
+      "name": "death_world_gate_of_the_dead",
+      "world": "death_world",
+      "exits": [
+        {
+          "id": "1",
+          "dest": "shadow_tower_part3a",
+          "wayBackId": "3",
+          "type": "door"
+        },
+        {
+          "id": "4",
+          "dest": "death_world_dark_castle_layer",
+          "world": "death_world",
+          "wayBackId": "4",
           "type": "totem"
         }
       ],
@@ -984,55 +1050,147 @@
       "exits": [
         {
           "id": "5",
-          "dest": "shadow_tower_part3a",
-          "wayBackId": "3",
+          "dest": "human_world_hidden_region",
+          "world": "human_world",
+          "wayBackId": "13",
           "type": "door"
         },
         {
           "id": "11",
-          "dest": "illusion_world_bewilderment_domain",
-          "world": "illusion_world",
-          "wayBackId": "18",
+          "dest": "shadow_tower_part3b",
+          "wayBackId": "5",
           "type": "door"
         },
         {
           "id": "9",
-          "dest": "death_world_dark_castle_layer",
-          "world": "death_world",
-          "wayBackId": "0",
+          "dest": "earth_world_quaking_cavern",
+          "world": "earth_world",
+          "wayBackId": "3",
           "type": "door"
         }
       ],
       "depth": 3
     },
     {
-      "name": "shadow_tower_part3b",
+      "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "5",
-          "dest": "death_world_undead_layer",
-          "world": "death_world",
-          "wayBackId": "12",
+          "id": "9",
+          "dest": "illusion_world_worship_domain",
+          "world": "illusion_world",
+          "wayBackId": "1",
           "type": "door"
         },
         {
           "id": "7",
-          "dest": "monster_world_screeching_area",
-          "world": "monster_world",
-          "wayBackId": "0",
+          "dest": "death_world_dark_castle_layer",
+          "world": "death_world",
+          "wayBackId": "2",
           "type": "door"
         },
         {
-          "id": "13",
+          "id": "5",
+          "dest": "shadow_tower_part3b",
+          "wayBackId": "13",
+          "type": "door"
+        }
+      ],
+      "depth": 3
+    },
+    {
+      "name": "shadow_tower_part3c",
+      "exits": [
+        {
+          "id": "10",
           "dest": "earth_world_false_pit_cavern",
           "world": "earth_world",
           "wayBackId": "11",
           "type": "door"
+        }
+      ],
+      "depth": 3
+    },
+    {
+      "name": "human_world_solitary_region",
+      "world": "human_world",
+      "exits": [
+        {
+          "id": "31",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "10",
+          "type": "door"
         },
         {
-          "id": "jump",
-          "dest": "shadow_tower_part3c",
-          "type": "jump"
+          "id": "34",
+          "dest": "water_world_watery_labyrinth_area",
+          "world": "water_world",
+          "wayBackId": "9",
+          "type": "door"
+        },
+        {
+          "id": "35",
+          "dest": "earth_world_rotting_cavern",
+          "world": "earth_world",
+          "wayBackId": "13",
+          "type": "door",
+          "direction": "exit"
+        },
+        {
+          "id": "38",
+          "dest": "fire_world_phoenix_cave",
+          "wayBackId": "1",
+          "type": "door",
+          "world": "fire_world"
+        }
+      ],
+      "depth": 3
+    },
+    {
+      "name": "fire_world_burning_cavern",
+      "world": "fire_world",
+      "exits": [
+        {
+          "id": "37",
+          "dest": "shadow_tower_part3b",
+          "wayBackId": "7",
+          "type": "door"
+        },
+        {
+          "id": "94",
+          "dest": "illusion_world_worship_domain",
+          "world": "illusion_world",
+          "wayBackId": "8",
+          "type": "portal"
+        },
+        {
+          "id": "93",
+          "dest": "fire_world_ashen_cavern",
+          "world": "fire_world",
+          "wayBackId": "6",
+          "type": "portal",
+          "direction": "bi"
+        }
+      ],
+      "depth": 3
+    },
+    {
+      "name": "illusion_world_bewilderment_domain",
+      "world": "illusion_world",
+      "exits": [
+        {
+          "id": "18",
+          "dest": "earth_world_stone_cavern",
+          "world": "earth_world",
+          "wayBackId": "7",
+          "type": "door"
+        },
+        {
+          "id": "20",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "17",
+          "type": "door"
         }
       ],
       "depth": 3
@@ -1043,36 +1201,37 @@
       "exits": [
         {
           "id": "0",
-          "dest": "shadow_tower_part1c",
-          "wayBackId": "9",
+          "dest": "shadow_tower_part2a",
+          "wayBackId": "0",
           "type": "door"
         },
         {
           "id": "2",
-          "dest": "shadow_tower_part1b",
-          "wayBackId": "4",
+          "dest": "shadow_tower_part2b",
+          "wayBackId": "7",
           "type": "door"
         },
         {
           "id": "4",
-          "dest": "illusion_world_dream_domain",
-          "world": "illusion_world",
-          "wayBackId": "4",
-          "type": "totem"
-        },
-        {
-          "id": "7",
           "dest": "death_world_gate_of_the_dead",
           "world": "death_world",
           "wayBackId": "4",
+          "type": "totem",
+          "direction": "bi"
+        },
+        {
+          "id": "7",
+          "dest": "monster_world_screeching_area",
+          "world": "monster_world",
+          "wayBackId": "6",
           "direction": "bi",
           "type": "totem"
         },
         {
           "id": "10",
-          "dest": "earth_world_false_pit_cavern",
-          "world": "earth_world",
-          "wayBackId": "19",
+          "dest": "monster_world_false_eye_area",
+          "world": "monster_world",
+          "wayBackId": "10",
           "direction": "bi",
           "type": "totem"
         }
@@ -1080,177 +1239,121 @@
       "depth": 3
     },
     {
-      "name": "earth_world_false_pit_cavern",
-      "world": "earth_world",
+      "name": "human_world_hidden_region",
+      "world": "human_world",
       "exits": [
         {
-          "id": "3",
-          "dest": "human_world_solitary_region",
-          "world": "human_world",
-          "wayBackId": "31",
-          "type": "door"
-        },
-        {
-          "id": "1",
-          "dest": "water_world_sunken_river_area",
-          "world": "water_world",
-          "wayBackId": "5",
-          "type": "door"
-        },
-        {
-          "id": "11",
-          "dest": "shadow_tower_part3b",
-          "wayBackId": "13",
-          "type": "door"
-        },
-        {
-          "id": "19",
-          "dest": "death_world_dark_castle_layer",
+          "id": "9",
+          "dest": "death_world_lingering_curse_layer",
           "world": "death_world",
-          "wayBackId": "10",
-          "type": "totem",
-          "direction": "entrance"
-        },
-        {
-          "id": "16",
-          "dest": "monster_world_false_eye_area",
-          "world": "monster_world",
-          "type": "totem",
-          "wayBackId": "10"
-        }
-      ],
-      "depth": 4
-    },
-    {
-      "name": "illusion_world_dream_domain",
-      "world": "illusion_world",
-      "exits": [
-        {
-          "id": "4",
-          "dest": "death_world_dark_castle_layer",
-          "world": "death_world",
-          "wayBackId": "4",
-          "type": "totem"
-        },
-        {
-          "id": "3",
-          "dest": "fire_world_ashen_cavern",
-          "world": "fire_world",
-          "wayBackId": "17",
-          "type": "portal"
-        }
-      ],
-      "depth": 4
-    },
-    {
-      "name": "death_world_gate_of_the_dead",
-      "world": "death_world",
-      "exits": [
-        {
-          "id": "1",
-          "dest": "earth_world_stone_cavern",
-          "world": "earth_world",
-          "wayBackId": "7",
-          "type": "door"
-        },
-        {
-          "id": "4",
-          "dest": "death_world_dark_castle_layer",
-          "world": "death_world",
-          "wayBackId": "7",
-          "type": "totem"
-        }
-      ],
-      "depth": 4
-    },
-    {
-      "name": "shadow_tower_part3a",
-      "exits": [
-        {
-          "id": "0",
-          "dest": "water_world_sunken_river_area",
-          "world": "water_world",
           "wayBackId": "1",
           "type": "door"
         },
         {
-          "id": "3",
+          "id": "13",
           "dest": "shadow_tower_part1c",
           "wayBackId": "5",
           "type": "door"
         },
         {
-          "id": "9",
-          "dest": "shadow_tower_part2a",
-          "wayBackId": "4",
-          "type": "door"
-        },
-        {
-          "id": "jump",
-          "dest": "shadow_tower_part3b",
-          "type": "jump"
-        }
-      ],
-      "depth": 5
-    },
-    {
-      "name": "human_world_solitary_region",
-      "world": "human_world",
-      "exits": [
-        {
-          "id": "31",
-          "dest": "earth_world_false_pit_cavern",
-          "world": "earth_world",
-          "wayBackId": "3",
-          "type": "door"
-        },
-        {
-          "id": "34",
-          "dest": "human_world_forgotten_region",
-          "world": "human_world",
-          "wayBackId": "34",
-          "type": "door"
-        },
-        {
-          "id": "35",
-          "dest": "illusion_world_bewilderment_domain",
+          "id": "26",
+          "dest": "illusion_world_gloomy_domain",
           "world": "illusion_world",
-          "wayBackId": "20",
-          "type": "door",
-          "direction": "exit"
-        },
-        {
-          "id": "38",
-          "dest": "earth_world_poisonous_cavern",
-          "wayBackId": "17",
-          "type": "door",
-          "world": "earth_world"
+          "wayBackId": "10",
+          "type": "totem"
         }
       ],
-      "depth": 5
+      "depth": 4
     },
     {
-      "name": "earth_world_stone_cavern",
+      "name": "earth_world_rotting_cavern",
       "world": "earth_world",
       "exits": [
         {
-          "id": "4",
-          "dest": "human_world_cursed_region",
-          "world": "human_world",
-          "wayBackId": "3",
+          "id": "13",
+          "dest": "human_world_solitary_region",
+          "wayBackId": "35",
           "type": "door",
-          "direction": "bi"
-        },
-        {
-          "id": "7",
-          "dest": "death_world_gate_of_the_dead",
-          "world": "death_world",
-          "wayBackId": "1",
-          "type": "door",
-          "direction": "exit"
+          "world": "human_world"
         }
       ],
-      "depth": 5
+      "depth": 4
+    },
+    {
+      "name": "earth_world_quaking_cavern",
+      "world": "earth_world",
+      "exits": [
+        {
+          "id": "3",
+          "dest": "shadow_tower_part1c",
+          "wayBackId": "9",
+          "type": "door"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "exits": [
+        {
+          "id": "3",
+          "dest": "water_world_watery_labyrinth_area",
+          "world": "water_world",
+          "wayBackId": "8",
+          "type": "door"
+        },
+        {
+          "id": "1",
+          "dest": "death_world_undead_layer",
+          "world": "death_world",
+          "wayBackId": "15",
+          "type": "door"
+        },
+        {
+          "id": "11",
+          "dest": "shadow_tower_part3c",
+          "wayBackId": "10",
+          "type": "door"
+        },
+        {
+          "id": "19",
+          "dest": "human_world_forgotten_region",
+          "world": "human_world",
+          "wayBackId": "41",
+          "type": "totem",
+          "direction": "entrance"
+        },
+        {
+          "id": "16",
+          "dest": "human_world_forgotten_region",
+          "world": "human_world",
+          "wayBackId": "18",
+          "type": "totem"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "fire_world_phoenix_cave",
+      "world": "fire_world",
+      "exits": [
+        {
+          "id": "0",
+          "dest": "water_world_sunken_river_area",
+          "wayBackId": "1",
+          "type": "door",
+          "world": "water_world"
+        },
+        {
+          "id": "1",
+          "dest": "human_world_solitary_region",
+          "wayBackId": "38",
+          "type": "door",
+          "world": "human_world"
+        }
+      ],
+      "depth": 4
     },
     {
       "name": "fire_world_ashen_cavern",
@@ -1258,17 +1361,206 @@
       "exits": [
         {
           "id": "17",
+          "dest": "fire_world_molten_cavern",
+          "world": "fire_world",
+          "wayBackId": "19",
+          "type": "portal"
+        },
+        {
+          "id": "6",
+          "dest": "fire_world_burning_cavern",
+          "world": "fire_world",
+          "wayBackId": "93",
+          "type": "portal"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "exits": [
+        {
+          "id": "8",
+          "dest": "earth_world_false_pit_cavern",
+          "world": "earth_world",
+          "wayBackId": "3",
+          "type": "door"
+        },
+        {
+          "id": "9",
+          "dest": "human_world_solitary_region",
+          "world": "human_world",
+          "wayBackId": "34",
+          "type": "door"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "monster_world_false_eye_area",
+      "world": "monster_world",
+      "exits": [
+        {
+          "id": "9",
+          "dest": "illusion_world_gloomy_domain",
+          "wayBackId": "3",
+          "type": "door",
+          "world": "illusion_world"
+        },
+        {
+          "id": "10",
+          "dest": "death_world_dark_castle_layer",
+          "world": "death_world",
+          "wayBackId": "10",
+          "type": "totem",
+          "direction": "bi"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "monster_world_screeching_area",
+      "world": "monster_world",
+      "exits": [
+        {
+          "id": "0",
+          "dest": "shadow_tower_part2a",
+          "wayBackId": "4",
+          "type": "door"
+        },
+        {
+          "id": "3",
+          "dest": "water_world_white_rain_area",
+          "world": "water_world",
+          "wayBackId": "6",
+          "type": "totem"
+        },
+        {
+          "id": "6",
+          "dest": "death_world_dark_castle_layer",
+          "world": "death_world",
+          "wayBackId": "7",
+          "type": "totem"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "illusion_world_worship_domain",
+      "world": "illusion_world",
+      "exits": [
+        {
+          "id": "1",
+          "dest": "shadow_tower_part2b",
+          "wayBackId": "9",
+          "type": "door"
+        },
+        {
+          "id": "6",
           "dest": "illusion_world_dream_domain",
           "world": "illusion_world",
           "wayBackId": "3",
           "type": "portal"
         },
         {
-          "id": "6",
+          "id": "10",
+          "dest": "fire_world_molten_cavern",
+          "world": "fire_world",
+          "wayBackId": "27",
+          "type": "portal"
+        },
+        {
+          "id": "8",
+          "dest": "fire_world_burning_cavern",
+          "world": "fire_world",
+          "wayBackId": "94",
+          "type": "portal"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "name": "shadow_tower_part2a",
+      "exits": [
+        {
+          "id": "0",
+          "dest": "death_world_dark_castle_layer",
+          "world": "death_world",
+          "wayBackId": "0",
+          "type": "door"
+        },
+        {
+          "id": "4",
+          "dest": "monster_world_screeching_area",
+          "world": "monster_world",
+          "wayBackId": "0",
+          "type": "door"
+        },
+        {
+          "id": "jump",
+          "dest": "shadow_tower_part2b",
+          "type": "jump"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "human_world_forgotten_region",
+      "world": "human_world",
+      "exits": [
+        {
+          "id": "34",
+          "dest": "water_world_impure_pool_area",
+          "wayBackId": "9",
+          "type": "door",
+          "world": "water_world"
+        },
+        {
+          "id": "37",
+          "dest": "earth_world_hostile_rock_cavern",
+          "wayBackId": "1",
+          "type": "door",
+          "direction": "exit",
+          "world": "earth_world"
+        },
+        {
+          "id": "18",
+          "dest": "earth_world_false_pit_cavern",
+          "world": "earth_world",
+          "wayBackId": "16",
+          "type": "totem"
+        },
+        {
+          "id": "41",
+          "dest": "earth_world_false_pit_cavern",
+          "world": "earth_world",
+          "wayBackId": "19",
+          "type": "totem",
+          "direction": "entrance"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "fire_world_molten_cavern",
+      "world": "fire_world",
+      "exits": [
+        {
+          "id": "27",
           "dest": "illusion_world_worship_domain",
           "world": "illusion_world",
-          "wayBackId": "6",
-          "type": "portal"
+          "wayBackId": "10",
+          "type": "portal",
+          "direction": "bi"
+        },
+        {
+          "id": "19",
+          "dest": "fire_world_ashen_cavern",
+          "world": "fire_world",
+          "wayBackId": "17",
+          "type": "portal",
+          "direction": "bi"
         }
       ],
       "depth": 5
@@ -1279,61 +1571,231 @@
       "exits": [
         {
           "id": "5",
-          "dest": "earth_world_false_pit_cavern",
-          "world": "earth_world",
-          "wayBackId": "1",
+          "dest": "shadow_tower_part1b",
+          "wayBackId": "4",
           "type": "door",
           "direction": "exit"
         },
         {
           "id": "1",
-          "dest": "shadow_tower_part3a",
+          "dest": "fire_world_phoenix_cave",
           "wayBackId": "0",
-          "type": "door"
+          "type": "door",
+          "direction": "entrance",
+          "world": "fire_world"
         }
       ],
       "depth": 5
     },
     {
-      "name": "illusion_world_bewilderment_domain",
+      "name": "water_world_white_rain_area",
+      "world": "water_world",
+      "exits": [
+        {
+          "id": "4",
+          "dest": "death_world_undead_layer",
+          "world": "death_world",
+          "wayBackId": "12",
+          "type": "door"
+        },
+        {
+          "id": "6",
+          "dest": "monster_world_screeching_area",
+          "world": "monster_world",
+          "wayBackId": "3",
+          "type": "totem"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "illusion_world_gloomy_domain",
       "world": "illusion_world",
       "exits": [
         {
-          "id": "18",
-          "dest": "shadow_tower_part1c",
-          "wayBackId": "11",
-          "type": "door"
-        },
-        {
-          "id": "20",
-          "dest": "human_world_solitary_region",
-          "world": "human_world",
-          "wayBackId": "35",
-          "type": "door"
-        }
-      ],
-      "depth": 5
-    },
-    {
-      "name": "shadow_tower_part2a",
-      "exits": [
-        {
-          "id": "0",
-          "dest": "earth_world_rotting_cavern",
-          "world": "earth_world",
-          "wayBackId": "13",
-          "type": "door"
-        },
-        {
-          "id": "4",
-          "dest": "shadow_tower_part3a",
+          "id": "3",
+          "dest": "monster_world_false_eye_area",
+          "world": "monster_world",
           "wayBackId": "9",
           "type": "door"
         },
         {
+          "id": "1",
+          "dest": "earth_world_stone_cavern",
+          "wayBackId": "4",
+          "type": "door",
+          "world": "earth_world"
+        },
+        {
+          "id": "10",
+          "dest": "human_world_hidden_region",
+          "world": "human_world",
+          "wayBackId": "26",
+          "type": "totem"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "illusion_world_dream_domain",
+      "world": "illusion_world",
+      "exits": [
+        {
+          "id": "4",
+          "dest": "death_world_lingering_curse_layer",
+          "world": "death_world",
+          "wayBackId": "2",
+          "type": "totem"
+        },
+        {
+          "id": "3",
+          "dest": "illusion_world_worship_domain",
+          "world": "illusion_world",
+          "wayBackId": "6",
+          "type": "portal"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "death_world_lingering_curse_layer",
+      "world": "death_world",
+      "exits": [
+        {
+          "id": "1",
+          "dest": "human_world_hidden_region",
+          "wayBackId": "9",
+          "type": "door",
+          "world": "human_world"
+        },
+        {
+          "id": "2",
+          "dest": "illusion_world_dream_domain",
+          "world": "illusion_world",
+          "wayBackId": "4",
+          "type": "totem"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "death_world_undead_layer",
+      "world": "death_world",
+      "exits": [
+        {
+          "id": "12",
+          "dest": "water_world_white_rain_area",
+          "world": "water_world",
+          "wayBackId": "4",
+          "type": "door",
+          "direction": "bi"
+        },
+        {
+          "id": "15",
+          "dest": "earth_world_false_pit_cavern",
+          "world": "earth_world",
+          "wayBackId": "1",
+          "type": "door",
+          "direction": "bi"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "name": "shadow_tower_part1b",
+      "exits": [
+        {
+          "id": "4",
+          "dest": "water_world_sunken_river_area",
+          "world": "water_world",
+          "wayBackId": "5",
+          "type": "door"
+        },
+        {
+          "id": "8",
+          "dest": "human_world_cursed_region",
+          "world": "human_world",
+          "wayBackId": "31",
+          "type": "door"
+        },
+        {
           "id": "jump",
-          "dest": "shadow_tower_part2b",
+          "dest": "shadow_tower_part1c",
           "type": "jump"
+        }
+      ],
+      "depth": 6
+    },
+    {
+      "name": "earth_world_stone_cavern",
+      "world": "earth_world",
+      "exits": [
+        {
+          "id": "4",
+          "dest": "illusion_world_gloomy_domain",
+          "world": "illusion_world",
+          "wayBackId": "1",
+          "type": "door",
+          "direction": "entrance"
+        },
+        {
+          "id": "7",
+          "dest": "illusion_world_bewilderment_domain",
+          "world": "illusion_world",
+          "wayBackId": "18",
+          "type": "door",
+          "direction": "exit"
+        }
+      ],
+      "depth": 6
+    },
+    {
+      "name": "earth_world_hostile_rock_cavern",
+      "world": "earth_world",
+      "exits": [
+        {
+          "id": "1",
+          "dest": "human_world_forgotten_region",
+          "world": "human_world",
+          "wayBackId": "37",
+          "type": "door"
+        },
+        {
+          "id": "3",
+          "dest": "water_world_impure_pool_area",
+          "world": "water_world",
+          "wayBackId": "14",
+          "type": "totem"
+        }
+      ],
+      "depth": 6
+    },
+    {
+      "name": "water_world_impure_pool_area",
+      "world": "water_world",
+      "exits": [
+        {
+          "id": "9",
+          "dest": "human_world_forgotten_region",
+          "wayBackId": "34",
+          "type": "door",
+          "world": "human_world"
+        },
+        {
+          "id": "11",
+          "dest": "human_world_cursed_region",
+          "wayBackId": "3",
+          "type": "door",
+          "direction": "exit",
+          "world": "human_world"
+        },
+        {
+          "id": "14",
+          "dest": "earth_world_hostile_rock_cavern",
+          "world": "earth_world",
+          "wayBackId": "3",
+          "type": "totem",
+          "direction": "bi"
         }
       ],
       "depth": 6
@@ -1344,443 +1806,24 @@
       "exits": [
         {
           "id": "3",
-          "dest": "earth_world_stone_cavern",
-          "world": "earth_world",
-          "wayBackId": "4",
+          "dest": "water_world_impure_pool_area",
+          "world": "water_world",
+          "wayBackId": "11",
           "type": "door"
         },
         {
           "id": "31",
-          "dest": "human_world_forgotten_region",
-          "wayBackId": "37",
-          "type": "door",
-          "world": "human_world"
-        }
-      ],
-      "depth": 6
-    },
-    {
-      "name": "illusion_world_worship_domain",
-      "world": "illusion_world",
-      "exits": [
-        {
-          "id": "1",
-          "dest": "water_world_watery_labyrinth_area",
-          "world": "water_world",
-          "wayBackId": "9",
-          "type": "door"
-        },
-        {
-          "id": "6",
-          "dest": "fire_world_ashen_cavern",
-          "world": "fire_world",
-          "wayBackId": "6",
-          "type": "portal"
-        },
-        {
-          "id": "10",
-          "dest": "fire_world_burning_cavern",
-          "world": "fire_world",
-          "wayBackId": "94",
-          "type": "portal"
-        },
-        {
-          "id": "8",
-          "dest": "fire_world_molten_cavern",
-          "world": "fire_world",
-          "wayBackId": "19",
-          "type": "portal"
-        }
-      ],
-      "depth": 6
-    },
-    {
-      "name": "shadow_tower_part2b",
-      "exits": [
-        {
-          "id": "9",
-          "dest": "fire_world_phoenix_cave",
-          "world": "fire_world",
-          "wayBackId": "1",
-          "type": "door"
-        },
-        {
-          "id": "7",
-          "dest": "earth_world_poisonous_cavern",
-          "world": "earth_world",
-          "wayBackId": "13",
-          "type": "door"
-        },
-        {
-          "id": "5",
-          "dest": "fire_world_phoenix_cave",
-          "world": "fire_world",
-          "wayBackId": "0",
-          "type": "door"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "human_world_forgotten_region",
-      "world": "human_world",
-      "exits": [
-        {
-          "id": "34",
-          "dest": "human_world_solitary_region",
-          "wayBackId": "34",
-          "type": "door",
-          "world": "human_world"
-        },
-        {
-          "id": "37",
-          "dest": "human_world_cursed_region",
-          "wayBackId": "31",
-          "type": "door",
-          "world": "human_world"
-        },
-        {
-          "id": "18",
-          "dest": "monster_world_screeching_area",
-          "world": "monster_world",
-          "wayBackId": "3",
-          "type": "totem"
-        },
-        {
-          "id": "41",
-          "dest": "water_world_impure_pool_area",
-          "world": "water_world",
-          "wayBackId": "14",
-          "type": "totem",
-          "direction": "entrance"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "exits": [
-        {
-          "id": "13",
-          "dest": "shadow_tower_part2a",
-          "wayBackId": "0",
-          "type": "door"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "exits": [
-        {
-          "id": "13",
-          "dest": "shadow_tower_part2b",
-          "wayBackId": "7",
-          "type": "door",
-          "direction": "bi"
-        },
-        {
-          "id": "10",
-          "dest": "shadow_tower_part3c",
-          "wayBackId": "10",
-          "type": "door",
-          "direction": "bi"
-        },
-        {
-          "id": "17",
-          "dest": "human_world_solitary_region",
-          "wayBackId": "38",
-          "type": "door",
-          "world": "human_world"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "fire_world_burning_cavern",
-      "world": "fire_world",
-      "exits": [
-        {
-          "id": "37",
-          "dest": "water_world_impure_pool_area",
-          "wayBackId": "11",
-          "type": "door",
-          "world": "water_world"
-        },
-        {
-          "id": "94",
-          "dest": "illusion_world_worship_domain",
-          "world": "illusion_world",
-          "wayBackId": "10",
-          "type": "portal"
-        },
-        {
-          "id": "93",
-          "dest": "fire_world_molten_cavern",
-          "world": "fire_world",
-          "wayBackId": "27",
-          "type": "portal",
-          "direction": "bi"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "fire_world_molten_cavern",
-      "world": "fire_world",
-      "exits": [
-        {
-          "id": "27",
-          "dest": "fire_world_burning_cavern",
-          "world": "fire_world",
-          "wayBackId": "93",
-          "type": "portal"
-        },
-        {
-          "id": "19",
-          "dest": "illusion_world_worship_domain",
-          "world": "illusion_world",
-          "wayBackId": "8",
-          "type": "portal"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "water_world_watery_labyrinth_area",
-      "world": "water_world",
-      "exits": [
-        {
-          "id": "9",
-          "dest": "illusion_world_worship_domain",
-          "world": "illusion_world",
-          "wayBackId": "1",
-          "type": "door"
-        },
-        {
-          "id": "8",
-          "dest": "human_world_hidden_region",
-          "world": "human_world",
-          "wayBackId": "13",
-          "type": "door"
-        }
-      ],
-      "depth": 7
-    },
-    {
-      "name": "human_world_hidden_region",
-      "world": "human_world",
-      "exits": [
-        {
-          "id": "9",
-          "dest": "water_world_white_rain_area",
-          "world": "water_world",
-          "wayBackId": "4",
-          "type": "door"
-        },
-        {
-          "id": "13",
-          "dest": "water_world_watery_labyrinth_area",
-          "world": "water_world",
+          "dest": "shadow_tower_part1b",
           "wayBackId": "8",
           "type": "door"
-        },
-        {
-          "id": "26",
-          "dest": "earth_world_hostile_rock_cavern",
-          "world": "earth_world",
-          "wayBackId": "3",
-          "type": "totem"
         }
       ],
-      "depth": 8
-    },
-    {
-      "name": "water_world_impure_pool_area",
-      "world": "water_world",
-      "exits": [
-        {
-          "id": "9",
-          "dest": "earth_world_hostile_rock_cavern",
-          "wayBackId": "1",
-          "type": "door",
-          "world": "earth_world"
-        },
-        {
-          "id": "11",
-          "dest": "fire_world_burning_cavern",
-          "wayBackId": "37",
-          "type": "door",
-          "direction": "exit",
-          "world": "fire_world"
-        },
-        {
-          "id": "14",
-          "dest": "human_world_forgotten_region",
-          "world": "human_world",
-          "wayBackId": "41",
-          "type": "totem",
-          "direction": "bi"
-        }
-      ],
-      "depth": 8
-    },
-    {
-      "name": "monster_world_false_eye_area",
-      "world": "monster_world",
-      "exits": [
-        {
-          "id": "9",
-          "dest": "death_world_undead_layer",
-          "wayBackId": "15",
-          "type": "door",
-          "world": "death_world"
-        },
-        {
-          "id": "10",
-          "dest": "earth_world_false_pit_cavern",
-          "world": "earth_world",
-          "wayBackId": "16",
-          "type": "totem",
-          "direction": "bi"
-        }
-      ],
-      "depth": 8
-    },
-    {
-      "name": "shadow_tower_part3c",
-      "exits": [
-        {
-          "id": "10",
-          "dest": "earth_world_poisonous_cavern",
-          "world": "earth_world",
-          "wayBackId": "10",
-          "type": "door"
-        }
-      ],
-      "depth": 9
-    },
-    {
-      "name": "earth_world_hostile_rock_cavern",
-      "world": "earth_world",
-      "exits": [
-        {
-          "id": "1",
-          "dest": "water_world_impure_pool_area",
-          "world": "water_world",
-          "wayBackId": "9",
-          "type": "door"
-        },
-        {
-          "id": "3",
-          "dest": "human_world_hidden_region",
-          "world": "human_world",
-          "wayBackId": "26",
-          "type": "totem"
-        }
-      ],
-      "depth": 9
-    },
-    {
-      "name": "water_world_white_rain_area",
-      "world": "water_world",
-      "exits": [
-        {
-          "id": "4",
-          "dest": "human_world_hidden_region",
-          "world": "human_world",
-          "wayBackId": "9",
-          "type": "door"
-        },
-        {
-          "id": "6",
-          "dest": "death_world_lingering_curse_layer",
-          "world": "death_world",
-          "wayBackId": "2",
-          "type": "totem"
-        }
-      ],
-      "depth": 9
-    },
-    {
-      "name": "death_world_undead_layer",
-      "world": "death_world",
-      "exits": [
-        {
-          "id": "12",
-          "dest": "shadow_tower_part3b",
-          "wayBackId": "5",
-          "type": "door"
-        },
-        {
-          "id": "15",
-          "dest": "monster_world_false_eye_area",
-          "world": "monster_world",
-          "wayBackId": "9",
-          "type": "door"
-        }
-      ],
-      "depth": 9
-    },
-    {
-      "name": "death_world_lingering_curse_layer",
-      "world": "death_world",
-      "exits": [
-        {
-          "id": "1",
-          "dest": "earth_world_quaking_cavern",
-          "wayBackId": "3",
-          "type": "door",
-          "world": "earth_world"
-        },
-        {
-          "id": "2",
-          "dest": "water_world_white_rain_area",
-          "world": "water_world",
-          "wayBackId": "6",
-          "type": "totem"
-        }
-      ],
-      "depth": 10
-    },
-    {
-      "name": "earth_world_quaking_cavern",
-      "world": "earth_world",
-      "exits": [
-        {
-          "id": "3",
-          "dest": "death_world_lingering_curse_layer",
-          "world": "death_world",
-          "wayBackId": "1",
-          "type": "door"
-        }
-      ],
-      "depth": 11
-    },
-    {
-      "name": "fire_world_phoenix_cave",
-      "world": "fire_world",
-      "exits": [
-        {
-          "id": "0",
-          "dest": "shadow_tower_part2b",
-          "wayBackId": "5",
-          "type": "door"
-        },
-        {
-          "id": "1",
-          "dest": "shadow_tower_part2b",
-          "wayBackId": "9",
-          "type": "door"
-        }
-      ],
-      "depth": 11
+      "depth": 7
     }
   ],
   "isComplete": true,
-  "pathDifficulty": 130,
+  "pathDifficulty": 135,
   "deadEnds": [],
-  "notWalkedAreas": []
+  "notWalkedAreas": [],
+  "comment": null
 }
