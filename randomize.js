@@ -1129,7 +1129,7 @@ function randomize(paramsFile, stDir) {
         }
     }
     forEachValidCreature(addCreaturesToRandomizableList);
-    console.log(" allRandomizableCreatures " + allRandomizableCreatures);
+    console.log(" allRandomizableCreatures " + allRandomizableCreatures.map(creature => creature.name));
 
     var creatureRandomizableGroups = groupObjectsByKey(allRandomizableCreatures);
     console.log(" creatureRandomizableGroups " + JSON.stringify(Object.keys(creatureRandomizableGroups)));
@@ -1328,9 +1328,11 @@ function randomize(paramsFile, stDir) {
                 if (exit) {
                     var exitArea = areas.find(area => normalizeAreaName(area.name) == normalizeAreaName(exit.dest));
                     var exitName = normalizeAreaName(area.name)+"/"+exit.id;
+                    var exitObj = exitArea.objects[exit.id];
+                    var exitObjText = exit.type == "jump" ? "" : exitObj.destinationRotation.get() + " " + exitObj.destinationYFineShift.get();
                     mermaidChart+="  " 
                     + area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
-                    + "] -- " + (exitsNames[exitName] || exitName)+ " --> "
+                    + "] -- " + (exitsNames[exitName] || exitName)+ " " + exitObjText + " --> "
                     + exit.dest+"["+(readableName[exit.dest] || exit.dest) + (exitArea && exitArea.score?" " + exitArea.score:"") +"]\n";
                 }
             });

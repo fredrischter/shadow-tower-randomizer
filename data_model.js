@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  //global.toNotGenerateImages=true;
+  global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
@@ -729,62 +729,22 @@
     }
 
     creaturesScore() {
-      var attackSum = 0;
+      var scoreSum = 0;
       var count = 0;
 
       for (var i in this.spawns) {
         var spawn = this.spawns[i];
-        if (spawn.creature().weaponDefense1) {
-          if (spawn.creature().weaponDefense1.get()) {
-            attackSum += spawn.creature().weaponDefense1.get();
-            count++;
-          }
-          if (spawn.creature().weaponDefense2.get()) {
-            attackSum += spawn.creature().weaponDefense2.get();
-            count++;
-          }
-          if (spawn.creature().weaponDefense3.get()) {
-            attackSum += spawn.creature().weaponDefense3.get();
-            count++;
-          }
-          if (spawn.creature().magDefense1.get()) {
-            attackSum += spawn.creature().magDefense1.get();
-            count++;
-          }
-          if (spawn.creature().magDefense2.get()) {
-            attackSum += spawn.creature().magDefense2.get();
-            count++;
-          }
-          if (spawn.creature().magDefense3.get()) {
-            attackSum += spawn.creature().magDefense3.get();
-            count++;
-          }
-          if (spawn.creature().magDefense4.get()) {
-            attackSum += spawn.creature().magDefense4.get();
-            count++;
-          }
-          if (spawn.creature().magDefense5.get()) {
-            attackSum += spawn.creature().magDefense5.get();
-            count++;
-          }
-          if (spawn.creature().attack1.get()) {
-            attackSum += spawn.creature().attack1.get();
-            count++;
-          }
-          if (spawn.creature().attack2.get()) {
-            attackSum += spawn.creature().attack2.get();
-            count++;
-          }
-          if (spawn.creature().magic1.get()) {
-            attackSum += spawn.creature().magic1.get();
-            count++;
-          }
+
+        var score = spawn.creature().score();
+        if (score) {
+          scoreSum += score;
+          count++;
         }
       }
 
-      var averageAttack = count ? Math.round(attackSum/count) : 0;
+      var averageScore = count ? Math.round(scoreSum/count) : 0;
 
-      return averageAttack;
+      return Math.round(averageScore);
     }
 
     writeMapImage(createCanvas, folder) {
@@ -1269,7 +1229,7 @@
       // For exits
       this.destinationXShift = new UInt8(this.bin, this.offset_in_file + 0x10);
       this.destinationYShift = new UInt8(this.bin, this.offset_in_file + 0x11);
-      this.destinationXShift = new UInt8(this.bin, this.offset_in_file + 0x12);
+      this.destinationZShift = new UInt8(this.bin, this.offset_in_file + 0x12);
       this.destinationUnknown1 = new UInt8(this.bin, this.offset_in_file + 0x13);
       this.destinationUnknown2 = new UInt8(this.bin, this.offset_in_file + 0x14);
       this.destinationMapIndex = new UInt8(this.bin, this.offset_in_file + 0x15);
@@ -1350,7 +1310,7 @@
           z: this.tileY.get(), 
           text: "" + this.index + " " + this.getType() + " "});
         if (this.getExit()) {
-          var summary = '<span style="background:#808080">'+"object index " + (this.index + " ").padStart(3) + this.getType().padEnd(10) + " " + this.getExitInfo() + '</span>\n';
+          var summary = '<span style="background:#808080">'+"" + (this.index + " ").padStart(3) + this.getType().padEnd(10) + " " + this.getExitInfo() + '</span>\n';
           mapSummary.push(summary);
         }
       }
@@ -1378,25 +1338,31 @@
         + ", \"z\":" + (this.z.get() + "").padStart(5)
         + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)*/
         + "}";
-      }
-
-      set(source) {
-        binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
-      }
-
-      setExit(source) {
-        binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
-      }
-
-      swap(source) {
-        binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
-      }
-
-      blank() {
-        binSet(this.bin, this.offset_in_file, OBJECTS_SIZE, 0x00);
-        this.id.set(0xffff);
-      }
     }
+
+    set(source) {
+      binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
+    }
+
+    setExit(source) {
+      this.destinationMapIndex.set(source.destinationMapIndex.get());
+      this.destinationXShift.set(source.destinationXShift.get());
+      this.destinationYShift.set(source.destinationYShift.get());
+      this.destinationZShift.set(source.destinationZShift.get());
+      //this.destinationRotation.set(source.destinationRotation.get());
+      this.destinationYFineShift.set(source.destinationYFineShift.get());
+      //binCopy(source.bin, source.offset_in_file+16, this.bin, this.offset_in_file+16, OBJECTS_SIZE-16);
+    }
+
+    swap(source) {
+      binSwap(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
+    }
+
+    blank() {
+      binSet(this.bin, this.offset_in_file, OBJECTS_SIZE, 0x00);
+      this.id.set(0xffff);
+    }
+  }
 
     global.TILE_SIZE = 0x0c;
     global.TILE_COUNT = 0x200;
@@ -1687,6 +1653,7 @@
       + ", \"par\":" + (this.par.get() + "").padStart(5)
       + ", \"mel\":" + (this.mel.get() + "").padStart(5)
       + ", \"sol\":" + (this.sol.get() + "").padStart(5)
+      + ", \"hp\":" + (this.hp.get() + "").padStart(5)
 
       + ", \"attack1\":" + (this.attack1.get() + "").padStart(5)
       + ", \"attack2\":" + (this.attack2.get() + "").padStart(5)
@@ -1704,10 +1671,64 @@
       + ", \"magDefense4\":" + (this.magDefense4.get() + "").padStart(5)
       + ", \"magDefense5\":" + (this.magDefense5.get() + "").padStart(5)
       + ", \"attacks\": [" + (this.attacks.map(attack => attack.get())) + "]"
-  //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
-  //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
-  + ",\"isDoor\":" + this.isDoor
-  + ",\"randomizationGroup\": \"" + this.randomizationGroup() + "\"}";
+      //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
+      //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
+      + ",\"isDoor\":" + this.isDoor
+      + ",\"randomizationGroup\": \"" + this.randomizationGroup() + "\"}";
+    }
+
+  score() {
+    var attackSum = 0;
+    var count = 0;
+    if (this.weaponDefense1) {
+      if (this.weaponDefense1.get()) {
+        attackSum += this.weaponDefense1.get();
+        count++;
+      }
+      if (this.weaponDefense2.get()) {
+        attackSum += this.weaponDefense2.get();
+        count++;
+      }
+      if (this.weaponDefense3.get()) {
+        attackSum += this.weaponDefense3.get();
+        count++;
+      }
+      if (this.magDefense1.get()) {
+        attackSum += this.magDefense1.get();
+        count++;
+      }
+      if (this.magDefense2.get()) {
+        attackSum += this.magDefense2.get();
+        count++;
+      }
+      if (this.magDefense3.get()) {
+        attackSum += this.magDefense3.get();
+        count++;
+      }
+      if (this.magDefense4.get()) {
+        attackSum += this.magDefense4.get();
+        count++;
+      }
+      if (this.magDefense5.get()) {
+        attackSum += this.magDefense5.get();
+        count++;
+      }
+      if (this.attack1.get()) {
+        attackSum += this.attack1.get();
+        count++;
+      }
+      if (this.attack2.get()) {
+        attackSum += this.attack2.get();
+        count++;
+      }
+      if (this.magic1.get()) {
+        attackSum += this.magic1.get();
+        count++;
+      }
+      attackSum = attackSum / count;
+    }
+
+    return (this.hp.get()/4 + attackSum * 2);
   }
 
   set(source) {
@@ -1938,18 +1959,8 @@
 
       var text = shortText.padEnd(25)
          + (" " + this.chance.get()).padStart(4) + "% 0x" + this.mutexGroup.get()
-         + " pw" + Math.round(this.creature().weaponDefense1.get()) + " "
-         + Math.round(this.creature().weaponDefense2.get()) + " "
-         + Math.round(this.creature().weaponDefense3.get()) + " "
-         + Math.round(this.creature().magDefense1.get()) + " "
-         + Math.round(this.creature().magDefense2.get()) + " "
-         + Math.round(this.creature().magDefense3.get()) + " "
-         + Math.round(this.creature().magDefense4.get()) + " "
-         + Math.round(this.creature().magDefense5.get()) + " "
-        + " a" + Math.round(this.creature().attack1.get()) + " a" + Math.round(this.creature().attack2.get())
-        + " m" + Math.round(this.creature().magic1.get());
+         + " score " + this.creature().score();
 
-      this.creature().attacks.forEach(attack => text+=" a"+attack.get());
       var summary = '<span style="background:#ff8080">'+text+'</span>\n';
 
       mapDraw.push({
