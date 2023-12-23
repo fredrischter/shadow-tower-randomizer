@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  global.toNotGenerateImages=true;
+  //global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
@@ -1266,6 +1266,24 @@
       this.zeroes6 = new UInt8(this.bin, this.offset_in_file + 0x16);
       this.zeroes7 = new UInt8(this.bin, this.offset_in_file + 0x17);
 
+      // For exits
+      this.destinationXShift = new UInt8(this.bin, this.offset_in_file + 0x10);
+      this.destinationYShift = new UInt8(this.bin, this.offset_in_file + 0x11);
+      this.destinationXShift = new UInt8(this.bin, this.offset_in_file + 0x12);
+      this.destinationUnknown1 = new UInt8(this.bin, this.offset_in_file + 0x13);
+      this.destinationUnknown2 = new UInt8(this.bin, this.offset_in_file + 0x14);
+      this.destinationMapIndex = new UInt8(this.bin, this.offset_in_file + 0x15);
+      this.destinationRotation = new UInt8(this.bin, this.offset_in_file + 0x16);
+      this.destinationYFineShift = new UInt8(this.bin, this.offset_in_file + 0x17);
+
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+16] = 0; // destination tile x shift
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+17] = 0; // destination tile y shift
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+18] = 1;//1; destination tile z shift
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+21] = 0; // destination map index
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+22] = 0; // angle 1=90
+//shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+23] = 0xfd; // destination y fine position
+
+
       this.isBlank = this.id.isNull();
 
       if (!this.isBlank) {
@@ -1286,7 +1304,7 @@
       if (!this.area || !this.area.exits || !this.area.totems) {
         return "blank";
       }
-      if (this.area.exits[''+this.index]) {
+      if (this.getExit()) {
         return "exit-"+this.area.exits[''+this.index].type;
       };
       if (this.area.totems[''+this.index]) {
@@ -1305,6 +1323,24 @@
       return "unknown";
     }
 
+    getExit() {
+      return this.area.exits[''+this.index];
+    }
+
+    getExitInfo() {
+      if (!this.getExit()) {
+        return "";
+      }
+      var exitCode = normalizeAreaName(this.area.name)+"/"+this.getExit().id;
+      var exitName = (exitsNames[exitCode] || exitCode)
+
+      return exitName.padEnd(13) + " -> " + this.getExit().dest.padEnd(34) + " pos(" + (""+this.destinationXShift.get()).padStart(3) + ("," + this.destinationYShift.get()).padStart(4) + ("," + this.destinationXShift.get()).padStart(4) + ")," +
+        "unknown(" + (""+this.destinationUnknown1.get()).padStart(3) + ("," + this.destinationUnknown2.get()).padStart(4) + ")," +
+        "destMapIndex("+(""+this.destinationMapIndex.get()).padStart(3)+")," +
+        "rot("+(""+this.destinationRotation.get()).padStart(3)+")," +
+        "fineY("+(""+this.destinationYFineShift.get()).padStart(3)+")";
+    }
+
     draw(mapDraw, mapSummary) {
       if (!this.isBlank) {
         mapDraw.push({
@@ -1312,9 +1348,11 @@
           x: this.tileX.get(), 
           y: this.tileZ.get(), 
           z: this.tileY.get(), 
-          text: "" + this.index + " " + this.getType()});
-        //var summary = '<span style="background:#808080">'+"object index " + this.index+'</span>\n';
-        //mapSummary.push(summary);
+          text: "" + this.index + " " + this.getType() + " "});
+        if (this.getExit()) {
+          var summary = '<span style="background:#808080">'+"object index " + (this.index + " ").padStart(3) + this.getType().padEnd(10) + " " + this.getExitInfo() + '</span>\n';
+          mapSummary.push(summary);
+        }
       }
     }
 
@@ -1328,6 +1366,7 @@
       + this.tileY.get().toString(16).padStart(4)+","
       + this.tileZ.get().toString(16).padStart(4)
       + ") "
+      + this.getExitInfo() + " "
       + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4);
       return text;
     }
@@ -1342,6 +1381,10 @@
       }
 
       set(source) {
+        binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
+      }
+
+      setExit(source) {
         binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
       }
 
@@ -1891,10 +1934,11 @@
         return;
       }
 
-      var text = "" + this.index.toString(16).padEnd(5) 
-        + (" " + this.chance.get()).padStart(4) + "% 0x" + this.mutexGroup.get() + " " + this.name()
-        + " pw"
-         + Math.round(this.creature().weaponDefense1.get()) + " "
+      var shortText = "" + this.index.toString(16).padEnd(2) + " " + this.name();
+
+      var text = shortText.padEnd(25)
+         + (" " + this.chance.get()).padStart(4) + "% 0x" + this.mutexGroup.get()
+         + " pw" + Math.round(this.creature().weaponDefense1.get()) + " "
          + Math.round(this.creature().weaponDefense2.get()) + " "
          + Math.round(this.creature().weaponDefense3.get()) + " "
          + Math.round(this.creature().magDefense1.get()) + " "
@@ -1913,10 +1957,10 @@
         x: this.area.tiles[this.tileId.get()].tileX.get(), 
         y: this.area.tiles[this.tileId.get()].tileZ.get(), 
         z: this.area.tiles[this.tileId.get()].tileY.get(), 
-        text: text});
+        text: shortText});
 
       if (!this.drop1.isNull()) {
-        var text = ("<br>"+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item().name;
+        var text = (""+this.drop1Chance.get()).padStart(4)+"% "+this.drop1Item().name;
         mapDraw.push({
           color: "#ffff00", 
           x: this.area.tiles[this.tileId.get()].tileX.get(), 
@@ -1928,7 +1972,7 @@
       }
 
       if (!this.drop2.isNull()) {
-        var text = ("<br>"+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item().name;
+        var text = (""+this.drop2Chance.get()).padStart(4)+"% "+this.drop2Item().name;
         mapDraw.push({
           color: "#ffff00", 
           x: this.area.tiles[this.tileId.get()].tileX.get(), 
@@ -1940,7 +1984,7 @@
       }
 
       if (!this.drop3.isNull()) {
-        var text = ("<br>"+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item().name;
+        var text = (""+this.drop3Chance.get()).padStart(4)+"% "+this.drop3Item().name;
         mapDraw.push({
           color: "#ffff00", 
           x: this.area.tiles[this.tileId.get()].tileX.get(), 

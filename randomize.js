@@ -1343,7 +1343,7 @@ function randomize(paramsFile, stDir) {
         area.writeMapImage(createCanvas, mapFolder);
         var summary = "";
         for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
-        mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
+        mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary.replaceAll(" ","&nbsp;").replaceAll("span&nbsp;style", "span style"));
 
         area.reinjectEntityDataFromCreaturesToFile();
     }
