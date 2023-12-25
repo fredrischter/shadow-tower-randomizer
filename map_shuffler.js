@@ -222,6 +222,26 @@ function chooseBetterForDifficulty(mapWalkOutput1, mapWalkOutput2, difficulty) {
 		return mapWalkOutput2;
 	}
 }
+/*
+function resolveRotation(map, areasByName, targetExit) {
+	if (!areasByName) {
+		areasByName={};
+		map.forEach((area) => {
+			areasByName[normalizeAreaName(area.name)] = area;
+		});
+	}
+	if (!targetExit) {
+		resolveRotation(map, areasByName, areasByName["shadow_tower_part1"].exits[0]);
+	} else {
+		var currentArea = areasByName[normalizeAreaName(targetExit.dest)];
+		currentArea.rotation;
+
+		map.forEach((area) => {
+			area.exits.forEach((area) => {
+			}
+		});
+	}
+}*/
 
 function shuffle(params) {
 	params = params || { randomizeMap: true };
@@ -322,6 +342,8 @@ function shuffle(params) {
 	walkResult.walk.forEach(step => {
 		step.dest = step.dest;
 	});
+
+	//resolveRotation(walkResult.map);
 
 	walkResult.map.sort((area1, area2) => area1.depth - area2.depth);
 

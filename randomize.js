@@ -1303,6 +1303,9 @@ function randomize(paramsFile, stDir) {
 
     operate();
 
+    //shadow_tower_part1.objects[0].destinationRotation.set(2);
+    //human_world_solitary_region.objects[38].destinationRotation.set(3);
+
     if (collectableUniques.length) {
         console.log("ERROR - Couldn't distribute collectable uniques " + collectableUniques);
     }

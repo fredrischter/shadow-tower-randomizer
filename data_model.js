@@ -1259,6 +1259,9 @@
       this.destinationUnknown2 = new Int8(this.bin, this.offset_in_file + 0x14);
       this.destinationMapIndex = new UInt8(this.bin, this.offset_in_file + 0x15);
       this.destinationRotation = new Int8(this.bin, this.offset_in_file + 0x16);
+      if (this.destinationRotation.get() == -1) {
+        this.destinationRotation.set(0);
+      }
       this.destinationYFineShift = new Int8(this.bin, this.offset_in_file + 0x17);
 
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+16] = 0; // destination tile x shift
@@ -1756,7 +1759,7 @@
       attackSum = attackSum / count;
     }
 
-    return (this.hp.get()/4 + attackSum * 2);
+    return Math.round(this.hp.get()/4 + attackSum * 2);
   }
 
   set(source) {
