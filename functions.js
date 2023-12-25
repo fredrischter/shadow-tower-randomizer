@@ -10,6 +10,14 @@ global.setUInt8 = function(bin, offset, value) {
     bin[offset] = value
 }
 
+global.getInt8 = function(bin, offset) {
+  return bin[offset] < 256/2 ? bin[offset] : bin[offset] - 256;
+};
+
+global.setInt8 = function(bin, offset, value) {
+    bin[offset] = (256 + value)%256;
+}
+
 global.getUInt16 = function(bin, offset) {
   return bin[offset] + bin[offset+1] * 0x100;
 };

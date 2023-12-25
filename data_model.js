@@ -5,7 +5,7 @@
   const path = require('path');
   const originalMap = JSON.parse(fs.readFileSync("./map.json"));
 
-  global.toNotGenerateImages=true;
+  //global.toNotGenerateImages=true;
 
   // area files
   var logo_files = [
@@ -939,6 +939,31 @@
     }
   }
 
+  class Int8 {
+    constructor(bin, index) {
+      this.bin = bin;
+      this.index = index;
+    }
+
+    get() {
+      return getInt8(this.bin, this.index);
+    }
+
+    set(value) {
+      return setInt8(this.bin, this.index, value);
+    }
+
+    swap(target) {
+      var value = this.get();
+      this.set(target.get());
+      target.set(value);
+    }
+
+    toString() {
+      return this.get().toString(16);
+    }
+  }
+
   class UInt16 {
     constructor(bin, index) {
       this.bin = bin;
@@ -1227,14 +1252,14 @@
       this.zeroes7 = new UInt8(this.bin, this.offset_in_file + 0x17);
 
       // For exits
-      this.destinationXShift = new UInt8(this.bin, this.offset_in_file + 0x10);
-      this.destinationYShift = new UInt8(this.bin, this.offset_in_file + 0x11);
-      this.destinationZShift = new UInt8(this.bin, this.offset_in_file + 0x12);
-      this.destinationUnknown1 = new UInt8(this.bin, this.offset_in_file + 0x13);
-      this.destinationUnknown2 = new UInt8(this.bin, this.offset_in_file + 0x14);
+      this.destinationXShift = new Int8(this.bin, this.offset_in_file + 0x10);
+      this.destinationYShift = new Int8(this.bin, this.offset_in_file + 0x11);
+      this.destinationZShift = new Int8(this.bin, this.offset_in_file + 0x12);
+      this.destinationUnknown1 = new Int8(this.bin, this.offset_in_file + 0x13);
+      this.destinationUnknown2 = new Int8(this.bin, this.offset_in_file + 0x14);
       this.destinationMapIndex = new UInt8(this.bin, this.offset_in_file + 0x15);
-      this.destinationRotation = new UInt8(this.bin, this.offset_in_file + 0x16);
-      this.destinationYFineShift = new UInt8(this.bin, this.offset_in_file + 0x17);
+      this.destinationRotation = new Int8(this.bin, this.offset_in_file + 0x16);
+      this.destinationYFineShift = new Int8(this.bin, this.offset_in_file + 0x17);
 
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+16] = 0; // destination tile x shift
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+17] = 0; // destination tile y shift
@@ -1349,8 +1374,11 @@
       this.destinationXShift.set(source.destinationXShift.get());
       this.destinationYShift.set(source.destinationYShift.get());
       this.destinationZShift.set(source.destinationZShift.get());
-      //this.destinationRotation.set(source.destinationRotation.get());
+      this.destinationUnknown1.set(source.destinationUnknown1.get());
+      this.destinationUnknown2.set(source.destinationUnknown2.get());
+      this.destinationRotation.set(source.destinationRotation.get());
       this.destinationYFineShift.set(source.destinationYFineShift.get());
+
       //binCopy(source.bin, source.offset_in_file+16, this.bin, this.offset_in_file+16, OBJECTS_SIZE-16);
     }
 

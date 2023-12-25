@@ -125,8 +125,8 @@ function randomize(paramsFile, stDir) {
     const shuffle = map_shuffler(params);
     fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
 
-    var map = new MapShuffle(shuffle);
     if (params.randomizeMap) {
+        var map = new MapShuffle(shuffle);
         map.applyMap(data_model);
     }
 
@@ -1326,14 +1326,18 @@ function randomize(paramsFile, stDir) {
         if (area.exits) {
             Object.values(area.exits).forEach((exit) => {
                 if (exit) {
-                    var exitArea = areas.find(area => normalizeAreaName(area.name) == normalizeAreaName(exit.dest));
+                    var currentArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(area.name));
+                    var exitArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(exit.dest));
                     var exitName = normalizeAreaName(area.name)+"/"+exit.id;
-                    var exitObj = exitArea.objects[exit.id];
+                    var exitObj = currentArea.objects[exit.id];
                     var exitObjText = exit.type == "jump" ? "" : exitObj.destinationRotation.get() + " " + exitObj.destinationYFineShift.get();
-                    mermaidChart+="  " 
-                    + area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
+
+                    var chartText = area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
                     + "] -- " + (exitsNames[exitName] || exitName)+ " " + exitObjText + " --> "
                     + exit.dest+"["+(readableName[exit.dest] || exit.dest) + (exitArea && exitArea.score?" " + exitArea.score:"") +"]\n";
+
+                    console.log("Exit for chart " + chartText + " " + (exit.type == "jump" ? "" : exitObj.toReadableString()));
+                    mermaidChart+="  " + chartText;
                 }
             });
         }

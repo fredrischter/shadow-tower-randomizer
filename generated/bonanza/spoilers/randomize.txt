@@ -548,14 +548,14 @@ idx  in_file offset type
 1    5b08     21308 gate-reset    tile(  45,  43,  40)    45  43  40   0  fc   0   0   0   0   0   0  fc   0   0  b9   0  ff  ff  ff   1   1   0  ff   0
 2    5b20     21320 gate-reset    tile(  40,  49,  43)    40  49  43   0  fc   0   0   0   0   0   0  fc   0   0  f5   1  ff  ff  ff   1   1   0  ff   0
 3    5b38     21338 gate-reset    tile(  3c,  46,  3f)    3c  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  63   0  ff  ff  ff   1   1   0  ff   0
-4    5b50     21350 exit-door     tile(  3b,  46,  3f) Edge          -> human_world_cursed_region          pos( 13,255 ,13),unknown(  1  ,1),destMapIndex(  1),rot(  3),fineY(  8)   3b  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   d  ff   8   1   1   1   3   8
-5    5b68     21368 exit-door     tile(  43,  47,  3a) Top           -> human_world_forgotten_region       pos(253  ,1,253),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0  fd   1   9   1   1   6   3   0
+4    5b50     21350 exit-door     tile(  3b,  46,  3f) Edge          -> human_world_cursed_region          pos( 13 ,-1 ,13),unknown(  1  ,1),destMapIndex(  1),rot(  3),fineY(  8)   3b  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   d  ff   8   1   1   1   3   8
+5    5b68     21368 exit-door     tile(  43,  47,  3a) Top           -> human_world_forgotten_region       pos( -3  ,1 ,-3),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0  fd   1   9   1   1   6   3   0
 6    5b80     21380 gate-reset    tile(  42,  47,  3a)    42  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  86   0  ff  ff  ff   1   1   0  ff   0
 7    5b98     21398 gate-reset    tile(  41,  46,  43)    41  46  43   0  fc   0   0   0   0   0   0  fc   0   0  9f   0  ff  ff  ff   1   1   0  ff   0
 8    5bb0     213b0 exit-door     tile(  42,  46,  43) Middle        -> human_world_forgotten_region       pos(  6  ,0  ,6),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)   42  46  43   0  fc   0   0   0   0   0   0  fc   0   0  74   0   6   0   5   1   1   6   3   0
-9    5bc8     213c8 exit-door     tile(  45,  49,  3f) Edge          -> earth_world_poisonous_cavern       pos(249  ,1,249),unknown(  1  ,1),destMapIndex( 27),rot(  0),fineY(  0)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0  f9   1  ef   1   1  1b   0   0
+9    5bc8     213c8 exit-door     tile(  45,  49,  3f) Edge          -> earth_world_poisonous_cavern       pos( -7  ,1 ,-7),unknown(  1  ,1),destMapIndex( 27),rot(  0),fineY(  0)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0  f9   1  ef   1   1  1b   0   0
 10   5be0     213e0 gate-reset    tile(  44,  49,  3f)    44  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0  ff  ff  ff   1   1   0   0   0
-11   5bf8     213f8 exit-door     tile(  40,  49,  44) Middle        -> earth_world_rotting_cavern         pos(249  ,0,249),unknown(  1  ,1),destMapIndex( 11),rot(  3),fineY(  0)   40  49  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0  f9   0  f5   1   1   b   3   0
+11   5bf8     213f8 exit-door     tile(  40,  49,  44) Middle        -> earth_world_rotting_cavern         pos( -7  ,0 ,-7),unknown(  1  ,1),destMapIndex( 11),rot(  3),fineY(  0)   40  49  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0  f9   0  f5   1   1   b   3   0
 12   5c10     21410 unknown       tile(  3d,  41,  3f)    3d  41  3f   0  9a   0   0   4   0   0   0  fc   0   0  10   0   f  fa  ff  ff  ff  ff  ff  ff
 13   5c28     21428 gate-0        tile(  40,  42,  3f)    40  42  3f   0  fb   0   0   0   0   0   0   0   0   0   3   0  80  80   0  7f  80   0   5   0
 14   5c40     21440 gate-0        tile(  40,  48,  3f)    40  48  3f   0  fb   0   0   0   0   0   0   0   0   0  8a   0  80  80   0  7f  80   0   5   0
@@ -855,14 +855,14 @@ idx  in_file offset type
 28   5d90    25b590 scenery       tile(  3d,  40,  47)    3d  40  47   0  19   0   0   0   0   8   0   0   0   7  18   0   0   0   0   0   0   0   0   0
 29   5da8    25b5a8 scenery       tile(  49,  40,  4a)    49  40  4a   0  1a   0   0   4  9c  ff   0   0   0   c  52   0   0   0   0   0   0   0   0   0
 30   5dc0    25b5c0 scenery       tile(  47,  40,  48)    47  40  48   0  1a   0   0   6   0  f4   0   0   0   4  40   0   0   0   0   0   0   0   0   0
-31   5dd8    25b5d8 exit-door     tile(  44,  40,  4e) Skeleton      -> human_world_hidden_region          pos(253  ,0,253),unknown(  0  ,0),destMapIndex(  5),rot(255),fineY(  0)   44  40  4e   0  fc   0   0   0   0   0   0   0   0   0  60   0  fd   0  fc   0   0   5  ff   0
+31   5dd8    25b5d8 exit-door     tile(  44,  40,  4e) Skeleton      -> human_world_hidden_region          pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  5),rot( -1),fineY(  0)   44  40  4e   0  fc   0   0   0   0   0   0   0   0   0  60   0  fd   0  fc   0   0   5  ff   0
 32   5df0    25b5f0 gate-reset    tile(  44,  40,  4d)    44  40  4d   0  fc   0   0   0   0   0   0   0   0   0  5b   0  ff  ff  ff   1   1   4  ff   0
 33   5e08    25b608 gate-reset    tile(  47,  40,  4d)    47  40  4d   0  fc   0   0   0   0   0   0   0   0   0  59   0  ff  ff  ff   1   1   4  ff   0
-34   5e20    25b620 exit-door     tile(  47,  40,  4e) Cemetery      -> human_world_hidden_region          pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(255),fineY(  0)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0   0   0  fc   1   1   5  ff   0
-35   5e38    25b638 exit-door     tile(  49,  42,  47) Grave         -> human_world_cursed_region          pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex(  1),rot(  2),fineY(239)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0   0   0  f9   0   0   1   2  ef
+34   5e20    25b620 exit-door     tile(  47,  40,  4e) Cemetery      -> human_world_hidden_region          pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot( -1),fineY(  0)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0   0   0  fc   1   1   5  ff   0
+35   5e38    25b638 exit-door     tile(  49,  42,  47) Grave         -> human_world_cursed_region          pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex(  1),rot(  2),fineY(-17)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0   0   0  f9   0   0   1   2  ef
 36   5e50    25b650 gate-reset    tile(  49,  42,  48)    49  42  48   0  fc   0   0   0   0   0   0   0   0   0  5c   0  ff  ff  ff   1   1   4  ff   0
 37   5e68    25b668 gate-reset    tile(  40,  40,  41)    40  40  41   0  fc   0   0   0   0   0   0   0   0  fc   2   0  ff  ff  ff   1   1   4  ff   0
-38   5e80    25b680 exit-door     tile(  40,  40,  40) Church        -> shadow_tower_part1a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot(255),fineY(248)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0   5   3   0   0   0   0  ff  f8
+38   5e80    25b680 exit-door     tile(  40,  40,  40) Church        -> shadow_tower_part1a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot( -1),fineY( -8)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0   5   3   0   0   0   0  ff  f8
 39   5e98    25b698 scenery       tile(  3e,  40,  48)    3e  40  48   0  ba   0   0   4  7c  fc   0  f8   0   8  19   0   0   0   0   0   0   0   0   0
 40   5eb0    25b6b0 gate-1        tile(  3d,  40,  48)    3d  40  48   0  fb   0   0   0   0   0   0   0   0   8  1d   0  80  80   1  7f  80   2  f0   0
 41   5ec8    25b6c8 gate-5        tile(  46,  40,  48)    46  40  48   0  fb   0   0   0   0   0   0   0   0   0  40   0  80  80   5  7f  80   2   0   3
@@ -1147,11 +1147,11 @@ idx  in_file offset type
 6    5b80    2f5b80 scenery       tile(  3f,  40,  41)    3f  40  41   0  db   0   0   8   0   0  24  fa   0   0   d   0   8   0   0   0   0   0   0   0
 7    5b98    2f5b98 scenery       tile(  40,  40,  48)    40  40  48   0  1f   0   0   4   0   0   0   0   0   0  3e   0   0   0   0   0   0   0   0   0
 8    5bb0    2f5bb0 scenery       tile(  3f,  40,  4b)    3f  40  4b   0  1f   0   0   4   0   0   0   0   0   0  49   0   0   0   0   0   0   0   0   0
-9    5bc8    2f5bc8 exit-door     tile(  3d,  40,  3b) Jail          -> human_world_solitary_region        pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot(255),fineY(  0)   3d  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   4   0   d   0   0   4  ff   0
+9    5bc8    2f5bc8 exit-door     tile(  3d,  40,  3b) Jail          -> human_world_solitary_region        pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot( -1),fineY(  0)   3d  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   4   0   d   0   0   4  ff   0
 10   5be0    2f5be0 gate-reset    tile(  3d,  40,  3c)    3d  40  3c   0  fc   0   0   0   0   0   0   0   0   0  21   0  ff  ff  ff   1   1   5  ff   0
 11   5bf8    2f5bf8 gate-reset    tile(  40,  40,  3c)    40  40  3c   0  fc   0   0   0   0   0   0   0   0   0  22   0  ff  ff  ff   1   1   5  ff   0
 12   5c10    2f5c10 totem         tile(  42,  40,  4d)    42  40  4d   0   0   0   0   c   0   c   0   0   0   0  92   0   0   0   0   0   0   0   0   0
-13   5c28    2f5c28 exit-door     tile(  40,  40,  3b) Corridor      -> human_world_solitary_region        pos(  7  ,0  ,7),unknown(  0  ,0),destMapIndex(  4),rot(255),fineY(  0)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   7   0   d   0   0   4  ff   0
+13   5c28    2f5c28 exit-door     tile(  40,  40,  3b) Corridor      -> human_world_solitary_region        pos(  7  ,0  ,7),unknown(  0  ,0),destMapIndex(  4),rot( -1),fineY(  0)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   7   0   d   0   0   4  ff   0
 14   5c40    2f5c40 unknown       tile(  44,  40,  4b)    44  40  4b   0  39   0   0   4   0   0   0   0   0  fa  53   0  14  ff  53   0  9b   0   1  ff
 15   5c58    2f5c58 unknown       tile(  41,  40,  4b)    41  40  4b   0  3a   0   0   4   0   0   0   0   0   0  47   0  20  fc  47   0  98   0   1  ff
 16   5c70    2f5c70 unknown       tile(  41,  40,  49)    41  40  49   0  3a   0   0   4   0   0   0   0   0   0  33   0  20  fc  33   0  99   0   1  ff
@@ -1164,7 +1164,7 @@ idx  in_file offset type
 23   5d18    2f5d18 scenery       tile(  49,  40,  4a)    49  40  4a   0  37   0   0   3   0  f8   0   0   0  f8  5d   0   0   0   0   0   0   0   0   0
 24   5d30    2f5d30 unknown       tile(  35,  41,  49)    35  41  49   0  39   0   0   0   0  fa   0  f8   0   0  81   0  14  ff  81   0  9a   0   1  ff
 25   5d48    2f5d48 totem         tile(  43,  40,  3e)    43  40  3e   0   1   0   0   c   0   c   0   0   0   0  94   0  2c   0   0   0   0   0   0   0
-26   5d60    2f5d60 exit-totem    tile(  3b,  40,  3e) Totem         -> human_world_forgotten_region       pos(  6,250  ,6),unknown(  5  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3b  40  3e   0   3   0   0   4   0  f4   0   0   0   0  96   0   6  fa   0   5   0   0   0   3
+26   5d60    2f5d60 exit-totem    tile(  3b,  40,  3e) Totem         -> human_world_forgotten_region       pos(  6 ,-6  ,6),unknown(  5  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3b  40  3e   0   3   0   0   4   0  f4   0   0   0   0  96   0   6  fa   0   5   0   0   0   3
 27   5d78    2f5d78 gate-6        tile(  39,  41,  4b)    39  41  4b   0  fb   0   0   0   0   0   0   0   0   0  8c   0  80  80   6  7f  80   0  78   0
 28   5d90    2f5d90 gate-2        tile(  4a,  40,  4a)    4a  40  4a   0  fb   0   0   0   0   0   0   0   0   0  5c   0  80  80   2  7f  80   0  f0   0
 29   5da8    2f5da8 scenery       tile(  47,  40,  49)    47  40  49   0  dd   0  98   8   0   4  24  fa  d4  fe  58   0   9   0   0   0   0   0   0   0
@@ -1456,7 +1456,7 @@ idx  in_file offset type
 15   5c58    38c458 unknown       tile(  42,  40,  3f)    42  40  3f   0  7a   0   0   0   0   0   0   0   0  ff   e   0  14  ff   e   0  61   0   1  ff
 16   5c70    38c470 unknown       tile(  3c,  40,  3b)    3c  40  3b   0  7a   0   0   c   0  ff   0   0   0   0  3f   0  2d  ff  3f   0  62   0   1  ff
 17   5c88    38c488 totem         tile(  44,  40,  41)    44  40  41   0   2   0   0   4   0   2   0   0   0   0  1d   0  2d   0   0   0   0  fe  e8   0
-18   5ca0    38c4a0 exit-totem    tile(  39,  40,  45) Totem         -> human_world_hidden_region          pos(  5,251  ,5),unknown(254  ,0),destMapIndex(  0),rot(  0),fineY(  3)   39  40  45   0   3   0   0   4   0   8   0   0   0   0  68   0   5  fb   0  fe   0   0   0   3
+18   5ca0    38c4a0 exit-totem    tile(  39,  40,  45) Totem         -> human_world_hidden_region          pos(  5 ,-5  ,5),unknown( -2  ,0),destMapIndex(  0),rot(  0),fineY(  3)   39  40  45   0   3   0   0   4   0   8   0   0   0   0  68   0   5  fb   0  fe   0   0   0   3
 19   5cb8    38c4b8 unknown       tile(  42,  40,  43)    42  40  43   0  7e   0   0   0   0  f8   0   0   0  fa   3   0   c  fc  ff  ff  ff  ff  ff  ff
 20   5cd0    38c4d0 unknown       tile(  42,  40,  43)    42  40  43   0  7e   0   0   0   0   8   0   0   0  fa   3   0   c  fc  ff  ff   5  ff  ff  ff
 21   5ce8    38c4e8 unknown       tile(  43,  40,  3d)    43  40  3d   0  73   0   0   8   0  fd   0   0  80  fb  11   0  2d  ff  11   0  74   0   1   7
@@ -1472,14 +1472,14 @@ idx  in_file offset type
 31   5dd8    38c5d8 scenery       tile(  3d,  40,  43)    3d  40  43   0  72   0   0   4   0  fc   0  f8   0   0  38   0   0   0   0   0   0   0   0   0
 32   5df0    38c5f0 scenery       tile(  3d,  40,  41)    3d  40  41   0  72   0   0   4   0  fc   0  f8   0   0  2a   0   0   0   0   0   0   0   0   0
 33   5e08    38c608 scenery       tile(  3d,  40,  3c)    3d  40  3c   0  72   0   0   4   0  fc   0  f8   0   4  39   0   0   0   0   0   0   0   0   0
-34   5e20    38c620 exit-door     tile(  46,  40,  46) Exit          -> shadow_tower_part1b                pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  1),fineY(248)   46  40  46   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   6   3   1   1   0   1  f8
+34   5e20    38c620 exit-door     tile(  46,  40,  46) Exit          -> shadow_tower_part1b                pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  1),fineY( -8)   46  40  46   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   6   3   1   1   0   1  f8
 35   5e38    38c638 gate-reset    tile(  46,  40,  45)    46  40  45   0  fc   0   0   0   0   0   0   0   0   0  1f   0  ff  ff  ff   1   1   6  ff   0
 36   5e50    38c650 gate-reset    tile(  3d,  41,  49)    3d  41  49   0  fc   0   0   0   0   0   0   0   0   0  1f   0  ff  ff  ff   1   1   6  ff   0
-37   5e68    38c668 exit-door     tile(  3d,  41,  4a) Jump down     -> shadow_tower_part1c                pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY(248)   3d  41  4a   0  fc   0   0   0   0   0   0   0   0   0  73   0   2   7  fa   0   0   0   1  f8
+37   5e68    38c668 exit-door     tile(  3d,  41,  4a) Jump down     -> shadow_tower_part1c                pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   3d  41  4a   0  fc   0   0   0   0   0   0   0   0   0  73   0   2   7  fa   0   0   0   1  f8
 38   5e80    38c680 gate-6        tile(  46,  40,  3d)    46  40  3d   0  fb   0   0   0   0   0   0   0   0   0  17   0  40  40   6  7f  40   0  78   0
 39   5e98    38c698 gate-3        tile(  3c,  40,  3a)    3c  40  3a   0  fb   0   0   0   0   0   0   0   0   0  46   0  80  80   3  7f  80   0  f0   0
 40   5eb0    38c6b0 gate-0        tile(  3c,  40,  40)    3c  40  40   0  fb   0   0   0   0  f2   0   0   0   0  29   0  40  40   0  7f  40   0  3c   0
-41   5ec8    38c6c8 exit-totem    tile(  43,  3f,  44) Drop in       -> earth_world_false_pit_cavern       pos( 15,248 ,15),unknown(246  ,0),destMapIndex(  0),rot(  0),fineY(  3)   43  3f  44   0   3   0   0   c   0  fc   0   0   0   0  67   0   f  f8   0  f6   0   0   0   3
+41   5ec8    38c6c8 exit-totem    tile(  43,  3f,  44) Drop in       -> earth_world_false_pit_cavern       pos( 15 ,-8 ,15),unknown(-10  ,0),destMapIndex(  0),rot(  0),fineY(  3)   43  3f  44   0   3   0   0   c   0  fc   0   0   0   0  67   0   f  f8   0  f6   0   0   0   3
 42   5ee0    38c6e0 gate-1        tile(  3c,  40,  3e)    3c  40  3e   0  fb   0   0   0   0  f2   0   0   0   0  26   0  40  40   1  7f  40   0  3c   0
 43   5ef8    38c6f8 gate-2        tile(  39,  40,  42)    39  40  42   0  fb   0   0   0   0   0   0   0   0   0  37   0  40  40   2  7f  40   0  3c   0
 44   5f10    38c710 gate-4        tile(  3d,  40,  36)    3d  40  36   0  fb   0   0   0   0   0   0   0   0   0  55   0  80  80   4  7f  80   0  3c   0
@@ -1781,7 +1781,7 @@ idx  in_file offset type
 28   5d90     a0590 scenery       tile(  3f,  40,  46)    3f  40  46   0  14   0   0   0   0  f8   0   b   0   8  33   0   0   0   0   0   0   0   0   0
 29   5da8     a05a8 unknown       tile(  48,  40,  49)    48  40  49   0  1e   0   0   4   0   0   0  f8   0   0  46   0  18  ff  46   0  97   0   1  ff
 30   5dc0     a05c0 gate-reset    tile(  4d,  3f,  48)    4d  3f  48   0  fc   0   0   0   0   0   0   4   0   0  76   0  ff  ff  ff   1   1   1  ff   0
-31   5dd8     a05d8 exit-door     tile(  4d,  40,  47) Guardian side -> shadow_tower_part1b                pos(252  ,6,252),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY(248)   4d  40  47   0  fc   0   0   0   0   0   0  f6   0   0  75   0  fc   6  ff   0   0   0   1  f8
+31   5dd8     a05d8 exit-door     tile(  4d,  40,  47) Guardian side -> shadow_tower_part1b                pos( -4  ,6 ,-4),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   4d  40  47   0  fc   0   0   0   0   0   0  f6   0   0  75   0  fc   6  ff   0   0   0   1  f8
 32   5df0     a05f0 scenery       tile(  48,  3f,  40)    48  3f  40   0  13   0   0   2   0  fc   0   c   0   4  81   0   0   0   0   0   0   0   0   0
 33   5e08     a0608 scenery       tile(  47,  3f,  40)    47  3f  40   0  13   0   0   1   0   0   0   c   0   8  7c   0   0   0   0   0   0   0   0   0
 34   5e20     a0620 scenery       tile(  47,  3f,  3f)    47  3f  3f   0  14   0   0   4   0   8   0   c   0   3  7e   0   0   0   0   0   0   0   0   0
@@ -2080,7 +2080,7 @@ idx  in_file offset type
 10   5be0    5c9be0 scenery       tile(  3e,  40,  41)    3e  40  41   0   e   0   0   0   0  fa   0   0   0   0  b0   0   0   0   0   0   0   0   0   0
 11   5bf8    5c9bf8 scenery       tile(  45,  40,  42)    45  40  42   0   e   0   0   5   0   0   0   0   0   0  20   0   0   0   0   0   0   0   0   0
 12   5c10    5c9c10 gate-reset    tile(  39,  40,  35)    39  40  35   0  fc   0   0   0  80  fb   0   0   0   0   0   0  ff  ff  ff   1   1   b  ff   0
-13   5c28    5c9c28 exit-door     tile(  38,  40,  35) Entrance      -> shadow_tower_part1c                pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  1),fineY(248)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   0   9   3   9   0   0   1  f8
+13   5c28    5c9c28 exit-door     tile(  38,  40,  35) Entrance      -> shadow_tower_part1c                pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  1),fineY( -8)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   0   9   3   9   0   0   1  f8
 14   5c40    5c9c40 unknown       tile(  42,  40,  3a)    42  40  3a   0  32   0   0   0   0  fe   0  f6   0   2  9b   0  60  fe   0   0  ff  ff  ff  ff
 15   5c58    5c9c58 unknown       tile(  4b,  40,  3d)    4b  40  3d   0  32   0   0   0   0   0   0  f6   0   0  5b   0  60  fe   0   0  ff  ff  ff  ff
 16   5c70    5c9c70 unknown       tile(  4b,  40,  41)    4b  40  41   0  32   0   0   0   0   0   0  f6   0   0  9d   1  60  fe   0   0  ff  ff  ff  ff
@@ -2403,14 +2403,14 @@ idx  in_file offset type
 6    4260    d17260 unknown       tile(  3b,  41,  34)    3b  41  34   0   8   0   0   8   0   0   0   0   0   0  50   0  28   0  50   0  4e   1   1  ff
 7    4278    d17278 unknown       tile(  40,  41,  38)    40  41  38   0   8   0   0   4   0   0   0   0   0   0  2f   0  28   0  2f   0  4b   1   1  fb
 9    42a8    d172a8 scenery       tile(  42,  41,  4a)    42  41  4a   0  15   0   0   0   0   0   0   0   0   0  b2   0   0   0   0   0   0   0   0   0
-10   42c0    d172c0 exit-door     tile(  4a,  41,  41) Rock guy      -> earth_world_quaking_cavern         pos(  0  ,0  ,0),unknown(249  ,0),destMapIndex( 12),rot(  2),fineY(  0)   4a  41  41   0  fc   0   0   0  80   3   0   0   0   0   c   1   0   0   0  f9   0   c   2   0
+10   42c0    d172c0 exit-door     tile(  4a,  41,  41) Rock guy      -> earth_world_quaking_cavern         pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  2),fineY(  0)   4a  41  41   0  fc   0   0   0  80   3   0   0   0   0   c   1   0   0   0  f9   0   c   2   0
 11   42d8    d172d8 gate-reset    tile(  49,  41,  41)    49  41  41   0  fc   0   0   0  80   3   0   0   0   0   b   1  ff  ff  ff   1   1  1b  ff   0
 12   42f0    d172f0 gate-reset    tile(  4a,  41,  49)    4a  41  49   0  fc   0   0   0   0   0   0   0  80  fc  47   1  ff  ff  ff   1   1  1b  ff   0
 13   4308    d17308 exit-door     tile(  4a,  41,  48) Poison        -> earth_world_stone_cavern           pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  0),fineY(  0)   4a  41  48   0  fc   0   0   0   0   0   0   0  80  fc  48   1   0   0   1   0   7  1c   0   0
 14   4320    d17320 unknown       tile(  44,  41,  37)    44  41  37   0  16   0   0   4   0   0   0   0   0   0  23   0  18   0  23   0  76   1   1  ff
 15   4338    d17338 unknown       tile(  49,  41,  3d)    49  41  3d   0  a7   0   0   8   0  fc   0   0   0  fc  2f   1  14  ff   0   0  ff  ff  ff  ff
 16   4350    d17350 unknown       tile(  45,  41,  41)    45  41  41   0   7   0   0   0   0   0   0   0   0   c  a4   0  14  f8   0   0  ff  ff  ff  ff
-17   4368    d17368 exit-door     tile(  38,  41,  2f) Entrance      -> shadow_tower_part1c                pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  0),fineY(248)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   4   9  ff   7   0   0   0  f8
+17   4368    d17368 exit-door     tile(  38,  41,  2f) Entrance      -> shadow_tower_part1c                pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  0),fineY( -8)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   4   9  ff   7   0   0   0  f8
 18   4380    d17380 gate-reset    tile(  39,  41,  2f)    39  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8a   0  ff  ff  ff   1   1  1b   0   0
 19   4398    d17398 unknown       tile(  45,  41,  41)    45  41  41   0  cd   0   0   c   0   8  80  f4   0   0  a4   0  14  f8  a4   0  7a   1   2  ff
 20   43b0    d173b0 gate-0        tile(  39,  41,  32)    39  41  32   0  fb   0   0   0   0   0   0   0   0   0  81   0  80  80   0  7f  80   0  3c   0
@@ -2992,9 +2992,9 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 Objects 
 idx  in_file offset type     
 0    5af0    7f8af0 gate-reset    tile(  4a,  40,  49)    4a  40  49   0  fc   0   0   0   0   0   0   0   0   0  d4   1  ff  ff  ff   1   1   f   0   0
-1    5b08    7f8b08 exit-door     tile(  4a,  40,  4a) Bridge        -> earth_world_hostile_rock_cavern    pos(254  ,0,254),unknown(  0  ,0),destMapIndex( 33),rot(  3),fineY(  0)   4a  40  4a   0  fc   0   0   0   0   0   0   0   0   0  d5   1  fe   0  f8   0   0  21   3   0
+1    5b08    7f8b08 exit-door     tile(  4a,  40,  4a) Bridge        -> earth_world_hostile_rock_cavern    pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  3),fineY(  0)   4a  40  4a   0  fc   0   0   0   0   0   0   0   0   0  d5   1  fe   0  f8   0   0  21   3   0
 2    5b20    7f8b20 gate-reset    tile(  3d,  40,  35)    3d  40  35   0  fc   0   0   0   0   5   0   0   0   0  b5   0  ff  ff  ff   1   1   f   0   0
-3    5b38    7f8b38 exit-door     tile(  3e,  40,  35) Entrance      -> earth_world_stone_cavern           pos(240  ,5,240),unknown(246  ,0),destMapIndex( 28),rot(  1),fineY(  0)   3e  40  35   0  fc   0   0   0   0   5   0   0   0   0  b6   0  f0   5  f7  f6   0  1c   1   0
+3    5b38    7f8b38 exit-door     tile(  3e,  40,  35) Entrance      -> earth_world_stone_cavern           pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  1),fineY(  0)   3e  40  35   0  fc   0   0   0   0   5   0   0   0   0  b6   0  f0   5  f7  f6   0  1c   1   0
 4    5b50    7f8b50 scenery       tile(  44,  40,  38)    44  40  38   0  45   0   0   c   0   0   0   0   0  f8  3d   0   0   0   0   0   0   0   0   0
 5    5b68    7f8b68 unknown       tile(  44,  40,  38)    44  40  38   0  60   0   0   0  a8  fd  40  f1   0  f8  3d   0  64  fe   0   0  ff  ff  ff  ff
 6    5b80    7f8b80 unknown       tile(  44,  40,  38)    44  40  38   0  60   0   0   0  58   2  40  f1   0  f8  3d   0  64  fe   0   0  ff  ff  ff  ff
@@ -3002,7 +3002,7 @@ idx  in_file offset type
 8    5bb0    7f8bb0 unknown       tile(  44,  40,  38)    44  40  38   0  60   0   0   0   0   0  40  f1  a8  f5  3e   0  5c  fe   0   0  ff  ff  ff  ff
 9    5bc8    7f8bc8 unknown       tile(  44,  40,  38)    44  40  38   0  61   0   0   0   0   0  80  ee   0  f8  3d   0  64  fe   0   0  ff  ff  ff  ff
 10   5be0    7f8be0 gate-reset    tile(  38,  40,  35)    38  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b7   0  ff  ff  ff   1   1   f  ff   0
-11   5bf8    7f8bf8 exit-door     tile(  37,  40,  35) Exit          -> shadow_tower_part2a                pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY(248)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   1   4   a   0  28   1  f8
+11   5bf8    7f8bf8 exit-door     tile(  37,  40,  35) Exit          -> shadow_tower_part2a                pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   1   4   a   0  28   1  f8
 12   5c10    7f8c10 scenery       tile(  45,  40,  38)    45  40  38   0  9c   0   0   c  80   3   0   0   0  f8  3f   0   0   0   0   0   0   0   0   0
 13   5c28    7f8c28 unknown       tile(  42,  42,  41)    42  42  41   0   a   0   0   c   0  fa   0   0   0  f8  b6   1  14  fc   0   0   7  ff  ff  ff
 14   5c40    7f8c40 unknown       tile(  35,  42,  3e)    35  42  3e   0   a   0   0   4   0   6   0   0   0  f8  c4   1  14  fc   0   0   8  ff  ff  ff
@@ -3010,7 +3010,7 @@ idx  in_file offset type
 16   5c70    7f8c70 exit-totem    tile(  37,  40,  36) Totem         -> human_world_forgotten_region       pos(  6  ,1  ,6),unknown(  4  ,0),destMapIndex(  0),rot(  0),fineY(  1)   37  40  36   0   3   0   0   4   0   4   0   0   0   0  d9   1   6   1  ff   4   0   0   0   1
 17   5c88    7f8c88 unknown       tile(  3c,  42,  3c)    3c  42  3c   0  fd   0   0   0   0   0   0   0   0   0  ad   1   f   5   0  f8   0   0   0   1
 18   5ca0    7f8ca0 scenery       tile(  3a,  40,  3b)    3a  40  3b   0  d7   0   0   0  88  fe   0   0  78   1  4e   0   0   0   0   0   0   0   0   0
-19   5cb8    7f8cb8 exit-totem    tile(  3e,  3f,  36) Jump in       -> earth_world_hostile_rock_cavern    pos( 33,255 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  21  ff   0   b   0   0   0   3
+19   5cb8    7f8cb8 exit-totem    tile(  3e,  3f,  36) Jump in       -> earth_world_hostile_rock_cavern    pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  21  ff   0   b   0   0   0   3
 20   5cd0    7f8cd0 gate-0        tile(  3b,  40,  34)    3b  40  34   0  fb   0   0   0   0  f8   0   0   0  fe  5c   0  80  80   0  7f  80   0  3c   0
 21   5ce8    7f8ce8 gate-1        tile(  3a,  40,  3b)    3a  40  3b   0  fb   0   0   0   0   8   0   0   0   0  4e   0  80  80   1  7f  80   0  3c   0
 22   5d00    7f8d00 gate-2        tile(  48,  40,  3f)    48  40  3f   0  fb   0   0   0   0   0   0   0   0   0   9   0  80  80   2  7f  80   0   5   0
@@ -3289,7 +3289,7 @@ idx  in_file offset type
 4    4230    db4a30 exit-door     tile(  40,  40,  42) Entrance      -> earth_world_poisonous_cavern       pos( 10  ,1 ,10),unknown(  0  ,0),destMapIndex( 27),rot(  0),fineY(  0)   40  40  42   0  fc   0   0   0   0   0   0   0   0   0   0   0   a   1   9   0   0  1b   0   0
 5    4248    db4a48 gate-reset    tile(  40,  40,  41)    40  40  41   0  fc   0   0   0   0   0   0   0   0   0  1c   0  ff  ff  ff   1   1  1c  ff   0
 6    4260    db4a60 gate-reset    tile(  30,  45,  37)    30  45  37   0  fc   0   0   0   0   0   0   0   0   0  b2   0  ff  ff  ff   1   1  1c   0   0
-7    4278    db4a78 exit-door     tile(  30,  45,  36) Exit          -> earth_world_false_pit_cavern       pos(253  ,0,253),unknown(  0  ,0),destMapIndex( 15),rot(  3),fineY(  0)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0  fd   0  f5   0   0   f   3   0
+7    4278    db4a78 exit-door     tile(  30,  45,  36) Exit          -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 15),rot(  3),fineY(  0)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0  fd   0  f5   0   0   f   3   0
 8    4290    db4a90 scenery       tile(  26,  42,  44)    26  42  44   0   0   0   0   4   0  fe   0   0   0   0  9e   0   0   0   0   0   0   0   0   0
 9    42a8    db4aa8 unknown       tile(  43,  40,  40)    43  40  40   0   2   0   0   c   0   0   0   0   0   0  69   0  2d   0   0   0   0  fe  e8   0
 10   42c0    db4ac0 scenery       tile(  3c,  42,  43)    3c  42  43   0  c3   0   0   0   0   0   0   0   0   4  a6   0   0   0   0   0   0   0   0   0
@@ -3678,7 +3678,7 @@ idx  in_file offset type
 0    5af0    f78af0 unknown       tile(  40,  40,  4a)    40  40  4a   0  42   0   0   8   0   0   0   0   0   0  92   0   c   0  92   0   9   1   2  ff
 1    5b08    f78b08 exit-door     tile(  3d,  40,  38) Entrance      -> earth_world_false_pit_cavern       pos( 10  ,0 ,10),unknown(  6  ,0),destMapIndex( 15),rot(  1),fineY(  0)   3d  40  38   0  fc   0   0   0   0  fd   0   0   0   0   8   1   a   0   9   6   0   f   1   0
 2    5b20    f78b20 gate-reset    tile(  3e,  40,  38)    3e  40  38   0  fc   0   0   0   0  fd   0   0   0   0   7   1  ff  ff  ff   1   1  21   0   0
-3    5b38    f78b38 exit-totem    tile(  3e,  40,  4b) Boss room     -> earth_world_false_pit_cavern       pos( 15,253 ,15),unknown(246  ,0),destMapIndex(248),rot(  0),fineY(  1)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0   f  fd  ff  f6   0  f8   0   1
+3    5b38    f78b38 exit-totem    tile(  3e,  40,  4b) Boss room     -> earth_world_false_pit_cavern       pos( 15 ,-3 ,15),unknown(-10  ,0),destMapIndex(248),rot(  0),fineY(  1)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0   f  fd  ff  f6   0  f8   0   1
 6    5b80    f78b80 unknown       tile(  45,  40,  45)    45  40  45   0  ac   0   0   e   0  fc   0   0   0  fc  23   0  14  fc   0   0   1  ff  ff  ff
 7    5b98    f78b98 unknown       tile(  45,  40,  3b)    45  40  3b   0  ac   0   0   a   0  fc   0   0   0   4  24   0  14  fc   0   0  ff  ff  ff  ff
 8    5bb0    f78bb0 unknown       tile(  3b,  40,  3b)    3b  40  3b   0  ac   0   0   6   0   4   0   0   0   4  25   0  14  fc   0   0   0  ff  ff  ff
@@ -3964,9 +3964,9 @@ idx  in_file offset type
 6    5b80    535380 scenery       tile(  47,  40,  41)    47  40  41   0  dc   0   0   0   0   0  24  fa   0   0  35   1  11   0   0   0   0   0   0   0
 7    5b98    535398 scenery       tile(  4c,  43,  3f)    4c  43  3f   0  5e   0   0   4   0   0   0   0   0   0  56   1   0   0   0   0   0   0   0   0
 8    5bb0    5353b0 gate-reset    tile(  44,  40,  34)    44  40  34   0  fc   0   0   0   0   0   0   0   0   0  c3   0  ff  ff  ff   1   1   a  ff   0
-9    5bc8    5353c8 exit-door     tile(  44,  40,  33) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY(248)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   4   5   0   0   0  28   3  f8
+9    5bc8    5353c8 exit-door     tile(  44,  40,  33) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   4   5   0   0   0  28   3  f8
 10   5be0    5353e0 gate-reset    tile(  48,  43,  34)    48  43  34   0  fc   0   0   0   0   0   0   0   0   0  92   1  ff  ff  ff   1   1   a  ff   0
-11   5bf8    5353f8 exit-door     tile(  48,  43,  33) Flush down    -> shadow_tower_part3a                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY(248)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   4   1  fb   0   0  29   3  f8
+11   5bf8    5353f8 exit-door     tile(  48,  43,  33) Flush down    -> shadow_tower_part3a                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   4   1  fb   0   0  29   3  f8
 12   5c10    535410 unknown       tile(  43,  40,  44)    43  40  44   0  7e   0   0   8   0   8   0   0   0   4   f   1  14  fc   0   0   1  ff  ff  ff
 13   5c28    535428 scenery       tile(  40,  40,  34)    40  40  34   0  9e   0   0   8   0   0   0   0   0   0  ae   0   2   0   0   0   0   0   0   0
 14   5c40    535440 exit-totem    tile(  46,  40,  47) Totem         -> monster_world_screeching_area      pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  8),fineY(  3)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1  11   8   0   3   0   0   8   3
@@ -4261,11 +4261,11 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 Objects 
 idx  in_file offset type     
 0    5af0    a442f0 gate-reset    tile(  40,  40,  41)    40  40  41   0  fc   0   0   0   0   0   0   0   0   0   1   0  ff  ff  ff   1   1  15  ff   0
-1    5b08    a44308 exit-door     tile(  40,  40,  40) Entrance      -> shadow_tower_part3a                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY(248)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
+1    5b08    a44308 exit-door     tile(  40,  40,  40) Entrance      -> shadow_tower_part3a                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
 2    5b20    a44320 unknown       tile(  34,  40,  4d)    34  40  4d   0  95   0   0   0   0   0   0   0   0   0  96   0  14  fc  ff  f1  ff  ff  ff   4
 3    5b38    a44338 unknown       tile(  33,  40,  4c)    33  40  4c   0  98   0   0   0   0  f8   0   0   0   0  99   0  19  fc  ff  ff  ff  ff  ff  f1
 4    5b50    a44350 unknown       tile(  35,  40,  4c)    35  40  4c   0  96   0   0   0   0  f8   0   a   0   0  54   0  14  fc  54   0  ae   0   1  f0
-5    5b68    a44368 exit-door     tile(  41,  40,  49) Pool          -> water_world_watery_labyrinth_area  pos(247  ,0,247),unknown(  0  ,0),destMapIndex( 32),rot(  1),fineY(  0)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  f7   0  f2   0   0  20   1   0
+5    5b68    a44368 exit-door     tile(  41,  40,  49) Pool          -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  1),fineY(  0)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  f7   0  f2   0   0  20   1   0
 6    5b80    a44380 gate-reset    tile(  40,  40,  49)    40  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  ff  ff  ff   1   1  15  ff   0
 7    5b98    a44398 scenery       tile(  3e,  41,  49)    3e  41  49   0  97   0   0   0   0   0   0  f4   0   0  aa   0   0   0   0   0   0   0   0   0
 8    5bb0    a443b0 scenery       tile(  35,  41,  4d)    35  41  4d   0  97   0   0   0   0   0   0  f4   0   0  af   0   0   0   0   0   0   0   0   0
@@ -4596,8 +4596,8 @@ idx  in_file offset type
 5    5b68    ee2368 gate-reset    tile(  37,  40,  32)    37  40  32   0  fc   0   0   0   0   0   0   0   0   0  a8   0  ff  ff  ff   1   1  20  ff   0
 6    5b80    ee2380 unknown       tile(  40,  40,  3c)    40  40  3c   0  90   0   0   0   0   0   0   0   0   0  2b   0  14  fb   0   0  ff  ff  ff  ff
 7    5b98    ee2398 unknown       tile(  40,  40,  3b)    40  40  3b   0  90   0   0   0   0   0   0   0   0   0  2c   0  14  fb   0   0  ff  ff  ff  ff
-8    5bb0    ee23b0 exit-door     tile(  48,  40,  35) Entrance      -> water_world_white_rain_area        pos(255,255,255),unknown(  1  ,1),destMapIndex( 32),rot(255),fineY(  0)   48  40  35   0  fc   0   0   0   0   0   0   0   0   0  ea   0  ff  ff  ff   1   1  20  ff   0
-9    5bc8    ee23c8 exit-door     tile(  49,  40,  35) Exit          -> water_world_sunken_river_area      pos(253  ,0,253),unknown(  0  ,0),destMapIndex( 37),rot(  1),fineY(  0)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0  fd   0   0   0   0  25   1   0
+8    5bb0    ee23b0 exit-door     tile(  48,  40,  35) Entrance      -> water_world_white_rain_area        pos( -1 ,-1 ,-1),unknown(  1  ,1),destMapIndex( 32),rot( -1),fineY(  0)   48  40  35   0  fc   0   0   0   0   0   0   0   0   0  ea   0  ff  ff  ff   1   1  20  ff   0
+9    5bc8    ee23c8 exit-door     tile(  49,  40,  35) Exit          -> water_world_sunken_river_area      pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 37),rot(  1),fineY(  0)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0  fd   0   0   0   0  25   1   0
 10   5be0    ee23e0 unknown       tile(  3c,  40,  46)    3c  40  46   0  90   0   0   0   0   5   0   0  80   1  88   0  30  fb   0   0  ff  ff  ff  ff
 11   5bf8    ee23f8 unknown       tile(  3c,  40,  45)    3c  40  45   0  90   0   0   0   0   8   0   0   0   2  84   0  30  fb   0   0  ff  ff  ff  ff
 12   5c10    ee2410 unknown       tile(  3e,  40,  46)    3e  40  46   0  90   0   0   0   0   0   0   0   0   0  d7   0  30  fb   0   0  ff  ff  ff  ff
@@ -4919,7 +4919,7 @@ idx  in_file offset type
 3    4218   1010a18 scenery       tile(  42,  40,  4a)    42  40  4a   0  38   0   0   4   0   2   0   0   0   0  6d   0   0   0   0   0   0   0   0   0
 4    4230   1010a30 exit-door     tile(  3d,  40,  3f) Entrance      -> water_world_watery_labyrinth_area  pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  3),fineY(  0)   3d  40  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   8   0  f5   0   0  20   3   0
 5    4248   1010a48 scenery       tile(  42,  40,  4a)    42  40  4a   0  38   0   0   0   0   0   0   0   0  fe  6d   0   0   0   0   0   0   0   0   0
-6    4260   1010a60 exit-totem    tile(  3c,  40,  42) Totem         -> illusion_world_gloomy_domain       pos(  9,254  ,9),unknown(  3,248),destMapIndex(  0),rot(  0),fineY(  3)   3c  40  42   0   3   0   0   4   0   4   0   0   0   8  4d   0   9  fe   0   3  f8   0   0   3
+6    4260   1010a60 exit-totem    tile(  3c,  40,  42) Totem         -> illusion_world_gloomy_domain       pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  0),fineY(  3)   3c  40  42   0   3   0   0   4   0   4   0   0   0   8  4d   0   9  fe   0   3  f8   0   0   3
 7    4278   1010a78 scenery       tile(  42,  40,  4a)    42  40  4a   0  38   0   0   c   0  fe   0   0   0   0  6d   0   0   0   0   0   0   0   0   0
 8    4290   1010a90 scenery       tile(  3e,  40,  40)    3e  40  40   0  ab   0   0   c   0  fa   0  fe   0   0   4   0   0   0   0   0   0   0   0   0
 10   42c0   1010ac0 gate-1        tile(  3e,  40,  45)    3e  40  45   0  fb   0   0   0   0   0   0   0   0   0   c   0  80  80   1  7f  80   2  f0   0
@@ -5198,8 +5198,8 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 
 Objects 
 idx  in_file offset type     
-0    5af0    1c82f0 exit-door     tile(  3b,  40,  43) Entrance      -> shadow_tower_part2a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY(248)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   5   3  fd   0   0  28   1  f8
-1    5b08    1c8308 exit-door     tile(  41,  40,  43) Exit          -> shadow_tower_part2b                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY(248)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0   5   3   3   0   0  28   1  f8
+0    5af0    1c82f0 exit-door     tile(  3b,  40,  43) Entrance      -> shadow_tower_part2a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   5   3  fd   0   0  28   1  f8
+1    5b08    1c8308 exit-door     tile(  41,  40,  43) Exit          -> shadow_tower_part2b                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0   5   3   3   0   0  28   1  f8
 2    5b20    1c8320 gate-reset    tile(  41,  40,  42)    41  40  42   0  fc   0   0   0   0   0   0   0   0   0   1   0  ff  ff  ff   1   1   3  ff   0
 3    5b38    1c8338 gate-reset    tile(  3b,  40,  42)    3b  40  42   0  fc   0   0   0   0   0   0   0   0   0   8   0  ff  ff  ff   1   1   3  ff   0
 4    5b50    1c8350 unknown       tile(  3e,  40,  31)    3e  40  31   0  55   0   0   4  50  fb   0   0   0   0  9a   0   c   0  ff  f3  ff  ff  ff  ff
@@ -5527,7 +5527,7 @@ idx  in_file offset type
 34   5e20    9b3620 scenery       tile(  44,  40,  43)    44  40  43   0  29   0   0   6   0   6   0  f8   0   6  a6   0   0   0   0   0   0   0   0   0
 35   5e38    9b3638 unknown       tile(  40,  40,  3c)    40  40  3c   0  35   0   0   0   0   8   0   0   0   0   c   0  2c   0   c   0  fa   0   1  ff
 36   5e50    9b3650 unknown       tile(  3a,  3f,  3a)    3a  3f  3a   0  50   0   0   8   0   0   0   4   0   0  80   0  30   0  80   0  fb   0   1  fc
-37   5e68    9b3668 exit-door     tile(  3c,  40,  31) Entrance      -> shadow_tower_part2b                pos(251  ,3,251),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY(248)   3c  40  31   0  fc   0   0   0   0   0   0   0   0   0  2a   0  fb   3   0   0   0  28   1  f8
+37   5e68    9b3668 exit-door     tile(  3c,  40,  31) Entrance      -> shadow_tower_part2b                pos( -5  ,3 ,-5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)   3c  40  31   0  fc   0   0   0   0   0   0   0   0   0  2a   0  fb   3   0   0   0  28   1  f8
 38   5e80    9b3680 gate-reset    tile(  3c,  40,  32)    3c  40  32   0  fc   0   0   0   0   0   0   0   0   0  f9   0  ff  ff  ff   1   1  14  ff   0
 39   5e98    9b3698 scenery       tile(  4a,  40,  46)    4a  40  46   0  99   0   0   c   0   0   0  f8   0   0  9d   0   1   0   0   0   0   0   0   0
 40   5eb0    9b36b0 scenery       tile(  40,  40,  45)    40  40  45   0  93   0   0   0   0  fa   0  f8   0   4  55   0   0   0   0   0   0   0   0   0
@@ -5583,7 +5583,7 @@ idx  in_file offset type
 90   6360    9b3b60 scenery       tile(  39,  3f,  36)    39  3f  36   0  93   0   0   0   0   8   0   4   0   8  84   0   0   0   0   0   0   0   0   0
 91   6378    9b3b78 scenery       tile(  39,  3f,  36)    39  3f  36   0  94   0   0   0   0   8   0   4   0   8  84   0   0   0   0   0   0   0   0   0
 92   6390    9b3b90 totem         tile(  3a,  3f,  36)    3a  3f  36   0   2   0   0   8   0   0   0   4   0   4  86   0  2f   0   0   0   0  fe  e8   0
-93   63a8    9b3ba8 exit-portal   tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown(252  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
+93   63a8    9b3ba8 exit-portal   tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
 94   63c0    9b3bc0 exit-portal   tile(  47,  3f,  46) Platform      -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
 95   63d8    9b3bd8 totem         tile(  46,  40,  37)    46  40  37   0   2   0   0   8   0   0   0   0   0   4  33   0  2e   0   0   0   0  fe  e8   0
 99   6438    9b3c38 unknown       tile(  35,  3f,  38)    35  3f  38   0  fc   0   0   0   0   0   0   4   0   0  8d   0  21   4  fd   0   0  12   2   0
@@ -5886,7 +5886,7 @@ idx  in_file offset type
 24   5d30    b45530 unknown       tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0   5   0  eb   0   8   2   0  69  fe  ff  ff  ff  ff  ff  ff
 25   5d48    b45548 unknown       tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0  fb  80  e8   0   8   2   0  68  fe  ff  ff  ff  ff  ff  ff
 26   5d60    b45560 unknown       tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0   5  80  e8   0   8   2   0  64  fe  ff  ff  ff  ff  ff  ff
-27   5d78    b45578 exit-portal   tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(246 ,16),destMapIndex( 16),rot(  8),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   8   0
+27   5d78    b45578 exit-portal   tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  8),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   8   0
 29   5da8    b455a8 totem         tile(  4e,  40,  34)    4e  40  34   0   2   0   0   c   0   4   0   0   0   0  a8   1  2d   0   0   0   0  fe  e8   0
 30   5dc0    b455c0 unknown       tile(  41,  40,  37)    41  40  37   0  66   0   0   4   0   0   0   0   0   0  22   1  14   0  22   1  d0   1   1  ff
 31   5dd8    b455d8 gate-0        tile(  4e,  40,  42)    4e  40  42   0  fb   0   0   0   0   0   0   0   0   0  56   1  80  80   0  7f  80   0  3c   0
@@ -6177,7 +6177,7 @@ idx  in_file offset type
 14   5c40    92c440 unknown       tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0   5  80  f8   0   0  21   1  5c  fe  ff  ff  ff  ff  ff  ff
 15   5c58    92c458 unknown       tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0  fb  80  f8   0   0  21   1  5b  fe  ff  ff  ff  ff  ff  ff
 16   5c70    92c470 unknown       tile(  51,  40,  51)    51  40  51   0  a9   0   0   e   0   4   0   0   0   4  ba   0  14  fc  ff  ff   7  ff  ff   0
-17   5c88    92c488 exit-portal   tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20,250 ,20),unknown(248  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
+17   5c88    92c488 exit-portal   tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
 18   5ca0    92c4a0 unknown       tile(  40,  40,  51)    40  40  51   0  bc   0   0   4   0   0   0  f8   0   0  56   0  23  fa  ff  ff  ff  ff  ff  ff
 19   5cb8    92c4b8 unknown       tile(  46,  3f,  45)    46  3f  45   0  d9   0   0   0   0   8   0   8   0   8  91   1  1c  fa  ff  ff  ff  ff  ff  ff
 20   5cd0    92c4d0 gate-0        tile(  43,  40,  36)    43  40  36   0  fb   0   0   0   0   0   0   0   0   0  53   1  80  80   0  7f  80   0  3c   0
@@ -6481,7 +6481,7 @@ idx  in_file offset type
 6    5b80    135b80 unknown       tile(  45,  41,  40)    45  41  40   0  92   0   0   4   0   0   0  ff   0   0  55   0  1c   0  55   0  9a   0   1  ff
 7    5b98    135b98 unknown       tile(  43,  40,  3c)    43  40  3c   0  91   0   0   4   0   0   0   8   0   0  88   0  28   0  88   0  95   0   1  ff
 8    5bb0    135bb0 gate-reset    tile(  3d,  40,  37)    3d  40  37   0  fc   0   0   0   0   0   0   0   0   0   2   0  ff  ff  ff   1   1   2  ff   0
-9    5bc8    135bc8 exit-door     tile(  3d,  40,  36) Entrance      -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY(248)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   4   3   0   0   0  29   3  f8
+9    5bc8    135bc8 exit-door     tile(  3d,  40,  36) Entrance      -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   4   3   0   0   0  29   3  f8
 10   5be0    135be0 exit-totem    tile(  3f,  40,  38) Totem         -> illusion_world_dream_domain        pos( 38  ,5 ,38),unknown(  1 ,16),destMapIndex(  0),rot(  0),fineY(  2)   3f  40  38   0   3   0   0   8   0   0   0   4  4c  fb  93   0  26   5   0   1  10   0   0   2
 11   5bf8    135bf8 unknown       tile(  40,  40,  39)    40  40  39   0   2   0   0   c   0  fc   0   4   0  f8  8f   0  2e   0   0   0   0  fe  e8   0
 12   5c10    135c10 scenery       tile(  40,  40,  3c)    40  40  3c   0  d7   0   0   0   0   8   0   4   0   0   0   0   0   0   0   0   0   0   0   0
@@ -6809,12 +6809,12 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 
 Objects 
 idx  in_file offset type     
-0    5af0    8992f0 exit-door     tile(  4a,  40,  44) Entrance      -> shadow_tower_part3b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY(248)   4a  40  44   0  fc   0   0   0   0   0   0   0   0   0  35   0   0   3  fc   0   0  29   0  f8
+0    5af0    8992f0 exit-door     tile(  4a,  40,  44) Entrance      -> shadow_tower_part3b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   4a  40  44   0  fc   0   0   0   0   0   0   0   0   0  35   0   0   3  fc   0   0  29   0  f8
 1    5b08    899308 gate-reset    tile(  4a,  40,  43)    4a  40  43   0  fc   0   0   0   0   0   0   0   0   0  34   0  ff  ff  ff   1   1  11  ff   0
 2    5b20    899320 unknown       tile(  3d,  40,  44)    3d  40  44   0  a0   0   0   0   0   0   0   0   0  f8   5   0  14   0  58   0  59   0   1   3
 3    5b38    899338 exit-totem    tile(  48,  40,  43) Totem         -> water_world_impure_pool_area       pos( 10  ,6 ,10),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   48  40  43   0   3   0   0   4   0  fc   0   0   0   4  32   0   a   6   0   6   0   0   0   2
 4    5b50    899350 scenery       tile(  48,  40,  3d)    48  40  3d   0  da   0   0   8   0   0  24  fa   0  f8  22   0  13   0   0   0   0   0   0   0
-6    5b80    899380 exit-totem    tile(  44,  40,  4e) Necron        -> death_world_dark_castle_layer      pos( 25,254 ,25),unknown(251  ,0),destMapIndex(  0),rot(  0),fineY(  0)   44  40  4e   0   3   0   0   0   0   0   0   0   0  fc  54   0  19  fe   0  fb   0   0   0   0
+6    5b80    899380 exit-totem    tile(  44,  40,  4e) Necron        -> death_world_dark_castle_layer      pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  0),fineY(  0)   44  40  4e   0   3   0   0   0   0   0   0   0   0  fc  54   0  19  fe   0  fb   0   0   0   0
 9    5bc8    8993c8 totem         tile(  4b,  40,  41)    4b  40  41   0   0   0   0   c   0  fe   0   0   0   0  6f   0   0   0   0   0   0   0   0   0
 10   5be0    8993e0 totem         tile(  4a,  40,  42)    4a  40  42   0   1   0   0   0   0   8   0   0   0  fe  6d   0  2c   0   0   0   0   0   0   0
 11   5bf8    8993f8 totem         tile(  4a,  40,  40)    4a  40  40   0   2   0   0   8   0   8   0   0   0   2  57   0  2f   0   0   0   0  fe  e8   0
@@ -7096,9 +7096,9 @@ idx  in_file offset type
 11   5bf8    41b3f8 unknown       tile(  4e,  40,  48)    4e  40  48   0  49   0   0   4   0   0   0   0   0   0  51   0  1c  f9  ff  ff  ff  ff  ff  ff
 12   5c10    41b410 unknown       tile(  46,  40,  47)    46  40  47   0  4c   0   0   4   0   0   0   0   0   0  3c   0  19  f9  a9   0  3c   0   1  ff
 17   5c88    41b488 gate-reset    tile(  4f,  40,  52)    4f  40  52   0  fc   0   0   0   0   4   0   0   0   0  75   0  ff  ff  ff   1   1   8   0   0
-18   5ca0    41b4a0 exit-door     tile(  50,  40,  52) Exit          -> illusion_world_worship_domain      pos(254  ,2,254),unknown(248  ,0),destMapIndex(  9),rot(  1),fineY(  0)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0  fe   2  fa  f8   0   9   1   0
+18   5ca0    41b4a0 exit-door     tile(  50,  40,  52) Exit          -> illusion_world_worship_domain      pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  1),fineY(  0)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0  fe   2  fa  f8   0   9   1   0
 19   5cb8    41b4b8 gate-reset    tile(  44,  40,  3f)    44  40  3f   0  fc   0   0   0   0   0   0   0   0  fc  a0   0  ff  ff  ff   1   1   8   0   0
-20   5cd0    41b4d0 exit-door     tile(  44,  40,  3e) Entrance      -> illusion_world_gloomy_domain       pos(252  ,0,252),unknown(  0  ,8),destMapIndex( 13),rot(  1),fineY(  0)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  fc   0   6   0   8   d   1   0
+20   5cd0    41b4d0 exit-door     tile(  44,  40,  3e) Entrance      -> illusion_world_gloomy_domain       pos( -4  ,0 ,-4),unknown(  0  ,8),destMapIndex( 13),rot(  1),fineY(  0)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  fc   0   6   0   8   d   1   0
 21   5ce8    41b4e8 unknown       tile(  50,  40,  41)    50  40  41   0  11   0   0   0   0   0   0   0   0   4  59   0  14  fc  ff  ff  10  ff  ff   6
 22   5d00    41b500 scenery       tile(  46,  40,  40)    46  40  40   0   0   0   0   c   0   0   0   0   0   0  b8   0   0   0   0   0   0   0   0   0
 25   5d48    41b548 scenery       tile(  50,  40,  4e)    50  40  4e   0   0   0   0   c   0   0   0   0   0   0  32   0   0   0   0   0   0   0   0   0
@@ -7379,7 +7379,7 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 Objects 
 idx  in_file offset type     
 0    5af0    4a8af0 gate-reset    tile(  3a,  40,  40)    3a  40  40   0  fc   0   0   0   0   0   0   0   0   0   1   0  ff  ff  ff   1   1   9   0   0
-1    5b08    4a8b08 exit-door     tile(  39,  40,  40) Entrance      -> shadow_tower_part3a                pos(252  ,2,252),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY(248)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
+1    5b08    4a8b08 exit-door     tile(  39,  40,  40) Entrance      -> shadow_tower_part3a                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
 2    5b20    4a8b20 gate-reset    tile(  3e,  42,  3a)    3e  42  3a   0  fc   0   0   0   0   0   0   0   0   0  68   0  ff  ff  ff   1   1   9   0   0
 3    5b38    4a8b38 exit-door     tile(  3e,  42,  39) Ladder down   -> illusion_world_bewilderment_domain pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0   f   0  12   0   0   8   3   0
 4    5b50    4a8b50 scenery       tile(  3b,  3f,  4e)    3b  3f  4e   0  d7   0   0   0   0  fe   0   0   0   0   0   0   0   0   0   0   0   0   0   0
@@ -7388,7 +7388,7 @@ idx  in_file offset type
 7    5b98    4a8b98 unknown       tile(  3c,  3f,  4c)    3c  3f  4c   0  1d   0   0   0   0   0  b2  f3   0   0  9d   0  80  fe  ff  ff  ff  ff  ff  ff
 8    5bb0    4a8bb0 unknown       tile(  3a,  3f,  4c)    3a  3f  4c   0  1d   0   0   0   0   0  b2  f3   0   0  9f   0  80  fe  ff  ff  ff  ff  ff  ff
 9    5bc8    4a8bc8 scenery       tile(  45,  3f,  4e)    45  3f  4e   0  d7   0   0   0   0  fe   0   0   0   0   0   0   0   0   0   0   0   0   0   0
-10   5be0    4a8be0 exit-totem    tile(  3d,  40,  43) Totem         -> water_world_white_rain_area        pos( 37,253 ,37),unknown(  2,248),destMapIndex(  0),rot( 16),fineY(  3)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0  25  fd   0   2  f8   0  10   3
+10   5be0    4a8be0 exit-totem    tile(  3d,  40,  43) Totem         -> water_world_white_rain_area        pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot( 16),fineY(  3)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0  25  fd   0   2  f8   0  10   3
 11   5bf8    4a8bf8 totem         tile(  3f,  40,  43)    3f  40  43   0   1   0   0   c   0  fc   0   0   0   0  76   0  2c   0   0   0   0   0   0   0
 12   5c10    4a8c10 scenery       tile(  40,  40,  39)    40  40  39   0  b4   0   0   8   0   8   0   0   0   0  11   0   3   0   0   0   0   0   0   0
 13   5c28    4a8c28 scenery       tile(  45,  3f,  4e)    45  3f  4e   0  d7   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0
@@ -7675,8 +7675,8 @@ idx  in_file offset type
 0    5af0   10952f0 unknown       tile(  47,  40,  38)    47  40  38   0  1d   0   0   0  80  fa   0  fa   0  f6   1   0  60  fe   0   0  ff  ff  ff  ff
 1    5b08   1095308 unknown       tile(  47,  40,  38)    47  40  38   0  1d   0   0   0  80   5   0  fa   0  f6   1   0  64  fe   0   0  ff  ff  ff  ff
 2    5b20   1095320 unknown       tile(  47,  40,  3f)    47  40  3f   0  9d   0   0   0   0   0   0   0   0  f8  13   0  14   0  15   0  30   0   1  ff
-3    5b38   1095338 exit-portal   tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(249  ,0),destMapIndex(  0),rot(  0),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   0   0
-4    5b50   1095350 exit-totem    tile(  45,  40,  41) Totem         -> monster_world_false_eye_area       pos(  2,255  ,2),unknown(249  ,0),destMapIndex(  8),rot(248),fineY(  0)   45  40  41   0   3   0   0   0   0   8   0   0   0   6  18   0   2  ff   0  f9   0   8  f8   0
+3    5b38   1095338 exit-portal   tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   0   0
+4    5b50   1095350 exit-totem    tile(  45,  40,  41) Totem         -> monster_world_false_eye_area       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot( -8),fineY(  0)   45  40  41   0   3   0   0   0   0   8   0   0   0   6  18   0   2  ff   0  f9   0   8  f8   0
 5    5b68   1095368 unknown       tile(  44,  40,  3f)    44  40  3f   0  d2   0   0   8   0   0   0   0   0  f8  1a   0  1e  fe  ff  ff  ff  ff  ff  ff
 10   5be0   10953e0 gate-0        tile(  48,  40,  3e)    48  40  3e   0  fb   0   0   0   0   8   0   0   0   8  14   0  80  80   0  7f  80   2  f0   0
 11   5bf8   10953f8 gate-1        tile(  46,  40,  3e)    46  40  3e   0  fb   0   0   0   0  f8   0   0   0   8  12   0  80  80   1  7f  80   2  f0   0
@@ -7956,7 +7956,7 @@ idx  in_file offset type
 5    5b68    6f1368 unknown       tile(  40,  40,  38)    40  40  38   0  d1   0   0   8   0   0   0   0   0   0  c6   0  1e  fe  ff  ff  ff  ff  ff  ff
 6    5b80    6f1380 exit-portal   tile(  40,  40,  38) Connection    -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
 7    5b98    6f1398 unknown       tile(  4f,  40,  38)    4f  40  38   0  d1   0   0   8   0   0   0   0   0   0  94   1  1e  fe  ff  ff  ff  ff  ff  ff
-8    5bb0    6f13b0 exit-portal   tile(  4f,  40,  47) To Boss       -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown(249  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
+8    5bb0    6f13b0 exit-portal   tile(  4f,  40,  47) To Boss       -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
 9    5bc8    6f13c8 unknown       tile(  4c,  40,  40)    4c  40  40   0  d1   0   0   4   0   0   0   0   0   0  f3   0  1e  fe  ff  ff  ff  ff  ff  ff
 10   5be0    6f13e0 exit-portal   tile(  4f,  40,  38) Exit          -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   0   0
 11   5bf8    6f13f8 gate-0        tile(  40,  40,  40)    40  40  40   0  fb   0   0   0   0   0   0   0   0   0  28   0  80  80   0  7f  80   2  f0   0
@@ -8232,11 +8232,11 @@ Objects
 idx  in_file offset type     
 0    41d0    bda1d0 exit-door     tile(  4b,  3f,  44) Prison        -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  1),fineY(  0)   4b  3f  44   0  fc   0   0   0   0   0   0   0   0   0   1   1   1   1  ef   0   0  1a   1   0
 1    41e8    bda1e8 gate-reset    tile(  4a,  3f,  44)    4a  3f  44   0  fc   0   0   0   0   0   0   0   0   0   0   1  ff  ff  ff   1   1  19  ff   0
-2    4200    bda200 exit-door     tile(  40,  40,  37) Entrance      -> shadow_tower_part3b                pos(252  ,5,252),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY(248)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  af   1  fc   5   0   0   0  29   2  f8
+2    4200    bda200 exit-door     tile(  40,  40,  37) Entrance      -> shadow_tower_part3b                pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  af   1  fc   5   0   0   0  29   2  f8
 3    4218    bda218 gate-reset    tile(  41,  40,  37)    41  40  37   0  fc   0   0   0   0   0   0   0   0   0  ae   1  ff  ff  ff   1   1  19  ff   0
 4    4230    bda230 exit-totem    tile(  3e,  40,  3a) Lower totem 1 -> monster_world_screeching_area      pos( 17  ,4 ,17),unknown( 13  ,0),destMapIndex(  0),rot(  0),fineY(  2)   3e  40  3a   0   3   0   0   8   0   0   0   0   0   4  7b   0  11   4   0   d   0   0   0   2
 5    4248    bda248 totem         tile(  3d,  40,  3b)    3d  40  3b   0   0   0   0   4   0   4   0   0   0   0  7d   0   0   0   0   0   0   0   0   0
-7    4278    bda278 exit-totem    tile(  33,  40,  41) Lower totem 2 -> death_world_lingering_curse_layer  pos( 14,242 ,14),unknown(249  ,0),destMapIndex(252),rot(  0),fineY(  3)   33  40  41   0   3   0   0   0   0   0   0   0   0  fc  70   0   e  f2   1  f9   0  fc   0   3
+7    4278    bda278 exit-totem    tile(  33,  40,  41) Lower totem 2 -> death_world_lingering_curse_layer  pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  0),fineY(  3)   33  40  41   0   3   0   0   0   0   0   0   0   0  fc  70   0   e  f2   1  f9   0  fc   0   3
 10   42c0    bda2c0 exit-totem    tile(  33,  40,  3f) Upper totem   -> death_world_gate_of_the_dead       pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  0),fineY(  0)   33  40  3f   0   3   0   0   8   0   0   0   0   0   4  74   0  17  14   0   0   0  f8   0   0
 11   42d8    bda2d8 unknown       tile(  3e,  40,  3d)    3e  40  3d   0  9f   0   0   0   0   0   0   0   0  fc  43   0  24   0  43   0  b0   1   1  fb
 12   42f0    bda2f0 unknown       tile(  35,  40,  40)    35  40  40   0  9f   0   0   c   0  fc   0   0   0   0  6d   0  14   0  6d   0  b1   1   1  fb
@@ -8516,8 +8516,8 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 Objects 
 idx  in_file offset type     
 0    5af0    767af0 gate-reset    tile(  31,  3e,  3d)    31  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f4   1  ff  ff  ff   1   1   e   0   0
-1    5b08    767b08 exit-door     tile(  30,  3e,  3d) Door          -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY(248)   30  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f5   1   0   6  fc   0   0  29   3  f8
-2    5b20    767b20 exit-totem    tile(  32,  41,  39) Box room      -> death_world_dark_castle_layer      pos( 25,243 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)   32  41  39   0   3   0   0   4   0  fc   0  fe   0   0  68   0  19  f3   0   0   0   0   0   2
+1    5b08    767b08 exit-door     tile(  30,  3e,  3d) Door          -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   30  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f5   1   0   6  fc   0   0  29   3  f8
+2    5b20    767b20 exit-totem    tile(  32,  41,  39) Box room      -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)   32  41  39   0   3   0   0   4   0  fc   0  fe   0   0  68   0  19  f3   0   0   0   0   0   2
 3    5b38    767b38 scenery       tile(  38,  3f,  3c)    38  3f  3c   0  dc   0   0   8   0   0  24  fa   0  fc  89   0  15   0   0   0   0   0   0   0
 4    5b50    767b50 totem         tile(  44,  40,  42)    44  40  42   0   0   0   0   0   0  fc   0   0   0  fe  e3   0   0   0   0   0   0   0   0   0
 5    5b68    767b68 scenery       tile(  47,  3e,  48)    47  3e  48   0  ad   0   0   0   0   0   0   0   0  f8  c1   1   0   0   0   0   0   0   0   0
@@ -8839,7 +8839,7 @@ idx  in_file offset type
 12   5c10    c78c10 exit-door     tile(  41,  41,  41) King's room   -> death_world_gate_of_the_dead       pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 23),rot(  0),fineY(  0)   41  41  41   0  fc   0   0   0   0   0   0  fc   0   0  af   0   0   0  f8   0   0  17   0   0
 13   5c28    c78c28 gate-reset    tile(  41,  41,  40)    41  41  40   0  fc   0   0   0   0   0   0  fc   0   0  af   0  ff  ff  ff   1   1  1a  ff   0
 14   5c40    c78c40 gate-reset    tile(  41,  41,  2f)    41  41  2f   0  fc   0   0   0   0   0   0   0   0   0  1f   0  ff  ff  ff   1   1  1a  ff   0
-15   5c58    c78c58 exit-door     tile(  41,  41,  2e) Entrance      -> death_world_dark_castle_layer      pos( 10,255 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  3),fineY(  0)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
+15   5c58    c78c58 exit-door     tile(  41,  41,  2e) Entrance      -> death_world_dark_castle_layer      pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  3),fineY(  0)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
 16   5c70    c78c70 totem         tile(  4b,  41,  33)    4b  41  33   0   0   0   0   0   0   0   0   0   0  fc  10   0   0   0   0   0   0   0   0   0
 17   5c88    c78c88 totem         tile(  4b,  41,  31)    4b  41  31   0   2   0   0   8   0   0   0   0   0   4   d   0  2d   0   0   0   0  fe  e8   0
 18   5ca0    c78ca0 scenery       tile(  45,  41,  30)    45  41  30   0  db   0   0   8   0   0  24  fa   0  f8   7   0  14   0   0   0   0   0   0   0
@@ -9121,8 +9121,8 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 Objects 
 idx  in_file offset type     
 0    5af0    ad9af0 gate-reset    tile(  40,  40,  38)    40  40  38   0  fc   0   0   0   0   0   0   0   0   0  99   1  ff  ff  ff   1   1  17  ff   0
-1    5b08    ad9b08 exit-door     tile(  40,  40,  37) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  0),fineY(248)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  e5   1   1   1   0   0   0  1a   0  f8
-4    5b50    ad9b50 exit-totem    tile(  55,  40,  3f) Totem         -> death_world_dark_castle_layer      pos( 25,243 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   55  40  3f   0   3   0   0   a   0  fc   0  fc   0   4  7a   0  19  f3   0   0   0   0   0   0
+1    5b08    ad9b08 exit-door     tile(  40,  40,  37) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  0),fineY( -8)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  e5   1   1   1   0   0   0  1a   0  f8
+4    5b50    ad9b50 exit-totem    tile(  55,  40,  3f) Totem         -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   55  40  3f   0   3   0   0   a   0  fc   0  fc   0   4  7a   0  19  f3   0   0   0   0   0   0
 8    5bb0    ad9bb0 unknown       tile(  40,  40,  54)    40  40  54   0  ae   0   0   0   0   0   0  fc   0   0  f5   0  24  fc  ff  ff   0  ff  ff  ff
 10   5be0    ad9be0 unknown       tile(  31,  40,  47)    31  40  47   0  1d   0   0   0  70   1   0  ff   0  10  5c   1  40  fe   0   0  ff  ff  ff  ff
 11   5bf8    ad9bf8 unknown       tile(  2e,  40,  47)    2e  40  47   0  1d   0   0   0   0  fe   0  fe   0  10  84   1  48  fe   0   0  ff  ff  ff  ff
@@ -9431,14 +9431,14 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 
 Objects 
 idx  in_file offset type     
-0    5af0   111a2f0 exit-door     tile(  40,  41,  45) Top left      -> earth_world_false_pit_cavern       pos(248  ,0,248),unknown(  1  ,1),destMapIndex( 15),rot(  3),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0  bb   1  f8   0  f5   1   1   f   3   0
+0    5af0   111a2f0 exit-door     tile(  40,  41,  45) Top left      -> earth_world_false_pit_cavern       pos( -8  ,0 ,-8),unknown(  1  ,1),destMapIndex( 15),rot(  3),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0  bb   1  f8   0  f5   1   1   f   3   0
 1    5b08   111a308 gate-reset    tile(  40,  41,  44)    40  41  44   0  fc   0   0   0   0   0   0  fc   0   0  ba   1  ff  ff  ff   1   1  28  ff   0
 2    5b20   111a320 gate-reset    tile(  45,  43,  43)    45  43  43   0  fc   0   0   0   0   0   0  fc   0   0  c5   1  ff  ff  ff   1   1  28  ff   0
 3    5b38   111a338 gate-reset    tile(  45,  43,  3d)    45  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  c8   1  ff  ff  ff   1   1  28  ff   0
 4    5b50   111a350 exit-door     tile(  46,  43,  43) Top right     -> fire_world_phoenix_cave            pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)   46  43  43   0  fc   0   0   0   0   0   0  fc   0   0  c9   1   1   0   2   1   1   3   3   0
-5    5b68   111a368 exit-door     tile(  46,  43,  3d) Edge          -> fire_world_phoenix_cave            pos(251  ,0,251),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1  fb   0   2   1   1   3   3   0
+5    5b68   111a368 exit-door     tile(  46,  43,  3d) Edge          -> fire_world_phoenix_cave            pos( -5  ,0 ,-5),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1  fb   0   2   1   1   3   3   0
 6    5b80   111a380 gate-reset    tile(  3b,  43,  40)    3b  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cc   1  ff  ff  ff   1   1  28  ff   0
-7    5b98   111a398 exit-door     tile(  3a,  43,  40) Middle        -> fire_world_burning_cavern          pos(252  ,0,252),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  fc   0  f2   1   1  14   3   0
+7    5b98   111a398 exit-door     tile(  3a,  43,  40) Middle        -> fire_world_burning_cavern          pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  fc   0  f2   1   1  14   3   0
 8    5bb0   111a3b0 gate-reset    tile(  44,  45,  40)    44  45  40   0  fc   0   0   0   0   0   0  fc   0   0  ce   1  ff  ff  ff   1   1  28  ff   0
 9    5bc8   111a3c8 exit-door     tile(  45,  45,  40) Upper         -> water_world_impure_pool_area       pos(  4  ,0  ,4),unknown(  1  ,1),destMapIndex( 10),rot(  1),fineY(  0)   45  45  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   4   0  f4   1   1   a   1   0
 10   5be0   111a3e0 gate-reset    tile(  44,  4a,  40)    44  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  ce   1  ff  ff  ff   1   1  28  ff   0
@@ -9714,12 +9714,12 @@ idx  in_file offset type
 2    5b20   1195b20 gate-reset    tile(  40,  41,  44)    40  41  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0  ff  ff  ff   1   1  29  ff   0
 3    5b38   1195b38 exit-door     tile(  40,  41,  45) Top left      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex( 21),rot(  0),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0   0   0   0   0   1   1   1  15   0   0
 4    5b50   1195b50 gate-reset    tile(  44,  43,  40)    44  43  40   0  fc   0   0   0   0   0   0  fc   0   0  df   1  ff  ff  ff   1   1  29  ff   0
-5    5b68   1195b68 exit-door     tile(  45,  43,  40) Bottom middle -> monster_world_false_eye_area       pos(253  ,0,253),unknown(  0  ,0),destMapIndex(  2),rot(  1),fineY(  0)   45  43  40   0  fc   0   0   0   0   0   0  fc   0   0  e0   1  fd   0  f7   0   0   2   1   0
+5    5b68   1195b68 exit-door     tile(  45,  43,  40) Bottom middle -> monster_world_false_eye_area       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  2),rot(  1),fineY(  0)   45  43  40   0  fc   0   0   0   0   0   0  fc   0   0  e0   1  fd   0  f7   0   0   2   1   0
 6    5b80   1195b80 gate-reset    tile(  40,  43,  3c)    40  43  3c   0  fc   0   0   0   0   0   0  fc   0   0   0   0  ff  ff  ff   1   1  29  ff   0
 7    5b98   1195b98 exit-door     tile(  40,  43,  3b) Top edge      -> monster_world_screeching_area      pos( 10  ,0 ,10),unknown(  1  ,1),destMapIndex( 17),rot(  0),fineY(  0)   40  43  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0   a   0   3   1   1  11   0   0
 8    5bb0   1195bb0 gate-reset    tile(  3c,  42,  40)    3c  42  40   0  fc   0   0   0   0   0   0  fc   0   0  e3   1  ff  ff  ff   1   1  29   0   0
-9    5bc8   1195bc8 exit-door     tile(  3b,  42,  40) Bottom        -> illusion_world_gloomy_domain       pos(250  ,0,250),unknown(  1  ,1),destMapIndex(  9),rot(  2),fineY(  0)   3b  42  40   0  fc   0   0   0   0   0   0  fc   0   0  e4   1  fa   0   0   1   1   9   2   0
-10   5be0   1195be0 exit-door     tile(  40,  46,  3b) Fence         -> death_world_lingering_curse_layer  pos(241,254,241),unknown(  1  ,1),destMapIndex( 14),rot(  1),fineY(  0)   40  46  3b   0  fc   0   0   0   0   0   0  fc   0   0  e6   1  f1  fe  fd   1   1   e   1   0
+9    5bc8   1195bc8 exit-door     tile(  3b,  42,  40) Bottom        -> illusion_world_gloomy_domain       pos( -6  ,0 ,-6),unknown(  1  ,1),destMapIndex(  9),rot(  2),fineY(  0)   3b  42  40   0  fc   0   0   0   0   0   0  fc   0   0  e4   1  fa   0   0   1   1   9   2   0
+10   5be0   1195be0 exit-door     tile(  40,  46,  3b) Fence         -> death_world_lingering_curse_layer  pos(-15 ,-2,-15),unknown(  1  ,1),destMapIndex( 14),rot(  1),fineY(  0)   40  46  3b   0  fc   0   0   0   0   0   0  fc   0   0  e6   1  f1  fe  fd   1   1   e   1   0
 11   5bf8   1195bf8 gate-reset    tile(  40,  46,  3c)    40  46  3c   0  fc   0   0   0   0   0   0  fc   0   0  e5   1  ff  ff  ff   1   1  29   0   0
 12   5c10   1195c10 gate-reset    tile(  3c,  45,  40)    3c  45  40   0  fc   0   0   0   0   0   0  fc   0   0  e7   1  ff  ff  ff   1   1  29   0   0
 13   5c28   1195c28 exit-door     tile(  3b,  45,  40) Bottom end    -> death_world_dark_castle_layer      pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  2),fineY(  0)   3b  45  40   0  fc   0   0   0   0   0   0  fc   0   0  e8   1   1   0  f7   1   1  19   2   0
@@ -10501,4 +10501,336 @@ Loading texture for creature shadow_tower_part3/0b_door file .\generated\bonanza
 Loading texture for creature shadow_tower_part3/0c_door file .\generated\bonanza\extracted\ST\CHR4\M41.T_PARTS\62 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0d_door file .\generated\bonanza\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\bonanza\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
+Exit for chart shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top 3 -8 --> shadow_tower_part3a[Shadow Tower Part3 A 3]
+ 0    5af0     212f0 exit-door     tile(  45,  43,  41) Tower Top     -> shadow_tower_part3a                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   4   1  fb   0   0  29   3  f8
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Top right -1 -8 --> shadow_tower_part1a[Shadow Tower Part1 A]
+ 0    5af0   1195af0 exit-door     tile(  45,  41,  3b) Top right     -> shadow_tower_part1a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot( -1),fineY( -8)   45  41  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0   5   3   0   0   0   0  ff  f8
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Top left 0 0 --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead 2]
+ 3    5b38   1195b38 exit-door     tile(  40,  41,  45) Top left      -> death_world_gate_of_the_dead       pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 23),rot(  0),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0   0   0   0   0  f8   0   0  17   0   0
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom 0 0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern 2]
+ 9    5bc8   1195bc8 exit-door     tile(  3b,  42,  40) Bottom        -> earth_world_poisonous_cavern       pos( 10  ,1 ,10),unknown(  0  ,0),destMapIndex( 27),rot(  0),fineY(  0)   3b  42  40   0  fc   0   0   0   0   0   0  fc   0   0  e4   1   a   1   9   0   0  1b   0   0
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+ 
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle 1 -8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 5    5b68   1195b68 exit-door     tile(  45,  43,  40) Bottom middle -> shadow_tower_part1c                pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  1),fineY( -8)   45  43  40   0  fc   0   0   0   0   0   0  fc   0   0  e0   1   0   9   3   9   0   0   1  f8
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge 3 0 --> fire_world_burning_cavern[Fire World
+Burning Cavern 3]
+ 7    5b98   1195b98 exit-door     tile(  40,  43,  3b) Top edge      -> fire_world_burning_cavern          pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   40  43  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0  fc   0  f2   1   1  14   3   0
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end 1 -8 --> shadow_tower_part2b[Shadow Tower Part2 B 5]
+ 13   5c28   1195c28 exit-door     tile(  3b,  45,  40) Bottom end    -> shadow_tower_part2b                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)   3b  45  40   0  fc   0   0   0   0   0   0  fc   0   0  e8   1   5   3   3   0   0  28   1  f8
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C 3]
+ 
+Exit for chart earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Poison 2 -8 --> shadow_tower_part3a[Shadow Tower Part3 A 3]
+ 13   4308    d17308 exit-door     tile(  4a,  41,  48) Poison        -> shadow_tower_part3a                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   4a  41  48   0  fc   0   0   0   0   0   0   0  80  fc  48   1  fc   2   0   0   0  29   2  f8
+Exit for chart earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Rock guy -1 0 --> human_world_solitary_region[Human World
+Solitary Region 3]
+ 10   42c0    d172c0 exit-door     tile(  4a,  41,  41) Rock guy      -> human_world_solitary_region        pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot( -1),fineY(  0)   4a  41  41   0  fc   0   0   0  80   3   0   0   0   0   c   1   4   0   d   0   0   4  ff   0
+Exit for chart earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Entrance 3 0 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain 3]
+ 17   4368    d17368 exit-door     tile(  38,  41,  2f) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   f   0  12   0   0   8   3   0
+Exit for chart death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Entrance 0 -8 --> shadow_tower_part3a[Shadow Tower Part3 A 3]
+ 1    5b08    ad9b08 exit-door     tile(  40,  40,  37) Entrance      -> shadow_tower_part3a                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  e5   1   0   1   4   0   0  29   0  f8
+Exit for chart death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Totem 0 0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 3]
+ 4    5b50    ad9b50 exit-totem    tile(  55,  40,  3f) Totem         -> death_world_dark_castle_layer      pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  0),fineY(  0)   55  40  3f   0   3   0   0   a   0  fc   0  fc   0   4  7a   0  19  fe   0  fb   0   0   0   0
+Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Top -1 0 --> human_world_hidden_region[Human World
+Hidden Region 4]
+ 5    5b68     21368 exit-door     tile(  43,  47,  3a) Top           -> human_world_hidden_region          pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot( -1),fineY(  0)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0   0   0  fc   1   1   5  ff   0
+Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Middle 3 -8 --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+ 11   5bf8     213f8 exit-door     tile(  40,  49,  44) Middle        -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   40  49  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0   4   3   0   0   0  29   3  f8
+Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Edge -1 0 --> earth_world_quaking_cavern[Earth World
+Quaking Cavern 4]
+ 9    5bc8     213c8 exit-door     tile(  45,  49,  3f) Edge          -> earth_world_quaking_cavern         pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot( -1),fineY(  0)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   4   0   d   0   0   4  ff   0
+Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Upper 1 0 --> illusion_world_worship_domain[Illusion World
+Worship Domain 4]
+ 9    5bc8   111a3c8 exit-door     tile(  45,  45,  40) Upper         -> illusion_world_worship_domain      pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  1),fineY(  0)   45  45  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1  fe   2  fa  f8   0   9   1   0
+Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Middle 1 -8 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 3]
+ 7    5b98   111a398 exit-door     tile(  3a,  43,  40) Middle        -> death_world_dark_castle_layer      pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1   5   3   3   0   0  28   1  f8
+Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Edge 2 -8 --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+ 5    5b68   111a368 exit-door     tile(  46,  43,  3d) Edge          -> shadow_tower_part3b                pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1  fc   5   0   0   0  29   2  f8
+Exit for chart shadow_tower_part3c[Shadow Tower Part3 C] -- Fence 3 0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 4]
+ 10   5be0   1195be0 exit-door     tile(  40,  46,  3b) Fence         -> earth_world_false_pit_cavern       pos( -8  ,0 ,-8),unknown(  1  ,1),destMapIndex( 15),rot(  3),fineY(  0)   40  46  3b   0  fc   0   0   0   0   0   0  fc   0   0  e6   1  f8   0  f5   1   1   f   3   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Skeleton 2 0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern 2]
+ 31   5dd8    25b5d8 exit-door     tile(  44,  40,  4e) Skeleton      -> earth_world_poisonous_cavern       pos(  9  ,1  ,9),unknown(  0  ,0),destMapIndex( 27),rot(  2),fineY(  0)   44  40  4e   0  fc   0   0   0   0   0   0   0   0   0  60   0   9   1   1   0   0  1b   2   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Cemetery 1 0 --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area 4]
+ 34   5e20    25b620 exit-door     tile(  47,  40,  4e) Cemetery      -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  1),fineY(  0)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0  f7   0  f2   0   0  20   1   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Grave 3 -8 --> earth_world_rotting_cavern[Earth World
+Rotting Cavern 4]
+ 35   5e38    25b638 exit-door     tile(  49,  42,  47) Grave         -> earth_world_rotting_cavern         pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0   4   3   0   0   0  29   3  f8
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Church 2 -8 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave 4]
+ 38   5e80    25b680 exit-door     tile(  40,  40,  40) Church        -> fire_world_phoenix_cave            pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0  fc   5   0   0   0  29   2  f8
+Exit for chart fire_world_burning_cavern[Fire World
+Burning Cavern] -- Entrance 0 -8 --> shadow_tower_part3b[Shadow Tower Part3 B 3]
+ 37   5e68    9b3668 exit-door     tile(  3c,  40,  31) Entrance      -> shadow_tower_part3b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   3c  40  31   0  fc   0   0   0   0   0   0   0   0   0  2a   0   0   3  fc   0   0  29   0  f8
+Exit for chart fire_world_burning_cavern[Fire World
+Burning Cavern] -- Platform  0 2 --> illusion_world_worship_domain[Illusion World
+Worship Domain 4]
+ 94   63c0    9b3bc0 exit-portal   tile(  47,  3f,  46) Platform      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0   d   f   0   6   0   0   0   2
+Exit for chart fire_world_burning_cavern[Fire World
+Burning Cavern] -- Room 8 0 --> fire_world_ashen_cavern[Fire World
+Ashen Cavern 4]
+ 93   63a8    9b3ba8 exit-portal   tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  8),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12   1   0  f6  10  10   8   0
+Exit for chart illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Exit 1 0 --> earth_world_stone_cavern[Earth World
+Stone Cavern 6]
+ 18   5ca0    41b4a0 exit-door     tile(  50,  40,  52) Exit          -> earth_world_stone_cavern           pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  1),fineY(  0)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0  f0   5  f7  f6   0  1c   1   0
+Exit for chart illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Entrance -1 0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern 2]
+ 20   5cd0    41b4d0 exit-door     tile(  44,  40,  3e) Entrance      -> earth_world_poisonous_cavern       pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot( -1),fineY(  0)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0   4   0   d   0   0   4  ff   0
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Prison 1 -8 --> shadow_tower_part2a[Shadow Tower Part2 A 5]
+ 0    41d0    bda1d0 exit-door     tile(  4b,  3f,  44) Prison        -> shadow_tower_part2a                pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)   4b  3f  44   0  fc   0   0   0   0   0   0   0   0   0   1   1   0   1   4   a   0  28   1  f8
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Entrance 0 -8 --> shadow_tower_part2b[Shadow Tower Part2 B 5]
+ 2    4200    bda200 exit-door     tile(  40,  40,  37) Entrance      -> shadow_tower_part2b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  af   1   0   3  fc   0   0  29   0  f8
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem 1 0 0 --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead 2]
+ 4    4230    bda230 exit-totem    tile(  3e,  40,  3a) Lower totem 1 -> death_world_gate_of_the_dead       pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  0),fineY(  0)   3e  40  3a   0   3   0   0   8   0   0   0   0   0   4  7b   0  17  14   0   0   0  f8   0   0
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem 2 0 0 --> monster_world_screeching_area[Monster World
+Screeching Area 4]
+ 7    4278    bda278 exit-totem    tile(  33,  40,  41) Lower totem 2 -> monster_world_screeching_area      pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  0),fineY(  0)   33  40  41   0   3   0   0   0   0   0   0   0   0  fc  70   0  17  14   0   0   0  f8   0   0
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem -8 0 --> monster_world_false_eye_area[Monster World
+False Eye Area 4]
+ 10   42c0    bda2c0 exit-totem    tile(  33,  40,  3f) Upper totem   -> monster_world_false_eye_area       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot( -8),fineY(  0)   33  40  3f   0   3   0   0   8   0   0   0   0   0   4  74   0   2  ff   0  f9   0   8  f8   0
+Exit for chart human_world_hidden_region[Human World
+Hidden Region] -- Jail 3 0 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer 5]
+ 9    5bc8    2f5bc8 exit-door     tile(  3d,  40,  3b) Jail          -> death_world_lingering_curse_layer  pos( -8  ,0 ,-8),unknown(  1  ,1),destMapIndex( 15),rot(  3),fineY(  0)   3d  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0  f8   0  f5   1   1   f   3   0
+Exit for chart human_world_hidden_region[Human World
+Hidden Region] -- Corridor 1 -8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 13   5c28    2f5c28 exit-door     tile(  40,  40,  3b) Corridor      -> shadow_tower_part1c                pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   2   7  fa   0   0   0   1  f8
+Exit for chart human_world_hidden_region[Human World
+Hidden Region] -- Totem 0 3 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain 5]
+ 26   5d60    2f5d60 exit-totem    tile(  3b,  40,  3e) Totem         -> illusion_world_gloomy_domain       pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  0),fineY(  3)   3b  40  3e   0   3   0   0   4   0  f4   0   0   0   0  96   0   9  fe   0   3  f8   0   0   3
+Exit for chart earth_world_rotting_cavern[Earth World
+Rotting Cavern] -- Entrance 2 0 --> human_world_solitary_region[Human World
+Solitary Region 3]
+ 13   5c28    5c9c28 exit-door     tile(  38,  40,  35) Entrance      -> human_world_solitary_region        pos(  9  ,2  ,9),unknown(  0  ,0),destMapIndex(  4),rot(  2),fineY(  0)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   9   2   8   0   0   4   2   0
+Exit for chart earth_world_quaking_cavern[Earth World
+Quaking Cavern] -- Entrance 3 0 --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 3    5b38    65fb38 exit-door     tile(  41,  40,  40) Entrance      -> shadow_tower_part1c                pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   41  40  40   0  fc   0   0   0   0   0   0   0   0   0  a5   0   f   0  12   0   0   8   3   0
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Entrance 3 0 --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area 4]
+ 3    5b38    7f8b38 exit-door     tile(  3e,  40,  35) Entrance      -> water_world_watery_labyrinth_area  pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  3),fineY(  0)   3e  40  35   0  fc   0   0   0   0   5   0   0   0   0  b6   0   8   0  f5   0   0  20   3   0
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Bridge 1 -8 --> death_world_undead_layer[Death World
+Undead Layer 5]
+ 1    5b08    7f8b08 exit-door     tile(  4a,  40,  4a) Bridge        -> death_world_undead_layer           pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)   4a  40  4a   0  fc   0   0   0   0   0   0   0   0   0  d5   1   0   1   4   a   0  28   1  f8
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Exit 3 -8 --> shadow_tower_part3c[Shadow Tower Part3 C 3]
+ 11   5bf8    7f8bf8 exit-door     tile(  37,  40,  35) Exit          -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   6  fc   0   0  29   3  f8
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Jump in 0 1 --> human_world_forgotten_region[Human World
+Forgotten Region 5]
+ 19   5cb8    7f8cb8 exit-totem    tile(  3e,  3f,  36) Jump in       -> human_world_forgotten_region       pos(  6  ,1  ,6),unknown(  4  ,0),destMapIndex(  0),rot(  0),fineY(  1)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1   6   1  ff   4   0   0   0   1
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Totem 0 3 --> human_world_forgotten_region[Human World
+Forgotten Region 5]
+ 16   5c70    7f8c70 exit-totem    tile(  37,  40,  36) Totem         -> human_world_forgotten_region       pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  0),fineY(  3)   37  40  36   0   3   0   0   4   0   4   0   0   0   0  d9   1   9  fe   0   3  f8   0   0   3
+Exit for chart fire_world_phoenix_cave[Fire World
+Phoenix Cave] -- Entrance 0 0 --> water_world_sunken_river_area[Water World
+Sunken River Area 5]
+ 0    5af0    1c82f0 exit-door     tile(  3b,  40,  43) Entrance      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 23),rot(  0),fineY(  0)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   0   0  f8   0   0  17   0   0
+Exit for chart fire_world_phoenix_cave[Fire World
+Phoenix Cave] -- Exit 3 -8 --> human_world_solitary_region[Human World
+Solitary Region 3]
+ 1    5b08    1c8308 exit-door     tile(  41,  40,  43) Exit          -> human_world_solitary_region        pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0   4   1  fb   0   0  29   3  f8
+Exit for chart fire_world_ashen_cavern[Fire World
+Ashen Cavern] -- Cerberus 0 2 --> fire_world_molten_cavern[Fire World
+Molten Cavern 5]
+ 17   5c88    92c488 exit-portal   tile(  61,  44,  3c) Cerberus      -> fire_world_molten_cavern           pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1   d   f   0   6   0   0   0   2
+Exit for chart fire_world_ashen_cavern[Fire World
+Ashen Cavern] -- Start 0 2 --> fire_world_burning_cavern[Fire World
+Burning Cavern 3]
+ 6    5b80    92c380 exit-portal   tile(  41,  40,  36) Start         -> fire_world_burning_cavern          pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1   d   f   0   6   0   0   0   2
+Exit for chart water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Entrance 3 0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 4]
+ 8    5bb0    ee23b0 exit-door     tile(  48,  40,  35) Entrance      -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 15),rot(  3),fineY(  0)   48  40  35   0  fc   0   0   0   0   0   0   0   0   0  ea   0  fd   0  f5   0   0   f   3   0
+Exit for chart water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Exit 1 -8 --> human_world_solitary_region[Human World
+Solitary Region 3]
+ 9    5bc8    ee23c8 exit-door     tile(  49,  40,  35) Exit          -> human_world_solitary_region        pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0   2   7  fa   0   0   0   1  f8
+Exit for chart monster_world_false_eye_area[Monster World
+False Eye Area] -- Entrance -1 0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain 5]
+ 9    5bc8    135bc8 exit-door     tile(  3d,  40,  36) Entrance      -> illusion_world_gloomy_domain       pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot( -1),fineY(  0)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   4   0   d   0   0   4  ff   0
+Exit for chart monster_world_false_eye_area[Monster World
+False Eye Area] -- Totem 0 0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 3]
+ 10   5be0    135be0 exit-totem    tile(  3f,  40,  38) Totem         -> death_world_dark_castle_layer      pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3f  40  38   0   3   0   0   8   0   0   0   4  4c  fb  93   0  19  fe   0  fb   0   0   0   0
+Exit for chart monster_world_screeching_area[Monster World
+Screeching Area] -- Entrance 0 0 --> shadow_tower_part2a[Shadow Tower Part2 A 5]
+ 0    5af0    8992f0 exit-door     tile(  4a,  40,  44) Entrance      -> shadow_tower_part2a                pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 23),rot(  0),fineY(  0)   4a  40  44   0  fc   0   0   0   0   0   0   0   0   0  35   0   0   0  f8   0   0  17   0   0
+Exit for chart monster_world_screeching_area[Monster World
+Screeching Area] -- Totem 16 3 --> water_world_white_rain_area[Water World
+White Rain Area 5]
+ 3    5b38    899338 exit-totem    tile(  48,  40,  43) Totem         -> water_world_white_rain_area        pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot( 16),fineY(  3)   48  40  43   0   3   0   0   4   0  fc   0   0   0   4  32   0  25  fd   0   2  f8   0  10   3
+Exit for chart monster_world_screeching_area[Monster World
+Screeching Area] -- Necron 0 2 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 3]
+ 6    5b80    899380 exit-totem    tile(  44,  40,  4e) Necron        -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)   44  40  4e   0   3   0   0   0   0   0   0   0   0  fc  54   0  19  f3   0   0   0   0   0   2
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- Entrance 3 -8 --> shadow_tower_part2b[Shadow Tower Part2 B 5]
+ 1    5b08    6f1308 exit-door     tile(  3b,  40,  46) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   4   5   0   0   0  28   3  f8
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- Connection 0 0 --> illusion_world_dream_domain[Illusion World
+Dream Domain 5]
+ 6    5b80    6f1380 exit-portal   tile(  40,  40,  38) Connection    -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0  26   4   0   0   0   0   0   0
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- Exit 0 2 --> fire_world_molten_cavern[Fire World
+Molten Cavern 5]
+ 10   5be0    6f13e0 exit-portal   tile(  4f,  40,  38) Exit          -> fire_world_molten_cavern           pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1   d   f   0   6   0   0   0   2
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- To Boss 0 3 --> fire_world_burning_cavern[Fire World
+Burning Cavern 3]
+ 8    5bb0    6f13b0 exit-portal   tile(  4f,  40,  47) To Boss       -> fire_world_burning_cavern          pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1  14   7  ff   6   8   0   0   3
+Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Top left 3 0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer 3]
+ 0    5af0   111a2f0 exit-door     tile(  40,  41,  45) Top left      -> death_world_dark_castle_layer      pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  3),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0  bb   1   a  ff   4   0   0  19   3   0
+Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Top right 3 0 --> monster_world_screeching_area[Monster World
+Screeching Area 4]
+ 4    5b50   111a350 exit-door     tile(  46,  43,  43) Top right     -> monster_world_screeching_area      pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   46  43  43   0  fc   0   0   0   0   0   0  fc   0   0  c9   1  fc   0  f2   1   1  14   3   0
+Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Jump  --> shadow_tower_part2b[Shadow Tower Part2 B 5]
+ 
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Exit 1 0 --> water_world_impure_pool_area[Water World
+Impure Pool Area 6]
+ 34   5e20    38c620 exit-door     tile(  46,  40,  46) Exit          -> water_world_impure_pool_area       pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  1),fineY(  0)   46  40  46   0  fc   0   0   0   0   0   0   0   0   0   0   0  fe   2  fa  f8   0   9   1   0
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Jump down 1 -8 --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern 6]
+ 37   5e68    38c668 exit-door     tile(  3d,  41,  4a) Jump down     -> earth_world_hostile_rock_cavern    pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)   3d  41  4a   0  fc   0   0   0   0   0   0   0   0   0  73   0   0   1   4   a   0  28   1  f8
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Totem 0 3 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 4]
+ 18   5ca0    38c4a0 exit-totem    tile(  39,  40,  45) Totem         -> earth_world_false_pit_cavern       pos( 15 ,-8 ,15),unknown(-10  ,0),destMapIndex(  0),rot(  0),fineY(  3)   39  40  45   0   3   0   0   4   0   8   0   0   0   0  68   0   f  f8   0  f6   0   0   0   3
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Drop in 0 1 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 4]
+ 41   5ec8    38c6c8 exit-totem    tile(  43,  3f,  44) Drop in       -> earth_world_false_pit_cavern       pos( 15 ,-3 ,15),unknown(-10  ,0),destMapIndex(248),rot(  0),fineY(  1)   43  3f  44   0   3   0   0   c   0  fc   0   0   0   0  67   0   f  fd  ff  f6   0  f8   0   1
+Exit for chart fire_world_molten_cavern[Fire World
+Molten Cavern] -- Abraxus 0 0 --> illusion_world_worship_domain[Illusion World
+Worship Domain 4]
+ 27   5d78    b45578 exit-portal   tile(  40,  40,  42) Abraxus       -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0   d   f   0  f9   0   0   0   0
+Exit for chart fire_world_molten_cavern[Fire World
+Molten Cavern] -- Platform 8 0 --> fire_world_ashen_cavern[Fire World
+Ashen Cavern 4]
+ 19   5cb8    b454b8 exit-portal   tile(  4c,  40,  42) Platform      -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  8),fineY(  0)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  12   1   0  f6  10  10   8   0
+Exit for chart water_world_sunken_river_area[Water World
+Sunken River Area] -- Pool 1 -8 --> shadow_tower_part1b[Shadow Tower Part1 B]
+ 5    5b68    a44368 exit-door     tile(  41,  40,  49) Pool          -> shadow_tower_part1b                pos( -4  ,6 ,-4),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  fc   6  ff   0   0   0   1  f8
+Exit for chart water_world_sunken_river_area[Water World
+Sunken River Area] -- Entrance 3 0 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave 4]
+ 1    5b08    a44308 exit-door     tile(  40,  40,  40) Entrance      -> fire_world_phoenix_cave            pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   0  f2   1   1  14   3   0
+Exit for chart water_world_white_rain_area[Water World
+White Rain Area] -- Entrance 0 -8 --> death_world_undead_layer[Death World
+Undead Layer 5]
+ 4    4230   1010a30 exit-door     tile(  3d,  40,  3f) Entrance      -> death_world_undead_layer           pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   3d  40  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
+Exit for chart water_world_white_rain_area[Water World
+White Rain Area] -- Totem 8 3 --> monster_world_screeching_area[Monster World
+Screeching Area 4]
+ 6    4260   1010a60 exit-totem    tile(  3c,  40,  42) Totem         -> monster_world_screeching_area      pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  8),fineY(  3)   3c  40  42   0   3   0   0   4   0   4   0   0   0   8  4d   0  11   8   0   3   0   0   8   3
+Exit for chart illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Ladder down 1 -8 --> monster_world_false_eye_area[Monster World
+False Eye Area 4]
+ 3    5b38    4a8b38 exit-door     tile(  3e,  42,  39) Ladder down   -> monster_world_false_eye_area       pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  1),fineY( -8)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0   0   9   3   9   0   0   1  f8
+Exit for chart illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Entrance 2 -8 --> earth_world_stone_cavern[Earth World
+Stone Cavern 6]
+ 1    5b08    4a8b08 exit-door     tile(  39,  40,  40) Entrance      -> earth_world_stone_cavern           pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
+Exit for chart illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Totem 0 3 --> human_world_hidden_region[Human World
+Hidden Region 4]
+ 10   5be0    4a8be0 exit-totem    tile(  3d,  40,  43) Totem         -> human_world_hidden_region          pos( 15 ,-8 ,15),unknown(-10  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0   f  f8   0  f6   0   0   0   3
+Exit for chart illusion_world_dream_domain[Illusion World
+Dream Domain] -- Totem 0 0 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer 5]
+ 4    5b50   1095350 exit-totem    tile(  45,  40,  41) Totem         -> death_world_lingering_curse_layer  pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  0),fineY(  0)   45  40  41   0   3   0   0   0   0   8   0   0   0   6  18   0  17  14   0   0   0  f8   0   0
+Exit for chart illusion_world_dream_domain[Illusion World
+Dream Domain] -- Entrance 0 3 --> illusion_world_worship_domain[Illusion World
+Worship Domain 4]
+ 3    5b38   1095338 exit-portal   tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0  14   7  ff   6   8   0   0   3
+Exit for chart death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Door 2 0 --> human_world_hidden_region[Human World
+Hidden Region 4]
+ 1    5b08    767b08 exit-door     tile(  30,  3e,  3d) Door          -> human_world_hidden_region          pos(  9  ,1  ,9),unknown(  0  ,0),destMapIndex( 27),rot(  2),fineY(  0)   30  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f5   1   9   1   1   0   0  1b   2   0
+Exit for chart death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Box room 0 0 --> illusion_world_dream_domain[Illusion World
+Dream Domain 5]
+ 2    5b20    767b20 exit-totem    tile(  32,  41,  39) Box room      -> illusion_world_dream_domain        pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  0),fineY(  0)   32  41  39   0   3   0   0   4   0  fc   0  fe   0   0  68   0  19  fe   0  fb   0   0   0   0
+Exit for chart death_world_undead_layer[Death World
+Undead Layer] -- King's room 3 0 --> water_world_white_rain_area[Water World
+White Rain Area 5]
+ 12   5c10    c78c10 exit-door     tile(  41,  41,  41) King's room   -> water_world_white_rain_area        pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 15),rot(  3),fineY(  0)   41  41  41   0  fc   0   0   0   0   0   0  fc   0   0  af   0  fd   0  f5   0   0   f   3   0
+Exit for chart death_world_undead_layer[Death World
+Undead Layer] -- Entrance 1 0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern 4]
+ 15   5c58    c78c58 exit-door     tile(  41,  41,  2e) Entrance      -> earth_world_false_pit_cavern       pos( 10  ,0 ,10),unknown(  6  ,0),destMapIndex( 15),rot(  1),fineY(  0)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a   0   9   6   0   f   1   0
+Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Edge 1 -8 --> water_world_sunken_river_area[Water World
+Sunken River Area 5]
+ 4    5b50     21350 exit-door     tile(  3b,  46,  3f) Edge          -> water_world_sunken_river_area      pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   3b  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   2   7  fa   0   0   0   1  f8
+Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Middle 1 -8 --> human_world_cursed_region[Human World
+Cursed Region 7]
+ 8    5bb0     213b0 exit-door     tile(  42,  46,  43) Middle        -> human_world_cursed_region          pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   42  46  43   0  fc   0   0   0   0   0   0  fc   0   0  74   0   2   7  fa   0   0   0   1  f8
+Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 
+Exit for chart earth_world_stone_cavern[Earth World
+Stone Cavern] -- Entrance 0 0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain 5]
+ 4    4230    db4a30 exit-door     tile(  40,  40,  42) Entrance      -> illusion_world_gloomy_domain       pos( 10  ,1 ,10),unknown(  0  ,0),destMapIndex( 27),rot(  0),fineY(  0)   40  40  42   0  fc   0   0   0   0   0   0   0   0   0   0   0   a   1   9   0   0  1b   0   0
+Exit for chart earth_world_stone_cavern[Earth World
+Stone Cavern] -- Exit 3 -8 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain 3]
+ 7    4278    db4a78 exit-door     tile(  30,  45,  36) Exit          -> illusion_world_bewilderment_domain pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0   4   5   0   0   0  28   3  f8
+Exit for chart earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Entrance -1 0 --> human_world_forgotten_region[Human World
+Forgotten Region 5]
+ 1    5b08    f78b08 exit-door     tile(  3d,  40,  38) Entrance      -> human_world_forgotten_region       pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot( -1),fineY(  0)   3d  40  38   0  fc   0   0   0   0  fd   0   0   0   0   8   1   0   0  fc   1   1   5  ff   0
+Exit for chart earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Boss room 16 3 --> water_world_impure_pool_area[Water World
+Impure Pool Area 6]
+ 3    5b38    f78b38 exit-totem    tile(  3e,  40,  4b) Boss room     -> water_world_impure_pool_area       pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot( 16),fineY(  3)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0  25  fd   0   2  f8   0  10   3
+Exit for chart water_world_impure_pool_area[Water World
+Impure Pool Area] -- Entrance 1 -8 --> human_world_forgotten_region[Human World
+Forgotten Region 5]
+ 9    5bc8    5353c8 exit-door     tile(  44,  40,  33) Entrance      -> human_world_forgotten_region       pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   2   7  fa   0   0   0   1  f8
+Exit for chart water_world_impure_pool_area[Water World
+Impure Pool Area] -- Flush down 3 -8 --> human_world_cursed_region[Human World
+Cursed Region 7]
+ 11   5bf8    5353f8 exit-door     tile(  48,  43,  33) Flush down    -> human_world_cursed_region          pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   4   3   0   0   0  29   3  f8
+Exit for chart water_world_impure_pool_area[Water World
+Impure Pool Area] -- Totem 0 1 --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern 6]
+ 14   5c40    535440 exit-totem    tile(  46,  40,  47) Totem         -> earth_world_hostile_rock_cavern    pos(  6  ,1  ,6),unknown(  4  ,0),destMapIndex(  0),rot(  0),fineY(  1)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1   6   1  ff   4   0   0   0   1
+Exit for chart human_world_cursed_region[Human World
+Cursed Region] -- Entrance -1 -8 --> water_world_impure_pool_area[Water World
+Impure Pool Area 6]
+ 3    5b38     a0338 exit-door     tile(  40,  40,  38) Entrance      -> water_world_impure_pool_area       pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot( -1),fineY( -8)   40  40  38   0  fc   0   0   0   0   0   0  f8   0   0   0   0   5   3   0   0   0   0  ff  f8
+Exit for chart human_world_cursed_region[Human World
+Cursed Region] -- Guardian side 1 0 --> shadow_tower_part1b[Shadow Tower Part1 B]
+ 31   5dd8     a05d8 exit-door     tile(  4d,  40,  47) Guardian side -> shadow_tower_part1b                pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  1),fineY(  0)   4d  40  47   0  fc   0   0   0   0   0   0  f6   0   0  75   0  fe   2  fa  f8   0   9   1   0
  writing .\generated\bonanza\spoilers\changeset.json
