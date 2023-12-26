@@ -1,0 +1,1452 @@
+** Map info dump
+
+Setup Area shadow_tower_part1 in FDAT file index 4 map index 0
+
+Objects 
+idx  in_file offset type     
+0    exit-door     tile(  45,  43,  41)   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
+1    gate-reset    tile(  45,  43,  40)   0  fc   0   0   0   0   0   0  fc   0   0  b9   0  ff  ff  ff   1   1   0   0   0
+2    gate-reset    tile(  40,  49,  43)   0  fc   0   0   0   0   0   0  fc   0   0  f5   1  ff  ff  ff   1   1   0   0   0
+3    gate-reset    tile(  3c,  46,  3f)   0  fc   0   0   0   0   0   0  fc   0   0  63   0  ff  ff  ff   1   1   0   0   0
+4    exit-door     tile(  3b,  46,  3f)   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   d  ff   8   1   1   1   3   8
+5    exit-door     tile(  43,  47,  3a)   0  fc   0   0   0   0   0   0  fc   0   0  bc   0  fd   1   9   1   1   6   3   0
+6    gate-reset    tile(  42,  47,  3a)   0  fc   0   0   0   0   0   0  fc   0   0  86   0  ff  ff  ff   1   1   0   0   0
+7    gate-reset    tile(  41,  46,  43)   0  fc   0   0   0   0   0   0  fc   0   0  9f   0  ff  ff  ff   1   1   0   0   0
+8    exit-door     tile(  42,  46,  43)   0  fc   0   0   0   0   0   0  fc   0   0  74   0   6   0   5   1   1   6   3   0
+9    exit-door     tile(  45,  49,  3f)   0  fc   0   0   0   0   0   0   0   0   0   0   0  f9   1  ef   1   1  1b   0   0
+10   gate-reset    tile(  44,  49,  3f)   0  fc   0   0   0   0   0   0   0   0   0   0   0  ff  ff  ff   1   1   0   0   0
+11   exit-door     tile(  40,  49,  44)   0  fc   0   0   0   0   0   0  fc   0   0   0   0  f9   0  f5   1   1   b   3   0
+12   unknown       tile(  3d,  41,  3f)   0  9a   0   0   4   0   0   0  fc   0   0  10   0   f  fa  ff  ff  ff  ff   0  ff
+13   gate-0        tile(  40,  42,  3f)   0  fb   0   0   0   0   0   0   0   0   0   3   0  80  80   0  7f  80   0   5   0
+14   gate-0        tile(  40,  48,  3f)   0  fb   0   0   0   0   0   0   0   0   0  8a   0  80  80   0  7f  80   0   5   0
+15   gate-1        tile(  41,  42,  3f)   0  fb   0   0   0   0   0   0   0   0   0   0   0  80  80   1  7f  80   0  f0   0
+16   gate-1        tile(  40,  49,  42)   0  fb   0   0   0   0   0   0   0   0   0  96   0  80  80   1  7f  80   0  f0   0
+
+Setup Area human_world_solitary_region in FDAT file index 44 map index 4
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  3f,  40,  4c)   0  20   0   0   4   0   0   0   0   0  f6  22   0  4b  fd  ff  ff  ff  ff   0  ff
+1    unknown       tile(  3f,  40,  4c)   0  20   0   0   4   0   0   0  f8   0  f6  22   0   0  fe   0   0  ff  ff   0  ff
+2    unknown       tile(  3f,  40,  4c)   0  20   0   0   4   0   0   0  f8   0   a  22   0   0  fe   0   0  ff  ff   0  ff
+3    unknown       tile(  41,  40,  4c)   0  20   0   0   4   0   0   0  f8   0   a  24   0  50  fd  ff  ff  ff  ff   0  ff
+4    unknown       tile(  41,  40,  4c)   0  20   0   0   4   0   0   0   0   0   a  24   0   0  fe   0   0  ff  ff   0  ff
+5    unknown       tile(  42,  40,  4c)   0  20   0   0   4   0   0   0   0   0   a  25   0   0  fe   0   0  ff  ff   0  ff
+6    unknown       tile(  42,  40,  48)   0  20   0   0   0   0   a   0   0   0   0  2b   0  46  fd  ff  ff  ff  ff   0  ff
+7    unknown       tile(  42,  40,  49)   0  20   0   0   0   0   a   0   0   0   0  2a   0   0  fe   0   0  ff  ff   0  ff
+8    unknown       tile(  42,  40,  48)   0  20   0   0   0   0  f6   0  f8   0   0  2b   0   0  fe   0   0  ff  ff   0  ff
+9    unknown       tile(  44,  40,  48)   0  20   0   0   0   0  f6   0  f8   0   0  31   0   0  fe   0   0  ff  ff   0  ff
+10   unknown       tile(  44,  40,  48)   0  20   0   0   0   0   a   0  f8   0   0  31   0   0  fe   0   0  ff  ff   0  ff
+11   unknown       tile(  44,  40,  49)   0  10   0   0   8   0   0   0   0  40   1  32   0  20  ff  32   0  63   0   1  ff
+12   unknown       tile(  49,  40,  48)   0  1c   0   0   0   0   0   0   0   0   0  43   0   d  fc  43   0  61   0   1  ff
+13   scenery       tile(  48,  40,  48)   0  1b   0   0   0   0   0   0   0   0   0  42   0   0   0   0   0   0   0   0   0
+14   scenery       tile(  47,  40,  48)   0  1a   0   0   3   0   8   0   0  48  f4  3e   0   0   0   0   0   0   0   0   0
+15   scenery       tile(  48,  40,  49)   0  1a   0   0   9   0  fc   0   0  24  fa  47   0   0   0   0   0   0   0   0   0
+16   scenery       tile(  49,  40,  4a)   0  1a   0   0   a  d0   7   0   0   0   1  4b   0   0   0   0   0   0   0   0   0
+17   scenery       tile(  49,  40,  49)   0  1b   0   0   0   0  fe   0   0   0   0  48   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  47,  40,  4a)   0  1b   0   0   0   0   0   0   0   0   0  4d   0   0   0   0   0   0   0   0   0
+19   unknown       tile(  47,  40,  49)   0  1c   0   0   0   0   0   0   0   0   0  46   0   f  fc  46   0  62   0   1  ff
+20   scenery       tile(  48,  40,  4a)   0  1b   0   0   0   0   0   0   0   0   0  4c   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  41,  40,  47)   0  19   0   0   0   0  f8   0   0   0   7   c   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  40,  40,  47)   0  19   0   0   0   0  f8   0   0   0   7   c   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  3f,  40,  47)   0  19   0   0   0   0  f8   0   0   0   7  17   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  3d,  40,  4a)   0  19   0   0   0   0   8   0   0   0  f9  1b   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  3e,  40,  4a)   0  19   0   0   0   0   8   0   0   0  f9  14   0   0   0   0   0   0   0   0   0
+26   scenery       tile(  3f,  40,  4a)   0  19   0   0   0   0   8   0   0   0  f9  13   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  40,  40,  4a)   0  19   0   0   0   0   8   0   0   0  f9  10   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  3d,  40,  47)   0  19   0   0   0   0   8   0   0   0   7  18   0   0   0   0   0   0   0   0   0
+29   scenery       tile(  49,  40,  4a)   0  1a   0   0   4  9c  ff   0   0   0   c  52   0   0   0   0   0   0   0   0   0
+30   scenery       tile(  47,  40,  48)   0  1a   0   0   6   0  f4   0   0   0   4  40   0   0   0   0   0   0   0   0   0
+31   exit-door     tile(  44,  40,  4e)   0  fc   0   0   0   0   0   0   0   0   0  60   0  fd   0  fc   0   0   5   0   0
+32   gate-reset    tile(  44,  40,  4d)   0  fc   0   0   0   0   0   0   0   0   0  5b   0  ff  ff  ff   1   1   4   0   0
+33   gate-reset    tile(  47,  40,  4d)   0  fc   0   0   0   0   0   0   0   0   0  59   0  ff  ff  ff   1   1   4   0   0
+34   exit-door     tile(  47,  40,  4e)   0  fc   0   0   0   0   0   0   0   0   0  5a   0   0   0  fc   1   1   5   0   0
+35   exit-door     tile(  49,  42,  47)   0  fc   0   0   0   0   0   0   0   0   0  5d   0   0   0  f9   0   0   1   2  ef
+36   gate-reset    tile(  49,  42,  48)   0  fc   0   0   0   0   0   0   0   0   0  5c   0  ff  ff  ff   1   1   4   0   0
+37   gate-reset    tile(  40,  40,  41)   0  fc   0   0   0   0   0   0   0   0  fc   2   0  ff  ff  ff   1   1   4   0   0
+38   exit-door     tile(  40,  40,  40)   0  fc   0   0   0   0   0   0   0   0  fc   0   0   5   3   0   0   0   0   0  f8
+39   scenery       tile(  3e,  40,  48)   0  ba   0   0   4  7c  fc   0  f8   0   8  19   0   0   0   0   0   0   0   0   0
+40   gate-1        tile(  3d,  40,  48)   0  fb   0   0   0   0   0   0   0   0   8  1d   0  80  80   1  7f  80   2  f0   0
+41   gate-5        tile(  46,  40,  48)   0  fb   0   0   0   0   0   0   0   0   0  40   0  80  80   5  7f  80   2   0   3
+42   unknown       tile(  47,  40,  4c)   0  10   0   0   8   0   0   0   0   0   0  54   0  20  ff  54   0  64   0   1  ff
+43   gate-0        tile(  40,  40,  4c)   0  fb   0   0   0   0   0   0   0   0  f6   f   0  80  80   0  7f  80   2  f0   0
+44   gate-2        tile(  42,  40,  49)   0  fb   0   0   0   0  f6   0   0   0   0  2a   0  80  80   2  7f  80   2  f0   0
+45   gate-3        tile(  43,  40,  4c)   0  fb   0   0   0   0   0   0   0   0   0  26   0  80  80   3  7f  80   2  f0   0
+46   gate-4        tile(  44,  40,  49)   0  fb   0   0   0   0   8   0   0   0  fc  32   0  80  80   4  7f  80   2  f0   0
+47   gate-6        tile(  4a,  40,  4a)   0  fb   0   0   0   0   0   0   0   0   0  4a   0  80  80   6  7f  80   2  f0   0
+48   gate-7        tile(  40,  40,  43)   0  fb   0   0   0   0   a   0   0   0   0   6   0  80  80   7  7f  80   2  f0   0
+49   scenery       tile(  42,  40,  46)   0  da   0   0   8   0   0  24  fa   0   0  2d   0   7   0   0   0   0   0   0   0
+50   scenery       tile(  3d,  40,  4c)   0  dd   0   0   4   0   0  24  fa   0   0  21   0   6   0   0   0   0   0   0   0
+
+Setup Area human_world_hidden_region in FDAT file index 54 map index 5
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  41,  40,  45)   0  81   0   0   e   0  fc   0   0   0  fc   8   0   0   0   0   0   0   0   0   0
+1    scenery       tile(  41,  40,  43)   0  80   0   0   4   0  f8   0   0   0   8   5   0   0   0   0   0   0   0   0   0
+2    scenery       tile(  41,  40,  44)   0  22   0   0   2  dc   5   0   0   0  fc   6   0   0   0   0   0   0   0   0   0
+3    scenery       tile(  46,  40,  42)   0  21   0   0   c   0  fe   0  fc   0   0   4   0   0   0   0   0   0   0   0   0
+4    scenery       tile(  3f,  40,  44)   0  3c   0   0   0   0   4   0   0   0   0  10   0   0   0   0   0   0   0   0   0
+5    scenery       tile(  40,  40,  44)   0  3c   0   0   0   0   0   0   0   0   0   a   0   0   0   0   0   0   0   0   0
+6    scenery       tile(  3f,  40,  41)   0  db   0   0   8   0   0  24  fa   0   0   d   0   8   0   0   0   0   0   0   0
+7    scenery       tile(  40,  40,  48)   0  1f   0   0   4   0   0   0   0   0   0  3e   0   0   0   0   0   0   0   0   0
+8    scenery       tile(  3f,  40,  4b)   0  1f   0   0   4   0   0   0   0   0   0  49   0   0   0   0   0   0   0   0   0
+9    exit-door     tile(  3d,  40,  3b)   0  fc   0   0   0   0   0   0   0   0   0  1f   0   4   0   d   0   0   4   0   0
+10   gate-reset    tile(  3d,  40,  3c)   0  fc   0   0   0   0   0   0   0   0   0  21   0  ff  ff  ff   1   1   5   0   0
+11   gate-reset    tile(  40,  40,  3c)   0  fc   0   0   0   0   0   0   0   0   0  22   0  ff  ff  ff   1   1   5   0   0
+12   totem         tile(  42,  40,  4d)   0   0   0   0   c   0   c   0   0   0   0  92   0   0   0   0   0   0   0   0   0
+13   exit-door     tile(  40,  40,  3b)   0  fc   0   0   0   0   0   0   0   0   0  1f   0   7   0   d   0   0   4   0   0
+14   unknown       tile(  44,  40,  4b)   0  39   0   0   4   0   0   0   0   0  fa  53   0  14  ff  53   0  9b   0   1  ff
+15   unknown       tile(  41,  40,  4b)   0  3a   0   0   4   0   0   0   0   0   0  47   0  20  fc  47   0  98   0   1  ff
+16   unknown       tile(  41,  40,  49)   0  3a   0   0   4   0   0   0   0   0   0  33   0  20  fc  33   0  99   0   1  ff
+17   unknown       tile(  3d,  40,  48)   0  3a   0   0   c   0   0   0   0   0   0  3b   0  20  fc  3b   0  97   0   1  ff
+18   scenery       tile(  43,  40,  47)   0  37   0   0   3   0   8   0   0   0  f8  28   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  44,  40,  47)   0  36   0   0   0   0  f8   0   0   0   0  2b   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  49,  40,  4a)   0  37   0   0   0   0   8   0   0   0   0  5c   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  49,  40,  4a)   0  37   0   0   3   0   2   0   0   0  f8  5d   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  49,  40,  4a)   0  36   0   0   8   0  fa   0   0   0   0  5d   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  49,  40,  4a)   0  37   0   0   3   0  f8   0   0   0  f8  5d   0   0   0   0   0   0   0   0   0
+24   unknown       tile(  35,  41,  49)   0  39   0   0   0   0  fa   0  f8   0   0  81   0  14  ff  81   0  9a   0   1  ff
+25   totem         tile(  43,  40,  3e)   0   1   0   0   c   0   c   0   0   0   0  94   0  2c   0   0   0   0   0   0   0
+26   exit-totem    tile(  3b,  40,  3e)   0   3   0   0   4   0  f4   0   0   0   0  96   0   6  fa   0   5   0   0   0   3
+27   gate-6        tile(  39,  41,  4b)   0  fb   0   0   0   0   0   0   0   0   0  8c   0  80  80   6  7f  80   0  78   0
+28   gate-2        tile(  4a,  40,  4a)   0  fb   0   0   0   0   0   0   0   0   0  5c   0  80  80   2  7f  80   0  f0   0
+29   scenery       tile(  47,  40,  49)   0  dd   0  98   8   0   4  24  fa  d4  fe  58   0   9   0   0   0   0   0   0   0
+33   gate-1        tile(  42,  40,  44)   0  fb   0   0   0   0   0   0   0   0   0   7   0  40  40   1  7f  40   0  3c   0
+34   gate-0        tile(  46,  40,  42)   0  fb   0   0   0   0   0   0   0   0   0   4   0  40  40   0  7f  40   0  3c   0
+35   gate-3        tile(  3d,  40,  4a)   0  fb   0   0   0   0   0   0   0   0  f8  45   0  80  80   3  7f  80   0  3c   0
+36   gate-4        tile(  34,  41,  48)   0  fb   0   0   0   0   0   0   0   0  f8  85   0  40  40   4  7f  40   0  3c   0
+37   gate-5        tile(  44,  40,  4a)   0  fb   0   0   0   0  f8   0   0   0   0  6e   0  40  40   5  7f  40   0  3c   0
+38   gate-7        tile(  3d,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  70   0  40  40   7  7f  40   0  3c   0
+39   gate-8        tile(  42,  40,  47)   0  fb   0   0   0   0   0   0   0   0   0  2d   0  40  40   8  7f  40   0  3c   0
+
+Setup Area human_world_forgotten_region in FDAT file index 64 map index 6
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  39,  40,  44)   0  71   0   0   4  d6   6   0   0  ff  f9  33   0   0   0   0   0   0   0   0   0
+1    unknown       tile(  39,  40,  44)   0  70   0   0   4  d6   6  f6  ff  ff  f9  33   0  20  fc  ff  ff  ff  ff   0  ff
+2    scenery       tile(  44,  40,  3e)   0  76   0   0   2   0  fe   0   0  dc   5  16   0   0   0   0   0   0   0   0   0
+3    scenery       tile(  39,  40,  43)   0  dd   0   0   4   0  fe  24  fa  20   3  36   0   c   0   0   0   0   0   0   0
+4    scenery       tile(  3b,  40,  44)   0  79   0   0   0   0  fa   0   0   0  fa  32   0   0   0   0   0   0   0   0   0
+5    scenery       tile(  3a,  40,  44)   0  78   0   0   2  b0   4   0   0   0  fc  33   0   0   0   0   0   0   0   0   0
+6    unknown       tile(  46,  40,  3d)   0  6f   0   0   0   0   4   0   0   0   0  17   0  1c  fc  ff  f0  ff  ff   0  ff
+7    unknown       tile(  46,  40,  3d)   0  75   0   0   c  40   6   0   0   0   0  17   0  17  fc  ff  ff  ff  ff   0  f0
+8    unknown       tile(  44,  40,  3d)   0  73   0   0   0   0   3   0   0  80   4  12   0  2d  ff  12   0  75   0   1   7
+9    unknown       tile(  45,  40,  3d)   0  73   0   0   8   0  fd   0   0  80  fb  13   0  2d  ff  13   0  76   0   1   7
+10   scenery       tile(  46,  40,  42)   0  72   0   0   4   0  fc   0  f8   0   0  1e   0   0   0   0   0   0   0   0   0
+11   unknown       tile(  41,  40,  3d)   0  73   0   0   8   0  fd   0   0  80  fb  21   0  2d  ff  21   0  77   0   1   7
+12   unknown       tile(  3d,  40,  3e)   0  73   0   0   4  80  fb   0   0   0   3  25   0  2d  ff  25   0  7a   0   1   7
+13   unknown       tile(  3d,  40,  40)   0  73   0   0   4  80  fb   0   0   0   3  28   0  2d  ff  28   0  7b   0   1   7
+14   unknown       tile(  45,  40,  3c)   0  74   0   0   c  40   6   0   0  52   3  15   0  14  fc  ff  ff  ff  ff   0  ff
+15   unknown       tile(  42,  40,  3f)   0  7a   0   0   0   0   0   0   0   0  ff   e   0  14  ff   e   0  61   0   1  ff
+16   unknown       tile(  3c,  40,  3b)   0  7a   0   0   c   0  ff   0   0   0   0  3f   0  2d  ff  3f   0  62   0   1  ff
+17   totem         tile(  44,  40,  41)   0   2   0   0   4   0   2   0   0   0   0  1d   0  2d   0   0   0   0  fe  e8   0
+18   exit-totem    tile(  39,  40,  45)   0   3   0   0   4   0   8   0   0   0   0  68   0   5  fb   0  fe   0   0   0   3
+19   unknown       tile(  42,  40,  43)   0  7e   0   0   0   0  f8   0   0   0  fa   3   0   c  fc  ff  ff  ff  ff   0  ff
+20   unknown       tile(  42,  40,  43)   0  7e   0   0   0   0   8   0   0   0  fa   3   0   c  fc  ff  ff   5  ff   0  ff
+21   unknown       tile(  43,  40,  3d)   0  73   0   0   8   0  fd   0   0  80  fb  11   0  2d  ff  11   0  74   0   1   7
+22   unknown       tile(  3f,  40,  3d)   0  73   0   0   8   0  fd   0   0  80  fb  5d   0  2d  ff  5d   0  78   0   1   7
+23   unknown       tile(  40,  40,  3d)   0  73   0   0   0   0   3   0   0  80   4  5e   0  2d  ff  5e   0  79   0   1   7
+24   unknown       tile(  3d,  40,  3b)   0  7b   0   0   0   0  fe  78  ec   0   1  3e   0  46  fb  ff  ff  ff  ff   0  ff
+25   unknown       tile(  3d,  40,  3b)   0  7b   0   0   6   0   2  78  ec   0   2  3e   0  44  fb  ff  ff  ff  ff   0  ff
+26   scenery       tile(  46,  40,  40)   0  72   0   0   4   0  fc   0  f8   0   0  1a   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  46,  40,  3e)   0  72   0   0   c   0   4   0  f8   0   0  18   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  42,  40,  3d)   0  72   0   0   8   0   0   0  f8   0  fc  10   0   0   0   0   0   0   0   0   0
+29   scenery       tile(  3e,  40,  3d)   0  72   0   0   8   0   0   0  f8   0  fc  23   0   0   0   0   0   0   0   0   0
+30   scenery       tile(  3b,  40,  42)   0  72   0   0   0   0   2   0  f8   0   4  2d   0   0   0   0   0   0   0   0   0
+31   scenery       tile(  3d,  40,  43)   0  72   0   0   4   0  fc   0  f8   0   0  38   0   0   0   0   0   0   0   0   0
+32   scenery       tile(  3d,  40,  41)   0  72   0   0   4   0  fc   0  f8   0   0  2a   0   0   0   0   0   0   0   0   0
+33   scenery       tile(  3d,  40,  3c)   0  72   0   0   4   0  fc   0  f8   0   4  39   0   0   0   0   0   0   0   0   0
+34   exit-door     tile(  46,  40,  46)   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   6   3   1   1   0   1  f8
+35   gate-reset    tile(  46,  40,  45)   0  fc   0   0   0   0   0   0   0   0   0  1f   0  ff  ff  ff   1   1   6   0   0
+36   gate-reset    tile(  3d,  41,  49)   0  fc   0   0   0   0   0   0   0   0   0  1f   0  ff  ff  ff   1   1   6   0   0
+37   exit-door     tile(  3d,  41,  4a)   0  fc   0   0   0   0   0   0   0   0   0  73   0   2   7  fa   0   0   0   1  f8
+38   gate-6        tile(  46,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  17   0  40  40   6  7f  40   0  78   0
+39   gate-3        tile(  3c,  40,  3a)   0  fb   0   0   0   0   0   0   0   0   0  46   0  80  80   3  7f  80   0  f0   0
+40   gate-0        tile(  3c,  40,  40)   0  fb   0   0   0   0  f2   0   0   0   0  29   0  40  40   0  7f  40   0  3c   0
+41   exit-totem    tile(  43,  3f,  44)   0   3   0   0   c   0  fc   0   0   0   0  67   0   f  f8   0  f6   0   0   0   3
+42   gate-1        tile(  3c,  40,  3e)   0  fb   0   0   0   0  f2   0   0   0   0  26   0  40  40   1  7f  40   0  3c   0
+43   gate-2        tile(  39,  40,  42)   0  fb   0   0   0   0   0   0   0   0   0  37   0  40  40   2  7f  40   0  3c   0
+44   gate-4        tile(  3d,  40,  36)   0  fb   0   0   0   0   0   0   0   0   0  55   0  80  80   4  7f  80   0  3c   0
+45   gate-5        tile(  38,  40,  3b)   0  fb   0   0   0   0   0   0   0   0   0  43   0  80  80   5  7f  80   0  3c   0
+46   gate-7        tile(  42,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0   3   0  80  80   7  7f  80   0  3c   0
+47   totem         tile(  44,  40,  43)   0   0   0   0   4   0   2   0   0   0   0  7d   0   0   0   0   0   0   0   0   0
+48   scenery       tile(  3a,  40,  45)   0  db   0   0   8   0   0  24  fa   0  f8  6e   0   d   0   0   0   0   0   0   0
+
+Setup Area human_world_cursed_region in FDAT file index 14 map index 1
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  45,  40,  40)   0  3f   0   0   c   0  fe   0  fc   0   0  79   0  18  ff  79   0  94   0   1  ff
+1    totem         tile(  47,  40,  4d)   0   0   0   0   c  dc   5  f4   1   0   0  54   0   0   0   0   0   0   0   0   0
+2    gate-reset    tile(  40,  40,  39)   0  fc   0   0   0   0   0  80  f7   0   0   3   0  ff  ff  ff   1   1   1   0   0
+3    exit-door     tile(  40,  40,  38)   0  fc   0   0   0   0   0   0  f8   0   0   0   0   9   2   8   0   0   4   2   0
+4    unknown       tile(  42,  40,  43)   0  1e   0   0   8   0   0   0   0   0   0  2e   0  1c  ff  2e   0  93   0   1  ff
+5    unknown       tile(  42,  40,  48)   0  1e   0   0   0   0   0   0  f8   0   0  3c   0  1c  ff  3c   0  96   0   1  ff
+6    scenery       tile(  45,  40,  40)   0   5   0   0   8   0  fc   0  fb  38  ff  79   0   0   0   0   0   0   0   0   0
+7    unknown       tile(  3e,  40,  45)   0   4   0   0   c   0   0   0   b   0  ff  30   0  1e  ff  30   0  95   0   1  ff
+8    unknown       tile(  4c,  40,  49)   0  1e   0   0   4   0   0   0  f8   0   0  5e   0  1c  ff  5e   0  98   0   1  ff
+9    unknown       tile(  4e,  40,  49)   0  3b   0   0   0   0   0   0  f8   0   0  60   0  18  ff  60   0  99   0   1  ff
+10   scenery       tile(  3f,  40,  3f)   0   6   0   0   0   0   0   0   0   0   0   f   0   0   0   0   0   0   0   0   0
+11   scenery       tile(  42,  40,  41)   0   6   0   0   0   0   0   0   0   0   0  21   0   0   0   0   0   0   0   0   0
+12   scenery       tile(  42,  40,  4a)   0   6   0   0   0   0   0   0  f8   0   0  42   0   0   0   0   0   0   0   0   0
+13   scenery       tile(  52,  40,  4a)   0   6   0   0   8   0   0   0  f8   0  fc  6f   0   0   0   0   0   0   0   0   0
+14   scenery       tile(  52,  40,  48)   0   6   0   0   3   0   0   0  f8   0   4  6d   0   0   0   0   0   0   0   0   0
+15   unknown       tile(  42,  40,  41)   0  1d   0   0   0   0   0  c0  f9   0   0  21   0  7f  fe  ff  ff  ff  ff   0  ff
+16   unknown       tile(  3f,  40,  3f)   0  1d   0   0   0   0   0  c0  f9   0   0   f   0  80  fe  ff  ff  ff  ff   0  ff
+17   unknown       tile(  42,  40,  4a)   0  1d   0   0   0   0   0  be  f1   0   0  42   0  80  fe  ff  ff  ff  ff   0  ff
+18   unknown       tile(  53,  40,  4a)   0  1d   0   0   0   0   0  66  ef   0  fa  70   0  7e  fe  ff  ff  ff  ff   0  ff
+19   unknown       tile(  53,  40,  48)   0  1d   0   0   0   0   0  66  ef   0   6  72   0  7d  fe  ff  ff  ff  ff   0  ff
+20   unknown       tile(  52,  40,  48)   0  1d   0   0   0   0   0  be  f1   0   4  6d   0  7f  fe  ff  ff  ff  ff   0  ff
+21   unknown       tile(  52,  40,  4a)   0  1d   0   0   0   0   0  be  f1   0  fc  6f   0  80  fe  ff  ff  ff  ff   0  ff
+22   scenery       tile(  3f,  40,  48)   0  13   0   0   e   0  f8   0   b   0  f8  37   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  3f,  40,  47)   0  14   0   0   1  2a  f9   0   b   0   2  38   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  3d,  40,  47)   0  13   0   0   3   0   8   0   b   0  fd  36   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  3d,  40,  47)   0  14   0   0   5   0   4   0   b  b0   4  36   0   0   0   0   0   0   0   0   0
+26   scenery       tile(  3e,  40,  47)   0  14   0   0   8  f8  f8   0   b   0   4  37   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  3f,  40,  46)   0  13   0   0   5   0  fc   0   b   0  ff  33   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  3f,  40,  46)   0  14   0   0   0   0  f8   0   b   0   8  33   0   0   0   0   0   0   0   0   0
+29   unknown       tile(  48,  40,  49)   0  1e   0   0   4   0   0   0  f8   0   0  46   0  18  ff  46   0  97   0   1  ff
+30   gate-reset    tile(  4d,  3f,  48)   0  fc   0   0   0   0   0   0   4   0   0  76   0  ff  ff  ff   1   1   1   0   0
+31   exit-door     tile(  4d,  40,  47)   0  fc   0   0   0   0   0   0  f6   0   0  75   0  fc   6  ff   0   0   0   1  f8
+32   scenery       tile(  48,  3f,  40)   0  13   0   0   2   0  fc   0   c   0   4  81   0   0   0   0   0   0   0   0   0
+33   scenery       tile(  47,  3f,  40)   0  13   0   0   1   0   0   0   c   0   8  7c   0   0   0   0   0   0   0   0   0
+34   scenery       tile(  47,  3f,  3f)   0  14   0   0   4   0   8   0   c   0   3  7e   0   0   0   0   0   0   0   0   0
+35   scenery       tile(  46,  3f,  3f)   0  14   0   0   6   0   8   0   c   0   8  7b   0   0   0   0   0   0   0   0   0
+36   scenery       tile(  43,  40,  49)   0  13   0   0   1   0   4   0  f8   0   0  47   0   0   0   0   0   0   0   0   0
+37   scenery       tile(  46,  40,  49)   0  13   0   0   2   0   4   0  f8   0   4  8d   0   0   0   0   0   0   0   0   0
+38   scenery       tile(  44,  40,  4b)   0  14   0   0   5   0  fc   0  f8   0   4  4e   0   0   0   0   0   0   0   0   0
+39   scenery       tile(  4b,  40,  49)   0  14   0   0   6   0   7   0  f8   0  f9  5b   0   0   0   0   0   0   0   0   0
+40   scenery       tile(  49,  40,  49)   0  14   0   0   9   0   8   0  f8   0   8  55   0   0   0   0   0   0   0   0   0
+41   scenery       tile(  4f,  40,  48)   0  14   0   0   7   0  f9   0  f8   0   7  66   0   0   0   0   0   0   0   0   0
+42   scenery       tile(  50,  40,  49)   0  13   0   0   9   0   7   0  f8   0   7  68   0   0   0   0   0   0   0   0   0
+43   scenery       tile(  52,  40,  49)   0  13   0   0   b   0   7   0  f8   0  f9  6e   0   0   0   0   0   0   0   0   0
+44   gate-2        tile(  46,  3f,  40)   0  fb   0   0   0   0   0   0   0   0   0  7a   0  80  40   2  7f  80   0  f0   0
+45   gate-0        tile(  40,  40,  42)   0  fb   0   0   0   0   0   0   0   0   0  26   0  80  80   0  7f  80   0  3c   0
+46   gate-1        tile(  3e,  40,  42)   0  fb   0   0   0   0   4   0   0   0   0  29   0  80  80   1  7f  80   0  3c   0
+47   gate-3        tile(  42,  40,  45)   0  fb   0   0   0   0   4  e8  f9   0   0  83   0  80  80   3  7f  80   0  3c   0
+48   gate-4        tile(  41,  40,  4a)   0  fb   0   0   0   0   0   0  f8   0   0  3f   0  80  80   4  7f  80   0  3c   0
+49   gate-5        tile(  4a,  40,  4a)   0  fb   0   0   0   0   0   0  f8   0   0  59   0  80  80   5  7f  80   0  3c   0
+50   gate-5        tile(  50,  40,  48)   0  fb   0   0   0   0   0   0   0   0   0  67   0  80  80   5  7f  80   0  3c   0
+51   gate-6        tile(  53,  40,  4a)   0  fb   0   0   0   0   0   0  f8   0   0  70   0  80  80   6  7f  80   0  3c   0
+52   scenery       tile(  44,  40,  40)   0  dc   0   0   8   8   7  68  f7  18  fc  77   0   a   0   0   0   0   0   0   0
+53   scenery       tile(  52,  40,  4a)   0  da   0   0   0  e8   3  48  f4   0   0  6f   0   b   0   0   0   0   0   0   0
+
+Setup Area earth_world_rotting_cavern in FDAT file index 114 map index 11
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  39,  40,  49)   0   c   0   0   0   0   0   0   0   0   0  ff   0  18   0  ff   0  a8   1   1  ff
+1    unknown       tile(  39,  40,  3c)   0   c   0   0   8   0   0   0   0   0   0  28   1  18   0  28   1  a9   1   1  ff
+2    unknown       tile(  42,  40,  47)   0   c   0   0   c   0   0   0   0   0   0  45   0  18   0  45   0  aa   1   1  ff
+3    unknown       tile(  44,  40,  44)   0   b   0   0   0   0   0   0   0   0   0  40   0  30   0  40   0  ab   1   1   8
+4    scenery       tile(  40,  40,  3d)   0   d   0   0   0   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0
+5    unknown       tile(  40,  40,  45)   0  32   0   0   0   0   0   0  f6   0   0  a2   0  60  fe   0   0  ff  ff   0  ff
+6    totem         tile(  36,  40,  4c)   0   0   0   0   0   0   0   0   0   0  fc  3a   1   0   0   0   0   0   0   0   0
+7    scenery       tile(  44,  40,  3d)   0   e   0   0   0   0   0   0   0   0   0  1b   0   0   0   0   0   0   0   0   0
+8    scenery       tile(  3c,  40,  41)   0  43   0   0   0   0   8   0   0   0   2  af   0   0   0   0   0   0   0   0   0
+9    scenery       tile(  40,  40,  40)   0  43   0   0   0   0   2   0   0   0  fe   0   0   0   0   0   0   0   0   0   0
+10   scenery       tile(  3e,  40,  41)   0   e   0   0   0   0  fa   0   0   0   0  b0   0   0   0   0   0   0   0   0   0
+11   scenery       tile(  45,  40,  42)   0   e   0   0   5   0   0   0   0   0   0  20   0   0   0   0   0   0   0   0   0
+12   gate-reset    tile(  39,  40,  35)   0  fc   0   0   0  80  fb   0   0   0   0   0   0  ff  ff  ff   1   1   b   0   0
+13   exit-door     tile(  38,  40,  35)   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   0   9   3   9   0   0   1  f8
+14   unknown       tile(  42,  40,  3a)   0  32   0   0   0   0  fe   0  f6   0   2  9b   0  60  fe   0   0  ff  ff   0  ff
+15   unknown       tile(  4b,  40,  3d)   0  32   0   0   0   0   0   0  f6   0   0  5b   0  60  fe   0   0  ff  ff   0  ff
+16   unknown       tile(  4b,  40,  41)   0  32   0   0   0   0   0   0  f6   0   0  9d   1  60  fe   0   0  ff  ff   0  ff
+17   unknown       tile(  4b,  40,  3a)   0  32   0   0   0   0   0   0  f6   0   0  70   0  60  fe   0   0  ff  ff   0  ff
+18   unknown       tile(  4b,  40,  37)   0  32   0   0   0   0  fe   0  f6   0   2  73   0  60  fe   0   0  ff  ff   0  ff
+19   unknown       tile(  44,  40,  40)   0  1d   0   0   0   0   0  c0  f9   0   0  18   0  60  fe   0   0  ff  ff   0  ff
+20   unknown       tile(  39,  40,  3e)   0  32   0   0   0   0   0   0  f6   0   0  55   1  60  fe   0   0  ff  ff   0  ff
+21   unknown       tile(  39,  40,  46)   0  32   0   0   0   0   0   0  f6   0   0  71   1  60  fe   0   0  ff  ff   0  ff
+22   scenery       tile(  39,  40,  41)   0   6   0   0   0   0   0   0   0   0   0  6c   1   0   0   0   0   0   0   0   0
+23   scenery       tile(  40,  40,  45)   0   f   0   0   0   0   0   0  f6   0   0  a2   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  40,  40,  47)   0   6   0   0   0   0   0   0   0   0   0  53   1   0   0   0   0   0   0   0   0
+25   unknown       tile(  42,  40,  35)   0   6   0   0   0   0   0   0   0   0   4  7b   0  14   0   0   0  ff  ff   0  ff
+26   scenery       tile(  38,  40,  38)   0   6   0   0   0   0   8   0   0   0   8  26   1   0   0   0   0   0   0   0   0
+27   scenery       tile(  45,  40,  48)   0   6   0   0   0   0   0   0   0   0   0  51   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  3e,  40,  4d)   0   f   0   0   0   0   0   0  f6   0   0  44   1   0   0   0   0   0   0   0   0
+29   unknown       tile(  38,  40,  38)   0  1d   0   0   0   0   8  c0  f9   0   8  26   1  60  fe   0   0  ff  ff   0  ff
+30   unknown       tile(  42,  40,  35)   0  1d   0   0   0   0   0  c0  f9   0   4  7b   0  60  fe   0   0  ff  ff   0  ff
+31   scenery       tile(  44,  40,  40)   0   6   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0   0   0   0   0
+32   unknown       tile(  45,  40,  48)   0  1d   0   0   0   0   0  c0  f9   0   0  51   0  60  fe   0   0  ff  ff   0  ff
+33   unknown       tile(  40,  40,  47)   0  1d   0   0   0   0   0  c0  f9   0   0  53   1  60  fe   0   0  ff  ff   0  ff
+34   scenery       tile(  3d,  40,  43)   0   6   0   0   0   0   0   0   0   0   0  b5   0   0   0   0   0   0   0   0   0
+35   unknown       tile(  3d,  40,  43)   0  1d   0   0   0   0   0  c0  f9   0   0  b5   0  60  fe   0   0  ff  ff   0  ff
+36   unknown       tile(  39,  40,  41)   0  1d   0   0   0   0   0  c0  f9   0   0  6c   1  60  fe   0   0  ff  ff   0  ff
+37   unknown       tile(  46,  40,  3d)   0   b   0   0   c  96   0   0   0   0   0  3e   0  30   0  3e   0  ac   1   1  ff
+38   unknown       tile(  40,  40,  43)   0   b   0   0   0   0   0   0   0  96   0  24   0  30   0  24   0  ad   1   1  ff
+39   unknown       tile(  3e,  40,  45)   0   b   0   0   c  96   0   0   0   0   0  a4   0  30   0  a4   0  ae   1   1  ff
+40   unknown       tile(  3d,  40,  46)   0   b   0   0   0   0   0   0   0  96   0  a6   0  30   0  a6   0  af   1   1  ff
+41   totem         tile(  36,  40,  3c)   0   2   0   0   0   0   0   0   0   0   0  a5   1  2f   0   0   0   0  fe  e8   0
+42   unknown       tile(  3e,  40,  4d)   0  32   0   0   0   0   0   0  f6   0   0  44   1  60  fe   0   0  ff  ff   0  ff
+43   scenery       tile(  43,  40,  46)   0   d   0   0   2   0  f9   0   0   0  fe  59   0   0   0   0   0   0   0   0   0
+44   scenery       tile(  39,  40,  46)   0   f   0   0   0   0   0   0  f6   0   0  71   1   0   0   0   0   0   0   0   0
+45   scenery       tile(  39,  40,  3e)   0   f   0   0   0   0   0   0  f6   0   0  55   1   0   0   0   0   0   0   0   0
+46   scenery       tile(  4b,  40,  37)   0   f   0   0   0   0  fe   0  f6   0   2  73   0   0   0   0   0   0   0   0   0
+47   scenery       tile(  4b,  40,  3a)   0   f   0   0   0   0   0   0  f6   0   0  70   0   0   0   0   0   0   0   0   0
+48   scenery       tile(  4b,  40,  41)   0   f   0   0   0   0   0   0  f6   0   0  9d   1   0   0   0   0   0   0   0   0
+49   scenery       tile(  4b,  40,  3d)   0   f   0   0   0   0   0   0  f6   0   0  5b   0   0   0   0   0   0   0   0   0
+50   scenery       tile(  42,  40,  3a)   0   f   0   0   0   0  fe   0  f6   0   2  9b   0   0   0   0   0   0   0   0   0
+51   scenery       tile(  3a,  40,  40)   0   e   0   0   1   0   7   0   0   0   2  6e   1   0   0   0   0   0   0   0   0
+52   totem         tile(  36,  40,  4a)   0   2   0   0   8   0   0   0   0   0   4  3e   1  2e   0   0   0   0  fe  e8   0
+53   scenery       tile(  40,  40,  43)   0  43   0   0   0   0  fa   0   0  7e  fe  24   0   0   0   0   0   0   0   0   0
+54   scenery       tile(  40,  40,  43)   0  43   0   0   0   0   6   0   0  7e  fe  24   0   0   0   0   0   0   0   0   0
+55   scenery       tile(  3d,  40,  46)   0   d   0   0   0   0  fa   0   0   0  fe  a6   0   0   0   0   0   0   0   0   0
+56   scenery       tile(  3d,  40,  46)   0   d   0  10   a   0   6   0   0   0  fe  a6   0   0   0   0   0   0   0   0   0
+57   scenery       tile(  3a,  40,  49)   0   e   0   0   c   0   0   0   0  82   1  fe   0   0   0   0   0   0   0   0   0
+58   gate-0        tile(  3c,  40,  3c)   0  fb   0   0   0   0  ff   0   0   0  ff  1f   1  80  80   0  7f  80   2  f0   0
+59   gate-1        tile(  3b,  40,  49)   0  fb   0   0   0   0   0   0   0   0   0   d   1  80  80   1  7f  80   2  f0   0
+60   gate-2        tile(  3e,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  ac   0  80  80   2  7f  80   2  f0   0
+61   gate-3        tile(  46,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  3b   0  80  80   3  7f  80   2  f0   0
+62   gate-4        tile(  46,  40,  47)   0  fb   0   0   0   0   0   0   0   0   0  4d   0  80  80   4  7f  80   2  f0   0
+63   gate-5        tile(  4b,  40,  3d)   0  fb   0   0   0   0   4   0   0   0   0  5b   0  80  80   5  7f  80   2  f0   0
+
+Setup Area earth_world_poisonous_cavern in FDAT file index 274 map index 27
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  41,  41,  49)   0  44   0   0   4   0   7   0   0   0   0  ca   0   0   0   0   0   0   0   0   0
+1    scenery       tile(  41,  41,  49)   0  44   0   0   c   0  f9   0   0   0   0  ca   0   0   0   0   0   0   0   0   0
+2    unknown       tile(  43,  40,  4f)   0  16   0   0   4   0   0   0   0   0   0  22   1  18   0  22   1  57   1   1  ff
+3    unknown       tile(  46,  41,  49)   0   8   0   0   4   0   0   0   0   0   0  f2   0  28   0  f2   0  4d   1   1  ff
+4    totem         tile(  39,  41,  32)   0   0   0   0   4   0   4   0   0   0   0  81   0   0   0   0   0   0   0   0   0
+5    unknown       tile(  3d,  41,  3a)   0   8   0   0   0   0   0   0   0   0   0  5c   0  28   0  5c   0  4c   1   1  ff
+6    unknown       tile(  3b,  41,  34)   0   8   0   0   8   0   0   0   0   0   0  50   0  28   0  50   0  4e   1   1  ff
+7    unknown       tile(  40,  41,  38)   0   8   0   0   4   0   0   0   0   0   0  2f   0  28   0  2f   0  4b   1   1  fb
+9    scenery       tile(  42,  41,  4a)   0  15   0   0   0   0   0   0   0   0   0  b2   0   0   0   0   0   0   0   0   0
+10   exit-door     tile(  4a,  41,  41)   0  fc   0   0   0  80   3   0   0   0   0   c   1   0   0   0  f9   0   c   2   0
+11   gate-reset    tile(  49,  41,  41)   0  fc   0   0   0  80   3   0   0   0   0   b   1  ff  ff  ff   1   1  1b   0   0
+12   gate-reset    tile(  4a,  41,  49)   0  fc   0   0   0   0   0   0   0  80  fc  47   1  ff  ff  ff   1   1  1b   0   0
+13   exit-door     tile(  4a,  41,  48)   0  fc   0   0   0   0   0   0   0  80  fc  48   1   0   0   1   0   7  1c   0   0
+14   unknown       tile(  44,  41,  37)   0  16   0   0   4   0   0   0   0   0   0  23   0  18   0  23   0  76   1   1  ff
+15   unknown       tile(  49,  41,  3d)   0  a7   0   0   8   0  fc   0   0   0  fc  2f   1  14  ff   0   0  ff  ff   0  ff
+16   unknown       tile(  45,  41,  41)   0   7   0   0   0   0   0   0   0   0   c  a4   0  14  f8   0   0  ff  ff   0  ff
+17   exit-door     tile(  38,  41,  2f)   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   4   9  ff   7   0   0   0  f8
+18   gate-reset    tile(  39,  41,  2f)   0  fc   0   0   0  80  fc   0   0   0   0  8a   0  ff  ff  ff   1   1  1b   0   0
+19   unknown       tile(  45,  41,  41)   0  cd   0   0   c   0   8  80  f4   0   0  a4   0  14  f8  a4   0  7a   1   2  ff
+20   gate-0        tile(  39,  41,  32)   0  fb   0   0   0   0   0   0   0   0   0  81   0  80  80   0  7f  80   0  3c   0
+21   gate-1        tile(  38,  41,  37)   0  fb   0   0   0   0   0   0   0   0   0  56   0  80  80   1  7f  80   0  3c   0
+22   gate-2        tile(  44,  41,  36)   0  fb   0   0   0   0   0   0   0   0   0  24   0  80  80   2  7f  80   0  3c   0
+23   gate-3        tile(  40,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0   0   0  80  80   3  7f  80   0  3c   0
+24   gate-4        tile(  3b,  41,  45)   0  fb   0   0   0   0   0   0   0   0   0  92   0  80  80   4  7f  80   0  3c   0
+25   gate-5        tile(  40,  41,  49)   0  fb   0   0   0   0   0   0   0   0   0  11   1  80  80   5  7f  80   0  3c   0
+26   gate-6        tile(  44,  41,  41)   0  fb   0   0   0   0   0   0   0   0   0  a3   0  40  40   6  7f  40   0  3c   0
+27   gate-7        tile(  41,  40,  50)   0  fb   0   0   0   0   0   0   0   0   0  1e   1  80  80   7  7f  80   0  3c   0
+28   scenery       tile(  42,  40,  4b)   0  dd   0   0   0   0   6  24  fa   0   0  dd   0  16   0   0   0   0   0   0   0
+29   totem         tile(  3e,  41,  31)   0   1   0   0   4   0   4   0   0   0   0  45   0  2c   0   0   0   0   0   0   0
+
+Setup Area earth_world_quaking_cavern in FDAT file index 124 map index 12
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  36,  41,  4b)   0  47   0   0   e   0  fc   0   4   0  fe  94   0   0   0   0   0   0   0   0   0
+1    scenery       tile(  36,  41,  4c)   0  48   0   0   3   0   0   0   4  80   7  a7   0   0   0   0   0   0   0   0   0
+2    unknown       tile(  36,  41,  4a)   0  46   0   0   0   0   0   0   4   0   0  93   0  1e   0  93   0  a6   0   1  ff
+3    exit-door     tile(  41,  40,  40)   0  fc   0   0   0   0   0   0   0   0   0  a5   0   9   1   1   0   0  1b   2   0
+4    gate-reset    tile(  40,  40,  40)   0  fc   0   0   0   0   0   0   0   0   0   0   0  ff  ff  ff   1   1   c   0   0
+5    unknown       tile(  32,  41,  48)   0   2   0   0   4   0  fc   0   0   0   0  a2   0  2f   0   0   0   0  fe  e8   0
+6    scenery       tile(  3a,  40,  3f)   0  b8   0  9b   5   0   1   0   0   0   2  14   0   0   0   0   0   0   0   0   0
+7    scenery       tile(  3a,  40,  3f)   0  b9   0  70   1   0  fe   0   0   0  fd  14   0   0   0   0   0   0   0   0   0
+8    scenery       tile(  3c,  40,  40)   0  b8   0   0   a   0   4   0   0   0   4   f   0   0   0   0   0   0   0   0   0
+9    scenery       tile(  3c,  40,  3f)   0  b9   0  18   6  e8  f9   0   0  20   7   e   0   0   0   0   0   0   0   0   0
+10   scenery       tile(  3a,  40,  41)   0  b8   0  60   e   0   5   0   0   0   5  16   0   0   0   0   0   0   0   0   0
+11   scenery       tile(  3b,  40,  41)   0  b9   0   0   3   0  fb   0   0   0  fb  11   0   0   0   0   0   0   0   0   0
+12   scenery       tile(  3e,  40,  3f)   0  b9   0  6a   e   0   5   0   0   0  fe   8   0   0   0   0   0   0   0   0   0
+13   scenery       tile(  3f,  40,  41)   0  b8   0   0   6   0  fc   0   0   0   2   5   0   0   0   0   0   0   0   0   0
+14   scenery       tile(  3f,  40,  41)   0  b9   0  78   f   0   2   0   0   0  fc   5   0   0   0   0   0   0   0   0   0
+15   scenery       tile(  3e,  40,  44)   0  b8   0  18   6   0  fb   0   0   0  fe  2d   0   0   0   0   0   0   0   0   0
+16   scenery       tile(  3f,  40,  45)   0  b9   0   0   a   0  fb   0   0   0  fb  30   0   0   0   0   0   0   0   0   0
+17   scenery       tile(  41,  40,  48)   0  b9   0  30   c   0  fb   0   0   0  fb  3c   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  42,  40,  47)   0  b9   0  2c   7   0   4   0   0   0   4  3e   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  43,  40,  47)   0  b8   0  f0   a   0  fb   0   0   0   2  43   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  41,  40,  4c)   0  b8   0  28   a   0   4   0   0   0  fe  4d   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  41,  40,  4c)   0  b9   0   0   4   0   0   0   0   0   4  4d   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  3b,  40,  4d)   0  b8   0  c0   8   0  fc   0   0   0  fc  5f   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  3a,  40,  4d)   0  b9   0   0   2   0   4   0   0   0  fe  64   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  39,  40,  4f)   0  b8   0  b0   9   0   4   0   0   0  fe  67   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  3a,  40,  4f)   0  b9   0   0   4   0  fc   0   0   0   4  62   0   0   0   0   0   0   0   0   0
+26   scenery       tile(  39,  40,  4d)   0  b9   0  18   c   0  fe   0   0   0   4  65   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  3c,  40,  4e)   0  b9   0  78   f   0  fc   0   0   0   2  6a   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  38,  41,  48)   0  b8   0   8   7   0   4   0   0   0   2  82   0   0   0   0   0   0   0   0   0
+29   scenery       tile(  38,  41,  48)   0  b9   0  10   e   0  fe   0   0   0  fe  82   0   0   0   0   0   0   0   0   0
+30   scenery       tile(  37,  41,  48)   0  b9   0   0   3   0   5   0   0   0  fb  83   0   0   0   0   0   0   0   0   0
+31   scenery       tile(  35,  41,  46)   0  b9   0  28   a   0  fc   0   0   0   5  8b   0   0   0   0   0   0   0   0   0
+32   scenery       tile(  35,  41,  48)   0  b8   0   0   1   0   4   0   0   0  fe  87   0   0   0   0   0   0   0   0   0
+33   scenery       tile(  32,  41,  48)   0  b8   0  10   e   0   4   0   0   0   5  a2   0   0   0   0   0   0   0   0   0
+34   scenery       tile(  31,  41,  47)   0  b9   0   0   2   0   5   0   0   0   5  9d   0   0   0   0   0   0   0   0   0
+35   scenery       tile(  31,  41,  48)   0  dc   0  84   3  9c  ff  24  fa   0   3  9e   0   e   0   0   0   0   0   0   0
+39   gate-0        tile(  3e,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  2c   0  40  40   0  7f  40   0  3c   0
+40   gate-1        tile(  3d,  40,  3e)   0  fb   0   0   0   0   0   0   0   0   0  1e   0  80  80   1  7f  80   0  3c   0
+41   gate-2        tile(  40,  40,  4b)   0  fb   0   0   0   0   0   0   0   0   0  51   0  80  80   2  7f  80   0  3c   0
+42   gate-3        tile(  3a,  40,  50)   0  fb   0   0   0   0   0   0   0   0   0  6e   0  80  80   3  7f  80   0  3c   0
+43   gate-4        tile(  36,  41,  49)   0  fb   0   0   0   0   0   0   0   0   0  91   0  80  80   4  7f  80   0  3c   0
+44   gate-5        tile(  3b,  40,  47)   0  fb   0   0   0   0   0   0  f0   0   0  35   0  80  80   5  7f  80   0  3c   0
+
+Setup Area earth_world_false_pit_cavern in FDAT file index 154 map index 15
+
+Objects 
+idx  in_file offset type     
+0    gate-reset    tile(  4a,  40,  49)   0  fc   0   0   0   0   0   0   0   0   0  d4   1  ff  ff  ff   1   1   f   0   0
+1    exit-door     tile(  4a,  40,  4a)   0  fc   0   0   0   0   0   0   0   0   0  d5   1  fe   0  f8   0   0  21   3   0
+2    gate-reset    tile(  3d,  40,  35)   0  fc   0   0   0   0   5   0   0   0   0  b5   0  ff  ff  ff   1   1   f   0   0
+3    exit-door     tile(  3e,  40,  35)   0  fc   0   0   0   0   5   0   0   0   0  b6   0  f0   5  f7  f6   0  1c   1   0
+4    scenery       tile(  44,  40,  38)   0  45   0   0   c   0   0   0   0   0  f8  3d   0   0   0   0   0   0   0   0   0
+5    unknown       tile(  44,  40,  38)   0  60   0   0   0  a8  fd  40  f1   0  f8  3d   0  64  fe   0   0  ff  ff   0  ff
+6    unknown       tile(  44,  40,  38)   0  60   0   0   0  58   2  40  f1   0  f8  3d   0  64  fe   0   0  ff  ff   0  ff
+7    unknown       tile(  44,  40,  38)   0  60   0   0   0   0   0  40  f1  58  fa  3d   0  60  fe   0   0  ff  ff   0  ff
+8    unknown       tile(  44,  40,  38)   0  60   0   0   0   0   0  40  f1  a8  f5  3e   0  5c  fe   0   0  ff  ff   0  ff
+9    unknown       tile(  44,  40,  38)   0  61   0   0   0   0   0  80  ee   0  f8  3d   0  64  fe   0   0  ff  ff   0  ff
+10   gate-reset    tile(  38,  40,  35)   0  fc   0   0   0   0  fb   0   0   0   0  b7   0  ff  ff  ff   1   1   f   0   0
+11   exit-door     tile(  37,  40,  35)   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   1   4   a   0  28   1  f8
+12   scenery       tile(  45,  40,  38)   0  9c   0   0   c  80   3   0   0   0  f8  3f   0   0   0   0   0   0   0   0   0
+13   unknown       tile(  42,  42,  41)   0   a   0   0   c   0  fa   0   0   0  f8  b6   1  14  fc   0   0   7  ff   0  ff
+14   unknown       tile(  35,  42,  3e)   0   a   0   0   4   0   6   0   0   0  f8  c4   1  14  fc   0   0   8  ff   0  ff
+15   scenery       tile(  3d,  40,  36)   0   0   0   0   c   0  fc   0   0   0   0  e4   1   0   0   0   0   0   0   0   0
+16   exit-totem    tile(  37,  40,  36)   0   3   0   0   4   0   4   0   0   0   0  d9   1   6   1  ff   4   0   0   0   1
+17   unknown       tile(  3c,  42,  3c)   0  fd   0   0   0   0   0   0   0   0   0  ad   1   f   5   0  f8   0   0   0   1
+18   scenery       tile(  3a,  40,  3b)   0  d7   0   0   0  88  fe   0   0  78   1  4e   0   0   0   0   0   0   0   0   0
+19   exit-totem    tile(  3e,  3f,  36)   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  21  ff   0   b   0   0   0   3
+20   gate-0        tile(  3b,  40,  34)   0  fb   0   0   0   0  f8   0   0   0  fe  5c   0  80  80   0  7f  80   0  3c   0
+21   gate-1        tile(  3a,  40,  3b)   0  fb   0   0   0   0   8   0   0   0   0  4e   0  80  80   1  7f  80   0  3c   0
+22   gate-2        tile(  48,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   9   0  80  80   2  7f  80   0   5   0
+23   gate-3        tile(  44,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   5   0  80  80   3  7f  80   2  1e   0
+24   gate-3        tile(  4a,  40,  46)   0  fb   0   0   0   0   0   0   0   0   0  b0   0  80  80   3  7f  80   2  1e   0
+25   gate-4        tile(  49,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   a   0  80  80   4  7f  80   2  1e   0
+26   gate-5        tile(  40,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  ad   1  80  80   5  7f  80   0  3c   0
+27   gate-6        tile(  3c,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  bc   0  80  80   6  7f  80   0  3c   0
+
+Setup Area earth_world_stone_cavern in FDAT file index 284 map index 28
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  28,  42,  37)   0  23   0   0   0   0   8   0   0   0   0  8f   0  20  ff  8f   0  2f   1   1  ff
+1    unknown       tile(  2e,  42,  40)   0  25   0   0   4   0   0   0   0   0   0  75   0  c8  f8  75   0  eb   0   1  ff
+2    unknown       tile(  38,  42,  4e)   0  25   0   0   0   0   0   0   0   0   0  41   0  c8  f8  41   0  ea   0   1  ff
+3    unknown       tile(  2d,  42,  3c)   0  24   0   0   4   0   0   0   0   0   0  66   0  41  f8  66   0  e8   0   1  ff
+4    exit-door     tile(  40,  40,  42)   0  fc   0   0   0   0   0   0   0   0   0   0   0   a   1   9   0   0  1b   0   0
+5    gate-reset    tile(  40,  40,  41)   0  fc   0   0   0   0   0   0   0   0   0  1c   0  ff  ff  ff   1   1  1c   0   0
+6    gate-reset    tile(  30,  45,  37)   0  fc   0   0   0   0   0   0   0   0   0  b2   0  ff  ff  ff   1   1  1c   0   0
+7    exit-door     tile(  30,  45,  36)   0  fc   0   0   0   0   0   0   0   0   0  ab   0  fd   0  f5   0   0   f   3   0
+8    scenery       tile(  26,  42,  44)   0   0   0   0   4   0  fe   0   0   0   0  9e   0   0   0   0   0   0   0   0   0
+9    unknown       tile(  43,  40,  40)   0   2   0   0   c   0   0   0   0   0   0  69   0  2d   0   0   0   0  fe  e8   0
+10   scenery       tile(  3c,  42,  43)   0  c3   0   0   0   0   0   0   0   0   4  a6   0   0   0   0   0   0   0   0   0
+11   unknown       tile(  39,  42,  41)   0  c4   0   0   c   0   0   0   0   0   0  17   0  14  fc  ff  ff  ff  ff   0  ff
+12   scenery       tile(  38,  42,  3a)   0  c3   0   0   0   0   0   0   0   0  fc  ec   0   0   0   0   0   0   0   0   0
+13   unknown       tile(  26,  42,  36)   0  a4   0   0   8   0   0   0   0   0   0  90   0  1e  fc  ff  ff   4  ff   0  ff
+14   unknown       tile(  37,  42,  52)   0  a4   0   0   0   0   0   0   0   0   0  37   0  1e  fc  ff  ff   3  ff   0  ff
+15   unknown       tile(  2b,  45,  48)   0  a4   0   0   0   0   0   0   0   0   0  c6   0  1e  fc  ff  ff   5  ff   0  ff
+16   unknown       tile(  33,  45,  40)   0  a4   0   0   8   0   0   0   0   0   0  d9   0  1e  fc  ff  ff   6  ff   0  ff
+17   scenery       tile(  2e,  42,  51)   0  13   0   0   1   0   2   0   0   0  fe   0   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  36,  42,  50)   0  13   0   0   0   0   0   0   0   0   0  38   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  36,  42,  50)   0  14   0   0   3   0   3   0   0   0   2  38   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  32,  42,  51)   0  14   0   0   0   0  fe   0   0  50  fb  3d   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  3d,  42,  3d)   0  14   0   0   2   0   0   0   0   0   0   e   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  3d,  42,  3b)   0  13   0   0   8   0   0   0   0   0   0   b   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  30,  42,  39)   0  13   0   0   3   0  ff   0   0   0   0  a8   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  28,  42,  36)   0  13   0   0   5   0  fe   0   0   0  fe  91   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  28,  42,  36)   0  14   0   0   4   0  fc   0   0   0   4  91   0   0   0   0   0   0   0   0   0
+26   unknown       tile(  3c,  42,  51)   0  26   0   0   4   0  fc   0   0   0   0  31   0   0  fc  ff  ff  ff  ff   0  ff
+27   scenery       tile(  39,  42,  51)   0  2c   0   0   6  dc   5   0   0   0   0  32   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  39,  42,  50)   0  2d   0   0   1   0   4   0   0   0   4  2b   0   0   0   0   0   0   0   0   0
+29   scenery       tile(  32,  42,  51)   0  2d   0   0   0   0   4   0   0  50  fb  3d   0   0   0   0   0   0   0   0   0
+30   scenery       tile(  2f,  42,  46)   0  14   0   0   0   0   0   0   0   0   0  47   0   0   0   0   0   0   0   0   0
+31   scenery       tile(  2f,  42,  46)   0  2c   0   0   1   0   4   0   0   0  fc  47   0   0   0   0   0   0   0   0   0
+32   scenery       tile(  2f,  42,  46)   0  2d   0   0   e   0  ff   0   0  30  f8  47   0   0   0   0   0   0   0   0   0
+33   scenery       tile(  32,  45,  42)   0  2d   0   0   0   0   4   0   0   0   4  d5   0   0   0   0   0   0   0   0   0
+34   scenery       tile(  32,  45,  42)   0  2d   0   0   2   0   0   0   0   0  fc  d5   0   0   0   0   0   0   0   0   0
+35   scenery       tile(  26,  42,  37)   0  2c   0   0   2   0   8   0   0   0   0  8d   0   0   0   0   0   0   0   0   0
+36   scenery       tile(  27,  42,  37)   0  2d   0   0   6   0   0   0   0   0   0  8e   0   0   0   0   0   0   0   0   0
+37   scenery       tile(  27,  42,  37)   0  2e   0   0   2   0  fc   0   0   0   4  8e   0   0   0   0   0   0   0   0   0
+38   scenery       tile(  38,  42,  3b)   0  c4   0   0   0   0   0   0   0   0   0  a7   0   0   0   0   0   0   0   0   0
+39   scenery       tile(  38,  42,  40)   0  c4   0   0   0   0   0   0   0   0   0  19   0   0   0   0   0   0   0   0   0
+40   scenery       tile(  3c,  42,  3f)   0  c4   0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0   0   0
+41   scenery       tile(  37,  42,  45)   0  c4   0   0   0   0   0   0   0   0   0  aa   0   0   0   0   0   0   0   0   0
+42   scenery       tile(  34,  42,  51)   0  c4   0   0   0   0   0   0   0   0   0  74   0   0   0   0   0   0   0   0   0
+43   scenery       tile(  2e,  42,  51)   0  c3   0   0   4   0  fc   0   0   0   0  ef   0   0   0   0   0   0   0   0   0
+44   scenery       tile(  30,  42,  4f)   0  c4   0   0   0   0   0   0   0   0   0  40   0   0   0   0   0   0   0   0   0
+45   scenery       tile(  30,  42,  3e)   0  c3   0   0   8   0   0   0   0   0  fc  60   0   0   0   0   0   0   0   0   0
+46   scenery       tile(  30,  42,  3e)   0  2c   0   0   0   0  fe   0   0   0   0  60   0   0   0   0   0   0   0   0   0
+47   unknown       tile(  30,  42,  3f)   0  c5   0   0   4   0   0   0   0   0   0  5f   0  14  fc  ff  ff  ff  ff   0  ff
+48   scenery       tile(  30,  42,  3f)   0  c4   0   0   0   0   0   0   0   0   0  5f   0   0   0   0   0   0   0   0   0
+49   scenery       tile(  33,  42,  3c)   0  c4   0   0   0   0   0   0   0   0   0  24   0   0   0   0   0   0   0   0   0
+50   scenery       tile(  2e,  42,  51)   0  14   0   0   0   0   0   0   0   0   2  ef   0   0   0   0   0   0   0   0   0
+51   scenery       tile(  2b,  42,  46)   0  2e   0   0   0   0   2   0   0   0   0  22   1   0   0   0   0   0   0   0   0
+52   unknown       tile(  2b,  42,  45)   0  c5   0   0   4   0   0   0   0   0   0  21   1  14  fc  ff  ff  ff  ff   0  ff
+53   scenery       tile(  28,  42,  44)   0  c4   0   0   0   0   0   0   0   0   0  9b   0   0   0   0   0   0   0   0   0
+54   scenery       tile(  2b,  42,  42)   0  c4   0   0   0   0   0   0   0   0   0  7a   0   0   0   0   0   0   0   0   0
+55   scenery       tile(  2a,  45,  3f)   0  c4   0   0   0   0   0   0   0   0   0  b8   0   0   0   0   0   0   0   0   0
+56   scenery       tile(  29,  42,  40)   0  c4   0   0   0   0   0   0   0   0   0  1f   1   0   0   0   0   0   0   0   0
+57   scenery       tile(  2b,  42,  3d)   0  c4   0   0   0   0   0   0   0   0   0  6d   0   0   0   0   0   0   0   0   0
+58   scenery       tile(  2c,  42,  3c)   0  c4   0   0   0   0   0   0   0   0   0  6a   0   0   0   0   0   0   0   0   0
+59   scenery       tile(  2b,  42,  3a)   0  c3   0   0   0   0   0   0   0   0  fc  6e   0   0   0   0   0   0   0   0   0
+60   unknown       tile(  2b,  42,  3b)   0  c5   0   0   4   0   0   0   0   0   0  6c   0  14  fc  ff  ff  ff  ff   0  ff
+61   scenery       tile(  27,  42,  3c)   0  c4   0   0   0   0   0   0   0   0   0  80   0   0   0   0   0   0   0   0   0
+62   scenery       tile(  30,  42,  39)   0  14   0   0   0   0   1   0   0   0  ff  a8   0   0   0   0   0   0   0   0   0
+63   scenery       tile(  3b,  42,  41)   0  c4   0   0   0   0   0   0   0   0   0  15   0   0   0   0   0   0   0   0   0
+64   scenery       tile(  3f,  40,  3c)   0  c4   0   0   0   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0   0
+65   scenery       tile(  38,  42,  3d)   0  c4   0   0   0   0   0   0   0   0   0  1e   0   0   0   0   0   0   0   0   0
+66   scenery       tile(  31,  42,  3c)   0  c4   0   0   0   0   0   0   0   0   0  26   0   0   0   0   0   0   0   0   0
+67   scenery       tile(  2f,  42,  3c)   0  c4   0   0   0   0   0   0   0   0   0  62   0   0   0   0   0   0   0   0   0
+68   scenery       tile(  38,  42,  44)   0  c4   0   0   0   0   0   0   0   0   0  28   0   0   0   0   0   0   0   0   0
+69   scenery       tile(  31,  42,  40)   0  c4   0   0   0   0   0   0   0   0   0  5b   0   0   0   0   0   0   0   0   0
+70   scenery       tile(  30,  42,  41)   0  c4   0   0   0   0   0   0   0   0   0  5d   0   0   0   0   0   0   0   0   0
+71   scenery       tile(  31,  42,  51)   0  c4   0   0   0   0   0   0   0   0   0  3e   0   0   0   0   0   0   0   0   0
+72   scenery       tile(  2b,  45,  3c)   0  c4   0   0   0   0   0   0   0   0   0  b5   0   0   0   0   0   0   0   0   0
+73   scenery       tile(  2a,  45,  3d)   0  c4   0   0   0   0   0   0   0   0   0  b6   0   0   0   0   0   0   0   0   0
+74   scenery       tile(  2a,  45,  3a)   0  c3   0   0   0   0   0   0   0   0  fc   0   0   0   0   0   0   0   0   0   0
+75   scenery       tile(  2a,  45,  3a)   0  c9   0   0   4   0   0   0   0   0   0  25   1   0   0   0   0   0   0   0   0
+76   scenery       tile(  2a,  45,  3b)   0  c7   0   0   4   0   0   0   0   0   0  24   1   0   0   0   0   0   0   0   0
+77   scenery       tile(  2a,  45,  3c)   0  c7   0   0   4   0   0   0   0   0   0  23   1   0   0   0   0   0   0   0   0
+78   scenery       tile(  2a,  45,  3d)   0  c7   0   0   4   0   0   0   0   0   0  b6   0   0   0   0   0   0   0   0   0
+79   scenery       tile(  2a,  45,  3e)   0  c7   0   0   4   0   0   0   0   0   0  b7   0   0   0   0   0   0   0   0   0
+80   scenery       tile(  2a,  45,  3f)   0  c7   0   0   4   0   0   0   0   0   0  b8   0   0   0   0   0   0   0   0   0
+81   scenery       tile(  2a,  45,  40)   0  c7   0   0   4   0   0   0   0   0   0  c9   0   0   0   0   0   0   0   0   0
+82   scenery       tile(  2a,  45,  41)   0  c7   0   0   4   0   0   0   0   0   0  ca   0   0   0   0   0   0   0   0   0
+83   scenery       tile(  2a,  45,  42)   0  c7   0   0   4   0   0   0   0   0   0  cb   0   0   0   0   0   0   0   0   0
+84   scenery       tile(  2a,  45,  43)   0  c7   0   0   4   0   0   0   0   0   0  b9   0   0   0   0   0   0   0   0   0
+85   scenery       tile(  2a,  45,  44)   0  c7   0   0   4   0   0   0   0   0   0  ba   0   0   0   0   0   0   0   0   0
+86   scenery       tile(  2a,  45,  45)   0  c9   0   0   c   0   0   0   0   0   0  be   0   0   0   0   0   0   0   0   0
+87   scenery       tile(  2b,  45,  45)   0  c3   0   0   4   0   4   0   0   0   0  bf   0   0   0   0   0   0   0   0   0
+88   scenery       tile(  2b,  45,  44)   0  c3   0   0   c   0   4   0   0   0   0  bb   0   0   0   0   0   0   0   0   0
+89   scenery       tile(  2a,  45,  45)   0  c8   0   0   4   0   0   0   0  24  fa  be   0   0   0   0   0   0   0   0   0
+90   scenery       tile(  2f,  42,  51)   0  c8   0   0   0  dc   5   0   0   0   0  ee   0   0   0   0   0   0   0   0   0
+91   scenery       tile(  30,  42,  51)   0  c7   0   0   0   0   0   0   0   0   0  ed   0   0   0   0   0   0   0   0   0
+92   scenery       tile(  3c,  42,  3d)   0  c9   0   0   4   0   0   0   0   0   0  11   0   0   0   0   0   0   0   0   0
+93   scenery       tile(  3c,  42,  3e)   0  c7   0   0   4   0   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0
+94   scenery       tile(  3c,  42,  3f)   0  c7   0   0   4   0   0   0   0   0   0  13   0   0   0   0   0   0   0   0   0
+95   scenery       tile(  3c,  42,  40)   0  c7   0   0   4   0   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0
+96   scenery       tile(  3c,  42,  41)   0  c7   0   0   4   0   0   0   0   0   0  a4   0   0   0   0   0   0   0   0   0
+97   scenery       tile(  3c,  42,  42)   0  c7   0   0   4   0   0   0   0   0   0  a5   0   0   0   0   0   0   0   0   0
+98   scenery       tile(  3c,  42,  43)   0  c9   0   0   c   0   0   0   0   0   0  a6   0   0   0   0   0   0   0   0   0
+99   scenery       tile(  3c,  42,  42)   0  c8   0   0   4   0   0   0   0  98   8  a6   0   0   0   0   0   0   0   0   0
+100  scenery       tile(  35,  42,  46)   0  c9   0   0   c   0  f8   0   0   0   0  fd   0   0   0   0   0   0   0   0   0
+101  scenery       tile(  35,  42,  45)   0  c7   0   0   4   0  f8   0   0   0   0  51   0   0   0   0   0   0   0   0   0
+102  scenery       tile(  35,  42,  44)   0  c7   0   0   4   0  f8   0   0   0   0  52   0   0   0   0   0   0   0   0   0
+103  scenery       tile(  35,  42,  43)   0  c7   0   0   4   0  f8   0   0   0   0  53   0   0   0   0   0   0   0   0   0
+104  scenery       tile(  35,  42,  42)   0  c7   0   0   4   0  f8   0   0   0   0  57   0   0   0   0   0   0   0   0   0
+105  scenery       tile(  35,  42,  41)   0  c7   0   0   4   0  f8   0   0   0   0  58   0   0   0   0   0   0   0   0   0
+106  scenery       tile(  35,  42,  40)   0  c7   0   0   4   0  f8   0   0   0   0  fa   0   0   0   0   0   0   0   0   0
+107  scenery       tile(  35,  42,  3f)   0  c9   0   0   4   0  f8   0   0   0   0   6   1   0   0   0   0   0   0   0   0
+108  scenery       tile(  36,  42,  3f)   0  2c   0   0   0   0   0   0   0   0   0   5   1   0   0   0   0   0   0   0   0
+109  scenery       tile(  36,  42,  3f)   0  2e   0   0   1   0  fc   0   0   0   2   5   1   0   0   0   0   0   0   0   0
+110  scenery       tile(  36,  42,  40)   0  c3   0   0   4   0   0   0   0   0   0   4   1   0   0   0   0   0   0   0   0
+111  scenery       tile(  35,  42,  44)   0  c8   0   0   4   0  f8   0   0  24  fa  f0   0   0   0   0   0   0   0   0   0
+112  scenery       tile(  31,  42,  51)   0  c7   0   0   0   0   0   0   0   0   0  3e   0   0   0   0   0   0   0   0   0
+113  scenery       tile(  32,  42,  51)   0  c7   0   0   0   0   0   0   0   0   0  3d   0   0   0   0   0   0   0   0   0
+114  scenery       tile(  33,  42,  51)   0  c7   0   0   0   0   0   0   0   0   0  3c   0   0   0   0   0   0   0   0   0
+115  scenery       tile(  34,  42,  51)   0  c7   0   0   0   0   0   0   0   0   0  74   0   0   0   0   0   0   0   0   0
+116  scenery       tile(  35,  42,  51)   0  c7   0   0   0   0   0   0   0   0   0  3b   0   0   0   0   0   0   0   0   0
+117  scenery       tile(  36,  42,  51)   0  c9   0   0   8   0   0   0   0   0   0  3a   0   0   0   0   0   0   0   0   0
+118  scenery       tile(  2f,  42,  51)   0  c9   0   0   0   0   0   0   0   0   0  ee   0   0   0   0   0   0   0   0   0
+119  scenery       tile(  37,  42,  45)   0  da   0   0   8   0   4  24  fa   0  f8  aa   0   f   0   0   0   0   0   0   0
+125  scenery       tile(  26,  42,  41)   0  c3   0   0   4   0  fc   0   0   0   0  7c   0   0   0   0   0   0   0   0   0
+126  scenery       tile(  26,  42,  40)   0  c3   0   0   c   0  fc   0   0   0   0  7e   0   0   0   0   0   0   0   0   0
+127  scenery       tile(  26,  42,  3f)   0  c3   0   0   c   0  fc   0   0   0   0  15   1   0   0   0   0   0   0   0   0
+128  gate-0        tile(  3e,  40,  3c)   0  fb   0   0   0   0   0   0   0   0   0   5   0  40  40   0  7f  40   2  1e   0
+129  gate-1        tile(  33,  42,  43)   0  fb   0   0   0   0  f8   0   0   0   0  f5   0  80  80   1  7f  80   0  3c   0
+130  gate-2        tile(  27,  42,  36)   0  fb   0   0   0   0   0   0   0   0  f8  92   0  80  80   2  7f  80   0  3c   0
+131  gate-3        tile(  2b,  42,  3c)   0  fb   0   0   0   0   0   0   0   0   0  6b   0  80  80   3  7f  80   0  3c   0
+132  gate-4        tile(  36,  45,  41)   0  fb   0   0   0   0   8   0   0   0   0  e3   0  80  80   4  7f  80   0  3c   0
+133  gate-5        tile(  3c,  42,  51)   0  fb   0   0   0   0   8   0   0   0   0  31   0  80  80   5  7f  80   0  3c   0
+134  gate-6        tile(  30,  45,  3d)   0  fb   0   0   0   0   0   0   0   0   8  12   1  80  80   6  7f  80   0  3c   0
+
+Setupin FDAT file index 334 map index 33
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  40,  40,  4a)   0  42   0   0   8   0   0   0   0   0   0  92   0   c   0  92   0   9   1   2  ff
+1    exit-door     tile(  3d,  40,  38)   0  fc   0   0   0   0  fd   0   0   0   0   8   1   a   0   9   6   0   f   1   0
+2    gate-reset    tile(  3e,  40,  38)   0  fc   0   0   0   0  fd   0   0   0   0   7   1  ff  ff  ff   1   1  21   0   0
+3    exit-totem    tile(  3e,  40,  4b)   0   3   0   0   4   0   0   0   0   0   0  a0   0   f  fd  ff  f6   0  f8   0   1
+6    unknown       tile(  45,  40,  45)   0  ac   0   0   e   0  fc   0   0   0  fc  23   0  14  fc   0   0   1  ff   0  ff
+7    unknown       tile(  45,  40,  3b)   0  ac   0   0   a   0  fc   0   0   0   4  24   0  14  fc   0   0  ff  ff   0  ff
+8    unknown       tile(  3b,  40,  3b)   0  ac   0   0   6   0   4   0   0   0   4  25   0  14  fc   0   0   0  ff   0  ff
+9    unknown       tile(  3b,  40,  45)   0  ac   0   0   2   0   4   0   0   0  fc  26   0  14  fc   0   0  ff  ff   0  ff
+10   unknown       tile(  3e,  40,  51)   0  ac   0   0   0   0   0   0  fc   0  f8  b7   0  10  fc   0   0   2  ff   0  ff
+11   unknown       tile(  42,  40,  51)   0  ac   0   0   0   0   0   0  fc   0  f8  bb   0  10  fc   0   0   3  ff   0  ff
+12   gate-0        tile(  3d,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  1d   0  80  80   0  7f  80   0  3c   0
+13   gate-1        tile(  43,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  1b   0  80  80   1  7f  80   0  3c   0
+14   gate-2        tile(  40,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0   0   0  c0  c0   2  7f  c0   0  3c   0
+15   gate-3        tile(  43,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  1c   0  80  80   3  7f  80   0  3c   0
+16   gate-4        tile(  3d,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  1e   0  80  80   4  7f  80   0  3c   0
+17   gate-5        tile(  43,  40,  4e)   0  fb   0   0   0   0   0   0   0   0   0  b3   0  80  80   5  7f  80   2  3c   0
+18   gate-6        tile(  3d,  40,  4e)   0  fb   0   0   0   0   0   0   0   0   0  af   0  80  80   6  7f  80   2  3c   0
+
+Setup Area water_world_impure_pool_area in FDAT file index 104 map index 10
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  44,  40,  40)   0  5a   0   0   0   0   0   0   0   0   0  e3   0  40  fe   0   0  ff  ff   0  ff
+1    totem         tile(  3c,  40,  4a)   0   0   0   0   0   0   0   0   0   0   0  6f   1   0   0   0   0   0   0   0   0
+2    unknown       tile(  44,  40,  46)   0  5b   0   0   c   0   1   0   0   0   0  14   1  18   0  14   1  96   1   1  fc
+3    scenery       tile(  48,  40,  3f)   0  5f   0   0   0   0  fc   0   0   0   4  39   1   0   0   0   0   0   0   0   0
+4    unknown       tile(  4a,  43,  3e)   0  5c   0   0   c   0  f9   0   0   0   0  53   1  18   0  53   1  94   1   1  ff
+5    unknown       tile(  48,  43,  3c)   0  5c   0   0   8   0   0   0   0   0   7  5a   1  18   0  5a   1  95   1   1  ff
+6    scenery       tile(  47,  40,  41)   0  dc   0   0   0   0   0  24  fa   0   0  35   1  11   0   0   0   0   0   0   0
+7    scenery       tile(  4c,  43,  3f)   0  5e   0   0   4   0   0   0   0   0   0  56   1   0   0   0   0   0   0   0   0
+8    gate-reset    tile(  44,  40,  34)   0  fc   0   0   0   0   0   0   0   0   0  c3   0  ff  ff  ff   1   1   a   0   0
+9    exit-door     tile(  44,  40,  33)   0  fc   0   0   0   0   0   0   0   0   0  c4   0   4   5   0   0   0  28   3  f8
+10   gate-reset    tile(  48,  43,  34)   0  fc   0   0   0   0   0   0   0   0   0  92   1  ff  ff  ff   1   1   a   0   0
+11   exit-door     tile(  48,  43,  33)   0  fc   0   0   0   0   0   0   0   0   0  93   1   4   1  fb   0   0  29   3  f8
+12   unknown       tile(  43,  40,  44)   0  7e   0   0   8   0   8   0   0   0   4   f   1  14  fc   0   0   1  ff   0  ff
+13   scenery       tile(  40,  40,  34)   0  9e   0   0   8   0   0   0   0   0   0  ae   0   2   0   0   0   0   0   0   0
+14   exit-totem    tile(  46,  40,  47)   0   3   0   0   0   0   0   0   0   0  fc  89   1  11   8   0   3   0   0   8   3
+15   scenery       tile(  46,  40,  44)   0   1   0   0   8   0   0   0   0   0   4  87   1  2c   0   0   0   0   0   0   0
+16   scenery       tile(  47,  43,  40)   0  d3   0   0   0   0   0   0   0   0   0  47   1   0   0   0   0   0   0   0   0
+17   scenery       tile(  47,  43,  3f)   0  d4   0   0   0   0   0   0   0   0   0  48   1   0   0   0   0   0   0   0   0
+18   scenery       tile(  47,  43,  3e)   0  d5   0   0   0   0   0   0   0   0   0  49   1   0   0   0   0   0   0   0   0
+19   scenery       tile(  48,  43,  3d)   0  d6   0   0   0   0   0   0   0   0   0  52   1   0   0   0   0   0   0   0   0
+20   unknown       tile(  3c,  40,  40)   0  83   0   0   0   0   0   0   0   0   0  cb   0  40  fe   0   0  ff  ff   0  ff
+21   unknown       tile(  42,  40,  46)   0  69   0   0   0   0   0   0   0   0   0   d   1  40  fe   0   0  ff  ff   0  ff
+22   unknown       tile(  42,  40,  45)   0  6a   0   0   0   0   0   0   0   0   0   e   1  40  fe   0   0  ff  ff   0  ff
+23   unknown       tile(  41,  40,  46)   0  6b   0   0   0   0   0   0   0   0   0   9   1  40  fe   0   0  ff  ff   0  ff
+24   unknown       tile(  41,  40,  45)   0  6c   0   0   0   0   0   0   0   0   0   a   1  40  fe   0   0  ff  ff   0  ff
+25   unknown       tile(  40,  40,  42)   0  30   0   0   0   0  f8   0   0   0   0   3   0  40  fe   0   0  ff  ff   0  ff
+26   unknown       tile(  47,  41,  40)   0  6d   0   0   0   0   0   0   0   0   0  1a   1  40  fe   0   0  ff  ff   0  ff
+27   unknown       tile(  47,  42,  40)   0  6e   0   0   0   0   0   0   0   0   0  21   1  40  fe   0   0  ff  ff   0  ff
+28   scenery       tile(  46,  40,  40)   0  de   0   0   0   0   0   0   0   0   0  33   1   0   0   0   0   0   0   0   0
+30   gate-0        tile(  40,  40,  35)   0  fb   0   0   0   0   0   0   0   0   0  b1   0  80  80   0  7f  80   0  3c   0
+31   gate-1        tile(  44,  40,  3a)   0  fb   0   0   0   0   0   0   0   0   0  60   0  80  80   1  7f  80   0  3c   0
+32   gate-2        tile(  3c,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  f9   0  80  80   2  7f  80   0  3c   0
+33   gate-3        tile(  3c,  40,  46)   0  fb   0   0   0   0   0   0   0   0   0  62   1  80  80   3  7f  80   0  3c   0
+34   gate-4        tile(  44,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  4f   0  80  80   4  7f  80   0  3c   0
+35   gate-5        tile(  40,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  1f   0  80  80   5  7f  80   0  3c   0
+36   gate-6        tile(  47,  43,  40)   0  fb   0   0   0   0   0   0   0   0   0  47   1  80  80   6  7f  80   0  3c   0
+37   gate-7        tile(  46,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  8d   1  80  80   7  7f  80   0  3c   0
+38   gate-8        tile(  3c,  40,  3e)   0  fb   0   0   0   0   0   0   0   0   0  7b   0  80  80   8  7f  80   0  3c   0
+39   scenery       tile(  40,  40,  42)   0  fa   0   0   0   0  fc   0  fe   0  fe   0   0   0   0   0   0   0   0   0   0
+40   scenery       tile(  40,  40,  42)   0  fa   0   0   0   0  f4   0  fe   0  fe   5   0   0   0   0   0   0   0   0   0
+41   totem         tile(  40,  40,  42)   0  fa   0   0   0   0   c   0  fe   0  fe   4   0   0   0   0   0   0   0   0   0
+42   scenery       tile(  40,  40,  42)   0  fa   0   0   0   0   4   0  fe   0  fe   4   0   0   0   0   0   0   0   0   0
+
+Setup Area water_world_sunken_river_area in FDAT file index 214 map index 21
+
+Objects 
+idx  in_file offset type     
+0    gate-reset    tile(  40,  40,  41)   0  fc   0   0   0   0   0   0   0   0   0   1   0  ff  ff  ff   1   1  15   0   0
+1    exit-door     tile(  40,  40,  40)   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
+2    unknown       tile(  34,  40,  4d)   0  95   0   0   0   0   0   0   0   0   0  96   0  14  fc  ff  f1  ff  ff   0   4
+3    unknown       tile(  33,  40,  4c)   0  98   0   0   0   0  f8   0   0   0   0  99   0  19  fc  ff  ff  ff  ff   0  f1
+4    unknown       tile(  35,  40,  4c)   0  96   0   0   0   0  f8   0   a   0   0  54   0  14  fc  54   0  ae   0   1  f0
+5    exit-door     tile(  41,  40,  49)   0  fc   0   0   0   0   0   0   0   0   0  99   0  f7   0  f2   0   0  20   1   0
+6    gate-reset    tile(  40,  40,  49)   0  fc   0   0   0   0   0   0   0   0   0  99   0  ff  ff  ff   1   1  15   0   0
+7    scenery       tile(  3e,  41,  49)   0  97   0   0   0   0   0   0  f4   0   0  aa   0   0   0   0   0   0   0   0   0
+8    scenery       tile(  35,  41,  4d)   0  97   0   0   0   0   0   0  f4   0   0  af   0   0   0   0   0   0   0   0   0
+9    unknown       tile(  33,  41,  4f)   0  a8   0   0   0   0   0   0   1   0   4  9c   0  14  ff  ff  ff   1  ff   0   5
+10   scenery       tile(  37,  40,  46)   0  97   0   0   0   0   0   0   4   0   0  1a   0   0   0   0   0   0   0   0   0
+11   scenery       tile(  38,  40,  46)   0  97   0   0   0   0   0   0   4   0   0  1b   0   0   0   0   0   0   0   0   0
+12   scenery       tile(  39,  40,  46)   0  97   0   0   0   0   0   0   4   0   0  1c   0   0   0   0   0   0   0   0   0
+13   scenery       tile(  3a,  40,  46)   0  97   0   0   0   0   0   0   4   0   0  1d   0   0   0   0   0   0   0   0   0
+14   scenery       tile(  3b,  40,  46)   0  97   0   0   0   0   0   0   4   0   0  1e   0   0   0   0   0   0   0   0   0
+15   scenery       tile(  3b,  40,  47)   0  97   0   0   0   0   0   0   4   0   0  25   0   0   0   0   0   0   0   0   0
+16   scenery       tile(  3a,  40,  47)   0  97   0   0   0   0   0   0   4   0   0  67   0   0   0   0   0   0   0   0   0
+17   scenery       tile(  39,  40,  47)   0  97   0   0   0   0   0   0   4   0   0  66   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  38,  40,  47)   0  97   0   0   0   0   0   0   4   0   0  65   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  37,  40,  47)   0  97   0   0   0   0   0   0   4   0   0  21   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  37,  40,  48)   0  97   0   0   0   0   0   0   4   0   0  28   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  38,  40,  48)   0  97   0   0   0   0   0   0   4   0   0  2b   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  39,  40,  48)   0  97   0   0   0   0   0   0   4   0   0  2c   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  3a,  40,  48)   0  97   0   0   0   0   0   0   4   0   0  2d   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  3b,  40,  48)   0  97   0   0   0   0   0   0   4   0   0  29   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  37,  40,  4a)   0  97   0   0   0   0   0   0   4   0   0  39   0   0   0   0   0   0   0   0   0
+26   scenery       tile(  38,  40,  4a)   0  97   0   0   0   0   0   0   4   0   0  36   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  39,  40,  4a)   0  97   0   0   0   0   0   0   4   0   0  37   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  3a,  40,  4a)   0  97   0   0   0   0   0   0   4   0   0  38   0   0   0   0   0   0   0   0   0
+29   scenery       tile(  3b,  40,  4a)   0  97   0   0   0   0   0   0   4   0   0  3a   0   0   0   0   0   0   0   0   0
+30   scenery       tile(  3b,  40,  4b)   0  97   0   0   0   0   0   0   4   0   0  3f   0   0   0   0   0   0   0   0   0
+31   scenery       tile(  3a,  40,  4b)   0  97   0   0   0   0   0   0   4   0   0  83   0   0   0   0   0   0   0   0   0
+32   scenery       tile(  39,  40,  4b)   0  97   0   0   0   0   0   0   4   0   0  82   0   0   0   0   0   0   0   0   0
+33   scenery       tile(  38,  40,  4b)   0  97   0   0   0   0   0   0   4   0   0  81   0   0   0   0   0   0   0   0   0
+34   scenery       tile(  37,  40,  4b)   0  97   0   0   0   0   0   0   4   0   0  3b   0   0   0   0   0   0   0   0   0
+35   scenery       tile(  37,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  40   0   0   0   0   0   0   0   0   0
+36   scenery       tile(  38,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  42   0   0   0   0   0   0   0   0   0
+37   scenery       tile(  39,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  43   0   0   0   0   0   0   0   0   0
+38   scenery       tile(  3a,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  44   0   0   0   0   0   0   0   0   0
+39   scenery       tile(  3b,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  41   0   0   0   0   0   0   0   0   0
+40   scenery       tile(  33,  40,  4b)   0  97   0   0   0   0   0   0   4   0   0  98   0   0   0   0   0   0   0   0   0
+41   scenery       tile(  33,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  99   0   0   0   0   0   0   0   0   0
+42   scenery       tile(  33,  40,  4d)   0  97   0   0   0   0   0   0   4   0   0  9a   0   0   0   0   0   0   0   0   0
+43   scenery       tile(  35,  40,  4c)   0  97   0   0   0   0   0   0   4   0   0  54   0   0   0   0   0   0   0   0   0
+44   scenery       tile(  35,  41,  49)   0  97   0   0   0   0   0   0  f4   0   0  9e   0   0   0   0   0   0   0   0   0
+45   scenery       tile(  35,  41,  4b)   0  97   0   0   0   0   0   0  f4   0   0  94   0   0   0   0   0   0   0   0   0
+46   unknown       tile(  35,  41,  4f)   0  95   0   0   0   0   0   0  fc  e8   3  b1   0  14  fc  ff  f0  ff  ff   0   4
+47   scenery       tile(  35,  41,  4a)   0  97   0   0   0   0   0   0  f4   0   0  9d   0   0   0   0   0   0   0   0   0
+48   scenery       tile(  38,  40,  49)   0  97   0   0   0   0   0   0   4   0   0  32   0   0   0   0   0   0   0   0   0
+49   scenery       tile(  39,  40,  49)   0  97   0   0   0   0   0   0   4   0   0  33   0   0   0   0   0   0   0   0   0
+50   gate-0        tile(  3d,  40,  42)   0  fb   0   0   0   0   0   0   0   0   0   8   0  80  80   0  7f  80   0  3c   0
+51   gate-1        tile(  39,  40,  44)   0  fb   0   0   0   0   0   0   0   0   0  11   0  80  80   1  7f  80   0  3c   0
+52   gate-2        tile(  39,  40,  49)   0  fb   0   0   0   0   0   0   8   0   0  33   0  80  80   2  7f  80   0  3c   0
+53   gate-3        tile(  3c,  41,  49)   0  fb   0   0   0   0   0   0   0   0   0  35   0  80  80   3  7f  80   0  3c   0
+54   gate-4        tile(  39,  40,  4e)   0  fb   0   0   0   0   0   0   0   0   0  52   0  80  80   4  7f  80   0  3c   0
+55   gate-5        tile(  35,  40,  48)   0  fb   0   0   0   0   0   0  fc   0   0  9f   0  80  80   5  7f  80   0  3c   0
+56   gate-6        tile(  36,  40,  49)   0  fb   0   0   0   0   0   0   0   0   0  2e   0  80  80   6  7f  80   0  3c   0
+57   gate-7        tile(  36,  3f,  43)   0  fb   0   0   0   0   0   0  fc   0   0  a5   0  80  80   7  7f  80   0  3c   0
+58   scenery       tile(  35,  41,  4e)   0  97   0   0   0   0   0   0  f4   0   0  b0   0   0   0   0   0   0   0   0   0
+59   scenery       tile(  3a,  40,  49)   0  97   0   0   0   0   0   0   4   0   0  34   0   0   0   0   0   0   0   0   0
+60   scenery       tile(  35,  41,  4f)   0  97   0   0   0   0   0   0  f4   0   0  b1   0   0   0   0   0   0   0   0   0
+61   scenery       tile(  33,  41,  4e)   0  97   0   0   0   0   0   0  f4   0   0  9b   0   0   0   0   0   0   0   0   0
+62   scenery       tile(  33,  41,  4f)   0  97   0   0   0   0   0   0  f4   0   0  9c   0   0   0   0   0   0   0   0   0
+63   totem         tile(  3b,  40,  50)   0   0   0   0   c   0   4   0   0   0   0  b4   0   0   0   0   0   0   0   0   0
+64   gate-reset    tile(  33,  40,  4b)   0  fd   0   0   0   0   0   0  10  24  fa  98   0  15  f6  ff   1   0  f8   0   0
+
+Setup Area water_world_watery_labyrinth_area in FDAT file index 324 map index 32
+
+Objects 
+idx  in_file offset type     
+0    totem         tile(  3e,  40,  44)   0   2   0   0   0   0   8   0   0   0   4  c9   0  2e   0   0   0   0  fe  e8   0
+1    totem         tile(  3e,  40,  42)   0   0   0   0   8   0   8   0   0   0  fc  cb   0   0   0   0   0   0   0   0   0
+2    unknown       tile(  3a,  40,  47)   0  8e   0   0   0   0   0   0   0   0   0  80   0  28  fc  80   0  ed   0   1  32
+3    unknown       tile(  3a,  40,  47)   0  8f   0   0   0   0   6   0  fd   0  fe  80   0  14  fc  ff  32  ff  ff   0  ff
+4    unknown       tile(  37,  40,  31)   0  fc   0   0   0   0   0   0   0   0   0  ec   0   0   0   9   0   0  15   3   0
+5    gate-reset    tile(  37,  40,  32)   0  fc   0   0   0   0   0   0   0   0   0  a8   0  ff  ff  ff   1   1  20   0   0
+6    unknown       tile(  40,  40,  3c)   0  90   0   0   0   0   0   0   0   0   0  2b   0  14  fb   0   0  ff  ff   0  ff
+7    unknown       tile(  40,  40,  3b)   0  90   0   0   0   0   0   0   0   0   0  2c   0  14  fb   0   0  ff  ff   0  ff
+8    exit-door     tile(  48,  40,  35)   0  fc   0   0   0   0   0   0   0   0   0  ea   0  ff  ff  ff   1   1  20   0   0
+9    exit-door     tile(  49,  40,  35)   0  fc   0   0   0   0   0   0   0   0   0  eb   0  fd   0   0   0   0  25   1   0
+10   unknown       tile(  3c,  40,  46)   0  90   0   0   0   0   5   0   0  80   1  88   0  30  fb   0   0  ff  ff   0  ff
+11   unknown       tile(  3c,  40,  45)   0  90   0   0   0   0   8   0   0   0   2  84   0  30  fb   0   0  ff  ff   0  ff
+12   unknown       tile(  3e,  40,  46)   0  90   0   0   0   0   0   0   0   0   0  d7   0  30  fb   0   0  ff  ff   0  ff
+13   unknown       tile(  41,  40,  46)   0  90   0   0   0   0   0   0   0   0  fe  7c   0  30  fb   0   0  ff  ff   0  ff
+14   unknown       tile(  43,  40,  44)   0  90   0   0   0   0   0   0   0   0   0  7a   0  30  fb   0   0  ff  ff   0  ff
+15   unknown       tile(  44,  40,  43)   0  90   0   0   0   0   0   0   0   0   0  79   0  30  fb   0   0  ff  ff   0  ff
+16   unknown       tile(  46,  40,  40)   0  90   0   0   0   0   0   0   0   0   0  76   0  30  fb   0   0  ff  ff   0  ff
+17   unknown       tile(  46,  40,  3f)   0  90   0   0   0   0  fe   0   0   0   0  75   0  30  fb   0   0  ff  ff   0  ff
+18   unknown       tile(  46,  40,  3d)   0  90   0   0   0   0  fd   0   0   0   0  73   0  30  fb   0   0  ff  ff   0  ff
+19   unknown       tile(  47,  40,  3b)   0  90   0   0   0   0  fc   0   0   0  fe  65   0  30  fb   0   0  ff  ff   0  ff
+20   unknown       tile(  47,  40,  3b)   0  90   0   0   0   0   1   0   0   0   2  65   0  30  fb   0   0  ff  ff   0  ff
+21   unknown       tile(  46,  40,  3a)   0  90   0   0   0   0   4   0   0   0  fc  63   0  30  fb   0   0  ff  ff   0  ff
+22   unknown       tile(  45,  40,  39)   0  90   0   0   0   0  fc   0   0   0   2  67   0  30  fb   0   0  ff  ff   0  ff
+23   unknown       tile(  47,  40,  39)   0  90   0   0   0   0   0   0   0   0   0  66   0  30  fb   0   0  ff  ff   0  ff
+24   unknown       tile(  43,  40,  3a)   0  90   0   0   0   0   2   0   0   0  ff  6a   0  30  fb   0   0  ff  ff   0  ff
+25   unknown       tile(  43,  40,  37)   0  90   0   0   0   0  fe   0   0   0   0  6c   0  30  fb   0   0  ff  ff   0  ff
+26   unknown       tile(  42,  40,  36)   0  90   0   0   0   0  fe   0   0   0   0  42   0  30  fb   0   0  ff  ff   0  ff
+27   unknown       tile(  41,  40,  35)   0  90   0   0   0   0  f8   0   0   0  ff  38   0  30  fb   0   0  ff  ff   0  ff
+28   unknown       tile(  40,  40,  37)   0  90   0   0   0   0  fe   0   0   0   4  36   0  30  fb   0   0  ff  ff   0  ff
+29   unknown       tile(  3f,  40,  36)   0  90   0   0   0   0   4   0   0   0   2  46   0  30  fb   0   0  ff  ff   0  ff
+30   unknown       tile(  3e,  40,  37)   0  90   0   0   0   0   6   0   0   0  fe  3f   0  30  fb   0   0  ff  ff   0  ff
+31   unknown       tile(  3f,  40,  3c)   0  90   0   0   0   0   6   0   0   0   2  26   0  30  fb   0   0  ff  ff   0  ff
+32   unknown       tile(  36,  40,  39)   0  90   0   0   0   0  fc   0   0   0  fc  9c   0  30  fb   0   0  ff  ff   0  ff
+33   unknown       tile(  37,  40,  39)   0  90   0   0   0   0  ff   0   0   0   8  90   0  30  fb   0   0  ff  ff   0  ff
+34   unknown       tile(  38,  40,  38)   0  90   0   0   0   0  fe   0   0   0  fe  a3   0  30  fb   0   0  ff  ff   0  ff
+35   unknown       tile(  37,  40,  37)   0  90   0   0   0   0   2   0   0   0  fa  a4   0  30  fb   0   0  ff  ff   0  ff
+36   unknown       tile(  36,  40,  3f)   0  90   0   0   0   0  fc   0   0   0   2  b9   0  30  fb   0   0  ff  ff   0  ff
+37   unknown       tile(  38,  40,  40)   0  90   0   0   0   0  fa   0   0   0   0  ba   0  30  fb   0   0  ff  ff   0  ff
+38   unknown       tile(  38,  40,  3f)   0  90   0   0   0   0   2   0   0   0   1  bd   0  30  fb   0   0  ff  ff   0  ff
+39   unknown       tile(  37,  40,  3e)   0  90   0   0   0   0   0   0   0   0   0  be   0  30  fb   0   0  ff  ff   0  ff
+40   unknown       tile(  3a,  40,  40)   0  90   0   0   0   0   0   0   0   0   0  c0   0  30  fb   0   0  ff  ff   0  ff
+41   unknown       tile(  3a,  40,  41)   0  90   0   0   0   0  fe   0   0   0   0  c5   0  30  fb   0   0  ff  ff   0  ff
+42   unknown       tile(  39,  40,  42)   0  90   0   0   0   0   0   0   0   0   0  c2   0  30  fb   0   0  ff  ff   0  ff
+43   unknown       tile(  3a,  40,  43)   0  90   0   0   0   0   0   0   0   0  fe  c4   0  30  fb   0   0  ff  ff   0  ff
+44   totem         tile(  3e,  40,  43)   0  90   0   0   0   0  fa   0   0  80   1  ca   0  30  fb   0   0  ff  ff   0  ff
+45   totem         tile(  40,  40,  42)   0  90   0   0   0   0  f8   0   0   0   4  cc   0  30  fb   0   0  ff  ff   0  ff
+46   unknown       tile(  37,  40,  42)   0  90   0   0   0   0  fe   0   0   0   1  d2   0  30  fb   0   0  ff  ff   0  ff
+47   unknown       tile(  37,  40,  44)   0  90   0   0   0   0   2   0   0   0   0  d4   0  30  fb   0   0  ff  ff   0  ff
+48   unknown       tile(  38,  40,  45)   0  90   0   0   0   0   0   0   0   0   0  d5   0  30  fb   0   0  ff  ff   0  ff
+49   unknown       tile(  39,  40,  46)   0  90   0   0   0   0  fe   0   0   0  fe  d6   0  30  fb   0   0  ff  ff   0  ff
+50   unknown       tile(  3c,  40,  49)   0  90   0   0   0   0   0   0   0   0  ff  d9   0  30  fb   0   0  ff  ff   0  ff
+51   unknown       tile(  3d,  40,  4a)   0  90   0   0   0   0   0   0   0   0   6  db   0  30  fb   0   0  ff  ff   0  ff
+52   unknown       tile(  3c,  40,  4b)   0  90   0   0   0   0   6   0   0   0  fc  de   0  30  fb   0   0  ff  ff   0  ff
+53   totem         tile(  40,  40,  43)   0   2   0   0   c   0  fc   0   0   0   0  ce   0  2f   0   0   0   0  fe  e8   0
+60   gate-0        tile(  37,  40,  38)   0  fb   0   0   0   0   0   0   0   0   0  9e   0  80  80   0  7f  80   0  3c   0
+61   gate-1        tile(  40,  40,  3c)   0  fb   0   0   0   0   0   0   0   0  fe  2b   0  80  80   1  7f  80   0  3c   0
+62   gate-2        tile(  40,  40,  36)   0  fb   0   0   0   0   0   0   0   0   0  37   0  80  80   2  7f  80   0  3c   0
+63   gate-3        tile(  46,  40,  3a)   0  fb   0   0   0   0   0   0   0   0   0  63   0  80  80   3  7f  80   0  3c   0
+64   gate-4        tile(  37,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  b7   0  80  80   4  7f  80   0  3c   0
+65   gate-5        tile(  40,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0   0   0  80  80   5  7f  80   0  3c   0
+66   gate-6        tile(  3d,  40,  4b)   0  fb   0   0   0   0   0   0   0   0   0  df   0  80  80   6  7f  80   0  3c   0
+67   gate-7        tile(  3d,  40,  4c)   0  fb   0   0   0   0   0   0   0   0   0  e6   0  80  80   7  7f  80   0  3c   0
+
+Setup Area water_world_white_rain_area in FDAT file index 374 map index 37
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  41,  40,  50)   0  38   0   0   0   0  fc   0   0   0   4  24   0   0   0   0   0   0   0   0   0
+1    unknown       tile(  42,  40,  4c)   0  3e   0   0   0   0   0   0   0   0  fc   f   0  2c  ff   f   0  4b   0   1  ff
+2    scenery       tile(  42,  40,  4a)   0  38   0   0   8   0   0   0   0   0   2  6d   0   0   0   0   0   0   0   0   0
+3    scenery       tile(  42,  40,  4a)   0  38   0   0   4   0   2   0   0   0   0  6d   0   0   0   0   0   0   0   0   0
+4    exit-door     tile(  3d,  40,  3f)   0  fc   0   0   0   0   0   0   0   0   0   0   0   8   0  f5   0   0  20   3   0
+5    scenery       tile(  42,  40,  4a)   0  38   0   0   0   0   0   0   0   0  fe  6d   0   0   0   0   0   0   0   0   0
+6    exit-totem    tile(  3c,  40,  42)   0   3   0   0   4   0   4   0   0   0   8  4d   0   9  fe   0   3  f8   0   0   3
+7    scenery       tile(  42,  40,  4a)   0  38   0   0   c   0  fe   0   0   0   0  6d   0   0   0   0   0   0   0   0   0
+8    scenery       tile(  3e,  40,  40)   0  ab   0   0   c   0  fa   0  fe   0   0   4   0   0   0   0   0   0   0   0   0
+10   gate-1        tile(  3e,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0   c   0  80  80   1  7f  80   2  f0   0
+11   gate-2        tile(  3c,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0   d   0  80  80   2  7f  80   2  f0   0
+12   gate-4        tile(  40,  40,  4c)   0  fb   0   0   0   0   0   0   0   0   0  12   0  80  80   4  7f  80   2  f0   0
+13   gate-5        tile(  44,  40,  4c)   0  fb   0   0   0   0   0   0   0   0   0  13   0  80  80   5  7f  80   2  f0   0
+14   gate-0        tile(  3c,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   3   0  80  80   0  7f  80   2  f0   0
+15   gate-3        tile(  3e,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   2   0  80  80   3  7f  80   2  f0   0
+16   unknown       tile(  42,  40,  48)   0  3e   0   0   8   0   0   0   0   0   4  53   0  2c  ff  53   0  97   0   1  ff
+17   unknown       tile(  3d,  40,  46)   0  3e   0   0   0   0   0   0   0   0  fc  52   0  2c  ff  52   0  98   0   1  ff
+18   scenery       tile(  3e,  40,  42)   0  ab   0   0   c   0  fa   0  fe   0   0  4c   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  3e,  40,  43)   0  ab   0   0   c   0  fa   0  fe   0   0  4c   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  3c,  40,  40)   0  ab   0   0   4   0   6   0  fe   0   0   7   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  3c,  40,  42)   0  ab   0   0   4   0   6   0  fe   0   0  4d   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  3c,  40,  44)   0  ab   0   0   4   0   6   0  fe   0   0   9   0   0   0   0   0   0   0   0   0
+
+Setup Area fire_world_phoenix_cave in FDAT file index 34 map index 3
+
+Objects 
+idx  in_file offset type     
+0    exit-door     tile(  3b,  40,  43)   0  fc   0   0   0   0   0   0   0   0   0   9   0   5   3  fd   0   0  28   1  f8
+1    exit-door     tile(  41,  40,  43)   0  fc   0   0   0   0   0   0   0   0   0   2   0   5   3   3   0   0  28   1  f8
+2    gate-reset    tile(  41,  40,  42)   0  fc   0   0   0   0   0   0   0   0   0   1   0  ff  ff  ff   1   1   3   0   0
+3    gate-reset    tile(  3b,  40,  42)   0  fc   0   0   0   0   0   0   0   0   0   8   0  ff  ff  ff   1   1   3   0   0
+4    unknown       tile(  3e,  40,  31)   0  55   0   0   4  50  fb   0   0   0   0  9a   0   c   0  ff  f3  ff  ff   0  ff
+5    unknown       tile(  3e,  40,  34)   0  55   0   0   4  50  fb   0   0   0   0  7f   0   c   0  ff  f2  ff  ff   0  ff
+6    unknown       tile(  3e,  40,  38)   0  55   0   0   4  50  fb   0   0   0   0  5b   0   c   0  ff  f1  ff  ff   0  ff
+7    unknown       tile(  3e,  40,  3b)   0  55   0   0   4  50  fb   0   0   0   0  40   0   c   0  ff  f0  ff  ff   0  ff
+8    unknown       tile(  3d,  40,  2e)   0  c6   0   0   0   0   8   0   0   0   0  b3   0  10   0  b3   0  e4   1   2  f3
+9    unknown       tile(  3f,  40,  2e)   0  c6   0   0   8   0  f8   0   0   0   0  b5   0  10   0  b5   0  e6   1   1  f3
+10   unknown       tile(  3c,  40,  34)   0  56   0   0   0   0   8   0   0   0   0  7b   0  10   0  7b   0  e7   1   2  f2
+11   unknown       tile(  3f,  40,  38)   0  56   0   0   0   0   8   0   0   0   0  59   0  10   0  59   0  e9   1   2  f1
+12   unknown       tile(  3d,  40,  3e)   0  c6   0   0   0   0   8   0   0   0   0  d6   1  10   0  d6   1  eb   1   2  f0
+13   unknown       tile(  3f,  40,  3e)   0  c6   0   0   8   0  f8   0   0   0   0  d7   1  10   0  d8   1  ed   1   1  f0
+14   unknown       tile(  42,  40,  42)   0  aa   0   0   0   0   0   0   0   0   0   0   0  14  fc  ff  ff   3  ff   0  ff
+15   unknown       tile(  42,  40,  2d)   0  aa   0   0   8   0   0   0   0   0   0  b6   0  14  fc  ff  ff   4  ff   0  ff
+16   scenery       tile(  41,  40,  3f)   0  cc   0   0   0   0   0   0   0   0   0  1e   0   0   0   0   0   0   0   0   0
+17   scenery       tile(  3b,  40,  3f)   0  cc   0   0   0   0   0   0   0   0   0  24   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  41,  40,  36)   0  cc   0   0   0   0   0   0   0   0   0  66   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  3b,  40,  32)   0  cc   0   0   0   0   0   0   0   0   0  90   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  3b,  40,  3a)   0  cc   0   0   0   0   0   0   0   0   0  48   0   0   0   0   0   0   0   0   0
+21   gate-0        tile(  3a,  40,  3f)   0  fb   0   0   0   0  f8   0   0   0   8  25   0  80  80   0  7f  80   0  3c   0
+22   gate-1        tile(  3a,  40,  3a)   0  fb   0   0   0   0  f8   0   0   0   8  49   0  80  80   1  7f  80   0  3c   0
+23   gate-2        tile(  42,  40,  36)   0  fb   0   0   0   0   8   0   0   0   8  65   0  80  80   2  7f  80   0  3c   0
+24   gate-3        tile(  3a,  40,  32)   0  fb   0   0   0   0  f8   0   0   0   8  91   0  80  80   3  7f  80   0  3c   0
+25   gate-4        tile(  42,  40,  2d)   0  fb   0   0   0   0   8   0   0   0  f8  b6   0  80  80   4  7f  80   0  3c   0
+26   gate-5        tile(  3a,  40,  2d)   0  fb   0   0   0   0  f8   0   0   0  f8  b7   0  80  80   5  7f  80   0  3c   0
+27   gate-6        tile(  42,  40,  3f)   0  fb   0   0   0   0   8   0   0   0   8  1d   0  80  80   6  7f  80   0  3c   0
+28   scenery       tile(  3a,  40,  41)   0  db   0   0   4   0  f8  24  fa   0   0  13   0  10   0   0   0   0   0   0   0
+
+Setup Area fire_world_burning_cavern in FDAT file index 204 map index 20
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  41,  40,  39)   0  29   0   0   e   0   0   0   0   0   0  24   0   0   0   0   0   0   0   0   0
+1    scenery       tile(  41,  40,  37)   0  29   0   0   a   0   0   0   0   0   0  26   0   0   0   0   0   0   0   0   0
+2    scenery       tile(  3f,  40,  37)   0  29   0   0   6   0   0   0   0   0   0  20   0   0   0   0   0   0   0   0   0
+3    scenery       tile(  3f,  40,  39)   0  29   0   0   2   0   0   0   0   0   0  1e   0   0   0   0   0   0   0   0   0
+4    scenery       tile(  40,  40,  3b)   0  2b   0   0   0   0   0   0   0   0   0   d   0   0   0   0   0   0   0   0   0
+5    scenery       tile(  40,  40,  3b)   0  2b   0   0   8   0   0   0   0   0   0   d   0   0   0   0   0   0   0   0   0
+6    scenery       tile(  40,  40,  3c)   0  2b   0   0   8   0   0   0   0   0   0   c   0   0   0   0   0   0   0   0   0
+7    scenery       tile(  40,  40,  3c)   0  2b   0   0   0   0   0   0   0   0   0   c   0   0   0   0   0   0   0   0   0
+8    scenery       tile(  41,  40,  3f)   0  29   0   0   c   0  fa   0  fc   0   0   3   0   0   0   0   0   0   0   0   0
+9    scenery       tile(  3f,  40,  3f)   0  29   0   0   4   0   6   0  fc   0   0   5   0   0   0   0   0   0   0   0   0
+10   scenery       tile(  3f,  40,  41)   0  29   0   0   4   0   6   0  f8   0   0  39   0   0   0   0   0   0   0   0   0
+11   scenery       tile(  41,  40,  41)   0  29   0   0   c   0  fa   0  f8   0   0  3b   0   0   0   0   0   0   0   0   0
+12   scenery       tile(  44,  40,  49)   0  29   0   0   2   0   6   0  f8   0  fa  94   0   0   0   0   0   0   0   0   0
+13   scenery       tile(  4a,  40,  43)   0  29   0   0   a   0  fa   0  f8   0   6  a0   0   0   0   0   0   0   0   0   0
+14   scenery       tile(  4a,  40,  49)   0  29   0   0   e   0  fa   0  f8   0  fa  9a   0   0   0   0   0   0   0   0   0
+15   scenery       tile(  48,  3f,  47)   0  29   0   0   e   0   0   0   0   0   0  bf   0   0   0   0   0   0   0   0   0
+16   scenery       tile(  48,  3f,  45)   0  29   0   0   a   0   0   0   0   0   0  c1   0   0   0   0   0   0   0   0   0
+17   scenery       tile(  46,  3f,  45)   0  29   0   0   6   0   0   0   0   0   0  bb   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  46,  3f,  47)   0  29   0   0   2   0   0   0   0   0   0  b9   0   0   0   0   0   0   0   0   0
+19   scenery       tile(  45,  40,  46)   0  2b   0   0   8   0  fa   0  fc   0   6  c4   0   0   0   0   0   0   0   0   0
+20   scenery       tile(  45,  40,  46)   0  2b   0   0   8   0  fa   0  fc   0  fa  c4   0   0   0   0   0   0   0   0   0
+21   scenery       tile(  43,  40,  46)   0  2b   0   0   4   0   6   0  f8   0  fe  90   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  43,  40,  46)   0  2b   0   0   4   0  fa   0  f8   0  fe  90   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  43,  40,  46)   0  2b   0   0   c   0  fa   0  f8   0   2  90   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  43,  40,  46)   0  2b   0   0   c   0   6   0  f8   0   2  90   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  3d,  40,  3e)   0  28   0   0   0   0   8   0  f8   0  fc  7a   0   0   0   0   0   0   0   0   0
+26   scenery       tile(  3d,  40,  3c)   0  28   0   0   8   0   8   0  f8   0   4  7d   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  3a,  40,  41)   0  2b   0   0   0   0   0   0  f8   0   0  61   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  3a,  40,  41)   0  2b   0   0   8   0   0   0  f8   0   0  61   0   0   0   0   0   0   0   0   0
+29   scenery       tile(  3a,  3f,  38)   0  2a   0   0   0  80  fc   0   4   0   0  8d   0   0   0   0   0   0   0   0   0
+30   scenery       tile(  47,  3f,  46)   0  2a   0   0   4   0   0   0   0  80  fc  d7   0   0   0   0   0   0   0   0   0
+31   totem         tile(  46,  40,  39)   0   0   0   0   0   0   0   0   0   0  fc  2f   0   0   0   0   0   0   0   0   0
+32   scenery       tile(  3b,  40,  48)   0   1   0   0   8   0   0   0  f8   0  f8  f6   0  2c   0   0   0   0   0   0   0
+33   unknown       tile(  3e,  40,  3d)   0  27   0   0   c  c0  fe   0  f8   0   0  7c   0  14   0   0   0  ff  ff   0  ff
+34   scenery       tile(  44,  40,  43)   0  29   0   0   6   0   6   0  f8   0   6  a6   0   0   0   0   0   0   0   0   0
+35   unknown       tile(  40,  40,  3c)   0  35   0   0   0   0   8   0   0   0   0   c   0  2c   0   c   0  fa   0   1  ff
+36   unknown       tile(  3a,  3f,  3a)   0  50   0   0   8   0   0   0   4   0   0  80   0  30   0  80   0  fb   0   1  fc
+37   exit-door     tile(  3c,  40,  31)   0  fc   0   0   0   0   0   0   0   0   0  2a   0  fb   3   0   0   0  28   1  f8
+38   gate-reset    tile(  3c,  40,  32)   0  fc   0   0   0   0   0   0   0   0   0  f9   0  ff  ff  ff   1   1  14   0   0
+39   scenery       tile(  4a,  40,  46)   0  99   0   0   c   0   0   0  f8   0   0  9d   0   1   0   0   0   0   0   0   0
+40   scenery       tile(  40,  40,  45)   0  93   0   0   0   0  fa   0  f8   0   4  55   0   0   0   0   0   0   0   0   0
+41   scenery       tile(  47,  3f,  46)   0  2a   0   0   c   0   0   0   0  80   3  d7   0   0   0   0   0   0   0   0   0
+42   scenery       tile(  3a,  3f,  38)   0  2a   0   0   8  80   3   0   4   0   0  8d   0   0   0   0   0   0   0   0   0
+43   unknown       tile(  3a,  3f,  38)   0  9b   0   0   0   0   5  80  fc   0   0  8d   0  5c  fe   0   0  ff  ff   0  ff
+44   unknown       tile(  3a,  3f,  38)   0  9b   0   0   0   0  fb  80  fc   0   0  8d   0  68  fe   0   0  ff  ff   0  ff
+45   unknown       tile(  3a,  3f,  38)   0  9b   0   0   0   0   5  e0  fe   0   0  8d   0  64  fe   0   0  ff  ff   0  ff
+46   unknown       tile(  3a,  3f,  38)   0  9b   0   0   0   0  fb  e0  fe   0   0  8d   0  60  fe   0   0  ff  ff   0  ff
+47   unknown       tile(  47,  3f,  46)   0  9b   0   0   0   0   0   0  fb   0  fb  d7   0  5c  fe   0   0  ff  ff   0  ff
+48   unknown       tile(  47,  3f,  46)   0  9b   0   0   0   0   0   0  fb   0   5  d7   0  68  fe   0   0  ff  ff   0  ff
+49   unknown       tile(  47,  3f,  46)   0  9b   0   0   0   0   0  80  f8   0  fb  d7   0  64  fe   0   0  ff  ff   0  ff
+50   unknown       tile(  47,  3f,  46)   0  9b   0   0   0   0   0  80  f8   0   5  d7   0  60  fe   0   0  ff  ff   0  ff
+51   scenery       tile(  40,  40,  45)   0  94   0   0   0   0  fa   0  f8   0   4  55   0   0   0   0   0   0   0   0   0
+52   scenery       tile(  40,  40,  45)   0  93   0   0   0   0   4   0  f8   0   0  55   0   0   0   0   0   0   0   0   0
+53   scenery       tile(  40,  40,  45)   0  94   0   0   0   0   4   0  f8   0   0  55   0   0   0   0   0   0   0   0   0
+54   scenery       tile(  40,  40,  46)   0  93   0   0   0   0  fc   0  f8   0   2  54   0   0   0   0   0   0   0   0   0
+55   scenery       tile(  40,  40,  46)   0  94   0   0   0   0  fc   0  f8   0   2  54   0   0   0   0   0   0   0   0   0
+56   scenery       tile(  41,  40,  46)   0  93   0   0   0   0  f8   0  f8   0  ff  51   0   0   0   0   0   0   0   0   0
+57   scenery       tile(  41,  40,  46)   0  94   0   0   0   0  f8   0  f8   0  ff  51   0   0   0   0   0   0   0   0   0
+58   scenery       tile(  41,  40,  45)   0  93   0   0   0   0   0   0  f8   0   8  50   0   0   0   0   0   0   0   0   0
+59   scenery       tile(  41,  40,  45)   0  94   0   0   0   0   0   0  f8   0   8  50   0   0   0   0   0   0   0   0   0
+60   scenery       tile(  41,  40,  45)   0  93   0   0   0   0  fa   0  f8   0   6  50   0   0   0   0   0   0   0   0   0
+61   scenery       tile(  41,  40,  45)   0  94   0   0   0   0  fa   0  f8   0   6  50   0   0   0   0   0   0   0   0   0
+62   scenery       tile(  41,  40,  47)   0  93   0   0   0   0   0   0  f8   0  fa  52   0   0   0   0   0   0   0   0   0
+63   scenery       tile(  41,  40,  47)   0  94   0   0   0   0   0   0  f8   0  fa  52   0   0   0   0   0   0   0   0   0
+64   scenery       tile(  3f,  40,  47)   0  93   0   0   0   0   6   0  f8   0   2  58   0   0   0   0   0   0   0   0   0
+65   scenery       tile(  3f,  40,  47)   0  94   0   0   0   0   6   0  f8   0   2  58   0   0   0   0   0   0   0   0   0
+66   scenery       tile(  40,  40,  47)   0  93   0   0   0   0  ff   0  f8   0   8  48   0   0   0   0   0   0   0   0   0
+67   scenery       tile(  40,  40,  47)   0  94   0   0   0   0  ff   0  f8   0   8  48   0   0   0   0   0   0   0   0   0
+68   scenery       tile(  40,  40,  47)   0  93   0   0   0   0  fe   0  f8   0   4  53   0   0   0   0   0   0   0   0   0
+69   scenery       tile(  40,  40,  47)   0  94   0   0   0   0  fe   0  f8   0   4  53   0   0   0   0   0   0   0   0   0
+70   scenery       tile(  3f,  40,  46)   0  94   0   0   0   0  ff   0  f8   0   2  57   0   0   0   0   0   0   0   0   0
+71   scenery       tile(  3f,  40,  45)   0  93   0   0   0   0   0   0  f8   0   0  56   0   0   0   0   0   0   0   0   0
+72   scenery       tile(  3f,  40,  45)   0  94   0   0   0   0   0   0  f8   0   0  56   0   0   0   0   0   0   0   0   0
+73   scenery       tile(  3f,  40,  46)   0  93   0   0   0   0  ff   0  f8   0   2  57   0   0   0   0   0   0   0   0   0
+74   scenery       tile(  3a,  3f,  39)   0  93   0   0   0   0  fc   0   4   0   4  8c   0   0   0   0   0   0   0   0   0
+75   scenery       tile(  3a,  3f,  39)   0  94   0   0   0   0  fc   0   4   0   4  8c   0   0   0   0   0   0   0   0   0
+76   scenery       tile(  3a,  3f,  39)   0  93   0   0   0   0   2   0   4   0  ff  8c   0   0   0   0   0   0   0   0   0
+77   scenery       tile(  3a,  3f,  39)   0  94   0   0   0   0   2   0   4   0  ff  8c   0   0   0   0   0   0   0   0   0
+78   scenery       tile(  3a,  3f,  38)   0  93   0   0   0   0  fe   0   4   0   2  8d   0   0   0   0   0   0   0   0   0
+79   scenery       tile(  3a,  3f,  38)   0  94   0   0   0   0  fe   0   4   0   2  8d   0   0   0   0   0   0   0   0   0
+80   scenery       tile(  39,  3f,  39)   0  93   0   0   0   0   6   0   4   0  fe  82   0   0   0   0   0   0   0   0   0
+81   scenery       tile(  39,  3f,  39)   0  94   0   0   0   0   6   0   4   0  fe  82   0   0   0   0   0   0   0   0   0
+82   scenery       tile(  3a,  3f,  37)   0  93   0   0   0   0  fc   0   4   0   4  8e   0   0   0   0   0   0   0   0   0
+83   scenery       tile(  3a,  3f,  37)   0  94   0   0   0   0  fc   0   4   0   4  8e   0   0   0   0   0   0   0   0   0
+84   scenery       tile(  3b,  3f,  38)   0  93   0   0   0   0  fa   0   4   0   2  89   0   0   0   0   0   0   0   0   0
+85   scenery       tile(  3b,  3f,  38)   0  94   0   0   0   0  fa   0   4   0   2  89   0   0   0   0   0   0   0   0   0
+86   scenery       tile(  3b,  3f,  38)   0  93   0   0   0   0  f8   0   4   0  f8  88   0   0   0   0   0   0   0   0   0
+87   scenery       tile(  3b,  3f,  38)   0  94   0   0   0   0  f8   0   4   0  f8  88   0   0   0   0   0   0   0   0   0
+88   scenery       tile(  3a,  3f,  37)   0  93   0   0   0  ca   6   0   4   0  ff  8e   0   0   0   0   0   0   0   0   0
+89   scenery       tile(  3a,  3f,  37)   0  94   0   0   0  ca   6   0   4   0  ff  8e   0   0   0   0   0   0   0   0   0
+90   scenery       tile(  39,  3f,  36)   0  93   0   0   0   0   8   0   4   0   8  84   0   0   0   0   0   0   0   0   0
+91   scenery       tile(  39,  3f,  36)   0  94   0   0   0   0   8   0   4   0   8  84   0   0   0   0   0   0   0   0   0
+92   totem         tile(  3a,  3f,  36)   0   2   0   0   8   0   0   0   4   0   4  86   0  2f   0   0   0   0  fe  e8   0
+93   exit-portal   tile(  3a,  3f,  38)   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
+94   exit-portal   tile(  47,  3f,  46)   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
+95   totem         tile(  46,  40,  37)   0   2   0   0   8   0   0   0   0   0   4  33   0  2e   0   0   0   0  fe  e8   0
+99   unknown       tile(  35,  3f,  38)   0  fc   0   0   0   0   0   0   4   0   0  8d   0  21   4  fd   0   0  12   2   0
+100  gate-reset    tile(  35,  3f,  39)   0  fc   0   0   0   0   0   0   4   0   0   0   0  ff  ff  ff   1   1  14   0   0
+101  gate-0        tile(  40,  40,  36)   0  fb   0   0   0   0   0   0   0   0   0  16   0  80  80   0  7f  80   0  3c   0
+102  gate-1        tile(  45,  40,  3c)   0  fb   0   0   0   0   0   0   0   0   0  e6   0  80  80   1  7f  80   0  3c   0
+103  gate-2        tile(  3f,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   5   0  80  80   2  7f  80   0  3c   0
+104  gate-3        tile(  3e,  40,  46)   0  fb   0   0   0   0   0   0   0   0   0  44   0  80  80   3  7f  80   0  3c   0
+105  gate-4        tile(  47,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  a3   0  80  80   4  7f  80   0  3c   0
+106  gate-4        tile(  47,  40,  49)   0  fb   0   0   0   0   0   0   0   0   0  97   0  80  80   4  7f  80   0  3c   0
+107  gate-5        tile(  3a,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  62   0  80  80   5  7f  80   0  3c   0
+108  gate-6        tile(  3a,  40,  3c)   0  fb   0   0   0   0   0   0   0   0   0  6a   0  80  80   6  7f  80   0  3c   0
+
+Setup Area fire_world_molten_cavern in FDAT file index 244 map index 24
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  42,  3f,  52)   0  53   0   0   0   0   0   0   0   0   0  85   1  1e   0  85   1  98   1   1  ff
+1    unknown       tile(  42,  3f,  4e)   0  53   0   0   0   0   0   0   0   0   0  6e   1  1e   0  6e   1  97   1   1  ff
+2    unknown       tile(  42,  3f,  4b)   0  53   0   0   0   0   0   0   0   0   0  16   1  1e   0  16   1  96   1   1  ef
+3    unknown       tile(  40,  3f,  56)   0  54   0   0   0   0   0   0   0   0   0  8b   1  1e  f8  ff  ff  ff  ff   0  ff
+4    unknown       tile(  42,  3f,  55)   0  59   0   0   0   0   0  c0  f9   0   0  93   1  28  fc  ff  ff  ff  ff   0  ff
+5    unknown       tile(  3e,  3f,  4b)   0  58   0   0   4  dc   5   0   0   0   0  18   1   a  ff  ff  ff   4  ff   0  ff
+6    unknown       tile(  49,  40,  3b)   0  66   0   0   0   0   0   0   0   0   0  2b   1  14   0  2b   1  99   1   1  ff
+7    unknown       tile(  49,  40,  3e)   0  66   0   0   8   0   0   0   0   0  ff  33   1  14   0  33   1  9a   1   1  ff
+8    unknown       tile(  4a,  40,  42)   0  2f   0   0   4   0   0   0   0   0   0  48   1  14   0  48   1  9b   1   1  ff
+9    unknown       tile(  44,  40,  36)   0  2f   0   0   0   0   0   0   0   0   0  ac   1  14   0  ac   1  ce   1   1  ff
+10   unknown       tile(  4b,  40,  34)   0  66   0   0   c   0   0   0   0   0   0  a1   1  14   0  a1   1  ab   1   1  ff
+11   unknown       tile(  44,  40,  34)   0  58   0   0   8   0   0   0  f8   0  f8  c2   1   a   0  ff  ff   3  ff   0  ff
+12   unknown       tile(  48,  40,  37)   0  66   0   0   c   0   0   0   0   0   0  28   1  14   0  28   1  cf   1   1  ff
+13   scenery       tile(  4c,  40,  42)   0  2a   0   0   4  dc   5   0  f8  80  fc  5f   1   0   0   0   0   0   0   0   0
+14   scenery       tile(  4c,  40,  42)   0  2a   0   0   c  dc   5   0  f8  80   3  5f   1   0   0   0   0   0   0   0   0
+15   unknown       tile(  4c,  40,  42)   0  9b   0   0   0  dc   5  80  f0   0   5  5f   1  5f  fe  ff  ff  ff  ff   0  ff
+16   unknown       tile(  4c,  40,  42)   0  9b   0   0   0  dc   5  80  f0   0  fb  5f   1  5e  fe  ff  ff  ff  ff   0  ff
+17   unknown       tile(  4c,  40,  42)   0  9b   0   0   0  dc   5   0  f3   0   5  5f   1  5c  fe  ff  ff  ff  ff   0  ff
+18   unknown       tile(  4c,  40,  42)   0  9b   0   0   0  dc   5   0  f3   0  fb  5f   1  5d  fe  ff  ff  ff  ff   0  ff
+19   exit-portal   tile(  4c,  40,  42)   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  14   7  ff   6   8   0   0   3
+20   totem         tile(  4d,  40,  35)   0   0   0   0   0   0   0   0   0   0   4  a5   1   0   0   0   0   0   0   0   0
+21   scenery       tile(  40,  40,  42)   0  2a   0   0   0  80  fc   0  f0   0   8   2   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  40,  40,  42)   0  2a   0   0   8  80   3   0  f0   0   8   2   0   0   0   0   0   0   0   0   0
+23   unknown       tile(  40,  40,  42)   0  9b   0   0   0   0  fb   0  eb   0   8   2   0  66  fe  ff  ff  ff  ff   0  ff
+24   unknown       tile(  40,  40,  42)   0  9b   0   0   0   0   5   0  eb   0   8   2   0  69  fe  ff  ff  ff  ff   0  ff
+25   unknown       tile(  40,  40,  42)   0  9b   0   0   0   0  fb  80  e8   0   8   2   0  68  fe  ff  ff  ff  ff   0  ff
+26   unknown       tile(  40,  40,  42)   0  9b   0   0   0   0   5  80  e8   0   8   2   0  64  fe  ff  ff  ff  ff   0  ff
+27   exit-portal   tile(  40,  40,  42)   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   8   0
+29   totem         tile(  4e,  40,  34)   0   2   0   0   c   0   4   0   0   0   0  a8   1  2d   0   0   0   0  fe  e8   0
+30   unknown       tile(  41,  40,  37)   0  66   0   0   4   0   0   0   0   0   0  22   1  14   0  22   1  d0   1   1  ff
+31   gate-0        tile(  4e,  40,  42)   0  fb   0   0   0   0   0   0   0   0   0  56   1  80  80   0  7f  80   0  3c   0
+32   gate-1        tile(  49,  40,  42)   0  fb   0   0   0   0   0   0   0   0   0  37   1  80  80   1  7f  80   0  3c   0
+33   gate-2        tile(  44,  40,  32)   0  fb   0   0   0   0   0   0   0   0   0  b2   1  80  80   2  7f  80   0  3c   0
+34   gate-3        tile(  49,  3f,  4b)   0  fb   0   0   0   0   0   0   0   0   0  3f   1  80  80   3  7f  80   0  3c   0
+35   gate-4        tile(  3e,  3f,  4d)   0  fb   0   0   0   0   0   0   0   0  f8  83   0  80  80   4  7f  80   0  3c   0
+36   gate-5        tile(  44,  3f,  50)   0  fb   0   0   0   0   0   0   0   0   0  76   1  80  80   5  7f  80   0  3c   0
+37   gate-6        tile(  3e,  3f,  54)   0  fb   0   0   0   0   0   0   0   0  f8  81   1  80  80   6  7f  80   0  3c   0
+38   gate-7        tile(  40,  40,  41)   0  fb   0   0   0   0   0   0  f0   0   8   1   0  ff  ff   7  7f  ff   0   5   0
+
+Setup Area fire_world_ashen_cavern in FDAT file index 184 map index 18
+
+Objects 
+idx  in_file offset type     
+0    scenery       tile(  41,  40,  36)   0  2a   0   0   0  80   4   0   8   0   0  50   1   0   0   0   0   0   0   0   0
+1    scenery       tile(  42,  40,  36)   0  2a   0   0   8  80  fb   0   8   0   0  51   1   0   0   0   0   0   0   0   0
+2    unknown       tile(  41,  40,  36)   0  9b   0   0   0   0   d   0   3   0   0  51   1  5a  fe  ff  ff  ff  ff   0  ff
+3    unknown       tile(  41,  40,  36)   0  9b   0   0   0   0   3   0   3   0   0  50   1  5d  fe  ff  ff  ff  ff   0  ff
+4    unknown       tile(  42,  40,  36)   0  9b   0   0   0   0  fd  80   0   0   0  51   1  5c  fe  ff  ff  ff  ff   0  ff
+5    unknown       tile(  41,  40,  36)   0  9b   0   0   0   0   3  80   0   0   0  50   1  5b  fe  ff  ff  ff  ff   0  ff
+6    exit-portal   tile(  41,  40,  36)   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
+7    unknown       tile(  42,  40,  40)   0  d8   0   0   c   0  f8   0   0   0   0   2   0  32  fa  ff  ff  ff  ff   0  ff
+8    unknown       tile(  40,  40,  4f)   0  bc   0   0   4   0   0   0  f8   0   0  49   0  23  fa  ff  ff  ff  ff   0  ff
+9    unknown       tile(  40,  40,  50)   0  bc   0   0   4   0   0   0  f8   0   0  52   0  23  fa  ff  ff  ff  ff   0  ff
+10   scenery       tile(  61,  44,  3c)   0  2a   0   0   0  80  fc   0   0   0   0  21   1   0   0   0   0   0   0   0   0
+11   scenery       tile(  61,  44,  3c)   0  2a   0   0   8  80   3   0   0   0   0  21   1   0   0   0   0   0   0   0   0
+12   unknown       tile(  61,  44,  3c)   0  9b   0   0   0   0   5   0  fb   0   0  21   1  5a  fe  ff  ff  ff  ff   0  ff
+13   unknown       tile(  61,  44,  3c)   0  9b   0   0   0   0  fb   0  fb   0   0  21   1  5d  fe  ff  ff  ff  ff   0  ff
+14   unknown       tile(  61,  44,  3c)   0  9b   0   0   0   0   5  80  f8   0   0  21   1  5c  fe  ff  ff  ff  ff   0  ff
+15   unknown       tile(  61,  44,  3c)   0  9b   0   0   0   0  fb  80  f8   0   0  21   1  5b  fe  ff  ff  ff  ff   0  ff
+16   unknown       tile(  51,  40,  51)   0  a9   0   0   e   0   4   0   0   0   4  ba   0  14  fc  ff  ff   7  ff   0   0
+17   exit-portal   tile(  61,  44,  3c)   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
+18   unknown       tile(  40,  40,  51)   0  bc   0   0   4   0   0   0  f8   0   0  56   0  23  fa  ff  ff  ff  ff   0  ff
+19   unknown       tile(  46,  3f,  45)   0  d9   0   0   0   0   8   0   8   0   8  91   1  1c  fa  ff  ff  ff  ff   0  ff
+20   gate-0        tile(  43,  40,  36)   0  fb   0   0   0   0   0   0   0   0   0  53   1  80  80   0  7f  80   0  3c   0
+21   gate-1        tile(  41,  3f,  3b)   0  fb   0   0   0   0   8   0   8   0   0  60   1  80  80   1  7f  80   0  3c   0
+22   gate-2        tile(  44,  40,  42)   0  fb   0   0   0   0   8   0  f8   0   0  17   0  80  80   2  7f  80   0  3c   0
+23   gate-3        tile(  45,  40,  50)   0  fb   0   0   0   0   8   0  f8   0   0  67   0  80  80   3  7f  80   0  3c   0
+24   gate-4        tile(  51,  40,  51)   0  fb   0   0   0   0   8   0   0   0   8  ba   0  80  80   4  7f  80   0  3c   0
+25   gate-5        tile(  61,  44,  40)   0  fb   0   0   0   0   8   0  fc   0  f8  14   1  80  80   5  7f  80   0  3c   0
+26   gate-6        tile(  50,  43,  38)   0  fb   0   0   0   0   8   0  fc   0   0  46   1  80  80   6  7f  80   0  3c   0
+27   gate-7        tile(  51,  43,  3f)   0  fb   0   0   0   0  f8   0  fc   0   0  80   1  80  80   7  7f  80   0  3c   0
+28   unknown       tile(  42,  40,  40)   0  d8   0   0   c  18  fc   0   0  24  fa   2   0  32  fa  ff  ff  ff  ff   0  ff
+29   unknown       tile(  42,  40,  45)   0  d8   0   0   c  18  fc   0   0  24  fa  30   0  32  fa  ff  ff  ff  ff   0  ff
+30   unknown       tile(  42,  40,  45)   0  d8   0   0   c   0   2   0   0  a4   6  30   0  32  fa  ff  ff  ff  ff   0  ff
+31   unknown       tile(  40,  40,  52)   0  bc   0   0   4   0   0   0  f8   0   0  5a   0  23  fa  ff  ff  ff  ff   0  ff
+32   unknown       tile(  40,  40,  4f)   0  d8   0   0   c   0   4   0  f8   0   0  49   0  1e  fa  ff  ff  ff  ff   0  ff
+33   unknown       tile(  46,  3f,  45)   0  d8   0   0   a  dc   5   0   8   0   8  91   1  1e  fa  ff  ff  ff  ff   0  ff
+34   unknown       tile(  47,  3f,  45)   0  d8   0   0   a  24  fa   0   8   0   8  94   1  1e  fa  ff  ff  ff  ff   0  ff
+35   unknown       tile(  46,  3f,  45)   0  d8   0   0   a  d0   7   0   8  8c   a  91   1  1e  fa  ff  ff  ff  ff   0  ff
+36   unknown       tile(  45,  3f,  45)   0  d8   0   0   a   0   8   0   8   0   8  a4   1  1e  fa  ff  ff  ff  ff   0  ff
+37   unknown       tile(  48,  3f,  45)   0  d8   0   0   a   0  f8   0   8   0   8  ac   1  1e  fa  ff  ff  ff  ff   0  ff
+38   unknown       tile(  40,  40,  50)   0  d8   0   0   c   0   4   0  f8   0   0  52   0  1e  fa  ff  ff  ff  ff   0  ff
+39   unknown       tile(  40,  40,  51)   0  d8   0   0   c   0   4   0  f8   0   0  56   0  1e  fa  ff  ff  ff  ff   0  ff
+40   unknown       tile(  40,  40,  52)   0  d8   0   0   c   0   4   0  f8   0   0  5a   0  1e  fa  ff  ff  ff  ff   0  ff
+41   unknown       tile(  53,  43,  3c)   0  d8   0   0   c   0   0   0  fc   0   0  85   1  32  fa  ff  ff  ff  ff   0  ff
+42   unknown       tile(  51,  43,  39)   0  d8   0   0   c   0   0   0  fc   0   0  64   1  32  fa  ff  ff  ff  ff   0  ff
+43   unknown       tile(  51,  43,  39)   0  d8   0   0   c   0  fe   0  fc   0  fe  64   1  32  fa  ff  ff  ff  ff   0  ff
+44   unknown       tile(  4e,  43,  3b)   0  d8   0   0   c   0  fe   0  fc   0  fe  6e   1  32  fa  ff  ff  ff  ff   0  ff
+45   unknown       tile(  40,  40,  4f)   0  d8   0   0   c   0   2   0  f8   0  fc  49   0  1e  fa  ff  ff  ff  ff   0  ff
+46   unknown       tile(  40,  40,  50)   0  d8   0   0   c   0   2   0  f8   0  fc  52   0  1e  fa  ff  ff  ff  ff   0  ff
+47   unknown       tile(  40,  40,  51)   0  d8   0   0   c   0   2   0  f8   0  fc  56   0  1e  fa  ff  ff  ff  ff   0  ff
+48   unknown       tile(  40,  40,  52)   0  d8   0   0   c   0   2   0  f8   0  fc  5a   0  1e  fa  ff  ff  ff  ff   0  ff
+
+Setup Area monster_world_false_eye_area in FDAT file index 24 map index 2
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  3f,  40,  3a)   0  92   0   0   0   0   0   0   4   0   0   7   0  1c   0   7   0  94   0   1  fb
+1    unknown       tile(  3e,  41,  43)   0  92   0   0   4   0   0   0  ff   0   0  28   0  1c   0  28   0  96   0   1  ff
+2    unknown       tile(  3d,  41,  44)   0  92   0   0   8   0   0   0  ff   0   0  2a   0  1c   0  2a   0  97   0   1  ff
+3    unknown       tile(  3c,  41,  43)   0  92   0   0   c   0   0   0  ff   0   0  2c   0  1c   0  2c   0  98   0   1  ff
+4    unknown       tile(  40,  41,  42)   0  92   0   0   0   0   0   0  ff   0   0  60   0  1c   0  60   0  9b   0   1  ff
+5    unknown       tile(  44,  41,  44)   0  92   0   0   8   0   0   0  ff   0   0  50   0  1c   0  99   0  50   0   1  ff
+6    unknown       tile(  45,  41,  40)   0  92   0   0   4   0   0   0  ff   0   0  55   0  1c   0  55   0  9a   0   1  ff
+7    unknown       tile(  43,  40,  3c)   0  91   0   0   4   0   0   0   8   0   0  88   0  28   0  88   0  95   0   1  ff
+8    gate-reset    tile(  3d,  40,  37)   0  fc   0   0   0   0   0   0   0   0   0   2   0  ff  ff  ff   1   1   2   0   0
+9    exit-door     tile(  3d,  40,  36)   0  fc   0   0   0   0   0   0   0   0   0   1   0   4   3   0   0   0  29   3  f8
+10   exit-totem    tile(  3f,  40,  38)   0   3   0   0   8   0   0   0   4  4c  fb  93   0  26   5   0   1  10   0   0   2
+11   unknown       tile(  40,  40,  39)   0   2   0   0   c   0  fc   0   4   0  f8  8f   0  2e   0   0   0   0  fe  e8   0
+12   scenery       tile(  40,  40,  3c)   0  d7   0   0   0   0   8   0   4   0   0   0   0   0   0   0   0   0   0   0   0
+13   scenery       tile(  3e,  40,  38)   0  33   0   0   4   0   0   0  fa   0   8  91   0   0   0   0   0   0   0   0   0
+14   unknown       tile(  3e,  40,  38)   0  1d   0   0   0  2c   1  40  f9   0   8  91   0  5c  fe   0   0  ff  ff   0  ff
+15   scenery       tile(  3e,  40,  39)   0   0   0   0   4   0   4   0   4   0  f8  91   0   0   0   0   0   0   0   0   0
+16   unknown       tile(  3e,  40,  3a)   0  1d   0   0   8   0   8  40  f9  2c   1   6   0  60  fe   0   0  ff  ff   0  ff
+17   scenery       tile(  3e,  40,  3a)   0  33   0   0   8   0   8   0  fa   0   0   6   0   0   0   0   0   0   0   0   0
+18   scenery       tile(  3e,  40,  3e)   0  33   0   0   0   0   8   0  fa   0   0   d   0   0   0   0   0   0   0   0   0
+19   unknown       tile(  3e,  40,  3e)   0  1d   0   0   0   0   8  40  f9  d4  fe   d   0  5c  fe   0   0  ff  ff   0  ff
+20   scenery       tile(  3b,  40,  3c)   0  33   0   0   4   0   0   0  fa   0   8  13   0   0   0   0   0   0   0   0   0
+21   unknown       tile(  3b,  40,  3c)   0  1d   0   0   0  2c   1  40  f9   0   8  13   0  64  fe   0   0  ff  ff   0  ff
+22   scenery       tile(  3b,  40,  3c)   0  33   0   0   4   0   0   0  fa   0  f8  14   0   0   0   0   0   0   0   0   0
+23   unknown       tile(  3b,  40,  3c)   0  1d   0   0   0  2c   1  40  f9   0  f8  14   0  60  fe   0   0  ff  ff   0  ff
+24   scenery       tile(  3d,  40,  3f)   0  33   0   0   4   0  fc   0  fd   0   0  24   0   0   0   0   0   0   0   0   0
+25   unknown       tile(  3d,  40,  3f)   0  1d   0   0   0  44  fd   0  fc   0   0  24   0  5c  fe   0   0  ff  ff   0  ff
+26   scenery       tile(  3c,  41,  44)   0  33   0   0   2   0   0   0  f6   0   0  2b   0   0   0   0   0   0   0   0   0
+27   unknown       tile(  3c,  41,  44)   0  1d   0   0   0   0   1  40  f5   0  ff  2b   0  5c  fe   0   0  ff  ff   0  ff
+28   scenery       tile(  39,  41,  42)   0  33   0   0   4   0   0   0  f6   0  f8  34   0   0   0   0   0   0   0   0   0
+29   unknown       tile(  39,  41,  42)   0  1d   0   0   0  2c   1  40  f5   0  f8  34   0  60  fe   0   0  ff  ff   0  ff
+30   scenery       tile(  42,  40,  3d)   0  33   0   0   0   0   0   0  fe   0   0  8a   0   0   0   0   0   0   0   0   0
+31   unknown       tile(  42,  40,  3d)   0  1d   0   0   0   0   0  40  fd  d4  fe  8a   0  5c  fe   0   0  ff  ff   0  ff
+32   scenery       tile(  3b,  41,  42)   0  33   0   0   c   0   0   0  f6   0  f8  3b   0   0   0   0   0   0   0   0   0
+33   unknown       tile(  3b,  41,  42)   0  1d   0   0   0  d4  fe  40  f5   0  f8  3b   0  64  fe   0   0  ff  ff   0  ff
+34   scenery       tile(  3a,  41,  3f)   0  33   0   0   8   0   0   0  f6   0   0  38   0   0   0   0   0   0   0   0   0
+35   unknown       tile(  3a,  41,  3f)   0  1d   0   0   0   0   0  40  f5  2c   1  38   0  5c  fe   0   0  ff  ff   0  ff
+36   scenery       tile(  3a,  41,  44)   0  33   0   0   0   0   0   0  f6   0   0  31   0   0   0   0   0   0   0   0   0
+37   unknown       tile(  3a,  41,  44)   0  1d   0   0   0   0   0  40  f5  d4  fe  31   0  58  fe   0   0  ff  ff   0  ff
+38   scenery       tile(  3e,  41,  42)   0  33   0   0   a   0   0   0  f6   0   0  12   0   0   0   0   0   0   0   0   0
+39   unknown       tile(  3e,  41,  42)   0  1d   0   0   0   0  ff  40  f5   0   1  12   0  64  fe   0   0  ff  ff   0  ff
+40   scenery       tile(  3d,  41,  47)   0  33   0   0   0   0   0   0  f6   0   0  45   0   0   0   0   0   0   0   0   0
+41   unknown       tile(  3d,  41,  47)   0  1d   0   0   0   0   0  40  f5  d4  fe  45   0  60  fe   0   0  ff  ff   0  ff
+42   scenery       tile(  40,  41,  3f)   0  33   0   0   8   0   0   0  f6   0   0  7b   0   0   0   0   0   0   0   0   0
+43   unknown       tile(  40,  41,  3f)   0  1d   0   0   0   0   0  40  f5  2c   1  7b   0  5c  fe   0   0  ff  ff   0  ff
+44   scenery       tile(  41,  41,  44)   0  33   0   0   0   0  f8   0  f6   0   0  4c   0   0   0   0   0   0   0   0   0
+45   unknown       tile(  41,  41,  44)   0  1d   0   0   0   0  f8  40  f5  d4  fe  4c   0  5c  fe   0   0  ff  ff   0  ff
+46   scenery       tile(  42,  41,  44)   0  33   0   0   0   0   8   0  f6   0   0  4e   0   0   0   0   0   0   0   0   0
+47   unknown       tile(  42,  41,  44)   0  1d   0   0   0   0   8  40  f5  d4  fe  4e   0  64  fe   0   0  ff  ff   0  ff
+48   scenery       tile(  45,  41,  43)   0  33   0   0   c   0   0   0  f6   0  f8  52   0   0   0   0   0   0   0   0   0
+49   unknown       tile(  45,  41,  43)   0  1d   0   0   0  d4  fe  40  f5   0  f8  52   0  5c  fe   0   0  ff  ff   0  ff
+50   unknown       tile(  45,  41,  41)   0  33   0   0   c   0   0   0  f6   0  f8  54   0  5c  fe   0   0  ff  ff   0  ff
+51   unknown       tile(  45,  41,  41)   0  1d   0   0   0  d4  fe  40  f5   0  f8  54   0  64  fe   0   0  ff  ff   0  ff
+52   scenery       tile(  45,  41,  3e)   0  33   0   0   8   0  f8   0  f6   0   0  57   0   0   0   0   0   0   0   0   0
+53   unknown       tile(  45,  41,  3e)   0  1d   0   0   0   0  f8  40  f5  2c   1  57   0  60  fe   0   0  ff  ff   0  ff
+54   scenery       tile(  3f,  41,  44)   0  33   0   0   4   0   0   0  f6   0  f8  4a   0   0   0   0   0   0   0   0   0
+55   unknown       tile(  3f,  41,  44)   0  1d   0   0   0  2c   1  40  f5   0  f8  4a   0  5c  fe   0   0  ff  ff   0  ff
+56   scenery       tile(  43,  41,  46)   0  33   0   0   4   0   0   0  f6   0   8  72   0   0   0   0   0   0   0   0   0
+57   unknown       tile(  43,  41,  46)   0  1d   0   0   0  2c   1  40  f5   0   8  72   0  5c  fe   0   0  ff  ff   0  ff
+58   scenery       tile(  47,  41,  41)   0  33   0   0   0   0  f8   0  f6   0   0  80   0   0   0   0   0   0   0   0   0
+59   unknown       tile(  47,  41,  41)   0  1d   0   0   0   0  f8  40  f5  d4  fe  80   0  60  fe   0   0  ff  ff   0  ff
+60   scenery       tile(  44,  40,  3c)   0  33   0   0   8   0   0  c0   2   0  fc  86   0   0   0   0   0   0   0   0   0
+61   unknown       tile(  44,  40,  3c)   0  1d   0   0   0   0   0   0   2   0  fd  86   0  64  fe   0   0  ff  ff   0  ff
+62   scenery       tile(  42,  40,  3b)   0  33   0   0   8   0   0   0  fe   0   0  8c   0   0   0   0   0   0   0   0   0
+63   unknown       tile(  42,  40,  3b)   0  1d   0   0   0   0   0  40  fd  2c   1  8c   0  5c  fe   0   0  ff  ff   0  ff
+64   scenery       tile(  3d,  40,  41)   0  33   0   0   4   0  fc   0   6   0   0  26   0   0   0   0   0   0   0   0   0
+65   unknown       tile(  3d,  40,  41)   0  1d   0   0   0  44  fd  40   5   0   0  26   0  68  fe   0   0  ff  ff   0  ff
+66   scenery       tile(  3f,  40,  3e)   0  a6   0   0   0   0  f8   0   4   0   0   d   0   4   0   0   0   0   0   0   0
+70   gate-0        tile(  3c,  40,  3a)   0  fb   0   0   0   0   0   0   0   0   0  17   0  80  80   0  7f  80   0  3c   0
+71   gate-1        tile(  3c,  40,  3e)   0  fb   0   0   0   0   0   0   0   0   0  10   0  80  80   1  7f  80   0  3c   0
+72   gate-2        tile(  3a,  41,  40)   0  fb   0   0   0   0   0   0   0   0   0  40   0  80  80   2  7f  80   0  3c   0
+73   gate-3        tile(  3a,  41,  43)   0  fb   0   0   0   0   0   0   0   0   0  3d   0  80  80   3  7f  80   0  3c   0
+74   gate-4        tile(  3f,  41,  43)   0  fb   0   0   0   0   0   0   0   0   0  4a   0  80  80   4  7f  80   0  3c   0
+75   gate-5        tile(  44,  41,  43)   0  fb   0   0   0   0   0   0   0   0   0  66   0  80  80   5  7f  80   0  3c   0
+76   gate-6        tile(  44,  41,  3f)   0  fb   0   0   0   0   0   0   0   0   0  6a   0  80  80   6  7f  80   0  3c   0
+
+Setup Area monster_world_screeching_area in FDAT file index 174 map index 17
+
+Objects 
+idx  in_file offset type     
+0    exit-door     tile(  4a,  40,  44)   0  fc   0   0   0   0   0   0   0   0   0  35   0   0   3  fc   0   0  29   0  f8
+1    gate-reset    tile(  4a,  40,  43)   0  fc   0   0   0   0   0   0   0   0   0  34   0  ff  ff  ff   1   1  11   0   0
+2    unknown       tile(  3d,  40,  44)   0  a0   0   0   0   0   0   0   0   0  f8   5   0  14   0  58   0  59   0   1   3
+3    exit-totem    tile(  48,  40,  43)   0   3   0   0   4   0  fc   0   0   0   4  32   0   a   6   0   6   0   0   0   2
+4    scenery       tile(  48,  40,  3d)   0  da   0   0   8   0   0  24  fa   0  f8  22   0  13   0   0   0   0   0   0   0
+6    exit-totem    tile(  44,  40,  4e)   0   3   0   0   0   0   0   0   0   0  fc  54   0  19  fe   0  fb   0   0   0   0
+9    totem         tile(  4b,  40,  41)   0   0   0   0   c   0  fe   0   0   0   0  6f   0   0   0   0   0   0   0   0   0
+10   totem         tile(  4a,  40,  42)   0   1   0   0   0   0   8   0   0   0  fe  6d   0  2c   0   0   0   0   0   0   0
+11   totem         tile(  4a,  40,  40)   0   2   0   0   8   0   8   0   0   0   2  57   0  2f   0   0   0   0  fe  e8   0
+12   scenery       tile(  41,  40,  40)   0  12   0   0   c   0  fa   0   0   0  f8  17   0   0   0   0   0   0   0   0   0
+20   gate-0        tile(  48,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  22   0  80  80   0  7f  80   0  3c   0
+21   gate-1        tile(  3d,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0   d   0  80  80   1  7f  80   0  3c   0
+22   gate-2        tile(  3f,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0   3   0  80  80   2  7f  80   0  3c   0
+23   gate-3        tile(  49,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  2a   0  80  80   3  7f  80   0  3c   0
+24   gate-4        tile(  3d,  40,  46)   0  fb   0   0   0   0   0   0   0   0   0  6b   0  80  80   4  7f  80   0  3c   0
+25   gate-5        tile(  44,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  39   0  80  80   5  7f  80   0  3c   0
+26   gate-6        tile(  44,  40,  4a)   0  fb   0   0   0   0   0   0   0   0   0  48   0  80  80   6  7f  80   0  3c   0
+
+Setup Area illusion_world_bewilderment_domain in FDAT file index 84 map index 8
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  41,  40,  42)   0  52   0   0   0   0  fa   0   0   0   0   6   0   f  fa   6   0  ad   0   1  ff
+1    unknown       tile(  3e,  40,  42)   0  52   0   0   0   0   6   0   0   0   0   7   0   f  fa   7   0  ae   0   1  ff
+4    unknown       tile(  3e,  40,  48)   0  49   0   0   4   0   0   0   0   0   0  1d   0  14  f9  ff  ff  ff  ff   0  ff
+9    unknown       tile(  49,  40,  4a)   0  4e   0   0   4   0  fc   0   0   0   0  66   0  40  f9  66   0  af   0   1  ff
+11   unknown       tile(  4e,  40,  48)   0  49   0   0   4   0   0   0   0   0   0  51   0  1c  f9  ff  ff  ff  ff   0  ff
+12   unknown       tile(  46,  40,  47)   0  4c   0   0   4   0   0   0   0   0   0  3c   0  19  f9  a9   0  3c   0   1  ff
+17   gate-reset    tile(  4f,  40,  52)   0  fc   0   0   0   0   4   0   0   0   0  75   0  ff  ff  ff   1   1   8   0   0
+18   exit-door     tile(  50,  40,  52)   0  fc   0   0   0   0   4   0   0   0   0  76   0  fe   2  fa  f8   0   9   1   0
+19   gate-reset    tile(  44,  40,  3f)   0  fc   0   0   0   0   0   0   0   0  fc  a0   0  ff  ff  ff   1   1   8   0   0
+20   exit-door     tile(  44,  40,  3e)   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  fc   0   6   0   8   d   1   0
+21   unknown       tile(  50,  40,  41)   0  11   0   0   0   0   0   0   0   0   4  59   0  14  fc  ff  ff  10  ff   0   6
+22   scenery       tile(  46,  40,  40)   0   0   0   0   c   0   0   0   0   0   0  b8   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  50,  40,  4e)   0   0   0   0   c   0   0   0   0   0   0  32   0   0   0   0   0   0   0   0   0
+26   unknown       tile(  4f,  40,  3d)   0  11   0   0   8   0  fc   0   0   0  fc  91   0  14  fc  ff  ff  11  ff   0   6
+27   unknown       tile(  4c,  40,  47)   0  11   0   0   8   0   0   0   0   0  fc  4e   0  14  fc  ff  ff   f  ff   0   6
+28   unknown       tile(  48,  40,  48)   0  11   0   0   0   0   0   0   0   0   4  3d   0  14  fc  ff  ff   e  ff   0   6
+29   unknown       tile(  40,  40,  43)   0  11   0   0   0   0   0   0   0   0   4   f   0  14  fc  ff  ff   d  ff   0   6
+30   unknown       tile(  3f,  40,  40)   0  11   0   0   8   0   0   0   0   0  fc   1   0  14  fc  ff  ff   c  ff   0   6
+31   unknown       tile(  46,  40,  43)   0   2   0   0   c   0   0   0   0   0   0  b7   0  2d   0   0   0   0  fe  e8   0
+40   gate-0        tile(  42,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  15   0  40  40   0  7f  40   2  f0   0
+41   gate-1        tile(  40,  40,  48)   0  fb   0   0   0   0   0   0   0   0   0  35   0  40  40   1  7f  40   2  f0   0
+42   gate-2        tile(  4b,  40,  4e)   0  fb   0   0   0   0   0   0   0   0   0  6f   0  40  40   2  7f  40   2  f0   0
+43   gate-3        tile(  40,  40,  42)   0  fb   0   0   0   0  f8   0   0   0  f8   5   0  80  80   3  7f  80   2  f0   0
+44   gate-4        tile(  4a,  40,  48)   0  fb   0   0   0   0  f8   0   0   0  f8  41   0  80  80   4  7f  80   2  f0   0
+45   gate-5        tile(  50,  40,  3f)   0  fb   0   0   0   0  f8   0   0   0  f8  8e   0  80  80   5  7f  80   2  f0   0
+46   gate-6        tile(  4a,  40,  4a)   0  fb   0   0   0   0   0   0   0   0   0  65   0  80  80   6  7f  80   2  f0   0
+
+Setup Area illusion_world_gloomy_domain in FDAT file index 94 map index 9
+
+Objects 
+idx  in_file offset type     
+0    gate-reset    tile(  3a,  40,  40)   0  fc   0   0   0   0   0   0   0   0   0   1   0  ff  ff  ff   1   1   9   0   0
+1    exit-door     tile(  39,  40,  40)   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
+2    gate-reset    tile(  3e,  42,  3a)   0  fc   0   0   0   0   0   0   0   0   0  68   0  ff  ff  ff   1   1   9   0   0
+3    exit-door     tile(  3e,  42,  39)   0  fc   0   0   0   0   0   0   0   0   0  69   0   f   0  12   0   0   8   3   0
+4    scenery       tile(  3b,  3f,  4e)   0  d7   0   0   0   0  fe   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+5    unknown       tile(  44,  3f,  4c)   0  1d   0   0   0   0   0  b2  f3   0   0  d1   0  80  fe  ff  ff  ff  ff   0  ff
+6    unknown       tile(  46,  3f,  4c)   0  1d   0   0   0   0   0  b2  f3   0   0  cf   0  80  fe  ff  ff  ff  ff   0  ff
+7    unknown       tile(  3c,  3f,  4c)   0  1d   0   0   0   0   0  b2  f3   0   0  9d   0  80  fe  ff  ff  ff  ff   0  ff
+8    unknown       tile(  3a,  3f,  4c)   0  1d   0   0   0   0   0  b2  f3   0   0  9f   0  80  fe  ff  ff  ff  ff   0  ff
+9    scenery       tile(  45,  3f,  4e)   0  d7   0   0   0   0  fe   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+10   exit-totem    tile(  3d,  40,  43)   0   3   0   0   4   0   4   0   0   0   0  70   0  25  fd   0   2  f8   0  10   3
+11   totem         tile(  3f,  40,  43)   0   1   0   0   c   0  fc   0   0   0   0  76   0  2c   0   0   0   0   0   0   0
+12   scenery       tile(  40,  40,  39)   0  b4   0   0   8   0   8   0   0   0   0  11   0   3   0   0   0   0   0   0   0
+13   scenery       tile(  45,  3f,  4e)   0  d7   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+14   unknown       tile(  46,  3f,  40)   0  11   0   0   c   0   0   0   0   0   0  40   0  14  fc  ff  ff  ff  ff   0  ff
+15   unknown       tile(  45,  3f,  40)   0  11   0   0   c   0   0   0   0   0   0  3e   0  14  fc  ff  ff   6  ff   0   6
+16   unknown       tile(  44,  3f,  40)   0  18   0   0   c   0   0   0   0   0   0  3c   0  14  fc  ff  ff  ff  ff   0  ff
+17   unknown       tile(  44,  3f,  41)   0  11   0   0   c   0   0   0   0   0   0  46   0  14  fc  ff  ff  ff  ff   0  ff
+18   unknown       tile(  45,  3f,  41)   0  11   0   0   c   0   0   0   0   0   0  48   0  14  fc  ff  ff  ff  ff   0   6
+19   unknown       tile(  46,  3f,  41)   0  67   0   0   c   0   0   0   0   0   0  4a   0  14  fc  ff  ff  ff  ff   0  ff
+20   gate-0        tile(  3d,  3f,  4d)   0  fb   0   0   0   0   0   0   0   0   0  a1   0  80  80   0  7f  80   2  78   0
+21   gate-1        tile(  39,  3f,  4d)   0  fb   0   0   0   0   0   0   0   0   0  a5   0  80  80   1  7f  80   2  78   0
+22   gate-0        tile(  47,  3f,  4d)   0  fb   0   0   0   0   0   0   0   0   0  d3   0  80  80   0  7f  80   2  78   0
+23   gate-1        tile(  43,  3f,  4d)   0  fb   0   0   0   0   0   0   0   0   0  d7   0  80  80   1  7f  80   2  78   0
+24   gate-2        tile(  3e,  40,  46)   0  fb   0   0   0   0   0   0   0   0   0  84   0  80  80   2  7f  80   2  f0   0
+25   gate-3        tile(  43,  40,  46)   0  fb   0   0   0   0   0   0   0   0   0  89   0  80  80   3  7f  80   2  f0   0
+26   gate-4        tile(  45,  3f,  40)   0  fb   0   0   0   0   0   0   0   0   8  3e   0  80  80   4  7f  80   2  f0   0
+27   gate-5        tile(  41,  3f,  41)   0  fb   0   0   0   0   0   0   0   0   0  5c   0  80  80   5  7f  80   2  f0   0
+28   gate-6        tile(  3e,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0  63   0  80  80   6  7f  80   2  f0   0
+29   gate-7        tile(  41,  40,  3b)   0  fb   0   0   0   0  f8   0   0   0   0  63   0  80  80   7  7f  80   2  f0   0
+30   scenery       tile(  3b,  3f,  4e)   0  d7   0   0   0   0   2   0   0   0   0  aa   0   0   0   0   0   0   0   0   0
+
+Setup Area illusion_world_dream_domain in FDAT file index 384 map index 38
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  47,  40,  38)   0  1d   0   0   0  80  fa   0  fa   0  f6   1   0  60  fe   0   0  ff  ff   0  ff
+1    unknown       tile(  47,  40,  38)   0  1d   0   0   0  80   5   0  fa   0  f6   1   0  64  fe   0   0  ff  ff   0  ff
+2    unknown       tile(  47,  40,  3f)   0  9d   0   0   0   0   0   0   0   0  f8  13   0  14   0  15   0  30   0   1  ff
+3    exit-portal   tile(  44,  40,  3f)   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   0   0
+4    exit-totem    tile(  45,  40,  41)   0   3   0   0   0   0   8   0   0   0   6  18   0   2  ff   0  f9   0   8  f8   0
+5    unknown       tile(  44,  40,  3f)   0  d2   0   0   8   0   0   0   0   0  f8  1a   0  1e  fe  ff  ff  ff  ff   0  ff
+10   gate-0        tile(  48,  40,  3e)   0  fb   0   0   0   0   8   0   0   0   8  14   0  80  80   0  7f  80   2  f0   0
+11   gate-1        tile(  46,  40,  3e)   0  fb   0   0   0   0  f8   0   0   0   8  12   0  80  80   1  7f  80   2  f0   0
+12   gate-2        tile(  48,  40,  38)   0  fb   0   0   0   0   8   0   0   0  f8   2   0  80  80   2  7f  80   2  f0   0
+13   gate-3        tile(  46,  40,  38)   0  fb   0   0   0   0  f8   0   0   0  f8   0   0  80  80   3  7f  80   2  f0   0
+14   gate-4        tile(  44,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  19   0  40  40   4  7f  40   2  f0   0
+15   gate-5        tile(  46,  40,  41)   0  fb   0   0   0   0   0   0   0   0   0  17   0  40  40   5  7f  40   2  f0   0
+16   gate-6        tile(  47,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0  15   0  40  40   6  7f  40   2  f0   0
+
+Setup Area illusion_world_worship_domain in FDAT file index 134 map index 13
+
+Objects 
+idx  in_file offset type     
+0    gate-reset    tile(  3c,  40,  46)   0  fc   0   0   0   0   0   0   0   0   0  a5   1  ff  ff  ff   1   1   d   0   0
+1    exit-door     tile(  3b,  40,  46)   0  fc   0   0   0   0   0   0   0   0   0  a6   1   4   0  ff   0   0   8   3   0
+2    unknown       tile(  4c,  40,  40)   0  fd   0   0   0   0   4   0   0   0   0  f3   0   d   7   0   5   0   0   0   2
+3    unknown       tile(  4f,  40,  47)   0  d1   0   0   0   0   0   0   0   0   0  3a   1  1e  fe  ff  ff  ff  ff   0  ff
+4    unknown       tile(  47,  40,  46)   0  fd   0   0   0   0   0   0   0   0  fc  9d   1   d   d   0   0   0   0   0   3
+5    unknown       tile(  40,  40,  38)   0  d1   0   0   8   0   0   0   0   0   0  c6   0  1e  fe  ff  ff  ff  ff   0  ff
+6    exit-portal   tile(  40,  40,  38)   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
+7    unknown       tile(  4f,  40,  38)   0  d1   0   0   8   0   0   0   0   0   0  94   1  1e  fe  ff  ff  ff  ff   0  ff
+8    exit-portal   tile(  4f,  40,  47)   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
+9    unknown       tile(  4c,  40,  40)   0  d1   0   0   4   0   0   0   0   0   0  f3   0  1e  fe  ff  ff  ff  ff   0  ff
+10   exit-portal   tile(  4f,  40,  38)   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   0   0
+11   gate-0        tile(  40,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  28   0  80  80   0  7f  80   2  f0   0
+12   gate-1        tile(  40,  40,  3b)   0  fb   0   0   0   0   0   0   0   0   0  a8   0  80  80   1  7f  80   2  f0   0
+13   gate-2        tile(  4f,  40,  45)   0  fb   0   0   0   0   0   0   0   0   0  4e   1  80  80   2  7f  80   2  f0   0
+14   gate-3        tile(  4f,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0   6   1  80  80   3  7f  80   2  f0   0
+15   gate-4        tile(  48,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  a1   1  40  40   4  7f  40   2  f0   0
+16   gate-5        tile(  4f,  40,  3b)   0  fb   0   0   0   0   0   0   0   0   0  76   1  80  80   5  7f  80   2  f0   0
+17   unknown       tile(  47,  40,  46)   0  d1   0   0   0   0   0   0   0   0   0  9d   1  1e  fe  ff  ff  ff  ff   0  ff
+18   scenery       tile(  42,  40,  47)   0  dd   0   0   0   0  fc  24  fa   0   0  6e   0  12   0   0   0   0   0   0   0
+
+Setup Area death_world_dark_castle_layer in FDAT file index 254 map index 25
+
+Objects 
+idx  in_file offset type     
+0    exit-door     tile(  4b,  3f,  44)   0  fc   0   0   0   0   0   0   0   0   0   1   1   1   1  ef   0   0  1a   1   0
+1    gate-reset    tile(  4a,  3f,  44)   0  fc   0   0   0   0   0   0   0   0   0   0   1  ff  ff  ff   1   1  19   0   0
+2    exit-door     tile(  40,  40,  37)   0  fc   0   0   0   0   0   0   0   0   0  af   1  fc   5   0   0   0  29   2  f8
+3    gate-reset    tile(  41,  40,  37)   0  fc   0   0   0   0   0   0   0   0   0  ae   1  ff  ff  ff   1   1  19   0   0
+4    exit-totem    tile(  3e,  40,  3a)   0   3   0   0   8   0   0   0   0   0   4  7b   0  11   4   0   d   0   0   0   2
+5    totem         tile(  3d,  40,  3b)   0   0   0   0   4   0   4   0   0   0   0  7d   0   0   0   0   0   0   0   0   0
+7    exit-totem    tile(  33,  40,  41)   0   3   0   0   0   0   0   0   0   0  fc  70   0   e  f2   1  f9   0  fc   0   3
+10   exit-totem    tile(  33,  40,  3f)   0   3   0   0   8   0   0   0   0   0   4  74   0  17  14   0   0   0  f8   0   0
+11   unknown       tile(  3e,  40,  3d)   0  9f   0   0   0   0   0   0   0   0  fc  43   0  24   0  43   0  b0   1   1  fb
+12   unknown       tile(  35,  40,  40)   0  9f   0   0   c   0  fc   0   0   0   0  6d   0  14   0  6d   0  b1   1   1  fb
+13   unknown       tile(  3f,  3f,  44)   0  31   0   0   4   0   0   0   0   0   0  9b   0  24   0  9b   0  b2   1   1  ff
+14   unknown       tile(  40,  3f,  45)   0  31   0   0   0   0   0   0   0   0   0  9d   0  14   0  9d   0  b3   1   1  ff
+15   unknown       tile(  41,  3f,  44)   0  31   0   0   c   0   0   0   0   0   0  9f   0  14   0  9f   0  b4   1   1  ff
+16   unknown       tile(  44,  3f,  44)   0  31   0   0   4   0   0   0   0   0   0  f4   0  14   0  f4   0  b5   1   1  ff
+17   unknown       tile(  46,  3f,  44)   0  31   0   0   c   0   0   0   0   0   0  fa   0  14   0  fa   0  b6   1   1  ff
+20   scenery       tile(  46,  40,  3b)   0  a5   0   0   0   0  f8   0   0   0   4  7a   1   5   0   0   0   0   0   0   0
+21   gate-0        tile(  47,  40,  3d)   0  fb   0   0   0   0   0   0   0   0   0  4c   0  80  80   0  7f  80   2  f0   0
+22   gate-1        tile(  3d,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  3f   0  80  80   1  7f  80   2  f0   0
+23   gate-2        tile(  38,  40,  40)   0  fb   0   0   0   0   0   0   0   0   0  5e   0  80  80   2  7f  80   2  f0   0
+24   gate-3        tile(  40,  3f,  43)   0  fb   0   0   0   0   0   0   0   0   0  a5   0  80  80   3  7f  80   2  f0   0
+25   gate-4        tile(  40,  3f,  48)   0  fb   0   0   0   0   0   0   0   0   0  14   1  80  80   4  7f  80   2  f0   0
+26   gate-5        tile(  45,  3f,  44)   0  fb   0   0   0   0   0   0   0   0   0  fb   0  80  80   5  7f  80   2  f0   0
+
+Setup Area death_world_lingering_curse_layer in FDAT file index 144 map index 14
+
+Objects 
+idx  in_file offset type     
+0    gate-reset    tile(  31,  3e,  3d)   0  fc   0   0   0   0   0   0   0   0   0  f4   1  ff  ff  ff   1   1   e   0   0
+1    exit-door     tile(  30,  3e,  3d)   0  fc   0   0   0   0   0   0   0   0   0  f5   1   0   6  fc   0   0  29   3  f8
+2    exit-totem    tile(  32,  41,  39)   0   3   0   0   4   0  fc   0  fe   0   0  68   0  19  f3   0   0   0   0   0   2
+3    scenery       tile(  38,  3f,  3c)   0  dc   0   0   8   0   0  24  fa   0  fc  89   0  15   0   0   0   0   0   0   0
+4    totem         tile(  44,  40,  42)   0   0   0   0   0   0  fc   0   0   0  fe  e3   0   0   0   0   0   0   0   0   0
+5    scenery       tile(  47,  3e,  48)   0  ad   0   0   0   0   0   0   0   0  f8  c1   1   0   0   0   0   0   0   0   0
+6    scenery       tile(  3e,  3b,  3d)   0  a3   0   0   0   0   0  a0   f   0   0  49   1   0   0   0   0   0   0   0   0
+7    scenery       tile(  42,  3b,  3d)   0  a3   0   0   0   0   0  a0   f   0   0  48   1   0   0   0   0   0   0   0   0
+8    scenery       tile(  42,  3b,  40)   0  a3   0   0   0   0   0  a0   f   0   0  47   1   0   0   0   0   0   0   0   0
+9    scenery       tile(  3e,  3b,  40)   0  a3   0   0   0   0   0  a0   f   0   0  46   1   0   0   0   0   0   0   0   0
+10   scenery       tile(  48,  3b,  37)   0  a3   0   0   0   0   0  a0   f   0   8  5f   0   0   0   0   0   0   0   0   0
+11   unknown       tile(  49,  3e,  3a)   0  a1   0   0   0   0   0   0   0   0   0  4c   0  14   0  4c   0  5e   1   1   2
+12   unknown       tile(  36,  41,  39)   0  a2   0   0   c   0   4   0  ff   0   0  71   0   c  ff  ff  ff   1  ff   0  ff
+13   scenery       tile(  47,  3b,  45)   0  a3   0   0   0   0   0  a0   f   0   0  65   1   0   0   0   0   0   0   0   0
+14   unknown       tile(  3e,  3b,  3d)   0  1d   0   0   0  4b  fc  d8   e   0   0  49   1  65  fe  ff  ff  ff  ff   0  ff
+15   unknown       tile(  3e,  3b,  3d)   0  1d   0   0   0  b5   3  d8   e   0   0  49   1  64  fe  ff  ff  ff  ff   0  ff
+16   unknown       tile(  3e,  3b,  3d)   0  1d   0   0   0   0   0  d8   e  b5   3  49   1  66  fe  ff  ff  ff  ff   0  ff
+17   unknown       tile(  3e,  3b,  3d)   0  1d   0   0   0   0   0  d8   e  4b  fc  49   1  65  fe  ff  ff  ff  ff   0  ff
+18   unknown       tile(  42,  3b,  3d)   0  1d   0   0   0   0   0  d8   e  b5   3  48   1  66  fe  ff  ff  ff  ff   0  ff
+19   unknown       tile(  42,  3b,  3d)   0  1d   0   0   0   0   0  d8   e  4b  fc  48   1  65  fe  ff  ff  ff  ff   0  ff
+20   unknown       tile(  42,  3b,  3d)   0  1d   0   0   0  b5   3  d8   e   0   0  48   1  64  fe  ff  ff  ff  ff   0  ff
+21   unknown       tile(  42,  3b,  3d)   0  1d   0   0   0  4b  fc  d8   e   0   0  48   1  67  fe  ff  ff  ff  ff   0  ff
+22   unknown       tile(  42,  3b,  40)   0  1d   0   0   0  4b  fc  d8   e   0   0  47   1  67  fe  ff  ff  ff  ff   0  ff
+23   unknown       tile(  42,  3b,  40)   0  1d   0   0   0  b5   3  d8   e   0   0  47   1  66  fe  ff  ff  ff  ff   0  ff
+24   unknown       tile(  42,  3b,  40)   0  1d   0   0   0   0   0  d8   e  b5   3  47   1  65  fe  ff  ff  ff  ff   0  ff
+25   unknown       tile(  42,  3b,  40)   0  1d   0   0   0   0   0  d8   e  4b  fc  47   1  65  fe  ff  ff  ff  ff   0  ff
+26   unknown       tile(  3e,  3b,  40)   0  1d   0   0   0   0   0  d8   e  4b  fc  46   1  65  fe  ff  ff  ff  ff   0  ff
+27   unknown       tile(  3e,  3b,  40)   0  1d   0   0   0   0   0  d8   e  b5   3  46   1  66  fe  ff  ff  ff  ff   0  ff
+28   unknown       tile(  3e,  3b,  40)   0  1d   0   0   0  b5   3  d8   e   0   0  46   1  64  fe  ff  ff  ff  ff   0  ff
+29   unknown       tile(  3e,  3b,  40)   0  1d   0   0   0  4b  fc  d8   e   0   0  46   1  65  fe  ff  ff  ff  ff   0  ff
+30   unknown       tile(  48,  3b,  37)   0  1d   0   0   0  4b  fc  d8   e   0   8  5f   0  65  fe  ff  ff  ff  ff   0  ff
+31   unknown       tile(  48,  3b,  37)   0  1d   0   0   0  b5   3  d8   e   0   8  5f   0  64  fe  ff  ff  ff  ff   0  ff
+32   unknown       tile(  48,  3b,  37)   0  1d   0   0   0   0   0  d8   e  4b   4  5f   0  67  fe  ff  ff  ff  ff   0  ff
+33   unknown       tile(  48,  3b,  37)   0  1d   0   0   0   0   0  d8   e  b5   b  5f   0  64  fe  ff  ff  ff  ff   0  ff
+34   unknown       tile(  47,  3b,  45)   0  1d   0   0   0  4b  fc  d8   e   0   0  65   1  65  fe  ff  ff  ff  ff   0  ff
+35   unknown       tile(  47,  3b,  45)   0  1d   0   0   0  b5   3  d8   e   0   0  65   1  64  fe  ff  ff  ff  ff   0  ff
+36   unknown       tile(  47,  3b,  45)   0  1d   0   0   0   0   0  d8   e  b5   3  65   1  67  fe  ff  ff  ff  ff   0  ff
+37   unknown       tile(  47,  3b,  45)   0  1d   0   0   0   0   0  d8   e  4b  fc  65   1  65  fe  ff  ff  ff  ff   0  ff
+38   totem         tile(  42,  40,  42)   0   1   0   0   0   0   0   0   0   0  fe  d2   0  2c   0   0   0   0   0   0   0
+40   gate-0        tile(  38,  3f,  3c)   0  fb   0   0   0   0   0   0   0   0   0  89   0  80  80   0  7f  80   2  f0   0
+41   gate-1        tile(  34,  41,  39)   0  fb   0   0   0   0   0   0   0   0   0  6c   0  80  80   1  7f  80   2  f0   0
+42   gate-2        tile(  40,  40,  3f)   0  fb   0   0   0   0   0   0   0   0   0  c5   0  80  80   2  7f  80   2  f0   0
+43   gate-3        tile(  40,  40,  3b)   0  fb   0   0   0   0   0   0   0   0   0  c9   0  80  80   3  7f  80   2  f0   0
+44   gate-4        tile(  48,  40,  38)   0  fb   0   0   0   0   0   0   0   0   0  27   0  80  80   4  7f  80   2  f0   0
+45   gate-5        tile(  4a,  40,  45)   0  fb   0   0   0   0   0   0   0   0   8  8c   1  80  80   5  7f  80   2  f0   0
+46   gate-6        tile(  44,  40,  45)   0  fb   0   0   0   0   0   0   0   0   8  63   1  80  80   6  7f  80   2  f0   0
+
+Setup Area death_world_undead_layer in FDAT file index 264 map index 26
+
+Objects 
+idx  in_file offset type     
+0    unknown       tile(  41,  41,  3c)   0  40   0   0   0   0   0   0  fc   0   0  ac   0   a  fc  ac   0  dc   0   1  ff
+1    unknown       tile(  41,  41,  3e)   0  88   0   0   8   0   0   0  fc   0   0  af   0  19  ff  af   0  dd   0   1  fc
+2    unknown       tile(  40,  41,  40)   0  8d   0   0   c   0  ff   0  fc   0   0  b6   0  14  ff  b6   0  de   0   1  ff
+3    unknown       tile(  3d,  41,  40)   0  88   0   0   c   0   0   0  fc   0   0  bb   0  19  ff  bb   0  df   0   1  ff
+4    unknown       tile(  41,  41,  36)   0  7f   0   0   0   0   0   0  fc   0   0  74   0   c   0  74   0  e0   0   1  ff
+5    unknown       tile(  45,  41,  32)   0  88   0   0   c   0   8   0   0   0   0   9   0  14  ff   9   0  d3   0   2   1
+6    unknown       tile(  4a,  41,  32)   0  88   0   0   c   0  ff   0   0   0   0   b   0  14  ff   b   0  d2   0   1  ff
+7    unknown       tile(  4d,  41,  35)   0  88   0   0   c   0  ff   0  fc   0   0  28   0  14   0  28   0  db   0   1  ff
+8    unknown       tile(  45,  41,  35)   0  88   0   0   c   0   8   0  fc   0   0  1d   0  14  ff  1d   0  d5   0   2   1
+9    unknown       tile(  4c,  41,  35)   0  8d   0   0   4   0   1   0  fc   0   0  27   0  14   0  27   0  da   0   1  ff
+10   unknown       tile(  4a,  41,  35)   0  8d   0   0   4   0   0   0  fc   0   0  1f   0  14   0  1f   0  d9   0   1  ff
+11   unknown       tile(  45,  41,  3b)   0  88   0   0   c   0   8   0  f8   0   0  35   0  14  ff  35   0  d7   0   2   1
+12   exit-door     tile(  41,  41,  41)   0  fc   0   0   0   0   0   0  fc   0   0  af   0   0   0  f8   0   0  17   0   0
+13   gate-reset    tile(  41,  41,  40)   0  fc   0   0   0   0   0   0  fc   0   0  af   0  ff  ff  ff   1   1  1a   0   0
+14   gate-reset    tile(  41,  41,  2f)   0  fc   0   0   0   0   0   0   0   0   0  1f   0  ff  ff  ff   1   1  1a   0   0
+15   exit-door     tile(  41,  41,  2e)   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
+16   totem         tile(  4b,  41,  33)   0   0   0   0   0   0   0   0   0   0  fc  10   0   0   0   0   0   0   0   0   0
+17   totem         tile(  4b,  41,  31)   0   2   0   0   8   0   0   0   0   0   4   d   0  2d   0   0   0   0  fe  e8   0
+18   scenery       tile(  45,  41,  30)   0  db   0   0   8   0   0  24  fa   0  f8   7   0  14   0   0   0   0   0   0   0
+20   scenery       tile(  42,  41,  3a)   0  bb   0   0   0   0   2   0  fc   0   0  a2   0   0   0   0   0   0   0   0   0
+22   scenery       tile(  3f,  41,  37)   0  64   0   0   4   0   0  24  fa   0   0  7e   0   0   0   0   0   0   0   0   0
+23   scenery       tile(  43,  41,  37)   0  64   0   0   c   0   0  24  fa   0   0  86   0   0   0   0   0   0   0   0   0
+24   scenery       tile(  42,  41,  38)   0  bb   0   0   0   0   2   0  fc   0   0  8e   0   0   0   0   0   0   0   0   0
+25   scenery       tile(  40,  41,  38)   0  bb   0   0   0   0  fe   0  fc   0   0  8a   0   0   0   0   0   0   0   0   0
+27   scenery       tile(  40,  41,  3a)   0  bb   0   0   0   0  fe   0  fc   0   0  9e   0   0   0   0   0   0   0   0   0
+28   scenery       tile(  4c,  40,  3b)   0  ce   0   0   4   0   0   0   8   0   0  4c   0   0   0   0   0   0   0   0   0
+30   gate-0        tile(  41,  41,  33)   0  fb   0   0   0   0   0   0   0   0   0  5f   0  80  80   0  7f  80   2  f0   0
+31   gate-1        tile(  45,  41,  3a)   0  fb   0   0   0   0   0   0   0   0   0  37   0  80  80   1  7f  80   2  f0   0
+32   gate-2        tile(  47,  41,  3b)   0  fb   0   0   0   0   0   0   0   0   0  c9   0  80  80   2  7f  80   2  f0   0
+33   gate-3        tile(  41,  41,  39)   0  fb   0   0   0   0   0   0   0   0   0  96   0  80  80   3  7f  80   2  f0   0
+34   gate-4        tile(  4c,  41,  36)   0  fb   0   0   0   0   0   0   0   0   0  26   0  80  80   4  7f  80   2  f0   0
+35   gate-5        tile(  4a,  41,  31)   0  fb   0   0   0   0   0   0   0   0   0   c   0  80  80   5  7f  80   2  f0   0
+36   gate-6        tile(  45,  41,  30)   0  fb   0   0   0   0   0   0   0   0   0   7   0  80  80   6  7f  80   2  f0   0
+
+Setup Area death_world_gate_of_the_dead in FDAT file index 234 map index 23
+
+Objects 
+idx  in_file offset type     
+0    gate-reset    tile(  40,  40,  38)   0  fc   0   0   0   0   0   0   0   0   0  99   1  ff  ff  ff   1   1  17   0   0
+1    exit-door     tile(  40,  40,  37)   0  fc   0   0   0   0   0   0   0   0   0  e5   1   1   1   0   0   0  1a   0  f8
+4    exit-totem    tile(  55,  40,  3f)   0   3   0   0   a   0  fc   0  fc   0   4  7a   0  19  f3   0   0   0   0   0   0
+8    unknown       tile(  40,  40,  54)   0  ae   0   0   0   0   0   0  fc   0   0  f5   0  24  fc  ff  ff   0  ff   0  ff
+10   unknown       tile(  31,  40,  47)   0  1d   0   0   0  70   1   0  ff   0  10  5c   1  40  fe   0   0  ff  ff   0  ff
+11   unknown       tile(  2e,  40,  47)   0  1d   0   0   0   0  fe   0  fe   0  10  84   1  48  fe   0   0  ff  ff   0  ff
+12   unknown       tile(  2b,  40,  44)   0  1d   0   0   0   0  f0   0  fa   0  fc  74   1  40  fe   0   0  ff  ff   0  ff
+13   unknown       tile(  2d,  40,  3f)   0  1d   0   0   0   0  fe   0   1   0  f0  94   1  40  fe   0   0  ff  ff   0  ff
+14   unknown       tile(  30,  40,  3f)   0  1d   0   0   0   0   0   0  fe   0  f0  4e   1  48  fe   0   0  ff  ff   0  ff
+15   unknown       tile(  34,  40,  43)   0  1d   0   0   0  80  f8   0  f9  80   3  46   1  40  fe   0   0  ff  ff   0  ff
+16   unknown       tile(  34,  40,  43)   0  1d   0   0   0  80  f8   0  f9  80  fc  46   1  44  fe   0   0  ff  ff   0  ff
+18   unknown       tile(  42,  40,  47)   0  1d   0   0   0  70   1   0  ff   0  10  17   0  40  fe   0   0  ff  ff   0  ff
+19   unknown       tile(  3f,  40,  47)   0  1d   0   0   0   0  fe   0  fe   0  10  44   0  48  fe   0   0  ff  ff   0  ff
+21   unknown       tile(  3c,  40,  45)   0  1d   0   0   0   0  f0   0  fa   0  fc  4b   0  40  fe   0   0  ff  ff   0  ff
+23   unknown       tile(  3e,  40,  3f)   0  1d   0   0   0   0  fe   0   1   0  f0  3c   0  40  fe   0   0  ff  ff   0  ff
+24   unknown       tile(  42,  40,  3f)   0  1d   0   0   0   0   0   0  fe   0  f0  18   0  48  fe   0   0  ff  ff   0  ff
+26   unknown       tile(  44,  40,  41)   0  1d   0   0   0   0  10   0  fc   0  fc  23   0  2c  fe   0   0  ff  ff   0  ff
+27   unknown       tile(  3b,  40,  43)   0  1d   0   0   0  80   7   0  f9  80   3  3f   1  40  fe   0   0  ff  ff   0  ff
+28   unknown       tile(  3b,  40,  43)   0  1d   0   0   0  80   7   0  f9  80  fc  3f   1  44  fe   0   0  ff  ff   0  ff
+29   unknown       tile(  40,  40,  3e)   0  1d   0   0   0  80   3   0  f9  80   7  51   0  44  fe   0   0  ff  ff   0  ff
+30   unknown       tile(  40,  40,  3e)   0  1d   0   0   0  80  fc   0  f9  80   7  51   0  48  fe   0   0  ff  ff   0  ff
+31   unknown       tile(  40,  40,  48)   0  1d   0   0   0  80   3   0  f9  80  f8  57   0  44  fe   0   0  ff  ff   0  ff
+32   unknown       tile(  40,  40,  48)   0  1d   0   0   0  80  fc   0  f9  80  f8  57   0  48  fe   0   0  ff  ff   0  ff
+33   unknown       tile(  45,  40,  43)   0  1d   0   0   0  80  f8   0  f9  80   3  58   0  40  fe   0   0  ff  ff   0  ff
+34   unknown       tile(  45,  40,  43)   0  1d   0   0   0  80  f8   0  f9  80  fc  58   0  44  fe   0   0  ff  ff   0  ff
+35   unknown       tile(  40,  40,  39)   0  1d   0   0   0  80   3   0  f9  80  f8  56   0  44  fe   0   0  ff  ff   0  ff
+36   unknown       tile(  40,  40,  39)   0  1d   0   0   0  80  fc   0  f9  80  f8  56   0  48  fe   0   0  ff  ff   0  ff
+37   unknown       tile(  40,  40,  4f)   0  1d   0   0   0  80  fc   0  f9  80   7  f1   0  48  fe   0   0  ff  ff   0  ff
+38   unknown       tile(  40,  40,  4f)   0  1d   0   0   0  80   3   0  f9  80   7  f1   0  44  fe   0   0  ff  ff   0  ff
+39   unknown       tile(  4c,  40,  43)   0  1d   0   0   0  80   7   0  f9  80   3  5f   0  40  fe   0   0  ff  ff   0  ff
+40   unknown       tile(  4c,  40,  43)   0  1d   0   0   0  80   7   0  f9  80  fc  5f   0  44  fe   0   0  ff  ff   0  ff
+41   gate-0        tile(  34,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  46   1  80  80   0  7f  80   2  f0   0
+42   gate-1        tile(  40,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0   3   0  80  80   1  7f  80   2  f0   0
+43   gate-3        tile(  51,  3e,  54)   0  fb   0   0   0   0   0   0   0   0   0  9e   0  80  80   3  7f  80   2  f0   0
+44   gate-2        tile(  40,  40,  55)   0  fb   0   0   0   0   0   0   0   0   0  f6   0  80  80   2  7f  80   2  f0   0
+45   gate-4        tile(  40,  40,  4c)   0  fb   0   0   0   0   0   0   0   0   0  ee   0  80  80   4  7f  80   2  f0   0
+46   gate-5        tile(  4f,  40,  43)   0  fb   0   0   0   0   0   0   0   0   0  7d   0  80  80   5  7f  80   2  f0   0
+48   unknown       tile(  3e,  40,  50)   0  1d   0   0   0   0  fe   0   1   0  f0  2d   1  40  fe   0   0  ff  ff   0  ff
+49   unknown       tile(  42,  40,  50)   0  1d   0   0   0   0   0   0  fe   0  f0   a   1  48  fe   0   0  ff  ff   0  ff
+51   unknown       tile(  44,  40,  52)   0  1d   0   0   0   0  10   0  fc   0  fc  15   1  2c  fe   0   0  ff  ff   0  ff
+52   unknown       tile(  3c,  40,  56)   0  1d   0   0   0   0  f0   0  fa   0  fc  39   1  40  fe   0   0  ff  ff   0  ff
+54   unknown       tile(  40,  40,  58)   0  1d   0   0   0   0  fe   0  fe   0  10  3e   1  48  fe   0   0  ff  ff   0  ff
+55   unknown       tile(  42,  40,  58)   0  1d   0   0   0  70   1   0  ff   0  10   9   1  40  fe   0   0  ff  ff   0  ff
+58   unknown       tile(  4d,  40,  45)   0  1d   0   0   0   0  f0   0  fa   0  fc  8d   0  40  fe   0   0  ff  ff   0  ff
+60   unknown       tile(  4f,  40,  3f)   0  1d   0   0   0   0  fe   0   1   0  f0  8f   0  40  fe   0   0  ff  ff   0  ff
+61   unknown       tile(  50,  40,  47)   0  1d   0   0   0   0  fe   0  fe   0  10  87   0  48  fe   0   0  ff  ff   0  ff
+62   unknown       tile(  53,  40,  47)   0  1d   0   0   0  70   1   0  ff   0  10  71   0  40  fe   0   0  ff  ff   0  ff
+64   unknown       tile(  55,  40,  43)   0  1d   0   0   0   0  10   0  fc   0  fc  76   0  2c  fe   0   0  ff  ff   0  ff
+
+Setup Area shadow_tower_part2 in FDAT file index 404 map index 40
+
+Objects 
+idx  in_file offset type     
+0    exit-door     tile(  40,  41,  45)   0  fc   0   0   0   0   0   0  fc   0   0  bb   1  f8   0  f5   1   1   f   3   0
+1    gate-reset    tile(  40,  41,  44)   0  fc   0   0   0   0   0   0  fc   0   0  ba   1  ff  ff  ff   1   1  28   0   0
+2    gate-reset    tile(  45,  43,  43)   0  fc   0   0   0   0   0   0  fc   0   0  c5   1  ff  ff  ff   1   1  28   0   0
+3    gate-reset    tile(  45,  43,  3d)   0  fc   0   0   0   0   0   0  fc   0   0  c8   1  ff  ff  ff   1   1  28   0   0
+4    exit-door     tile(  46,  43,  43)   0  fc   0   0   0   0   0   0  fc   0   0  c9   1   1   0   2   1   1   3   3   0
+5    exit-door     tile(  46,  43,  3d)   0  fc   0   0   0   0   0   0  fc   0   0  ca   1  fb   0   2   1   1   3   3   0
+6    gate-reset    tile(  3b,  43,  40)   0  fc   0   0   0   0   0   0  fc   0   0  cc   1  ff  ff  ff   1   1  28   0   0
+7    exit-door     tile(  3a,  43,  40)   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  fc   0  f2   1   1  14   3   0
+8    gate-reset    tile(  44,  45,  40)   0  fc   0   0   0   0   0   0  fc   0   0  ce   1  ff  ff  ff   1   1  28   0   0
+9    exit-door     tile(  45,  45,  40)   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   4   0  f4   1   1   a   1   0
+10   gate-reset    tile(  44,  4a,  40)   0  fc   0   0   0   0   0   0  fc   0   0  ce   1  ff  ff  ff   1   1  28   0   0
+11   unknown       tile(  45,  4a,  40)   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   1   0   0   0   0  27   3   0
+14   gate-1        tile(  40,  43,  43)   0  fb   0   0   0   0   0   0   0   0   0  a8   0  80  80   1  7f  80   0  f0   0
+15   gate-0        tile(  40,  42,  40)   0  fb   0   0   0   0   0   0   0   0   0  f2   0  80  80   0  7f  80   0   5   0
+16   gate-0        tile(  40,  44,  40)   0  fb   0   0   0   0   0   0   0   0   0  f6   0  80  80   0  7f  80   0   5   0
+
+Setup Area shadow_tower_part3 in FDAT file index 414 map index 41
+
+Objects 
+idx  in_file offset type     
+0    exit-door     tile(  45,  41,  3b)   0  fc   0   0   0   0   0   0  fc   0   0   0   0   8   3  f4   1   1   a   1   0
+1    gate-reset    tile(  44,  41,  3b)   0  fc   0   0   0   0   0   0  fc   0   0   0   0  ff  ff  ff   1   1  29   0   0
+2    gate-reset    tile(  40,  41,  44)   0  fc   0   0   0   0   0   0  fc   0   0   0   0  ff  ff  ff   1   1  29   0   0
+3    exit-door     tile(  40,  41,  45)   0  fc   0   0   0   0   0   0  fc   0   0   0   0   0   0   1   1   1  15   0   0
+4    gate-reset    tile(  44,  43,  40)   0  fc   0   0   0   0   0   0  fc   0   0  df   1  ff  ff  ff   1   1  29   0   0
+5    exit-door     tile(  45,  43,  40)   0  fc   0   0   0   0   0   0  fc   0   0  e0   1  fd   0  f7   0   0   2   1   0
+6    gate-reset    tile(  40,  43,  3c)   0  fc   0   0   0   0   0   0  fc   0   0   0   0  ff  ff  ff   1   1  29   0   0
+7    exit-door     tile(  40,  43,  3b)   0  fc   0   0   0   0   0   0  fc   0   0   0   0   a   0   3   1   1  11   0   0
+8    gate-reset    tile(  3c,  42,  40)   0  fc   0   0   0   0   0   0  fc   0   0  e3   1  ff  ff  ff   1   1  29   0   0
+9    exit-door     tile(  3b,  42,  40)   0  fc   0   0   0   0   0   0  fc   0   0  e4   1  fa   0   0   1   1   9   2   0
+10   exit-door     tile(  40,  46,  3b)   0  fc   0   0   0   0   0   0  fc   0   0  e6   1  f1  fe  fd   1   1   e   1   0
+11   gate-reset    tile(  40,  46,  3c)   0  fc   0   0   0   0   0   0  fc   0   0  e5   1  ff  ff  ff   1   1  29   0   0
+12   gate-reset    tile(  3c,  45,  40)   0  fc   0   0   0   0   0   0  fc   0   0  e7   1  ff  ff  ff   1   1  29   0   0
+13   exit-door     tile(  3b,  45,  40)   0  fc   0   0   0   0   0   0  fc   0   0  e8   1   1   0  f7   1   1  19   2   0
+14   gate-0        tile(  40,  41,  40)   0  fb   0   0   0   0   0   0   0   0   0  6c   1  80  80   0  7f  80   0   5   0
+15   gate-0        tile(  40,  44,  40)   0  fb   0   0   0   0   0   0   0   0   0  72   1  80  80   0  7f  80   0   5   0
+16   gate-0        tile(  40,  46,  40)   0  fb   0   0   0   0   0   0   0   0   0  75   1  80  80   0  7f  80   0   5   0
+17   gate-1        tile(  40,  41,  43)   0  fb   0   0   0   0   0   0   0   0   0  d8   0  80  80   1  7f  80   0  f0   0
+18   gate-1        tile(  40,  43,  3d)   0  fb   0   0   0   0   0   0   0   0   0  ab   0  80  80   1  7f  80   0  f0   0
+19   gate-1        tile(  40,  46,  3d)   0  fb   0   0   0   0   0   0   0   0   0  53   1  80  80   1  7f  80   0  f0   0
+21   unknown       tile(  40,  46,  40)   0   3   0   0   8   0   0   0  fc   0  f0  75   1  1e   0   0   3   0   0   0   0
