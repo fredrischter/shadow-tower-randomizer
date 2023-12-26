@@ -125,10 +125,8 @@ function randomize(paramsFile, stDir) {
     const shuffle = map_shuffler(params);
     fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
 
-    if (params.randomizeMap) {
-        var map = new MapShuffle(shuffle);
-        map.applyMap(data_model);
-    }
+    var map = new MapShuffle(shuffle.map);
+    map.applyMap(data_model);
 
     var walkDescription = "Shadow Tower walk";
     var currentArea = "shadow_tower_part1a";
@@ -1215,10 +1213,24 @@ function randomize(paramsFile, stDir) {
 
         if (params.keepOnlyBosses) {
             forEachCreatureSpawn(keepOnlyBosses);
-            items[item_0_short_sword].attribute1.setAttributeType(0x8);
-            items[item_0_short_sword].attribute1.getAttributeValue(ATTR_HP_RECOVERY);
-            items[item_0_short_sword].attribute2.setAttributeType(ATTR_LIGHTING_ILLUMINATING);
-            items[item_0_short_sword].attribute2.getAttributeValue(ATTR_LIGHTING);
+            items[item_0_short_sword].attribute1.set(attribute(0xf,ATTR_HP_RECOVERY));
+            items[item_0_short_sword].attribute2.set(attribute(0xf,ATTR_STATUS_RECOVERY));
+            //items[item_0_short_sword].attribute2.set(attribute(ATTR_LIGHTING_ILLUMINATING,ATTR_LIGHTING));
+            items[item_0_short_sword].str.set(0xff);
+            items[item_0_short_sword].spd.set(0xff);
+            items[item_0_short_sword].def.set(0xff);
+            items[item_0_short_sword].bal.set(0xff);
+            items[item_0_short_sword].sla.set(0xff);
+            items[item_0_short_sword].smh.set(0xff);
+            items[item_0_short_sword].pir.set(0xff);
+            items[item_0_short_sword].spr.set(0xff);
+            items[item_0_short_sword].foc.set(0xff);
+            items[item_0_short_sword].ham.set(0xff);
+            items[item_0_short_sword].pur.set(0xff);
+            items[item_0_short_sword].par.set(0xff);
+            items[item_0_short_sword].mel.set(0xff);
+            items[item_0_short_sword].sol.set(0xff);
+
         }
 
         // Randomize creatures
@@ -1303,8 +1315,28 @@ function randomize(paramsFile, stDir) {
 
     operate();
 
+//    human_world_solitary_region.objects.forEach(obj => {
+//        if (obj.getType() == "scenery") {
+//            obj.id.set(0x18);
+//        }
+//    });
+//
+//    for (var i=0; i<=7; i++) {
+//        var obj = human_world_solitary_region.objects[21+i];
+//        obj.id.set(0x18);// + i);
+//        //21..28 pillars, pillar model 0x19
+//        //39 candle, model 0xba
+//        //if (obj.getType() == "scenery") {
+//        //    obj.id.set(i);
+//        //}
+//    };
+//    human_world_solitary_region.objects[27].model.set(3);
+//    for (var i=0;i<human_world_forgotten_region.objects.length;i++) {
+//      if (i==2) continue;
+//      human_world_forgotten_region.objects[i].set(human_world_forgotten_region.objects[8]);
+//    }
+
     //shadow_tower_part1.objects[0].destinationRotation.set(2);
-    //human_world_solitary_region.objects[38].destinationRotation.set(3);
 
     if (collectableUniques.length) {
         console.log("ERROR - Couldn't distribute collectable uniques " + collectableUniques);
@@ -1337,7 +1369,7 @@ function randomize(paramsFile, stDir) {
 
                     var chartText = area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
                     + "] -- " + (exitsNames[exitName] || exitName)+ " " + exitObjText + " --> "
-                    + exit.dest+"["+(readableName[exit.dest] || exit.dest) + (exitArea && exitArea.score?" " + exitArea.score:"") +"]\n";
+                    + exit.dest+"["+(readableName[exit.dest] || exit.dest) /*+ (exitArea && exitArea.score?" " + exitArea.score:"")*/ +"]\n";
 
                     console.log("Exit for chart " + chartText + " " + (exit.type == "jump" ? "" : exitObj.toReadableString()));
                     mermaidChart+="  " + chartText;

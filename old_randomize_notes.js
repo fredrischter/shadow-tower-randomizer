@@ -154,6 +154,8 @@ global.items[item_0_short_sword].attribute1.set(attribute(ATTR_CRITICAL_20pc,ATT
 */
 
 /*
+global.items[item_0_short_sword].attribute1.set(attribute(0xf,ATTR_HP_RECOVERY));
+global.items[item_0_short_sword].attribute2.set(attribute(0xf,ATTR_STATUS_RECOVERY));
 global.items[item_0_short_sword].str.set(0xff);
 global.items[item_0_short_sword].spd.set(0xff);
 global.items[item_0_short_sword].def.set(0xff);

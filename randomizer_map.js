@@ -11,8 +11,8 @@ function clone(orig) {
 }
 
 class MapShuffle {
-    constructor(source) {
-    	this.source = source;
+    constructor(map) {
+    	this.map = map;
     }
 
     applyMap(data_model) {
@@ -30,14 +30,14 @@ class MapShuffle {
 				}
 			});
 
-			area.exits = {};
+			//area.exits = {};
 		});
 
     	function originalEntranceTo(dest, wayBackId) {
     		return cloneRegistryPerDestination[dest + "/" + wayBackId];
     	}
 
-    	this.source.map.forEach(targetArea => {
+    	this.map.forEach(targetArea => {
 			targetArea.exits.forEach(targetExit => {
 				var objectToCopyFrom = originalEntranceTo(targetExit.dest, targetExit.wayBackId);
 
@@ -48,7 +48,6 @@ class MapShuffle {
 				} else {
 					recipientArea.score = targetArea.depth;
 				}
-
 
 				var recipientObject = recipientArea ? recipientArea.objects[parseInt(targetExit.id)] : null;
 				if (!objectToCopyFrom && targetExit.id != "jump") {
@@ -65,7 +64,7 @@ class MapShuffle {
 			    		//console.log("  Setting exit for " + targetArea.name + "/" + targetExit.id + " as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);
 						areaToSetExit.exits[targetExit.id] = targetExit;
 						targetExit.origin = targetArea.name;
-						recipientObject.setExit(objectToCopyFrom);
+						recipientObject.setExit(objectToCopyFrom, this.map);
 					}
 				} else if (targetExit.id != "jump") {
 		    		console.error("  Not found recipient " + targetArea.name + "/" + targetExit.id + ", wanted to set as one leading to " + targetExit.dest + "/" + targetExit.wayBackId);

@@ -1271,7 +1271,6 @@
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+22] = 0; // angle 1=90
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+23] = 0xfd; // destination y fine position
 
-
       this.isBlank = this.id.isNull();
 
       if (!this.isBlank) {
@@ -1312,7 +1311,16 @@
     }
 
     getExit() {
+      //console.log("Rotation getExit " + this.index + " at " + JSON.stringify(this.area.exits));
       return this.area.exits[''+this.index];
+    }
+
+    getWayBackExit(map) {
+      var exit = this.getExit();
+      //console.log("Rotation getWayBackExit, exit " + JSON.stringify(exit));
+      var wayBackExit = map.find(targetArea => targetArea.name == exit.dest).exits.find(e => e.id == exit.wayBackId);
+      //console.log("Rotation getWayBackExit, wayBackExit " + JSON.stringify(wayBackExit));
+      return wayBackExit;
     }
 
     getExitInfo() {
@@ -1372,14 +1380,24 @@
       binCopy(source.bin, source.offset_in_file+14, this.bin, this.offset_in_file+14, OBJECTS_SIZE-14);
     }
 
-    setExit(source) {
+    setExit(source, map) {
       this.destinationMapIndex.set(source.destinationMapIndex.get());
       this.destinationXShift.set(source.destinationXShift.get());
       this.destinationYShift.set(source.destinationYShift.get());
       this.destinationZShift.set(source.destinationZShift.get());
       this.destinationUnknown1.set(source.destinationUnknown1.get());
       this.destinationUnknown2.set(source.destinationUnknown2.get());
-      this.destinationRotation.set(source.destinationRotation.get());
+
+      var origin = this.getExit();
+      //console.log("Rotation setting, origin " + JSON.stringify(origin));
+      var dest = source.getWayBackExit(map);
+      //console.log("Rotation setting, wayBack " + JSON.stringify(dest));
+      var rotationToSet = - origin.rotation + (dest.type=="totem" ? 0 : -2) + dest.rotation;
+      rotationToSet = (rotationToSet + 40) % 4;
+
+      //console.log("Rotation to set " + rotationToSet);
+      this.destinationRotation.set(rotationToSet);
+
       this.destinationYFineShift.set(source.destinationYFineShift.get());
 
       //binCopy(source.bin, source.offset_in_file+16, this.bin, this.offset_in_file+16, OBJECTS_SIZE-16);
