@@ -3724,7 +3724,7 @@ DEBUG - Creature 0f_door
 DEBUG ------------------ Randomization engine - forEachItem - applyDifficultyForEachItem
 
 
-Applying factor 10 to item item_0_short_sword. Attributes str 255 spd 255 def 0 bal 0 sla 255 smh 130 pir 180 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 2 max_dura 140 dura 140
+Applying factor 10 to item item_0_short_sword. Attributes str 255 spd 255 def 255 bal 255 sla 255 smh 255 pir 255 spr 255 foc 255 ham 255 pur 255 par 255 mel 255 sol 255 hp 0 weight 2 max_dura 140 dura 140
 Applying factor 10 to item item_1_short_sword. Attributes str 40 spd 255 def 0 bal 0 sla 255 smh 120 pir 210 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 2 max_dura 170 dura 150
 Applying factor 10 to item item_2_deadly_short_sword. Attributes str 140 spd 255 def 0 bal 0 sla 255 smh 20 pir 210 spr 40 foc 0 ham 0 pur 0 par 0 mel 30 sol 0 hp 0 weight 1 max_dura 110 dura 70
 Applying factor 10 to item item_3_long_sword. Attributes str 60 spd 255 def 0 bal 0 sla 255 smh 90 pir 30 spr 0 foc 0 ham 0 pur 0 par 0 mel 0 sol 0 hp 0 weight 2 max_dura 255 dura 120
