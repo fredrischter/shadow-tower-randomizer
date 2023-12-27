@@ -1209,13 +1209,23 @@ function randomize(paramsFile, stDir) {
             }
         }
 
+        // Randomize creatures
+        if (params.randomizeCreatures) {
+            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+            for (var i =0; i<300; i++) {
+                var creature1 = randomElement(allRandomizableCreatures);
+                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
+                swapCreatures(creature1, creature2, changeSet);
+            }
+        }
+
         // ------- Empty game
 
         if (params.keepOnlyBosses) {
             forEachCreatureSpawn(keepOnlyBosses);
             items[item_0_short_sword].attribute1.set(attribute(0xf,ATTR_HP_RECOVERY));
-            items[item_0_short_sword].attribute2.set(attribute(0xf,ATTR_STATUS_RECOVERY));
-            //items[item_0_short_sword].attribute2.set(attribute(ATTR_LIGHTING_ILLUMINATING,ATTR_LIGHTING));
+            //items[item_0_short_sword].attribute2.set(attribute(0xf,ATTR_STATUS_RECOVERY));
+            items[item_0_short_sword].attribute2.set(attribute(ATTR_LIGHTING_ILLUMINATING,ATTR_LIGHTING));
             items[item_0_short_sword].str.set(0xff);
             items[item_0_short_sword].spd.set(0xff);
             items[item_0_short_sword].def.set(0xff);
@@ -1230,17 +1240,12 @@ function randomize(paramsFile, stDir) {
             items[item_0_short_sword].par.set(0xff);
             items[item_0_short_sword].mel.set(0xff);
             items[item_0_short_sword].sol.set(0xff);
-
-        }
-
-        // Randomize creatures
-        if (params.randomizeCreatures) {
-            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
-            for (var i =0; i<300; i++) {
-                var creature1 = randomElement(allRandomizableCreatures);
-                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
-                swapCreatures(creature1, creature2, changeSet);
-            }
+            var bottleOfLightTime = 0;
+            forEachCollectable(function(collectable, area) {
+                if (bottleOfLightTime++%2 == 0) {
+                    collectable.type.set(item_126_bottle_of_light);
+                }
+            });
         }
 
         // ------- Adjust creature and equip levels for proper progression
@@ -1321,15 +1326,37 @@ function randomize(paramsFile, stDir) {
 //        }
 //    });
 //
-//    for (var i=0; i<=7; i++) {
-//        var obj = human_world_solitary_region.objects[21+i];
-//        obj.id.set(0x18);// + i);
-//        //21..28 pillars, pillar model 0x19
-//        //39 candle, model 0xba
-//        //if (obj.getType() == "scenery") {
-//        //    obj.id.set(i);
-//        //}
-//    };
+
+    //    var firstObject = 0x42;
+    //    var howManyGo = 0x1;
+    //    var distributeAtEvery = 1;
+    //
+    //    for (var a in areas) {
+    //        var area = areas[a];
+    //        var i = 0;
+    //        for (var o in area.objects) {
+    //            if (area.objects[o].getType() == "scenery"/* ||
+    //                area.objects[o].getType() == "unknown"*/) {
+    //                if (o%distributeAtEvery>0) {
+    //                    area.objects[o].id.set(0xff);
+    //                    continue;
+    //                }
+    //                area.objects[o].id.set(firstObject + (i++)%howManyGo);
+    //            }
+    //        }
+    //    }
+    //
+    //    for (var i=0; i<howManyGo; i++) {
+    //        var obj = human_world_solitary_region.objects[21+i];
+    //        obj.id.set(firstObject + i);
+    //        //21..28 pillars, pillar model 0x19
+    //        //39 candle, model 0xba
+    //
+    //        //if (obj.getType() == "scenery") {
+    //        //    obj.id.set(i);
+    //        //}
+    //    };
+
 //    human_world_solitary_region.objects[27].model.set(3);
 //    for (var i=0;i<human_world_forgotten_region.objects.length;i++) {
 //      if (i==2) continue;

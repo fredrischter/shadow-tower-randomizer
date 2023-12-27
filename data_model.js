@@ -1307,6 +1307,16 @@
           this.zeroes5.get() == 0 && this.zeroes6.get() == 0 && this.zeroes7.get() == 0) {
         return "scenery";
       };
+
+      var desc = objectsDescriptions[this.id.get()];
+      if (desc) {
+        if (desc.includes("door") || desc.includes("lever") || desc.includes("sword eater statue")) {
+          return "game-element";
+        } else {
+          return "scenery";
+        }
+      }
+
       return "unknown";
     }
 
@@ -1357,6 +1367,7 @@
       + this.offset_in_file.toString(16).padStart(4)
       + this.absoluteIndex.toString(16).padStart(10)
       + " " + this.getType().padEnd(12)
+      + (objectsDescriptions[this.id.get()] || "").padEnd(29)
       + "  tile("
       + this.tileX.get().toString(16).padStart(4)+","
       + this.tileY.get().toString(16).padStart(4)+","
