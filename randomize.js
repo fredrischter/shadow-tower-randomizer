@@ -1320,6 +1320,20 @@ function randomize(paramsFile, stDir) {
 
     operate();
 
+    human_world_forgotten_region.objects[4].id.set(0x77); // tortured guy
+    human_world_forgotten_region.objects[3].id.set(0x76); // hanging guy
+
+    human_world_hidden_region.objects[0].id.set(0xff);
+    human_world_hidden_region.objects[1].id.set(0xff);
+    //human_world_hidden_region.objects[2].id.set(0x24); // body leftover
+    human_world_hidden_region.objects[3].id.set(0xff);
+    human_world_hidden_region.objects[4].id.set(0xff); // removing torture bed
+    human_world_hidden_region.objects[5].id.set(0xff); // removing torture bed
+    human_world_hidden_region.objects[29].id.set(0x21); // hanging guy
+    human_world_hidden_region.objects[0].id.set(0x82); // forge
+
+    //, to try 0x84 0x85 0x86 0x87
+
 //    human_world_solitary_region.objects.forEach(obj => {
 //        if (obj.getType() == "scenery") {
 //            obj.id.set(0x18);

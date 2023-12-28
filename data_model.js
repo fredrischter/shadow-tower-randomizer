@@ -1264,6 +1264,10 @@
       }
       this.destinationYFineShift = new Int8(this.bin, this.offset_in_file + 0x17);
 
+      // For handles
+      this.eventHandlerIdentifier1 = new Int8(this.bin, this.offset_in_file + 0x16);
+      this.eventHandlerIdentifier2 = new Int8(this.bin, this.offset_in_file + 0x17);
+
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+16] = 0; // destination tile x shift
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+17] = 0; // destination tile y shift
 //shadow_tower_part1.objects[0].bin[shadow_tower_part1.objects[0].offset_in_file+18] = 1;//1; destination tile z shift
@@ -1273,10 +1277,26 @@
 
       this.isBlank = this.id.isNull();
 
+      var type = this.getType();
+      var tileColor = "#808080";
+      if (this.getExit()) {
+        tileColor = "#008000";
+      }
+      if (type == "totem") {
+        tileColor = "#00a000";
+      } else if (type.includes("gate")) {
+        tileColor = "#a0a0a0";
+      } else if (type == "handler") {
+        tileColor = "#a0a040";
+      } else if (type == "scenery") {
+        tileColor = "#0000a0";
+      } else if (type == "unknown") {
+        tileColor = "#800000";
+      }
       if (!this.isBlank) {
         if (mapTiles) {
           mapTiles.push({
-            color: "#b60abc",
+            color: tileColor,
             x: this.tileX.get(),
             y: this.tileZ.get(),
             z: this.tileY.get()
@@ -1285,6 +1305,10 @@
 
         console.log(this.toReadableString());
       }
+    }
+
+    isEventHandler() {
+      return this.eventHandlerIdentifier1.get() == 1 && this.eventHandlerIdentifier2.get() == 0xff;
     }
 
     getType() {
@@ -1300,6 +1324,9 @@
       if (this.gateIdentifier.get() == 0x7f) {
         return "gate-"+this.gateIndex.get();
       }
+      if (this.isEventHandler()) {
+        return "handler";
+      }
       if (this.gateIdentifier.get() == 0x1 && this.gateIndex.isNull()) {
         return "gate-reset";
       }
@@ -1310,8 +1337,8 @@
 
       var desc = objectsDescriptions[this.id.get()];
       if (desc) {
-        if (desc.includes("door") || desc.includes("lever") || desc.includes("sword eater statue")) {
-          return "game-element";
+        if (desc.includes("door") || desc.includes("lever") || desc.includes("jail") || desc.includes("sword eater statue")) {
+          return "handler";
         } else {
           return "scenery";
         }
@@ -1349,14 +1376,23 @@
 
     draw(mapDraw, mapSummary) {
       if (!this.isBlank) {
+        var textColor = "#000000";
+
         mapDraw.push({
-          color: "#000000", 
+          color: textColor,
           x: this.tileX.get(), 
           y: this.tileZ.get(), 
           z: this.tileY.get(), 
-          text: "" + this.index + " " + this.getType() + " "});
+          text: "" + this.index + " " + (objectsDescriptions[this.id.get()] || ("-"+this.getType()))
+        });
+
         if (this.getExit()) {
           var summary = '<span style="background:#808080">'+"" + (this.index + " ").padStart(3) + this.getType().padEnd(10) + " " + this.getExitInfo() + '</span>\n';
+          mapSummary.push(summary);
+        }
+
+        if (this.getType() == "unknown") {
+          var summary = '<span style="background:#800000">'+"" + (this.index + " ").padStart(3) + this.getType().padEnd(10) + " id=" + this.id.get() + " " + this.toReadableString() + '</span>\n';
           mapSummary.push(summary);
         }
       }
