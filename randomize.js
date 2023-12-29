@@ -1341,35 +1341,34 @@ function randomize(paramsFile, stDir) {
 //    });
 //
 
-    //    var firstObject = 0x42;
-    //    var howManyGo = 0x1;
-    //    var distributeAtEvery = 1;
-    //
-    //    for (var a in areas) {
-    //        var area = areas[a];
-    //        var i = 0;
-    //        for (var o in area.objects) {
-    //            if (area.objects[o].getType() == "scenery"/* ||
-    //                area.objects[o].getType() == "unknown"*/) {
-    //                if (o%distributeAtEvery>0) {
-    //                    area.objects[o].id.set(0xff);
-    //                    continue;
-    //                }
-    //                area.objects[o].id.set(firstObject + (i++)%howManyGo);
-    //            }
-    //        }
-    //    }
-    //
-    //    for (var i=0; i<howManyGo; i++) {
-    //        var obj = human_world_solitary_region.objects[21+i];
-    //        obj.id.set(firstObject + i);
-    //        //21..28 pillars, pillar model 0x19
-    //        //39 candle, model 0xba
-    //
-    //        //if (obj.getType() == "scenery") {
-    //        //    obj.id.set(i);
-    //        //}
-    //    };
+        //var firstObject = 0xe8;
+        //var howManyGo = 0x8;
+        //var distributeAtEvery = 1;
+        //
+        //for (var a in areas) {
+        //    var area = areas[a];
+        //    var i = 0;
+        //    for (var o in area.objects) {
+        //        if (area.objects[o].getType() == "scenery"/* ||
+        //            area.objects[o].getType() == "unknown"*/) {
+        //            if (o%distributeAtEvery>0) {
+        //                area.objects[o].id.set(0xff);
+        //                continue;
+        //            }
+        //            area.objects[o].id.set(firstObject + (i++)%howManyGo);
+        //        }
+        //    }
+        //}
+        //
+        //for (var i=0; i<howManyGo; i++) {
+        //    var obj = human_world_solitary_region.objects[21+i];
+        //    obj.id.set(firstObject + i);
+        //    //21..28 pillars, pillar model 0x19
+        //    //39 candle, model 0xba
+        //    //    //if (obj.getType() == "scenery") {
+        //    //    obj.id.set(i);
+        //    //}
+        //};
 
 //    human_world_solitary_region.objects[27].model.set(3);
 //    for (var i=0;i<human_world_forgotten_region.objects.length;i++) {
