@@ -91,6 +91,50 @@ class TIMTextureFile {
   }
 }
 
+class RTIM {
+  constructor(paletteBin, imgW, imgH, imgBin) {
+    this.paletteBin = paletteBin;
+    this.imgW = imgW;
+    this.imgH = imgH;
+    this.imgBin = imgBin;
+  }
+
+  writeAsTIM(fileName) {
+    var paletteHeaderOffset = 0x8;
+    var clutOffset=paletteHeaderOffset + 0xc;
+    var imageMetadataOffset = clutOffset + 0x200;
+    var imageOffset = imageMetadataOffset + 0xc;
+    var totalSize = imageOffset + this.imgBin.length;
+
+    var buffer = Buffer.alloc(totalSize);
+
+    // https://github.com/SaxxonPike/rhythm-game-formats/blob/master/generic/tim.md
+    buffer[0x0] = 0x10; // magic
+    buffer[0x4] = 0x09; // BitDepth 8bpp Palette? Yes PixelFormat 8 bits per pixel, from a palette of 256 colors
+
+    buffer[paletteHeaderOffset+0x1] = 0x2; // 0x200 Length of all the CLUT data after the header
+    buffer[paletteHeaderOffset+0x9] = 0x1; // 0x100 Colors per CLUT
+    buffer[paletteHeaderOffset+0xa] = 0x1; // 0x1 Number of CLUTs
+
+    for (var i = 0; i<0x200; i++) {
+      buffer[clutOffset + i] = this.paletteBin[i];
+    }
+
+    buffer[imageMetadataOffset+0x0] = this.imgBin.length % 0x100; // Length of pixel data after the header in bytes
+    buffer[imageMetadataOffset+0x1] = this.imgBin.length / 0x100; // Length of pixel data after the header in bytes
+    buffer[imageMetadataOffset+0x8] = (this.imgW/2) % 0x100; // Image stride*
+    buffer[imageMetadataOffset+0x9] = (this.imgW/2) / 0x100; // Image stride*
+    buffer[imageMetadataOffset+0xa] = this.imgH % 0x100; // Image height
+    buffer[imageMetadataOffset+0xb] = this.imgH / 0x100; // Image height
+    for (var i = 0; i<this.imgBin.length; i++) {
+      buffer[imageOffset + i] = this.imgBin[i];
+    }
+
+    console.log("Writing TIM file " + totalSize + " bytes to " + fileName);
+    fs.writeFileSync(fileName, buffer);
+  }
+}
+
 class TFormatPart {
 
   constructor(startOffset, bin, fileName, originalTFile, indexInTFile) {
@@ -103,6 +147,73 @@ class TFormatPart {
     //console.log("     offset   " + this.startOffset.toString(16));
 
     this.trySizedMix();
+  }
+
+  extractRTIM() {
+
+    var product = [];
+
+    var cursor = this.startOffset;
+
+    do {
+      var RTIMStart = cursor;
+      var paletteHeaderOffset = cursor;
+
+      var clutX1 = getUInt16(this.bin, cursor + 0x0);
+      var clutY1 = getUInt16(this.bin, cursor + 0x2);
+      var clutW1 = getUInt16(this.bin, cursor + 0x4);
+      var clutH1 = getUInt16(this.bin, cursor + 0x6);
+      var clutX2 = getUInt16(this.bin, cursor + 0x8);
+      var clutY2 = getUInt16(this.bin, cursor + 0xa);
+      var clutW2 = getUInt16(this.bin, cursor + 0xc);
+      var clutH2 = getUInt16(this.bin, cursor + 0xe);
+      cursor+=0x10;
+
+      if (clutX1 == 0xffff && clutY1 == 0xffff && clutW1 == 0xffff && clutH1 == 0xffff) {
+        console.log("Found the finisher 0xffff 0xffff 0xffff 0xffff.");
+        break;
+      }
+
+      var valid = clutX1 == clutX2 && clutY1 == clutY2 && clutW1 == clutW2 && clutH1 == clutH2;
+      if (!valid) {
+        console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
+        valid = true;
+        continue;
+      }
+
+      var paletteStart = cursor;
+      cursor+=0x200;
+      var imageHeaderOffset = cursor;
+
+      var textureX1 = getUInt16(this.bin, cursor + 0x0);
+      var textureY1 = getUInt16(this.bin, cursor + 0x2);
+      var textureW1 = getUInt16(this.bin, cursor + 0x4);
+      var textureH1 = getUInt16(this.bin, cursor + 0x6);
+      var textureX2 = getUInt16(this.bin, cursor + 0x8);
+      var textureY2 = getUInt16(this.bin, cursor + 0xa);
+      var textureW2 = getUInt16(this.bin, cursor + 0xc);
+      var textureH2 = getUInt16(this.bin, cursor + 0xe);
+      cursor+=0x10;
+
+      var imageStart = cursor;
+      var imageSize = 2 * textureW1 * textureH1;
+      cursor+=imageSize;
+
+      valid = clutX1 == clutX2 && clutY1 == clutY2 && clutW1 == clutW2 && clutH1 == clutH2 && textureX1 == textureX2 && textureY1 == textureY2 && textureW1 == textureW2 && textureH1 == textureH2;
+      console.log("palette 0x" + paletteHeaderOffset.toString(16) + " image 0x" + imageHeaderOffset.toString(16) + 
+        " Valid? " + valid.toString(16) + 
+        " imageSize " + imageSize.toString(16) + 
+        " clut " + clutX1.toString(16) + " " + clutY1.toString(16) + " " + clutW1.toString(16) + " " + clutH1.toString(16) + 
+        " texture " + textureX1.toString(16) + " " + textureY1.toString(16) + " " + textureW1.toString(16) + " " + textureH1.toString(16));
+
+      product.push(new RTIM(
+        this.bin.slice(paletteStart, paletteStart + 0x200),
+        textureW1, textureH1,
+        this.bin.slice(imageStart, imageStart + imageSize)));
+
+    } while(valid);
+
+    return product;
   }
 
   trySizedMix() {

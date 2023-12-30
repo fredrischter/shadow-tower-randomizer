@@ -574,17 +574,18 @@
       this.logo_index = logo_index;
   // 0 - empty
   // 1 - RTIM_texture_map_name
-  // 2 - Maybe_RTIM_texture_for_tile_set
       this.tiles_index = logo_index+1; // 42
+  // 2 - Maybe_RTIM_texture_for_tile_set > actually the 7th file
   // 3 - MIPS_machine_code_map_script
-  // 4 - Maybe_Customized_TMD_file_collisions
       this.map_index = logo_index+3; // 44
+  // 4 - Maybe_Customized_TMD_file_collisions
   // 5 - Maybe_Customized_TMD_file_tiles
   // 6 - VH_file_ADPCM_audio_PS1
   // 7 - VB_file_ADPCM_audio_PS1
   // 8 - map_database_entity_class_etc
   // 9 - the_tilemap
   // ? - another_customized_TMD_object_models
+      this.texture_index = logo_index+6; // 47
   this.name = name;
   this.areaIndexCounter = areaIndexCounter;
 
@@ -596,6 +597,11 @@
   setup(FDAT) {
     this.tiles_file = FDAT.files[this.tiles_index];
     this.map_file = FDAT.files[this.map_index];
+    this.texture_file = FDAT.files[this.texture_index];
+
+    //var files = this.texture_file.extractRTIM();
+    //var counter = 0;
+    //files.forEach(rtim => rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim"));
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;

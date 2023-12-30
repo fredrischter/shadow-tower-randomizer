@@ -10,7 +10,8 @@
     "pack": "node pack.js",
     "randomize": "node randomize.js",
     "change": "node change.js",
-    "mod": "node mod.js"
+    "mod": "node mod.js",
+    "map_texture_extract": "node map_texture_extract.js"
   },
   "author": "",
   "license": "ISC",

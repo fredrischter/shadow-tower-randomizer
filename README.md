@@ -85,3 +85,6 @@ Run, verify updated csv files.
 
 toNotGenerateImages Doesn't generate map images, that makes it much quicker to run.
 
+# How to convert a map part 7th file to TIM file
+
+npm run map_texture_extract ".\generated\randomized-medium\extracted\ST\COM\FDAT.T_PARTS\47 281000-2c0800.T"
