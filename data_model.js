@@ -1308,7 +1308,13 @@
     }
 
     isEventHandler() {
-      return this.eventHandlerIdentifier1.get() == 1 && this.eventHandlerIdentifier2.get() == 0xff;
+      return 
+        (this.eventHandlerIdentifier1.get() == 1 && this.eventHandlerIdentifier2.get() == 0xff) ||
+        (this.eventHandlerIdentifier1.get() == 0 && this.eventHandlerIdentifier2.get() == 0xff) ||
+        (this.eventHandlerIdentifier1.get() == 1 && this.eventHandlerIdentifier2.get() == 0xfb) ||
+        (this.eventHandlerIdentifier1.get() == 0 && this.eventHandlerIdentifier2.get() == 0x1) ||
+        (this.eventHandlerIdentifier1.get() == 0 && this.eventHandlerIdentifier2.get() == 0x2) ||
+        (this.eventHandlerIdentifier1.get() == 0 && this.eventHandlerIdentifier2.get() == 0x3);
     }
 
     getType() {

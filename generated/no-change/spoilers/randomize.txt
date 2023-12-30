@@ -1153,9 +1153,9 @@ idx  in_file offset type
 12   5c10    2f5c10 totem       save                           tile(  42,  40,  4d)    42  40  4d   0   0   0   0   c   0   c   0   0   0   0  92   0   0   0   0   0   0   0   0   0
 13   5c28    2f5c28 exit-door                                  tile(  40,  40,  3b) Corridor      -> human_world_solitary_region        pos(  7  ,0  ,7),unknown(  0  ,0),destMapIndex(  4),rot(  0),fineY(  0)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   7   0   d   0   0   4   0   0
 14   5c40    2f5c40 handler     metal door                     tile(  44,  40,  4b)    44  40  4b   0  39   0   0   4   0   0   0   0   0  fa  53   0  14  ff  53   0  9b   0   1  ff
-15   5c58    2f5c58 unknown                                    tile(  41,  40,  4b)    41  40  4b   0  3a   0   0   4   0   0   0   0   0   0  47   0  20  fc  47   0  98   0   1  ff
-16   5c70    2f5c70 unknown                                    tile(  41,  40,  49)    41  40  49   0  3a   0   0   4   0   0   0   0   0   0  33   0  20  fc  33   0  99   0   1  ff
-17   5c88    2f5c88 unknown                                    tile(  3d,  40,  48)    3d  40  48   0  3a   0   0   c   0   0   0   0   0   0  3b   0  20  fc  3b   0  97   0   1  ff
+15   5c58    2f5c58 scenery     removable wall bricks          tile(  41,  40,  4b)    41  40  4b   0  3a   0   0   4   0   0   0   0   0   0  47   0  20  fc  47   0  98   0   1  ff
+16   5c70    2f5c70 scenery     removable wall bricks          tile(  41,  40,  49)    41  40  49   0  3a   0   0   4   0   0   0   0   0   0  33   0  20  fc  33   0  99   0   1  ff
+17   5c88    2f5c88 scenery     removable wall bricks          tile(  3d,  40,  48)    3d  40  48   0  3a   0   0   c   0   0   0   0   0   0  3b   0  20  fc  3b   0  97   0   1  ff
 18   5ca0    2f5ca0 scenery     skeleton parts                 tile(  43,  40,  47)    43  40  47   0  37   0   0   3   0   8   0   0   0  f8  28   0   0   0   0   0   0   0   0   0
 19   5cb8    2f5cb8 scenery     kitchen utensils               tile(  44,  40,  47)    44  40  47   0  36   0   0   0   0  f8   0   0   0   0  2b   0   0   0   0   0   0   0   0   0
 20   5cd0    2f5cd0 scenery     skeleton parts                 tile(  49,  40,  4a)    49  40  4a   0  37   0   0   0   0   8   0   0   0   0  5c   0   0   0   0   0   0   0   0   0
@@ -2396,7 +2396,7 @@ Objects
 idx  in_file offset type     
 0    41d0    d171d0 scenery     pillar                         tile(  41,  41,  49)    41  41  49   0  44   0   0   4   0   7   0   0   0   0  ca   0   0   0   0   0   0   0   0   0
 1    41e8    d171e8 scenery     pillar                         tile(  41,  41,  49)    41  41  49   0  44   0   0   c   0  f9   0   0   0   0  ca   0   0   0   0   0   0   0   0   0
-2    4200    d17200 unknown                                    tile(  43,  40,  4f)    43  40  4f   0  16   0   0   4   0   0   0   0   0   0  22   1  18   0  22   1  57   1   1  ff
+2    4200    d17200 scenery     openable false wall            tile(  43,  40,  4f)    43  40  4f   0  16   0   0   4   0   0   0   0   0   0  22   1  18   0  22   1  57   1   1  ff
 3    4218    d17218 handler     poison area secret door        tile(  46,  41,  49)    46  41  49   0   8   0   0   4   0   0   0   0   0   0  f2   0  28   0  f2   0  4d   1   1  ff
 4    4230    d17230 totem       save                           tile(  39,  41,  32)    39  41  32   0   0   0   0   4   0   4   0   0   0   0  81   0   0   0   0   0   0   0   0   0
 5    4248    d17248 handler     poison area secret door        tile(  3d,  41,  3a)    3d  41  3a   0   8   0   0   0   0   0   0   0   0   0  5c   0  28   0  5c   0  4c   1   1  ff
@@ -2407,7 +2407,7 @@ idx  in_file offset type
 11   42d8    d172d8 gate-reset                                 tile(  49,  41,  41)    49  41  41   0  fc   0   0   0  80   3   0   0   0   0   b   1  ff  ff  ff   1   1  1b   0   0
 12   42f0    d172f0 gate-reset                                 tile(  4a,  41,  49)    4a  41  49   0  fc   0   0   0   0   0   0   0  80  fc  47   1  ff  ff  ff   1   1  1b   0   0
 13   4308    d17308 exit-door                                  tile(  4a,  41,  48) Poison        -> earth_world_stone_cavern           pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  0),fineY(  0)   4a  41  48   0  fc   0   0   0   0   0   0   0  80  fc  48   1   0   0   1   0   7  1c   0   0
-14   4320    d17320 unknown                                    tile(  44,  41,  37)    44  41  37   0  16   0   0   4   0   0   0   0   0   0  23   0  18   0  23   0  76   1   1  ff
+14   4320    d17320 scenery     openable false wall            tile(  44,  41,  37)    44  41  37   0  16   0   0   4   0   0   0   0   0   0  23   0  18   0  23   0  76   1   1  ff
 15   4338    d17338 scenery     wide shadow                    tile(  49,  41,  3d)    49  41  3d   0  a7   0   0   8   0  fc   0   0   0  fc  2f   1  14  ff   0   0  ff  ff   0  ff
 16   4350    d17350 handler     sword eater statue             tile(  45,  41,  41)    45  41  41   0   7   0   0   0   0   0   0   0   0   c  a4   0  14  f8   0   0  ff  ff   0  ff
 17   4368    d17368 exit-door                                  tile(  38,  41,  2f) Entrance      -> shadow_tower_part1c                pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  0),fineY( -8)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   4   9  ff   7   0   0   0  f8
@@ -3000,7 +3000,7 @@ idx  in_file offset type
 6    5b80    7f8b80 unknown                                    tile(  44,  40,  38)    44  40  38   0  60   0   0   0  58   2  40  f1   0  f8  3d   0  64  fe   0   0  ff  ff   0  ff
 7    5b98    7f8b98 unknown                                    tile(  44,  40,  38)    44  40  38   0  60   0   0   0   0   0  40  f1  58  fa  3d   0  60  fe   0   0  ff  ff   0  ff
 8    5bb0    7f8bb0 unknown                                    tile(  44,  40,  38)    44  40  38   0  60   0   0   0   0   0  40  f1  a8  f5  3e   0  5c  fe   0   0  ff  ff   0  ff
-9    5bc8    7f8bc8 unknown                                    tile(  44,  40,  38)    44  40  38   0  61   0   0   0   0   0  80  ee   0  f8  3d   0  64  fe   0   0  ff  ff   0  ff
+9    5bc8    7f8bc8 scenery     openable false wall            tile(  44,  40,  38)    44  40  38   0  61   0   0   0   0   0  80  ee   0  f8  3d   0  64  fe   0   0  ff  ff   0  ff
 10   5be0    7f8be0 gate-reset                                 tile(  38,  40,  35)    38  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b7   0  ff  ff  ff   1   1   f   0   0
 11   5bf8    7f8bf8 exit-door                                  tile(  37,  40,  35) Exit          -> shadow_tower_part2a                pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   1   4   a   0  28   1  f8
 12   5c10    7f8c10 scenery     other readable sign plate      tile(  45,  40,  38)    45  40  38   0  9c   0   0   c  80   3   0   0   0  f8  3f   0   0   0   0   0   0   0   0   0
@@ -3008,7 +3008,7 @@ idx  in_file offset type
 14   5c40    7f8c40 scenery     chest                          tile(  35,  42,  3e)    35  42  3e   0   a   0   0   4   0   6   0   0   0  f8  c4   1  14  fc   0   0   8  ff   0  ff
 15   5c58    7f8c58 scenery     save                           tile(  3d,  40,  36)    3d  40  36   0   0   0   0   c   0  fc   0   0   0   0  e4   1   0   0   0   0   0   0   0   0
 16   5c70    7f8c70 exit-totem  teleport                       tile(  37,  40,  36) Totem         -> human_world_forgotten_region       pos(  6  ,1  ,6),unknown(  4  ,0),destMapIndex(  0),rot(  0),fineY(  1)   37  40  36   0   3   0   0   4   0   4   0   0   0   0  d9   1   6   1  ff   4   0   0   0   1
-17   5c88    7f8c88 unknown                                    tile(  3c,  42,  3c)    3c  42  3c   0  fd   0   0   0   0   0   0   0   0   0  ad   1   f   5   0  f8   0   0   0   1
+17   5c88    7f8c88 scenery     shaking wall portal            tile(  3c,  42,  3c)    3c  42  3c   0  fd   0   0   0   0   0   0   0   0   0  ad   1   f   5   0  f8   0   0   0   1
 18   5ca0    7f8ca0 scenery                                    tile(  3a,  40,  3b)    3a  40  3b   0  d7   0   0   0  88  fe   0   0  78   1  4e   0   0   0   0   0   0   0   0   0
 19   5cb8    7f8cb8 exit-totem  teleport                       tile(  3e,  3f,  36) Jump in       -> earth_world_hostile_rock_cavern    pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  21  ff   0   b   0   0   0   3
 20   5cd0    7f8cd0 gate-0                                     tile(  3b,  40,  34)    3b  40  34   0  fb   0   0   0   0  f8   0   0   0  fe  5c   0  80  80   0  7f  80   0  3c   0
@@ -3957,7 +3957,7 @@ Objects
 idx  in_file offset type     
 0    5af0    5352f0 unknown                                    tile(  44,  40,  40)    44  40  40   0  5a   0   0   0   0   0   0   0   0   0  e3   0  40  fe   0   0  ff  ff   0  ff
 1    5b08    535308 totem       save                           tile(  3c,  40,  4a)    3c  40  4a   0   0   0   0   0   0   0   0   0   0   0  6f   1   0   0   0   0   0   0   0   0
-2    5b20    535320 unknown                                    tile(  44,  40,  46)    44  40  46   0  5b   0   0   c   0   1   0   0   0   0  14   1  18   0  14   1  96   1   1  fc
+2    5b20    535320 scenery     locked wall passage            tile(  44,  40,  46)    44  40  46   0  5b   0   0   c   0   1   0   0   0   0  14   1  18   0  14   1  96   1   1  fc
 3    5b38    535338 scenery     tiny shadow                    tile(  48,  40,  3f)    48  40  3f   0  5f   0   0   0   0  fc   0   0   0   4  39   1   0   0   0   0   0   0   0   0
 4    5b50    535350 scenery     some wall                      tile(  4a,  43,  3e)    4a  43  3e   0  5c   0   0   c   0  f9   0   0   0   0  53   1  18   0  53   1  94   1   1  ff
 5    5b68    535368 scenery     some wall                      tile(  48,  43,  3c)    48  43  3c   0  5c   0   0   8   0   0   0   0   0   7  5a   1  18   0  5a   1  95   1   1  ff
@@ -4324,7 +4324,7 @@ idx  in_file offset type
 61   60a8    a448a8 scenery     some ground plates             tile(  33,  41,  4e)    33  41  4e   0  97   0   0   0   0   0   0  f4   0   0  9b   0   0   0   0   0   0   0   0   0
 62   60c0    a448c0 scenery     some ground plates             tile(  33,  41,  4f)    33  41  4f   0  97   0   0   0   0   0   0  f4   0   0  9c   0   0   0   0   0   0   0   0   0
 63   60d8    a448d8 totem       save                           tile(  3b,  40,  50)    3b  40  50   0   0   0   0   c   0   4   0   0   0   0  b4   0   0   0   0   0   0   0   0   0
-64   60f0    a448f0 gate-reset                                 tile(  33,  40,  4b)    33  40  4b   0  fd   0   0   0   0   0   0  10  24  fa  98   0  15  f6  ff   1   0  f8   0   0
+64   60f0    a448f0 gate-reset  shaking wall portal            tile(  33,  40,  4b)    33  40  4b   0  fd   0   0   0   0   0   0  10  24  fa  98   0  15  f6  ff   1   0  f8   0   0
 
 Collectables
 idx  name                          offset_in_file    offset                                                                   type     ------ tile         -----  pos  x       y       z     rot -------------------  tileId
@@ -4594,53 +4594,53 @@ idx  in_file offset type
 3    5b38    ee2338 handler     diagonal lever for water labyrinth  tile(  3a,  40,  47)    3a  40  47   0  8f   0   0   0   0   6   0  fd   0  fe  80   0  14  fc  ff  32  ff  ff   0  ff
 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  3),fineY(  0)   37  40  31   0  fc   0   0   0   0   0   0   0   0   0  ec   0   0   0   9   0   0  15   3   0
 5    5b68    ee2368 gate-reset                                 tile(  37,  40,  32)    37  40  32   0  fc   0   0   0   0   0   0   0   0   0  a8   0  ff  ff  ff   1   1  20   0   0
-6    5b80    ee2380 unknown                                    tile(  40,  40,  3c)    40  40  3c   0  90   0   0   0   0   0   0   0   0   0  2b   0  14  fb   0   0  ff  ff   0  ff
-7    5b98    ee2398 unknown                                    tile(  40,  40,  3b)    40  40  3b   0  90   0   0   0   0   0   0   0   0   0  2c   0  14  fb   0   0  ff  ff   0  ff
+6    5b80    ee2380 scenery     acid                           tile(  40,  40,  3c)    40  40  3c   0  90   0   0   0   0   0   0   0   0   0  2b   0  14  fb   0   0  ff  ff   0  ff
+7    5b98    ee2398 scenery     acid                           tile(  40,  40,  3b)    40  40  3b   0  90   0   0   0   0   0   0   0   0   0  2c   0  14  fb   0   0  ff  ff   0  ff
 8    5bb0    ee23b0 gate-reset                                 tile(  48,  40,  35)    48  40  35   0  fc   0   0   0   0   0   0   0   0   0  ea   0  ff  ff  ff   1   1  20   0   0
 9    5bc8    ee23c8 exit-door                                  tile(  49,  40,  35) Exit          -> water_world_white_rain_area        pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 37),rot(  1),fineY(  0)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0  fd   0   0   0   0  25   1   0
-10   5be0    ee23e0 unknown                                    tile(  3c,  40,  46)    3c  40  46   0  90   0   0   0   0   5   0   0  80   1  88   0  30  fb   0   0  ff  ff   0  ff
-11   5bf8    ee23f8 unknown                                    tile(  3c,  40,  45)    3c  40  45   0  90   0   0   0   0   8   0   0   0   2  84   0  30  fb   0   0  ff  ff   0  ff
-12   5c10    ee2410 unknown                                    tile(  3e,  40,  46)    3e  40  46   0  90   0   0   0   0   0   0   0   0   0  d7   0  30  fb   0   0  ff  ff   0  ff
-13   5c28    ee2428 unknown                                    tile(  41,  40,  46)    41  40  46   0  90   0   0   0   0   0   0   0   0  fe  7c   0  30  fb   0   0  ff  ff   0  ff
-14   5c40    ee2440 unknown                                    tile(  43,  40,  44)    43  40  44   0  90   0   0   0   0   0   0   0   0   0  7a   0  30  fb   0   0  ff  ff   0  ff
-15   5c58    ee2458 unknown                                    tile(  44,  40,  43)    44  40  43   0  90   0   0   0   0   0   0   0   0   0  79   0  30  fb   0   0  ff  ff   0  ff
-16   5c70    ee2470 unknown                                    tile(  46,  40,  40)    46  40  40   0  90   0   0   0   0   0   0   0   0   0  76   0  30  fb   0   0  ff  ff   0  ff
-17   5c88    ee2488 unknown                                    tile(  46,  40,  3f)    46  40  3f   0  90   0   0   0   0  fe   0   0   0   0  75   0  30  fb   0   0  ff  ff   0  ff
-18   5ca0    ee24a0 unknown                                    tile(  46,  40,  3d)    46  40  3d   0  90   0   0   0   0  fd   0   0   0   0  73   0  30  fb   0   0  ff  ff   0  ff
-19   5cb8    ee24b8 unknown                                    tile(  47,  40,  3b)    47  40  3b   0  90   0   0   0   0  fc   0   0   0  fe  65   0  30  fb   0   0  ff  ff   0  ff
-20   5cd0    ee24d0 unknown                                    tile(  47,  40,  3b)    47  40  3b   0  90   0   0   0   0   1   0   0   0   2  65   0  30  fb   0   0  ff  ff   0  ff
-21   5ce8    ee24e8 unknown                                    tile(  46,  40,  3a)    46  40  3a   0  90   0   0   0   0   4   0   0   0  fc  63   0  30  fb   0   0  ff  ff   0  ff
-22   5d00    ee2500 unknown                                    tile(  45,  40,  39)    45  40  39   0  90   0   0   0   0  fc   0   0   0   2  67   0  30  fb   0   0  ff  ff   0  ff
-23   5d18    ee2518 unknown                                    tile(  47,  40,  39)    47  40  39   0  90   0   0   0   0   0   0   0   0   0  66   0  30  fb   0   0  ff  ff   0  ff
-24   5d30    ee2530 unknown                                    tile(  43,  40,  3a)    43  40  3a   0  90   0   0   0   0   2   0   0   0  ff  6a   0  30  fb   0   0  ff  ff   0  ff
-25   5d48    ee2548 unknown                                    tile(  43,  40,  37)    43  40  37   0  90   0   0   0   0  fe   0   0   0   0  6c   0  30  fb   0   0  ff  ff   0  ff
-26   5d60    ee2560 unknown                                    tile(  42,  40,  36)    42  40  36   0  90   0   0   0   0  fe   0   0   0   0  42   0  30  fb   0   0  ff  ff   0  ff
-27   5d78    ee2578 unknown                                    tile(  41,  40,  35)    41  40  35   0  90   0   0   0   0  f8   0   0   0  ff  38   0  30  fb   0   0  ff  ff   0  ff
-28   5d90    ee2590 unknown                                    tile(  40,  40,  37)    40  40  37   0  90   0   0   0   0  fe   0   0   0   4  36   0  30  fb   0   0  ff  ff   0  ff
-29   5da8    ee25a8 unknown                                    tile(  3f,  40,  36)    3f  40  36   0  90   0   0   0   0   4   0   0   0   2  46   0  30  fb   0   0  ff  ff   0  ff
-30   5dc0    ee25c0 unknown                                    tile(  3e,  40,  37)    3e  40  37   0  90   0   0   0   0   6   0   0   0  fe  3f   0  30  fb   0   0  ff  ff   0  ff
-31   5dd8    ee25d8 unknown                                    tile(  3f,  40,  3c)    3f  40  3c   0  90   0   0   0   0   6   0   0   0   2  26   0  30  fb   0   0  ff  ff   0  ff
-32   5df0    ee25f0 unknown                                    tile(  36,  40,  39)    36  40  39   0  90   0   0   0   0  fc   0   0   0  fc  9c   0  30  fb   0   0  ff  ff   0  ff
-33   5e08    ee2608 unknown                                    tile(  37,  40,  39)    37  40  39   0  90   0   0   0   0  ff   0   0   0   8  90   0  30  fb   0   0  ff  ff   0  ff
-34   5e20    ee2620 unknown                                    tile(  38,  40,  38)    38  40  38   0  90   0   0   0   0  fe   0   0   0  fe  a3   0  30  fb   0   0  ff  ff   0  ff
-35   5e38    ee2638 unknown                                    tile(  37,  40,  37)    37  40  37   0  90   0   0   0   0   2   0   0   0  fa  a4   0  30  fb   0   0  ff  ff   0  ff
-36   5e50    ee2650 unknown                                    tile(  36,  40,  3f)    36  40  3f   0  90   0   0   0   0  fc   0   0   0   2  b9   0  30  fb   0   0  ff  ff   0  ff
-37   5e68    ee2668 unknown                                    tile(  38,  40,  40)    38  40  40   0  90   0   0   0   0  fa   0   0   0   0  ba   0  30  fb   0   0  ff  ff   0  ff
-38   5e80    ee2680 unknown                                    tile(  38,  40,  3f)    38  40  3f   0  90   0   0   0   0   2   0   0   0   1  bd   0  30  fb   0   0  ff  ff   0  ff
-39   5e98    ee2698 unknown                                    tile(  37,  40,  3e)    37  40  3e   0  90   0   0   0   0   0   0   0   0   0  be   0  30  fb   0   0  ff  ff   0  ff
-40   5eb0    ee26b0 unknown                                    tile(  3a,  40,  40)    3a  40  40   0  90   0   0   0   0   0   0   0   0   0  c0   0  30  fb   0   0  ff  ff   0  ff
-41   5ec8    ee26c8 unknown                                    tile(  3a,  40,  41)    3a  40  41   0  90   0   0   0   0  fe   0   0   0   0  c5   0  30  fb   0   0  ff  ff   0  ff
-42   5ee0    ee26e0 unknown                                    tile(  39,  40,  42)    39  40  42   0  90   0   0   0   0   0   0   0   0   0  c2   0  30  fb   0   0  ff  ff   0  ff
-43   5ef8    ee26f8 unknown                                    tile(  3a,  40,  43)    3a  40  43   0  90   0   0   0   0   0   0   0   0  fe  c4   0  30  fb   0   0  ff  ff   0  ff
-44   5f10    ee2710 totem                                      tile(  3e,  40,  43)    3e  40  43   0  90   0   0   0   0  fa   0   0  80   1  ca   0  30  fb   0   0  ff  ff   0  ff
-45   5f28    ee2728 totem                                      tile(  40,  40,  42)    40  40  42   0  90   0   0   0   0  f8   0   0   0   4  cc   0  30  fb   0   0  ff  ff   0  ff
-46   5f40    ee2740 unknown                                    tile(  37,  40,  42)    37  40  42   0  90   0   0   0   0  fe   0   0   0   1  d2   0  30  fb   0   0  ff  ff   0  ff
-47   5f58    ee2758 unknown                                    tile(  37,  40,  44)    37  40  44   0  90   0   0   0   0   2   0   0   0   0  d4   0  30  fb   0   0  ff  ff   0  ff
-48   5f70    ee2770 unknown                                    tile(  38,  40,  45)    38  40  45   0  90   0   0   0   0   0   0   0   0   0  d5   0  30  fb   0   0  ff  ff   0  ff
-49   5f88    ee2788 unknown                                    tile(  39,  40,  46)    39  40  46   0  90   0   0   0   0  fe   0   0   0  fe  d6   0  30  fb   0   0  ff  ff   0  ff
-50   5fa0    ee27a0 unknown                                    tile(  3c,  40,  49)    3c  40  49   0  90   0   0   0   0   0   0   0   0  ff  d9   0  30  fb   0   0  ff  ff   0  ff
-51   5fb8    ee27b8 unknown                                    tile(  3d,  40,  4a)    3d  40  4a   0  90   0   0   0   0   0   0   0   0   6  db   0  30  fb   0   0  ff  ff   0  ff
-52   5fd0    ee27d0 unknown                                    tile(  3c,  40,  4b)    3c  40  4b   0  90   0   0   0   0   6   0   0   0  fc  de   0  30  fb   0   0  ff  ff   0  ff
+10   5be0    ee23e0 scenery     acid                           tile(  3c,  40,  46)    3c  40  46   0  90   0   0   0   0   5   0   0  80   1  88   0  30  fb   0   0  ff  ff   0  ff
+11   5bf8    ee23f8 scenery     acid                           tile(  3c,  40,  45)    3c  40  45   0  90   0   0   0   0   8   0   0   0   2  84   0  30  fb   0   0  ff  ff   0  ff
+12   5c10    ee2410 scenery     acid                           tile(  3e,  40,  46)    3e  40  46   0  90   0   0   0   0   0   0   0   0   0  d7   0  30  fb   0   0  ff  ff   0  ff
+13   5c28    ee2428 scenery     acid                           tile(  41,  40,  46)    41  40  46   0  90   0   0   0   0   0   0   0   0  fe  7c   0  30  fb   0   0  ff  ff   0  ff
+14   5c40    ee2440 scenery     acid                           tile(  43,  40,  44)    43  40  44   0  90   0   0   0   0   0   0   0   0   0  7a   0  30  fb   0   0  ff  ff   0  ff
+15   5c58    ee2458 scenery     acid                           tile(  44,  40,  43)    44  40  43   0  90   0   0   0   0   0   0   0   0   0  79   0  30  fb   0   0  ff  ff   0  ff
+16   5c70    ee2470 scenery     acid                           tile(  46,  40,  40)    46  40  40   0  90   0   0   0   0   0   0   0   0   0  76   0  30  fb   0   0  ff  ff   0  ff
+17   5c88    ee2488 scenery     acid                           tile(  46,  40,  3f)    46  40  3f   0  90   0   0   0   0  fe   0   0   0   0  75   0  30  fb   0   0  ff  ff   0  ff
+18   5ca0    ee24a0 scenery     acid                           tile(  46,  40,  3d)    46  40  3d   0  90   0   0   0   0  fd   0   0   0   0  73   0  30  fb   0   0  ff  ff   0  ff
+19   5cb8    ee24b8 scenery     acid                           tile(  47,  40,  3b)    47  40  3b   0  90   0   0   0   0  fc   0   0   0  fe  65   0  30  fb   0   0  ff  ff   0  ff
+20   5cd0    ee24d0 scenery     acid                           tile(  47,  40,  3b)    47  40  3b   0  90   0   0   0   0   1   0   0   0   2  65   0  30  fb   0   0  ff  ff   0  ff
+21   5ce8    ee24e8 scenery     acid                           tile(  46,  40,  3a)    46  40  3a   0  90   0   0   0   0   4   0   0   0  fc  63   0  30  fb   0   0  ff  ff   0  ff
+22   5d00    ee2500 scenery     acid                           tile(  45,  40,  39)    45  40  39   0  90   0   0   0   0  fc   0   0   0   2  67   0  30  fb   0   0  ff  ff   0  ff
+23   5d18    ee2518 scenery     acid                           tile(  47,  40,  39)    47  40  39   0  90   0   0   0   0   0   0   0   0   0  66   0  30  fb   0   0  ff  ff   0  ff
+24   5d30    ee2530 scenery     acid                           tile(  43,  40,  3a)    43  40  3a   0  90   0   0   0   0   2   0   0   0  ff  6a   0  30  fb   0   0  ff  ff   0  ff
+25   5d48    ee2548 scenery     acid                           tile(  43,  40,  37)    43  40  37   0  90   0   0   0   0  fe   0   0   0   0  6c   0  30  fb   0   0  ff  ff   0  ff
+26   5d60    ee2560 scenery     acid                           tile(  42,  40,  36)    42  40  36   0  90   0   0   0   0  fe   0   0   0   0  42   0  30  fb   0   0  ff  ff   0  ff
+27   5d78    ee2578 scenery     acid                           tile(  41,  40,  35)    41  40  35   0  90   0   0   0   0  f8   0   0   0  ff  38   0  30  fb   0   0  ff  ff   0  ff
+28   5d90    ee2590 scenery     acid                           tile(  40,  40,  37)    40  40  37   0  90   0   0   0   0  fe   0   0   0   4  36   0  30  fb   0   0  ff  ff   0  ff
+29   5da8    ee25a8 scenery     acid                           tile(  3f,  40,  36)    3f  40  36   0  90   0   0   0   0   4   0   0   0   2  46   0  30  fb   0   0  ff  ff   0  ff
+30   5dc0    ee25c0 scenery     acid                           tile(  3e,  40,  37)    3e  40  37   0  90   0   0   0   0   6   0   0   0  fe  3f   0  30  fb   0   0  ff  ff   0  ff
+31   5dd8    ee25d8 scenery     acid                           tile(  3f,  40,  3c)    3f  40  3c   0  90   0   0   0   0   6   0   0   0   2  26   0  30  fb   0   0  ff  ff   0  ff
+32   5df0    ee25f0 scenery     acid                           tile(  36,  40,  39)    36  40  39   0  90   0   0   0   0  fc   0   0   0  fc  9c   0  30  fb   0   0  ff  ff   0  ff
+33   5e08    ee2608 scenery     acid                           tile(  37,  40,  39)    37  40  39   0  90   0   0   0   0  ff   0   0   0   8  90   0  30  fb   0   0  ff  ff   0  ff
+34   5e20    ee2620 scenery     acid                           tile(  38,  40,  38)    38  40  38   0  90   0   0   0   0  fe   0   0   0  fe  a3   0  30  fb   0   0  ff  ff   0  ff
+35   5e38    ee2638 scenery     acid                           tile(  37,  40,  37)    37  40  37   0  90   0   0   0   0   2   0   0   0  fa  a4   0  30  fb   0   0  ff  ff   0  ff
+36   5e50    ee2650 scenery     acid                           tile(  36,  40,  3f)    36  40  3f   0  90   0   0   0   0  fc   0   0   0   2  b9   0  30  fb   0   0  ff  ff   0  ff
+37   5e68    ee2668 scenery     acid                           tile(  38,  40,  40)    38  40  40   0  90   0   0   0   0  fa   0   0   0   0  ba   0  30  fb   0   0  ff  ff   0  ff
+38   5e80    ee2680 scenery     acid                           tile(  38,  40,  3f)    38  40  3f   0  90   0   0   0   0   2   0   0   0   1  bd   0  30  fb   0   0  ff  ff   0  ff
+39   5e98    ee2698 scenery     acid                           tile(  37,  40,  3e)    37  40  3e   0  90   0   0   0   0   0   0   0   0   0  be   0  30  fb   0   0  ff  ff   0  ff
+40   5eb0    ee26b0 scenery     acid                           tile(  3a,  40,  40)    3a  40  40   0  90   0   0   0   0   0   0   0   0   0  c0   0  30  fb   0   0  ff  ff   0  ff
+41   5ec8    ee26c8 scenery     acid                           tile(  3a,  40,  41)    3a  40  41   0  90   0   0   0   0  fe   0   0   0   0  c5   0  30  fb   0   0  ff  ff   0  ff
+42   5ee0    ee26e0 scenery     acid                           tile(  39,  40,  42)    39  40  42   0  90   0   0   0   0   0   0   0   0   0  c2   0  30  fb   0   0  ff  ff   0  ff
+43   5ef8    ee26f8 scenery     acid                           tile(  3a,  40,  43)    3a  40  43   0  90   0   0   0   0   0   0   0   0  fe  c4   0  30  fb   0   0  ff  ff   0  ff
+44   5f10    ee2710 totem       acid                           tile(  3e,  40,  43)    3e  40  43   0  90   0   0   0   0  fa   0   0  80   1  ca   0  30  fb   0   0  ff  ff   0  ff
+45   5f28    ee2728 totem       acid                           tile(  40,  40,  42)    40  40  42   0  90   0   0   0   0  f8   0   0   0   4  cc   0  30  fb   0   0  ff  ff   0  ff
+46   5f40    ee2740 scenery     acid                           tile(  37,  40,  42)    37  40  42   0  90   0   0   0   0  fe   0   0   0   1  d2   0  30  fb   0   0  ff  ff   0  ff
+47   5f58    ee2758 scenery     acid                           tile(  37,  40,  44)    37  40  44   0  90   0   0   0   0   2   0   0   0   0  d4   0  30  fb   0   0  ff  ff   0  ff
+48   5f70    ee2770 scenery     acid                           tile(  38,  40,  45)    38  40  45   0  90   0   0   0   0   0   0   0   0   0  d5   0  30  fb   0   0  ff  ff   0  ff
+49   5f88    ee2788 scenery     acid                           tile(  39,  40,  46)    39  40  46   0  90   0   0   0   0  fe   0   0   0  fe  d6   0  30  fb   0   0  ff  ff   0  ff
+50   5fa0    ee27a0 scenery     acid                           tile(  3c,  40,  49)    3c  40  49   0  90   0   0   0   0   0   0   0   0  ff  d9   0  30  fb   0   0  ff  ff   0  ff
+51   5fb8    ee27b8 scenery     acid                           tile(  3d,  40,  4a)    3d  40  4a   0  90   0   0   0   0   0   0   0   0   6  db   0  30  fb   0   0  ff  ff   0  ff
+52   5fd0    ee27d0 scenery     acid                           tile(  3c,  40,  4b)    3c  40  4b   0  90   0   0   0   0   6   0   0   0  fc  de   0  30  fb   0   0  ff  ff   0  ff
 53   5fe8    ee27e8 totem       hp shop                        tile(  40,  40,  43)    40  40  43   0   2   0   0   c   0  fc   0   0   0   0  ce   0  2f   0   0   0   0  fe  e8   0
 60   6090    ee2890 gate-0                                     tile(  37,  40,  38)    37  40  38   0  fb   0   0   0   0   0   0   0   0   0  9e   0  80  80   0  7f  80   0  3c   0
 61   60a8    ee28a8 gate-1                                     tile(  40,  40,  3c)    40  40  3c   0  fb   0   0   0   0   0   0   0   0  fe  2b   0  80  80   1  7f  80   0  3c   0
@@ -5533,14 +5533,14 @@ idx  in_file offset type
 40   5eb0    9b36b0 scenery     flame throwing hole            tile(  40,  40,  45)    40  40  45   0  93   0   0   0   0  fa   0  f8   0   4  55   0   0   0   0   0   0   0   0   0
 41   5ec8    9b36c8 scenery     ?? b. cavern stuff ??          tile(  47,  3f,  46)    47  3f  46   0  2a   0   0   c   0   0   0   0  80   3  d7   0   0   0   0   0   0   0   0   0
 42   5ee0    9b36e0 scenery     ?? b. cavern stuff ??          tile(  3a,  3f,  38)    3a  3f  38   0  2a   0   0   8  80   3   0   4   0   0  8d   0   0   0   0   0   0   0   0   0
-43   5ef8    9b36f8 unknown                                    tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0   5  80  fc   0   0  8d   0  5c  fe   0   0  ff  ff   0  ff
-44   5f10    9b3710 unknown                                    tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0  fb  80  fc   0   0  8d   0  68  fe   0   0  ff  ff   0  ff
-45   5f28    9b3728 unknown                                    tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0   5  e0  fe   0   0  8d   0  64  fe   0   0  ff  ff   0  ff
-46   5f40    9b3740 unknown                                    tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0  fb  e0  fe   0   0  8d   0  60  fe   0   0  ff  ff   0  ff
-47   5f58    9b3758 unknown                                    tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0   0  fb   0  fb  d7   0  5c  fe   0   0  ff  ff   0  ff
-48   5f70    9b3770 unknown                                    tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0   0  fb   0   5  d7   0  68  fe   0   0  ff  ff   0  ff
-49   5f88    9b3788 unknown                                    tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0  80  f8   0  fb  d7   0  64  fe   0   0  ff  ff   0  ff
-50   5fa0    9b37a0 unknown                                    tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0  80  f8   0   5  d7   0  60  fe   0   0  ff  ff   0  ff
+43   5ef8    9b36f8 scenery     burning cave handle            tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0   5  80  fc   0   0  8d   0  5c  fe   0   0  ff  ff   0  ff
+44   5f10    9b3710 scenery     burning cave handle            tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0  fb  80  fc   0   0  8d   0  68  fe   0   0  ff  ff   0  ff
+45   5f28    9b3728 scenery     burning cave handle            tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0   5  e0  fe   0   0  8d   0  64  fe   0   0  ff  ff   0  ff
+46   5f40    9b3740 scenery     burning cave handle            tile(  3a,  3f,  38)    3a  3f  38   0  9b   0   0   0   0  fb  e0  fe   0   0  8d   0  60  fe   0   0  ff  ff   0  ff
+47   5f58    9b3758 scenery     burning cave handle            tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0   0  fb   0  fb  d7   0  5c  fe   0   0  ff  ff   0  ff
+48   5f70    9b3770 scenery     burning cave handle            tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0   0  fb   0   5  d7   0  68  fe   0   0  ff  ff   0  ff
+49   5f88    9b3788 scenery     burning cave handle            tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0  80  f8   0  fb  d7   0  64  fe   0   0  ff  ff   0  ff
+50   5fa0    9b37a0 scenery     burning cave handle            tile(  47,  3f,  46)    47  3f  46   0  9b   0   0   0   0   0  80  f8   0   5  d7   0  60  fe   0   0  ff  ff   0  ff
 51   5fb8    9b37b8 scenery                                    tile(  40,  40,  45)    40  40  45   0  94   0   0   0   0  fa   0  f8   0   4  55   0   0   0   0   0   0   0   0   0
 52   5fd0    9b37d0 scenery     flame throwing hole            tile(  40,  40,  45)    40  40  45   0  93   0   0   0   0   4   0  f8   0   0  55   0   0   0   0   0   0   0   0   0
 53   5fe8    9b37e8 scenery                                    tile(  40,  40,  45)    40  40  45   0  94   0   0   0   0   4   0  f8   0   0  55   0   0   0   0   0   0   0   0   0
@@ -5583,8 +5583,8 @@ idx  in_file offset type
 90   6360    9b3b60 scenery     flame throwing hole            tile(  39,  3f,  36)    39  3f  36   0  93   0   0   0   0   8   0   4   0   8  84   0   0   0   0   0   0   0   0   0
 91   6378    9b3b78 scenery                                    tile(  39,  3f,  36)    39  3f  36   0  94   0   0   0   0   8   0   4   0   8  84   0   0   0   0   0   0   0   0   0
 92   6390    9b3b90 totem       hp shop                        tile(  3a,  3f,  36)    3a  3f  36   0   2   0   0   8   0   0   0   4   0   4  86   0  2f   0   0   0   0  fe  e8   0
-93   63a8    9b3ba8 exit-portal                                tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
-94   63c0    9b3bc0 exit-portal                                tile(  47,  3f,  46) Platform      -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
+93   63a8    9b3ba8 exit-portal shaking wall portal            tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
+94   63c0    9b3bc0 exit-portal shaking wall portal            tile(  47,  3f,  46) Platform      -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
 95   63d8    9b3bd8 totem       hp shop                        tile(  46,  40,  37)    46  40  37   0   2   0   0   8   0   0   0   0   0   4  33   0  2e   0   0   0   0  fe  e8   0
 99   6438    9b3c38 unknown                                    tile(  35,  3f,  38)    35  3f  38   0  fc   0   0   0   0   0   0   4   0   0  8d   0  21   4  fd   0   0  12   2   0
 100  6450    9b3c50 gate-reset                                 tile(  35,  3f,  39)    35  3f  39   0  fc   0   0   0   0   0   0   4   0   0   0   0  ff  ff  ff   1   1  14   0   0
@@ -5874,19 +5874,19 @@ idx  in_file offset type
 12   5c10    b45410 scenery     big wall something             tile(  48,  40,  37)    48  40  37   0  66   0   0   c   0   0   0   0   0   0  28   1  14   0  28   1  cf   1   1  ff
 13   5c28    b45428 scenery     ?? b. cavern stuff ??          tile(  4c,  40,  42)    4c  40  42   0  2a   0   0   4  dc   5   0  f8  80  fc  5f   1   0   0   0   0   0   0   0   0
 14   5c40    b45440 scenery     ?? b. cavern stuff ??          tile(  4c,  40,  42)    4c  40  42   0  2a   0   0   c  dc   5   0  f8  80   3  5f   1   0   0   0   0   0   0   0   0
-15   5c58    b45458 unknown                                    tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5  80  f0   0   5  5f   1  5f  fe  ff  ff  ff  ff   0  ff
-16   5c70    b45470 unknown                                    tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5  80  f0   0  fb  5f   1  5e  fe  ff  ff  ff  ff   0  ff
-17   5c88    b45488 unknown                                    tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5   0  f3   0   5  5f   1  5c  fe  ff  ff  ff  ff   0  ff
-18   5ca0    b454a0 unknown                                    tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5   0  f3   0  fb  5f   1  5d  fe  ff  ff  ff  ff   0  ff
-19   5cb8    b454b8 exit-portal                                tile(  4c,  40,  42) Platform      -> fire_world_burning_cavern          pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  14   7  ff   6   8   0   0   3
+15   5c58    b45458 scenery     burning cave handle            tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5  80  f0   0   5  5f   1  5f  fe  ff  ff  ff  ff   0  ff
+16   5c70    b45470 scenery     burning cave handle            tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5  80  f0   0  fb  5f   1  5e  fe  ff  ff  ff  ff   0  ff
+17   5c88    b45488 scenery     burning cave handle            tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5   0  f3   0   5  5f   1  5c  fe  ff  ff  ff  ff   0  ff
+18   5ca0    b454a0 scenery     burning cave handle            tile(  4c,  40,  42)    4c  40  42   0  9b   0   0   0  dc   5   0  f3   0  fb  5f   1  5d  fe  ff  ff  ff  ff   0  ff
+19   5cb8    b454b8 exit-portal shaking wall portal            tile(  4c,  40,  42) Platform      -> fire_world_burning_cavern          pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  14   7  ff   6   8   0   0   3
 20   5cd0    b454d0 totem       save                           tile(  4d,  40,  35)    4d  40  35   0   0   0   0   0   0   0   0   0   0   4  a5   1   0   0   0   0   0   0   0   0
 21   5ce8    b454e8 scenery     ?? b. cavern stuff ??          tile(  40,  40,  42)    40  40  42   0  2a   0   0   0  80  fc   0  f0   0   8   2   0   0   0   0   0   0   0   0   0
 22   5d00    b45500 scenery     ?? b. cavern stuff ??          tile(  40,  40,  42)    40  40  42   0  2a   0   0   8  80   3   0  f0   0   8   2   0   0   0   0   0   0   0   0   0
-23   5d18    b45518 unknown                                    tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0  fb   0  eb   0   8   2   0  66  fe  ff  ff  ff  ff   0  ff
-24   5d30    b45530 unknown                                    tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0   5   0  eb   0   8   2   0  69  fe  ff  ff  ff  ff   0  ff
-25   5d48    b45548 unknown                                    tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0  fb  80  e8   0   8   2   0  68  fe  ff  ff  ff  ff   0  ff
-26   5d60    b45560 unknown                                    tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0   5  80  e8   0   8   2   0  64  fe  ff  ff  ff  ff   0  ff
-27   5d78    b45578 exit-portal                                tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  8),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   8   0
+23   5d18    b45518 scenery     burning cave handle            tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0  fb   0  eb   0   8   2   0  66  fe  ff  ff  ff  ff   0  ff
+24   5d30    b45530 scenery     burning cave handle            tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0   5   0  eb   0   8   2   0  69  fe  ff  ff  ff  ff   0  ff
+25   5d48    b45548 scenery     burning cave handle            tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0  fb  80  e8   0   8   2   0  68  fe  ff  ff  ff  ff   0  ff
+26   5d60    b45560 scenery     burning cave handle            tile(  40,  40,  42)    40  40  42   0  9b   0   0   0   0   5  80  e8   0   8   2   0  64  fe  ff  ff  ff  ff   0  ff
+27   5d78    b45578 exit-portal shaking wall portal            tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  8),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   8   0
 29   5da8    b455a8 totem       hp shop                        tile(  4e,  40,  34)    4e  40  34   0   2   0   0   c   0   4   0   0   0   0  a8   1  2d   0   0   0   0  fe  e8   0
 30   5dc0    b455c0 scenery     big wall something             tile(  41,  40,  37)    41  40  37   0  66   0   0   4   0   0   0   0   0   0  22   1  14   0  22   1  d0   1   1  ff
 31   5dd8    b455d8 gate-0                                     tile(  4e,  40,  42)    4e  40  42   0  fb   0   0   0   0   0   0   0   0   0  56   1  80  80   0  7f  80   0  3c   0
@@ -6162,22 +6162,22 @@ Objects
 idx  in_file offset type     
 0    5af0    92c2f0 scenery     ?? b. cavern stuff ??          tile(  41,  40,  36)    41  40  36   0  2a   0   0   0  80   4   0   8   0   0  50   1   0   0   0   0   0   0   0   0
 1    5b08    92c308 scenery     ?? b. cavern stuff ??          tile(  42,  40,  36)    42  40  36   0  2a   0   0   8  80  fb   0   8   0   0  51   1   0   0   0   0   0   0   0   0
-2    5b20    92c320 unknown                                    tile(  41,  40,  36)    41  40  36   0  9b   0   0   0   0   d   0   3   0   0  51   1  5a  fe  ff  ff  ff  ff   0  ff
-3    5b38    92c338 unknown                                    tile(  41,  40,  36)    41  40  36   0  9b   0   0   0   0   3   0   3   0   0  50   1  5d  fe  ff  ff  ff  ff   0  ff
-4    5b50    92c350 unknown                                    tile(  42,  40,  36)    42  40  36   0  9b   0   0   0   0  fd  80   0   0   0  51   1  5c  fe  ff  ff  ff  ff   0  ff
-5    5b68    92c368 unknown                                    tile(  41,  40,  36)    41  40  36   0  9b   0   0   0   0   3  80   0   0   0  50   1  5b  fe  ff  ff  ff  ff   0  ff
-6    5b80    92c380 exit-portal                                tile(  41,  40,  36) Start         -> fire_world_molten_cavern           pos( 24  ,0 ,24),unknown(  2  ,0),destMapIndex(224),rot(  0),fineY(  2)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
-7    5b98    92c398 unknown                                    tile(  42,  40,  40)    42  40  40   0  d8   0   0   c   0  f8   0   0   0   0   2   0  32  fa  ff  ff  ff  ff   0  ff
+2    5b20    92c320 scenery     burning cave handle            tile(  41,  40,  36)    41  40  36   0  9b   0   0   0   0   d   0   3   0   0  51   1  5a  fe  ff  ff  ff  ff   0  ff
+3    5b38    92c338 scenery     burning cave handle            tile(  41,  40,  36)    41  40  36   0  9b   0   0   0   0   3   0   3   0   0  50   1  5d  fe  ff  ff  ff  ff   0  ff
+4    5b50    92c350 scenery     burning cave handle            tile(  42,  40,  36)    42  40  36   0  9b   0   0   0   0  fd  80   0   0   0  51   1  5c  fe  ff  ff  ff  ff   0  ff
+5    5b68    92c368 scenery     burning cave handle            tile(  41,  40,  36)    41  40  36   0  9b   0   0   0   0   3  80   0   0   0  50   1  5b  fe  ff  ff  ff  ff   0  ff
+6    5b80    92c380 exit-portal shaking wall portal            tile(  41,  40,  36) Start         -> fire_world_molten_cavern           pos( 24  ,0 ,24),unknown(  2  ,0),destMapIndex(224),rot(  0),fineY(  2)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
+7    5b98    92c398 scenery     meteor                         tile(  42,  40,  40)    42  40  40   0  d8   0   0   c   0  f8   0   0   0   0   2   0  32  fa  ff  ff  ff  ff   0  ff
 8    5bb0    92c3b0 scenery     church pillar                  tile(  40,  40,  4f)    40  40  4f   0  bc   0   0   4   0   0   0  f8   0   0  49   0  23  fa  ff  ff  ff  ff   0  ff
 9    5bc8    92c3c8 scenery     church pillar                  tile(  40,  40,  50)    40  40  50   0  bc   0   0   4   0   0   0  f8   0   0  52   0  23  fa  ff  ff  ff  ff   0  ff
 10   5be0    92c3e0 scenery     ?? b. cavern stuff ??          tile(  61,  44,  3c)    61  44  3c   0  2a   0   0   0  80  fc   0   0   0   0  21   1   0   0   0   0   0   0   0   0
 11   5bf8    92c3f8 scenery     ?? b. cavern stuff ??          tile(  61,  44,  3c)    61  44  3c   0  2a   0   0   8  80   3   0   0   0   0  21   1   0   0   0   0   0   0   0   0
-12   5c10    92c410 unknown                                    tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0   5   0  fb   0   0  21   1  5a  fe  ff  ff  ff  ff   0  ff
-13   5c28    92c428 unknown                                    tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0  fb   0  fb   0   0  21   1  5d  fe  ff  ff  ff  ff   0  ff
-14   5c40    92c440 unknown                                    tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0   5  80  f8   0   0  21   1  5c  fe  ff  ff  ff  ff   0  ff
-15   5c58    92c458 unknown                                    tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0  fb  80  f8   0   0  21   1  5b  fe  ff  ff  ff  ff   0  ff
+12   5c10    92c410 scenery     burning cave handle            tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0   5   0  fb   0   0  21   1  5a  fe  ff  ff  ff  ff   0  ff
+13   5c28    92c428 scenery     burning cave handle            tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0  fb   0  fb   0   0  21   1  5d  fe  ff  ff  ff  ff   0  ff
+14   5c40    92c440 scenery     burning cave handle            tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0   5  80  f8   0   0  21   1  5c  fe  ff  ff  ff  ff   0  ff
+15   5c58    92c458 scenery     burning cave handle            tile(  61,  44,  3c)    61  44  3c   0  9b   0   0   0   0  fb  80  f8   0   0  21   1  5b  fe  ff  ff  ff  ff   0  ff
 16   5c70    92c470 unknown                                    tile(  51,  40,  51)    51  40  51   0  a9   0   0   e   0   4   0   0   0   4  ba   0  14  fc  ff  ff   7  ff   0   0
-17   5c88    92c488 exit-portal                                tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
+17   5c88    92c488 exit-portal shaking wall portal            tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
 18   5ca0    92c4a0 scenery     church pillar                  tile(  40,  40,  51)    40  40  51   0  bc   0   0   4   0   0   0  f8   0   0  56   0  23  fa  ff  ff  ff  ff   0  ff
 19   5cb8    92c4b8 scenery     bridge                         tile(  46,  3f,  45)    46  3f  45   0  d9   0   0   0   0   8   0   8   0   8  91   1  1c  fa  ff  ff  ff  ff   0  ff
 20   5cd0    92c4d0 gate-0                                     tile(  43,  40,  36)    43  40  36   0  fb   0   0   0   0   0   0   0   0   0  53   1  80  80   0  7f  80   0  3c   0
@@ -6188,27 +6188,27 @@ idx  in_file offset type
 25   5d48    92c548 gate-5                                     tile(  61,  44,  40)    61  44  40   0  fb   0   0   0   0   8   0  fc   0  f8  14   1  80  80   5  7f  80   0  3c   0
 26   5d60    92c560 gate-6                                     tile(  50,  43,  38)    50  43  38   0  fb   0   0   0   0   8   0  fc   0   0  46   1  80  80   6  7f  80   0  3c   0
 27   5d78    92c578 gate-7                                     tile(  51,  43,  3f)    51  43  3f   0  fb   0   0   0   0  f8   0  fc   0   0  80   1  80  80   7  7f  80   0  3c   0
-28   5d90    92c590 unknown                                    tile(  42,  40,  40)    42  40  40   0  d8   0   0   c  18  fc   0   0  24  fa   2   0  32  fa  ff  ff  ff  ff   0  ff
-29   5da8    92c5a8 unknown                                    tile(  42,  40,  45)    42  40  45   0  d8   0   0   c  18  fc   0   0  24  fa  30   0  32  fa  ff  ff  ff  ff   0  ff
-30   5dc0    92c5c0 unknown                                    tile(  42,  40,  45)    42  40  45   0  d8   0   0   c   0   2   0   0  a4   6  30   0  32  fa  ff  ff  ff  ff   0  ff
+28   5d90    92c590 scenery     meteor                         tile(  42,  40,  40)    42  40  40   0  d8   0   0   c  18  fc   0   0  24  fa   2   0  32  fa  ff  ff  ff  ff   0  ff
+29   5da8    92c5a8 scenery     meteor                         tile(  42,  40,  45)    42  40  45   0  d8   0   0   c  18  fc   0   0  24  fa  30   0  32  fa  ff  ff  ff  ff   0  ff
+30   5dc0    92c5c0 scenery     meteor                         tile(  42,  40,  45)    42  40  45   0  d8   0   0   c   0   2   0   0  a4   6  30   0  32  fa  ff  ff  ff  ff   0  ff
 31   5dd8    92c5d8 scenery     church pillar                  tile(  40,  40,  52)    40  40  52   0  bc   0   0   4   0   0   0  f8   0   0  5a   0  23  fa  ff  ff  ff  ff   0  ff
-32   5df0    92c5f0 unknown                                    tile(  40,  40,  4f)    40  40  4f   0  d8   0   0   c   0   4   0  f8   0   0  49   0  1e  fa  ff  ff  ff  ff   0  ff
-33   5e08    92c608 unknown                                    tile(  46,  3f,  45)    46  3f  45   0  d8   0   0   a  dc   5   0   8   0   8  91   1  1e  fa  ff  ff  ff  ff   0  ff
-34   5e20    92c620 unknown                                    tile(  47,  3f,  45)    47  3f  45   0  d8   0   0   a  24  fa   0   8   0   8  94   1  1e  fa  ff  ff  ff  ff   0  ff
-35   5e38    92c638 unknown                                    tile(  46,  3f,  45)    46  3f  45   0  d8   0   0   a  d0   7   0   8  8c   a  91   1  1e  fa  ff  ff  ff  ff   0  ff
-36   5e50    92c650 unknown                                    tile(  45,  3f,  45)    45  3f  45   0  d8   0   0   a   0   8   0   8   0   8  a4   1  1e  fa  ff  ff  ff  ff   0  ff
-37   5e68    92c668 unknown                                    tile(  48,  3f,  45)    48  3f  45   0  d8   0   0   a   0  f8   0   8   0   8  ac   1  1e  fa  ff  ff  ff  ff   0  ff
-38   5e80    92c680 unknown                                    tile(  40,  40,  50)    40  40  50   0  d8   0   0   c   0   4   0  f8   0   0  52   0  1e  fa  ff  ff  ff  ff   0  ff
-39   5e98    92c698 unknown                                    tile(  40,  40,  51)    40  40  51   0  d8   0   0   c   0   4   0  f8   0   0  56   0  1e  fa  ff  ff  ff  ff   0  ff
-40   5eb0    92c6b0 unknown                                    tile(  40,  40,  52)    40  40  52   0  d8   0   0   c   0   4   0  f8   0   0  5a   0  1e  fa  ff  ff  ff  ff   0  ff
-41   5ec8    92c6c8 unknown                                    tile(  53,  43,  3c)    53  43  3c   0  d8   0   0   c   0   0   0  fc   0   0  85   1  32  fa  ff  ff  ff  ff   0  ff
-42   5ee0    92c6e0 unknown                                    tile(  51,  43,  39)    51  43  39   0  d8   0   0   c   0   0   0  fc   0   0  64   1  32  fa  ff  ff  ff  ff   0  ff
-43   5ef8    92c6f8 unknown                                    tile(  51,  43,  39)    51  43  39   0  d8   0   0   c   0  fe   0  fc   0  fe  64   1  32  fa  ff  ff  ff  ff   0  ff
-44   5f10    92c710 unknown                                    tile(  4e,  43,  3b)    4e  43  3b   0  d8   0   0   c   0  fe   0  fc   0  fe  6e   1  32  fa  ff  ff  ff  ff   0  ff
-45   5f28    92c728 unknown                                    tile(  40,  40,  4f)    40  40  4f   0  d8   0   0   c   0   2   0  f8   0  fc  49   0  1e  fa  ff  ff  ff  ff   0  ff
-46   5f40    92c740 unknown                                    tile(  40,  40,  50)    40  40  50   0  d8   0   0   c   0   2   0  f8   0  fc  52   0  1e  fa  ff  ff  ff  ff   0  ff
-47   5f58    92c758 unknown                                    tile(  40,  40,  51)    40  40  51   0  d8   0   0   c   0   2   0  f8   0  fc  56   0  1e  fa  ff  ff  ff  ff   0  ff
-48   5f70    92c770 unknown                                    tile(  40,  40,  52)    40  40  52   0  d8   0   0   c   0   2   0  f8   0  fc  5a   0  1e  fa  ff  ff  ff  ff   0  ff
+32   5df0    92c5f0 scenery     meteor                         tile(  40,  40,  4f)    40  40  4f   0  d8   0   0   c   0   4   0  f8   0   0  49   0  1e  fa  ff  ff  ff  ff   0  ff
+33   5e08    92c608 scenery     meteor                         tile(  46,  3f,  45)    46  3f  45   0  d8   0   0   a  dc   5   0   8   0   8  91   1  1e  fa  ff  ff  ff  ff   0  ff
+34   5e20    92c620 scenery     meteor                         tile(  47,  3f,  45)    47  3f  45   0  d8   0   0   a  24  fa   0   8   0   8  94   1  1e  fa  ff  ff  ff  ff   0  ff
+35   5e38    92c638 scenery     meteor                         tile(  46,  3f,  45)    46  3f  45   0  d8   0   0   a  d0   7   0   8  8c   a  91   1  1e  fa  ff  ff  ff  ff   0  ff
+36   5e50    92c650 scenery     meteor                         tile(  45,  3f,  45)    45  3f  45   0  d8   0   0   a   0   8   0   8   0   8  a4   1  1e  fa  ff  ff  ff  ff   0  ff
+37   5e68    92c668 scenery     meteor                         tile(  48,  3f,  45)    48  3f  45   0  d8   0   0   a   0  f8   0   8   0   8  ac   1  1e  fa  ff  ff  ff  ff   0  ff
+38   5e80    92c680 scenery     meteor                         tile(  40,  40,  50)    40  40  50   0  d8   0   0   c   0   4   0  f8   0   0  52   0  1e  fa  ff  ff  ff  ff   0  ff
+39   5e98    92c698 scenery     meteor                         tile(  40,  40,  51)    40  40  51   0  d8   0   0   c   0   4   0  f8   0   0  56   0  1e  fa  ff  ff  ff  ff   0  ff
+40   5eb0    92c6b0 scenery     meteor                         tile(  40,  40,  52)    40  40  52   0  d8   0   0   c   0   4   0  f8   0   0  5a   0  1e  fa  ff  ff  ff  ff   0  ff
+41   5ec8    92c6c8 scenery     meteor                         tile(  53,  43,  3c)    53  43  3c   0  d8   0   0   c   0   0   0  fc   0   0  85   1  32  fa  ff  ff  ff  ff   0  ff
+42   5ee0    92c6e0 scenery     meteor                         tile(  51,  43,  39)    51  43  39   0  d8   0   0   c   0   0   0  fc   0   0  64   1  32  fa  ff  ff  ff  ff   0  ff
+43   5ef8    92c6f8 scenery     meteor                         tile(  51,  43,  39)    51  43  39   0  d8   0   0   c   0  fe   0  fc   0  fe  64   1  32  fa  ff  ff  ff  ff   0  ff
+44   5f10    92c710 scenery     meteor                         tile(  4e,  43,  3b)    4e  43  3b   0  d8   0   0   c   0  fe   0  fc   0  fe  6e   1  32  fa  ff  ff  ff  ff   0  ff
+45   5f28    92c728 scenery     meteor                         tile(  40,  40,  4f)    40  40  4f   0  d8   0   0   c   0   2   0  f8   0  fc  49   0  1e  fa  ff  ff  ff  ff   0  ff
+46   5f40    92c740 scenery     meteor                         tile(  40,  40,  50)    40  40  50   0  d8   0   0   c   0   2   0  f8   0  fc  52   0  1e  fa  ff  ff  ff  ff   0  ff
+47   5f58    92c758 scenery     meteor                         tile(  40,  40,  51)    40  40  51   0  d8   0   0   c   0   2   0  f8   0  fc  56   0  1e  fa  ff  ff  ff  ff   0  ff
+48   5f70    92c770 scenery     meteor                         tile(  40,  40,  52)    40  40  52   0  d8   0   0   c   0   2   0  f8   0  fc  5a   0  1e  fa  ff  ff  ff  ff   0  ff
 
 Collectables
 idx  name                          offset_in_file    offset                                                                   type     ------ tile         -----  pos  x       y       z     rot -------------------  tileId
@@ -6472,13 +6472,13 @@ c5    255% other_stuff            tileId(   0)   pos(   0,   0,   0) [drop   0% 
 
 Objects 
 idx  in_file offset type     
-0    5af0    135af0 unknown                                    tile(  3f,  40,  3a)    3f  40  3a   0  92   0   0   0   0   0   0   4   0   0   7   0  1c   0   7   0  94   0   1  fb
-1    5b08    135b08 unknown                                    tile(  3e,  41,  43)    3e  41  43   0  92   0   0   4   0   0   0  ff   0   0  28   0  1c   0  28   0  96   0   1  ff
-2    5b20    135b20 unknown                                    tile(  3d,  41,  44)    3d  41  44   0  92   0   0   8   0   0   0  ff   0   0  2a   0  1c   0  2a   0  97   0   1  ff
-3    5b38    135b38 unknown                                    tile(  3c,  41,  43)    3c  41  43   0  92   0   0   c   0   0   0  ff   0   0  2c   0  1c   0  2c   0  98   0   1  ff
-4    5b50    135b50 unknown                                    tile(  40,  41,  42)    40  41  42   0  92   0   0   0   0   0   0  ff   0   0  60   0  1c   0  60   0  9b   0   1  ff
-5    5b68    135b68 unknown                                    tile(  44,  41,  44)    44  41  44   0  92   0   0   8   0   0   0  ff   0   0  50   0  1c   0  99   0  50   0   1  ff
-6    5b80    135b80 unknown                                    tile(  45,  41,  40)    45  41  40   0  92   0   0   4   0   0   0  ff   0   0  55   0  1c   0  55   0  9a   0   1  ff
+0    5af0    135af0 scenery     japanese false wall            tile(  3f,  40,  3a)    3f  40  3a   0  92   0   0   0   0   0   0   4   0   0   7   0  1c   0   7   0  94   0   1  fb
+1    5b08    135b08 scenery     japanese false wall            tile(  3e,  41,  43)    3e  41  43   0  92   0   0   4   0   0   0  ff   0   0  28   0  1c   0  28   0  96   0   1  ff
+2    5b20    135b20 scenery     japanese false wall            tile(  3d,  41,  44)    3d  41  44   0  92   0   0   8   0   0   0  ff   0   0  2a   0  1c   0  2a   0  97   0   1  ff
+3    5b38    135b38 scenery     japanese false wall            tile(  3c,  41,  43)    3c  41  43   0  92   0   0   c   0   0   0  ff   0   0  2c   0  1c   0  2c   0  98   0   1  ff
+4    5b50    135b50 scenery     japanese false wall            tile(  40,  41,  42)    40  41  42   0  92   0   0   0   0   0   0  ff   0   0  60   0  1c   0  60   0  9b   0   1  ff
+5    5b68    135b68 scenery     japanese false wall            tile(  44,  41,  44)    44  41  44   0  92   0   0   8   0   0   0  ff   0   0  50   0  1c   0  99   0  50   0   1  ff
+6    5b80    135b80 scenery     japanese false wall            tile(  45,  41,  40)    45  41  40   0  92   0   0   4   0   0   0  ff   0   0  55   0  1c   0  55   0  9a   0   1  ff
 7    5b98    135b98 scenery     water world wall               tile(  43,  40,  3c)    43  40  3c   0  91   0   0   4   0   0   0   8   0   0  88   0  28   0  88   0  95   0   1  ff
 8    5bb0    135bb0 gate-reset                                 tile(  3d,  40,  37)    3d  40  37   0  fc   0   0   0   0   0   0   0   0   0   2   0  ff  ff  ff   1   1   2   0   0
 9    5bc8    135bc8 exit-door                                  tile(  3d,  40,  36) Entrance      -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   4   3   0   0   0  29   3  f8
@@ -7675,7 +7675,7 @@ idx  in_file offset type
 0    5af0   10952f0 scenery     tiny shadow                    tile(  47,  40,  38)    47  40  38   0  1d   0   0   0  80  fa   0  fa   0  f6   1   0  60  fe   0   0  ff  ff   0  ff
 1    5b08   1095308 scenery     tiny shadow                    tile(  47,  40,  38)    47  40  38   0  1d   0   0   0  80   5   0  fa   0  f6   1   0  64  fe   0   0  ff  ff   0  ff
 2    5b20   1095320 scenery     some wall                      tile(  47,  40,  3f)    47  40  3f   0  9d   0   0   0   0   0   0   0   0  f8  13   0  14   0  15   0  30   0   1  ff
-3    5b38   1095338 exit-portal                                tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   0   0
+3    5b38   1095338 exit-portal shaking wall portal            tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   0   0
 4    5b50   1095350 exit-totem  teleport                       tile(  45,  40,  41) Totem         -> monster_world_false_eye_area       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot( -8),fineY(  0)   45  40  41   0   3   0   0   0   0   8   0   0   0   6  18   0   2  ff   0  f9   0   8  f8   0
 5    5b68   1095368 scenery     shaking wall                   tile(  44,  40,  3f)    44  40  3f   0  d2   0   0   8   0   0   0   0   0  f8  1a   0  1e  fe  ff  ff  ff  ff   0  ff
 10   5be0   10953e0 gate-0                                     tile(  48,  40,  3e)    48  40  3e   0  fb   0   0   0   0   8   0   0   0   8  14   0  80  80   0  7f  80   2  f0   0
@@ -7950,15 +7950,15 @@ Objects
 idx  in_file offset type     
 0    5af0    6f12f0 gate-reset                                 tile(  3c,  40,  46)    3c  40  46   0  fc   0   0   0   0   0   0   0   0   0  a5   1  ff  ff  ff   1   1   d   0   0
 1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   4   0  ff   0   0   8   3   0
-2    5b20    6f1320 unknown                                    tile(  4c,  40,  40)    4c  40  40   0  fd   0   0   0   0   4   0   0   0   0  f3   0   d   7   0   5   0   0   0   2
+2    5b20    6f1320 scenery     shaking wall portal            tile(  4c,  40,  40)    4c  40  40   0  fd   0   0   0   0   4   0   0   0   0  f3   0   d   7   0   5   0   0   0   2
 3    5b38    6f1338 scenery     shaking wall                   tile(  4f,  40,  47)    4f  40  47   0  d1   0   0   0   0   0   0   0   0   0  3a   1  1e  fe  ff  ff  ff  ff   0  ff
-4    5b50    6f1350 unknown                                    tile(  47,  40,  46)    47  40  46   0  fd   0   0   0   0   0   0   0   0  fc  9d   1   d   d   0   0   0   0   0   3
+4    5b50    6f1350 scenery     shaking wall portal            tile(  47,  40,  46)    47  40  46   0  fd   0   0   0   0   0   0   0   0  fc  9d   1   d   d   0   0   0   0   0   3
 5    5b68    6f1368 scenery     shaking wall                   tile(  40,  40,  38)    40  40  38   0  d1   0   0   8   0   0   0   0   0   0  c6   0  1e  fe  ff  ff  ff  ff   0  ff
-6    5b80    6f1380 exit-portal                                tile(  40,  40,  38) Connection    -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
+6    5b80    6f1380 exit-portal shaking wall portal            tile(  40,  40,  38) Connection    -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
 7    5b98    6f1398 scenery     shaking wall                   tile(  4f,  40,  38)    4f  40  38   0  d1   0   0   8   0   0   0   0   0   0  94   1  1e  fe  ff  ff  ff  ff   0  ff
-8    5bb0    6f13b0 exit-portal                                tile(  4f,  40,  47) To Boss       -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
+8    5bb0    6f13b0 exit-portal shaking wall portal            tile(  4f,  40,  47) To Boss       -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
 9    5bc8    6f13c8 scenery     shaking wall                   tile(  4c,  40,  40)    4c  40  40   0  d1   0   0   4   0   0   0   0   0   0  f3   0  1e  fe  ff  ff  ff  ff   0  ff
-10   5be0    6f13e0 exit-portal                                tile(  4f,  40,  38) Exit          -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   0   0
+10   5be0    6f13e0 exit-portal shaking wall portal            tile(  4f,  40,  38) Exit          -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   0   0
 11   5bf8    6f13f8 gate-0                                     tile(  40,  40,  40)    40  40  40   0  fb   0   0   0   0   0   0   0   0   0  28   0  80  80   0  7f  80   2  f0   0
 12   5c10    6f1410 gate-1                                     tile(  40,  40,  3b)    40  40  3b   0  fb   0   0   0   0   0   0   0   0   0  a8   0  80  80   1  7f  80   2  f0   0
 13   5c28    6f1428 gate-2                                     tile(  4f,  40,  45)    4f  40  45   0  fb   0   0   0   0   0   0   0   0   0  4e   1  80  80   2  7f  80   2  f0   0
@@ -8238,8 +8238,8 @@ idx  in_file offset type
 5    4248    bda248 totem       save                           tile(  3d,  40,  3b)    3d  40  3b   0   0   0   0   4   0   4   0   0   0   0  7d   0   0   0   0   0   0   0   0   0
 7    4278    bda278 exit-totem  teleport                       tile(  33,  40,  41) Upper totem 1 -> death_world_lingering_curse_layer  pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  0),fineY(  3)   33  40  41   0   3   0   0   0   0   0   0   0   0  fc  70   0   e  f2   1  f9   0  fc   0   3
 10   42c0    bda2c0 exit-totem  teleport                       tile(  33,  40,  3f) Upper totem 2 -> death_world_gate_of_the_dead       pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  0),fineY(  0)   33  40  3f   0   3   0   0   8   0   0   0   0   0   4  74   0  17  14   0   0   0  f8   0   0
-11   42d8    bda2d8 unknown                                    tile(  3e,  40,  3d)    3e  40  3d   0  9f   0   0   0   0   0   0   0   0  fc  43   0  24   0  43   0  b0   1   1  fb
-12   42f0    bda2f0 unknown                                    tile(  35,  40,  40)    35  40  40   0  9f   0   0   c   0  fc   0   0   0   0  6d   0  14   0  6d   0  b1   1   1  fb
+11   42d8    bda2d8 scenery     locked castle passage          tile(  3e,  40,  3d)    3e  40  3d   0  9f   0   0   0   0   0   0   0   0  fc  43   0  24   0  43   0  b0   1   1  fb
+12   42f0    bda2f0 scenery     locked castle passage          tile(  35,  40,  40)    35  40  40   0  9f   0   0   c   0  fc   0   0   0   0  6d   0  14   0  6d   0  b1   1   1  fb
 13   4308    bda308 scenery     ?? used                        tile(  3f,  3f,  44)    3f  3f  44   0  31   0   0   4   0   0   0   0   0   0  9b   0  24   0  9b   0  b2   1   1  ff
 14   4320    bda320 scenery     ?? used                        tile(  40,  3f,  45)    40  3f  45   0  31   0   0   0   0   0   0   0   0   0  9d   0  14   0  9d   0  b3   1   1  ff
 15   4338    bda338 scenery     ?? used                        tile(  41,  3f,  44)    41  3f  44   0  31   0   0   c   0   0   0   0   0   0  9f   0  14   0  9f   0  b4   1   1  ff
@@ -9440,9 +9440,9 @@ idx  in_file offset type
 6    5b80   111a380 gate-reset                                 tile(  3b,  43,  40)    3b  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cc   1  ff  ff  ff   1   1  28   0   0
 7    5b98   111a398 exit-door                                  tile(  3a,  43,  40) Middle        -> fire_world_burning_cavern          pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  fc   0  f2   1   1  14   3   0
 8    5bb0   111a3b0 gate-reset                                 tile(  44,  45,  40)    44  45  40   0  fc   0   0   0   0   0   0  fc   0   0  ce   1  ff  ff  ff   1   1  28   0   0
-9    5bc8   111a3c8 exit-door                                  tile(  45,  45,  40) Upper         -> water_world_impure_pool_area       pos(  4  ,0  ,4),unknown(  1  ,1),destMapIndex( 10),rot(  1),fineY(  0)   45  45  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   4   0  f4   1   1   a   1   0
+9    5bc8   111a3c8 unknown                                    tile(  45,  45,  40)    45  45  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   4   0  f4   1   1   a   1   0
 10   5be0   111a3e0 gate-reset                                 tile(  44,  4a,  40)    44  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  ce   1  ff  ff  ff   1   1  28   0   0
-11   5bf8   111a3f8 unknown                                    tile(  45,  4a,  40)    45  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   1   0   0   0   0  27   3   0
+11   5bf8   111a3f8 exit-door                                  tile(  45,  4a,  40) Upper         -> water_world_impure_pool_area       pos(  1  ,0  ,1),unknown(  0  ,0),destMapIndex( 39),rot(  3),fineY(  0)   45  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   1   0   0   0   0  27   3   0
 14   5c40   111a440 gate-1                                     tile(  40,  43,  43)    40  43  43   0  fb   0   0   0   0   0   0   0   0   0  a8   0  80  80   1  7f  80   0  f0   0
 15   5c58   111a458 gate-0                                     tile(  40,  42,  40)    40  42  40   0  fb   0   0   0   0   0   0   0   0   0  f2   0  80  80   0  7f  80   0   5   0
 16   5c70   111a470 gate-0                                     tile(  40,  44,  40)    40  44  40   0  fb   0   0   0   0   0   0   0   0   0  f6   0  80  80   0  7f  80   0   5   0
@@ -10632,7 +10632,7 @@ False Pit Cavern]
  3    5b38    f78b38 exit-totem  teleport                       tile(  3e,  40,  4b) Boss room     -> earth_world_false_pit_cavern       pos( 15 ,-3 ,15),unknown(-10  ,0),destMapIndex(248),rot(  0),fineY(  1)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0   f  fd  ff  f6   0  f8   0   1
 Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Upper 1 0 --> water_world_impure_pool_area[Water World
 Impure Pool Area]
- 9    5bc8   111a3c8 exit-door                                  tile(  45,  45,  40) Upper         -> water_world_impure_pool_area       pos(  4  ,0  ,4),unknown(  1  ,1),destMapIndex( 10),rot(  1),fineY(  0)   45  45  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   4   0  f4   1   1   a   1   0
+ 11   5bf8   111a3f8 exit-door                                  tile(  45,  4a,  40) Upper         -> water_world_impure_pool_area       pos(  1  ,0  ,1),unknown(  0  ,0),destMapIndex( 39),rot(  1),fineY(  0)   45  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   1   0   0   0   0  27   1   0
 Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Middle 3 0 --> fire_world_burning_cavern[Fire World
 Burning Cavern]
  7    5b98   111a398 exit-door                                  tile(  3a,  43,  40) Middle        -> fire_world_burning_cavern          pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  fc   0  f2   1   1  14   3   0
@@ -10651,11 +10651,11 @@ Burning Cavern] -- Entrance 1 -8 --> shadow_tower_part2b[Shadow Tower Part2 B]
 Exit for chart fire_world_burning_cavern[Fire World
 Burning Cavern] -- Platform 0 1 --> fire_world_molten_cavern[Fire World
 Molten Cavern]
- 94   63c0    9b3bc0 exit-portal                                tile(  47,  3f,  46) Platform      -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
+ 94   63c0    9b3bc0 exit-portal shaking wall portal            tile(  47,  3f,  46) Platform      -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
 Exit for chart fire_world_burning_cavern[Fire World
 Burning Cavern] -- Room 0 0 --> fire_world_ashen_cavern[Fire World
 Ashen Cavern]
- 93   63a8    9b3ba8 exit-portal                                tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
+ 93   63a8    9b3ba8 exit-portal shaking wall portal            tile(  3a,  3f,  38) Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
 Exit for chart water_world_impure_pool_area[Water World
 Impure Pool Area] -- Entrance 3 -8 --> shadow_tower_part2b[Shadow Tower Part2 B]
  9    5bc8    5353c8 exit-door                                  tile(  44,  40,  33) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   4   5   0   0   0  28   3  f8
@@ -10680,19 +10680,19 @@ Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tow
 Exit for chart fire_world_molten_cavern[Fire World
 Molten Cavern] -- Abraxus 0 0 --> fire_world_ashen_cavern[Fire World
 Ashen Cavern]
- 27   5d78    b45578 exit-portal                                tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  0),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   0   0
+ 27   5d78    b45578 exit-portal shaking wall portal            tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  0),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   0   0
 Exit for chart fire_world_molten_cavern[Fire World
 Molten Cavern] -- Platform 0 3 --> fire_world_burning_cavern[Fire World
 Burning Cavern]
- 19   5cb8    b454b8 exit-portal                                tile(  4c,  40,  42) Platform      -> fire_world_burning_cavern          pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  14   7  ff   6   8   0   0   3
+ 19   5cb8    b454b8 exit-portal shaking wall portal            tile(  4c,  40,  42) Platform      -> fire_world_burning_cavern          pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  14   7  ff   6   8   0   0   3
 Exit for chart fire_world_ashen_cavern[Fire World
 Ashen Cavern] -- Cerberus 0 0 --> fire_world_burning_cavern[Fire World
 Burning Cavern]
- 17   5c88    92c488 exit-portal                                tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
+ 17   5c88    92c488 exit-portal shaking wall portal            tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
 Exit for chart fire_world_ashen_cavern[Fire World
 Ashen Cavern] -- Start 0 2 --> fire_world_molten_cavern[Fire World
 Molten Cavern]
- 6    5b80    92c380 exit-portal                                tile(  41,  40,  36) Start         -> fire_world_molten_cavern           pos( 24  ,0 ,24),unknown(  2  ,0),destMapIndex(224),rot(  0),fineY(  2)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
+ 6    5b80    92c380 exit-portal shaking wall portal            tile(  41,  40,  36) Start         -> fire_world_molten_cavern           pos( 24  ,0 ,24),unknown(  2  ,0),destMapIndex(224),rot(  0),fineY(  2)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
 Exit for chart monster_world_screeching_area[Monster World
 Screeching Area] -- Entrance 0 -8 --> shadow_tower_part3b[Shadow Tower Part3 B]
  0    5af0    8992f0 exit-door                                  tile(  4a,  40,  44) Entrance      -> shadow_tower_part3b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   4a  40  44   0  fc   0   0   0   0   0   0   0   0   0  35   0   0   3  fc   0   0  29   0  f8
@@ -10798,15 +10798,15 @@ Bewilderment Domain]
 Exit for chart illusion_world_worship_domain[Illusion World
 Worship Domain] -- Connection 0 2 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
- 6    5b80    6f1380 exit-portal                                tile(  40,  40,  38) Connection    -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
+ 6    5b80    6f1380 exit-portal shaking wall portal            tile(  40,  40,  38) Connection    -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
 Exit for chart illusion_world_worship_domain[Illusion World
 Worship Domain] -- Exit 2 0 --> illusion_world_dream_domain[Illusion World
 Dream Domain]
- 10   5be0    6f13e0 exit-portal                                tile(  4f,  40,  38) Exit          -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  2),fineY(  0)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   2   0
+ 10   5be0    6f13e0 exit-portal shaking wall portal            tile(  4f,  40,  38) Exit          -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  2),fineY(  0)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   2   0
 Exit for chart illusion_world_worship_domain[Illusion World
 Worship Domain] -- To Boss 0 0 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
- 8    5bb0    6f13b0 exit-portal                                tile(  4f,  40,  47) To Boss       -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
+ 8    5bb0    6f13b0 exit-portal shaking wall portal            tile(  4f,  40,  47) To Boss       -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
 Exit for chart illusion_world_dream_domain[Illusion World
 Dream Domain] -- Totem 2 0 --> monster_world_false_eye_area[Monster World
 False Eye Area]
@@ -10814,7 +10814,7 @@ False Eye Area]
 Exit for chart illusion_world_dream_domain[Illusion World
 Dream Domain] -- Entrance 2 0 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
- 3    5b38   1095338 exit-portal                                tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   2   0
+ 3    5b38   1095338 exit-portal shaking wall portal            tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   2   0
 Exit for chart monster_world_false_eye_area[Monster World
 False Eye Area] -- Entrance 3 -8 --> shadow_tower_part3b[Shadow Tower Part3 B]
  9    5bc8    135bc8 exit-door                                  tile(  3d,  40,  36) Entrance      -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   4   3   0   0   0  29   3  f8
