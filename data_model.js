@@ -599,9 +599,9 @@
     this.map_file = FDAT.files[this.map_index];
     this.texture_file = FDAT.files[this.texture_index];
 
-    //var files = this.texture_file.extractRTIM();
-    //var counter = 0;
-    //files.forEach(rtim => rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim"));
+    var files = this.texture_file.extractRTIM();
+    var counter = 0;
+    files.forEach(rtim => rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim"));
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;

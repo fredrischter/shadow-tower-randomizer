@@ -112,7 +112,8 @@ class RTIM {
     buffer[0x0] = 0x10; // magic
     buffer[0x4] = 0x09; // BitDepth 8bpp Palette? Yes PixelFormat 8 bits per pixel, from a palette of 256 colors
 
-    buffer[paletteHeaderOffset+0x1] = 0x2; // 0x200 Length of all the CLUT data after the header
+    buffer[paletteHeaderOffset+0x0] = 0xc; // 0x20C Length of all the CLUT data after the header
+    buffer[paletteHeaderOffset+0x1] = 0x2; // 0x20C Length of all the CLUT data after the header
     buffer[paletteHeaderOffset+0x9] = 0x1; // 0x100 Colors per CLUT
     buffer[paletteHeaderOffset+0xa] = 0x1; // 0x1 Number of CLUTs
 
@@ -122,15 +123,19 @@ class RTIM {
 
     buffer[imageMetadataOffset+0x0] = this.imgBin.length % 0x100; // Length of pixel data after the header in bytes
     buffer[imageMetadataOffset+0x1] = this.imgBin.length / 0x100; // Length of pixel data after the header in bytes
-    buffer[imageMetadataOffset+0x8] = (this.imgW/2) % 0x100; // Image stride*
-    buffer[imageMetadataOffset+0x9] = (this.imgW/2) / 0x100; // Image stride*
+    buffer[imageMetadataOffset+0x8] = (this.imgW*2) % 0x100; // Image stride*
+    buffer[imageMetadataOffset+0x9] = (this.imgW*2) / 0x100; // Image stride*
     buffer[imageMetadataOffset+0xa] = this.imgH % 0x100; // Image height
     buffer[imageMetadataOffset+0xb] = this.imgH / 0x100; // Image height
     for (var i = 0; i<this.imgBin.length; i++) {
       buffer[imageOffset + i] = this.imgBin[i];
     }
 
-    console.log("Writing TIM file " + totalSize + " bytes to " + fileName);
+    console.log("Writing TIM file " + totalSize + " bytes to " + fileName
+        + " paletteHeaderOffset " + paletteHeaderOffset.toString(16)
+        + " clutOffset " + clutOffset.toString(16)
+        + " imageMetadataOffset " + imageMetadataOffset.toString(16)
+        + " imageOffset " + imageOffset.toString(16));
     fs.writeFileSync(fileName, buffer);
   }
 }
@@ -174,7 +179,8 @@ class TFormatPart {
         break;
       }
 
-      var valid = clutX1 == clutX2 && clutY1 == clutY2 && clutW1 == clutW2 && clutH1 == clutH2;
+      var valid = clutX1 == clutX2 && clutY1 == clutY2 && clutW1 == clutW2 && clutH1 == clutH2 &&
+            clutW1 == 0x100 && clutH1 == 0x1;
       if (!valid) {
         console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
         valid = true;
@@ -211,7 +217,7 @@ class TFormatPart {
         textureW1, textureH1,
         this.bin.slice(imageStart, imageStart + imageSize)));
 
-    } while(valid);
+    } while(valid && cursor<this.bin.length);
 
     return product;
   }
