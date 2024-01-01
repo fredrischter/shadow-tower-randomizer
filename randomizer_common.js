@@ -123,8 +123,8 @@ class RTIM {
 
     buffer[imageMetadataOffset+0x0] = this.imgBin.length % 0x100; // Length of pixel data after the header in bytes
     buffer[imageMetadataOffset+0x1] = this.imgBin.length / 0x100; // Length of pixel data after the header in bytes
-    buffer[imageMetadataOffset+0x8] = (this.imgW*2) % 0x100; // Image stride*
-    buffer[imageMetadataOffset+0x9] = (this.imgW*2) / 0x100; // Image stride*
+    buffer[imageMetadataOffset+0x8] = (this.imgW) % 0x100; // Image stride*
+    buffer[imageMetadataOffset+0x9] = (this.imgW) / 0x100; // Image stride*
     buffer[imageMetadataOffset+0xa] = this.imgH % 0x100; // Image height
     buffer[imageMetadataOffset+0xb] = this.imgH / 0x100; // Image height
     for (var i = 0; i<this.imgBin.length; i++) {
@@ -159,6 +159,8 @@ class TFormatPart {
     var product = [];
 
     var cursor = this.startOffset;
+
+    console.log("extractRTIM " + fileName + " " + this.bin.length + " bytes.");
 
     do {
       var RTIMStart = cursor;
