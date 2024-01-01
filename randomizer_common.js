@@ -59,6 +59,29 @@ class TFILEReader {
   }
 }
 
+function extractBits(integer, startBit, endBit) {
+  // Create a bitmask with 1s in the desired range
+  const bitmask = (1 << (endBit - startBit + 1)) - 1;
+
+  // Shift and mask the integer to extract the desired bits
+  const extractedBits = (integer >> startBit) & bitmask;
+
+  return extractedBits;
+}
+
+function setBits(integer, value, startBit, endBit) {
+    // Create a bitmask to clear the bits in the specified range
+    const clearMask = ~((1 << (endBit - startBit + 1)) - 1);
+
+    // Clear the bits in the range
+    integer &= clearMask;
+
+    // Set the bits with the new value
+    integer |= (value << startBit);
+
+    return integer;
+}
+
 class TIMTextureFile {
   constructor(bin) {
     this.bin = bin;
@@ -92,11 +115,43 @@ class TIMTextureFile {
 }
 
 class RTIM {
-  constructor(paletteBin, imgW, imgH, imgBin) {
+  constructor(paletteBin, paletteBinOffset, paletteBinSize, imgW, imgH, imgBin, imgBinOffset, imgBinSize) {
     this.paletteBin = paletteBin;
+    this.paletteBinOffset = paletteBinOffset;
+    this.paletteBinSize = paletteBinSize;
     this.imgW = imgW;
     this.imgH = imgH;
     this.imgBin = imgBin;
+    this.imgBinOffset = imgBinOffset;
+    this.imgBinSize = imgBinSize;
+  }
+
+  getRGBArray() {
+    var colors = [];
+    for (var i=0;i<0x200;i+=2) {
+      var rgba = this.paletteBin[this.paletteBinOffset + i] * 0x100 + this.paletteBin[this.paletteBinOffset + i + 1];
+      colors.push({
+        r: extractBits(rgba, 0, 4),
+        g: extractBits(rgba, 5, 9),
+        b: extractBits(rgba, 10, 14)
+      });
+    }
+    return colors;
+  }
+
+  setRGBArray(colors) {
+    for (var i=0;i<0x100;i+=1) {
+      var color = colors[i];
+      var rgba = this.paletteBin[this.paletteBinOffset + i*2] * 0x100 + this.paletteBin[this.paletteBinOffset + i*2 + 1];
+
+      rgba = setBits(rgba, color.r, 0, 4);
+      rgba = setBits(rgba, color.g, 5, 9);
+      rgba = setBits(rgba, color.b, 10, 14);
+
+      this.paletteBin[this.paletteBinOffset + i*2] = rgba / 0x100;
+      this.paletteBin[this.paletteBinOffset + i*2 + 1] = rgba % 0x100;
+    }
+
   }
 
   writeAsTIM(fileName) {
@@ -104,7 +159,7 @@ class RTIM {
     var clutOffset=paletteHeaderOffset + 0xc;
     var imageMetadataOffset = clutOffset + 0x200;
     var imageOffset = imageMetadataOffset + 0xc;
-    var totalSize = imageOffset + this.imgBin.length;
+    var totalSize = imageOffset + this.imgBinSize;
 
     var buffer = Buffer.alloc(totalSize);
 
@@ -118,17 +173,17 @@ class RTIM {
     buffer[paletteHeaderOffset+0xa] = 0x1; // 0x1 Number of CLUTs
 
     for (var i = 0; i<0x200; i++) {
-      buffer[clutOffset + i] = this.paletteBin[i];
+      buffer[clutOffset + i] = this.paletteBin[i + this.paletteBinOffset];
     }
 
-    buffer[imageMetadataOffset+0x0] = this.imgBin.length % 0x100; // Length of pixel data after the header in bytes
-    buffer[imageMetadataOffset+0x1] = this.imgBin.length / 0x100; // Length of pixel data after the header in bytes
+    buffer[imageMetadataOffset+0x0] = this.imgBinSize % 0x100; // Length of pixel data after the header in bytes
+    buffer[imageMetadataOffset+0x1] = this.imgBinSize / 0x100; // Length of pixel data after the header in bytes
     buffer[imageMetadataOffset+0x8] = (this.imgW) % 0x100; // Image stride*
     buffer[imageMetadataOffset+0x9] = (this.imgW) / 0x100; // Image stride*
     buffer[imageMetadataOffset+0xa] = this.imgH % 0x100; // Image height
     buffer[imageMetadataOffset+0xb] = this.imgH / 0x100; // Image height
-    for (var i = 0; i<this.imgBin.length; i++) {
-      buffer[imageOffset + i] = this.imgBin[i];
+    for (var i = 0; i<this.imgBinSize; i++) {
+      buffer[imageOffset + i] = this.imgBin[i + this.imgBinOffset];
     }
 
     console.log("Writing TIM file " + totalSize + " bytes to " + fileName
@@ -158,9 +213,9 @@ class TFormatPart {
 
     var product = [];
 
-    var cursor = this.startOffset;
+    var cursor = 0;
 
-    console.log("extractRTIM " + fileName + " " + this.bin.length + " bytes.");
+    console.log("extractRTIM " + this.fileName + " " + this.bin.length + " bytes. startOffset " + this.startOffset.toString(16));
 
     do {
       var RTIMStart = cursor;
@@ -184,8 +239,9 @@ class TFormatPart {
       var valid = clutX1 == clutX2 && clutY1 == clutY2 && clutW1 == clutW2 && clutH1 == clutH2 &&
             clutW1 == 0x100 && clutH1 == 0x1;
       if (!valid) {
+        //console.log("Binary texture_file " + binToStr(this.bin.slice(0, 0x40)));
+        //console.log("clutX1 " + clutX1.toString(16) + " clutY1 " + clutY1.toString(16) + " clutW1 " + clutW1.toString(16) + " clutH1 " + clutH1.toString(16));
         console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
-        valid = true;
         continue;
       }
 
@@ -203,6 +259,11 @@ class TFormatPart {
       var textureH2 = getUInt16(this.bin, cursor + 0xe);
       cursor+=0x10;
 
+      if (textureX1 == 0x8000) {
+        console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
+        continue;
+      }
+
       var imageStart = cursor;
       var imageSize = 2 * textureW1 * textureH1;
       cursor+=imageSize;
@@ -215,11 +276,11 @@ class TFormatPart {
         " texture " + textureX1.toString(16) + " " + textureY1.toString(16) + " " + textureW1.toString(16) + " " + textureH1.toString(16));
 
       product.push(new RTIM(
-        this.bin.slice(paletteStart, paletteStart + 0x200),
+        this.bin, paletteStart, paletteStart + 0x200,
         textureW1, textureH1,
-        this.bin.slice(imageStart, imageStart + imageSize)));
+        this.bin, imageStart, imageStart + imageSize));
 
-    } while(valid && cursor<this.bin.length);
+    } while(cursor<this.bin.length);
 
     return product;
   }

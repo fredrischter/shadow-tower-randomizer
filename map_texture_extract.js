@@ -17,7 +17,14 @@ function map_texture_extract(fileName) {
 
 	var files = tfilePart.extractRTIM();
 	var counter = 0;
-	files.forEach(rtim => rtim.writeAsTIM(fileName + "."+ (counter++) +".tim"));
+	files.forEach(rtim => {
+		var colors = rtim.getRGBArray();
+		//colors.forEach(color=> {
+		//	color.g+=1;
+		//});
+		rtim.setRGBArray(colors);
+		rtim.writeAsTIM(fileName + "."+ (counter++) +".tim");
+	});
 
 }
 

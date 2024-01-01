@@ -601,7 +601,11 @@
 
     var files = this.texture_file.extractRTIM();
     var counter = 0;
-    files.forEach(rtim => rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim"));
+    files.forEach(rtim => {
+      var colors = rtim.getRGBArray();
+      rtim.setRGBArray(colors);
+      rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim");
+    });
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;
