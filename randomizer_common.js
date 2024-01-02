@@ -59,27 +59,75 @@ class TFILEReader {
   }
 }
 
+function bit_test(num, bit){
+    return ((num>>bit) % 2 != 0)
+}
+
+function bit_set(num, bit){
+  var result = num | 1<<bit;
+  return result;
+}
+
+function bit_clear(num, bit){
+  var result = num & ~(1<<bit);
+  return result;
+}
+
+function bit_toggle(num, bit){
+    return bit_test(num, bit) ? bit_clear(num, bit) : bit_set(num, bit);
+}
+
 function extractBits(integer, startBit, endBit) {
-  // Create a bitmask with 1s in the desired range
-  const bitmask = (1 << (endBit - startBit + 1)) - 1;
-
-  // Shift and mask the integer to extract the desired bits
-  const extractedBits = (integer >> startBit) & bitmask;
-
-  return extractedBits;
+  var result = 0;
+  for (var i=startBit; i<=endBit; i++) {
+    if (bit_test(integer, i)) {
+      result = bit_set(result, i-startBit);
+    }
+  }
+  return result;
 }
 
 function setBits(integer, value, startBit, endBit) {
-    // Create a bitmask to clear the bits in the specified range
-    const clearMask = ~((1 << (endBit - startBit + 1)) - 1);
+  var result = integer;
+  for (var i=startBit; i<=endBit; i++) {
+    if (bit_test(value, i-startBit)) {
+      result = bit_set(result, i);
+    } else {
+      result = bit_clear(result, i);
+    }
+  }
+  return result;
+}
 
-    // Clear the bits in the range
-    integer &= clearMask;
+function convertEndian(value) {
+  if (value < 0 || value > 255) {
+    throw new Error('Input value must be an 8-bit unsigned integer (0-255). Got ' + value);
+  }
 
-    // Set the bits with the new value
-    integer |= (value << startBit);
+  const littleEndian = ((value & 0x01) << 7) |
+                       ((value & 0x02) << 5) |
+                       ((value & 0x04) << 3) |
+                       ((value & 0x08) << 1) |
+                       ((value & 0x10) >> 1) |
+                       ((value & 0x20) >> 3) |
+                       ((value & 0x40) >> 5) |
+                       ((value & 0x80) >> 7);
 
-    return integer;
+  return littleEndian;
+}
+
+function convertEndian5(value) {
+  if (value < 0 || value > 31) {
+    throw new Error('Input value must be an 8-bit unsigned integer (0-31). Got ' + value);
+  }
+
+  const littleEndian = ((value & 0b00001) << 4) |
+                       ((value & 0b00010) << 2) |
+                       ((value & 0b00100)) |
+                       ((value & 0b01000) >> 2) |
+                       ((value & 0b10000) >> 4);
+
+  return littleEndian;
 }
 
 class TIMTextureFile {
@@ -129,11 +177,11 @@ class RTIM {
   getRGBArray() {
     var colors = [];
     for (var i=0;i<0x200;i+=2) {
-      var rgba = this.paletteBin[this.paletteBinOffset + i] * 0x100 + this.paletteBin[this.paletteBinOffset + i + 1];
+      var rgba = (convertEndian(this.paletteBin[this.paletteBinOffset + i]) << 8) + convertEndian(this.paletteBin[this.paletteBinOffset + i + 1]);
       colors.push({
-        r: extractBits(rgba, 0, 4),
-        g: extractBits(rgba, 5, 9),
-        b: extractBits(rgba, 10, 14)
+        r: convertEndian5(extractBits(rgba, 11, 15)),
+        b: convertEndian5(extractBits(rgba, 6, 10)),
+        g: convertEndian5(extractBits(rgba, 1, 5))
       });
     }
     return colors;
@@ -142,14 +190,27 @@ class RTIM {
   setRGBArray(colors) {
     for (var i=0;i<0x100;i+=1) {
       var color = colors[i];
-      var rgba = this.paletteBin[this.paletteBinOffset + i*2] * 0x100 + this.paletteBin[this.paletteBinOffset + i*2 + 1];
+      var rgba = (convertEndian(this.paletteBin[this.paletteBinOffset + i*2]) << 8) + convertEndian(this.paletteBin[this.paletteBinOffset + i*2 + 1]);
 
-      rgba = setBits(rgba, color.r, 0, 4);
-      rgba = setBits(rgba, color.g, 5, 9);
-      rgba = setBits(rgba, color.b, 10, 14);
+      color.r = Math.max(1, Math.min(31, color.r));
+      color.b = Math.max(1, Math.min(31, color.b));
+      color.g = Math.max(1, Math.min(31, color.g));
 
-      this.paletteBin[this.paletteBinOffset + i*2] = rgba / 0x100;
-      this.paletteBin[this.paletteBinOffset + i*2 + 1] = rgba % 0x100;
+      //if (i==1) {
+      //  console.log("before " + this.paletteBin[this.paletteBinOffset + i*2].toString(2).padStart(8) + "" + this.paletteBin[this.paletteBinOffset + i*2 + 1].toString(2).padStart(8));
+      //  console.log("rgba   " + rgba.toString(2).padStart(16) + " r " + color.r.toString(2).padStart(5) + " b " + color.b.toString(2).padStart(5) + " g " + color.g.toString(2).padStart(5));
+      //}
+      rgba = setBits(rgba, convertEndian5(color.r), 11, 15);
+      rgba = setBits(rgba, convertEndian5(color.b), 6, 10);
+      rgba = setBits(rgba, convertEndian5(color.g), 1, 5);
+
+      this.paletteBin[this.paletteBinOffset + i*2 + 1]     = convertEndian(rgba % 0x100);
+      this.paletteBin[this.paletteBinOffset + i*2] = convertEndian(rgba >> 8);
+      //if (i==1) {
+      //  console.log("> rgba " + rgba.toString(2).padStart(16) + " r " + color.r.toString(2).padStart(5) + " b " + color.b.toString(2).padStart(5) + " g " + color.g.toString(2).padStart(5));
+      //  console.log("output " + this.paletteBin[this.paletteBinOffset + i*2].toString(2).padStart(8) + "" + this.paletteBin[this.paletteBinOffset + i*2 + 1].toString(2).padStart(8));
+      //}
+
     }
 
   }

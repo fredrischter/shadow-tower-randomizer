@@ -603,6 +603,13 @@
     var counter = 0;
     files.forEach(rtim => {
       var colors = rtim.getRGBArray();
+
+    colors.forEach(color=> {
+      color.r+=8;
+      color.g+=0;
+      color.b+=0;
+    });
+
       rtim.setRGBArray(colors);
       rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim");
     });
