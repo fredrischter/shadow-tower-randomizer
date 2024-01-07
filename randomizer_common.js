@@ -130,6 +130,84 @@ function convertEndian5(value) {
   return littleEndian;
 }
 
+global.rgbToHsv = function(rgb) {
+  const r = rgb.r / 31;
+  const g = rgb.g / 31;
+  const b = rgb.b / 31;
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const delta = max - min;
+
+  let h, s, v;
+
+  // Calculate Hue
+  if (delta === 0) {
+    h = 0;
+  } else if (max === r) {
+    h = ((g - b) / delta) % 6;
+  } else if (max === g) {
+    h = (b - r) / delta + 2;
+  } else {
+    h = (r - g) / delta + 4;
+  }
+
+  h = Math.round((h * 60 + 360) % 360);
+
+  // Calculate Saturation
+  s = max === 0 ? 0 : delta / max;
+
+  // Calculate Value
+  v = max;
+
+  return { h, s, v };
+}
+
+// Convert HSV to RGB (5 bits per channel)
+global.hsvToRgb = function(hsv) {
+  const h = hsv.h / 60;
+  const s = hsv.s;
+  const v = hsv.v;
+
+  const c = v * s;
+  const x = c * (1 - Math.abs(h % 2 - 1));
+  const m = v - c;
+
+  let r, g, b;
+
+  if (h >= 0 && h < 1) {
+    r = c;
+    g = x;
+    b = 0;
+  } else if (h >= 1 && h < 2) {
+    r = x;
+    g = c;
+    b = 0;
+  } else if (h >= 2 && h < 3) {
+    r = 0;
+    g = c;
+    b = x;
+  } else if (h >= 3 && h < 4) {
+    r = 0;
+    g = x;
+    b = c;
+  } else if (h >= 4 && h < 5) {
+    r = x;
+    g = 0;
+    b = c;
+  } else {
+    r = c;
+    g = 0;
+    b = x;
+  }
+
+  return {
+    r: Math.round((r + m) * 31),
+    g: Math.round((g + m) * 31),
+    b: Math.round((b + m) * 31)
+  };
+}
+
 class TIMTextureFile {
   constructor(bin) {
     this.bin = bin;

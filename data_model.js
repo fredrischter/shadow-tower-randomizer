@@ -601,14 +601,26 @@
 
     var files = this.texture_file.extractRTIM();
     var counter = 0;
+
+    var hsvRandomFactor = {
+      v: 0.5 + Math.random()*1,
+      h: Math.random()*360,
+      s: 0.5 + Math.random()*3
+    }
+
     files.forEach(rtim => {
       var colors = rtim.getRGBArray();
 
-    colors.forEach(color=> {
-      color.r+=8;
-      color.g+=0;
-      color.b+=0;
-    });
+      colors.forEach(color=> {
+        var hsv = rgbToHsv(color);
+          hsv.v = Math.min(1, Math.max(0, hsv.v * hsvRandomFactor.v));
+          hsv.h = (hsv.h + hsvRandomFactor.h) % 360;
+          hsv.s = Math.min(1, Math.max(0, hsv.s * hsvRandomFactor.s));
+          var newColor = hsvToRgb(hsv);
+          color.r=newColor.r;
+          color.g=newColor.g;
+          color.b=newColor.b;
+      });
 
       rtim.setRGBArray(colors);
       rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim");
