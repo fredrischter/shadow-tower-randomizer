@@ -41,7 +41,7 @@ function change(changeFile) {
 			textureFiles[change.textToTexture.file].files[change.textToTexture.part].setCheckSum();
 		} else if (change.file) {
 			var part = new TFILEReader(change.file).readTFormatPart();
-			part.verifyCheckSum();
+			//part.verifyCheckSum();
 
 			for (var index in change.bytes) {
 				part.bin[parseInt(index, 16)] = parseInt(change.bytes[index], 16);

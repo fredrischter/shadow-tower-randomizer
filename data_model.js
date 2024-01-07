@@ -599,32 +599,7 @@
     this.map_file = FDAT.files[this.map_index];
     this.texture_file = FDAT.files[this.texture_index];
 
-    var files = this.texture_file.extractRTIM();
-    var counter = 0;
-
-    var hsvRandomFactor = {
-      v: 0.5 + Math.random()*1,
-      h: Math.random()*360,
-      s: 0.5 + Math.random()*3
-    }
-
-    files.forEach(rtim => {
-      var colors = rtim.getRGBArray();
-
-      colors.forEach(color=> {
-        var hsv = rgbToHsv(color);
-          hsv.v = Math.min(1, Math.max(0, hsv.v * hsvRandomFactor.v));
-          hsv.h = (hsv.h + hsvRandomFactor.h) % 360;
-          hsv.s = Math.min(1, Math.max(0, hsv.s * hsvRandomFactor.s));
-          var newColor = hsvToRgb(hsv);
-          color.r=newColor.r;
-          color.g=newColor.g;
-          color.b=newColor.b;
-      });
-
-      rtim.setRGBArray(colors);
-      rtim.writeAsTIM(this.texture_file.fileName + "."+ (counter++) +".tim");
-    });
+    this.texture_file.processRandomizeAndWriteRTIM();
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;
@@ -2223,7 +2198,14 @@
               console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
 
               creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
+              creature.texture.randomize();
               creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
+
+        modelFile.files[c*5+2].setCheckSum();
+        fs.writeFileSync(modelFile.files[c*5+2].fileName, Buffer.from(modelFile.files[c*5+2].bin));
+        if (modelFile.files[c*5+2].bin && modelFile.files[c*5+2].bin.length) {
+          fs.writeFileSync(modelFile.files[c*5+2].fileName + ".tim", Buffer.from(modelFile.files[c*5+2].bin));
+        }
       }
     }
   }

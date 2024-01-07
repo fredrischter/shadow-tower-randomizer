@@ -208,35 +208,144 @@ global.hsvToRgb = function(hsv) {
   };
 }
 
+function getRGBArray(paletteBin, paletteBinOffset) {
+  var colors = [];
+  for (var i=0;i<0x200;i+=2) {
+    var rgba = (convertEndian(paletteBin[paletteBinOffset + i]) << 8) + convertEndian(paletteBin[paletteBinOffset + i + 1]);
+    colors.push({
+      r: convertEndian5(extractBits(rgba, 11, 15)),
+      b: convertEndian5(extractBits(rgba, 6, 10)),
+      g: convertEndian5(extractBits(rgba, 1, 5))
+    });
+  }
+  return colors;
+}
+
+function setRGBArray(colors, paletteBin, paletteBinOffset) {
+  for (var i=0;i<0x100;i+=1) {
+    var color = colors[i];
+    var rgba = (convertEndian(paletteBin[paletteBinOffset + i*2]) << 8) + convertEndian(paletteBin[paletteBinOffset + i*2 + 1]);
+
+    var stp = extractBits(rgba, 0, 0);
+    if (rgba == 0b1 || rgba == 0b0) {
+      continue;
+    }
+
+    color.r = Math.max(1, Math.min(31, color.r));
+    color.b = Math.max(1, Math.min(31, color.b));
+    color.g = Math.max(1, Math.min(31, color.g));
+
+    //if (i==1) {
+    //  console.log("before " + this.paletteBin[this.paletteBinOffset + i*2].toString(2).padStart(8) + "" + this.paletteBin[this.paletteBinOffset + i*2 + 1].toString(2).padStart(8));
+    //  console.log("rgba   " + rgba.toString(2).padStart(16) + " r " + color.r.toString(2).padStart(5) + " b " + color.b.toString(2).padStart(5) + " g " + color.g.toString(2).padStart(5));
+    //}
+    rgba = setBits(rgba, convertEndian5(color.r), 11, 15);
+    rgba = setBits(rgba, convertEndian5(color.b), 6, 10);
+    rgba = setBits(rgba, convertEndian5(color.g), 1, 5);
+
+    //if (stp==0) {
+      paletteBin[paletteBinOffset + i*2 + 1] = convertEndian(rgba % 0x100);
+      paletteBin[paletteBinOffset + i*2] = convertEndian(rgba >> 8);
+    //}
+    //if (i==1) {
+    //  console.log("> rgba " + rgba.toString(2).padStart(16) + " r " + color.r.toString(2).padStart(5) + " b " + color.b.toString(2).padStart(5) + " g " + color.g.toString(2).padStart(5));
+    //  console.log("output " + this.paletteBin[this.paletteBinOffset + i*2].toString(2).padStart(8) + "" + this.paletteBin[this.paletteBinOffset + i*2 + 1].toString(2).padStart(8));
+    //}
+
+  }
+
+}
+
+function getHsvRandomFactor() {
+  var hsvRandomFactor = {
+    v: 0.5 + Math.random()*1,
+    h: Math.random()*360,
+    s: 0.5 + Math.random()*3
+  }
+  return hsvRandomFactor;
+}
+
+function applyHSVRandomFactorToRGBArray(rgbArray, hsvRandomFactor) {
+  var count = 0;
+  rgbArray.forEach(color=> {
+    var hsv = rgbToHsv(color);
+      hsv.v = Math.min(1, Math.max(0, hsv.v * hsvRandomFactor.v));
+      hsv.h = (hsv.h + hsvRandomFactor.h) % 360;
+      hsv.s = Math.min(1, Math.max(0, hsv.s * hsvRandomFactor.s));
+      var newColor = hsvToRgb(hsv);
+      color.r=newColor.r;
+      color.g=newColor.g;
+      color.b=newColor.b;
+  });
+  return rgbArray;
+}
+
 class TIMTextureFile {
   constructor(bin) {
     this.bin = bin;
     if (this.bin) {
-      var magic = getUInt32(this.bin, 0x0);
+      var cursor = 0;
+
+      this.entries = [];
+
+      do {
+
+      var magic = getUInt32(this.bin, cursor + 0x0);
       if (magic != 0x10) {
         //console.log("Texture not a texture magic=" + magic);
         return;
       }
-      var colorType = getUInt32(this.bin, 0x4);
-      var imageOffset = getUInt32(this.bin, 0x8);
+
+      var colorType = getUInt32(this.bin, cursor + 0x4);
+
+      cursor += 0x08;
+      var imageOffset = getUInt32(this.bin, cursor);
       var bitsPerPalleteEntry = colorType == 0x08? 4 : colorType == 0x09? 8 : 16; 
-      var palleteOrgX = getUInt16(this.bin, 0xc);
-      var palleteOrgY = getUInt16(this.bin, 0xe);
-      var palette_colors = getUInt16(this.bin, 0x10);
-      var nb_palettes = getUInt16(this.bin, 0x12);
+      var palleteOrgX = getUInt16(this.bin, cursor + 0x4);
+      var palleteOrgY = getUInt16(this.bin, cursor + 0x6);
+      var palette_colors = getUInt16(this.bin, cursor + 0x8);
+      var nb_palettes = getUInt16(this.bin, cursor + 0xa);
       var palletesWords = nb_palettes * palette_colors * bitsPerPalleteEntry / 8;
-      var imageWidthIn16BitWords = getUInt16(this.bin, imageOffset);
-      var imageHeightInPixels = getUInt16(this.bin, imageOffset + 0x2);
+      var paletteBinOffset = cursor + 0xc;
+
+      var imageWidthIn16BitWords = getUInt16(this.bin, imageOffset + cursor + 0x8);
+      var imageHeightInPixels = getUInt16(this.bin, imageOffset + cursor + 0xa);
+
+      var imageStart = imageOffset + cursor + 0xc;
+
+      var imageBytesSize = imageWidthIn16BitWords * 2 * imageHeightInPixels;
+
+      if (palette_colors == 0x100 && colorType == 0x09) {
+        this.entries.push({
+          paletteBinOffset: paletteBinOffset,
+          paletteBin: this.bin
+        });
+      }
       
-      console.log("Texture magic=" + magic + " colorType=" + colorType + " imageOffset=" + imageOffset + " bitsPerPalleteEntry=" + bitsPerPalleteEntry + " palette_colors=" + palette_colors
+      console.log("Texture cursor=" + cursor.toString(16) + " magic=" + magic + " colorType=" + colorType + " imageOffset=" + imageOffset + " bitsPerPalleteEntry=" + bitsPerPalleteEntry + " palette_colors=" + palette_colors
         + " palleteOrgX=" + palleteOrgX + " palleteOrgY=" + palleteOrgY
         + " imageWidthIn16BitWords=" + imageWidthIn16BitWords + " imageHeightInPixels=" + imageHeightInPixels
         + " nb_palettes=" + nb_palettes + " palletesWords=" + palletesWords
         + " textureSize=" + this.bin.length);
+
+      cursor = imageStart+imageBytesSize;
+
+      } while(cursor < this.bin.length);
       
       //0x3c
       //0x3e
     }
+  }
+
+  randomize() {
+    if (!this.entries) {
+      return;
+    }
+    var hsvRandomFactor = getHsvRandomFactor();
+    this.entries.forEach(entry => {
+      setRGBArray(applyHSVRandomFactorToRGBArray(getRGBArray(entry.paletteBin, entry.paletteBinOffset), hsvRandomFactor),
+        entry.paletteBin, entry.paletteBinOffset);
+    });
   }
 }
 
@@ -253,44 +362,11 @@ class RTIM {
   }
 
   getRGBArray() {
-    var colors = [];
-    for (var i=0;i<0x200;i+=2) {
-      var rgba = (convertEndian(this.paletteBin[this.paletteBinOffset + i]) << 8) + convertEndian(this.paletteBin[this.paletteBinOffset + i + 1]);
-      colors.push({
-        r: convertEndian5(extractBits(rgba, 11, 15)),
-        b: convertEndian5(extractBits(rgba, 6, 10)),
-        g: convertEndian5(extractBits(rgba, 1, 5))
-      });
-    }
-    return colors;
+    return getRGBArray(this.paletteBin, this.paletteBinOffset);
   }
 
   setRGBArray(colors) {
-    for (var i=0;i<0x100;i+=1) {
-      var color = colors[i];
-      var rgba = (convertEndian(this.paletteBin[this.paletteBinOffset + i*2]) << 8) + convertEndian(this.paletteBin[this.paletteBinOffset + i*2 + 1]);
-
-      color.r = Math.max(1, Math.min(31, color.r));
-      color.b = Math.max(1, Math.min(31, color.b));
-      color.g = Math.max(1, Math.min(31, color.g));
-
-      //if (i==1) {
-      //  console.log("before " + this.paletteBin[this.paletteBinOffset + i*2].toString(2).padStart(8) + "" + this.paletteBin[this.paletteBinOffset + i*2 + 1].toString(2).padStart(8));
-      //  console.log("rgba   " + rgba.toString(2).padStart(16) + " r " + color.r.toString(2).padStart(5) + " b " + color.b.toString(2).padStart(5) + " g " + color.g.toString(2).padStart(5));
-      //}
-      rgba = setBits(rgba, convertEndian5(color.r), 11, 15);
-      rgba = setBits(rgba, convertEndian5(color.b), 6, 10);
-      rgba = setBits(rgba, convertEndian5(color.g), 1, 5);
-
-      this.paletteBin[this.paletteBinOffset + i*2 + 1]     = convertEndian(rgba % 0x100);
-      this.paletteBin[this.paletteBinOffset + i*2] = convertEndian(rgba >> 8);
-      //if (i==1) {
-      //  console.log("> rgba " + rgba.toString(2).padStart(16) + " r " + color.r.toString(2).padStart(5) + " b " + color.b.toString(2).padStart(5) + " g " + color.g.toString(2).padStart(5));
-      //  console.log("output " + this.paletteBin[this.paletteBinOffset + i*2].toString(2).padStart(8) + "" + this.paletteBin[this.paletteBinOffset + i*2 + 1].toString(2).padStart(8));
-      //}
-
-    }
-
+    return setRGBArray(colors, this.paletteBin, this.paletteBinOffset);
   }
 
   writeAsTIM(fileName) {
@@ -422,6 +498,19 @@ class TFormatPart {
     } while(cursor<this.bin.length);
 
     return product;
+  }
+
+  processRandomizeAndWriteRTIM() {
+    var files = this.extractRTIM();
+    var counter = 0;
+
+    var hsvRandomFactor = getHsvRandomFactor();
+
+    files.forEach(rtim => {
+      rtim.setRGBArray(applyHSVRandomFactorToRGBArray(rtim.getRGBArray(), hsvRandomFactor));
+      rtim.writeAsTIM(this.fileName + "."+ (counter++) +".tim");
+    });
+    this.setCheckSum();
   }
 
   trySizedMix() {
