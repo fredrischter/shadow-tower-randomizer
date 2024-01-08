@@ -594,17 +594,30 @@
     areasByOriginalIndex[this.index] = this;
   }
 
-  setup(FDAT) {
+  isBossArea() {
+    return this.logo_index == 331
+      || this.logo_index == 371
+      || this.logo_index == 181
+      || this.logo_index == 171
+      || this.logo_index == 381
+      || this.logo_index == 231;
+  }
+
+  setup(FDAT, params) {
     this.tiles_file = FDAT.files[this.tiles_index];
     this.map_file = FDAT.files[this.map_index];
     this.texture_file = FDAT.files[this.texture_index];
 
-    this.texture_file.processRandomizeAndWriteRTIM();
+    this.texture_file.processRandomizeAndWriteRTIM(
+      this.isBossArea() ? params.colorRandomizationBossRooms : params.colorRandomizationGeneral,
+      params.colorValueFactor,
+      0.3);
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;
     }
     console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index + " map index " + this.index);
+    console.log("\n params " + JSON.stringify(params));
 
   /*
   0-entity and entity data
@@ -2167,7 +2180,7 @@
     return str;
   }
 
-  function loadCreatureTextureFiles(stDir) {
+  function loadCreatureTextureFiles(stDir, params) {
     // model files
     let modelFileNames = [
       stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M00.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M01.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M02.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M03.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M04.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M05.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M06.T",stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M07.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M08.T", stDir + path.sep + "ST" + path.sep + "CHR0" + path.sep + "M09.T",
@@ -2198,7 +2211,7 @@
               console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
 
               creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
-              creature.texture.randomize();
+              creature.texture.randomize(params.colorRandomizationCreatures, params.colorValueFactor);
               creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
 
         modelFile.files[c*5+2].setCheckSum();
@@ -2210,7 +2223,7 @@
     }
   }
 
-  function setup(FDAT, stDir) {
+  function setup(FDAT, stDir, params) {
 
     console.log("\n** Item info dump");
     for (var i in items) {
@@ -2219,10 +2232,10 @@
 
     console.log("\n** Map info dump");
     for (var i in areas) {
-      areas[i].setup(FDAT);
+      areas[i].setup(FDAT, params);
     }
 
-    loadCreatureTextureFiles(stDir);
+    loadCreatureTextureFiles(stDir, params);
 
     fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
 

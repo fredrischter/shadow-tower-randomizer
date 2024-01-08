@@ -15,7 +15,7 @@ function map_texture_extract(fileName) {
 	}
 	var tfilePart = new TFILEReader(fileName).readTFormatPart(0);
 
-	tfilePart.processRandomizeAndWriteRTIM();
+	tfilePart.processRandomizeAndWriteRTIM(1, 1);
 
 }
 

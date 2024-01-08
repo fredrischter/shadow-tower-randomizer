@@ -103,14 +103,6 @@ function randomize(paramsFile, stDir) {
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
     var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
     var tfile = new TFILEReader(tFilePath).readTFormat();
-    data_model.setup(tfile, stDir);
-
-    const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
-    //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
-    console.log = function() {
-        //logFile2.write(util.format.apply(null, arguments) + '\n');
-        fs.writeSync(logFile2, util.format.apply(null, arguments) + '\n')
-    }
 
     if (params.seed) {
         seedRandom(params.seed);
@@ -118,6 +110,15 @@ function randomize(paramsFile, stDir) {
     } else {
         var seed = useRandomSeed();
         console.log("Randomization - Using generated seed " + seed);
+    }
+
+    data_model.setup(tfile, stDir, params);
+
+    const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
+    //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
+    console.log = function() {
+        //logFile2.write(util.format.apply(null, arguments) + '\n');
+        fs.writeSync(logFile2, util.format.apply(null, arguments) + '\n')
     }
     console.log("Parameters - " + JSON.stringify(params));
 

@@ -256,12 +256,16 @@ function setRGBArray(colors, paletteBin, paletteBinOffset) {
 
 }
 
-function getHsvRandomFactor() {
+function getHsvRandomFactor(randomizationFactor, colorValueFactor, defaultRandomizationFactor) {
+  randomizationFactor = randomizationFactor == undefined ? defaultRandomizationFactor : randomizationFactor;
+  colorValueFactor = colorValueFactor == undefined ? 1 : colorValueFactor;
+
   var hsvRandomFactor = {
-    v: 0.5 + Math.random()*1,
-    h: Math.random()*360,
-    s: 0.5 + Math.random()*3
+    v: 1 + Math.sin(Math.random() * Math.PI) * 0.5 * randomizationFactor,
+    h: Math.random() * 360 * randomizationFactor,
+    s: (1 + Math.sin(Math.random() * Math.PI) * 3 * randomizationFactor)*colorValueFactor
   }
+
   return hsvRandomFactor;
 }
 
@@ -272,6 +276,11 @@ function applyHSVRandomFactorToRGBArray(rgbArray, hsvRandomFactor) {
       hsv.v = Math.min(1, Math.max(0, hsv.v * hsvRandomFactor.v));
       hsv.h = (hsv.h + hsvRandomFactor.h) % 360;
       hsv.s = Math.min(1, Math.max(0, hsv.s * hsvRandomFactor.s));
+
+      //hsv.v = 1;
+      //hsv.h = 0;
+      //hsv.s = 1;
+
       var newColor = hsvToRgb(hsv);
       color.r=newColor.r;
       color.g=newColor.g;
@@ -318,6 +327,7 @@ class TIMTextureFile {
       if (palette_colors == 0x100 && colorType == 0x09) {
         this.entries.push({
           paletteBinOffset: paletteBinOffset,
+          paletteColors: palette_colors,
           paletteBin: this.bin
         });
       }
@@ -337,11 +347,11 @@ class TIMTextureFile {
     }
   }
 
-  randomize() {
+  randomize(randomizationFactor, colorValueFactor) {
     if (!this.entries) {
       return;
     }
-    var hsvRandomFactor = getHsvRandomFactor();
+    var hsvRandomFactor = getHsvRandomFactor(randomizationFactor, colorValueFactor, 0.3);
     this.entries.forEach(entry => {
       setRGBArray(applyHSVRandomFactorToRGBArray(getRGBArray(entry.paletteBin, entry.paletteBinOffset), hsvRandomFactor),
         entry.paletteBin, entry.paletteBinOffset);
@@ -500,11 +510,11 @@ class TFormatPart {
     return product;
   }
 
-  processRandomizeAndWriteRTIM() {
+  processRandomizeAndWriteRTIM(randomizationFactor, colorValueFactor, defaultRandomizationFactor) {
     var files = this.extractRTIM();
     var counter = 0;
 
-    var hsvRandomFactor = getHsvRandomFactor();
+    var hsvRandomFactor = getHsvRandomFactor(randomizationFactor, colorValueFactor, defaultRandomizationFactor);
 
     files.forEach(rtim => {
       rtim.setRGBArray(applyHSVRandomFactorToRGBArray(rtim.getRGBArray(), hsvRandomFactor));
