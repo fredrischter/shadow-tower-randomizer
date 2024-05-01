@@ -11,8 +11,15 @@ if (!file) {
 	return;
 }
 
+for (var i = 2; i < process.argv.length; i++) {
+	if (process.argv[i] == "toNotGenerateImages") {
+		global.toNotGenerateImages = true;
+		console.log("toNotGenerateImages parameter");
+	}
+}
+
 var originalParamsFile = process.argv[3];
-if (!originalParamsFile) {
+if (!originalParamsFile || originalParamsFile=="toNotGenerateImages") {
 	console.log("Didn't provide params file as argument. Generating all");
 
 	const params = '.' + path.sep + 'params' + path.sep;
@@ -24,7 +31,7 @@ if (!originalParamsFile) {
 	  function runOne() {
 		var paramsFile = paramsList.shift();
 		if (paramsFile) {
-			var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"';
+			var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"' + (global.toNotGenerateImages ? " toNotGenerateImages" : "");
 			exec(command, function() {
 				runOne();
 			});
@@ -40,13 +47,6 @@ if (!originalParamsFile) {
 	});
 
 	return;
-}
-
-for (var i = 2; i < process.argv.length; i++) {
-	if (process.argv[i] == "toNotGenerateImages") {
-		global.toNotGenerateImages = true;
-		console.log("toNotGenerateImages parameter");
-	}
 }
 
 const params = JSON.parse(fs.readFileSync(originalParamsFile));
