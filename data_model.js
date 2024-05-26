@@ -1455,8 +1455,8 @@
       this.destinationXShift.set(source.destinationXShift.get());
       this.destinationYShift.set(source.destinationYShift.get());
       this.destinationZShift.set(source.destinationZShift.get());
-      this.destinationUnknown1.set(source.destinationUnknown1.get());
-      this.destinationUnknown2.set(source.destinationUnknown2.get());
+      //this.destinationUnknown1.set(source.destinationUnknown1.get());
+      //this.destinationUnknown2.set(source.destinationUnknown2.get());
 
       var origin = this.getExit();
       //console.log("Rotation setting, origin " + JSON.stringify(origin));
