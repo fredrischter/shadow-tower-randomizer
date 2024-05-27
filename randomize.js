@@ -1437,7 +1437,7 @@ function randomize(paramsFile, stDir) {
                     var exitArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(exit.dest));
                     var exitName = normalizeAreaName(area.name)+"/"+exit.id;
                     var exitObj = currentArea.objects[exit.id];
-                    var exitObjText = exit.type == "jump" ? "" : exitObj.destinationRotation.get() + " " + exitObj.destinationYFineShift.get();
+                    var exitObjText = exit.type == "jump" ? "" : "r" + exitObj.destinationRotation.get() + " y" + exitObj.destinationYFineShift.get();
 
                     var chartText = area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
                     + "] -- " + (exitsNames[exitName] || exitName)+ " " + exitObjText + " --> "

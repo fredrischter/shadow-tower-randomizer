@@ -153,6 +153,25 @@ function verifyConsistency(map) {
 	});
 }
 
+function exitsSwap(map, areaName1, exitId1, areaName2, exitId2) {
+  allWays = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}})
+  	).flat(1);
+
+  //allWays.forEach(way => console.error(way.area.name+ " "+ way.exit.id));
+
+  var way1 = allWays.find(way => way.area.name == areaName1 && way.exit.id == exitId1);
+  var way2 = allWays.find(way => way.area.name == areaName2 && way.exit.id == exitId2);
+
+  if (way1 == null || way2 == null) {
+  	console.error("way not found " + way1 + " " + way2);
+	failed = true;
+	process.exit(1);
+  }
+  
+  performSwap(map, way1, way2);
+}
+
+
 function randomPickSwap(map) {
   var typeToPick = Math.random()>0.90 ? 
   	"portal"
@@ -166,7 +185,11 @@ function randomPickSwap(map) {
 
   var way1 = allWays[Math.floor(Math.random()*allWays.length)];
   var way2 = allWays[Math.floor(Math.random()*allWays.length)];
+  
+  performSwap(map, way1, way2);
+}
 
+function performSwap(map, way1, way2) {
   if (way2 == way1) {
   	way2 = allWays[Math.floor(Math.random()*allWays.length)];
   }

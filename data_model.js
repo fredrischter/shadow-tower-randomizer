@@ -608,10 +608,10 @@
     this.map_file = FDAT.files[this.map_index];
     this.texture_file = FDAT.files[this.texture_index];
 
-    //this.texture_file.processRandomizeAndWriteRTIM(
-    //  this.isBossArea() ? params.colorRandomizationBossRooms : params.colorRandomizationGeneral,
-    //  params.colorValueFactor,
-    //  0.3);
+    this.hsvRandomShift = this.texture_file.processRandomizeAndWriteRTIM(
+      params.colorRandomization,
+      params.colorValueFactor,
+      0.3);
 
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;
@@ -2211,7 +2211,7 @@
               console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
 
               creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
-              //creature.texture.randomize(params.colorRandomizationCreatures, params.colorValueFactor);
+              creature.texture.randomize(areasByOriginalIndex[i].hsvRandomShift);
               creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
 
         modelFile.files[c*5+2].setCheckSum();
