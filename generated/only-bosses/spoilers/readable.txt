@@ -1,5 +1,4 @@
-Randomization - Using given seed 1234567890
-Parameters - {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1234567890","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+Parameters - {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 DEBUG ------------------ Randomization engine - Defining map
 DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
 

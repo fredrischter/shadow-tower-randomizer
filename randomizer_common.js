@@ -256,26 +256,26 @@ function setRGBArray(colors, paletteBin, paletteBinOffset) {
 
 }
 
-function getHsvRandomFactor(randomizationFactor, colorValueFactor, defaultRandomizationFactor) {
+function getHsvRandomShift(randomizationFactor, colorValueFactor, defaultRandomizationFactor) {
   randomizationFactor = randomizationFactor == undefined ? defaultRandomizationFactor : randomizationFactor;
   colorValueFactor = colorValueFactor == undefined ? 1 : colorValueFactor;
 
-  var hsvRandomFactor = {
-    v: 1 + Math.sin(Math.random() * Math.PI) * 0.5 * randomizationFactor,
+  var hsvRandomShift = {
+    v: 0,// + Math.sin(Math.random() * Math.PI) * 0.5 * randomizationFactor,
     h: Math.random() * 360 * randomizationFactor,
-    s: (1 + Math.sin(Math.random() * Math.PI) * 3 * randomizationFactor)*colorValueFactor
+    s: 0,//(1 + Math.sin(Math.random() * Math.PI) * 3 * randomizationFactor)*colorValueFactor
   }
 
-  return hsvRandomFactor;
+  return hsvRandomShift;
 }
 
-function applyHSVRandomFactorToRGBArray(rgbArray, hsvRandomFactor) {
+function applyHSVRandomShiftToRGBArray(rgbArray, hsvRandomShift) {
   var count = 0;
   rgbArray.forEach(color=> {
     var hsv = rgbToHsv(color);
-      hsv.v = Math.min(1, Math.max(0, hsv.v * hsvRandomFactor.v));
-      hsv.h = (hsv.h + hsvRandomFactor.h) % 360;
-      hsv.s = Math.min(1, Math.max(0, hsv.s * hsvRandomFactor.s));
+      hsv.v = Math.min(1, Math.max(0, hsv.v + hsvRandomShift.v));
+      hsv.h = (hsv.h + hsvRandomShift.h) % 360;
+      hsv.s = Math.min(1, Math.max(0, hsv.s + hsvRandomShift.s));
 
       //hsv.v = 1;
       //hsv.h = 0;
@@ -347,13 +347,13 @@ class TIMTextureFile {
     }
   }
 
-  randomize(randomizationFactor, colorValueFactor) {
+  randomize(hsvRandomShift) {
     if (!this.entries) {
       return;
     }
-    var hsvRandomFactor = getHsvRandomFactor(randomizationFactor, colorValueFactor, 0.3);
+    //var hsvRandomShift = getHsvRandomShift(randomizationFactor, colorValueFactor, 0.3);
     this.entries.forEach(entry => {
-      setRGBArray(applyHSVRandomFactorToRGBArray(getRGBArray(entry.paletteBin, entry.paletteBinOffset), hsvRandomFactor),
+      setRGBArray(applyHSVRandomShiftToRGBArray(getRGBArray(entry.paletteBin, entry.paletteBinOffset), hsvRandomShift),
         entry.paletteBin, entry.paletteBinOffset);
     });
   }
@@ -514,13 +514,15 @@ class TFormatPart {
     var files = this.extractRTIM();
     var counter = 0;
 
-    var hsvRandomFactor = getHsvRandomFactor(randomizationFactor, colorValueFactor, defaultRandomizationFactor);
+    var hsvRandomShift = getHsvRandomShift(randomizationFactor, colorValueFactor, defaultRandomizationFactor);
 
     files.forEach(rtim => {
-      rtim.setRGBArray(applyHSVRandomFactorToRGBArray(rtim.getRGBArray(), hsvRandomFactor));
+      rtim.setRGBArray(applyHSVRandomShiftToRGBArray(rtim.getRGBArray(), hsvRandomShift));
       rtim.writeAsTIM(this.fileName + "."+ (counter++) +".tim");
     });
     this.setCheckSum();
+
+    return hsvRandomShift;
   }
 
   trySizedMix() {

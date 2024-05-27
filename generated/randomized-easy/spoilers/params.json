@@ -7,5 +7,6 @@
 	"randomizeCollectablesAndDrops": true,
 	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
 	"randomizeNonEssentialKeys": true,
-	"seed": "1234567890"
+	"seed": "",
+	"colorValueFactor": 2
 }

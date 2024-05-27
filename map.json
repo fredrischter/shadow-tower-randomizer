@@ -82,7 +82,7 @@
         "rotation": 0
       },
       {
-        "id": "4",
+        "id": "5",
         "dest": "fire_world_phoenix_cave",
         "world": "fire_world",
         "wayBackId": "0",
@@ -117,7 +117,7 @@
         "rotation": 1
       },
       {
-        "id": "5",
+        "id": "4",
         "dest": "fire_world_phoenix_cave",
         "world": "fire_world",
         "wayBackId": "1",
@@ -554,14 +554,14 @@
       {
         "id": "0",
         "dest": "shadow_tower_part2a",
-        "wayBackId": "4",
+        "wayBackId": "5",
         "type": "door",
         "rotation": 0
       },
       {
         "id": "1",
         "dest": "shadow_tower_part2b",
-        "wayBackId": "5",
+        "wayBackId": "4",
         "type": "door",
         "rotation": 0
       }

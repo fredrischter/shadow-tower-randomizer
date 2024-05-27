@@ -2,5 +2,9 @@
 	"label": "no-change",
 	"preset": "no-change",
 	"difficulty": "medium",
-	"seed": "1234567890"
+	"seed": "",
+	"colorRandomizationGeneral": 0,
+	"colorRandomizationBossRooms": 0,
+	"colorRandomizationCreatures": 0,
+	"colorValueFactor": 1
 }

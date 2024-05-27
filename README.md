@@ -14,12 +14,14 @@ export NODE_OPTIONS=--max_old_space_size=4096
 
 # Setup Windows
 
-- Install npm (NodeJS).
+- Download and install NodeJS
 
-- Go to repo folder via cmd and run:
+- Clone/download this repository
+
+- In your terminal in the cloned repo folder run:
 npm install
 
-- Download, extract and add bin to env path https://github.com/Lameguy64/mkpsxiso/releases/latest
+- Download, extract and add bin to path LameGuy64's MKPSXISO https://github.com/Lameguy64/mkpsxiso/releases/latest
 You'll end up with programs available mkpsxiso and dumpsxiso.
 
 # Functionality

@@ -31,7 +31,7 @@ if (!originalParamsFile || originalParamsFile.indexOf("-toNotGenerateImages")!=-
 	  function runOne() {
 		var paramsFile = paramsList.shift();
 		if (paramsFile) {
-			var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"';
+			var command = 'npm run mod "' + file + '" "' + params + paramsFile + '"' + (global.toNotGenerateImages ? " toNotGenerateImages" : "");
 			exec(command, function() {
 				runOne();
 			});

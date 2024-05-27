@@ -16,13 +16,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.11.2",
-    "eol": "^0.9.1",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "seedrandom": "^3.0.5",
-    "string.prototype.replaceall": "^1.0.9",
-    "util": "^0.12.5",
-    "uuidv4": "^6.2.13"
+    "canvas": "2.11.2",
+    "eol": "0.9.1",
+    "fs": "0.0.1-security",
+    "path": "0.12.7",
+    "seedrandom": "3.0.5",
+    "string.prototype.replaceall": "1.0.9",
+    "util": "0.12.5",
+    "uuidv4": "6.2.13"
   }
 }

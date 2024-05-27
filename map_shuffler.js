@@ -153,6 +153,25 @@ function verifyConsistency(map) {
 	});
 }
 
+function exitsSwap(map, areaName1, exitId1, areaName2, exitId2) {
+  allWays = map.map(area => area.exits.map(function(exit) { return {"area": area, "exit": exit}})
+  	).flat(1);
+
+  //allWays.forEach(way => console.error(way.area.name+ " "+ way.exit.id));
+
+  var way1 = allWays.find(way => way.area.name == areaName1 && way.exit.id == exitId1);
+  var way2 = allWays.find(way => way.area.name == areaName2 && way.exit.id == exitId2);
+
+  if (way1 == null || way2 == null) {
+  	console.error("way not found " + way1 + " " + way2);
+	failed = true;
+	process.exit(1);
+  }
+  
+  performSwap(map, way1, way2);
+}
+
+
 function randomPickSwap(map) {
   var typeToPick = Math.random()>0.90 ? 
   	"portal"
@@ -166,7 +185,11 @@ function randomPickSwap(map) {
 
   var way1 = allWays[Math.floor(Math.random()*allWays.length)];
   var way2 = allWays[Math.floor(Math.random()*allWays.length)];
+  
+  performSwap(map, way1, way2);
+}
 
+function performSwap(map, way1, way2) {
   if (way2 == way1) {
   	way2 = allWays[Math.floor(Math.random()*allWays.length)];
   }
@@ -265,10 +288,25 @@ function shuffle(params) {
 			var generated=JSON.parse(JSON.stringify(lastValidMap.map));
 
 			if (params.randomizeMap) {
-				for (var i=0;i<100;i++) {
-					//rotateDoors(generated); cause bug, would need to revert in case of problematic rotate
-					randomPickSwap(generated);			
-				}
+				
+				exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "9"); 
+
+				// shadow_tower_part3a options 
+				exitsSwap(generated, "shadow_tower_part2b", "4", "water_world_impure_pool_area", "11");
+				//exitsSwap(generated, "shadow_tower_part2b", "4", "water_world_sunken_river_area", "1");
+				//exitsSwap(generated, "shadow_tower_part2b", "4", "illusion_world_gloomy_domain", "1");
+				//exitsSwap(generated, "shadow_tower_part2b", "4", "monster_world_false_eye_area", "9");
+				//exitsSwap(generated, "shadow_tower_part2b", "4", "monster_world_screeching_area", "0");
+				//exitsSwap(generated, "shadow_tower_part2b", "4", "death_world_dark_castle_layer", "2");
+				//exitsSwap(generated, "shadow_tower_part2b", "4", "death_world_lingering_curse_layer", "1");
+
+				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_sunken_river_area", "1");  // ok
+				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "11"); // ok
+
+				//for (var i=0;i<100;i++) {
+				//			//rotateDoors(generated); cause bug, would need to revert in case of problematic rotate
+				//	randomPickSwap(generated);
+				//}
 			}
 
 			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
