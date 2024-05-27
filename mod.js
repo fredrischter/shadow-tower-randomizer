@@ -11,8 +11,15 @@ if (!file) {
 	return;
 }
 
+for (var i = 2; i < process.argv.length; i++) {
+	if (process.argv[i] == "-toNotGenerateImages") {
+		global.toNotGenerateImages = true;
+		console.log("toNotGenerateImages parameter");
+	}
+}
+
 var originalParamsFile = process.argv[3];
-if (!originalParamsFile) {
+if (!originalParamsFile || originalParamsFile.indexOf("-toNotGenerateImages")!=-1) {
 	console.log("Didn't provide params file as argument. Generating all");
 
 	const params = '.' + path.sep + 'params' + path.sep;
@@ -40,13 +47,6 @@ if (!originalParamsFile) {
 	});
 
 	return;
-}
-
-for (var i = 2; i < process.argv.length; i++) {
-	if (process.argv[i] == "toNotGenerateImages") {
-		global.toNotGenerateImages = true;
-		console.log("toNotGenerateImages parameter");
-	}
 }
 
 const params = JSON.parse(fs.readFileSync(originalParamsFile));
@@ -92,7 +92,7 @@ exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor 
 
 	exec('npm run unpack "' + filesFullPath + '"', function() {
 
-		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' toNotGenerateImages':''), function() {
+		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' -toNotGenerateImages':''), function() {
 
 			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 

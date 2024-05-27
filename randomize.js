@@ -7,11 +7,12 @@ const randomizer_map = require('./randomizer_map');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
+const replaceAll = require('string.prototype.replaceall');
 
 function randomize(paramsFile, stDir) {
 
     for (var i = 2; i < process.argv.length; i++) {
-        if (process.argv[i] == "toNotGenerateImages") {
+        if (process.argv[i] == "-toNotGenerateImages") {
             global.toNotGenerateImages = true;
         }
     }
@@ -1425,7 +1426,9 @@ function randomize(paramsFile, stDir) {
         area.writeMapImage(createCanvas, mapFolder);
         var summary = "";
         for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
-        mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary.replaceAll(" ","&nbsp;").replaceAll("span&nbsp;style", "span style"));
+        summary = replaceAll(summary," ","&nbsp;");
+        summary = replaceAll(summary, "span&nbsp;style", "span style");
+        mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
 
         area.reinjectEntityDataFromCreaturesToFile();
     }

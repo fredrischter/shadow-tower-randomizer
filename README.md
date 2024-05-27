@@ -37,6 +37,12 @@ FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
 Replace st.bin by your image file.
 
 ```
+npm run mod ".\generated\st.bin" -toNotGenerateImages
+```
+
+Or each preset individually:
+
+```
 npm run mod ".\generated\st.bin" ".\params\bonanza.json"
 npm run mod ".\generated\st.bin" ".\params\comedy.json"
 npm run mod ".\generated\st.bin" ".\params\scary-game.json"
