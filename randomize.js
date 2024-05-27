@@ -1238,17 +1238,17 @@ function randomize(paramsFile, stDir) {
         // Randomize creatures
         if (params.randomizeCreatures) {
             // set all creatures to slime
-            //for (var i in allRandomizableCreatures) {
-            //    setCreature(allRandomizableCreatures[i], human_world_solitary_region["01_acid_slime"], changeSet);
-            //}
+            for (var i in allRandomizableCreatures) {
+                setCreature(allRandomizableCreatures[i], human_world_solitary_region["01_acid_slime"], changeSet);
+            }
 
             //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
             
-            for (var i =0; i<300; i++) {
-                var creature1 = randomElement(allRandomizableCreatures);
-                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
-                swapCreatures(creature1, creature2, changeSet);
-            }
+            //for (var i =0; i<300; i++) {
+            //    var creature1 = randomElement(allRandomizableCreatures);
+            //    var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
+            //    swapCreatures(creature1, creature2, changeSet);
+            //}
         }
 
         // ------- Empty game
