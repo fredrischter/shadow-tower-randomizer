@@ -1,4 +1,4 @@
-Randomization - Using generated seed b7cabc2d-5ae9-451f-a8cc-99bb515d9c21
+Randomization - Using given seed 1
 
 ** Item info dump
 ba90  1397290    item_0_short_sword               ff  2  0  8  0  0  0  2  0  0 40  0  0  6  0  0  c 4e  0  0 30  9  7  0  0  0  0  0  0  0  0  0  0  0  0  0  b  0  6  c  a  0  0  0
@@ -2433,7 +2433,7 @@ Writing TIM file 232384 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area shadow_tower_part1 in FDAT file index 4 map index 0
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -2773,7 +2773,7 @@ Writing TIM file 259904 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area human_world_solitary_region in FDAT file index 44 map index 4
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -3155,7 +3155,7 @@ Writing TIM file 269760 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area human_world_hidden_region in FDAT file index 54 map index 5
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -3523,7 +3523,7 @@ Writing TIM file 268736 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area human_world_forgotten_region in FDAT file index 64 map index 6
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -3851,7 +3851,7 @@ Writing TIM file 34944 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area human_world_cursed_region in FDAT file index 14 map index 1
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -4176,7 +4176,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area earth_world_rotting_cavern in FDAT file index 114 map index 11
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -4627,7 +4627,7 @@ Writing TIM file 276800 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area earth_world_poisonous_cavern in FDAT file index 274 map index 27
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -4979,7 +4979,7 @@ Writing TIM file 260416 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area earth_world_quaking_cavern in FDAT file index 124 map index 12
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -5294,7 +5294,7 @@ Writing TIM file 34400 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area earth_world_false_pit_cavern in FDAT file index 154 map index 15
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -5605,7 +5605,7 @@ Writing TIM file 39648 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area earth_world_stone_cavern in FDAT file index 284 map index 28
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -6066,7 +6066,7 @@ Writing TIM file 269248 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area earth_world_hostile_rock_cavern in FDAT file index 334 map index 33
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -6868,7 +6868,7 @@ Writing TIM file 235584 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area water_world_impure_pool_area in FDAT file index 104 map index 10
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -7315,7 +7315,7 @@ Writing TIM file 94400 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area water_world_sunken_river_area in FDAT file index 214 map index 21
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -7703,7 +7703,7 @@ Writing TIM file 234816 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area water_world_watery_labyrinth_area in FDAT file index 324 map index 32
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -8036,7 +8036,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area water_world_white_rain_area in FDAT file index 374 map index 37
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -8623,7 +8623,7 @@ Writing TIM file 171200 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area fire_world_phoenix_cave in FDAT file index 34 map index 3
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -9085,7 +9085,7 @@ Writing TIM file 121920 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area fire_world_burning_cavern in FDAT file index 204 map index 20
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -9658,7 +9658,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area fire_world_molten_cavern in FDAT file index 244 map index 24
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -9971,7 +9971,7 @@ Writing TIM file 26208 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area fire_world_ashen_cavern in FDAT file index 184 map index 18
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -10299,7 +10299,7 @@ Writing TIM file 38496 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area monster_world_false_eye_area in FDAT file index 24 map index 2
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -10800,7 +10800,7 @@ Writing TIM file 236480 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area monster_world_screeching_area in FDAT file index 174 map index 17
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -11140,7 +11140,7 @@ Writing TIM file 256320 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area illusion_world_bewilderment_domain in FDAT file index 84 map index 8
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -11439,7 +11439,7 @@ Writing TIM file 5184 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_P
 
 Setup Area illusion_world_gloomy_domain in FDAT file index 94 map index 9
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -11757,7 +11757,7 @@ Writing TIM file 67264 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_
 
 Setup Area illusion_world_dream_domain in FDAT file index 384 map index 38
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -12129,7 +12129,7 @@ Writing TIM file 206816 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area illusion_world_worship_domain in FDAT file index 134 map index 13
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -12471,7 +12471,7 @@ Writing TIM file 264512 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area death_world_dark_castle_layer in FDAT file index 254 map index 25
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -12766,7 +12766,7 @@ Writing TIM file 9280 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T_P
 
 Setup Area death_world_lingering_curse_layer in FDAT file index 144 map index 14
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -13143,7 +13143,7 @@ Writing TIM file 268736 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area death_world_undead_layer in FDAT file index 264 map index 26
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -13447,7 +13447,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area death_world_gate_of_the_dead in FDAT file index 234 map index 23
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -15873,7 +15873,7 @@ Writing TIM file 232384 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area shadow_tower_part2 in FDAT file index 404 map index 40
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -18266,7 +18266,7 @@ Writing TIM file 232384 bytes to .\generated\only-bosses\extracted\ST\COM\FDAT.T
 
 Setup Area shadow_tower_part3 in FDAT file index 414 map index 41
 
- params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"only-bosses","preset":"no-change","difficulty":"medium","keepOnlyBosses":true,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----

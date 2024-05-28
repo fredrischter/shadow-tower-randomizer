@@ -8,7 +8,7 @@
 	"removeDirectiveRemovalOfHPMPRecovery": true,
 	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
 	"randomizeNonEssentialKeys": true,
-	"seed": "",
+	"seed": "1",
 	"colorRandomizationGeneral": 1,
 	"colorRandomizationBossRooms": 1,
 	"colorRandomizationCreatures": 2,
