@@ -289,24 +289,24 @@ function shuffle(params) {
 
 			if (params.randomizeMap) {
 				
-				exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "9"); 
+				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "9"); 
 
 				// shadow_tower_part3a options 
-				exitsSwap(generated, "shadow_tower_part2b", "4", "water_world_impure_pool_area", "11");
-				//exitsSwap(generated, "shadow_tower_part2b", "4", "water_world_sunken_river_area", "1");
-				//exitsSwap(generated, "shadow_tower_part2b", "4", "illusion_world_gloomy_domain", "1");
-				//exitsSwap(generated, "shadow_tower_part2b", "4", "monster_world_false_eye_area", "9");
-				//exitsSwap(generated, "shadow_tower_part2b", "4", "monster_world_screeching_area", "0");
+				// exitsSwap(generated, "shadow_tower_part2b", "4", "water_world_impure_pool_area", "11");
+				//2 exitsSwap(generated, "shadow_tower_part2b", "4", "water_world_sunken_river_area", "1");
+				//3 exitsSwap(generated, "shadow_tower_part2b", "4", "illusion_world_gloomy_domain", "1");
+				//4 exitsSwap(generated, "shadow_tower_part2b", "4", "monster_world_false_eye_area", "9");
+				//5 exitsSwap(generated, "shadow_tower_part2b", "4", "monster_world_screeching_area", "0");
 				//exitsSwap(generated, "shadow_tower_part2b", "4", "death_world_dark_castle_layer", "2");
 				//exitsSwap(generated, "shadow_tower_part2b", "4", "death_world_lingering_curse_layer", "1");
 
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_sunken_river_area", "1");  // ok
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "11"); // ok
 
-				//for (var i=0;i<100;i++) {
-				//			//rotateDoors(generated); cause bug, would need to revert in case of problematic rotate
-				//	randomPickSwap(generated);
-				//}
+				for (var i=0;i<100;i++) {
+							//rotateDoors(generated); cause bug, would need to revert in case of problematic rotate
+					randomPickSwap(generated);
+				}
 			}
 
 			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
