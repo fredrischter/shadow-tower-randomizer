@@ -233,6 +233,15 @@ function walk(areas, skipWayBackVerification) {
 		return didSomething;
 	}
 
+	function canEnter(candidateWay) {
+		console.error(" canEnter? " + JSON.stringify(candidateWay));
+		return candidateWay && 
+		         (candidateWay.id == 'jump' ||
+		         (!areasMap[candidateWay.dest][candidateWay.wayBackId].direction 
+			       || areasMap[candidateWay.dest][candidateWay.wayBackId].direction != "exit")
+		       );
+	}
+
 	//When enter a door addKnownPath: 
 	function addKnownPath(previousArea, way) {
 		var addedNew = false;
@@ -353,10 +362,14 @@ function walk(areas, skipWayBackVerification) {
 				if (knownUndiscoveredWays) {
 	
 					//explain(" >> All exits to choose from. Trying to the first: " + JSON.stringify(knownUndiscoveredWays.exits));
-					choosenWay = knownUndiscoveredWays.exits[0];
-					if (choosenWay && choosenWay.dest == "water_world_sunken_river_area") {
-						//explain(" >> Choosen to go to water_world_sunken_river_area. " + JSON.stringify(choosenWay));
+					var candidateWay = knownUndiscoveredWays.exits[0];
+
+					if (canEnter(candidateWay)) {
+						choosenWay = candidateWay;
 					}
+					//if (choosenWay && choosenWay.dest == "water_world_sunken_river_area") {
+						//explain(" >> Choosen to go to water_world_sunken_river_area. " + JSON.stringify(choosenWay));
+					//}
 				}
 
 			}
@@ -383,12 +396,15 @@ function walk(areas, skipWayBackVerification) {
 			path = getShorterPathToKnownUndiscoveredWays(currentArea);
 			if (path) {
 				//explain("Got to go by " + JSON.stringify(path));
-				choosenWay = path[0];
-				desiredDestination = choosenWay.dest;
-				if (choosenWay && choosenWay.dest == "water_world_sunken_river_area") {
-					//explain(" >> Choosen to go to water_world_sunken_river_area. " + JSON.stringify(choosenWay) + ", to go path " + JSON.stringify(path));
+				if (canEnter(path[0])) {
+					choosenWay = path[0];
+					desiredDestination = choosenWay.dest;					
 				}
-			} else {
+				//if (choosenWay && choosenWay.dest == "water_world_sunken_river_area") {
+					//explain(" >> Choosen to go to water_world_sunken_river_area. " + JSON.stringify(choosenWay) + ", to go path " + JSON.stringify(path));
+				//}
+			} 
+			if (!choosenWay) {
 				break;
 			}
 		}
