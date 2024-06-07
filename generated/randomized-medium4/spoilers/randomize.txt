@@ -20164,336 +20164,336 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\randomi
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-medium4\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\randomized-medium4\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-medium4\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
-Exit for chart shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top r0 y0 --> human_world_solitary_region[Human World
-Solitary Region]
- 0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  4),rot(  0),fineY(  0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
-Exit for chart human_world_solitary_region[Human World
-Solitary Region] -- Skeleton r2 y0 --> earth_world_stone_cavern[Earth World
+Exit for chart shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top r1 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+ 0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> death_world_dark_castle_layer      pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  1),fineY(  0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   a  ff   4   0   0  19   1   0
+Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Top r2 y0 --> water_world_sunken_river_area[Water World
+Sunken River Area]
+ 5    5b68     21368 exit-door                                  tile(  43,  47,  3a) Top           -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  2),fineY(  0)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0   0   0   9   0   0  15   2   0
+Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Middle r0 y0 --> earth_world_stone_cavern[Earth World
 Stone Cavern]
- 31   5dd8    25b5d8 exit-door                                  tile(  44,  40,  4e) Skeleton      -> earth_world_stone_cavern           pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  2),fineY(  0)   44  40  4e   0  fc   0   0   0   0   0   0   0   0   0  60   0   0   0   1   0   7  1c   2   0
-Exit for chart human_world_solitary_region[Human World
-Solitary Region] -- Cemetery r1 y0 --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain]
- 34   5e20    25b620 exit-door                                  tile(  47,  40,  4e) Cemetery      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  1),fineY(  0)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0   4   0  ff   0   0   8   1   0
-Exit for chart human_world_solitary_region[Human World
-Solitary Region] -- Grave r1 y0 --> illusion_world_worship_domain[Illusion World
-Worship Domain]
- 35   5e38    25b638 exit-door                                  tile(  49,  42,  47) Grave         -> illusion_world_worship_domain      pos( -4  ,0 ,-4),unknown(  0  ,8),destMapIndex( 13),rot(  1),fineY(  0)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0  fc   0   6   0   8   d   1   0
-Exit for chart human_world_solitary_region[Human World
-Solitary Region] -- Church r0 y-8 --> shadow_tower_part1a[Shadow Tower Part1 A]
- 38   5e80    25b680 exit-door                                  tile(  40,  40,  40) Church        -> shadow_tower_part1a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY( -8)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0   5   3   0   0   0   0   0  f8
-Exit for chart earth_world_stone_cavern[Earth World
-Stone Cavern] -- Entrance r2 y0 --> human_world_solitary_region[Human World
+ 11   5bf8     213f8 exit-door                                  tile(  40,  49,  44) Middle        -> earth_world_stone_cavern           pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  0),fineY(  0)   40  49  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0  f0   5  f7  f6   0  1c   0   0
+Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Edge r0 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+ 9    5bc8     213c8 exit-door                                  tile(  45,  49,  3f) Edge          -> death_world_dark_castle_layer      pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  0),fineY(  0)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   0  f7   1   1  19   0   0
+Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Edge r0 y0 --> human_world_forgotten_region[Human World
+Forgotten Region]
+ 4    5b50     21350 exit-door                                  tile(  3b,  46,  3f) Edge          -> human_world_forgotten_region       pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  0),fineY(  0)   3b  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   0   0   9   0   0  15   0   0
+Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Middle r2 y0 --> human_world_solitary_region[Human World
 Solitary Region]
- 4    4230    db4a30 exit-door                                  tile(  40,  40,  42) Entrance      -> human_world_solitary_region        pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot(  2),fineY(  0)   40  40  42   0  fc   0   0   0   0   0   0   0   0   0   0   0   4   0   d   0   0   4   2   0
-Exit for chart earth_world_stone_cavern[Earth World
-Stone Cavern] -- Exit r3 y0 --> human_world_hidden_region[Human World
+ 8    5bb0     213b0 exit-door                                  tile(  42,  46,  43) Middle        -> human_world_solitary_region        pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  2),fineY(  0)   42  46  43   0  fc   0   0   0   0   0   0  fc   0   0  74   0   a  ff   4   0   0  19   2   0
+Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 
+Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Top left r2 y0 --> monster_world_screeching_area[Monster World
+Screeching Area]
+ 0    5af0   111a2f0 exit-door                                  tile(  40,  41,  45) Top left      -> monster_world_screeching_area      pos( 10  ,0 ,10),unknown(  1  ,1),destMapIndex( 17),rot(  2),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0  bb   1   a   0   3   1   1  11   2   0
+Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Edge r1 y0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain]
+ 5    5b68   111a368 exit-door                                  tile(  46,  43,  3d) Edge          -> illusion_world_gloomy_domain       pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  1),fineY(  0)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1  fe   2  fa  f8   0   9   1   0
+Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Jump  --> shadow_tower_part2b[Shadow Tower Part2 B]
+ 
+Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Upper r0 y0 --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern]
+ 11   5bf8   111a3f8 exit-door                                  tile(  45,  4a,  40) Upper         -> earth_world_hostile_rock_cavern    pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  0),fineY(  0)   45  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1  fe   0  f8   0   0  21   0   0
+Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Middle r3 y0 --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area]
+ 7    5b98   111a398 exit-door                                  tile(  3a,  43,  40) Middle        -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  3),fineY(  0)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  f7   0  f2   0   0  20   3   0
+Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Top right r0 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+ 4    5b50   111a350 exit-door                                  tile(  46,  43,  43) Top right     -> shadow_tower_part3b                pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   46  43  43   0  fc   0   0   0   0   0   0  fc   0   0  c9   1  fc   5   0   0   0  29   0  f8
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Top right r1 y0 --> human_world_hidden_region[Human World
 Hidden Region]
- 7    4278    db4a78 exit-door                                  tile(  30,  45,  36) Exit          -> human_world_hidden_region          pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0   4   0  ff   0   0   8   3   0
-Exit for chart illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain] -- Exit r3 y0 --> human_world_solitary_region[Human World
-Solitary Region]
- 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> human_world_solitary_region        pos(  7  ,0  ,7),unknown(  0  ,0),destMapIndex(  4),rot(  3),fineY(  0)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0   7   0   d   0   0   4   3   0
-Exit for chart illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain] -- Entrance r2 y0 --> death_world_undead_layer[Death World
-Undead Layer]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  2),fineY(  0)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0   1   1  ef   0   0  1a   2   0
-Exit for chart illusion_world_worship_domain[Illusion World
-Worship Domain] -- Entrance r3 y0 --> human_world_solitary_region[Human World
-Solitary Region]
- 1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> human_world_solitary_region        pos(  9  ,2  ,9),unknown(  0  ,0),destMapIndex(  4),rot(  3),fineY(  0)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   9   2   8   0   0   4   3   0
-Exit for chart illusion_world_worship_domain[Illusion World
-Worship Domain] -- Connection r2 y0 --> illusion_world_dream_domain[Illusion World
-Dream Domain]
- 6    5b80    6f1380 exit-portal shaking wall portal            tile(  40,  40,  38) Connection    -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  2),fineY(  0)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0  26   4   0   0   0   0   2   0
-Exit for chart illusion_world_worship_domain[Illusion World
-Worship Domain] -- Exit r3 y1 --> fire_world_molten_cavern[Fire World
-Molten Cavern]
- 10   5be0    6f13e0 exit-portal shaking wall portal            tile(  4f,  40,  38) Exit          -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  3),fineY(  1)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  18   c   0   2   0  f0   3   1
-Exit for chart illusion_world_worship_domain[Illusion World
-Worship Domain] -- To Boss r2 y0 --> fire_world_burning_cavern[Fire World
+ 0    5af0   1195af0 exit-door                                  tile(  45,  41,  3b) Top right     -> human_world_hidden_region          pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(  1),fineY(  0)   45  41  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0   0   0  fc   1   1   5   1   0
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Top left r0 y0 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+ 3    5b38   1195b38 exit-door                                  tile(  40,  41,  45) Top left      -> water_world_impure_pool_area       pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(  0),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0   0   0   0   0  fc   1   1   5   0   0
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom r1 y0 --> human_world_cursed_region[Human World
+Cursed Region]
+ 9    5bc8   1195bc8 exit-door                                  tile(  3b,  42,  40) Bottom        -> human_world_cursed_region          pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  1),fineY(  0)   3b  42  40   0  fc   0   0   0   0   0   0  fc   0   0  e4   1   0   0   9   0   0  15   1   0
+Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B]
+ 
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle r2 y0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern]
+ 5    5b68   1195b68 exit-door                                  tile(  45,  43,  40) Bottom middle -> earth_world_poisonous_cavern       pos(  9  ,1  ,9),unknown(  0  ,0),destMapIndex( 27),rot(  2),fineY(  0)   45  43  40   0  fc   0   0   0   0   0   0  fc   0   0  e0   1   9   1   1   0   0  1b   2   0
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge r3 y0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+ 7    5b98   1195b98 exit-door                                  tile(  40,  43,  3b) Top edge      -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 15),rot(  3),fineY(  0)   40  43  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0  fd   0  f5   0   0   f   3   0
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end r0 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+ 13   5c28   1195c28 exit-door                                  tile(  3b,  45,  40) Bottom end    -> shadow_tower_part2b                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  0),fineY( -8)   3b  45  40   0  fc   0   0   0   0   0   0  fc   0   0  e8   1   5   3   3   0   0  28   0  f8
+Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C]
+ 
+Exit for chart shadow_tower_part3c[Shadow Tower Part3 C] -- Fence r3 y0 --> earth_world_quaking_cavern[Earth World
+Quaking Cavern]
+ 10   5be0   1195be0 exit-door                                  tile(  40,  46,  3b) Fence         -> earth_world_quaking_cavern         pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  3),fineY(  0)   40  46  3b   0  fc   0   0   0   0   0   0  fc   0   0  e6   1   0   0   0  f9   0   c   3   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Skeleton r0 y0 --> human_world_forgotten_region[Human World
+Forgotten Region]
+ 31   5dd8    25b5d8 exit-door                                  tile(  44,  40,  4e) Skeleton      -> human_world_forgotten_region       pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  0),fineY(  0)   44  40  4e   0  fc   0   0   0   0   0   0   0   0   0  60   0   a  ff   4   0   0  19   0   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Cemetery r0 y0 --> fire_world_burning_cavern[Fire World
 Burning Cavern]
- 8    5bb0    6f13b0 exit-portal shaking wall portal            tile(  4f,  40,  47) To Boss       -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  2),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1  14  fa  ff  f8   0   8   2   0
+ 34   5e20    25b620 exit-door                                  tile(  47,  40,  4e) Cemetery      -> fire_world_burning_cavern          pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  0),fineY(  0)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0  f7   0  f2   0   0  20   0   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Grave r1 y0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern]
+ 35   5e38    25b638 exit-door                                  tile(  49,  42,  47) Grave         -> earth_world_poisonous_cavern       pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  1),fineY(  0)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0   1   0  f7   1   1  19   1   0
+Exit for chart human_world_solitary_region[Human World
+Solitary Region] -- Church r3 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
+ 38   5e80    25b680 exit-door                                  tile(  40,  40,  40) Church        -> shadow_tower_part1b                pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  3),fineY( -8)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0   1   6   3   1   1   0   3  f8
 Exit for chart human_world_hidden_region[Human World
-Hidden Region] -- Jail r3 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
- 9    5bc8    2f5bc8 exit-door                                  tile(  3d,  40,  3b) Jail          -> shadow_tower_part1c                pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  3),fineY( -8)   3d  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   2   7  fa   0   0   0   3  f8
+Hidden Region] -- Jail r3 y0 --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area]
+ 9    5bc8    2f5bc8 exit-door                                  tile(  3d,  40,  3b) Jail          -> water_world_watery_labyrinth_area  pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  3),fineY(  0)   3d  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   8   0  f5   0   0  20   3   0
 Exit for chart human_world_hidden_region[Human World
-Hidden Region] -- Corridor r2 y0 --> earth_world_stone_cavern[Earth World
-Stone Cavern]
- 13   5c28    2f5c28 exit-door                                  tile(  40,  40,  3b) Corridor      -> earth_world_stone_cavern           pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  2),fineY(  0)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0  f0   5  f7  f6   0  1c   2   0
+Hidden Region] -- Corridor r3 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
+ 13   5c28    2f5c28 exit-door                                  tile(  40,  40,  3b) Corridor      -> shadow_tower_part3a                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   4   1  fb   0   0  29   3  f8
 Exit for chart human_world_hidden_region[Human World
 Hidden Region] -- Totem r0 y3 --> monster_world_screeching_area[Monster World
 Screeching Area]
  26   5d60    2f5d60 exit-totem  teleport                       tile(  3b,  40,  3e) Totem         -> monster_world_screeching_area      pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3b  40  3e   0   3   0   0   4   0  f4   0   0   0   0  96   0  11   8   0   3   0   0   0   3
+Exit for chart human_world_cursed_region[Human World
+Cursed Region] -- Entrance r1 y0 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+ 3    5b38     a0338 exit-door                                  tile(  40,  40,  38) Entrance      -> water_world_impure_pool_area       pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  1),fineY(  0)   40  40  38   0  fc   0   0   0   0   0   0  f8   0   0   0   0  fe   0  f8   0   0  21   1   0
+Exit for chart human_world_cursed_region[Human World
+Cursed Region] -- Guardian side r1 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
+ 31   5dd8     a05d8 exit-door                                  tile(  4d,  40,  47) Guardian side -> shadow_tower_part3a                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   4d  40  47   0  fc   0   0   0   0   0   0  f6   0   0  75   0  fc   2   0   0   0  29   1  f8
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Exit r1 y0 --> human_world_solitary_region[Human World
+Solitary Region]
+ 34   5e20    38c620 exit-door                                  tile(  46,  40,  46) Exit          -> human_world_solitary_region        pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  1),fineY(  0)   46  40  46   0  fc   0   0   0   0   0   0   0   0   0   0   0   8   0  f5   0   0  20   1   0
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Jump down r3 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
+ 37   5e68    38c668 exit-door                                  tile(  3d,  41,  4a) Jump down     -> shadow_tower_part1b                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   3d  41  4a   0  fc   0   0   0   0   0   0   0   0   0  73   0  fc   2   0   0   0  29   3  f8
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Totem r0 y3 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer]
+ 18   5ca0    38c4a0 exit-totem  teleport                       tile(  39,  40,  45) Totem         -> death_world_lingering_curse_layer  pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  0),fineY(  3)   39  40  45   0   3   0   0   4   0   8   0   0   0   0  68   0   e  f2   1  f9   0  fc   0   3
+Exit for chart human_world_forgotten_region[Human World
+Forgotten Region] -- Drop in r3 y0 --> monster_world_false_eye_area[Monster World
+False Eye Area]
+ 41   5ec8    38c6c8 exit-totem  teleport                       tile(  43,  3f,  44) Drop in       -> monster_world_false_eye_area       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot(  3),fineY(  0)   43  3f  44   0   3   0   0   c   0  fc   0   0   0   0  67   0   2  ff   0  f9   0   8   3   0
+Exit for chart earth_world_rotting_cavern[Earth World
+Rotting Cavern] -- Entrance r0 y0 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain]
+ 13   5c28    5c9c28 exit-door                                  tile(  38,  40,  35) Entrance      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  0),fineY(  0)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   4   0  ff   0   0   8   0   0
+Exit for chart earth_world_stone_cavern[Earth World
+Stone Cavern] -- Entrance r2 y-8 --> death_world_undead_layer[Death World
+Undead Layer]
+ 4    4230    db4a30 exit-door                                  tile(  40,  40,  42) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  2),fineY( -8)   40  40  42   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   1   0   0   0  1a   2  f8
+Exit for chart earth_world_stone_cavern[Earth World
+Stone Cavern] -- Exit r3 y0 --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 7    4278    db4a78 exit-door                                  tile(  30,  45,  36) Exit          -> shadow_tower_part1c                pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0   4   0  ff   0   0   8   3   0
+Exit for chart earth_world_quaking_cavern[Earth World
+Quaking Cavern] -- Entrance r1 y-8 --> shadow_tower_part3c[Shadow Tower Part3 C]
+ 3    5b38    65fb38 exit-door                                  tile(  41,  40,  40) Entrance      -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   41  40  40   0  fc   0   0   0   0   0   0   0   0   0  a5   0   0   6  fc   0   0  29   1  f8
+Exit for chart earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Poison r1 y0 --> illusion_world_worship_domain[Illusion World
+Worship Domain]
+ 13   4308    d17308 exit-door                                  tile(  4a,  41,  48) Poison        -> illusion_world_worship_domain      pos( -4  ,0 ,-4),unknown(  0  ,8),destMapIndex( 13),rot(  1),fineY(  0)   4a  41  48   0  fc   0   0   0   0   0   0   0  80  fc  48   1  fc   0   6   0   8   d   1   0
+Exit for chart earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Rock guy r2 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+ 10   42c0    d172c0 exit-door                                  tile(  4a,  41,  41) Rock guy      -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   4a  41  41   0  fc   0   0   0  80   3   0   0   0   0   c   1   4   3   0   0   0  29   2  f8
+Exit for chart earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Entrance r3 y0 --> human_world_solitary_region[Human World
+Solitary Region]
+ 17   4368    d17368 exit-door                                  tile(  38,  41,  2f) Entrance      -> human_world_solitary_region        pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  3),fineY(  0)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0  fe   0  f8   0   0  21   3   0
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Entrance r1 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+ 3    5b38    7f8b38 exit-door                                  tile(  3e,  40,  35) Entrance      -> shadow_tower_part3b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   3e  40  35   0  fc   0   0   0   0   5   0   0   0   0  b6   0   0   3  fc   0   0  29   1  f8
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Bridge r0 y0 --> water_world_white_rain_area[Water World
+White Rain Area]
+ 1    5b08    7f8b08 exit-door                                  tile(  4a,  40,  4a) Bridge        -> water_world_white_rain_area        pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 37),rot(  0),fineY(  0)   4a  40  4a   0  fc   0   0   0   0   0   0   0   0   0  d5   1  fd   0   0   0   0  25   0   0
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Exit r2 y-8 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave]
+ 11   5bf8    7f8bf8 exit-door                                  tile(  37,  40,  35) Exit          -> fire_world_phoenix_cave            pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0  fc   5   0   0   0  29   2  f8
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Jump in r0 y3 --> water_world_white_rain_area[Water World
+White Rain Area]
+ 19   5cb8    7f8cb8 exit-totem  teleport                       tile(  3e,  3f,  36) Jump in       -> water_world_white_rain_area        pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot(  0),fineY(  3)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  25  fd   0   2  f8   0   0   3
+Exit for chart earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Totem r2 y3 --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern]
+ 16   5c70    7f8c70 exit-totem  teleport                       tile(  37,  40,  36) Totem         -> earth_world_hostile_rock_cavern    pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot(  2),fineY(  3)   37  40  36   0   3   0   0   4   0   4   0   0   0   0  d9   1  25  fd   0   2  f8   0   2   3
+Exit for chart earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Entrance r0 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+ 1    5b08    f78b08 exit-door                                  tile(  3d,  40,  38) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  0),fineY( -8)   3d  40  38   0  fc   0   0   0   0  fd   0   0   0   0   8   1   4   5   0   0   0  28   0  f8
+Exit for chart earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Boss room r1 y0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+ 3    5b38    f78b38 exit-totem  teleport                       tile(  3e,  40,  4b) Boss room     -> earth_world_false_pit_cavern       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot(  1),fineY(  0)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0   2  ff   0  f9   0   8   1   0
+Exit for chart fire_world_phoenix_cave[Fire World
+Phoenix Cave] -- Entrance r0 y0 --> water_world_sunken_river_area[Water World
+Sunken River Area]
+ 0    5af0    1c82f0 exit-door                                  tile(  3b,  40,  43) Entrance      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(  0),fineY(  0)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   0   0  fc   1   1   5   0   0
+Exit for chart fire_world_phoenix_cave[Fire World
+Phoenix Cave] -- Exit r2 y0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+ 1    5b08    1c8308 exit-door                                  tile(  41,  40,  43) Exit          -> earth_world_false_pit_cavern       pos( 10  ,0 ,10),unknown(  1  ,1),destMapIndex( 17),rot(  2),fineY(  0)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0   a   0   3   1   1  11   2   0
 Exit for chart fire_world_burning_cavern[Fire World
-Burning Cavern] -- Entrance r3 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
- 37   5e68    9b3668 exit-door                                  tile(  3c,  40,  31) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)   3c  40  31   0  fc   0   0   0   0   0   0   0   0   0  2a   0   4   5   0   0   0  28   3  f8
+Burning Cavern] -- Entrance r3 y-8 --> human_world_solitary_region[Human World
+Solitary Region]
+ 37   5e68    9b3668 exit-door                                  tile(  3c,  40,  31) Entrance      -> human_world_solitary_region        pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   3c  40  31   0  fc   0   0   0   0   0   0   0   0   0  2a   0   4   1  fb   0   0  29   3  f8
 Exit for chart fire_world_burning_cavern[Fire World
 Burning Cavern] -- Platform r3 y0 --> fire_world_ashen_cavern[Fire World
 Ashen Cavern]
  94   63c0    9b3bc0 exit-portal shaking wall portal            tile(  47,  3f,  46) Platform      -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  3),fineY(  0)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  12  21   4  fc   0   0   3   0
 Exit for chart fire_world_burning_cavern[Fire World
-Burning Cavern] -- Room r0 y0 --> illusion_world_worship_domain[Illusion World
-Worship Domain]
- 93   63a8    9b3ba8 exit-portal shaking wall portal            tile(  3a,  3f,  38) Room          -> illusion_world_worship_domain      pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  26   4   0   0   0   0   0   0
-Exit for chart fire_world_molten_cavern[Fire World
-Molten Cavern] -- Abraxus r0 y0 --> fire_world_ashen_cavern[Fire World
-Ashen Cavern]
- 27   5d78    b45578 exit-portal shaking wall portal            tile(  40,  40,  42) Abraxus       -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  0),fineY(  0)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0  12   1   0  f6  10  10   0   0
-Exit for chart fire_world_molten_cavern[Fire World
-Molten Cavern] -- Platform r1 y0 --> illusion_world_worship_domain[Illusion World
-Worship Domain]
- 19   5cb8    b454b8 exit-portal shaking wall portal            tile(  4c,  40,  42) Platform      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  1),fineY(  0)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1   d   f   0  f9   0   0   1   0
-Exit for chart illusion_world_dream_domain[Illusion World
-Dream Domain] -- Totem r1 y3 --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain]
- 4    5b50   1095350 exit-totem  teleport                       tile(  45,  40,  41) Totem         -> illusion_world_gloomy_domain       pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  1),fineY(  3)   45  40  41   0   3   0   0   0   0   8   0   0   0   6  18   0   9  fe   0   3  f8   0   1   3
-Exit for chart illusion_world_dream_domain[Illusion World
-Dream Domain] -- Entrance r0 y0 --> illusion_world_worship_domain[Illusion World
-Worship Domain]
- 3    5b38   1095338 exit-portal shaking wall portal            tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0  14  fa  ff  f8   0   8   0   0
-Exit for chart death_world_undead_layer[Death World
-Undead Layer] -- King's room r0 y0 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
- 12   5c10    c78c10 exit-door                                  tile(  41,  41,  41) King's room   -> water_world_impure_pool_area       pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  0),fineY(  0)   41  41  41   0  fc   0   0   0   0   0   0  fc   0   0  af   0   8   3  f4   1   1   a   0   0
-Exit for chart death_world_undead_layer[Death World
-Undead Layer] -- Entrance r2 y0 --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain]
- 15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  2),fineY(  0)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   f   0  12   0   0   8   2   0
-Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Top r3 y0 --> human_world_hidden_region[Human World
-Hidden Region]
- 5    5b68     21368 exit-door                                  tile(  43,  47,  3a) Top           -> human_world_hidden_region          pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  3),fineY(  0)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0   0   0   1   0   7  1c   3   0
-Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Middle r2 y0 --> fire_world_phoenix_cave[Fire World
-Phoenix Cave]
- 11   5bf8     213f8 exit-door                                  tile(  40,  49,  44) Middle        -> fire_world_phoenix_cave            pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex(  3),rot(  2),fineY(  0)   40  49  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0   1   0   2   1   1   3   2   0
-Exit for chart shadow_tower_part1c[Shadow Tower Part1 C] -- Edge r1 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
- 9    5bc8     213c8 exit-door                                  tile(  45,  49,  3f) Edge          -> shadow_tower_part3b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   3  fc   0   0  29   1  f8
-Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Upper r1 y0 --> fire_world_burning_cavern[Fire World
-Burning Cavern]
- 11   5bf8   111a3f8 exit-door                                  tile(  45,  4a,  40) Upper         -> fire_world_burning_cavern          pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  1),fineY(  0)   45  4a  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1  fc   0  f2   1   1  14   1   0
-Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Middle r2 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
- 7    5b98   111a398 exit-door                                  tile(  3a,  43,  40) Middle        -> death_world_dark_castle_layer      pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  2),fineY(  0)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1   1   0  f7   1   1  19   2   0
-Exit for chart shadow_tower_part2b[Shadow Tower Part2 B] -- Top right r2 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
- 4    5b50   111a350 exit-door                                  tile(  46,  43,  43) Top right     -> shadow_tower_part3a                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   46  43  43   0  fc   0   0   0   0   0   0  fc   0   0  c9   1   4   1  fb   0   0  29   2  f8
-Exit for chart fire_world_ashen_cavern[Fire World
-Ashen Cavern] -- Cerberus r2 y0 --> fire_world_burning_cavern[Fire World
-Burning Cavern]
- 17   5c88    92c488 exit-portal shaking wall portal            tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1   d   f   0  f9   0   0   2   0
-Exit for chart fire_world_ashen_cavern[Fire World
-Ashen Cavern] -- Start r0 y2 --> fire_world_molten_cavern[Fire World
+Burning Cavern] -- Room r0 y0 --> fire_world_molten_cavern[Fire World
 Molten Cavern]
- 6    5b80    92c380 exit-portal shaking wall portal            tile(  41,  40,  36) Start         -> fire_world_molten_cavern           pos( 24  ,0 ,24),unknown(  2  ,0),destMapIndex(224),rot(  0),fineY(  2)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
-Exit for chart monster_world_screeching_area[Monster World
-Screeching Area] -- Entrance r3 y0 --> illusion_world_gloomy_domain[Illusion World
+ 93   63a8    9b3ba8 exit-portal shaking wall portal            tile(  3a,  3f,  38) Room          -> fire_world_molten_cavern           pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
+Exit for chart fire_world_molten_cavern[Fire World
+Molten Cavern] -- Abraxus r2 y2 --> illusion_world_worship_domain[Illusion World
+Worship Domain]
+ 27   5d78    b45578 exit-portal shaking wall portal            tile(  40,  40,  42) Abraxus       -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  2),fineY(  2)   40  40  42   0  fd   0   0   0   0   0   0  f0   0   8   2   0   d   f   0   6   0   0   2   2
+Exit for chart fire_world_molten_cavern[Fire World
+Molten Cavern] -- Platform r3 y0 --> fire_world_burning_cavern[Fire World
+Burning Cavern]
+ 19   5cb8    b454b8 exit-portal shaking wall portal            tile(  4c,  40,  42) Platform      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  3),fineY(  0)   4c  40  42   0  fd   0   0   0  dc   5   0  f8   0   0  5f   1  14  fa  ff  f8   0   8   3   0
+Exit for chart fire_world_ashen_cavern[Fire World
+Ashen Cavern] -- Cerberus r0 y0 --> fire_world_burning_cavern[Fire World
+Burning Cavern]
+ 17   5c88    92c488 exit-portal shaking wall portal            tile(  61,  44,  3c) Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
+Exit for chart fire_world_ashen_cavern[Fire World
+Ashen Cavern] -- Start r2 y0 --> illusion_world_worship_domain[Illusion World
+Worship Domain]
+ 6    5b80    92c380 exit-portal shaking wall portal            tile(  41,  40,  36) Start         -> illusion_world_worship_domain      pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1   d   0   0  f9   0   0   2   0
+Exit for chart water_world_sunken_river_area[Water World
+Sunken River Area] -- Pool r0 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 5    5b68    a44368 exit-door                                  tile(  41,  40,  49) Pool          -> shadow_tower_part1c                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  fc   2   0   0   0  29   0  f8
+Exit for chart water_world_sunken_river_area[Water World
+Sunken River Area] -- Entrance r2 y0 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave]
+ 1    5b08    a44308 exit-door                                  tile(  40,  40,  40) Entrance      -> fire_world_phoenix_cave            pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  2),fineY(  0)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fe   2  fa  f8   0   9   2   0
+Exit for chart water_world_impure_pool_area[Water World
+Impure Pool Area] -- Entrance r1 y0 --> human_world_cursed_region[Human World
+Cursed Region]
+ 9    5bc8    5353c8 exit-door                                  tile(  44,  40,  33) Entrance      -> human_world_cursed_region          pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  1),fineY(  0)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   1   0  f7   1   1  19   1   0
+Exit for chart water_world_impure_pool_area[Water World
+Impure Pool Area] -- Flush down r0 y0 --> shadow_tower_part3a[Shadow Tower Part3 A]
+ 11   5bf8    5353f8 exit-door                                  tile(  48,  43,  33) Flush down    -> shadow_tower_part3a                pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  0),fineY(  0)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1  fe   2  fa  f8   0   9   0   0
+Exit for chart water_world_impure_pool_area[Water World
+Impure Pool Area] -- Totem r3 y3 --> illusion_world_gloomy_domain[Illusion World
 Gloomy Domain]
- 0    5af0    8992f0 exit-door                                  tile(  4a,  40,  44) Entrance      -> illusion_world_gloomy_domain       pos( -6  ,0 ,-6),unknown(  1  ,1),destMapIndex(  9),rot(  3),fineY(  0)   4a  40  44   0  fc   0   0   0   0   0   0   0   0   0  35   0  fa   0   0   1   1   9   3   0
+ 14   5c40    535440 exit-totem  teleport                       tile(  46,  40,  47) Totem         -> illusion_world_gloomy_domain       pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  3),fineY(  3)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1   9  fe   0   3  f8   0   3   3
+Exit for chart water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Exit r3 y0 --> human_world_hidden_region[Human World
+Hidden Region]
+ 9    5bc8    ee23c8 exit-door                                  tile(  49,  40,  35) Exit          -> human_world_hidden_region          pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  3),fineY(  0)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0   a  ff   4   0   0  19   3   0
+Exit for chart water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Entrance r0 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+ 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> shadow_tower_part2b                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   37  40  31   0  fc   0   0   0   0   0   0   0   0   0  ec   0   4   1  fb   0   0  29   0  f8
+Exit for chart water_world_white_rain_area[Water World
+White Rain Area] -- Entrance r3 y-8 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+ 4    4230   1010a30 exit-door                                  tile(  3d,  40,  3f) Entrance      -> earth_world_false_pit_cavern       pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)   3d  40  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   4   5   0   0   0  28   3  f8
+Exit for chart water_world_white_rain_area[Water World
+White Rain Area] -- Totem r2 y0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+ 6    4260   1010a60 exit-totem  teleport                       tile(  3c,  40,  42) Totem         -> earth_world_false_pit_cavern       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot(  2),fineY(  0)   3c  40  42   0   3   0   0   4   0   4   0   0   0   8  4d   0   2  ff   0  f9   0   8   2   0
+Exit for chart monster_world_false_eye_area[Monster World
+False Eye Area] -- Entrance r2 y0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain]
+ 9    5bc8    135bc8 exit-door                                  tile(  3d,  40,  36) Entrance      -> illusion_world_gloomy_domain       pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  2),fineY(  0)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   0   0   9   0   0  15   2   0
+Exit for chart monster_world_false_eye_area[Monster World
+False Eye Area] -- Totem r3 y3 --> human_world_forgotten_region[Human World
+Forgotten Region]
+ 10   5be0    135be0 exit-totem  teleport                       tile(  3f,  40,  38) Totem         -> human_world_forgotten_region       pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot(  3),fineY(  3)   3f  40  38   0   3   0   0   8   0   0   0   4  4c  fb  93   0  25  fd   0   2  f8   0   3   3
+Exit for chart monster_world_screeching_area[Monster World
+Screeching Area] -- Entrance r2 y-8 --> shadow_tower_part2a[Shadow Tower Part2 A]
+ 0    5af0    8992f0 exit-door                                  tile(  4a,  40,  44) Entrance      -> shadow_tower_part2a                pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)   4a  40  44   0  fc   0   0   0   0   0   0   0   0   0  35   0  fc   5   0   0   0  29   2  f8
 Exit for chart monster_world_screeching_area[Monster World
 Screeching Area] -- Totem r0 y3 --> human_world_hidden_region[Human World
 Hidden Region]
- 3    5b38    899338 exit-totem  teleport                       tile(  48,  40,  43) Totem         -> human_world_hidden_region          pos(  5 ,-5  ,5),unknown( -2  ,0),destMapIndex(  0),rot(  0),fineY(  3)   48  40  43   0   3   0   0   4   0  fc   0   0   0   4  32   0   5  fb   0  fe   0   0   0   3
+ 3    5b38    899338 exit-totem  teleport                       tile(  48,  40,  43) Totem         -> human_world_hidden_region          pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  0),fineY(  3)   48  40  43   0   3   0   0   4   0  fc   0   0   0   4  32   0   e  f2   1  f9   0  fc   0   3
 Exit for chart monster_world_screeching_area[Monster World
-Screeching Area] -- Necron r1 y3 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
- 6    5b80    899380 exit-totem  teleport                       tile(  44,  40,  4e) Necron        -> water_world_impure_pool_area       pos(  5 ,-5  ,5),unknown( -2  ,0),destMapIndex(  0),rot(  1),fineY(  3)   44  40  4e   0   3   0   0   0   0   0   0   0   0  fc  54   0   5  fb   0  fe   0   0   1   3
-Exit for chart illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Ladder down r2 y0 --> water_world_white_rain_area[Water World
-White Rain Area]
- 3    5b38    4a8b38 exit-door                                  tile(  3e,  42,  39) Ladder down   -> water_world_white_rain_area        pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 37),rot(  2),fineY(  0)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0  fd   0   0   0   0  25   2   0
-Exit for chart illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Entrance r1 y0 --> monster_world_screeching_area[Monster World
-Screeching Area]
- 1    5b08    4a8b08 exit-door                                  tile(  39,  40,  40) Entrance      -> monster_world_screeching_area      pos( 10  ,0 ,10),unknown(  1  ,1),destMapIndex( 17),rot(  1),fineY(  0)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   a   0   3   1   1  11   1   0
-Exit for chart illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Totem r3 y2 --> illusion_world_dream_domain[Illusion World
-Dream Domain]
- 10   5be0    4a8be0 exit-totem  teleport                       tile(  3d,  40,  43) Totem         -> illusion_world_dream_domain        pos( 38  ,5 ,38),unknown(  1 ,16),destMapIndex(  0),rot(  3),fineY(  2)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0  26   5   0   1  10   0   3   2
-Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Top right r2 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
- 0    5af0   1195af0 exit-door                                  tile(  45,  41,  3b) Top right     -> shadow_tower_part2b                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  2),fineY( -8)   45  41  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0   5   3   3   0   0  28   2  f8
-Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Top left r0 y0 --> water_world_sunken_river_area[Water World
-Sunken River Area]
- 3    5b38   1195b38 exit-door                                  tile(  40,  41,  45) Top left      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex( 21),rot(  0),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0   0   0   0   0   1   1   1  15   0   0
-Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom r1 y0 --> human_world_forgotten_region[Human World
-Forgotten Region]
- 9    5bc8   1195bc8 exit-door                                  tile(  3b,  42,  40) Bottom        -> human_world_forgotten_region       pos(  6  ,0  ,6),unknown(  1  ,1),destMapIndex(  6),rot(  1),fineY(  0)   3b  42  40   0  fc   0   0   0   0   0   0  fc   0   0  e4   1   6   0   5   1   1   6   1   0
-Exit for chart shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B]
- 
-Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle r1 y-8 --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern]
- 5    5b68   1195b68 exit-door                                  tile(  45,  43,  40) Bottom middle -> earth_world_poisonous_cavern       pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   45  43  40   0  fc   0   0   0   0   0   0  fc   0   0  e0   1   0   3  fc   0   0  29   1  f8
-Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge r3 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
- 7    5b98   1195b98 exit-door                                  tile(  40,  43,  3b) Top edge      -> shadow_tower_part1c                pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  3),fineY( -8)   40  43  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0   4   9  ff   7   0   0   3  f8
-Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end r3 y0 --> death_world_dark_castle_layer[Death World
+Screeching Area] -- Necron r2 y0 --> death_world_dark_castle_layer[Death World
 Dark Castle Layer]
- 13   5c28   1195c28 exit-door                                  tile(  3b,  45,  40) Bottom end    -> death_world_dark_castle_layer      pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)   3b  45  40   0  fc   0   0   0   0   0   0  fc   0   0  e8   1   f   0  12   0   0   8   3   0
-Exit for chart shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C]
- 
-Exit for chart fire_world_phoenix_cave[Fire World
-Phoenix Cave] -- Entrance r1 y0 --> water_world_sunken_river_area[Water World
-Sunken River Area]
- 0    5af0    1c82f0 exit-door                                  tile(  3b,  40,  43) Entrance      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  1),fineY(  0)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   0   0   9   0   0  15   1   0
-Exit for chart fire_world_phoenix_cave[Fire World
-Phoenix Cave] -- Exit r2 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
- 1    5b08    1c8308 exit-door                                  tile(  41,  40,  43) Exit          -> shadow_tower_part1c                pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  2),fineY( -8)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0   0   9   3   9   0   0   2  f8
-Exit for chart water_world_impure_pool_area[Water World
-Impure Pool Area] -- Entrance r3 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
- 9    5bc8    5353c8 exit-door                                  tile(  44,  40,  33) Entrance      -> shadow_tower_part1b                pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  3),fineY( -8)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   1   6   3   1   1   0   3  f8
-Exit for chart water_world_impure_pool_area[Water World
-Impure Pool Area] -- Flush down r0 y-8 --> death_world_undead_layer[Death World
-Undead Layer]
- 11   5bf8    5353f8 exit-door                                  tile(  48,  43,  33) Flush down    -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  0),fineY( -8)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   1   1   0   0   0  1a   0  f8
-Exit for chart water_world_impure_pool_area[Water World
-Impure Pool Area] -- Totem r2 y2 --> monster_world_screeching_area[Monster World
-Screeching Area]
- 14   5c40    535440 exit-totem  teleport                       tile(  46,  40,  47) Totem         -> monster_world_screeching_area      pos( 17  ,4 ,17),unknown( 13  ,0),destMapIndex(  0),rot(  2),fineY(  2)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1  11   4   0   d   0   0   2   2
-Exit for chart water_world_white_rain_area[Water World
-White Rain Area] -- Entrance r2 y0 --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain]
- 4    4230   1010a30 exit-door                                  tile(  3d,  40,  3f) Entrance      -> illusion_world_gloomy_domain       pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  2),fineY(  0)   3d  40  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   1  ef   0   0  1a   2   0
-Exit for chart water_world_white_rain_area[Water World
-White Rain Area] -- Totem r2 y1 --> human_world_forgotten_region[Human World
-Forgotten Region]
- 6    4260   1010a60 exit-totem  teleport                       tile(  3c,  40,  42) Totem         -> human_world_forgotten_region       pos(  6  ,1  ,6),unknown(  4  ,0),destMapIndex(  0),rot(  2),fineY(  1)   3c  40  42   0   3   0   0   4   0   4   0   0   0   8  4d   0   6   1  ff   4   0   0   2   1
-Exit for chart death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Prison r0 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
- 0    41d0    bda1d0 exit-door                                  tile(  4b,  3f,  44) Prison        -> shadow_tower_part3b                pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   4b  3f  44   0  fc   0   0   0   0   0   0   0   0   0   1   1  fc   5   0   0   0  29   0  f8
-Exit for chart death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Entrance r0 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
- 2    4200    bda200 exit-door                                  tile(  40,  40,  37) Entrance      -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  0),fineY( -8)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  af   1   4   5   0   0   0  28   0  f8
-Exit for chart death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Lower totem r3 y3 --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer]
- 4    4230    bda230 exit-totem  teleport                       tile(  3e,  40,  3a) Lower totem   -> death_world_lingering_curse_layer  pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  3),fineY(  3)   3e  40  3a   0   3   0   0   8   0   0   0   0   0   4  7b   0   e  f2   1  f9   0  fc   3   3
-Exit for chart death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Upper totem 1 r3 y0 --> death_world_gate_of_the_dead[Death World
-Gate Of The Dead]
- 7    4278    bda278 exit-totem  teleport                       tile(  33,  40,  41) Upper totem 1 -> death_world_gate_of_the_dead       pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  3),fineY(  0)   33  40  41   0   3   0   0   0   0   0   0   0   0  fc  70   0  17  14   0   0   0  f8   3   0
-Exit for chart death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Upper totem 2 r3 y3 --> monster_world_false_eye_area[Monster World
+ 6    5b80    899380 exit-totem  teleport                       tile(  44,  40,  4e) Necron        -> death_world_dark_castle_layer      pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  2),fineY(  0)   44  40  4e   0   3   0   0   0   0   0   0   0   0  fc  54   0  19  fe   0  fb   0   0   2   0
+Exit for chart illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Ladder down r2 y0 --> shadow_tower_part2a[Shadow Tower Part2 A]
+ 3    5b38    4a8b38 exit-door                                  tile(  3e,  42,  39) Ladder down   -> shadow_tower_part2a                pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(  2),fineY(  0)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0   0   0  fc   1   1   5   2   0
+Exit for chart illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Entrance r0 y0 --> monster_world_false_eye_area[Monster World
 False Eye Area]
- 10   42c0    bda2c0 exit-totem  teleport                       tile(  33,  40,  3f) Upper totem 2 -> monster_world_false_eye_area       pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  3),fineY(  3)   33  40  3f   0   3   0   0   8   0   0   0   0   0   4  74   0   9  fe   0   3  f8   0   3   3
-Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Edge r0 y0 --> earth_world_quaking_cavern[Earth World
-Quaking Cavern]
- 4    5b50     21350 exit-door                                  tile(  3b,  46,  3f) Edge          -> earth_world_quaking_cavern         pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  0),fineY(  0)   3b  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   0   0   0  f9   0   c   0   0
-Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Middle r1 y0 --> water_world_impure_pool_area[Water World
+ 1    5b08    4a8b08 exit-door                                  tile(  39,  40,  40) Entrance      -> monster_world_false_eye_area       pos(  9  ,1  ,9),unknown(  0  ,0),destMapIndex( 27),rot(  0),fineY(  0)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   9   1   1   0   0  1b   0   0
+Exit for chart illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Totem r0 y3 --> water_world_impure_pool_area[Water World
 Impure Pool Area]
- 8    5bb0     213b0 exit-door                                  tile(  42,  46,  43) Middle        -> water_world_impure_pool_area       pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  1),fineY(  0)   42  46  43   0  fc   0   0   0   0   0   0  fc   0   0  74   0  fc   0  f2   1   1  14   1   0
-Exit for chart shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
- 
-Exit for chart shadow_tower_part3c[Shadow Tower Part3 C] -- Fence r1 y0 --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer]
- 10   5be0   1195be0 exit-door                                  tile(  40,  46,  3b) Fence         -> death_world_lingering_curse_layer  pos(-15 ,-2,-15),unknown(  1  ,1),destMapIndex( 14),rot(  1),fineY(  0)   40  46  3b   0  fc   0   0   0   0   0   0  fc   0   0  e6   1  f1  fe  fd   1   1   e   1   0
-Exit for chart human_world_forgotten_region[Human World
-Forgotten Region] -- Exit r2 y0 --> shadow_tower_part3a[Shadow Tower Part3 A]
- 34   5e20    38c620 exit-door                                  tile(  46,  40,  46) Exit          -> shadow_tower_part3a                pos( 10  ,0 ,10),unknown(  1  ,1),destMapIndex( 17),rot(  2),fineY(  0)   46  40  46   0  fc   0   0   0   0   0   0   0   0   0   0   0   a   0   3   1   1  11   2   0
-Exit for chart human_world_forgotten_region[Human World
-Forgotten Region] -- Jump down r3 y0 --> human_world_cursed_region[Human World
-Cursed Region]
- 37   5e68    38c668 exit-door                                  tile(  3d,  41,  4a) Jump down     -> human_world_cursed_region          pos( -4  ,0 ,-4),unknown(  0  ,8),destMapIndex( 13),rot(  3),fineY(  0)   3d  41  4a   0  fc   0   0   0   0   0   0   0   0   0  73   0  fc   0   6   0   8   d   3   0
-Exit for chart human_world_forgotten_region[Human World
-Forgotten Region] -- Totem r2 y3 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
- 18   5ca0    38c4a0 exit-totem  teleport                       tile(  39,  40,  45) Totem         -> earth_world_false_pit_cavern       pos( 15 ,-8 ,15),unknown(-10  ,0),destMapIndex(  0),rot(  2),fineY(  3)   39  40  45   0   3   0   0   4   0   8   0   0   0   0  68   0   f  f8   0  f6   0   0   2   3
-Exit for chart human_world_forgotten_region[Human World
-Forgotten Region] -- Drop in r1 y2 --> water_world_white_rain_area[Water World
-White Rain Area]
- 41   5ec8    38c6c8 exit-totem  teleport                       tile(  43,  3f,  44) Drop in       -> water_world_white_rain_area        pos( 38  ,5 ,38),unknown(  1 ,16),destMapIndex(  0),rot(  1),fineY(  2)   43  3f  44   0   3   0   0   c   0  fc   0   0   0   0  67   0  26   5   0   1  10   0   1   2
-Exit for chart earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Poison r2 y0 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
- 13   4308    d17308 exit-door                                  tile(  4a,  41,  48) Poison        -> earth_world_false_pit_cavern       pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  2),fineY(  0)   4a  41  48   0  fc   0   0   0   0   0   0   0  80  fc  48   1   4   0  ff   0   0   8   2   0
-Exit for chart earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Rock guy r1 y0 --> water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area]
- 10   42c0    d172c0 exit-door                                  tile(  4a,  41,  41) Rock guy      -> water_world_watery_labyrinth_area  pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  1),fineY(  0)   4a  41  41   0  fc   0   0   0  80   3   0   0   0   0   c   1   1   1  ef   0   0  1a   1   0
-Exit for chart earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Entrance r0 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
- 17   4368    d17368 exit-door                                  tile(  38,  41,  2f) Entrance      -> shadow_tower_part3b                pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   4   3   0   0   0  29   0  f8
-Exit for chart water_world_sunken_river_area[Water World
-Sunken River Area] -- Pool r3 y0 --> fire_world_phoenix_cave[Fire World
-Phoenix Cave]
- 5    5b68    a44368 exit-door                                  tile(  41,  40,  49) Pool          -> fire_world_phoenix_cave            pos( -5  ,0 ,-5),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  fb   0   2   1   1   3   3   0
-Exit for chart water_world_sunken_river_area[Water World
-Sunken River Area] -- Entrance r0 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
- 1    5b08    a44308 exit-door                                  tile(  40,  40,  40) Entrance      -> shadow_tower_part3a                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
-Exit for chart monster_world_false_eye_area[Monster World
-False Eye Area] -- Entrance r3 y0 --> human_world_cursed_region[Human World
-Cursed Region]
- 9    5bc8    135bc8 exit-door                                  tile(  3d,  40,  36) Entrance      -> human_world_cursed_region          pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  3),fineY(  0)   3d  40  36   0  fc   0   0   0   0   0   0   0   0   0   1   0   0   0   0  f9   0   c   3   0
-Exit for chart monster_world_false_eye_area[Monster World
-False Eye Area] -- Totem r0 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
- 10   5be0    135be0 exit-totem  teleport                       tile(  3f,  40,  38) Totem         -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)   3f  40  38   0   3   0   0   8   0   0   0   4  4c  fb  93   0  19  f3   0   0   0   0   0   0
-Exit for chart death_world_lingering_curse_layer[Death World
-Lingering Curse Layer] -- Door r3 y-8 --> shadow_tower_part3c[Shadow Tower Part3 C]
- 1    5b08    767b08 exit-door                                  tile(  30,  3e,  3d) Door          -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)   30  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f5   1   0   6  fc   0   0  29   3  f8
-Exit for chart death_world_lingering_curse_layer[Death World
-Lingering Curse Layer] -- Box room r1 y3 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
- 2    5b20    767b20 exit-totem  teleport                       tile(  32,  41,  39) Box room      -> death_world_dark_castle_layer      pos(  5 ,-5  ,5),unknown( -2  ,0),destMapIndex(  0),rot(  1),fineY(  3)   32  41  39   0   3   0   0   4   0  fc   0  fe   0   0  68   0   5  fb   0  fe   0   0   1   3
-Exit for chart death_world_gate_of_the_dead[Death World
-Gate Of The Dead] -- Entrance r0 y0 --> earth_world_rotting_cavern[Earth World
+ 10   5be0    4a8be0 exit-totem  teleport                       tile(  3d,  40,  43) Totem         -> water_world_impure_pool_area       pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  0),fineY(  3)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0   e  f2   1  f9   0  fc   0   3
+Exit for chart illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Exit r1 y0 --> earth_world_rotting_cavern[Earth World
 Rotting Cavern]
- 1    5b08    ad9b08 exit-door                                  tile(  40,  40,  37) Entrance      -> earth_world_rotting_cavern         pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex(  3),rot(  0),fineY(  0)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  e5   1   1   0   2   1   1   3   0   0
-Exit for chart death_world_gate_of_the_dead[Death World
-Gate Of The Dead] -- Totem r3 y3 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
- 4    5b50    ad9b50 exit-totem  teleport                       tile(  55,  40,  3f) Totem         -> death_world_dark_castle_layer      pos(  5 ,-5  ,5),unknown( -2  ,0),destMapIndex(  0),rot(  3),fineY(  3)   55  40  3f   0   3   0   0   a   0  fc   0  fc   0   4  7a   0   5  fb   0  fe   0   0   3   3
-Exit for chart human_world_cursed_region[Human World
-Cursed Region] -- Entrance r2 y0 --> human_world_forgotten_region[Human World
-Forgotten Region]
- 3    5b38     a0338 exit-door                                  tile(  40,  40,  38) Entrance      -> human_world_forgotten_region       pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  2),fineY(  0)   40  40  38   0  fc   0   0   0   0   0   0  f8   0   0   0   0   0   0   1   0   7  1c   2   0
-Exit for chart human_world_cursed_region[Human World
-Cursed Region] -- Guardian side r1 y-8 --> monster_world_false_eye_area[Monster World
-False Eye Area]
- 31   5dd8     a05d8 exit-door                                  tile(  4d,  40,  47) Guardian side -> monster_world_false_eye_area       pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   4d  40  47   0  fc   0   0   0   0   0   0  f6   0   0  75   0   0   3  fc   0   0  29   1  f8
-Exit for chart earth_world_rotting_cavern[Earth World
-Rotting Cavern] -- Entrance r3 y0 --> death_world_gate_of_the_dead[Death World
+ 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> earth_world_rotting_cavern         pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  1),fineY(  0)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  f0   5  f7  f6   0  1c   1   0
+Exit for chart illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Entrance r2 y0 --> death_world_gate_of_the_dead[Death World
 Gate Of The Dead]
- 13   5c28    5c9c28 exit-door                                  tile(  38,  40,  35) Entrance      -> death_world_gate_of_the_dead       pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  3),fineY(  0)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   8   3  f4   1   1   a   3   0
-Exit for chart earth_world_quaking_cavern[Earth World
-Quaking Cavern] -- Entrance r1 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
- 3    5b38    65fb38 exit-door                                  tile(  41,  40,  40) Entrance      -> shadow_tower_part1b                pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)   41  40  40   0  fc   0   0   0   0   0   0   0   0   0  a5   0   0   3  fc   0   0  29   1  f8
-Exit for chart earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Entrance r3 y0 --> earth_world_poisonous_cavern[Earth World
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> death_world_gate_of_the_dead       pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 23),rot(  2),fineY(  0)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0   0   0  f8   0   0  17   2   0
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- Entrance r1 y-8 --> earth_world_poisonous_cavern[Earth World
 Poisonous Cavern]
- 3    5b38    7f8b38 exit-door                                  tile(  3e,  40,  35) Entrance      -> earth_world_poisonous_cavern       pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot(  3),fineY(  0)   3e  40  35   0  fc   0   0   0   0   5   0   0   0   0  b6   0   4   0   d   0   0   4   3   0
-Exit for chart earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Bridge r1 y0 --> shadow_tower_part2a[Shadow Tower Part2 A]
- 1    5b08    7f8b08 exit-door                                  tile(  4a,  40,  4a) Bridge        -> shadow_tower_part2a                pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  1),fineY(  0)   4a  40  4a   0  fc   0   0   0   0   0   0   0   0   0  d5   1   0   0   9   0   0  15   1   0
-Exit for chart earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Exit r1 y-8 --> shadow_tower_part2a[Shadow Tower Part2 A]
- 11   5bf8    7f8bf8 exit-door                                  tile(  37,  40,  35) Exit          -> shadow_tower_part2a                pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   1   4   a   0  28   1  f8
-Exit for chart earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Jump in r0 y3 --> earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern]
- 19   5cb8    7f8cb8 exit-totem  teleport                       tile(  3e,  3f,  36) Jump in       -> earth_world_hostile_rock_cavern    pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  0),fineY(  3)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  21  ff   0   b   0   0   0   3
-Exit for chart earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Totem r2 y3 --> human_world_forgotten_region[Human World
+ 1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> earth_world_poisonous_cavern       pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  1),fineY( -8)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   1   1   0   0   0  1a   1  f8
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- Connection r0 y2 --> fire_world_ashen_cavern[Fire World
+Ashen Cavern]
+ 6    5b80    6f1380 exit-portal shaking wall portal            tile(  40,  40,  38) Connection    -> fire_world_ashen_cavern            pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- Exit r2 y0 --> illusion_world_dream_domain[Illusion World
+Dream Domain]
+ 10   5be0    6f13e0 exit-portal shaking wall portal            tile(  4f,  40,  38) Exit          -> illusion_world_dream_domain        pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  2),fineY(  0)   4f  40  38   0  fd   0   0   0   0   0   0   0  ee   2  94   1  26   4   0   0   0   0   2   0
+Exit for chart illusion_world_worship_domain[Illusion World
+Worship Domain] -- To Boss r0 y0 --> fire_world_molten_cavern[Fire World
+Molten Cavern]
+ 8    5bb0    6f13b0 exit-portal shaking wall portal            tile(  4f,  40,  47) To Boss       -> fire_world_molten_cavern           pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)   4f  40  47   0  fd   0   0   0   0   0   0   0  12  fd  3a   1   d   0   0  f9   0   0   0   0
+Exit for chart illusion_world_dream_domain[Illusion World
+Dream Domain] -- Totem r0 y2 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+ 4    5b50   1095350 exit-totem  teleport                       tile(  45,  40,  41) Totem         -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)   45  40  41   0   3   0   0   0   0   8   0   0   0   6  18   0  19  f3   0   0   0   0   0   2
+Exit for chart illusion_world_dream_domain[Illusion World
+Dream Domain] -- Entrance r2 y0 --> illusion_world_worship_domain[Illusion World
+Worship Domain]
+ 3    5b38   1095338 exit-portal shaking wall portal            tile(  44,  40,  3f) Entrance      -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7  fa  1a   0   d   f   0  f9   0   0   2   0
+Exit for chart death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Door r3 y0 --> death_world_undead_layer[Death World
+Undead Layer]
+ 1    5b08    767b08 exit-door                                  tile(  30,  3e,  3d) Door          -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  3),fineY(  0)   30  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f5   1   1   1  ef   0   0  1a   3   0
+Exit for chart death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Box room r0 y3 --> human_world_forgotten_region[Human World
 Forgotten Region]
- 16   5c70    7f8c70 exit-totem  teleport                       tile(  37,  40,  36) Totem         -> human_world_forgotten_region       pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  2),fineY(  3)   37  40  36   0   3   0   0   4   0   4   0   0   0   0  d9   1  11   8   0   3   0   0   2   3
-Exit for chart water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area] -- Exit r0 y-8 --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern]
- 9    5bc8    ee23c8 exit-door                                  tile(  49,  40,  35) Exit          -> earth_world_poisonous_cavern       pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0   0   3  fc   0   0  29   0  f8
-Exit for chart water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area] -- Entrance r3 y0 --> earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern]
- 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> earth_world_hostile_rock_cavern    pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  3),fineY(  0)   37  40  31   0  fc   0   0   0   0   0   0   0   0   0  ec   0   0   0   9   0   0  15   3   0
-Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Top left r3 y0 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
- 0    5af0   111a2f0 exit-door                                  tile(  40,  41,  45) Top left      -> earth_world_false_pit_cavern       pos( -8  ,0 ,-8),unknown(  1  ,1),destMapIndex( 15),rot(  3),fineY(  0)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0  bb   1  f8   0  f5   1   1   f   3   0
-Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Edge r3 y0 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
- 5    5b68   111a368 exit-door                                  tile(  46,  43,  3d) Edge          -> earth_world_false_pit_cavern       pos( 10  ,0 ,10),unknown(  6  ,0),destMapIndex( 15),rot(  3),fineY(  0)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1   a   0   9   6   0   f   3   0
-Exit for chart shadow_tower_part2a[Shadow Tower Part2 A] -- Jump  --> shadow_tower_part2b[Shadow Tower Part2 B]
- 
-Exit for chart earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern] -- Entrance r1 y0 --> water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area]
- 1    5b08    f78b08 exit-door                                  tile(  3d,  40,  38) Entrance      -> water_world_watery_labyrinth_area  pos( -5  ,0 ,-5),unknown(  1  ,1),destMapIndex(  3),rot(  1),fineY(  0)   3d  40  38   0  fc   0   0   0   0  fd   0   0   0   0   8   1  fb   0   2   1   1   3   1   0
-Exit for chart earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern] -- Boss room r0 y1 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
- 3    5b38    f78b38 exit-totem  teleport                       tile(  3e,  40,  4b) Boss room     -> earth_world_false_pit_cavern       pos( 15 ,-3 ,15),unknown(-10  ,0),destMapIndex(248),rot(  0),fineY(  1)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0   f  fd  ff  f6   0  f8   0   1
+ 2    5b20    767b20 exit-totem  teleport                       tile(  32,  41,  39) Box room      -> human_world_forgotten_region       pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  0),fineY(  3)   32  41  39   0   3   0   0   4   0  fc   0  fe   0   0  68   0  11   8   0   3   0   0   0   3
+Exit for chart death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Entrance r3 y0 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain]
+ 1    5b08    ad9b08 exit-door                                  tile(  40,  40,  37) Entrance      -> illusion_world_bewilderment_domain pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(  3),fineY(  0)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  e5   1   0   0  fc   1   1   5   3   0
+Exit for chart death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Totem r3 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+ 4    5b50    ad9b50 exit-totem  teleport                       tile(  55,  40,  3f) Totem         -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  3),fineY(  0)   55  40  3f   0   3   0   0   a   0  fc   0  fc   0   4  7a   0  19  f3   0   0   0   0   3   0
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Prison r2 y-8 --> shadow_tower_part1a[Shadow Tower Part1 A]
+ 0    41d0    bda1d0 exit-door                                  tile(  4b,  3f,  44) Prison        -> shadow_tower_part1a                pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  2),fineY( -8)   4b  3f  44   0  fc   0   0   0   0   0   0   0   0   0   1   1   1   6   3   1   1   0   2  f8
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Entrance r3 y0 --> shadow_tower_part1c[Shadow Tower Part1 C]
+ 2    4200    bda200 exit-door                                  tile(  40,  40,  37) Entrance      -> shadow_tower_part1c                pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  3),fineY(  0)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  af   1  fe   0  f8   0   0  21   3   0
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem r2 y2 --> monster_world_screeching_area[Monster World
+Screeching Area]
+ 4    4230    bda230 exit-totem  teleport                       tile(  3e,  40,  3a) Lower totem   -> monster_world_screeching_area      pos( 17  ,4 ,17),unknown( 13  ,0),destMapIndex(  0),rot(  2),fineY(  2)   3e  40  3a   0   3   0   0   8   0   0   0   0   0   4  7b   0  11   4   0   d   0   0   2   2
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem 1 r3 y3 --> illusion_world_dream_domain[Illusion World
+Dream Domain]
+ 7    4278    bda278 exit-totem  teleport                       tile(  33,  40,  41) Upper totem 1 -> illusion_world_dream_domain        pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot(  3),fineY(  3)   33  40  41   0   3   0   0   0   0   0   0   0   0  fc  70   0  25  fd   0   2  f8   0   3   3
+Exit for chart death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem 2 r1 y0 --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead]
+ 10   42c0    bda2c0 exit-totem  teleport                       tile(  33,  40,  3f) Upper totem 2 -> death_world_gate_of_the_dead       pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  1),fineY(  0)   33  40  3f   0   3   0   0   8   0   0   0   0   0   4  74   0  17  14   0   0   0  f8   1   0
+Exit for chart death_world_undead_layer[Death World
+Undead Layer] -- King's room r3 y0 --> earth_world_stone_cavern[Earth World
+Stone Cavern]
+ 12   5c10    c78c10 exit-door                                  tile(  41,  41,  41) King's room   -> earth_world_stone_cavern           pos( -4  ,0 ,-4),unknown(  0  ,8),destMapIndex( 13),rot(  3),fineY(  0)   41  41  41   0  fc   0   0   0   0   0   0  fc   0   0  af   0  fc   0   6   0   8   d   3   0
+Exit for chart death_world_undead_layer[Death World
+Undead Layer] -- Entrance r3 y0 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer]
+ 15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> death_world_lingering_curse_layer  pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  3),fineY(  0)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   0   0   0  f9   0   c   3   0
  writing .\generated\randomized-medium4\spoilers\changeset.json
