@@ -13,44 +13,6 @@
 graph TD
   shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top r0 y0 --> human_world_solitary_region[Human World
 Solitary Region]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Edge r3 y8 --> human_world_cursed_region[Human World
-Cursed Region]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Middle r3 y0 --> human_world_forgotten_region[Human World
-Forgotten Region]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Top r3 y0 --> human_world_forgotten_region[Human World
-Forgotten Region]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Middle r3 y0 --> earth_world_rotting_cavern[Earth World
-Rotting Cavern]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Edge r0 y0 --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern]
-  shadow_tower_part2a[Shadow Tower Part2 A] -- Top left r3 y0 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
-  shadow_tower_part2a[Shadow Tower Part2 A] -- Edge r3 y0 --> fire_world_phoenix_cave[Fire World
-Phoenix Cave]
-  shadow_tower_part2a[Shadow Tower Part2 A] -- Jump  --> shadow_tower_part2b[Shadow Tower Part2 B]
-  shadow_tower_part2b[Shadow Tower Part2 B] -- Upper r1 y0 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
-  shadow_tower_part2b[Shadow Tower Part2 B] -- Middle r3 y0 --> fire_world_burning_cavern[Fire World
-Burning Cavern]
-  shadow_tower_part2b[Shadow Tower Part2 B] -- Top right r3 y0 --> fire_world_phoenix_cave[Fire World
-Phoenix Cave]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Top right r1 y0 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Top left r0 y0 --> water_world_sunken_river_area[Water World
-Sunken River Area]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom r2 y0 --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle r1 y0 --> monster_world_false_eye_area[Monster World
-False Eye Area]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge r0 y0 --> monster_world_screeching_area[Monster World
-Screeching Area]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end r2 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C]
-  shadow_tower_part3c[Shadow Tower Part3 C] -- Fence r1 y0 --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer]
   human_world_solitary_region[Human World
 Solitary Region] -- Skeleton r0 y0 --> human_world_hidden_region[Human World
 Hidden Region]
@@ -76,6 +38,11 @@ Cursed Region] -- Entrance r2 y0 --> human_world_solitary_region[Human World
 Solitary Region]
   human_world_cursed_region[Human World
 Cursed Region] -- Guardian side r1 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Edge r3 y8 --> human_world_cursed_region[Human World
+Cursed Region]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Middle r3 y0 --> human_world_forgotten_region[Human World
+Forgotten Region]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
   human_world_forgotten_region[Human World
 Forgotten Region] -- Exit r1 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
   human_world_forgotten_region[Human World
@@ -86,8 +53,22 @@ Hidden Region]
   human_world_forgotten_region[Human World
 Forgotten Region] -- Drop in r0 y3 --> earth_world_false_pit_cavern[Earth World
 False Pit Cavern]
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Top r3 y0 --> human_world_forgotten_region[Human World
+Forgotten Region]
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Middle r3 y0 --> earth_world_rotting_cavern[Earth World
+Rotting Cavern]
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Edge r0 y0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern]
   earth_world_rotting_cavern[Earth World
 Rotting Cavern] -- Entrance r1 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Poison r0 y0 --> earth_world_stone_cavern[Earth World
+Stone Cavern]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Rock guy r2 y0 --> earth_world_quaking_cavern[Earth World
+Quaking Cavern]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Entrance r0 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
   earth_world_stone_cavern[Earth World
 Stone Cavern] -- Entrance r0 y0 --> earth_world_poisonous_cavern[Earth World
 Poisonous Cavern]
@@ -97,14 +78,6 @@ False Pit Cavern]
   earth_world_quaking_cavern[Earth World
 Quaking Cavern] -- Entrance r2 y0 --> earth_world_poisonous_cavern[Earth World
 Poisonous Cavern]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Poison r0 y0 --> earth_world_stone_cavern[Earth World
-Stone Cavern]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Rock guy r2 y0 --> earth_world_quaking_cavern[Earth World
-Quaking Cavern]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Entrance r0 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
   earth_world_false_pit_cavern[Earth World
 False Pit Cavern] -- Entrance r1 y0 --> earth_world_stone_cavern[Earth World
 Stone Cavern]
@@ -119,12 +92,23 @@ Hostile Rock Cavern]
   earth_world_false_pit_cavern[Earth World
 False Pit Cavern] -- Totem r0 y1 --> human_world_forgotten_region[Human World
 Forgotten Region]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Top left r3 y0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Edge r3 y0 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Jump  --> shadow_tower_part2b[Shadow Tower Part2 B]
   earth_world_hostile_rock_cavern[Earth World
 Hostile Rock Cavern] -- Entrance r1 y0 --> earth_world_false_pit_cavern[Earth World
 False Pit Cavern]
   earth_world_hostile_rock_cavern[Earth World
 Hostile Rock Cavern] -- Boss room r0 y1 --> earth_world_false_pit_cavern[Earth World
 False Pit Cavern]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Upper r1 y0 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Middle r3 y0 --> fire_world_burning_cavern[Fire World
+Burning Cavern]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Top right r3 y0 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave]
   fire_world_phoenix_cave[Fire World
 Phoenix Cave] -- Entrance r1 y-8 --> shadow_tower_part2a[Shadow Tower Part2 A]
   fire_world_phoenix_cave[Fire World
@@ -137,6 +121,20 @@ Molten Cavern]
   fire_world_burning_cavern[Fire World
 Burning Cavern] -- Room r0 y0 --> fire_world_ashen_cavern[Fire World
 Ashen Cavern]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Entrance r3 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Flush down r3 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Totem r3 y3 --> monster_world_screeching_area[Monster World
+Screeching Area]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Top right r1 y0 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Top left r0 y0 --> water_world_sunken_river_area[Water World
+Sunken River Area]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom r2 y0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B]
   fire_world_molten_cavern[Fire World
 Molten Cavern] -- Abraxus r0 y0 --> fire_world_ashen_cavern[Fire World
 Ashen Cavern]
@@ -149,18 +147,48 @@ Burning Cavern]
   fire_world_ashen_cavern[Fire World
 Ashen Cavern] -- Start r0 y2 --> fire_world_molten_cavern[Fire World
 Molten Cavern]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Entrance r0 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Totem r1 y2 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Necron r2 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle r1 y0 --> monster_world_false_eye_area[Monster World
+False Eye Area]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge r0 y0 --> monster_world_screeching_area[Monster World
+Screeching Area]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end r2 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C]
   water_world_sunken_river_area[Water World
 Sunken River Area] -- Pool r1 y0 --> water_world_watery_labyrinth_area[Water World
 Watery Labyrinth Area]
   water_world_sunken_river_area[Water World
 Sunken River Area] -- Entrance r0 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
-  water_world_impure_pool_area[Water World
-Impure Pool Area] -- Entrance r3 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
-  water_world_impure_pool_area[Water World
-Impure Pool Area] -- Flush down r3 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
-  water_world_impure_pool_area[Water World
-Impure Pool Area] -- Totem r3 y3 --> monster_world_screeching_area[Monster World
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Ladder down r2 y0 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Entrance r2 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Totem r0 y3 --> water_world_white_rain_area[Water World
+White Rain Area]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Prison r1 y0 --> death_world_undead_layer[Death World
+Undead Layer]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Entrance r2 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem r2 y2 --> monster_world_screeching_area[Monster World
 Screeching Area]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem 1 r1 y3 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem 2 r1 y0 --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead]
   water_world_watery_labyrinth_area[Water World
 Watery Labyrinth Area] -- Exit r1 y0 --> water_world_white_rain_area[Water World
 White Rain Area]
@@ -173,33 +201,23 @@ Watery Labyrinth Area]
   water_world_white_rain_area[Water World
 White Rain Area] -- Totem r0 y3 --> illusion_world_gloomy_domain[Illusion World
 Gloomy Domain]
-  monster_world_false_eye_area[Monster World
-False Eye Area] -- Entrance r3 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
-  monster_world_false_eye_area[Monster World
-False Eye Area] -- Totem r2 y2 --> illusion_world_dream_domain[Illusion World
-Dream Domain]
-  monster_world_screeching_area[Monster World
-Screeching Area] -- Entrance r0 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
-  monster_world_screeching_area[Monster World
-Screeching Area] -- Totem r1 y2 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
-  monster_world_screeching_area[Monster World
-Screeching Area] -- Necron r2 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Ladder down r2 y0 --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Entrance r2 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Totem r0 y3 --> water_world_white_rain_area[Water World
-White Rain Area]
   illusion_world_bewilderment_domain[Illusion World
 Bewilderment Domain] -- Exit r0 y0 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
   illusion_world_bewilderment_domain[Illusion World
 Bewilderment Domain] -- Entrance r2 y0 --> illusion_world_gloomy_domain[Illusion World
 Gloomy Domain]
+  death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Door r3 y-8 --> shadow_tower_part3c[Shadow Tower Part3 C]
+  death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Box room r3 y2 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+  death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Entrance r0 y-8 --> death_world_undead_layer[Death World
+Undead Layer]
+  death_world_gate_of_the_dead[Death World
+Gate Of The Dead] -- Totem r3 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
   illusion_world_worship_domain[Illusion World
 Worship Domain] -- Entrance r0 y0 --> illusion_world_bewilderment_domain[Illusion World
 Bewilderment Domain]
@@ -218,31 +236,13 @@ False Eye Area]
   illusion_world_dream_domain[Illusion World
 Dream Domain] -- Entrance r2 y0 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
-  death_world_lingering_curse_layer[Death World
-Lingering Curse Layer] -- Door r3 y-8 --> shadow_tower_part3c[Shadow Tower Part3 C]
-  death_world_lingering_curse_layer[Death World
-Lingering Curse Layer] -- Box room r3 y2 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  death_world_gate_of_the_dead[Death World
-Gate Of The Dead] -- Entrance r0 y-8 --> death_world_undead_layer[Death World
-Undead Layer]
-  death_world_gate_of_the_dead[Death World
-Gate Of The Dead] -- Totem r3 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Prison r1 y0 --> death_world_undead_layer[Death World
-Undead Layer]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Entrance r2 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Lower totem r2 y2 --> monster_world_screeching_area[Monster World
-Screeching Area]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Upper totem 1 r1 y3 --> death_world_lingering_curse_layer[Death World
+  monster_world_false_eye_area[Monster World
+False Eye Area] -- Entrance r3 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+  monster_world_false_eye_area[Monster World
+False Eye Area] -- Totem r2 y2 --> illusion_world_dream_domain[Illusion World
+Dream Domain]
+  shadow_tower_part3c[Shadow Tower Part3 C] -- Fence r1 y0 --> death_world_lingering_curse_layer[Death World
 Lingering Curse Layer]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Upper totem 2 r1 y0 --> death_world_gate_of_the_dead[Death World
-Gate Of The Dead]
   death_world_undead_layer[Death World
 Undead Layer] -- King's room r0 y0 --> death_world_gate_of_the_dead[Death World
 Gate Of The Dead]
