@@ -370,11 +370,7 @@ function shuffle(params) {
 
 	if (gaveUp) {
 		console.error("Gave up after " + attempts + " attempts, " + swapRounds + " swapRounds.");
-
-        fs.writeFileSync("." + path.sep + 'bad_walk.json', JSON.stringify(walkResult, null, 2));
 //		return null;
-	} else {
-		delete walkResult.explanation;
 	}
 
 	walkResult.walk.forEach(step => {

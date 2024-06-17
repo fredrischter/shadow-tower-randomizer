@@ -124,7 +124,11 @@ function randomize(paramsFile, stDir) {
     console.log("Parameters - " + JSON.stringify(params));
 
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
-    const shuffle = map_shuffler(params);
+    const shuffle = map_shuffler(params, stDir);
+
+    fs.writeFileSync(changeSetPath + path.sep + 'map-with-walk-detail.json', JSON.stringify(shuffle, null, 2));
+    delete shuffle.explanation;
+
     fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
 
     var map = new MapShuffle(shuffle.map);

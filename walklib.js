@@ -508,8 +508,7 @@ function walk(areas, skipWayBackVerification) {
 	  "\n," + "\"deadEnds\":" + JSON.stringify(deadEnds) +
       "\n," + "\"notWalkedAreas\":" + JSON.stringify(notWalkedAreas) + 
       
-      (!isComplete?
-        ("\n," + "\"explanation\":" + JSON.stringify(walkDecisionDetail)):"") + 
+      "\n," + "\"explanation\":" + JSON.stringify(walkDecisionDetail) + 
       
       "\n," + "\"comment\":" + JSON.stringify(comment) + 
       "\n" +
