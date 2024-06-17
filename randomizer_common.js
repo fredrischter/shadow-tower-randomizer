@@ -466,7 +466,7 @@ class TFormatPart {
       if (!valid) {
         //console.log("Binary texture_file " + binToStr(this.bin.slice(0, 0x40)));
         //console.log("clutX1 " + clutX1.toString(16) + " clutY1 " + clutY1.toString(16) + " clutW1 " + clutW1.toString(16) + " clutH1 " + clutH1.toString(16));
-        console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
+   //console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
         continue;
       }
 
@@ -485,7 +485,7 @@ class TFormatPart {
       cursor+=0x10;
 
       if (textureX1 == 0x8000) {
-        console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
+  // console.log("Didn't find valid palette header. Swallowing 0x10 bytes, trying next.");
         continue;
       }
 

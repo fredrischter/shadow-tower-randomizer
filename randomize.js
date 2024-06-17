@@ -1412,10 +1412,10 @@ function randomize(paramsFile, stDir) {
     //shadow_tower_part1.objects[0].destinationRotation.set(2);
 
     if (collectableUniques.length) {
-        console.log("ERROR - Couldn't distribute collectable uniques " + collectableUniques);
+        console.log("ERROR - Couldn't distribute collectable uniques " + collectableUniques.map(i => items[i].name));
     }
     if (dropUniques.length) {
-        console.log("ERROR - Couldn't distribute drop uniques " + dropUniques);
+        console.log("ERROR - Couldn't distribute drop uniques " + dropUniques.map(i => items[i].name));
     }
 
     console.log = function() {
