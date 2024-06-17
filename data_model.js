@@ -2237,7 +2237,11 @@
 
     loadCreatureTextureFiles(stDir, params);
 
-    fs.writeFileSync("game_data.js", "global.GAME_DATA=" + fullJSON() + ";");
+    let stringContentToWrite = "global.GAME_DATA=" + fullJSON() + ";";
+    let original = fs.readFileSync("game_data.js");
+    if (stringContentToWrite != original) {
+      fs.writeFileSync("game_data.js", stringContentToWrite);
+    }
 
   }
 
