@@ -3100,5 +3100,5 @@ DEBUG ------------------ Randomization engine - forEachCollectable -
 
 
 Difficulty medium, factor 1
-ERROR - Couldn't distribute collectable uniques 230,110,32,27,34,89,139,151,49,42,200,118,43
-ERROR - Couldn't distribute drop uniques 101,261,260,224,247,87,69,264,184,127,46,195,250,19,265,190,227,120,90,140,229,191,192,226,214,160,113,210,37
+ERROR - Couldn't distribute collectable uniques item_e6_ring_of_drain,item_6e_dark_plate_mail,item_20_shining_bastard_sword,item_1b_swift_bastard_sword,item_22_mighty_bastard_sword,item_59_mystic_great_helm,item_8b_deadly_arm_guard,item_97_steel_boots_of_balance,item_31_blood_sword,item_2a_swift_great_sword,item_c8_sorcerer_ring_of_fire,item_76_god_plate,item_2b_fiery_great_sword
+ERROR - Couldn't distribute drop uniques item_65_harden_plate_mail,item_105_amulet_of_balance,item_104_priest_amulet,item_e0_ring_of_ice,item_f7_priest_bracelet,item_57_harden_great_helm,item_45_fiery_bow_gun,item_108_amulet_of_winter,item_b8_tower_shield_of_resist,item_7f_metal_glove,item_2e_crushing_great_sword,item_c3_holy_gothic_shield,item_fa_moon_bracelet,item_13_broad_sword,item_109_endless_amulet,item_be_gothic_shield_of_balance,item_e3_ring_of_seal,item_78_knight_plate_mail,item_5a_holy_great_helm,item_8c_master_arm_guard,item_e5_ring_of_rage,item_bf_master_gothic_shield,item_c0_gothic_shield_of_power,item_e2_black_ring,item_d6_dark_sorcerer_ring,item_a0_holy_leg_guard,item_71_devil_plate_mail,item_d2_holy_ring,item_25_magical_bastard_sword

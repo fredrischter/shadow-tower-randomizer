@@ -11,244 +11,244 @@
 
 <pre class="mermaid">
 graph TD
-  shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top r1 y0 --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain]
-  illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain] -- Exit r3 y-8 --> shadow_tower_part1a[Shadow Tower Part1 A]
-  illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain] -- Entrance r1 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Top right r3 y0 --> human_world_forgotten_region[Human World
-Forgotten Region]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Top left r2 y0 --> human_world_solitary_region[Human World
-Solitary Region]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom r3 y0 --> illusion_world_bewilderment_domain[Illusion World
-Bewilderment Domain]
-  shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle r2 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge r0 y-8 --> illusion_world_worship_domain[Illusion World
+  shadow_tower_part1a[Shadow Tower Part1 A] -- Tower Top r3 y0 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end r2 y0 --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer]
-  shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C]
-  human_world_solitary_region[Human World
-Solitary Region] -- Skeleton r2 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
-  human_world_solitary_region[Human World
-Solitary Region] -- Cemetery r2 y0 --> fire_world_phoenix_cave[Fire World
-Phoenix Cave]
-  human_world_solitary_region[Human World
-Solitary Region] -- Grave r2 y0 --> earth_world_stone_cavern[Earth World
-Stone Cavern]
-  human_world_solitary_region[Human World
-Solitary Region] -- Church r3 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  human_world_forgotten_region[Human World
-Forgotten Region] -- Exit r1 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
-  human_world_forgotten_region[Human World
-Forgotten Region] -- Jump down r1 y0 --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern]
-  human_world_forgotten_region[Human World
-Forgotten Region] -- Totem r0 y3 --> earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern]
-  human_world_forgotten_region[Human World
-Forgotten Region] -- Drop in r2 y3 --> water_world_white_rain_area[Water World
-White Rain Area]
-  shadow_tower_part2b[Shadow Tower Part2 B] -- Upper r2 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
-  shadow_tower_part2b[Shadow Tower Part2 B] -- Middle r0 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
-  shadow_tower_part2b[Shadow Tower Part2 B] -- Top right r3 y0 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
-  shadow_tower_part3c[Shadow Tower Part3 C] -- Fence r0 y0 --> earth_world_stone_cavern[Earth World
-Stone Cavern]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Poison r0 y0 --> water_world_sunken_river_area[Water World
-Sunken River Area]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Rock guy r3 y0 --> human_world_forgotten_region[Human World
-Forgotten Region]
-  earth_world_poisonous_cavern[Earth World
-Poisonous Cavern] -- Entrance r1 y0 --> human_world_hidden_region[Human World
-Hidden Region]
-  earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern] -- Entrance r1 y0 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
-  earth_world_hostile_rock_cavern[Earth World
-Hostile Rock Cavern] -- Boss room r0 y3 --> human_world_forgotten_region[Human World
-Forgotten Region]
-  fire_world_phoenix_cave[Fire World
-Phoenix Cave] -- Entrance r2 y0 --> human_world_solitary_region[Human World
-Solitary Region]
-  fire_world_phoenix_cave[Fire World
-Phoenix Cave] -- Exit r1 y0 --> water_world_sunken_river_area[Water World
-Sunken River Area]
   illusion_world_worship_domain[Illusion World
-Worship Domain] -- Entrance r3 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+Worship Domain] -- Entrance r1 y-8 --> shadow_tower_part1a[Shadow Tower Part1 A]
   illusion_world_worship_domain[Illusion World
-Worship Domain] -- Connection r3 y1 --> fire_world_molten_cavern[Fire World
-Molten Cavern]
+Worship Domain] -- Connection r0 y2 --> illusion_world_worship_domain[Illusion World
+Worship Domain]
   illusion_world_worship_domain[Illusion World
-Worship Domain] -- Exit r2 y0 --> fire_world_ashen_cavern[Fire World
-Ashen Cavern]
-  illusion_world_worship_domain[Illusion World
-Worship Domain] -- To Boss r2 y0 --> fire_world_burning_cavern[Fire World
+Worship Domain] -- Exit r1 y3 --> fire_world_burning_cavern[Fire World
 Burning Cavern]
-  death_world_lingering_curse_layer[Death World
-Lingering Curse Layer] -- Door r2 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
-  death_world_lingering_curse_layer[Death World
-Lingering Curse Layer] -- Box room r0 y3 --> human_world_hidden_region[Human World
-Hidden Region]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Prison r2 y0 --> human_world_solitary_region[Human World
-Solitary Region]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Entrance r3 y0 --> shadow_tower_part1c[Shadow Tower Part1 C]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Lower totem r1 y0 --> death_world_gate_of_the_dead[Death World
-Gate Of The Dead]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Upper totem 1 r1 y3 --> monster_world_screeching_area[Monster World
-Screeching Area]
-  death_world_dark_castle_layer[Death World
-Dark Castle Layer] -- Upper totem 2 r0 y2 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Edge r3 y0 --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Middle r0 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
-  shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Top r3 y0 --> earth_world_quaking_cavern[Earth World
-Quaking Cavern]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Middle r3 y0 --> earth_world_rotting_cavern[Earth World
-Rotting Cavern]
-  shadow_tower_part1c[Shadow Tower Part1 C] -- Edge r0 y0 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  human_world_hidden_region[Human World
-Hidden Region] -- Jail r3 y-8 --> monster_world_false_eye_area[Monster World
-False Eye Area]
-  human_world_hidden_region[Human World
-Hidden Region] -- Corridor r1 y0 --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern]
-  human_world_hidden_region[Human World
-Hidden Region] -- Totem r0 y3 --> death_world_lingering_curse_layer[Death World
-Lingering Curse Layer]
-  earth_world_stone_cavern[Earth World
-Stone Cavern] -- Entrance r3 y-8 --> shadow_tower_part3c[Shadow Tower Part3 C]
-  earth_world_stone_cavern[Earth World
-Stone Cavern] -- Exit r2 y0 --> human_world_solitary_region[Human World
-Solitary Region]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Entrance r3 y-8 --> death_world_undead_layer[Death World
-Undead Layer]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Bridge r1 y0 --> shadow_tower_part2b[Shadow Tower Part2 B]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Exit r1 y-8 --> shadow_tower_part2a[Shadow Tower Part2 A]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Jump in r0 y3 --> illusion_world_gloomy_domain[Illusion World
-Gloomy Domain]
-  earth_world_false_pit_cavern[Earth World
-False Pit Cavern] -- Totem r1 y2 --> illusion_world_dream_domain[Illusion World
-Dream Domain]
-  fire_world_burning_cavern[Fire World
-Burning Cavern] -- Entrance r2 y0 --> death_world_undead_layer[Death World
-Undead Layer]
-  fire_world_burning_cavern[Fire World
-Burning Cavern] -- Platform r3 y0 --> illusion_world_dream_domain[Illusion World
-Dream Domain]
-  fire_world_burning_cavern[Fire World
-Burning Cavern] -- Room r1 y1 --> illusion_world_worship_domain[Illusion World
+  illusion_world_worship_domain[Illusion World
+Worship Domain] -- To Boss r0 y0 --> illusion_world_worship_domain[Illusion World
 Worship Domain]
-  fire_world_molten_cavern[Fire World
-Molten Cavern] -- Abraxus r2 y1 --> fire_world_ashen_cavern[Fire World
+  fire_world_burning_cavern[Fire World
+Burning Cavern] -- Entrance r2 y-8 --> shadow_tower_part3c[Shadow Tower Part3 C]
+  fire_world_burning_cavern[Fire World
+Burning Cavern] -- Platform r3 y0 --> illusion_world_worship_domain[Illusion World
+Worship Domain]
+  fire_world_burning_cavern[Fire World
+Burning Cavern] -- Room r0 y0 --> fire_world_ashen_cavern[Fire World
 Ashen Cavern]
-  fire_world_molten_cavern[Fire World
-Molten Cavern] -- Platform r3 y0 --> illusion_world_worship_domain[Illusion World
-Worship Domain]
+  shadow_tower_part3c[Shadow Tower Part3 C] -- Fence r2 y0 --> fire_world_burning_cavern[Fire World
+Burning Cavern]
   fire_world_ashen_cavern[Fire World
 Ashen Cavern] -- Cerberus r0 y2 --> fire_world_molten_cavern[Fire World
 Molten Cavern]
   fire_world_ashen_cavern[Fire World
-Ashen Cavern] -- Start r2 y0 --> illusion_world_worship_domain[Illusion World
-Worship Domain]
-  water_world_sunken_river_area[Water World
-Sunken River Area] -- Pool r3 y0 --> fire_world_phoenix_cave[Fire World
-Phoenix Cave]
-  water_world_sunken_river_area[Water World
-Sunken River Area] -- Entrance r2 y-8 --> earth_world_poisonous_cavern[Earth World
-Poisonous Cavern]
-  water_world_impure_pool_area[Water World
-Impure Pool Area] -- Entrance r1 y0 --> human_world_cursed_region[Human World
-Cursed Region]
-  water_world_impure_pool_area[Water World
-Impure Pool Area] -- Flush down r3 y0 --> earth_world_hostile_rock_cavern[Earth World
+Ashen Cavern] -- Start r0 y2 --> fire_world_burning_cavern[Fire World
+Burning Cavern]
+  fire_world_molten_cavern[Fire World
+Molten Cavern] -- Abraxus r0 y0 --> fire_world_ashen_cavern[Fire World
+Ashen Cavern]
+  fire_world_molten_cavern[Fire World
+Molten Cavern] -- Platform r0 y3 --> illusion_world_dream_domain[Illusion World
+Dream Domain]
+  illusion_world_dream_domain[Illusion World
+Dream Domain] -- Totem r0 y2 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+  illusion_world_dream_domain[Illusion World
+Dream Domain] -- Entrance r2 y0 --> fire_world_molten_cavern[Fire World
+Molten Cavern]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Prison r3 y0 --> human_world_solitary_region[Human World
+Solitary Region]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Entrance r2 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Lower totem r3 y1 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem 1 r0 y2 --> illusion_world_dream_domain[Illusion World
+Dream Domain]
+  death_world_dark_castle_layer[Death World
+Dark Castle Layer] -- Upper totem 2 r1 y0 --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Edge r2 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Middle r0 y0 --> earth_world_hostile_rock_cavern[Earth World
 Hostile Rock Cavern]
-  water_world_impure_pool_area[Water World
-Impure Pool Area] -- Totem r0 y0 --> death_world_dark_castle_layer[Death World
+  shadow_tower_part1b[Shadow Tower Part1 B] -- Jump  --> shadow_tower_part1c[Shadow Tower Part1 C]
+  human_world_solitary_region[Human World
+Solitary Region] -- Skeleton r2 y0 --> earth_world_stone_cavern[Earth World
+Stone Cavern]
+  human_world_solitary_region[Human World
+Solitary Region] -- Cemetery r1 y0 --> death_world_dark_castle_layer[Death World
 Dark Castle Layer]
-  monster_world_screeching_area[Monster World
-Screeching Area] -- Entrance r2 y0 --> shadow_tower_part2a[Shadow Tower Part2 A]
-  monster_world_screeching_area[Monster World
-Screeching Area] -- Totem r0 y3 --> death_world_dark_castle_layer[Death World
-Dark Castle Layer]
-  monster_world_screeching_area[Monster World
-Screeching Area] -- Necron r2 y0 --> monster_world_false_eye_area[Monster World
+  human_world_solitary_region[Human World
+Solitary Region] -- Grave r1 y0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain]
+  human_world_solitary_region[Human World
+Solitary Region] -- Church r2 y0 --> monster_world_false_eye_area[Monster World
 False Eye Area]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Entrance r1 y0 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Bridge r1 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Exit r0 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Jump in r1 y0 --> death_world_dark_castle_layer[Death World
+Dark Castle Layer]
+  earth_world_false_pit_cavern[Earth World
+False Pit Cavern] -- Totem r1 y2 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer]
   death_world_gate_of_the_dead[Death World
-Gate Of The Dead] -- Entrance r0 y0 --> water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area]
+Gate Of The Dead] -- Entrance r2 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
   death_world_gate_of_the_dead[Death World
 Gate Of The Dead] -- Totem r3 y0 --> death_world_dark_castle_layer[Death World
 Dark Castle Layer]
-  shadow_tower_part2a[Shadow Tower Part2 A] -- Top left r3 y0 --> earth_world_false_pit_cavern[Earth World
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Top r3 y0 --> earth_world_false_pit_cavern[Earth World
 False Pit Cavern]
-  shadow_tower_part2a[Shadow Tower Part2 A] -- Edge r0 y-8 --> monster_world_screeching_area[Monster World
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Middle r0 y-8 --> death_world_undead_layer[Death World
+Undead Layer]
+  shadow_tower_part1c[Shadow Tower Part1 C] -- Edge r1 y0 --> water_world_white_rain_area[Water World
+White Rain Area]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom middle r0 y0 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Top edge r2 y0 --> death_world_gate_of_the_dead[Death World
+Gate Of The Dead]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Bottom end r3 y0 --> earth_world_stone_cavern[Earth World
+Stone Cavern]
+  shadow_tower_part3b[Shadow Tower Part3 B] -- Jump  --> shadow_tower_part3c[Shadow Tower Part3 C]
+  earth_world_stone_cavern[Earth World
+Stone Cavern] -- Entrance r2 y0 --> human_world_solitary_region[Human World
+Solitary Region]
+  earth_world_stone_cavern[Earth World
+Stone Cavern] -- Exit r1 y-8 --> shadow_tower_part3b[Shadow Tower Part3 B]
+  earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Entrance r0 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
+  earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern] -- Boss room r0 y3 --> monster_world_screeching_area[Monster World
 Screeching Area]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Entrance r1 y-8 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Flush down r0 y0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern]
+  water_world_impure_pool_area[Water World
+Impure Pool Area] -- Totem r3 y3 --> human_world_forgotten_region[Human World
+Forgotten Region]
+  monster_world_false_eye_area[Monster World
+False Eye Area] -- Entrance r1 y0 --> human_world_solitary_region[Human World
+Solitary Region]
+  monster_world_false_eye_area[Monster World
+False Eye Area] -- Totem r3 y2 --> human_world_forgotten_region[Human World
+Forgotten Region]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Ladder down r3 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Entrance r3 y0 --> human_world_solitary_region[Human World
+Solitary Region]
+  illusion_world_gloomy_domain[Illusion World
+Gloomy Domain] -- Totem r0 y3 --> water_world_white_rain_area[Water World
+White Rain Area]
+  death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Door r0 y-8 --> shadow_tower_part2a[Shadow Tower Part2 A]
+  death_world_lingering_curse_layer[Death World
+Lingering Curse Layer] -- Box room r2 y3 --> earth_world_false_pit_cavern[Earth World
+False Pit Cavern]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Top left r0 y0 --> death_world_lingering_curse_layer[Death World
+Lingering Curse Layer]
+  shadow_tower_part2a[Shadow Tower Part2 A] -- Edge r3 y0 --> death_world_undead_layer[Death World
+Undead Layer]
   shadow_tower_part2a[Shadow Tower Part2 A] -- Jump  --> shadow_tower_part2b[Shadow Tower Part2 B]
-  human_world_cursed_region[Human World
-Cursed Region] -- Entrance r1 y-8 --> illusion_world_gloomy_domain[Illusion World
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Upper r1 y0 --> illusion_world_gloomy_domain[Illusion World
+Gloomy Domain]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Middle r3 y0 --> monster_world_screeching_area[Monster World
+Screeching Area]
+  shadow_tower_part2b[Shadow Tower Part2 B] -- Top right r2 y-8 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Exit r2 y0 --> human_world_hidden_region[Human World
+Hidden Region]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Jump down r2 y-8 --> illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Totem r1 y2 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+  human_world_forgotten_region[Human World
+Forgotten Region] -- Drop in r1 y2 --> monster_world_false_eye_area[Monster World
+False Eye Area]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Entrance r0 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Totem r1 y0 --> earth_world_hostile_rock_cavern[Earth World
+Hostile Rock Cavern]
+  monster_world_screeching_area[Monster World
+Screeching Area] -- Necron r2 y2 --> human_world_hidden_region[Human World
+Hidden Region]
+  human_world_hidden_region[Human World
+Hidden Region] -- Jail r1 y0 --> human_world_forgotten_region[Human World
+Forgotten Region]
+  human_world_hidden_region[Human World
+Hidden Region] -- Corridor r0 y-8 --> earth_world_rotting_cavern[Earth World
+Rotting Cavern]
+  human_world_hidden_region[Human World
+Hidden Region] -- Totem r0 y1 --> monster_world_screeching_area[Monster World
+Screeching Area]
+  death_world_undead_layer[Death World
+Undead Layer] -- King's room r2 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+  death_world_undead_layer[Death World
+Undead Layer] -- Entrance r3 y-8 --> shadow_tower_part2a[Shadow Tower Part2 A]
+  earth_world_rotting_cavern[Earth World
+Rotting Cavern] -- Entrance r0 y0 --> human_world_hidden_region[Human World
+Hidden Region]
+  illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Exit r3 y0 --> human_world_forgotten_region[Human World
+Forgotten Region]
+  illusion_world_bewilderment_domain[Illusion World
+Bewilderment Domain] -- Entrance r3 y-8 --> shadow_tower_part2b[Shadow Tower Part2 B]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Poison r2 y0 --> water_world_impure_pool_area[Water World
+Impure Pool Area]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Rock guy r2 y0 --> earth_world_quaking_cavern[Earth World
+Quaking Cavern]
+  earth_world_poisonous_cavern[Earth World
+Poisonous Cavern] -- Entrance r2 y0 --> human_world_cursed_region[Human World
+Cursed Region]
+  water_world_white_rain_area[Water World
+White Rain Area] -- Entrance r2 y0 --> shadow_tower_part1c[Shadow Tower Part1 C]
+  water_world_white_rain_area[Water World
+White Rain Area] -- Totem r0 y3 --> illusion_world_gloomy_domain[Illusion World
 Gloomy Domain]
   human_world_cursed_region[Human World
-Cursed Region] -- Guardian side r3 y-8 --> water_world_impure_pool_area[Water World
-Impure Pool Area]
-  earth_world_rotting_cavern[Earth World
-Rotting Cavern] -- Entrance r1 y-8 --> shadow_tower_part1c[Shadow Tower Part1 C]
+Cursed Region] -- Entrance r2 y0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern]
+  human_world_cursed_region[Human World
+Cursed Region] -- Guardian side r2 y0 --> water_world_sunken_river_area[Water World
+Sunken River Area]
   earth_world_quaking_cavern[Earth World
-Quaking Cavern] -- Entrance r2 y0 --> shadow_tower_part1c[Shadow Tower Part1 C]
-  water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area] -- Exit r1 y0 --> water_world_white_rain_area[Water World
-White Rain Area]
-  water_world_watery_labyrinth_area[Water World
-Watery Labyrinth Area] -- Entrance r2 y0 --> death_world_gate_of_the_dead[Death World
-Gate Of The Dead]
-  monster_world_false_eye_area[Monster World
-False Eye Area] -- Entrance r0 y-8 --> human_world_hidden_region[Human World
-Hidden Region]
-  monster_world_false_eye_area[Monster World
-False Eye Area] -- Totem r1 y0 --> monster_world_screeching_area[Monster World
-Screeching Area]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Ladder down r2 y0 --> human_world_cursed_region[Human World
+Quaking Cavern] -- Entrance r2 y0 --> earth_world_poisonous_cavern[Earth World
+Poisonous Cavern]
+  water_world_sunken_river_area[Water World
+Sunken River Area] -- Pool r3 y-8 --> shadow_tower_part3a[Shadow Tower Part3 A]
+  water_world_sunken_river_area[Water World
+Sunken River Area] -- Entrance r1 y0 --> human_world_cursed_region[Human World
 Cursed Region]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Entrance r3 y-8 --> shadow_tower_part1b[Shadow Tower Part1 B]
-  illusion_world_gloomy_domain[Illusion World
-Gloomy Domain] -- Totem r0 y3 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
-  illusion_world_dream_domain[Illusion World
-Dream Domain] -- Totem r1 y3 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
-  illusion_world_dream_domain[Illusion World
-Dream Domain] -- Entrance r2 y0 --> fire_world_burning_cavern[Fire World
-Burning Cavern]
-  water_world_white_rain_area[Water World
-White Rain Area] -- Entrance r3 y0 --> water_world_watery_labyrinth_area[Water World
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Top right r2 y0 --> water_world_watery_labyrinth_area[Water World
 Watery Labyrinth Area]
-  water_world_white_rain_area[Water World
-White Rain Area] -- Totem r3 y2 --> human_world_forgotten_region[Human World
-Forgotten Region]
-  death_world_undead_layer[Death World
-Undead Layer] -- King's room r0 y0 --> earth_world_false_pit_cavern[Earth World
-False Pit Cavern]
-  death_world_undead_layer[Death World
-Undead Layer] -- Entrance r3 y-8 --> fire_world_burning_cavern[Fire World
-Burning Cavern]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Top left r1 y0 --> water_world_sunken_river_area[Water World
+Sunken River Area]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Bottom r3 y-8 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave]
+  shadow_tower_part3a[Shadow Tower Part3 A] -- Jump  --> shadow_tower_part3b[Shadow Tower Part3 B]
+  fire_world_phoenix_cave[Fire World
+Phoenix Cave] -- Entrance r2 y-8 --> water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area]
+  fire_world_phoenix_cave[Fire World
+Phoenix Cave] -- Exit r0 y0 --> shadow_tower_part3a[Shadow Tower Part3 A]
+  water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Exit r1 y0 --> shadow_tower_part3a[Shadow Tower Part3 A]
+  water_world_watery_labyrinth_area[Water World
+Watery Labyrinth Area] -- Entrance r2 y0 --> fire_world_phoenix_cave[Fire World
+Phoenix Cave]
 
 </pre>
 
@@ -256,158 +256,159 @@ Burning Cavern]
 <h3>human_world_solitary_region</h3><br>
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#808080">31&nbsp;exit-door&nbsp;&nbsp;Skeleton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,1&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">34&nbsp;exit-door&nbsp;&nbsp;Cemetery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_phoenix_cave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-5&nbsp;&nbsp;,0&nbsp;,-5),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;3),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">35&nbsp;exit-door&nbsp;&nbsp;Grave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_stone_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(-16&nbsp;&nbsp;,5,-16),unknown(-10&nbsp;&nbsp;,0),destMapIndex(&nbsp;28),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">38&nbsp;exit-door&nbsp;&nbsp;Church&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;,-1&nbsp;,10),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;25),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">31&nbsp;exit-door&nbsp;&nbsp;Skeleton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_stone_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,7),destMapIndex(&nbsp;28),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">34&nbsp;exit-door&nbsp;&nbsp;Cemetery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;,-1&nbsp;,10),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;25),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">35&nbsp;exit-door&nbsp;&nbsp;Grave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_gloomy_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-6&nbsp;&nbsp;,0&nbsp;,-6),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;9),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">38&nbsp;exit-door&nbsp;&nbsp;Church&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_false_eye_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,0&nbsp;,-3),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;2),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11d_magic_potion</span>
+<br><span style="background:#30f030">1&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">3&nbsp;item_128_spirit_book</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_81_fiery_gauntlet</span>
+<br><span style="background:#30f030">5&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">8&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">8&nbsp;item_11d_magic_potion</span>
 <br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/human_world_solitary_region.png"/><br>
 <h3>human_world_hidden_region</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;8</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Jail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_false_eye_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,5&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;40),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Corridor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(-15&nbsp;,-2,-15),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;14),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">26&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_lingering_curse_layer&nbsp;&nbsp;pos(&nbsp;17&nbsp;&nbsp;,8&nbsp;,17),unknown(&nbsp;&nbsp;3&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#30f030">0&nbsp;item_db_caustic_ring</span>
+<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Jail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-2&nbsp;&nbsp;,0&nbsp;,-2),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;33),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Corridor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_rotting_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,3&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">26&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_screeching_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;15&nbsp;,-3&nbsp;,15),unknown(-10&nbsp;&nbsp;,0),destMapIndex(248),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;1)</span>
+<br><span style="background:#30f030">0&nbsp;item_125_dust_of_rage</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_11e_anti_venom</span>
+<br><span style="background:#30f030">2&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">4&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_128_spirit_book</span>
+<br><span style="background:#30f030">6&nbsp;item_f_broad_sword</span>
 <br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">8&nbsp;item_b3_tower_shield_of_honor</span>
+<br><span style="background:#30f030">8&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">a&nbsp;item_10e_sacred_feather</span>
+<br><span style="background:#30f030">a&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">b&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">c&nbsp;item_120_divine_symbol</span>
+<br><span style="background:#30f030">c&nbsp;item_136_soul_pod_5_sp</span>
 <br><span style="background:#30f030">d&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/human_world_hidden_region.png"/><br>
 <h3>human_world_forgotten_region</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;7</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#800000">&nbsp;6&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=111&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;5b80&nbsp;&nbsp;&nbsp;&nbsp;38c380&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;46,&nbsp;&nbsp;40,&nbsp;&nbsp;3d)&nbsp;&nbsp;&nbsp;&nbsp;46&nbsp;&nbsp;40&nbsp;&nbsp;3d&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;6f&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;17&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;1c&nbsp;&nbsp;fc&nbsp;&nbsp;ff&nbsp;&nbsp;f0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
-<br><span style="background:#808080">18&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_hostile_rock_cavern&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;33&nbsp;,-1&nbsp;,33),unknown(&nbsp;11&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#808080">34&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,1&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">37&nbsp;exit-door&nbsp;&nbsp;Jump&nbsp;down&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,1&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;27),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">41&nbsp;exit-totem&nbsp;Drop&nbsp;in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_white_rain_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;37&nbsp;,-3&nbsp;,37),unknown(&nbsp;&nbsp;2&nbsp;,-8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#30f030">0&nbsp;item_7e_metal_glove</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_63_plate_mail</span>
-<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_10e_sacred_feather</span>
-<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">8&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">a&nbsp;item_136_soul_pod_5_sp</span>
-<br>
-<img src="maps/human_world_forgotten_region.png"/><br>
-<h3>human_world_cursed_region</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
-<br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#ff8080">21&nbsp;0a_guardian_a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;251</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_dd_caustic_priest_ring</span>
-<br><span style="background:#ff8080">30&nbsp;04_fat_mole_a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;NaN</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11d_magic_potion</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_gloomy_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,2&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">31&nbsp;exit-door&nbsp;&nbsp;Guardian&nbsp;side&nbsp;->&nbsp;water_world_impure_pool_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,3&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">18&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_impure_pool_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,6&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;2)</span>
+<br><span style="background:#808080">34&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_hidden_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,7),destMapIndex(&nbsp;28),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">37&nbsp;exit-door&nbsp;&nbsp;Jump&nbsp;down&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_bewilderment_domain&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">41&nbsp;exit-totem&nbsp;Drop&nbsp;in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_false_eye_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25,-13&nbsp;,25),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;2)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11d_magic_potion</span>
+<br><span style="background:#30f030">1&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">3&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">5&nbsp;item_11d_magic_potion</span>
 <br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">7&nbsp;item_6b_frosty_plate_mail</span>
+<br><span style="background:#30f030">7&nbsp;item_35_morning_star</span>
+<br><span style="background:#30f030">8&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">9&nbsp;item_120_divine_symbol</span>
+<br><span style="background:#30f030">a&nbsp;item_126_bottle_of_light</span>
+<br>
+<img src="maps/human_world_forgotten_region.png"/><br>
+<h3>human_world_cursed_region</h3><br>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
+<br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
+<br><span style="background:#ff8080">21&nbsp;0a_guardian_a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;251</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_10a_cune</span>
+<br><span style="background:#ff8080">30&nbsp;04_fat_mole_a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;NaN</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,0&nbsp;,-3),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;37),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">31&nbsp;exit-door&nbsp;&nbsp;Guardian&nbsp;side&nbsp;->&nbsp;water_world_sunken_river_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;21),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2&nbsp;item_40_deadly_battle_axe</span>
+<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4&nbsp;item_125_dust_of_rage</span>
+<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">6&nbsp;item_d_shadow_wolf</span>
+<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/human_world_cursed_region.png"/><br>
 
 <h2>Earth World</h2>
 <h3>earth_world_rotting_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;155</span>
 <br><span style="background:#ff8080">30&nbsp;0a_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;35</span>
-<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,9&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;9&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_hidden_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;,-1&nbsp;,10),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;25),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1&nbsp;item_b4_harden_tower_shield</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_11e_anti_venom</span>
+<br><span style="background:#30f030">3&nbsp;item_cf_soul_ring</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_10d_lamp</span>
+<br><span style="background:#30f030">5&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">7&nbsp;item_122_evil_eye</span>
+<br><span style="background:#30f030">7&nbsp;item_10c_torch</span>
 <br>
 <img src="maps/earth_world_rotting_cavern.png"/><br>
 <h3>earth_world_poisonous_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;7</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;285</span>
 <br><span style="background:#ff8080">20&nbsp;00_duhrin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;286</span>
 <br><span style="background:#ff8080">30&nbsp;05_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;NaN</span>
 <br><span style="background:#ff8080">31&nbsp;04_auriel_b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x70&nbsp;score&nbsp;421</span>
 <br><span style="background:#ff8080">32&nbsp;0b_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;NaN</span>
 <br><span style="background:#ff8080">33&nbsp;0a_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;39</span>
-<br><span style="background:#808080">10&nbsp;exit-door&nbsp;&nbsp;Rock&nbsp;guy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,1&nbsp;,-3),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;6),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Poison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_sunken_river_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">17&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_hidden_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-5&nbsp;&nbsp;,0&nbsp;,-5),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;3),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">10&nbsp;exit-door&nbsp;&nbsp;Rock&nbsp;guy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_quaking_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;12),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Poison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_impure_pool_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;8&nbsp;&nbsp;,3&nbsp;&nbsp;,8),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;10),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">17&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_cursed_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-6&nbsp;&nbsp;,0&nbsp;,-6),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;9),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">1&nbsp;item_10c_torch</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_10c_torch</span>
+<br><span style="background:#30f030">3&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">6&nbsp;item_139_soul_pod_14_sp</span>
 <br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">8&nbsp;item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">8&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">a&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">b&nbsp;item_127_acid_vaccine</span>
+<br><span style="background:#30f030">b&nbsp;item_16_guardian_broad_sword</span>
 <br><span style="background:#30f030">1c&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1d&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1d&nbsp;item_a8_harden_large_shield</span>
 <br>
 <img src="maps/earth_world_poisonous_cavern.png"/><br>
 <h3>earth_world_stone_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;237</span>
 <br><span style="background:#ff8080">13&nbsp;0c_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x25&nbsp;score&nbsp;236</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">30&nbsp;00_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;237</span>
 <br><span style="background:#ff8080">31&nbsp;04_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x0&nbsp;score&nbsp;237</span>
 <br><span style="background:#ff8080">32&nbsp;04_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x0&nbsp;score&nbsp;237</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,5&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,2&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_10e_sacred_feather</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_10a_cune</span>
-<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_136_soul_pod_5_sp</span>
-<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,6&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
+<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1&nbsp;item_127_acid_vaccine</span>
+<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">3&nbsp;item_11d_magic_potion</span>
+<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">5&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">7&nbsp;item_136_soul_pod_5_sp</span>
 <br>
 <img src="maps/earth_world_stone_cavern.png"/><br>
 <h3>earth_world_quaking_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,1&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;27),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_10d_lamp</span>
-<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">7&nbsp;item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">8&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">9&nbsp;item_12e_dorados_ashes</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,1&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;27),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_11e_anti_venom</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2&nbsp;item_6a_fiery_plate_mail</span>
+<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">6&nbsp;item_139_soul_pod_14_sp</span>
+<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">8&nbsp;item_120_divine_symbol</span>
+<br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/earth_world_quaking_cavern.png"/><br>
 <h3>earth_world_false_pit_cavern</h3><br>
@@ -415,115 +416,116 @@ Burning Cavern]
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;158</span>
 <br><span style="background:#ff8080">b&nbsp;&nbsp;08_guardian_b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;390</span>
 <br><span style="background:#ff8080">c&nbsp;&nbsp;08_guardian_b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;390</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Bridge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;21),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_undead_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,1&nbsp;&nbsp;,1),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;26),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Bridge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;2&nbsp;&nbsp;,7&nbsp;&nbsp;,2),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_impure_pool_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,0&nbsp;&nbsp;,1),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;39),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#800000">&nbsp;5&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=96&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;5b68&nbsp;&nbsp;&nbsp;&nbsp;7f8b68&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;44,&nbsp;&nbsp;40,&nbsp;&nbsp;38)&nbsp;&nbsp;&nbsp;&nbsp;44&nbsp;&nbsp;40&nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;60&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;a8&nbsp;&nbsp;fd&nbsp;&nbsp;40&nbsp;&nbsp;f1&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;f8&nbsp;&nbsp;3d&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;64&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">&nbsp;6&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=96&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;5b80&nbsp;&nbsp;&nbsp;&nbsp;7f8b80&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;44,&nbsp;&nbsp;40,&nbsp;&nbsp;38)&nbsp;&nbsp;&nbsp;&nbsp;44&nbsp;&nbsp;40&nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;60&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;58&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;40&nbsp;&nbsp;f1&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;f8&nbsp;&nbsp;3d&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;64&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">&nbsp;7&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=96&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;5b98&nbsp;&nbsp;&nbsp;&nbsp;7f8b98&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;44,&nbsp;&nbsp;40,&nbsp;&nbsp;38)&nbsp;&nbsp;&nbsp;&nbsp;44&nbsp;&nbsp;40&nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;60&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;40&nbsp;&nbsp;f1&nbsp;&nbsp;58&nbsp;&nbsp;fa&nbsp;&nbsp;3d&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;60&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">&nbsp;8&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=96&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;5bb0&nbsp;&nbsp;&nbsp;&nbsp;7f8bb0&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;44,&nbsp;&nbsp;40,&nbsp;&nbsp;38)&nbsp;&nbsp;&nbsp;&nbsp;44&nbsp;&nbsp;40&nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;60&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;40&nbsp;&nbsp;f1&nbsp;&nbsp;a8&nbsp;&nbsp;f5&nbsp;&nbsp;3e&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;5c&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
-<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,1&nbsp;&nbsp;,0),unknown(&nbsp;10&nbsp;&nbsp;,0),destMapIndex(&nbsp;40),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">16&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_dream_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;38&nbsp;&nbsp;,5&nbsp;,38),unknown(&nbsp;&nbsp;1&nbsp;,16),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;2)</span>
-<br><span style="background:#808080">19&nbsp;exit-totem&nbsp;Jump&nbsp;in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_gloomy_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;,-2&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;3&nbsp;,-8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#30f030">0&nbsp;item_a_rapier</span>
+<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,3&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">16&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_lingering_curse_layer&nbsp;&nbsp;pos(&nbsp;38&nbsp;&nbsp;,5&nbsp;,38),unknown(&nbsp;&nbsp;1&nbsp;,16),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;2)</span>
+<br><span style="background:#808080">19&nbsp;exit-totem&nbsp;Jump&nbsp;in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25&nbsp;,-2&nbsp;,25),unknown(&nbsp;-5&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_10e_sacred_feather</span>
+<br><span style="background:#30f030">2&nbsp;item_117_brass_key</span>
 <br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_1_short_sword</span>
+<br><span style="background:#30f030">4&nbsp;item_3_long_sword</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">6&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">8&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">8&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">a&nbsp;item_7b_leather_glove</span>
+<br><span style="background:#30f030">a&nbsp;item_1_short_sword</span>
 <br><span style="background:#30f030">b&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">c&nbsp;item_fc_amulet_of_movement</span>
+<br><span style="background:#30f030">c&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">d&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/earth_world_false_pit_cavern.png"/><br>
 <h3>earth_world_hostile_rock_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;3</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;159</span>
 <br><span style="background:#ff8080">21&nbsp;04_dread_knight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;782</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_impure_pool_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;6&nbsp;&nbsp;,0&nbsp;&nbsp;,6),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;6),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-totem&nbsp;Boss&nbsp;room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;6&nbsp;,-6&nbsp;&nbsp;,6),unknown(&nbsp;&nbsp;5&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_10a_cune</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,6&nbsp;&nbsp;,1),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-totem&nbsp;Boss&nbsp;room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_screeching_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;17&nbsp;&nbsp;,8&nbsp;,17),unknown(&nbsp;&nbsp;3&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_122_evil_eye</span>
+<br><span style="background:#30f030">1&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">3&nbsp;item_11f_anti_paralytic</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/earth_world_hostile_rock_cavern.png"/><br>
 
 <h2>Fire World</h2>
 <h3>fire_world_burning_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;3</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#808080">37&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_undead_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">93&nbsp;exit-portal&nbsp;Room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;24&nbsp;,12&nbsp;,24),unknown(&nbsp;&nbsp;2&nbsp;&nbsp;,0),destMapIndex(240),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;1)</span>
-<br><span style="background:#808080">94&nbsp;exit-portal&nbsp;Platform&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_dream_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;18&nbsp;&nbsp;,1&nbsp;,18),unknown(-10&nbsp;,16),destMapIndex(&nbsp;16),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">37&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,6&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">93&nbsp;exit-portal&nbsp;Room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_ashen_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;18&nbsp;&nbsp;,1&nbsp;,18),unknown(-10&nbsp;,16),destMapIndex(&nbsp;16),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">94&nbsp;exit-portal&nbsp;Platform&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;13&nbsp;,15&nbsp;,13),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#800000">99&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=252&nbsp;99&nbsp;&nbsp;&nbsp;6438&nbsp;&nbsp;&nbsp;&nbsp;9b3c38&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;35,&nbsp;&nbsp;3f,&nbsp;&nbsp;38)&nbsp;&nbsp;&nbsp;&nbsp;35&nbsp;&nbsp;3f&nbsp;&nbsp;38&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;fc&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;8d&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;fd&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;12&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;0</span>
-<br><span style="background:#30f030">0&nbsp;item_10e_sacred_feather</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_125_dust_of_rage</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_11d_magic_potion</span>
+<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1&nbsp;item_112_key_of_knowledge</span>
+<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">3&nbsp;item_5e_leather_armor</span>
+<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/fire_world_burning_cavern.png"/><br>
 <h3>fire_world_molten_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;3</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;16544</span>
 <br><span style="background:#ff8080">21&nbsp;02_dead_abraxus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;249</span>
 <br><span style="background:#ff8080">30&nbsp;00_abraxus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;16629</span>
 <br><span style="background:#ff8080">31&nbsp;0c_fat_mole_c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;16410</span>
 <br><span style="background:#ff8080">32&nbsp;08_fat_mole_b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;16410</span>
-<br><span style="background:#808080">19&nbsp;exit-portal&nbsp;Platform&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;20&nbsp;,-6&nbsp;,20),unknown(&nbsp;-8&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">27&nbsp;exit-portal&nbsp;Abraxus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_ashen_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;24&nbsp;,12&nbsp;,24),unknown(&nbsp;&nbsp;2&nbsp;&nbsp;,0),destMapIndex(240),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;1)</span>
+<br><span style="background:#808080">19&nbsp;exit-portal&nbsp;Platform&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_dream_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;20&nbsp;&nbsp;,7&nbsp;,20),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
+<br><span style="background:#808080">27&nbsp;exit-portal&nbsp;Abraxus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_ashen_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;18&nbsp;&nbsp;,1&nbsp;,18),unknown(-10&nbsp;,16),destMapIndex(&nbsp;16),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">3&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_10e_sacred_feather</span>
+<br><span style="background:#30f030">5&nbsp;item_122_evil_eye</span>
 <br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">7&nbsp;item_9f_caustic_leg_guard</span>
+<br><span style="background:#30f030">7&nbsp;item_11e_anti_venom</span>
 <br>
 <img src="maps/fire_world_molten_cavern.png"/><br>
 <h3>fire_world_phoenix_cave</h3><br>
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;7</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;0</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;7&nbsp;&nbsp;,0&nbsp;&nbsp;,7),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_sunken_river_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;21),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_10_broad_sword</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_42_bow</span>
-<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">8&nbsp;item_124_poison_vaccine</span>
-<br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_watery_labyrinth_area&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,1&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,2&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1&nbsp;item_127_acid_vaccine</span>
+<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">3&nbsp;item_120_divine_symbol</span>
+<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">5&nbsp;item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">7&nbsp;item_125_dust_of_rage</span>
+<br><span style="background:#30f030">8&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">9&nbsp;item_139_soul_pod_14_sp</span>
 <br><span style="background:#30f030">a&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">b&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">c&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#30f030">d&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">e&nbsp;item_a8_harden_large_shield</span>
+<br><span style="background:#30f030">b&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">c&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">d&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">e&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/fire_world_phoenix_cave.png"/><br>
 <h3>fire_world_ashen_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;171</span>
 <br><span style="background:#ff8080">20&nbsp;0c_ebony_knight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x100&nbsp;score&nbsp;3075</span>
-<br><span style="background:#808080">&nbsp;6&nbsp;exit-portal&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;13&nbsp;,15&nbsp;,13),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;6&nbsp;exit-portal&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_burning_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;24&nbsp;&nbsp;,0&nbsp;,24),unknown(&nbsp;&nbsp;2&nbsp;&nbsp;,0),destMapIndex(224),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;2)</span>
 <br><span style="background:#800000">16&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=169&nbsp;16&nbsp;&nbsp;&nbsp;5c70&nbsp;&nbsp;&nbsp;&nbsp;92c470&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;51,&nbsp;&nbsp;40,&nbsp;&nbsp;51)&nbsp;&nbsp;&nbsp;&nbsp;51&nbsp;&nbsp;40&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;a9&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;e&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;ba&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;14&nbsp;&nbsp;fc&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0</span>
 <br><span style="background:#808080">17&nbsp;exit-portal&nbsp;Cerberus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_molten_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;24&nbsp;&nbsp;,0&nbsp;,24),unknown(&nbsp;&nbsp;2&nbsp;&nbsp;,0),destMapIndex(224),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;2)</span>
-<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_10a_cune</span>
-<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_11f_anti_paralytic</span>
-<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">0&nbsp;item_9_rapier</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2&nbsp;item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4&nbsp;item_5c_quilted_armor</span>
+<br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">7&nbsp;item_11e_anti_venom</span>
 <br>
 <img src="maps/fire_world_ashen_cavern.png"/><br>
 
@@ -534,35 +536,35 @@ Burning Cavern]
 <br><span style="background:#ff8080">30&nbsp;00_fat_mole_f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;16432</span>
 <br><span style="background:#ff8080">31&nbsp;04_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;191</span>
 <br><span style="background:#800000">&nbsp;0&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=90&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;5af0&nbsp;&nbsp;&nbsp;&nbsp;5352f0&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;44,&nbsp;&nbsp;40,&nbsp;&nbsp;40)&nbsp;&nbsp;&nbsp;&nbsp;44&nbsp;&nbsp;40&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;5a&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;e3&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;40&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
-<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_cursed_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;15&nbsp;&nbsp;,0&nbsp;,15),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Flush&nbsp;down&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_hostile_rock_cavern&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;21),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">14&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25,-13&nbsp;,25),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,6&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Flush&nbsp;down&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">14&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;6&nbsp;,-6&nbsp;&nbsp;,6),unknown(&nbsp;&nbsp;5&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;3)</span>
 <br><span style="background:#800000">21&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=105&nbsp;21&nbsp;&nbsp;&nbsp;5ce8&nbsp;&nbsp;&nbsp;&nbsp;5354e8&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;42,&nbsp;&nbsp;40,&nbsp;&nbsp;46)&nbsp;&nbsp;&nbsp;&nbsp;42&nbsp;&nbsp;40&nbsp;&nbsp;46&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;69&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;d&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;40&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">22&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=106&nbsp;22&nbsp;&nbsp;&nbsp;5d00&nbsp;&nbsp;&nbsp;&nbsp;535500&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;42,&nbsp;&nbsp;40,&nbsp;&nbsp;45)&nbsp;&nbsp;&nbsp;&nbsp;42&nbsp;&nbsp;40&nbsp;&nbsp;45&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;6a&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;e&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;40&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">23&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=107&nbsp;23&nbsp;&nbsp;&nbsp;5d18&nbsp;&nbsp;&nbsp;&nbsp;535518&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;41,&nbsp;&nbsp;40,&nbsp;&nbsp;46)&nbsp;&nbsp;&nbsp;&nbsp;41&nbsp;&nbsp;40&nbsp;&nbsp;46&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;6b&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;40&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">24&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=108&nbsp;24&nbsp;&nbsp;&nbsp;5d30&nbsp;&nbsp;&nbsp;&nbsp;535530&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;41,&nbsp;&nbsp;40,&nbsp;&nbsp;45)&nbsp;&nbsp;&nbsp;&nbsp;41&nbsp;&nbsp;40&nbsp;&nbsp;45&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;6c&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;40&nbsp;&nbsp;fe&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff&nbsp;&nbsp;ff&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;ff</span>
-<br><span style="background:#30f030">0&nbsp;item_10a_cune</span>
+<br><span style="background:#30f030">0&nbsp;item_10_broad_sword</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">2&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_9b_harden_leg_guard</span>
+<br><span style="background:#30f030">4&nbsp;item_120_divine_symbol</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/water_world_impure_pool_area.png"/><br>
 <h3>water_world_sunken_river_area</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,5&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Pool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_phoenix_cave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,0&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_123_fire_world_stone</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_cursed_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,0&nbsp;&nbsp;,1),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;25),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Pool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,1&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#30f030">0&nbsp;item_10c_torch</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">2&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">4&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_125_dust_of_rage</span>
+<br><span style="background:#30f030">6&nbsp;item_28_great_sword</span>
 <br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1c&nbsp;item_120_divine_symbol</span>
+<br><span style="background:#30f030">1c&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">1d&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/water_world_sunken_river_area.png"/><br>
@@ -570,65 +572,65 @@ Burning Cavern]
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;162</span>
 <br><span style="background:#ff8080">20&nbsp;05_magi_magus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;1311</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_84_gauntlet</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_f5_deadly_bracelet</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_watery_labyrinth_area&nbsp;&nbsp;pos(&nbsp;&nbsp;8&nbsp;&nbsp;,0&nbsp;&nbsp;,8),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;32),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;6&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;38&nbsp;&nbsp;,5&nbsp;,38),unknown(&nbsp;&nbsp;1&nbsp;,16),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;2)</span>
-<br><span style="background:#30f030">0&nbsp;item_120_divine_symbol</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_139_soul_pod_14_sp</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_136_soul_pod_5_sp</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_89_arm_guard</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_b7_tower_shield_of_balance</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-6&nbsp;&nbsp;,0&nbsp;,-6),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;9),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;6&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_gloomy_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;,-2&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;3&nbsp;,-8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
+<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1&nbsp;item_de_caustic_sorcerer_ring</span>
+<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">3&nbsp;item_43_warrior_bow</span>
+<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/water_world_white_rain_area.png"/><br>
 <h3>water_world_watery_labyrinth_area</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_gate_of_the_dead&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;23),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_white_rain_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,0&nbsp;,-3),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;37),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_124_poison_vaccine</span>
-<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_10e_sacred_feather</span>
-<br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">7&nbsp;item_10c_torch</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_phoenix_cave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;7&nbsp;&nbsp;,0&nbsp;&nbsp;,7),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2&nbsp;item_136_soul_pod_5_sp</span>
+<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4&nbsp;item_123_fire_world_stone</span>
+<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">6&nbsp;item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">8&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">9&nbsp;item_10a_cune</span>
-<br><span style="background:#30f030">a&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">a&nbsp;item_137_soul_pod_53_sp</span>
 <br>
 <img src="maps/water_world_watery_labyrinth_area.png"/><br>
 
 <h2>Monster World</h2>
 <h3>monster_world_false_eye_area</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;157</span>
 <br><span style="background:#ff8080">30&nbsp;02_lizard_servant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;233</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_10a_cune</span>
 <br><span style="background:#ff8080">31&nbsp;06_lizard_servant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;233</span>
-<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_hidden_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,1&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_screeching_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;23&nbsp;,20&nbsp;,23),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(248),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_11e_anti_venom</span>
+<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,0&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,8),destMapIndex(&nbsp;13),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;38&nbsp;&nbsp;,5&nbsp;,38),unknown(&nbsp;&nbsp;1&nbsp;,16),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;2)</span>
+<br><span style="background:#30f030">0&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_10e_sacred_feather</span>
+<br><span style="background:#30f030">2&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">4&nbsp;item_43_warrior_bow</span>
+<br><span style="background:#30f030">4&nbsp;item_68_plate_mail</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_b7_tower_shield_of_balance</span>
+<br><span style="background:#30f030">6&nbsp;item_50_full_helm</span>
 <br>
 <img src="maps/monster_world_false_eye_area.png"/><br>
 <h3>monster_world_screeching_area</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;3</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;2061</span>
 <br><span style="background:#ff8080">21&nbsp;0e_necron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;1592</span>
 <br><span style="background:#ff8080">30&nbsp;01_auriel_c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;2530</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;7&nbsp;&nbsp;,0&nbsp;&nbsp;,7),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;33&nbsp;,-1&nbsp;,33),unknown(&nbsp;11&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#808080">&nbsp;6&nbsp;exit-totem&nbsp;Necron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_false_eye_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;2&nbsp;,-1&nbsp;&nbsp;,2),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_125_dust_of_rage</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_10a_cune</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,6&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_hostile_rock_cavern&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25&nbsp;,-2&nbsp;,25),unknown(&nbsp;-5&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;6&nbsp;exit-totem&nbsp;Necron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_hidden_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,6&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;2)</span>
+<br><span style="background:#30f030">0&nbsp;item_11d_magic_potion</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">2&nbsp;item_125_dust_of_rage</span>
 <br><span style="background:#30f030">1c&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/monster_world_screeching_area.png"/><br>
@@ -638,32 +640,32 @@ Burning Cavern]
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;3</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">30&nbsp;0e_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;103</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,3&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Ladder&nbsp;down&nbsp;&nbsp;&nbsp;->&nbsp;human_world_cursed_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(-16&nbsp;&nbsp;,5,-16),unknown(-10&nbsp;&nbsp;,0),destMapIndex(&nbsp;28),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;6&nbsp;,-6&nbsp;&nbsp;,6),unknown(&nbsp;&nbsp;5&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,2&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Ladder&nbsp;down&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,6&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_white_rain_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;37&nbsp;,-3&nbsp;,37),unknown(&nbsp;&nbsp;2&nbsp;,-8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_123_fire_world_stone</span>
+<br><span style="background:#30f030">3&nbsp;item_2c_deadly_great_sword</span>
 <br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">6&nbsp;item_11d_magic_potion</span>
+<br><span style="background:#30f030">6&nbsp;item_11c_healing_potion</span>
 <br>
 <img src="maps/illusion_world_gloomy_domain.png"/><br>
 <h3>illusion_world_bewilderment_domain</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;8</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;7</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;415</span>
 <br><span style="background:#800000">&nbsp;9&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=78&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;5bc8&nbsp;&nbsp;&nbsp;&nbsp;41b3c8&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;49,&nbsp;&nbsp;40,&nbsp;&nbsp;4a)&nbsp;&nbsp;&nbsp;&nbsp;49&nbsp;&nbsp;40&nbsp;&nbsp;4a&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;4e&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;fc&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;66&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;40&nbsp;&nbsp;f9&nbsp;&nbsp;66&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;af&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;ff</span>
 <br><span style="background:#800000">12&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=76&nbsp;12&nbsp;&nbsp;&nbsp;5c10&nbsp;&nbsp;&nbsp;&nbsp;41b410&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;46,&nbsp;&nbsp;40,&nbsp;&nbsp;47)&nbsp;&nbsp;&nbsp;&nbsp;46&nbsp;&nbsp;40&nbsp;&nbsp;47&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;4c&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;3c&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;19&nbsp;&nbsp;f9&nbsp;&nbsp;a9&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;3c&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;ff</span>
-<br><span style="background:#808080">18&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,2&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">20&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">18&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;40),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">20&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,0&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11e_anti_venom</span>
+<br><span style="background:#30f030">1&nbsp;item_128_spirit_book</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_124_poison_vaccine</span>
+<br><span style="background:#30f030">3&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">5&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">7&nbsp;item_122_evil_eye</span>
 <br><span style="background:#30f030">8&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">9&nbsp;item_ac_great_shield</span>
+<br><span style="background:#30f030">9&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#30f030">a&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">b&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#30f030">c&nbsp;item_126_bottle_of_light</span>
@@ -671,63 +673,68 @@ Burning Cavern]
 <br><span style="background:#30f030">e&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">f&nbsp;item_116_key_of_delusion</span>
 <br><span style="background:#30f030">10&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">11&nbsp;item_3_long_sword</span>
+<br><span style="background:#30f030">11&nbsp;item_55_great_helm</span>
 <br>
 <img src="maps/illusion_world_bewilderment_domain.png"/><br>
 <h3>illusion_world_worship_domain</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;2</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;259</span>
 <br><span style="background:#ff8080">21&nbsp;04_wildowess&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;1921</span>
 <br><span style="background:#ff8080">22&nbsp;01_gorthaur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;1026</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_ac_great_shield</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_84_gauntlet</span>
 <br><span style="background:#ff8080">23&nbsp;08_fester&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;1468</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_12c_pitcher_of_nadya_hp</span>
 <br><span style="background:#ff8080">30&nbsp;02_fat_mole_d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x80&nbsp;score&nbsp;16436</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,3&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;6&nbsp;exit-portal&nbsp;Connection&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_molten_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;24&nbsp;,12&nbsp;,24),unknown(&nbsp;&nbsp;2&nbsp;&nbsp;,0),destMapIndex(240),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;1)</span>
-<br><span style="background:#808080">&nbsp;8&nbsp;exit-portal&nbsp;To&nbsp;Boss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_burning_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;20&nbsp;,-6&nbsp;,20),unknown(&nbsp;-8&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">10&nbsp;exit-portal&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_ashen_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;18&nbsp;&nbsp;,1&nbsp;,18),unknown(-10&nbsp;,16),destMapIndex(&nbsp;16),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;6&nbsp;exit-portal&nbsp;Connection&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;13&nbsp;,15&nbsp;,13),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;2)</span>
+<br><span style="background:#808080">&nbsp;8&nbsp;exit-portal&nbsp;To&nbsp;Boss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;13&nbsp;&nbsp;,0&nbsp;,13),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">10&nbsp;exit-portal&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_burning_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;20&nbsp;&nbsp;,7&nbsp;,20),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;3)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_127_acid_vaccine</span>
+<br><span style="background:#30f030">1&nbsp;item_11c_healing_potion</span>
 <br>
 <img src="maps/illusion_world_worship_domain.png"/><br>
 <h3>illusion_world_dream_domain</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;2</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;3</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;161</span>
 <br><span style="background:#ff8080">20&nbsp;01_disguise&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;1096</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-portal&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_burning_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;20&nbsp;,-6&nbsp;,20),unknown(&nbsp;-8&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;37&nbsp;,-3&nbsp;,37),unknown(&nbsp;&nbsp;2&nbsp;,-8),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;3)</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_10a_cune</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-portal&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_molten_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;13&nbsp;,15&nbsp;,13),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25,-13&nbsp;,25),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;2)</span>
 <br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11d_magic_potion</span>
+<br><span style="background:#30f030">1&nbsp;item_90_steel_boots</span>
 <br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/illusion_world_dream_domain.png"/><br>
 
 <h2>Death World</h2>
 <h3>death_world_dark_castle_layer</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;162</span>
 <br><span style="background:#ff8080">20&nbsp;08_armored_guardian&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;1259</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_93_steel_boots_of_curing</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Prison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;2&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-5&nbsp;&nbsp;,0&nbsp;,-5),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;3),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Lower&nbsp;totem&nbsp;&nbsp;&nbsp;->&nbsp;death_world_gate_of_the_dead&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;23&nbsp;,20&nbsp;,23),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(248),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;7&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;1&nbsp;->&nbsp;monster_world_screeching_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;17&nbsp;&nbsp;,8&nbsp;,17),unknown(&nbsp;&nbsp;3&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;2&nbsp;->&nbsp;water_world_impure_pool_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,6&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;2)</span>
-<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_11d_magic_potion</span>
-<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_27_great_sword</span>
-<br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_136_soul_pod_5_sp</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Prison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;7&nbsp;&nbsp;,0&nbsp;&nbsp;,7),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;2&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,6&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Lower&nbsp;totem&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;15&nbsp;,-3&nbsp;,15),unknown(-10&nbsp;&nbsp;,0),destMapIndex(248),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;1)</span>
+<br><span style="background:#808080">&nbsp;7&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;1&nbsp;->&nbsp;illusion_world_dream_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;38&nbsp;&nbsp;,5&nbsp;,38),unknown(&nbsp;&nbsp;1&nbsp;,16),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;2)</span>
+<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;2&nbsp;->&nbsp;death_world_gate_of_the_dead&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;23&nbsp;,20&nbsp;,23),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(248),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2&nbsp;item_18_bastard_sword</span>
+<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">4&nbsp;item_10a_cune</span>
 <br>
 <img src="maps/death_world_dark_castle_layer.png"/><br>
 <h3>death_world_gate_of_the_dead</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;2</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;4</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;2486</span>
 <br><span style="background:#ff8080">20&nbsp;0c_hollow_mage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x5&nbsp;score&nbsp;2953</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_watery_labyrinth_area&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,0&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;2&nbsp;,-1&nbsp;&nbsp;,2),unknown(&nbsp;-7&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#30f030">0&nbsp;item_12e_dorados_ashes</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_124_poison_vaccine</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,3&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25,-13&nbsp;,25),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#30f030">0&nbsp;item_11f_anti_paralytic</span>
 <br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_12e_dorados_ashes</span>
+<br><span style="background:#30f030">2&nbsp;item_11d_magic_potion</span>
 <br>
 <img src="maps/death_world_gate_of_the_dead.png"/><br>
 <h3>death_world_lingering_curse_layer</h3><br>
@@ -738,35 +745,35 @@ Burning Cavern]
 <br><span style="background:#ff8080">7&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">30&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">31&nbsp;04_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;192</span>
-<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Door&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,5&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;2&nbsp;exit-totem&nbsp;Box&nbsp;room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_hidden_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;33&nbsp;,-1&nbsp;,33),unknown(&nbsp;11&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;3)</span>
-<br><span style="background:#30f030">0&nbsp;item_73_full_plate</span>
-<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">2&nbsp;item_11e_anti_venom</span>
-<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Door&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,3&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;2&nbsp;exit-totem&nbsp;Box&nbsp;room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;15&nbsp;,-8&nbsp;,15),unknown(-10&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;3)</span>
+<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">1&nbsp;item_124_poison_vaccine</span>
+<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">3&nbsp;item_139_soul_pod_14_sp</span>
 <br>
 <img src="maps/death_world_lingering_curse_layer.png"/><br>
 <h3>death_world_undead_layer</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;5180</span>
 <br><span style="background:#ff8080">21&nbsp;04_king_edward&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;2327</span>
 <br><span style="background:#ff8080">30&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">31&nbsp;09_pulsating_heart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;1785</span>
 <br><span style="background:#ff8080">32&nbsp;0d_fat_mole_e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;16450</span>
-<br><span style="background:#808080">12&nbsp;exit-door&nbsp;&nbsp;King's&nbsp;room&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;&nbsp;,2&nbsp;&nbsp;,9),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">15&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_burning_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,1&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
-<br><span style="background:#30f030">0&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1&nbsp;item_12e_dorados_ashes</span>
-<br><span style="background:#30f030">2&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">3&nbsp;item_11f_anti_paralytic</span>
+<br><span style="background:#808080">12&nbsp;exit-door&nbsp;&nbsp;King's&nbsp;room&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,9&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;9&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">15&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;40),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#30f030">0&nbsp;item_120_divine_symbol</span>
+<br><span style="background:#30f030">1&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">2&nbsp;item_127_acid_vaccine</span>
+<br><span style="background:#30f030">3&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">4&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">5&nbsp;item_10e_sacred_feather</span>
+<br><span style="background:#30f030">5&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">6&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">7&nbsp;item_139_soul_pod_14_sp</span>
-<br><span style="background:#30f030">8&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">9&nbsp;item_139_soul_pod_14_sp</span>
-<br><span style="background:#30f030">a&nbsp;item_126_bottle_of_light</span>
-<br><span style="background:#30f030">1c&nbsp;item_122_evil_eye</span>
+<br><span style="background:#30f030">7&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">8&nbsp;item_8d_leather_boots</span>
+<br><span style="background:#30f030">9&nbsp;item_126_bottle_of_light</span>
+<br><span style="background:#30f030">a&nbsp;item_11e_anti_venom</span>
+<br><span style="background:#30f030">1c&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#30f030">1d&nbsp;item_126_bottle_of_light</span>
 <br>
 <img src="maps/death_world_undead_layer.png"/><br>
@@ -775,35 +782,35 @@ Burning Cavern]
 <h3>shadow_tower_part1</h3><br>
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;0</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;0</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Tower&nbsp;Top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_bewilderment_domain&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_gloomy_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;15&nbsp;&nbsp;,0&nbsp;,15),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_quaking_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,1&nbsp;,-3),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;6),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;8&nbsp;exit-door&nbsp;&nbsp;Middle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-5&nbsp;&nbsp;,3&nbsp;,-5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;40),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(-15&nbsp;,-2,-15),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;14),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Middle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_rotting_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-7&nbsp;&nbsp;,0&nbsp;,-7),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;11),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Tower&nbsp;Top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,0&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,8),destMapIndex(&nbsp;13),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_dark_castle_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,0&nbsp;&nbsp;,1),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;25),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,0&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;8&nbsp;exit-door&nbsp;&nbsp;Middle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_hostile_rock_cavern&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-2&nbsp;&nbsp;,0&nbsp;,-2),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;33),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_white_rain_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,0&nbsp;,-3),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;37),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Middle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_undead_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,3&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
 <br>
 <img src="maps/shadow_tower_part1.png"/><br>
 <h3>shadow_tower_part2</h3><br>
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;0</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;0</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-8&nbsp;&nbsp;,0&nbsp;,-8),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,0&nbsp;,10),unknown(&nbsp;&nbsp;6&nbsp;&nbsp;,0),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_screeching_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Middle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,1&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_lingering_curse_layer&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,0&nbsp;,-4),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;20),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_bewilderment_domain&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,6&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_undead_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;7&nbsp;&nbsp;,0&nbsp;&nbsp;,7),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Middle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;monster_world_screeching_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;23),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
 <br><span style="background:#800000">&nbsp;9&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;id=252&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;5bc8&nbsp;&nbsp;&nbsp;111a3c8&nbsp;unknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tile(&nbsp;&nbsp;45,&nbsp;&nbsp;45,&nbsp;&nbsp;40)&nbsp;&nbsp;&nbsp;&nbsp;45&nbsp;&nbsp;45&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;fc&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;fc&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;cf&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;f4&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0</span>
-<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Upper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,3&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;41),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">11&nbsp;exit-door&nbsp;&nbsp;Upper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_gloomy_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-2&nbsp;&nbsp;,2&nbsp;,-2),unknown(&nbsp;-8&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;9),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
 <br>
 <img src="maps/shadow_tower_part2.png"/><br>
 <h3>shadow_tower_part3</h3><br>
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;0</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;0</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_forgotten_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;6&nbsp;&nbsp;,0&nbsp;&nbsp;,6),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;6),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;human_world_solitary_region&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,0&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;4),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Bottom&nbsp;middle&nbsp;->&nbsp;shadow_tower_part2b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,5&nbsp;&nbsp;,4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;40),rot(&nbsp;&nbsp;2),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_worship_domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;5&nbsp;&nbsp;,3&nbsp;&nbsp;,5),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;0),fineY(&nbsp;-8)</span>
-<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Bottom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_bewilderment_domain&nbsp;pos(&nbsp;15&nbsp;&nbsp;,0&nbsp;,15),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;8),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">10&nbsp;exit-door&nbsp;&nbsp;Fence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_stone_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,7),destMapIndex(&nbsp;28),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
-<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Bottom&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_lingering_curse_layer&nbsp;&nbsp;pos(-15&nbsp;,-2,-15),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;14),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;right&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_watery_labyrinth_area&nbsp;&nbsp;pos(&nbsp;-6&nbsp;&nbsp;,0&nbsp;,-6),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;&nbsp;9),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;3&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_sunken_river_area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;21),rot(&nbsp;&nbsp;1),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;5&nbsp;exit-door&nbsp;&nbsp;Bottom&nbsp;middle&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-8&nbsp;&nbsp;,0&nbsp;,-8),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;15),rot(&nbsp;&nbsp;0),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Top&nbsp;edge&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_gate_of_the_dead&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;23),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">&nbsp;9&nbsp;exit-door&nbsp;&nbsp;Bottom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_phoenix_cave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,6&nbsp;,-4),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;&nbsp;0),rot(&nbsp;&nbsp;3),fineY(&nbsp;-8)</span>
+<br><span style="background:#808080">10&nbsp;exit-door&nbsp;&nbsp;Fence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;fire_world_burning_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,0&nbsp;,-4),unknown(&nbsp;&nbsp;1&nbsp;&nbsp;,1),destMapIndex(&nbsp;20),rot(&nbsp;&nbsp;2),fineY(&nbsp;&nbsp;0)</span>
+<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Bottom&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_stone_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,0&nbsp;&nbsp;,1),unknown(&nbsp;&nbsp;0&nbsp;&nbsp;,0),destMapIndex(&nbsp;39),rot(&nbsp;&nbsp;3),fineY(&nbsp;&nbsp;0)</span>
 <br>
 <img src="maps/shadow_tower_part3.png"/><br>
 
