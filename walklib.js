@@ -43,7 +43,6 @@ function walk(areas, skipWayBackVerification) {
 	var currentArea = startArea;
 	var enteredFromId;
 
-	explain("map " + JSON.stringify(areas));
 	explain("starting from " + currentArea);
 
 	var walkPath = [];
