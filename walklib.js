@@ -116,7 +116,7 @@ function walk(areas, skipWayBackVerification) {
 	}
 
 	function recombineKnownPathsFor(from, to) {
-		explain("trying to combine from "+from+" to "+to);
+		//explain("trying to combine from "+from+" to "+to);
 		var didSomething = false;
 		var beginnings=[];
 		var ends=[];
@@ -129,8 +129,8 @@ function walk(areas, skipWayBackVerification) {
 			}
 		}
 
-		explain(" beginnings "+JSON.stringify(beginnings));
-		explain(" ends "+JSON.stringify(ends));
+		//explain(" beginnings "+JSON.stringify(beginnings));
+		//explain(" ends "+JSON.stringify(ends));
 		for (var b in beginnings) {
 			var middle=beginnings[b];
 			for (var i in knownPaths) {
