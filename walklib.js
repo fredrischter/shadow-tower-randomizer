@@ -138,9 +138,9 @@ function walk(areas, skipWayBackVerification) {
 				if (dest != to) {
 					continue;
 				}
-				explain("   trying to tie "+from+" - " +middle+ " - "+dest);
+				//explain("   trying to tie "+from+" - " +middle+ " - "+dest);
 				if (i.startsWith(middle + "-")) {
-					explain("     got "+i);
+					//explain("     got "+i);
 					var key = from + "-" + dest;
 					if (!knownPaths[key]) {
 						explain("   combining paths for "+key+":");
@@ -339,7 +339,7 @@ function walk(areas, skipWayBackVerification) {
 		console.error(new Date().toISOString() + "    2");
 		//2-if (!desiredDestination) and there is some way in mapsWithKnownUndiscoveredWays for this map, choosenWay=first unknown door In the list, prefer bidirectional or go exitOnly. If there is no way chooseDestination=true;
 		if (!desiredDestination) {
-			var currentAreaExits = Object.values(areasMap[currentArea]).filter(exit => !exit.direction || !exit.direction.startsWith("entrance"));
+			var currentAreaExits = getAreaExits(getAreaByName((currentArea)));
 
 			if (currentAreaExits.length == 1) {
 
