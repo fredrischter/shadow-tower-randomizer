@@ -32,7 +32,7 @@
       "rotation": 0
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "shadow_tower_part3a",
       "wayBackId": "9",
       "type": "door",
@@ -1154,7 +1154,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "shadow_tower_part3a",
           "wayBackId": "9",
           "type": "door",
@@ -1239,7 +1239,7 @@
         {
           "id": "9",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 1
         },

@@ -37,7 +37,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "monster_world_screeching_area",
       "world": "monster_world",
       "wayBackId": "0",
@@ -47,7 +47,7 @@
     {
       "id": "0",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 0
     },
@@ -1006,7 +1006,7 @@
       "rotation": 2
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "monster_world_screeching_area",
       "world": "monster_world",
       "wayBackId": "0",
@@ -1060,7 +1060,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "monster_world_screeching_area",
       "world": "monster_world",
       "wayBackId": "0",
@@ -1165,7 +1165,7 @@
         {
           "id": "0",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 0
         },
@@ -1192,7 +1192,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "monster_world_screeching_area",
           "world": "monster_world",
           "wayBackId": "0",

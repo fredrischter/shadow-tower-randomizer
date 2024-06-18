@@ -420,12 +420,12 @@
     {
       "id": "1",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 1
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
       "wayBackId": "1",
@@ -697,7 +697,7 @@
       "rotation": 0
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
       "wayBackId": "1",
@@ -911,7 +911,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "illusion_world_worship_domain",
       "world": "illusion_world",
       "wayBackId": "1",
@@ -1354,7 +1354,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "illusion_world_worship_domain",
           "world": "illusion_world",
           "wayBackId": "1",
@@ -1669,7 +1669,7 @@
         {
           "id": "1",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 1
         },

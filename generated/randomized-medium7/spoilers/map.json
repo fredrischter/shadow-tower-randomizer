@@ -138,7 +138,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "death_world_dark_castle_layer",
       "world": "death_world",
       "wayBackId": "0",
@@ -148,7 +148,7 @@
     {
       "id": "0",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 3
     },
@@ -1025,7 +1025,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "death_world_dark_castle_layer",
       "world": "death_world",
       "wayBackId": "0",
@@ -1296,7 +1296,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "death_world_dark_castle_layer",
           "world": "death_world",
           "wayBackId": "0",
@@ -1506,7 +1506,7 @@
         {
           "id": "0",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 3
         },

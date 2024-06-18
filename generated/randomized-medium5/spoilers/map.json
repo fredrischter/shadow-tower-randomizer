@@ -82,12 +82,12 @@
     {
       "id": "31",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 0
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "human_world_solitary_region",
       "world": "human_world",
       "wayBackId": "31",
@@ -568,7 +568,7 @@
       "rotation": 2
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "human_world_solitary_region",
       "world": "human_world",
       "wayBackId": "31",
@@ -827,7 +827,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "human_world_solitary_region",
       "world": "human_world",
       "wayBackId": "31",
@@ -1099,7 +1099,7 @@
         {
           "id": "31",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 0
         },
@@ -1312,7 +1312,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "human_world_solitary_region",
           "world": "human_world",
           "wayBackId": "31",

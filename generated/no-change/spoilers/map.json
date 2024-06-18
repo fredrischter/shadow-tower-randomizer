@@ -247,7 +247,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "water_world_impure_pool_area",
       "world": "water_world",
       "wayBackId": "9",
@@ -257,7 +257,7 @@
     {
       "id": "9",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 2
     },
@@ -358,7 +358,7 @@
       "rotation": 2
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "water_world_impure_pool_area",
       "world": "water_world",
       "wayBackId": "9",
@@ -797,7 +797,7 @@
     {
       "id": "9",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 2
     },
@@ -1269,7 +1269,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "water_world_impure_pool_area",
           "world": "water_world",
           "wayBackId": "9",
@@ -1354,7 +1354,7 @@
         {
           "id": "9",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 2
         },

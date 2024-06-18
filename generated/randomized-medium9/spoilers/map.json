@@ -66,7 +66,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "water_world_watery_labyrinth_area",
       "world": "water_world",
       "wayBackId": "9",
@@ -76,7 +76,7 @@
     {
       "id": "9",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 3
     },
@@ -956,7 +956,7 @@
     {
       "id": "9",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 3
     },
@@ -1072,7 +1072,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "water_world_watery_labyrinth_area",
           "world": "water_world",
           "wayBackId": "9",
@@ -1198,7 +1198,7 @@
         {
           "id": "9",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 3
         },

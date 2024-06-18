@@ -378,7 +378,7 @@
       "type": "jump"
     },
     {
-      "id": "11",
+      "id": "9",
       "dest": "illusion_world_bewilderment_domain",
       "world": "illusion_world",
       "wayBackId": "18",
@@ -1482,7 +1482,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "illusion_world_bewilderment_domain",
           "world": "illusion_world",
           "wayBackId": "18",
@@ -1935,7 +1935,7 @@
         {
           "id": "18",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 2
         }

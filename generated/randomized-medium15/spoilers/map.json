@@ -65,7 +65,7 @@
     {
       "id": "37",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 0,
       "direction": "exit"
@@ -805,7 +805,7 @@
     {
       "id": "37",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 0,
       "direction": "exit"
@@ -876,7 +876,7 @@
     {
       "id": "37",
       "dest": "shadow_tower_part2b",
-      "wayBackId": "11",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 0,
       "direction": "exit"
@@ -946,7 +946,7 @@
         {
           "id": "37",
           "dest": "shadow_tower_part2b",
-          "wayBackId": "11",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 0,
           "direction": "exit"
@@ -975,7 +975,7 @@
       "name": "shadow_tower_part2b",
       "exits": [
         {
-          "id": "11",
+          "id": "9",
           "dest": "human_world_forgotten_region",
           "world": "human_world",
           "wayBackId": "37",
