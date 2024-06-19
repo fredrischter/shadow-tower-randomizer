@@ -94,8 +94,8 @@ function randomize(paramsFile, stDir) {
 
     // Drops proportion affected by difficulty
     //CHANCE_OF_UNIQUE_DROP=CHANCE_OF_UNIQUE_DROP / smoothDifficultyFactor; - Not adding more items for easy modes. -> changing it, so difficulty doesn't affect quantity. Impossible to have many items around, that cause texture glitch and freezes.
-    PROPORTION_OF_COLLECTABLE_BEING_UNIQUES=PROPORTION_OF_COLLECTABLE_BEING_UNIQUES / smoothDifficultyFactor;
-    UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=UNIQUES_SEQUENCE_RANDOMIZATION_SPAN / smoothDifficultyFactor;
+    PROPORTION_OF_COLLECTABLE_BEING_UNIQUES=PROPORTION_OF_COLLECTABLE_BEING_UNIQUES;
+    UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
     const mapFolder = changeSetPath;
     fs.mkdirSync(mapFolder + path.sep + 'maps');
@@ -665,24 +665,26 @@ function randomize(paramsFile, stDir) {
     ];
 
     var irreplacebleKeyItems = [
-        item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_117_brass_key, item_118_iron_key, item_12a_young_dragon_gem, item_12b_pitcher_of_nadya, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key, item_129_sealed_sword_stone
+        item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_118_iron_key, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key, item_129_sealed_sword_stone
     ];
 
     var nonEssentialKeyItems = [
         item_117_brass_key,
         item_12f_spirit_key, item_118_iron_key, item_130_blue_crystal,
-        item_12b_pitcher_of_nadya, item_114_floodgate_key, item_115_mermaid_key,
-        item_12a_young_dragon_gem, item_113_beast_key,
-        item_112_key_of_knowledge, item_111_kings_key
+        item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, 
+        item_12b_pitcher_of_nadya, //item_114_floodgate_key, item_115_mermaid_key,
+        item_12a_young_dragon_gem, item_113_beast_key//,
+        //item_112_key_of_knowledge, item_111_kings_key
     ];
 
     if (params.randomizeNonEssentialKeys) {
         var distributionJump = Math.ceil(allUniqueItems.length / nonEssentialKeyItems);
-        for (var i in irreplacebleKeyItems) {
+        for (var i in nonEssentialKeyItems) {
             var positionToInsert = i * distributionJump;
-            allUniqueItems.splice(positionToInsert, 0, irreplacebleKeyItems[i]);
+            allUniqueItems.splice(positionToInsert, 0, nonEssentialKeyItems[i]);
         }
-        irreplacebleKeyItems = irreplacebleKeyItems.filter(item => nonEssentialKeyItems.indexOf(item)==-1);
+    } else {
+        irreplacebleKeyItems = irreplacebleKeyItems.concat(nonEssentialKeyItems);
     }
 
     var primaryConsumables = [
@@ -702,7 +704,7 @@ function randomize(paramsFile, stDir) {
         item_c9_summoner_ring_of_frost, item_ca_summoner_ring_of_frost, item_cb_balance_ring_of_frost, item_cc_priest_ring_of_frost, item_cd_sorcerer_ring_of_frost, item_ce_soul_ring,
         item_76_god_plate, item_78_knight_plate_mail, item_31_blood_sword,
         item_77_plate_mail_of_rage, item_25_magical_bastard_sword, item_3e_living_axe,
-        item_137_soul_pod_53_sp, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_110_fiery_key, item_111_kings_key, item_112_key_of_knowledge, item_137_soul_pod_53_sp, item_113_beast_key, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_137_soul_pod_53_sp, item_117_brass_key, item_118_iron_key, item_129_sealed_sword_stone, item_12a_young_dragon_gem, item_137_soul_pod_53_sp, item_12e_dorados_ashes, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key,
+        item_137_soul_pod_53_sp, item_12c_pitcher_of_nadya_hp, item_12d_pitcher_of_nadya_mp, item_110_fiery_key, item_137_soul_pod_53_sp, item_113_beast_key, item_114_floodgate_key, item_115_mermaid_key, item_116_key_of_delusion, item_137_soul_pod_53_sp, item_117_brass_key, item_118_iron_key, item_129_sealed_sword_stone, item_12a_young_dragon_gem, item_137_soul_pod_53_sp, item_12e_dorados_ashes, item_12f_spirit_key, item_130_blue_crystal, item_131_flaming_key,
         item_bf_master_gothic_shield, item_c1_gothic_shield_of_rage, item_c2_shinning_gothic_shield, item_c3_holy_gothic_shield,
         item_44_bow_gun, item_43_warrior_bow, item_42_bow, item_d_shadow_wolf, item_e_shadow_tiger, item_c0_gothic_shield_of_power, item_1a_lethal_bastard_sword, item_1b_swift_bastard_sword, item_1c_keenest_bastard_sword, item_1d_crushing_bastard_sword, item_1e_fiery_bastard_sword, item_20_shining_bastard_sword, item_23_guardian_bastard_sword, item_24_dark_sword, item_26_righteous_sword, item_2a_swift_great_sword, item_2c_deadly_great_sword, item_2d_keenest_great_sword, item_2e_crushing_great_sword, item_2f_mighty_great_sword, item_30_guardian_great_sword,
         item_4b_wizard_crown, item_4c_devil_crown, item_52_full_helm_of_curing, item_57_harden_great_helm, item_59_mystic_great_helm, item_5a_holy_great_helm,
@@ -800,6 +802,11 @@ function randomize(paramsFile, stDir) {
         }
 
         var previous = collectable.type.get();
+
+        if (isIrreplaceable(previous)) {
+            return;
+        }
+
         collectable.blank();
 
         if (params.preset == PRESET_100_PRC &&
@@ -858,13 +865,20 @@ function randomize(paramsFile, stDir) {
         spawn.drop3Chance.set(0);
     }
 
+    function isIrreplaceable(id) {
+        var result = irreplacebleKeyItems.indexOf(id)!=-1;
+        if (result) {
+            console.log("DEBUG - To leave this one alone since it is irreplaceble " + items[id].name);
+        }
+        return result;
+    }
+
     function distributeDropsRandomly(spawn, area, index) {
         var dropsNames = "blank";
 
         if (!spawn.drop1.isNull()) {
             dropsNames = items[spawn.drop1.get()].name + " ";
-            if (irreplacebleKeyItems.indexOf(items[spawn.drop1.get()].type.get())!=-1) {
-                console.log("DEBUG - Drop randomization - To leave this one alone since it is key " + items[spawn.drop1.get()].name + " at " + area.name + "/" + spawn.name());
+            if (isIrreplaceable(spawn.drop1.get())) {
                 return;
             }
         }
