@@ -857,8 +857,10 @@ function randomize(paramsFile, stDir) {
     var DROP_UNIQUES_SEQUENCE_RANDOMIZATION_SPAN_SIZE=dropUniques.length * UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
     function clearDrops(spawn, area, index) {
-        spawn.drop1.null();
-        spawn.drop1Chance.set(0);
+        if (!isIrreplaceable(spawn.drop1.get())) {
+            spawn.drop1.null();
+            spawn.drop1Chance.set(0);
+        }
         spawn.drop2.null();
         spawn.drop2Chance.set(0);
         spawn.drop3.null();
@@ -866,6 +868,9 @@ function randomize(paramsFile, stDir) {
     }
 
     function isIrreplaceable(id) {
+        if (id == -1) {
+            return false;
+        }
         var result = irreplacebleKeyItems.indexOf(id)!=-1;
         if (result) {
             console.log("DEBUG - To leave this one alone since it is irreplaceble " + items[id].name);
@@ -1008,10 +1013,10 @@ function randomize(paramsFile, stDir) {
                                           items[spawn.drop1.get()].type.get() == AMULET)
                 ) {
 
-                if (!area.hasFreeItemMemory()) {
-                    console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding second drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
-                    return;
-                }
+                //if (!area.hasFreeItemMemory()) {
+                //    console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding second drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
+                //    return;
+                //}
 
                 spawn.drop2.set(arrayToRemoveFrom.shift());
                 spawn.drop2Chance.set(100);
@@ -1026,10 +1031,10 @@ function randomize(paramsFile, stDir) {
         if (arrayToRemoveFrom.length > 0) {
             if (spawn.drop3.isNull() && !spawn.drop2.isNull() && Math.random()<CHANCE_OF_UNIQUE_DROP) {
 
-                if (!area.hasFreeItemMemory()) {
-                    console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding third drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
-                    return;
-                }
+                //if (!area.hasFreeItemMemory()) {
+                //    console.log("WARNING - Drop randomization - No free memory " + area.usedItemMemory() + ", halting adding third drop replacement for " + area.name + "/" + spawn.name() + " but there are more to add " + arrayToRemoveFrom.length);
+                //    return;
+                //}
 
                 spawn.drop3.set(arrayToRemoveFrom.shift());
                 spawn.drop3Chance.set(100);
