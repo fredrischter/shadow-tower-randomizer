@@ -1050,13 +1050,14 @@ function randomize(paramsFile, stDir) {
         "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
     ];
 
-    function keepOnlyBosses(spawn, area, index) {
-        if (nonRemovable.filter(name => spawn.name().includes(name)).length) {
-            console.log("DEBUG - Spawn removals, to keep only bosses. Not removing " + area.name + "/" + spawn.name());
+    function keepOnlyBosses(creature, area, index) {
+        if (nonRemovable.filter(name => creature.name.includes(name)).length) {
+            console.log("DEBUG - Spawn transforming to slime, to keep only bosses. Not transforming " + area.name + "/" + creature.name);
             return;
         }
-        console.log("DEBUG - Spawn removals, to keep only bosses. Removing " + area.name + "/" + spawn.name());
-        spawn.blank();
+        console.log("DEBUG - Spawn transforming to slime, to keep only bosses. Transforming " + area.name + "/" + creature.name);
+
+        setCreature(creature, human_world_solitary_region["01_acid_slime"], changeSet);
     }
 
     function removeSceneryObjects(object, area) {
@@ -1259,26 +1260,11 @@ function randomize(paramsFile, stDir) {
             }
         }
 
-        // Randomize creatures
-        if (params.randomizeCreatures) {
-            // set all creatures to slime
-            for (var i in allRandomizableCreatures) {
-                setCreature(allRandomizableCreatures[i], human_world_solitary_region["01_acid_slime"], changeSet);
-            }
-
-            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
-            
-            //for (var i =0; i<300; i++) {
-            //    var creature1 = randomElement(allRandomizableCreatures);
-            //    var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
-            //    swapCreatures(creature1, creature2, changeSet);
-            //}
-        }
-
         // ------- Empty game
 
         if (params.keepOnlyBosses) {
-            forEachCreatureSpawn(keepOnlyBosses);
+            forEachValidCreature(keepOnlyBosses);
+
             items[item_0_short_sword].attribute1.set(attribute(0xf,ATTR_HP_RECOVERY));
             //items[item_0_short_sword].attribute2.set(attribute(0xf,ATTR_STATUS_RECOVERY));
             items[item_0_short_sword].attribute2.set(attribute(ATTR_LIGHTING_ILLUMINATING,ATTR_LIGHTING));
@@ -1296,12 +1282,22 @@ function randomize(paramsFile, stDir) {
             items[item_0_short_sword].par.set(0xff);
             items[item_0_short_sword].mel.set(0xff);
             items[item_0_short_sword].sol.set(0xff);
-            var bottleOfLightTime = 0;
-            forEachCollectable(function(collectable, area) {
-                if (bottleOfLightTime++%2 == 0) {
-                    collectable.type.set(item_126_bottle_of_light);
-                }
-            });
+            items[item_0_short_sword].weight.set(0xff);
+            items[item_0_short_sword].max_dura.set(0xff);
+            items[item_0_short_sword].dura.set(0xff);
+        }
+
+        // Randomize creatures
+        else if (params.randomizeCreatures) {
+            // set all creatures to slime
+
+            //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
+            
+            for (var i =0; i<300; i++) {
+                var creature1 = randomElement(allRandomizableCreatures);
+                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
+                swapCreatures(creature1, creature2, changeSet);
+            }
         }
 
         // ------- Adjust creature and equip levels for proper progression

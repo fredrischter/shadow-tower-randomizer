@@ -1383,14 +1383,18 @@
       return wayBackExit;
     }
 
+    getExitName() {
+      var exitCode = normalizeAreaName(this.area.name)+"/"+this.getExit().id;
+      var exitName = (exitsNames[exitCode] || exitCode);
+      return exitName;
+    }
+
     getExitInfo() {
       if (!this.getExit()) {
         return "";
       }
-      var exitCode = normalizeAreaName(this.area.name)+"/"+this.getExit().id;
-      var exitName = (exitsNames[exitCode] || exitCode)
 
-      return exitName.padEnd(13) + " -> " + this.getExit().dest.padEnd(34) + " pos(" + (""+this.destinationXShift.get()).padStart(3) + ("," + this.destinationYShift.get()).padStart(4) + ("," + this.destinationXShift.get()).padStart(4) + ")," +
+      return this.getExitName().padEnd(13) + " -> " + this.getExit().dest.padEnd(34) + " pos(" + (""+this.destinationXShift.get()).padStart(3) + ("," + this.destinationYShift.get()).padStart(4) + ("," + this.destinationXShift.get()).padStart(4) + ")," +
         "unknown(" + (""+this.destinationUnknown1.get()).padStart(3) + ("," + this.destinationUnknown2.get()).padStart(4) + ")," +
         "destMapIndex("+(""+this.destinationMapIndex.get()).padStart(3)+")," +
         "rot("+(""+this.destinationRotation.get()).padStart(3)+")," +
@@ -1451,6 +1455,8 @@
     }
 
     setExit(source, map) {
+      console.log("Setting exit " + this.getExitInfo());
+
       this.destinationMapIndex.set(source.destinationMapIndex.get());
       this.destinationXShift.set(source.destinationXShift.get());
       this.destinationYShift.set(source.destinationYShift.get());
@@ -1469,7 +1475,8 @@
       this.destinationRotation.set(rotationToSet);
 
       this.destinationYFineShift.set(source.destinationYFineShift.get());
-
+                         
+      console.log("      result " + this.getExitInfo());
       //binCopy(source.bin, source.offset_in_file+16, this.bin, this.offset_in_file+16, OBJECTS_SIZE-16);
     }
 
