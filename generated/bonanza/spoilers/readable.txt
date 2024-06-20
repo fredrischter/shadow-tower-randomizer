@@ -1,5 +1,185 @@
 Parameters - {"label":"bonanza","preset":"bonanza","difficulty":"easy","randomizeMap":true,"randomizeCreatures":true,"randomizeCollectablesAndDrops":true,"removeDirectiveRemovalOfHPMPRecovery":true,"fieryKeyFlamingKeyDrop":"flaming-key-in-the-first-area","randomizeNonEssentialKeys":true,"seed":"1","colorRandomizationGeneral":1,"colorRandomizationBossRooms":1,"colorRandomizationCreatures":2,"colorValueFactor":1}
 DEBUG ------------------ Randomization engine - Defining map
+Setting exit Tower Top     -> shadow_tower_part2b                pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  4),rot(  0),fineY(  0)
+      result Tower Top     -> shadow_tower_part2b                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)
+Setting exit Bottom        -> human_world_forgotten_region       pos(  4  ,0  ,4),unknown(  1  ,1),destMapIndex( 10),rot(  1),fineY(  0)
+      result Bottom        -> human_world_forgotten_region       pos( -3  ,1 ,-3),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)
+Setting exit Top Middle    -> shadow_tower_part1c                pos( -4  ,0 ,-4),unknown(  1  ,1),destMapIndex( 20),rot(  3),fineY(  0)
+      result Top Middle    -> shadow_tower_part1c                pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Top right     -> shadow_tower_part1a                pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)
+      result Top right     -> shadow_tower_part1a                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot(  3),fineY( -8)
+Setting exit Top           -> shadow_tower_part2b                pos( -3  ,1 ,-3),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)
+      result Top           -> shadow_tower_part2b                pos( -5  ,3 ,-5),unknown(  0  ,0),destMapIndex( 40),rot(  0),fineY( -8)
+Setting exit Bottom Middle -> water_world_watery_labyrinth_area  pos( -7  ,0 ,-7),unknown(  1  ,1),destMapIndex( 11),rot(  3),fineY(  0)
+      result Bottom Middle -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  0),fineY(  0)
+Setting exit Bottom Edge   -> fire_world_phoenix_cave            pos( -7  ,1 ,-7),unknown(  1  ,1),destMapIndex( 27),rot(  0),fineY(  0)
+      result Bottom Edge   -> fire_world_phoenix_cave            pos( -5  ,0 ,-5),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)
+Setting exit Entrance      -> shadow_tower_part1c                pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)
+      result Entrance      -> shadow_tower_part1c                pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  1),fineY( -8)
+Setting exit Exit          -> water_world_white_rain_area        pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)
+      result Exit          -> water_world_white_rain_area        pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 37),rot(  0),fineY(  0)
+Setting exit Exit          -> shadow_tower_part1b                pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 37),rot(  1),fineY(  0)
+      result Exit          -> shadow_tower_part1b                pos( -4  ,6 ,-4),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Entrance      -> shadow_tower_part1c                pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 21),rot(  3),fineY(  0)
+      result Entrance      -> shadow_tower_part1c                pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Edge          -> water_world_watery_labyrinth_area  pos( 13 ,-1 ,13),unknown(  1  ,1),destMapIndex(  1),rot(  3),fineY(  8)
+      result Edge          -> water_world_watery_labyrinth_area  pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  0),fineY(  0)
+Setting exit Middle        -> death_world_undead_layer           pos(  6  ,0  ,6),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)
+      result Middle        -> death_world_undead_layer           pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  3),fineY( -8)
+Setting exit Entrance      -> fire_world_phoenix_cave            pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  3),fineY(  0)
+      result Entrance      -> fire_world_phoenix_cave            pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Totem         -> death_world_dark_castle_layer      pos(  9 ,-2  ,9),unknown(  3 ,-8),destMapIndex(  0),rot(  0),fineY(  3)
+      result Totem         -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  3),fineY(  2)
+Setting exit Prison        -> water_world_impure_pool_area       pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  1),fineY(  0)
+      result Prison        -> water_world_impure_pool_area       pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  1),fineY(  0)
+Setting exit Entrance      -> shadow_tower_part3a                pos( -4  ,5 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)
+      result Entrance      -> shadow_tower_part3a                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)
+Setting exit Lower totem   -> illusion_world_gloomy_domain       pos( 17  ,4 ,17),unknown( 13  ,0),destMapIndex(  0),rot(  0),fineY(  2)
+      result Lower totem   -> illusion_world_gloomy_domain       pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  2),fineY(  2)
+Setting exit Upper totem 1 -> water_world_white_rain_area        pos( 14,-14 ,14),unknown( -7  ,0),destMapIndex(252),rot(  0),fineY(  3)
+      result Upper totem 1 -> water_world_white_rain_area        pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot(  1),fineY(  3)
+Setting exit Upper totem 2 -> earth_world_hostile_rock_cavern    pos( 23 ,20 ,23),unknown(  0  ,0),destMapIndex(248),rot(  0),fineY(  0)
+      result Upper totem 2 -> earth_world_hostile_rock_cavern    pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  3),fineY(  3)
+Setting exit King's room   -> shadow_tower_part1b                pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex( 23),rot(  0),fineY(  0)
+      result King's room   -> shadow_tower_part1b                pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  1),fineY( -8)
+Setting exit Entrance      -> illusion_world_bewilderment_domain pos( 10 ,-1 ,10),unknown(  0  ,0),destMapIndex( 25),rot(  3),fineY(  0)
+      result Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  2),fineY(  0)
+Setting exit Top right     -> death_world_dark_castle_layer      pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  1),fineY(  0)
+      result Top right     -> death_world_dark_castle_layer      pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  0),fineY(  0)
+Setting exit Top left      -> human_world_cursed_region          pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex( 21),rot(  0),fineY(  0)
+      result Top left      -> human_world_cursed_region          pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex(  1),rot(  0),fineY(-17)
+Setting exit Bottom        -> illusion_world_gloomy_domain       pos( -6  ,0 ,-6),unknown(  1  ,1),destMapIndex(  9),rot(  2),fineY(  0)
+      result Bottom        -> illusion_world_gloomy_domain       pos( -6  ,0 ,-6),unknown(  1  ,1),destMapIndex(  9),rot(  2),fineY(  0)
+Setting exit Entrance      -> monster_world_false_eye_area       pos( 10  ,0 ,10),unknown(  6  ,0),destMapIndex( 15),rot(  1),fineY(  0)
+      result Entrance      -> monster_world_false_eye_area       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  2),rot(  3),fineY(  0)
+Setting exit Boss room     -> death_world_dark_castle_layer      pos( 15 ,-3 ,15),unknown(-10  ,0),destMapIndex(248),rot(  0),fineY(  1)
+      result Boss room     -> death_world_dark_castle_layer      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY(  0)
+Setting exit Ladder down   -> human_world_solitary_region        pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)
+      result Ladder down   -> human_world_solitary_region        pos(  7  ,0  ,7),unknown(  0  ,0),destMapIndex(  4),rot(  0),fineY(  0)
+Setting exit Entrance      -> shadow_tower_part3a                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)
+      result Entrance      -> shadow_tower_part3a                pos( -4  ,2 ,-4),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)
+Setting exit Totem         -> death_world_dark_castle_layer      pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot( 16),fineY(  3)
+      result Totem         -> death_world_dark_castle_layer      pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  1),fineY(  0)
+Setting exit Exit          -> earth_world_stone_cavern           pos( -4  ,0 ,-4),unknown(  0  ,8),destMapIndex( 13),rot(  1),fineY(  0)
+      result Exit          -> earth_world_stone_cavern           pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  1),fineY(  0)
+Setting exit Entrance      -> death_world_undead_layer           pos( -2  ,2 ,-2),unknown( -8  ,0),destMapIndex(  9),rot(  1),fineY(  0)
+      result Entrance      -> death_world_undead_layer           pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  2),fineY(  0)
+Setting exit Bottom middle -> shadow_tower_part2a                pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  2),rot(  1),fineY(  0)
+      result Bottom middle -> shadow_tower_part2a                pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  2),fineY( -8)
+Setting exit Top edge      -> water_world_sunken_river_area      pos( 10  ,0 ,10),unknown(  1  ,1),destMapIndex( 17),rot(  0),fineY(  0)
+      result Top edge      -> water_world_sunken_river_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex(  1),rot(  2),fineY(-17)
+Setting exit Bottom end    -> earth_world_stone_cavern           pos(  1  ,0  ,1),unknown(  1  ,1),destMapIndex( 25),rot(  2),fineY(  0)
+      result Bottom end    -> earth_world_stone_cavern           pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  1),fineY(  0)
+Setting exit Skeleton      -> illusion_world_worship_domain      pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  5),rot(  0),fineY(  0)
+      result Skeleton      -> illusion_world_worship_domain      pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  0),fineY(  0)
+Setting exit Cemetery      -> illusion_world_gloomy_domain       pos(  0  ,0  ,0),unknown(  1  ,1),destMapIndex(  5),rot(  0),fineY(  0)
+      result Cemetery      -> illusion_world_gloomy_domain       pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  0),fineY(  0)
+Setting exit Grave         -> monster_world_screeching_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex(  1),rot(  2),fineY(-17)
+      result Grave         -> monster_world_screeching_area      pos(  0  ,0  ,0),unknown(  0  ,0),destMapIndex(  1),rot(  2),fineY(-17)
+Setting exit Church        -> death_world_gate_of_the_dead       pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+      result Church        -> death_world_gate_of_the_dead       pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  3),fineY( -8)
+Setting exit Entrance      -> shadow_tower_part3a                pos(  9  ,2  ,9),unknown(  0  ,0),destMapIndex(  4),rot(  2),fineY(  0)
+      result Entrance      -> shadow_tower_part3a                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)
+Setting exit Guardian side -> human_world_hidden_region          pos( -4  ,6 ,-4),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)
+      result Guardian side -> human_world_hidden_region          pos(  8  ,3  ,8),unknown(  1  ,1),destMapIndex( 10),rot(  2),fineY(  0)
+Setting exit Entrance      -> earth_world_hostile_rock_cavern    pos(  4  ,3  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)
+      result Entrance      -> earth_world_hostile_rock_cavern    pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  1),fineY(  0)
+Setting exit Totem         -> monster_world_screeching_area      pos( 38  ,5 ,38),unknown(  1 ,16),destMapIndex(  0),rot(  0),fineY(  2)
+      result Totem         -> monster_world_screeching_area      pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  3),fineY(  3)
+Setting exit Jail          -> water_world_sunken_river_area      pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  4),rot(  0),fineY(  0)
+      result Jail          -> water_world_sunken_river_area      pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Corridor      -> human_world_cursed_region          pos(  7  ,0  ,7),unknown(  0  ,0),destMapIndex(  4),rot(  0),fineY(  0)
+      result Corridor      -> human_world_cursed_region          pos(  8  ,0  ,8),unknown(  0  ,0),destMapIndex( 32),rot(  3),fineY(  0)
+Setting exit Totem         -> illusion_world_dream_domain        pos(  6 ,-6  ,6),unknown(  5  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+      result Totem         -> illusion_world_dream_domain        pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+Setting exit Entrance      -> human_world_solitary_region        pos(  0  ,3  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)
+      result Entrance      -> human_world_solitary_region        pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)
+Setting exit Totem         -> monster_world_false_eye_area       pos( 10  ,6 ,10),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)
+      result Totem         -> monster_world_false_eye_area       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot(  1),fineY(  0)
+Setting exit Necron        -> human_world_forgotten_region       pos( 25 ,-2 ,25),unknown( -5  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+      result Necron        -> human_world_forgotten_region       pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+Setting exit Entrance      -> human_world_solitary_region        pos(  4  ,0  ,4),unknown(  0  ,0),destMapIndex(  8),rot(  3),fineY(  0)
+      result Entrance      -> human_world_solitary_region        pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Connection    -> fire_world_molten_cavern           pos( 13 ,15 ,13),unknown(  6  ,0),destMapIndex(  0),rot(  0),fineY(  2)
+      result Connection    -> fire_world_molten_cavern           pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  3),fineY(  1)
+Setting exit Exit          -> fire_world_ashen_cavern            pos( 38  ,4 ,38),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+      result Exit          -> fire_world_ashen_cavern            pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  2),fineY(  0)
+Setting exit To Boss       -> fire_world_burning_cavern          pos( 13  ,0 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+      result To Boss       -> fire_world_burning_cavern          pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  3),fineY(  3)
+Setting exit Entrance      -> human_world_solitary_region        pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  0),fineY( -8)
+      result Entrance      -> human_world_solitary_region        pos(  5  ,3  ,5),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)
+Setting exit Totem         -> earth_world_false_pit_cavern       pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+      result Totem         -> earth_world_false_pit_cavern       pos( 15 ,-8 ,15),unknown(-10  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+Setting exit Exit          -> earth_world_false_pit_cavern       pos(  1  ,6  ,1),unknown(  1  ,1),destMapIndex(  0),rot(  1),fineY( -8)
+      result Exit          -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 15),rot(  1),fineY(  0)
+Setting exit Jump down     -> shadow_tower_part2b                pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  1),fineY( -8)
+      result Jump down     -> shadow_tower_part2b                pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)
+Setting exit Totem         -> monster_world_screeching_area      pos(  5 ,-5  ,5),unknown( -2  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+      result Totem         -> monster_world_screeching_area      pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)
+Setting exit Drop in       -> death_world_lingering_curse_layer  pos( 15 ,-8 ,15),unknown(-10  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+      result Drop in       -> death_world_lingering_curse_layer  pos( 37 ,-3 ,37),unknown(  2 ,-8),destMapIndex(  0),rot(  2),fineY(  3)
+Setting exit Entrance      -> human_world_forgotten_region       pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  1),fineY(  0)
+      result Entrance      -> human_world_forgotten_region       pos(  1  ,1  ,1),unknown(  0  ,0),destMapIndex( 26),rot(  3),fineY( -8)
+Setting exit Bridge        -> shadow_tower_part2a                pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  3),fineY(  0)
+      result Bridge        -> shadow_tower_part2a                pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  2),fineY( -8)
+Setting exit Exit          -> earth_world_poisonous_cavern       pos(  0  ,1  ,0),unknown( 10  ,0),destMapIndex( 40),rot(  1),fineY( -8)
+      result Exit          -> earth_world_poisonous_cavern       pos( -5  ,0 ,-5),unknown(  1  ,1),destMapIndex(  3),rot(  1),fineY(  0)
+Setting exit Jump in       -> water_world_impure_pool_area       pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  0),fineY(  3)
+      result Jump in       -> water_world_impure_pool_area       pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot(  1),fineY(  0)
+Setting exit Totem         -> death_world_gate_of_the_dead       pos(  6  ,1  ,6),unknown(  4  ,0),destMapIndex(  0),rot(  0),fineY(  1)
+      result Totem         -> death_world_gate_of_the_dead       pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  2),fineY(  3)
+Setting exit Entrance      -> earth_world_rotting_cavern         pos( -5  ,3 ,-5),unknown(  0  ,0),destMapIndex( 40),rot(  1),fineY( -8)
+      result Entrance      -> earth_world_rotting_cavern         pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  2),fineY(  0)
+Setting exit Platform      -> illusion_world_worship_domain      pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)
+      result Platform      -> illusion_world_worship_domain      pos( 24 ,12 ,24),unknown(  2  ,0),destMapIndex(240),rot(  0),fineY(  1)
+Setting exit Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+      result Room          -> fire_world_ashen_cavern            pos( 18 ,33 ,18),unknown( -4  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+Setting exit Abraxus       -> illusion_world_dream_domain        pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  8),fineY(  0)
+      result Abraxus       -> illusion_world_dream_domain        pos( 18  ,1 ,18),unknown(-10 ,16),destMapIndex( 16),rot(  0),fineY(  0)
+Setting exit Platform      -> illusion_world_worship_domain      pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)
+      result Platform      -> illusion_world_worship_domain      pos( 20  ,7 ,20),unknown(  6  ,8),destMapIndex(  0),rot(  0),fineY(  3)
+Setting exit Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)
+      result Cerberus      -> fire_world_burning_cavern          pos( 20 ,-6 ,20),unknown( -8  ,0),destMapIndex(  8),rot(  0),fineY(  0)
+Setting exit Start         -> illusion_world_worship_domain      pos( 24  ,0 ,24),unknown(  2  ,0),destMapIndex(224),rot(  0),fineY(  2)
+      result Start         -> illusion_world_worship_domain      pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)
+Setting exit Totem         -> human_world_hidden_region          pos(  2 ,-1  ,2),unknown( -7  ,0),destMapIndex(  8),rot( -8),fineY(  0)
+      result Totem         -> human_world_hidden_region          pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)
+Setting exit Entrance      -> fire_world_molten_cavern           pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+      result Entrance      -> fire_world_molten_cavern           pos( 13 ,15 ,13),unknown( -7  ,0),destMapIndex(  0),rot(  2),fineY(  0)
+Setting exit Top left      -> earth_world_false_pit_cavern       pos( -8  ,0 ,-8),unknown(  1  ,1),destMapIndex( 15),rot(  3),fineY(  0)
+      result Top left      -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  2),rot(  0),fineY(  0)
+Setting exit Edge          -> shadow_tower_part3b                pos( -5  ,0 ,-5),unknown(  1  ,1),destMapIndex(  3),rot(  3),fineY(  0)
+      result Edge          -> shadow_tower_part3b                pos( -2  ,0 ,-2),unknown(  0  ,0),destMapIndex( 33),rot(  0),fineY(  0)
+Setting exit Poison        -> earth_world_quaking_cavern         pos(  0  ,0  ,0),unknown(  0  ,7),destMapIndex( 28),rot(  0),fineY(  0)
+      result Poison        -> earth_world_quaking_cavern         pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  3),fineY(  0)
+Setting exit Rock guy      -> water_world_impure_pool_area       pos(  0  ,0  ,0),unknown( -7  ,0),destMapIndex( 12),rot(  2),fineY(  0)
+      result Rock guy      -> water_world_impure_pool_area       pos( -3  ,1 ,-3),unknown(  1  ,1),destMapIndex(  6),rot(  3),fineY(  0)
+Setting exit Entrance      -> earth_world_false_pit_cavern       pos(  4  ,9  ,4),unknown(  7  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+      result Entrance      -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex(  2),rot(  1),fineY(  0)
+Setting exit Entrance      -> fire_world_burning_cavern          pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  1),fineY( -8)
+      result Entrance      -> fire_world_burning_cavern          pos(  2  ,7  ,2),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Entrance      -> earth_world_poisonous_cavern       pos(  4  ,5  ,4),unknown(  0  ,0),destMapIndex( 40),rot(  3),fineY( -8)
+      result Entrance      -> earth_world_poisonous_cavern       pos(  9  ,1  ,9),unknown(  0  ,0),destMapIndex( 27),rot(  3),fineY(  0)
+Setting exit Flush down    -> death_world_dark_castle_layer      pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)
+      result Flush down    -> death_world_dark_castle_layer      pos( 15  ,0 ,15),unknown(  0  ,0),destMapIndex(  8),rot(  2),fineY(  0)
+Setting exit Totem         -> earth_world_false_pit_cavern       pos( 17  ,8 ,17),unknown(  3  ,0),destMapIndex(  0),rot(  8),fineY(  3)
+      result Totem         -> earth_world_false_pit_cavern       pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  0)
+Setting exit Fence         -> death_world_lingering_curse_layer  pos(-15 ,-2,-15),unknown(  1  ,1),destMapIndex( 14),rot(  1),fineY(  0)
+      result Fence         -> death_world_lingering_curse_layer  pos(-15 ,-2,-15),unknown(  1  ,1),destMapIndex( 14),rot(  1),fineY(  0)
+Setting exit Entrance      -> shadow_tower_part3b                pos( 10  ,1 ,10),unknown(  0  ,0),destMapIndex( 27),rot(  0),fineY(  0)
+      result Entrance      -> shadow_tower_part3b                pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  1),fineY( -8)
+Setting exit Exit          -> illusion_world_bewilderment_domain pos( -3  ,0 ,-3),unknown(  0  ,0),destMapIndex( 15),rot(  3),fineY(  0)
+      result Exit          -> illusion_world_bewilderment_domain pos(  0  ,9  ,0),unknown(  9  ,0),destMapIndex(  0),rot(  0),fineY( -8)
+Setting exit Entrance      -> earth_world_poisonous_cavern       pos(  9  ,1  ,9),unknown(  0  ,0),destMapIndex( 27),rot(  2),fineY(  0)
+      result Entrance      -> earth_world_poisonous_cavern       pos(  4  ,1  ,4),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)
+Setting exit Pool          -> human_world_hidden_region          pos( -9  ,0 ,-9),unknown(  0  ,0),destMapIndex( 32),rot(  1),fineY(  0)
+      result Pool          -> human_world_hidden_region          pos(-16  ,5,-16),unknown(-10  ,0),destMapIndex( 28),rot(  0),fineY(  0)
+Setting exit Entrance      -> shadow_tower_part3b                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  0),fineY( -8)
+      result Entrance      -> shadow_tower_part3b                pos(  0  ,1  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  2),fineY( -8)
+Setting exit Door          -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)
+      result Door          -> shadow_tower_part3c                pos(  0  ,6  ,0),unknown(  0  ,0),destMapIndex( 41),rot(  3),fineY( -8)
+Setting exit Box room      -> human_world_forgotten_region       pos( 25,-13 ,25),unknown(  0  ,0),destMapIndex(  0),rot(  0),fineY(  2)
+      result Box room      -> human_world_forgotten_region       pos( 33 ,-1 ,33),unknown( 11  ,0),destMapIndex(  0),rot(  2),fineY(  3)
 DEBUG - Items randomization - Collectables/drops proportion 25% collectables / 75% drops.
 
 DEBUG - Items randomization - 45% of spawns will drop a unique.
@@ -2046,348 +2226,518 @@ DEBUG ------------------ Randomization engine - forEachCreatureSpawn - distribut
 
 
 DEBUG - Drop randomization adding remaining as third drop - Adding drop: item_13_broad_sword at fire_world_phoenix_cave/02_fire_jinn
-Setting creature 00_kabasaur (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T
-Setting creature 02_horned_slime (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T
-Setting creature 04_great_frog (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
-Setting creature 05_blood_brain (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T
-Setting creature 09_koazul (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T
-Setting creature 0a_horned_slime (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
-Setting creature 0c_gaze_hopper (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T
-Setting creature 0d_slasher (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T
-Setting creature 0e_manna_python (water_world_watery_labyrinth_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
-Setting creature 02_fire_jinn (fire_world_phoenix_cave) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T
-Setting creature 04_jinn_lord (fire_world_phoenix_cave) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
-Setting creature 05_armored_jinn (fire_world_phoenix_cave) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T
-Setting creature 06_fire_jinn (fire_world_phoenix_cave) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T
-Setting creature 00_winged_worm (water_world_white_rain_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
-Setting creature 00_hell_hunter (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\3 30800-31800.T
-Setting creature 02_karasu (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
-Setting creature 04_tree_ogre (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T
-Setting creature 05_armored_warrior (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
-Setting creature 06_armored_slayer (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
-Setting creature 09_armored_warrior (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
-Setting creature 0a_armored_slayer (death_world_dark_castle_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
-Setting creature 01_unknown_b (death_world_undead_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\8 78000-79000.T
-Setting creature 05_hell_hunter (death_world_undead_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
-Setting creature 08_claw_head (death_world_undead_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\43 10c000-10d000.T
-Setting creature 0a_demons_eye (death_world_undead_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\53 146800-147800.T
-Setting creature 0e_claw_head (death_world_undead_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\73 1b9000-1ba000.T
-Setting creature 00_black_onyx (earth_world_hostile_rock_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T
-Setting creature 01_earth_knight (earth_world_hostile_rock_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T
-Setting creature 05_earth_knight (earth_world_hostile_rock_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T
-Setting creature 01_gargaral (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\8 23000-24000.T
-Setting creature 02_gordoral (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T
-Setting creature 04_demon_warrior (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\23 76000-77000.T
-Setting creature 05_gargaral (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
-Setting creature 06_gordoral (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T
-Setting creature 08_war_demon_1 (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\43 d6800-d7800.T
-Setting creature 09_war_demon_2 (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T
-Setting creature 0a_rotting_face (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T
-Setting creature 0c_death_mage (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\63 13b000-13c000.T
-Setting creature 0e_rotting_face (illusion_world_bewilderment_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
-Setting creature 00_red_puppet (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
-Setting creature 01_dark_spirits (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T
-Setting creature 04_dark_spirits (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
-Setting creature 05_dark_spirits (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
-Setting creature 08_ring_demon (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
-Setting creature 09_dark_fairy (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\48 114800-115800.T
-Setting creature 0a_dark_bishop (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
-Setting creature 0c_maristella (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T
-Setting creature 0d_deha (illusion_world_gloomy_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
-Setting creature 00_dark_spider (human_world_solitary_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
-Setting creature 02_blood_slime (human_world_solitary_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T
-Setting creature 08_dark_spider (human_world_solitary_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T
-Setting creature 09_demon_bat (human_world_solitary_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\48 c4000-c5000.T
-Setting creature 0a_skeleton (human_world_solitary_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
-Setting creature 00_dark_spider (human_world_cursed_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\3 1c000-1d000.T
-Setting creature 01_shadow_spider (human_world_cursed_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\8 36800-37800.T
-Setting creature 02_tongue_imp (human_world_cursed_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T
-Setting creature 06_tongue_imp (human_world_cursed_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\33 96800-97800.T
-Setting creature 08_dark_spider (human_world_cursed_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T
-Setting creature 09_shadow_spider (human_world_cursed_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\48 d6000-d7000.T
-Setting creature 00_night_howler (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
-Setting creature 01_chirper (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
-Setting creature 04_night_howler (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T
-Setting creature 08_hermit_crab (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
-Setting creature 09_freak (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\48 158000-159000.T
-Setting creature 0c_saurian_warrior_a (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T
-Setting creature 0d_saurian_warrior_b (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
-Setting creature 0e_dinogon (monster_world_false_eye_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\73 1d1000-1d2000.T
-Setting creature 00_acid_slime (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
-Setting creature 01_blood_slime (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
-Setting creature 02_parasite (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
-Setting creature 04_acid_slime (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T
-Setting creature 05_blood_slime (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
-Setting creature 08_casket (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T
-Setting creature 09_blood_slime (human_world_hidden_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T
-Setting creature 04_king_hopper (monster_world_screeching_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
-Setting creature 05_warden (monster_world_screeching_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T
-Setting creature 06_oblid (monster_world_screeching_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T
-Setting creature 08_oxelus (monster_world_screeching_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T
-Setting creature 0a_cursed_demon (monster_world_screeching_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T
-Setting creature 0d_death_serpent (monster_world_screeching_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T
-Setting creature 00_master_knight (illusion_world_worship_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T
-Setting creature 06_warpoor (illusion_world_worship_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
-Setting creature 09_cross_breed (illusion_world_worship_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
-Setting creature 0a_warpoor (illusion_world_worship_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T
-Setting creature 01_doriwi (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T
-Setting creature 02_bone_wolf (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T
-Setting creature 05_doriwi (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T
-Setting creature 06_hell_warrior (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
-Setting creature 08_wyvern (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T
-Setting creature 0a_bone_wolf (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
-Setting creature 0d_blood_bone (death_world_gate_of_the_dead) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T
-Setting creature 00_acid_skull (human_world_forgotten_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
-Setting creature 01_blood_skull (human_world_forgotten_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T
-Setting creature 02_skeleton (human_world_forgotten_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T
-Setting creature 05_blood_skull (human_world_forgotten_region) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T
-Setting creature 00_earth_knight (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T
-Setting creature 01_acid_pod (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T
-Setting creature 04_cannon_snail (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\23 64800-65800.T
-Setting creature 05_cocoon_plant (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T
-Setting creature 09_sloth_bug (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
-Setting creature 0c_ray_plant (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
-Setting creature 0d_cocoon_plant (earth_world_false_pit_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
-Setting creature 00_berzerker (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\3 800-800.T
-Setting creature 02_mystic_tower (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T
-Setting creature 04_berzerker (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
-Setting creature 06_mystic_tower (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
-Setting creature 08_berzerker (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
-Setting creature 09_iron_crusher (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
-Setting creature 0d_dweller (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
-Setting creature 0e_mystic_tower (fire_world_burning_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
-Setting creature 01_horned_skull (fire_world_molten_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
-Setting creature 04_berzerker (fire_world_molten_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T
-Setting creature 06_mystic_tower (fire_world_molten_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T
-Setting creature 09_steel_servant (fire_world_molten_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T
-Setting creature 0d_arachness (fire_world_molten_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T
-Setting creature 00_bone_demon (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\3 15800-16800.T
-Setting creature 01_berzerker (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\8 44800-45800.T
-Setting creature 04_zygote (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\23 71800-72800.T
-Setting creature 05_horned_skull (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T
-Setting creature 09_cerberus (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\48 c4000-c5000.T
-Setting creature 0a_ruby_demon (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T
-Setting creature 0d_damned_angel (fire_world_ashen_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T
-Setting creature 00_dark_spirits (illusion_world_dream_domain) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T
-Setting creature 01_beak_plant (earth_world_poisonous_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
-Setting creature 02_watcher_plant (earth_world_poisonous_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T
-Setting creature 08_trickster (earth_world_poisonous_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T
-Setting creature 09_dwarf_warrior (earth_world_poisonous_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T
-Setting creature 0d_trickster (earth_world_poisonous_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T
-Setting creature 0e_watcher_plant (earth_world_poisonous_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T
-Setting creature 00_watcher_plant (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T
-Setting creature 01_myconid (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
-Setting creature 02_elder (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\13 5c800-5d800.T
-Setting creature 04_minor_dwarf (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T
-Setting creature 05_dwarfling (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
-Setting creature 06_elder (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T
-Setting creature 08_star_serpent (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T
-Setting creature 09_imp (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
-Setting creature 0c_barrel_snail (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\63 157000-158000.T
-Setting creature 0d_tondrom (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
-Setting creature 0e_elder (earth_world_rotting_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\73 18c000-18d000.T
-Setting creature 01_horned_slime (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
-Setting creature 02_blood_brain (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
-Setting creature 05_horned_slime (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T
-Setting creature 06_dweller (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T
-Setting creature 09_dementor (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T
-Setting creature 0a_dweller (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
-Setting creature 0c_worm_face (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T
-Setting creature 0d_hatchlin (water_world_impure_pool_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T
-Setting creature 00_sand_leech_a (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
-Setting creature 01_blue_flicker (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\8 22800-23800.T
-Setting creature 02_sand_leech_b (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\13 3b000-3c000.T
-Setting creature 04_kiljoy (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
-Setting creature 05_acid_pod (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T
-Setting creature 08_torg (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\43 c5000-c6000.T
-Setting creature 09_cocoon_plant (earth_world_quaking_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
-Setting creature 01_demon_bat (earth_world_stone_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\8 47800-48800.T
-Setting creature 05_hobble_worm (earth_world_stone_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\28 9a800-9b800.T
-Setting creature 08_clay_servant (earth_world_stone_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T
-Setting creature 0a_barrel_snail (earth_world_stone_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\53 ee000-ef000.T
-Setting creature 0d_crying_root (earth_world_stone_cavern) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
-Setting creature 00_kabasaur (water_world_sunken_river_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\3 27000-28000.T
-Setting creature 04_kabasaur (water_world_sunken_river_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\23 64800-65800.T
-Setting creature 05_water_knight (water_world_sunken_river_area) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T
-Setting creature 00_unknown_e (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\3 1a800-1b800.T
-Setting creature 01_stack_eyes (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T
-Setting creature 05_unknown_g (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\28 ae800-af800.T
-Setting creature 08_apocrypha (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\43 cf000-d0000.T
-Setting creature 09_descrypha (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T
-Setting creature 0a_wizcrypha (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\53 116000-117000.T
-Setting creature 0c_old_face (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\63 136800-137800.T
-Setting creature 0d_bugler (death_world_lingering_curse_layer) to 01_acid_slime (human_world_solitary_region)
-  fileCopy .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T->.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
+Swapping creatures 0d_cocoon_plant (earth_world_false_pit_cavern) and 04_cannon_snail (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\23 64800-65800.T
+Swapping creatures 01_gargaral (illusion_world_bewilderment_domain) and 06_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\8 23000-24000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T
+Swapping creatures 0e_manna_python (water_world_watery_labyrinth_area) and 0c_gaze_hopper (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T
+Swapping creatures 09_blood_slime (human_world_hidden_region) and 00_dark_spider (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
+Swapping creatures 08_casket (human_world_hidden_region) and 02_tongue_imp (human_world_cursed_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T
+Swapping creatures 0a_warpoor (illusion_world_worship_domain) and 02_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T
+Swapping creatures 09_dwarf_warrior (earth_world_poisonous_cavern) and 05_hobble_worm (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\28 9a800-9b800.T
+Swapping creatures 05_armored_jinn (fire_world_phoenix_cave) and 06_fire_jinn (fire_world_phoenix_cave)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T
+Swapping creatures 09_cocoon_plant (earth_world_quaking_cavern) and 09_imp (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
+Swapping creatures 04_kabasaur (water_world_sunken_river_area) and 0c_gaze_hopper (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\23 64800-65800.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
+Swapping creatures 09_koazul (water_world_watery_labyrinth_area) and 05_blood_brain (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T
+Swapping creatures 02_karasu (death_world_dark_castle_layer) and 05_doriwi (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T
+Swapping creatures 01_chirper (monster_world_false_eye_area) and 0d_death_serpent (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T
+Swapping creatures 05_blood_slime (human_world_hidden_region) and 00_dark_spider (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T
+Swapping creatures 02_tongue_imp (human_world_hidden_region) and 01_blood_slime (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
+Swapping creatures 0d_dweller (fire_world_burning_cavern) and 06_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
+Swapping creatures 05_dwarfling (earth_world_rotting_cavern) and 02_watcher_plant (earth_world_poisonous_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T-.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T
+Swapping creatures 05_warden (monster_world_screeching_area) and 0e_dinogon (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\73 1d1000-1d2000.T
+Swapping creatures 09_cerberus (fire_world_ashen_cavern) and 02_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\48 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T
+Swapping creatures 02_gordoral (illusion_world_worship_domain) and 0e_rotting_face (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
+Swapping creatures 0a_skeleton (human_world_solitary_region) and 00_dark_spider (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
+Swapping creatures 08_torg (earth_world_quaking_cavern) and 0d_trickster (earth_world_poisonous_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\43 c5000-c6000.T-.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\68 18e800-18f800.T
+Swapping creatures 0d_blood_bone (death_world_gate_of_the_dead) and 09_armored_warrior (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\48 147800-148800.T
+Swapping creatures 04_demon_warrior (illusion_world_bewilderment_domain) and 0a_dark_bishop (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\23 76000-77000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
+Swapping creatures 0a_rotting_face (illusion_world_bewilderment_domain) and 06_warpoor (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
+Swapping creatures 05_acid_pod (earth_world_quaking_cavern) and 01_acid_pod (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T
+Swapping creatures 02_tongue_imp (human_world_hidden_region) and 00_acid_skull (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 0d_dweller (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
+Swapping creatures 01_acid_pod (earth_world_quaking_cavern) and 0a_barrel_snail (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\28 90800-91800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\53 ee000-ef000.T
+Swapping creatures 0d_hatchlin (water_world_impure_pool_area) and 0a_dweller (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
+Swapping creatures 01_earth_knight (earth_world_hostile_rock_cavern) and 0d_crying_root (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
+Swapping creatures 05_armored_warrior (death_world_dark_castle_layer) and 08_wyvern (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T
+Swapping creatures 0d_bugler (death_world_lingering_curse_layer) and 00_hell_hunter (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\3 30800-31800.T
+Swapping creatures 0d_saurian_warrior_b (monster_world_false_eye_area) and 0a_cursed_demon (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T
+Swapping creatures 0a_ruby_demon (fire_world_ashen_cavern) and 04_berzerker (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
+Swapping creatures 0d_damned_angel (fire_world_ashen_cavern) and 09_steel_servant (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T
+Swapping creatures 05_dwarfling (earth_world_poisonous_cavern) and 05_acid_pod (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T
+Swapping creatures 0e_watcher_plant (earth_world_poisonous_cavern) and 05_hobble_worm (earth_world_poisonous_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\73 1b5800-1b6800.T-.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T
+Swapping creatures 01_myconid (earth_world_rotting_cavern) and 0e_watcher_plant (earth_world_poisonous_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T-.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T
+Swapping creatures 0e_dinogon (monster_world_screeching_area) and 0d_saurian_warrior_b (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T
+Swapping creatures 0a_rotting_face (illusion_world_worship_domain) and 06_warpoor (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T
+Swapping creatures 00_winged_worm (water_world_white_rain_area) and 09_koazul (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T
+Swapping creatures 04_acid_slime (human_world_hidden_region) and 02_skeleton (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T
+Swapping creatures 02_fire_jinn (fire_world_phoenix_cave) and 04_berzerker (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T
+Swapping creatures 08_star_serpent (earth_world_rotting_cavern) and 05_dwarfling (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T
+Swapping creatures 05_armored_warrior (death_world_gate_of_the_dead) and 01_stack_eyes (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T
+Swapping creatures 00_winged_worm (water_world_watery_labyrinth_area) and 06_dweller (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\28 93000-94000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\33 a2000-a3000.T
+Swapping creatures 0d_hatchlin (water_world_impure_pool_area) and 09_koazul (water_world_white_rain_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T-.\generated\bonanza\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T
+Swapping creatures 0e_manna_python (water_world_watery_labyrinth_area) and 00_kabasaur (water_world_sunken_river_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\3 27000-28000.T
+Swapping creatures 00_acid_slime (human_world_hidden_region) and 05_blood_skull (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T
+Swapping creatures 0e_dinogon (monster_world_screeching_area) and 0c_saurian_warrior_a (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T
+Swapping creatures 09_cross_breed (illusion_world_worship_domain) and 01_gargaral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T
+Swapping creatures 0c_gaze_hopper (water_world_sunken_river_area) and 00_kabasaur (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\23 64800-65800.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T
+Swapping creatures 05_doriwi (death_world_dark_castle_layer) and 09_armored_warrior (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T
+Swapping creatures 09_war_demon_2 (illusion_world_bewilderment_domain) and 08_war_demon_1 (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\43 d6800-d7800.T
+Swapping creatures 01_blood_skull (human_world_forgotten_region) and 00_dark_spider (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
+Swapping creatures 01_acid_pod (earth_world_stone_cavern) and 09_imp (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\53 ee000-ef000.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
+Swapping creatures 05_horned_slime (water_world_impure_pool_area) and 04_great_frog (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
+Swapping creatures 05_blood_brain (water_world_watery_labyrinth_area) and 09_koazul (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\53 e1800-e2800.T
+Swapping creatures 04_night_howler (monster_world_false_eye_area) and 0d_saurian_warrior_b (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T
+Swapping creatures 01_stack_eyes (death_world_gate_of_the_dead) and 08_wyvern (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
+Swapping creatures 02_skeleton (human_world_hidden_region) and 01_blood_slime (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 06_mystic_tower (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T
+Swapping creatures 08_ring_demon (illusion_world_gloomy_domain) and 04_dark_spirits (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
+Swapping creatures 00_dark_spirits (illusion_world_dream_domain) and 09_dark_fairy (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M38.T_PARTS\3 21800-22800.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\48 114800-115800.T
+Swapping creatures 08_oxelus (monster_world_screeching_area) and 04_king_hopper (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
+Swapping creatures 01_chirper (monster_world_screeching_area) and 08_oxelus (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
+Swapping creatures 0c_gaze_hopper (water_world_watery_labyrinth_area) and 04_kabasaur (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
+Swapping creatures 06_oblid (monster_world_screeching_area) and 00_night_howler (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T
+Swapping creatures 05_blood_skull (human_world_hidden_region) and 02_tongue_imp (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T
+Swapping creatures 04_zygote (fire_world_ashen_cavern) and 02_fire_jinn (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\23 71800-72800.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T
+Swapping creatures 00_acid_skull (human_world_hidden_region) and 06_tongue_imp (human_world_cursed_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T-.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\33 96800-97800.T
+Swapping creatures 08_wyvern (death_world_gate_of_the_dead) and 06_armored_slayer (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T
+Swapping creatures 0d_saurian_warrior_b (monster_world_false_eye_area) and 08_hermit_crab (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\23 a5800-a6800.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
+Swapping creatures 02_bone_wolf (death_world_gate_of_the_dead) and 05_armored_warrior (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T
+Swapping creatures 05_armored_warrior (death_world_gate_of_the_dead) and 05_hell_hunter (death_world_undead_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 0d_slasher (water_world_watery_labyrinth_area) and 04_great_frog (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\28 89800-8a800.T
+Swapping creatures 01_blood_skull (human_world_solitary_region) and 00_acid_slime (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T
+Swapping creatures 0c_barrel_snail (earth_world_rotting_cavern) and 04_kiljoy (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\63 157000-158000.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
+Swapping creatures 01_beak_plant (earth_world_poisonous_cavern) and 05_earth_knight (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T
+Swapping creatures 04_demon_warrior (illusion_world_gloomy_domain) and 08_war_demon_1 (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\48 100800-101800.T
+Swapping creatures 01_acid_pod (earth_world_quaking_cavern) and 0c_ray_plant (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
+Swapping creatures 0a_rotting_face (illusion_world_bewilderment_domain) and 09_cross_breed (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\53 116800-117800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\33 aa800-ab800.T
+Swapping creatures 06_elder (earth_world_rotting_cavern) and 02_elder (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\13 5c800-5d800.T
+Swapping creatures 0c_death_mage (illusion_world_bewilderment_domain) and 0d_deha (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\63 13b000-13c000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\68 190000-191000.T
+Swapping creatures 01_blood_skull (human_world_forgotten_region) and 09_blood_slime (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T
+Swapping creatures 08_clay_servant (earth_world_stone_cavern) and 0e_watcher_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
+Swapping creatures 04_dark_spirits (illusion_world_gloomy_domain) and 01_gargaral (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
+Swapping creatures 0e_dinogon (monster_world_false_eye_area) and 0a_cursed_demon (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\63 17e000-17f000.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
+Swapping creatures 0a_horned_slime (water_world_watery_labyrinth_area) and 09_dementor (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T
+Swapping creatures 0a_dweller (water_world_impure_pool_area) and 09_dementor (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\53 e0800-e1800.T
+Swapping creatures 0e_watcher_plant (earth_world_stone_cavern) and 08_clay_servant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
+Swapping creatures 09_koazul (water_world_watery_labyrinth_area) and 04_great_frog (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T
+Swapping creatures 09_steel_servant (fire_world_ashen_cavern) and 08_berzerker (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
+Swapping creatures 05_horned_slime (water_world_watery_labyrinth_area) and 0c_worm_face (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T
+Swapping creatures 01_horned_skull (fire_world_molten_cavern) and 06_mystic_tower (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T
+Swapping creatures 05_gargaral (illusion_world_bewilderment_domain) and 06_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\8 23000-24000.T
+Swapping creatures 0c_ray_plant (earth_world_quaking_cavern) and 09_dwarf_warrior (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\28 9a800-9b800.T
+Swapping creatures 02_gordoral (illusion_world_bewilderment_domain) and 05_dark_spirits (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
+Swapping creatures 09_descrypha (death_world_lingering_curse_layer) and 0a_demons_eye (death_world_undead_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T-.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\53 146800-147800.T
+Swapping creatures 08_oxelus (monster_world_screeching_area) and 0d_death_serpent (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\68 176000-177000.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\8 4b000-4c000.T
+Swapping creatures 05_water_knight (water_world_sunken_river_area) and 02_horned_slime (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T
+Swapping creatures 0d_dweller (fire_world_burning_cavern) and 09_iron_crusher (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\48 b6800-b7800.T
+Swapping creatures 05_dark_spirits (illusion_world_bewilderment_domain) and 0a_warpoor (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T
+Swapping creatures 01_acid_slime (human_world_solitary_region) and 02_blood_slime (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\13 4b000-4c000.T
+Swapping creatures 0e_rotting_face (illusion_world_worship_domain) and 01_dark_spirits (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T
+Swapping creatures 05_earth_knight (earth_world_poisonous_cavern) and 08_clay_servant (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T
+Swapping creatures 09_koazul (water_world_watery_labyrinth_area) and 01_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
+Swapping creatures 09_cerberus (fire_world_burning_cavern) and 02_mystic_tower (fire_world_ashen_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T-.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\48 c4000-c5000.T
+Swapping creatures 01_chirper (monster_world_screeching_area) and 04_king_hopper (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T
+Swapping creatures 02_gordoral (illusion_world_gloomy_domain) and 01_gargaral (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
+Swapping creatures 09_sloth_bug (earth_world_false_pit_cavern) and 09_cocoon_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
+Swapping creatures 00_acid_skull (human_world_cursed_region) and 00_dark_spider (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\33 96800-97800.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T
+Swapping creatures 04_great_frog (water_world_watery_labyrinth_area) and 0a_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T
+Swapping creatures 09_steel_servant (fire_world_burning_cavern) and 0d_damned_angel (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T
+Swapping creatures 08_war_demon_1 (illusion_world_gloomy_domain) and 00_red_puppet (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\3 20000-21000.T
+Swapping creatures 08_dark_spider (human_world_solitary_region) and 0a_skeleton (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\43 a7000-a8000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
+Swapping creatures 00_unknown_e (death_world_lingering_curse_layer) and 05_armored_warrior (death_world_undead_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\3 1a800-1b800.T-.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 05_cocoon_plant (earth_world_false_pit_cavern) and 01_earth_knight (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\28 85800-86800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T
+Swapping creatures 02_tongue_imp (human_world_hidden_region) and 08_casket (human_world_cursed_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T-.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T
+Swapping creatures 0a_dark_bishop (illusion_world_bewilderment_domain) and 00_red_puppet (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\23 76000-77000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\53 13c800-13d800.T
+Swapping creatures 09_sloth_bug (earth_world_rotting_cavern) and 0c_ray_plant (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\28 9a800-9b800.T
+Swapping creatures 00_master_knight (illusion_world_worship_domain) and 00_red_puppet (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\23 76000-77000.T
+Swapping creatures 02_mystic_tower (fire_world_burning_cavern) and 06_mystic_tower (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
+Swapping creatures 0d_bugler (death_world_dark_castle_layer) and 05_unknown_g (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\3 30800-31800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\28 ae800-af800.T
+Swapping creatures 05_hell_hunter (death_world_gate_of_the_dead) and 01_stack_eyes (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T
+Swapping creatures 01_doriwi (death_world_gate_of_the_dead) and 0a_bone_wolf (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
+Swapping creatures 06_tongue_imp (human_world_hidden_region) and 02_parasite (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
+Swapping creatures 01_gargaral (illusion_world_gloomy_domain) and 02_gordoral (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
+Swapping creatures 05_earth_knight (earth_world_stone_cavern) and 0d_crying_root (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T-.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T
+Swapping creatures 05_armored_jinn (fire_world_phoenix_cave) and 0d_damned_angel (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
+Swapping creatures 04_night_howler (monster_world_screeching_area) and 0e_dinogon (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
+Swapping creatures 02_skeleton (human_world_hidden_region) and 08_casket (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\3 10000-11000.T
+Swapping creatures 09_cerberus (fire_world_ashen_cavern) and 06_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\48 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 02_mystic_tower (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\13 d000-e000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
+Swapping creatures 00_unknown_e (death_world_undead_layer) and 09_armored_warrior (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
+Swapping creatures 04_night_howler (monster_world_false_eye_area) and 0d_saurian_warrior_b (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\43 10b000-10c000.T
+Swapping creatures 0a_warpoor (illusion_world_bewilderment_domain) and 05_dark_spirits (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T
+Swapping creatures 05_earth_knight (earth_world_hostile_rock_cavern) and 05_acid_pod (earth_world_poisonous_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T-.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T
+Swapping creatures 01_dark_spirits (illusion_world_worship_domain) and 05_dark_spirits (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\53 159800-15a800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
+Swapping creatures 01_shadow_spider (human_world_cursed_region) and 09_demon_bat (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\8 36800-37800.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\48 c4000-c5000.T
+Swapping creatures 01_chirper (monster_world_screeching_area) and 04_king_hopper (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
+Swapping creatures 0a_ruby_demon (fire_world_burning_cavern) and 04_jinn_lord (fire_world_phoenix_cave)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T-.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\23 65800-66800.T
+Swapping creatures 01_horned_slime (water_world_watery_labyrinth_area) and 09_koazul (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\8 2c800-2d800.T
+Swapping creatures 0e_dinogon (monster_world_screeching_area) and 05_warden (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\28 9f800-a0800.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\73 1d1000-1d2000.T
+Swapping creatures 01_stack_eyes (death_world_gate_of_the_dead) and 0a_armored_slayer (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
+Swapping creatures 06_warpoor (illusion_world_worship_domain) and 0a_warpoor (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T
+Swapping creatures 09_armored_warrior (death_world_undead_layer) and 06_armored_slayer (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\43 116800-117800.T
+Swapping creatures 01_myconid (earth_world_poisonous_cavern) and 0d_crying_root (earth_world_stone_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\43 c2800-c3800.T
+Swapping creatures 04_berzerker (fire_world_phoenix_cave) and 09_steel_servant (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T
+Swapping creatures 04_acid_slime (human_world_forgotten_region) and 08_dark_spider (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\28 99000-9a000.T
+Swapping creatures 01_beak_plant (earth_world_hostile_rock_cavern) and 00_sand_leech_a (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
+Swapping creatures 01_blood_slime (human_world_hidden_region) and 00_acid_slime (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\53 eb800-ec800.T
+Swapping creatures 02_karasu (death_world_gate_of_the_dead) and 06_armored_slayer (death_world_undead_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T-.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 05_cocoon_plant (earth_world_stone_cavern) and 04_cannon_snail (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\68 140000-141000.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T
+Swapping creatures 04_kabasaur (water_world_watery_labyrinth_area) and 0c_gaze_hopper (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\73 16a800-16b800.T
+Swapping creatures 0d_crying_root (earth_world_poisonous_cavern) and 04_kiljoy (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\63 157000-158000.T
+Swapping creatures 01_beak_plant (earth_world_quaking_cavern) and 0c_barrel_snail (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
+Swapping creatures 06_fire_jinn (fire_world_phoenix_cave) and 04_berzerker (fire_world_ashen_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T
+Swapping creatures 04_minor_dwarf (earth_world_rotting_cavern) and 00_sand_leech_a (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T-.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T
+Swapping creatures 09_imp (earth_world_stone_cavern) and 08_clay_servant (earth_world_poisonous_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\53 ee000-ef000.T-.\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\8 3c000-3d000.T
+Swapping creatures 09_koazul (water_world_watery_labyrinth_area) and 0a_horned_slime (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T
+Swapping creatures 01_dark_spirits (illusion_world_bewilderment_domain) and 02_gordoral (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T
+Swapping creatures 04_berzerker (fire_world_molten_cavern) and 08_berzerker (fire_world_ashen_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T-.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T
+Swapping creatures 0d_bugler (death_world_lingering_curse_layer) and 00_hell_hunter (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\28 ae800-af800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
+Swapping creatures 00_acid_slime (human_world_hidden_region) and 08_dark_spider (human_world_cursed_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T-.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\43 bb800-bc800.T
+Swapping creatures 05_dwarfling (earth_world_rotting_cavern) and 02_watcher_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\43 f3000-f4000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
+Swapping creatures 00_kabasaur (water_world_sunken_river_area) and 0c_gaze_hopper (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\23 64800-65800.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T
+Swapping creatures 05_blood_slime (human_world_hidden_region) and 06_tongue_imp (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
+Swapping creatures 05_armored_warrior (death_world_lingering_curse_layer) and 06_armored_slayer (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\3 1a800-1b800.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T
+Swapping creatures 04_berzerker (fire_world_phoenix_cave) and 0d_damned_angel (fire_world_phoenix_cave)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T
+Swapping creatures 09_koazul (water_world_watery_labyrinth_area) and 09_dementor (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T
+Swapping creatures 00_master_knight (illusion_world_bewilderment_domain) and 00_red_puppet (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\23 76000-77000.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\3 1e000-1f000.T
+Swapping creatures 04_berzerker (fire_world_phoenix_cave) and 06_fire_jinn (fire_world_ashen_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T
+Swapping creatures 0d_bugler (death_world_lingering_curse_layer) and 00_hell_hunter (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\28 ae800-af800.T
+Swapping creatures 08_trickster (earth_world_poisonous_cavern) and 09_cocoon_plant (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\48 e0800-e1800.T
+Swapping creatures 0c_worm_face (water_world_watery_labyrinth_area) and 02_blood_brain (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\13 48800-49800.T
+Swapping creatures 0d_damned_angel (fire_world_phoenix_cave) and 04_zygote (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T
+Swapping creatures 08_berzerker (fire_world_molten_cavern) and 05_armored_jinn (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\48 f3800-f4800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T
+Swapping creatures 05_blood_skull (human_world_forgotten_region) and 08_dark_spider (human_world_forgotten_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\3 10800-11800.T-.\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T
+Swapping creatures 04_minor_dwarf (earth_world_hostile_rock_cavern) and 01_beak_plant (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
+Swapping creatures 01_berzerker (fire_world_ashen_cavern) and 04_jinn_lord (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\8 44800-45800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
+Swapping creatures 0d_tondrom (earth_world_rotting_cavern) and 01_beak_plant (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T-.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T
+Swapping creatures 0d_crying_root (earth_world_rotting_cavern) and 04_minor_dwarf (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\63 157000-158000.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
+Swapping creatures 09_cerberus (fire_world_burning_cavern) and 09_iron_crusher (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
+Swapping creatures 01_dark_spirits (illusion_world_gloomy_domain) and 04_dark_spirits (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
+Swapping creatures 0d_cocoon_plant (earth_world_false_pit_cavern) and 0c_barrel_snail (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\23 64800-65800.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T
+Swapping creatures 01_stack_eyes (death_world_dark_castle_layer) and 0c_old_face (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\63 136800-137800.T
+Swapping creatures 0d_damned_angel (fire_world_molten_cavern) and 09_steel_servant (fire_world_phoenix_cave)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\23 91000-92000.T-.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\13 29800-2a800.T
+Swapping creatures 08_casket (human_world_hidden_region) and 02_blood_slime (human_world_solitary_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\43 d9000-da000.T-.\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\8 32000-33000.T
+Swapping creatures 05_cocoon_plant (earth_world_false_pit_cavern) and 05_dwarfling (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
+Swapping creatures 04_tree_ogre (death_world_dark_castle_layer) and 0d_bugler (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\23 99800-9a800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\28 ae800-af800.T
+Swapping creatures 04_kiljoy (earth_world_poisonous_cavern) and 01_beak_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
+Swapping creatures 00_kabasaur (water_world_watery_labyrinth_area) and 00_kabasaur (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\63 10e000-10f000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\3 27000-28000.T
+Swapping creatures 08_star_serpent (earth_world_false_pit_cavern) and 01_acid_pod (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\63 ff000-100000.T
+Swapping creatures 09_blood_slime (human_world_forgotten_region) and 05_blood_slime (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\28 90800-91800.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\13 58800-59800.T
+Swapping creatures 0e_watcher_plant (earth_world_rotting_cavern) and 00_sand_leech_a (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T
+Swapping creatures 08_wyvern (death_world_dark_castle_layer) and 0c_old_face (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\33 f0800-f1800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
+Swapping creatures 0a_horned_slime (water_world_watery_labyrinth_area) and 09_dementor (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\48 c3000-c4000.T
+Swapping creatures 08_berzerker (fire_world_burning_cavern) and 04_zygote (fire_world_phoenix_cave)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T-.\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\28 93800-94800.T
+Swapping creatures 08_apocrypha (death_world_lingering_curse_layer) and 0a_demons_eye (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\43 cf000-d0000.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\48 f2800-f3800.T
+Swapping creatures 04_dark_spirits (illusion_world_gloomy_domain) and 08_ring_demon (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
+Swapping creatures 04_kiljoy (earth_world_rotting_cavern) and 0e_watcher_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\23 8b000-8c000.T
+Swapping creatures 04_berzerker (fire_world_ashen_cavern) and 04_berzerker (fire_world_ashen_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\68 153000-154000.T-.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\53 eb000-ec000.T
+Swapping creatures 01_doriwi (death_world_gate_of_the_dead) and 0a_armored_slayer (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T
+Swapping creatures 02_karasu (death_world_undead_layer) and 02_bone_wolf (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T
+Swapping creatures 02_bone_wolf (death_world_undead_layer) and 06_hell_warrior (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
+Swapping creatures 0e_dinogon (monster_world_false_eye_area) and 0c_saurian_warrior_a (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\73 1d1000-1d2000.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\53 14c800-14d800.T
+Swapping creatures 06_oblid (monster_world_false_eye_area) and 00_night_howler (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\33 d7000-d8000.T
+Swapping creatures 06_tongue_imp (human_world_hidden_region) and 08_dark_spider (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\48 f2000-f3000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\23 80000-81000.T
+Swapping creatures 09_dementor (water_world_watery_labyrinth_area) and 04_great_frog (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\68 13d000-13e000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\48 c9800-ca800.T
+Swapping creatures 08_wyvern (death_world_dark_castle_layer) and 0a_armored_slayer (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\53 147800-148800.T
+Swapping creatures 09_koazul (water_world_impure_pool_area) and 02_blood_brain (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\23 76800-77800.T
+Swapping creatures 01_acid_pod (earth_world_false_pit_cavern) and 0e_watcher_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\8 3f800-40800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\68 16b800-16c800.T
+Swapping creatures 0c_maristella (illusion_world_gloomy_domain) and 04_dark_spirits (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T
+Swapping creatures 05_dwarfling (earth_world_false_pit_cavern) and 00_sand_leech_a (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\68 120000-121000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
+Swapping creatures 05_earth_knight (earth_world_poisonous_cavern) and 09_dwarf_warrior (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\13 61000-62000.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\48 ea800-eb800.T
+Swapping creatures 0c_maristella (illusion_world_gloomy_domain) and 06_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\28 8e000-8f000.T
+Swapping creatures 06_gordoral (illusion_world_gloomy_domain) and 02_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\23 9b800-9c800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
+Swapping creatures 06_fire_jinn (fire_world_phoenix_cave) and 0d_arachness (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M03.T_PARTS\33 c5000-c6000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\68 14a000-14b000.T
+Swapping creatures 09_iron_crusher (fire_world_burning_cavern) and 06_mystic_tower (fire_world_molten_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\8 41800-42800.T
+Swapping creatures 05_armored_warrior (death_world_gate_of_the_dead) and 06_hell_warrior (death_world_undead_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\28 b4800-b5800.T-.\generated\bonanza\extracted\ST\CHR2\M26.T_PARTS\28 e4000-e5000.T
+Swapping creatures 01_horned_skull (fire_world_molten_cavern) and 09_cerberus (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M24.T_PARTS\33 a9800-aa800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\68 e0800-e1800.T
+Swapping creatures 02_karasu (death_world_lingering_curse_layer) and 0a_bone_wolf (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\8 52800-53800.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\8 2c000-2d000.T
+Swapping creatures 00_acid_skull (human_world_forgotten_region) and 02_parasite (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\8 29000-2a000.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
+Swapping creatures 00_red_puppet (illusion_world_bewilderment_domain) and 09_war_demon_2 (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\23 76000-77000.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\43 d6800-d7800.T
+Swapping creatures 05_horned_skull (fire_world_ashen_cavern) and 0e_mystic_tower (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
+Swapping creatures 05_blood_skull (human_world_forgotten_region) and 00_acid_skull (human_world_hidden_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M06.T_PARTS\13 50800-51800.T-.\generated\bonanza\extracted\ST\CHR0\M05.T_PARTS\8 29000-2a000.T
+Swapping creatures 0e_rotting_face (illusion_world_gloomy_domain) and 0a_warpoor (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
+Swapping creatures 04_zygote (fire_world_burning_cavern) and 01_berzerker (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\43 8d000-8e000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\23 47800-48800.T
+Swapping creatures 0e_elder (earth_world_rotting_cavern) and 02_elder (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\73 18c000-18d000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\33 dc800-dd800.T
+Swapping creatures 05_doriwi (death_world_gate_of_the_dead) and 00_unknown_e (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\68 19e800-19f800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
+Swapping creatures 05_doriwi (death_world_dark_castle_layer) and 02_bone_wolf (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\33 e4000-e5000.T
+Swapping creatures 01_blood_skull (human_world_solitary_region) and 02_tongue_imp (human_world_cursed_region)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M04.T_PARTS\3 1c000-1d000.T-.\generated\bonanza\extracted\ST\CHR0\M01.T_PARTS\13 52000-53000.T
+Swapping creatures 08_ring_demon (illusion_world_gloomy_domain) and 01_gargaral (illusion_world_gloomy_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\28 c4000-c5000.T-.\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\43 f6800-f7800.T
+Swapping creatures 09_cocoon_plant (earth_world_poisonous_cavern) and 0c_ray_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\43 dc800-dd800.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\48 110800-111800.T
+Swapping creatures 08_clay_servant (earth_world_stone_cavern) and 05_dwarfling (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M28.T_PARTS\53 ee000-ef000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\8 3c000-3d000.T
+Swapping creatures 01_beak_plant (earth_world_poisonous_cavern) and 01_blue_flicker (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M27.T_PARTS\48 fe800-ff800.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\8 22800-23800.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 05_horned_skull (fire_world_burning_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\33 60000-61000.T-.\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T
+Swapping creatures 0d_cocoon_plant (earth_world_quaking_cavern) and 05_acid_pod (earth_world_hostile_rock_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\3 5800-6800.T-.\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\8 42800-43800.T
+Swapping creatures 05_hell_hunter (death_world_dark_castle_layer) and 0a_armored_slayer (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\28 c3000-c4000.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\53 175000-176000.T
+Swapping creatures 04_tree_ogre (death_world_lingering_curse_layer) and 00_hell_hunter (death_world_lingering_curse_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\28 ae800-af800.T-.\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\68 162800-163800.T
+Swapping creatures 06_warpoor (illusion_world_bewilderment_domain) and 0e_rotting_face (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\13 3f800-40800.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\33 d2800-d3800.T
+Swapping creatures 00_watcher_plant (earth_world_rotting_cavern) and 05_cocoon_plant (earth_world_rotting_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\3 1b000-1c000.T-.\generated\bonanza\extracted\ST\CHR1\M11.T_PARTS\28 bd000-be000.T
+Swapping creatures 06_armored_slayer (death_world_lingering_curse_layer) and 01_doriwi (death_world_gate_of_the_dead)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M14.T_PARTS\3 1a800-1b800.T-.\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T
+Swapping creatures 0a_warpoor (illusion_world_gloomy_domain) and 06_gordoral (illusion_world_bewilderment_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\8 48800-49800.T-.\generated\bonanza\extracted\ST\CHR0\M08.T_PARTS\73 152000-153000.T
+Swapping creatures 06_mystic_tower (fire_world_burning_cavern) and 0e_mystic_tower (fire_world_ashen_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M20.T_PARTS\73 f9800-fa800.T-.\generated\bonanza\extracted\ST\CHR1\M18.T_PARTS\28 89800-8a800.T
+Swapping creatures 00_night_howler (monster_world_false_eye_area) and 0d_saurian_warrior_b (monster_world_false_eye_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\3 21000-22000.T-.\generated\bonanza\extracted\ST\CHR0\M02.T_PARTS\68 1a7800-1a8800.T
+Swapping creatures 0d_hatchlin (water_world_white_rain_area) and 05_horned_slime (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M37.T_PARTS\3 1b800-1c800.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T
+Swapping creatures 0d_tondrom (earth_world_hostile_rock_cavern) and 00_earth_knight (earth_world_false_pit_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\28 bd800-be800.T-.\generated\bonanza\extracted\ST\CHR1\M15.T_PARTS\3 1e800-1f800.T
+Swapping creatures 04_dark_spirits (illusion_world_gloomy_domain) and 01_dark_spirits (illusion_world_worship_domain)
+  fileSwap .\generated\bonanza\extracted\ST\CHR0\M09.T_PARTS\63 163800-164800.T-.\generated\bonanza\extracted\ST\CHR1\M13.T_PARTS\48 13a000-13b000.T
+Swapping creatures 02_horned_slime (water_world_sunken_river_area) and 05_water_knight (water_world_watery_labyrinth_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M21.T_PARTS\28 92000-93000.T-.\generated\bonanza\extracted\ST\CHR3\M32.T_PARTS\13 42800-43800.T
+Swapping creatures 04_king_hopper (monster_world_screeching_area) and 01_chirper (monster_world_screeching_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\43 11a800-11b800.T-.\generated\bonanza\extracted\ST\CHR1\M17.T_PARTS\23 8c800-8d800.T
+Swapping creatures 06_armored_slayer (death_world_gate_of_the_dead) and 02_bone_wolf (death_world_dark_castle_layer)
+  fileSwap .\generated\bonanza\extracted\ST\CHR2\M23.T_PARTS\13 5f800-60800.T-.\generated\bonanza\extracted\ST\CHR2\M25.T_PARTS\13 5f000-60000.T
+Swapping creatures 02_blood_brain (water_world_impure_pool_area) and 0d_hatchlin (water_world_impure_pool_area)
+  fileSwap .\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\68 131000-132000.T-.\generated\bonanza\extracted\ST\CHR1\M10.T_PARTS\63 118800-119800.T
+Swapping creatures 00_black_onyx (earth_world_hostile_rock_cavern) and 0d_crying_root (earth_world_quaking_cavern)
+  fileSwap .\generated\bonanza\extracted\ST\CHR3\M33.T_PARTS\3 18800-19800.T-.\generated\bonanza\extracted\ST\CHR1\M12.T_PARTS\23 70800-71800.T
 Difficulty easy, factor 0.5
 
 
@@ -2410,29 +2760,29 @@ DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_kabasaur
 DEBUG - Creature 01_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_horned_slime
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_koazul
+DEBUG - Creature 06_dweller
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0a_horned_slime
+DEBUG - Creature 0a_dweller
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_kabasaur
+DEBUG - Creature 04_great_frog
+DEBUG - Creature 04_kabasaur
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_door
 DEBUG - Creature 01_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_damned_angel
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0a_ruby_demon
+DEBUG - Creature 08_berzerker
+DEBUG - Creature 0d_arachness
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
 DEBUG - Creature 09_door
@@ -2442,7 +2792,7 @@ DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_horned_slime
 DEBUG - Creature 01_door
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
@@ -2458,43 +2808,43 @@ DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_unknown_g
 DEBUG - Creature 01_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 06_armored_slayer
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_bugler
+DEBUG - Creature 0a_armored_slayer
+DEBUG - Creature 0c_old_face
 DEBUG - Creature 07_door
 DEBUG - Creature 08_armored_guardian
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_blood_bone
+DEBUG - Creature 05_hell_hunter
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_unknown_b
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
 DEBUG - Creature 04_king_edward
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_armored_warrior
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_claw_head
 DEBUG - Creature 09_pulsating_heart
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_descrypha
 DEBUG - Creature 0b_door
 DEBUG - Creature 0d_fat_mole_e
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0e_claw_head
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_crying_root
+DEBUG - Creature 0d_cocoon_plant
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
 DEBUG - Creature 04_dread_knight
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_earth_knight
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
 DEBUG - Creature 09_door
@@ -2505,90 +2855,90 @@ DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_gorgoral
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_gargaral
+DEBUG - Creature 0e_rotting_face
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_war_demon_2
+DEBUG - Creature 0c_maristella
+DEBUG - Creature 0a_rotting_face
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_red_puppet
+DEBUG - Creature 04_demon_warrior
+DEBUG - Creature 09_cross_breed
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_deha
 DEBUG - Creature 0d_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0a_warpoor
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_war_demon_1
+DEBUG - Creature 06_gordoral
 DEBUG - Creature 02_dark_imp
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_gordoral
+DEBUG - Creature 01_gargaral
 DEBUG - Creature 06_black_imp
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_ring_demon
+DEBUG - Creature 00_dark_spirits
+DEBUG - Creature 0a_dark_bishop
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_dark_spirits
+DEBUG - Creature 0c_death_mage
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_tongue_imp
+DEBUG - Creature 08_casket
 DEBUG - Creature 01_acid_slime
 DEBUG - Creature 03_door
 DEBUG - Creature 04_door
 DEBUG - Creature 05_door
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0a_skeleton
+DEBUG - Creature 01_shadow_spider
+DEBUG - Creature 01_blood_slime
 DEBUG - Creature 0b_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_dark_spider
+DEBUG - Creature 09_demon_bat
+DEBUG - Creature 01_blood_skull
 DEBUG - Creature 03_door
 DEBUG - Creature 04_fat_mole_a
 DEBUG - Creature 05_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_dark_spider
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_acid_slime
+DEBUG - Creature 09_shadow_spider
 DEBUG - Creature 0a_guardian_a
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_saurian_warrior_b
+DEBUG - Creature 08_oxelus
 DEBUG - Creature 02_lizard_servant
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_hermit_crab
 DEBUG - Creature 05_master_howler
 DEBUG - Creature 06_lizard_servant
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_night_howler
+DEBUG - Creature 09_freak
 DEBUG - Creature 0a_door
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0a_cursed_demon
+DEBUG - Creature 00_night_howler
+DEBUG - Creature 0c_saurian_warrior_a
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_skeleton
+DEBUG - Creature 05_blood_skull
+DEBUG - Creature 09_blood_slime
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 06_tongue_imp
+DEBUG - Creature 04_acid_slime
 DEBUG - Creature 06_fanged_worm
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_blood_slime
+DEBUG - Creature 08_dark_spider
 DEBUG - Creature 0a_door
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
@@ -2599,54 +2949,54 @@ DEBUG - Creature 00_door
 DEBUG - Creature 01_auriel_c
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_king_hopper
+DEBUG - Creature 05_warden
+DEBUG - Creature 06_oblid
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_chirper
 DEBUG - Creature 09_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0e_dinogon
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_death_serpent
 DEBUG - Creature 0e_necron
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_master_knight
 DEBUG - Creature 01_gorthaur
 DEBUG - Creature 02_fat_mole_d
 DEBUG - Creature 03_door
 DEBUG - Creature 04_wildowess
 DEBUG - Creature 05_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 06_warpoor
 DEBUG - Creature 07_door
 DEBUG - Creature 08_fester
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_dark_spirits
+DEBUG - Creature 05_dark_spirits
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_unused_a
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_karasu
+DEBUG - Creature 02_bone_wolf
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 06_hell_warrior
+DEBUG - Creature 05_doriwi
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_armored_warrior
 DEBUG - Creature 09_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_wyvern
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_hollow_mage
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_unknown_e
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_dark_spider
+DEBUG - Creature 02_parasite
+DEBUG - Creature 00_acid_skull
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_blood_slime
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
 DEBUG - Creature 09_door
@@ -2656,68 +3006,68 @@ DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_tondrom
+DEBUG - Creature 0e_watcher_plant
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0c_barrel_snail
+DEBUG - Creature 01_earth_knight
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
 DEBUG - Creature 08_guardian_b
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_trickster
 DEBUG - Creature 0a_door
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_star_serpent
+DEBUG - Creature 00_sand_leech_a
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_berzerker
+DEBUG - Creature 02_mystic_tower
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_zygote
+DEBUG - Creature 05_horned_skull
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_berzerker
+DEBUG - Creature 0d_dweller
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_horned_skull
+DEBUG - Creature 0e_mystic_tower
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_abraxus
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_iron_crusher
 DEBUG - Creature 02_dead_abraxus
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_steel_servant
 DEBUG - Creature 05_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_cerberus
 DEBUG - Creature 07_door
 DEBUG - Creature 08_fat_mole_b
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_armored_jinn
 DEBUG - Creature 0a_door
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_fat_mole_c
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 06_fire_jinn
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_bone_demon
+DEBUG - Creature 04_jinn_lord
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_fire_jinn
+DEBUG - Creature 06_mystic_tower
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 06_mystic_tower
+DEBUG - Creature 04_berzerker
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_ebony_knight
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_berzerker
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_dark_fairy
 DEBUG - Creature 01_disguise
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
@@ -2734,17 +3084,17 @@ DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_duhrin
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_imp
+DEBUG - Creature 09_dwarf_warrior
 DEBUG - Creature 03_door
 DEBUG - Creature 04_auriel_b
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0c_ray_plant
+DEBUG - Creature 01_blue_flicker
 DEBUG - Creature 0c_hanging_dead
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 08_torg
+DEBUG - Creature 05_hobble_worm
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_door
 DEBUG - Creature 01_door
@@ -2762,73 +3112,73 @@ DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_cocoon_plant
+DEBUG - Creature 08_clay_servant
+DEBUG - Creature 06_elder
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_kiljoy
+DEBUG - Creature 00_watcher_plant
+DEBUG - Creature 0e_elder
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_watcher_plant
+DEBUG - Creature 09_cocoon_plant
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_minor_dwarf
+DEBUG - Creature 01_acid_pod
+DEBUG - Creature 02_elder
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_fat_mole_f
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_horned_slime
+DEBUG - Creature 0c_worm_face
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_slasher
+DEBUG - Creature 00_winged_worm
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_dementor
+DEBUG - Creature 05_blood_brain
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 02_blood_brain
+DEBUG - Creature 0d_hatchlin
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_acid_pod
+DEBUG - Creature 01_beak_plant
+DEBUG - Creature 02_sand_leech_b
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_black_onyx
+DEBUG - Creature 0a_barrel_snail
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0d_trickster
+DEBUG - Creature 05_earth_knight
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
 DEBUG - Creature 00_dybbuk
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_demon_bat
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
 DEBUG - Creature 04_dybbuk
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 09_sloth_bug
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_myconid
 DEBUG - Creature 09_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 05_dwarfling
 DEBUG - Creature 0b_door
 DEBUG - Creature 0c_dybbuk
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 04_cannon_snail
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0e_manna_python
 DEBUG - Creature 01_door
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0c_gaze_hopper
+DEBUG - Creature 05_water_knight
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
 DEBUG - Creature 08_door
@@ -2855,19 +3205,19 @@ DEBUG - Creature 0c_door
 DEBUG - Creature 0d_door
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_doriwi
+DEBUG - Creature 0a_bone_wolf
 DEBUG - Creature 02_door
 DEBUG - Creature 03_door
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 00_hell_hunter
 DEBUG - Creature 06_door
 DEBUG - Creature 07_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 0a_demons_eye
+DEBUG - Creature 08_apocrypha
+DEBUG - Creature 0a_wizcrypha
 DEBUG - Creature 0b_door
-DEBUG - Creature 01_acid_slime
-DEBUG - Creature 01_acid_slime
+DEBUG - Creature 01_stack_eyes
+DEBUG - Creature 04_tree_ogre
 DEBUG - Creature 0e_door
 DEBUG - Creature 0f_door
 
@@ -3166,78 +3516,74 @@ Applying factor 2 to item item_139_soul_pod_14_sp. Attributes str 0 spd 0 def 0 
 DEBUG ------------------ Randomization engine - forEachCreatureSpawn - applyDifficultyForEachSpawn
 
 
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at water_world_watery_labyrinth_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_watery_labyrinth_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_watery_labyrinth_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_phoenix_cave/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_phoenix_cave/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at illusion_world_bewilderment_domain/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at human_world_solitary_region/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_solitary_region/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at human_world_solitary_region/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at monster_world_false_eye_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at monster_world_false_eye_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at monster_world_false_eye_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10d_lamp) by primary consumable at human_world_hidden_region/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at illusion_world_worship_domain/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at human_world_forgotten_region/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at earth_world_false_pit_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at fire_world_burning_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_burning_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at fire_world_molten_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_molten_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at earth_world_poisonous_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at earth_world_rotting_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at water_world_impure_pool_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at water_world_impure_pool_area/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_quaking_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at earth_world_quaking_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at earth_world_stone_cavern/01_acid_slime
-DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10d_lamp) by primary consumable at earth_world_stone_cavern/01_acid_slime
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_watery_labyrinth_area/0a_horned_slime
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at water_world_watery_labyrinth_area/00_kabasaur
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at illusion_world_bewilderment_domain/0e_rotting_face
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at human_world_solitary_region/02_tongue_imp
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at monster_world_false_eye_area/08_hermit_crab
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10c_torch) by primary consumable at monster_world_false_eye_area/09_freak
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at human_world_forgotten_region/00_acid_skull
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_false_pit_cavern/0e_watcher_plant
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_burning_cavern/01_berzerker
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_122_evil_eye) by primary consumable at fire_world_molten_cavern/09_iron_crusher
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_molten_cavern/09_iron_crusher
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_poisonous_cavern/09_dwarf_warrior
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_120_divine_symbol) by primary consumable at earth_world_rotting_cavern/08_clay_servant
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at water_world_impure_pool_area/01_horned_slime
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at water_world_impure_pool_area/0c_worm_face
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at water_world_impure_pool_area/0c_worm_face
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at earth_world_stone_cavern/05_dwarfling
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_10d_lamp) by primary consumable at earth_world_stone_cavern/01_myconid
+DEBUG - Moderating difficulty - No free memory 16, halting drop replacement of secondary consumable (item_128_spirit_book) by primary consumable at earth_world_stone_cavern/05_dwarfling
 
 
 DEBUG ------------------ Randomization engine - forEachCollectable - applyDifficultyForEachCollectable
 
 
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at fire_world_phoenix_cave
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_phoenix_cave
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at water_world_watery_labyrinth_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_phoenix_cave
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at fire_world_phoenix_cave
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_10d_lamp) by a primary consumable (item_11c_healing_potion) of area death_world_dark_castle_layer
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at fire_world_phoenix_cave
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_10d_lamp) by a primary consumable (item_124_poison_vaccine) of area death_world_dark_castle_layer
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at death_world_undead_layer
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at death_world_undead_layer
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at death_world_undead_layer
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at illusion_world_bewilderment_domain
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at death_world_undead_layer
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_10e_sacred_feather) by a primary consumable (item_11c_healing_potion) of area earth_world_hostile_rock_cavern
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_123_fire_world_stone) by a primary consumable (item_11c_healing_potion) of area earth_world_hostile_rock_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at illusion_world_bewilderment_domain
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at illusion_world_bewilderment_domain
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at illusion_world_bewilderment_domain
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_128_spirit_book) by primary consumable at illusion_world_gloomy_domain
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_solitary_region
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_11e_anti_venom) of area human_world_cursed_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at monster_world_false_eye_area
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at illusion_world_gloomy_domain
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at human_world_solitary_region
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_126_bottle_of_light) by a primary consumable (item_11c_healing_potion) of area human_world_cursed_region
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_11f_anti_paralytic) by a primary consumable (item_11c_healing_potion) of area human_world_cursed_region
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_125_dust_of_rage) by primary consumable at monster_world_false_eye_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10d_lamp) by primary consumable at human_world_hidden_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at human_world_hidden_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at human_world_hidden_region
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_127_acid_vaccine) by a primary consumable (item_137_soul_pod_53_sp) of area monster_world_screeching_area
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at illusion_world_worship_domain
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at human_world_hidden_region
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_hidden_region
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_127_acid_vaccine) by a primary consumable (item_124_poison_vaccine) of area monster_world_screeching_area
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at human_world_forgotten_region
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_123_fire_world_stone) by primary consumable at human_world_forgotten_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_122_evil_eye) by primary consumable at human_world_forgotten_region
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10d_lamp) by primary consumable at earth_world_false_pit_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at fire_world_burning_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_127_acid_vaccine) by primary consumable at fire_world_burning_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_burning_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at human_world_forgotten_region
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_burning_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at fire_world_molten_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_120_divine_symbol) by primary consumable at fire_world_molten_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at fire_world_molten_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at fire_world_molten_cavern
-DEBUG - Moderating difficulty - by replacing secondary consumable (item_126_bottle_of_light) by a primary consumable (item_11e_anti_venom) of area illusion_world_dream_domain
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_122_evil_eye) by a primary consumable (item_11c_healing_potion) of area fire_world_ashen_cavern
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_126_bottle_of_light) by a primary consumable (item_137_soul_pod_53_sp) of area illusion_world_dream_domain
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_poisonous_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_poisonous_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10d_lamp) by primary consumable at earth_world_rotting_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_rotting_cavern
+DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10d_lamp) by primary consumable at earth_world_rotting_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at earth_world_rotting_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10d_lamp) by primary consumable at water_world_impure_pool_area
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10c_torch) by primary consumable at water_world_impure_pool_area
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_quaking_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_10e_sacred_feather) by primary consumable at earth_world_quaking_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_122_evil_eye) by primary consumable at earth_world_quaking_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_quaking_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_12e_dorados_ashes) by primary consumable at earth_world_stone_cavern
-DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_11f_anti_paralytic) by primary consumable at earth_world_stone_cavern
 DEBUG - Moderating difficulty - No free memory 16, halting collectable replacement of secondary consumable (item_126_bottle_of_light) by primary consumable at earth_world_stone_cavern
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_127_acid_vaccine) by a primary consumable (item_11e_anti_venom) of area water_world_sunken_river_area
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_10d_lamp) by a primary consumable (item_124_poison_vaccine) of area water_world_sunken_river_area
+DEBUG - Moderating difficulty - by replacing secondary consumable (item_127_acid_vaccine) by a primary consumable (item_11c_healing_potion) of area water_world_sunken_river_area
 DEBUG - Moderating difficulty - by replacing secondary consumable (item_122_evil_eye) by a primary consumable (item_11c_healing_potion) of area death_world_lingering_curse_layer
