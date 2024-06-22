@@ -1235,6 +1235,14 @@
       this.zeroes7 = new UInt8(this.bin, this.offset_in_file + 0x17);
 
       // For exits
+      this.exitsUnknown07 = new Int8(this.bin, this.offset_in_file + 0x07);
+      this.exitsUnknown08 = new Int8(this.bin, this.offset_in_file + 0x08);
+      this.exitsUnknown09 = new Int8(this.bin, this.offset_in_file + 0x09);
+      this.exitsUnknown0b = new Int8(this.bin, this.offset_in_file + 0x0b);
+      this.exitsUnknown0c = new Int8(this.bin, this.offset_in_file + 0x0c);
+      this.exitsUnknown0d = new Int8(this.bin, this.offset_in_file + 0x0d);
+      this.exitsUnknown0f = new Int8(this.bin, this.offset_in_file + 0x0f);
+
       this.destinationXShift = new Int8(this.bin, this.offset_in_file + 0x10);
       this.destinationYShift = new Int8(this.bin, this.offset_in_file + 0x11);
       this.destinationZShift = new Int8(this.bin, this.offset_in_file + 0x12);
@@ -1428,6 +1436,14 @@
       this.destinationZShift.set(source.destinationZShift.get());
       this.destinationXFineShift.set(source.destinationXFineShift.get());
       this.destinationZFineShift.set(source.destinationZFineShift.get());
+
+      this.exitsUnknown07.set(source.exitsUnknown07.get());
+      this.exitsUnknown08.set(source.exitsUnknown08.get());
+      this.exitsUnknown09.set(source.exitsUnknown09.get());
+      this.exitsUnknown0b.set(source.exitsUnknown0b.get());
+      this.exitsUnknown0c.set(source.exitsUnknown0c.get());
+      this.exitsUnknown0d.set(source.exitsUnknown0d.get());
+      this.exitsUnknown0f.set(source.exitsUnknown0f.get());
 
       var origin = this.getExit();
       //console.log("Rotation setting, origin " + JSON.stringify(origin));
