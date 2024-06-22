@@ -393,6 +393,41 @@ global.attribute = function(value, type) {
   return value * 0x10 + type;
 }
 
+global.logo_files = [
+    { index: 1, name: "shadow_tower_part1" },
+    { index: 41, name: "human_world_solitary_region" },
+    { index: 51, name: "human_world_hidden_region" },
+    { index: 61, name: "human_world_forgotten_region" },
+    { index: 11, name: "human_world_cursed_region" },
+    { index: 111, name: "earth_world_rotting_cavern" },
+    { index: 271, name: "earth_world_poisonous_cavern" },
+    { index: 121, name: "earth_world_quaking_cavern" },
+    { index: 151, name: "earth_world_false_pit_cavern" },
+    { index: 281, name: "earth_world_stone_cavern" },
+    { index: 331, name: "earth_world_hostile_rock_cavern" },
+    { index: 101, name: "water_world_impure_pool_area" },
+    { index: 211, name: "water_world_sunken_river_area" },
+    { index: 321, name: "water_world_watery_labyrinth_area" },
+    { index: 371, name: "water_world_white_rain_area" },
+    { index: 31, name: "fire_world_phoenix_cave" },
+    { index: 201, name: "fire_world_burning_cavern" },
+    { index: 241, name: "fire_world_molten_cavern" },
+    { index: 181, name: "fire_world_ashen_cavern" },
+    { index: 21, name: "monster_world_false_eye_area" },
+    { index: 171, name: "monster_world_screeching_area" },
+    { index: 81, name: "illusion_world_bewilderment_domain" },
+    { index: 91, name: "illusion_world_gloomy_domain" },
+    { index: 381, name: "illusion_world_dream_domain" },
+    { index: 131, name: "illusion_world_worship_domain" },
+    { index: 251, name: "death_world_dark_castle_layer" },
+    { index: 141, name: "death_world_lingering_curse_layer" },
+    { index: 261, name: "death_world_undead_layer" },
+    { index: 231, name: "death_world_gate_of_the_dead" },
+//    { index: 301, name: "void" },
+    { index: 401, name: "shadow_tower_part2" },
+    { index: 411, name: "shadow_tower_part3" }
+  ];
+  
 global.readableName={
     "human_world_solitary_region":        "Human World\nSolitary Region",
     "human_world_hidden_region":          "Human World\nHidden Region",

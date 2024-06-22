@@ -72,14 +72,14 @@ class MapShuffle {
     		});
     	});
 
-    	data_model.areas.sort((area1, area2) => {
+    	/*data_model.areas.sort((area1, area2) => {
     		var s1 = area1.score || 0;
     		var s2 = area2.score || 0;
     		if (!s1 && !s2) {
     			return area1.name > area2.name? 1 : -1;
     		}
     		return s1 - s2;
-    	});
+    	});*/
 
     	//shadow_tower_part1.objects[0].set(poisonAreaEntry);
     }
