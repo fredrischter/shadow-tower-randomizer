@@ -1237,10 +1237,11 @@
       // For exits
       this.exitsUnknown07 = new Int8(this.bin, this.offset_in_file + 0x07);
       this.exitsUnknown08 = new Int8(this.bin, this.offset_in_file + 0x08);
-      this.exitsUnknown09 = new Int8(this.bin, this.offset_in_file + 0x09);
-      this.exitsUnknown0b = new Int8(this.bin, this.offset_in_file + 0x0b);
+      this.exitDisplacementX = new Int8(this.bin, this.offset_in_file + 0x09);
+      this.exitDisplacementY = new Int8(this.bin, this.offset_in_file + 0x0b);
       this.exitsUnknown0c = new Int8(this.bin, this.offset_in_file + 0x0c);
-      this.exitsUnknown0d = new Int8(this.bin, this.offset_in_file + 0x0d);
+      this.exitDisplacementZ = new Int8(this.bin, this.offset_in_file + 0x0d);
+      this.exitsUnknown0e = new Int8(this.bin, this.offset_in_file + 0x0e);
       this.exitsUnknown0f = new Int8(this.bin, this.offset_in_file + 0x0f);
 
       this.destinationXShift = new Int8(this.bin, this.offset_in_file + 0x10);
@@ -1428,7 +1429,7 @@
     }
 
     setExit(source, map) {
-      console.log("Setting exit " + this.getExitInfo());
+      console.log("Setting exit " + this.getExitInfo() + " " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4));
 
       this.destinationMapIndex.set(source.destinationMapIndex.get());
       this.destinationXShift.set(source.destinationXShift.get());
@@ -1437,13 +1438,11 @@
       this.destinationXFineShift.set(source.destinationXFineShift.get());
       this.destinationZFineShift.set(source.destinationZFineShift.get());
 
-      this.exitsUnknown07.set(source.exitsUnknown07.get());
-      this.exitsUnknown08.set(source.exitsUnknown08.get());
-      this.exitsUnknown09.set(source.exitsUnknown09.get());
-      this.exitsUnknown0b.set(source.exitsUnknown0b.get());
-      this.exitsUnknown0c.set(source.exitsUnknown0c.get());
-      this.exitsUnknown0d.set(source.exitsUnknown0d.get());
-      this.exitsUnknown0f.set(source.exitsUnknown0f.get());
+      //this.exitsUnknown07.set(source.exitsUnknown07.get());
+      //this.exitsUnknown08.set(source.exitsUnknown08.get());
+      //this.exitsUnknown0c.set(source.exitsUnknown0c.get());
+      //this.exitsUnknown0e.set(source.exitsUnknown0e.get());
+      //this.exitsUnknown0f.set(source.exitsUnknown0f.get());
 
       var origin = this.getExit();
       //console.log("Rotation setting, origin " + JSON.stringify(origin));
@@ -1451,6 +1450,12 @@
       //console.log("Rotation setting, wayBack " + JSON.stringify(dest));
       var rotationToSet = - origin.rotation + (dest.type=="totem" ? 0 : -2) + dest.rotation;
       rotationToSet = (rotationToSet + 40) % 4;
+
+      if (dest.type!="totem") {
+        this.exitDisplacementX.set(source.exitDisplacementX.get());
+        this.exitDisplacementY.set(source.exitDisplacementY.get());
+        this.exitDisplacementZ.set(source.exitDisplacementZ.get());
+      }
 
       //console.log("Rotation to set " + rotationToSet);
       this.destinationRotation.set(rotationToSet);
