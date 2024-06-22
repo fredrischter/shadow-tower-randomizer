@@ -1369,10 +1369,19 @@
         return "";
       }
 
-      return this.getExitName().padEnd(13) + " -> " + this.getExit().dest.padEnd(34) + " pos(" + (""+this.destinationXShift.get()).padStart(3) + ("," + this.destinationYShift.get()).padStart(4) + ("," + this.destinationXShift.get()).padStart(4) + ")," +
+      var areaName = "-";
+      for (i in logo_files) {
+        if (this.destinationMapIndex.get() == (logo_files[i].index-1)/10) {
+          areaName = logo_files[i].name;
+        }
+      }
+
+      return this.getExitName().padEnd(13) + " -> " +  areaName.padEnd(34) + 
+        " pos(" + (""+this.destinationXShift.get()).padStart(3) + ("," + this.destinationYShift.get()).padStart(4) + ("," + this.destinationXShift.get()).padStart(4) + ")"; /* +
         "fineXZY(" + (""+this.destinationXFineShift.get()).padStart(3) + ("," + this.destinationZFineShift.get()).padStart(4) + ("," + this.destinationYFineShift.get()).padStart(4) + ")," +
         "destMapIndex("+(""+this.destinationMapIndex.get()).padStart(3)+")," +
-        "rot("+(""+this.destinationRotation.get()).padStart(3)+")";
+        "rot("+(""+this.destinationRotation.get()).padStart(3)+"),";
+        "displacementXZY(" + (""+this.exitDisplacementX.get()).padStart(3) + ("," + this.exitDisplacementZ.get()).padStart(4) + ("," + this.exitDisplacementY.get()).padStart(4) + ")"*/;
     }
 
     draw(mapDraw, mapSummary) {
@@ -1429,7 +1438,7 @@
     }
 
     setExit(source, map) {
-      console.log("Setting exit " + this.getExitInfo() + " " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4));
+      console.log("Setting exit " + this.area.name.padStart(34) + "/" + this.getExitInfo());// + " " + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + OBJECTS_SIZE), 4));
 
       this.destinationMapIndex.set(source.destinationMapIndex.get());
       this.destinationXShift.set(source.destinationXShift.get());
@@ -1462,7 +1471,7 @@
 
       this.destinationYFineShift.set(source.destinationYFineShift.get());
                          
-      console.log("      result " + this.getExitInfo());
+      console.log("      result " + this.area.name.padStart(34) + "/" + this.getExitInfo());
       //binCopy(source.bin, source.offset_in_file+16, this.bin, this.offset_in_file+16, OBJECTS_SIZE-16);
     }
 

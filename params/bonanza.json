@@ -2,7 +2,7 @@
 	"label": "bonanza",
 	"preset": "bonanza",
 	"difficulty": "easy",
-	"randomizeMap": true,
+	"randomizeMap": false,
 	"randomizeCreatures": true,
 	"randomizeCollectablesAndDrops": true,
 	"removeDirectiveRemovalOfHPMPRecovery": true,
