@@ -134,6 +134,11 @@ function randomize(paramsFile, stDir) {
     var map = new MapShuffle(shuffle.map);
     map.applyMap(data_model);
 
+    //Innofensive shift to demonstrate how it works
+    //shadow_tower_part1.objects[0].destinationYFineShift.set(-5);
+    //shadow_tower_part1.objects[0].destinationXFineShift.set(-5);
+    //shadow_tower_part1.objects[0].destinationZFineShift.set(-5);
+
     var walkDescription = "Shadow Tower walk";
     var currentArea = "shadow_tower_part1a";
     shuffle.walk.forEach(walk => {

@@ -1238,8 +1238,8 @@
       this.destinationXShift = new Int8(this.bin, this.offset_in_file + 0x10);
       this.destinationYShift = new Int8(this.bin, this.offset_in_file + 0x11);
       this.destinationZShift = new Int8(this.bin, this.offset_in_file + 0x12);
-      this.destinationUnknown1 = new Int8(this.bin, this.offset_in_file + 0x13);
-      this.destinationUnknown2 = new Int8(this.bin, this.offset_in_file + 0x14);
+      this.destinationXFineShift = new Int8(this.bin, this.offset_in_file + 0x13);
+      this.destinationZFineShift = new Int8(this.bin, this.offset_in_file + 0x14);
       this.destinationMapIndex = new UInt8(this.bin, this.offset_in_file + 0x15);
       this.destinationRotation = new Int8(this.bin, this.offset_in_file + 0x16);
       if (this.destinationRotation.get() == -1) {
@@ -1361,10 +1361,9 @@
       }
 
       return this.getExitName().padEnd(13) + " -> " + this.getExit().dest.padEnd(34) + " pos(" + (""+this.destinationXShift.get()).padStart(3) + ("," + this.destinationYShift.get()).padStart(4) + ("," + this.destinationXShift.get()).padStart(4) + ")," +
-        "unknown(" + (""+this.destinationUnknown1.get()).padStart(3) + ("," + this.destinationUnknown2.get()).padStart(4) + ")," +
+        "fineXZY(" + (""+this.destinationXFineShift.get()).padStart(3) + ("," + this.destinationZFineShift.get()).padStart(4) + ("," + this.destinationYFineShift.get()).padStart(4) + ")," +
         "destMapIndex("+(""+this.destinationMapIndex.get()).padStart(3)+")," +
-        "rot("+(""+this.destinationRotation.get()).padStart(3)+")," +
-        "fineY("+(""+this.destinationYFineShift.get()).padStart(3)+")";
+        "rot("+(""+this.destinationRotation.get()).padStart(3)+")";
     }
 
     draw(mapDraw, mapSummary) {
@@ -1427,8 +1426,8 @@
       this.destinationXShift.set(source.destinationXShift.get());
       this.destinationYShift.set(source.destinationYShift.get());
       this.destinationZShift.set(source.destinationZShift.get());
-      this.destinationUnknown1.set(source.destinationUnknown1.get());
-      this.destinationUnknown2.set(source.destinationUnknown2.get());
+      this.destinationXFineShift.set(source.destinationXFineShift.get());
+      this.destinationZFineShift.set(source.destinationZFineShift.get());
 
       var origin = this.getExit();
       //console.log("Rotation setting, origin " + JSON.stringify(origin));
