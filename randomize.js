@@ -340,7 +340,11 @@ function randomize(paramsFile, stDir) {
 
     function presetDirectivesforEachCreatureSpawn(spawn, area, index) {
         if (!params.removeDirectiveRemovalOfRandomness) {
-            if (spawn.chance.get() != 100) {
+
+            if (nonRemovable.filter(name => spawn.name().includes(name)).length) {
+                return;
+            }
+            if (spawn.chance.get() != 100 && spawn.chance.get() != 0) {
                 console.log("Setting spawn chance to 100%, creature " + spawn.name() + " where it was " + spawn.chance.get());
                 spawn.chance.set(100);
             }
@@ -507,13 +511,18 @@ function randomize(paramsFile, stDir) {
         }
 
         console.log("Applying difficulty by removing drop " + thisItem.name + " of spawn " + spawn.name());
+        */
 
+    }
+
+    function removeEachSpawn(spawn, area, index) {
+        spawn.chance.set(0);
         spawn.drop1.null();
         spawn.drop1Chance.set(0);
         spawn.drop2.null();
         spawn.drop2Chance.set(0);
         spawn.drop3.null();
-        spawn.drop3Chance.set(0);*/
+        spawn.drop3Chance.set(0);
     }
 
     var collectableRemovalLoop=0;
@@ -545,8 +554,11 @@ function randomize(paramsFile, stDir) {
         }
 
         console.log("Applying difficulty by removing collectable " + itemData[collectable.type.get()].name + " of area " + area.name);
+        */  
+    }
 
-        collectable.blank();*/
+    function removeEachCollectable(collectable, area) {
+        collectable.blank();
     }
 
     // Guarantee poison vaccine before poisonous cavern
@@ -1053,6 +1065,9 @@ function randomize(paramsFile, stDir) {
         "dybbuk", "lizard_servant", "mole", "auriel", "akryal", "abraxus", "panak", "king_edward", "pulsating_heart", "duhrin",
         "fester", "wildowess", "gorthaur",
         "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
+        
+        // To avoid stone cavern models and freeze bug
+        ,"hobble_worm","barrel_snail","crying_root","demon_bat","clay_servant"
     ];
 
     function keepOnlyBosses(creature, area, index) {
@@ -1290,6 +1305,9 @@ function randomize(paramsFile, stDir) {
             items[item_0_short_sword].weight.set(0xff);
             items[item_0_short_sword].max_dura.set(0xff);
             items[item_0_short_sword].dura.set(0xff);
+
+            //forEachCreatureSpawn(removeEachSpawn);
+            //forEachCollectable(removeEachCollectable);
         }
 
         // Randomize creatures
@@ -1333,7 +1351,6 @@ function randomize(paramsFile, stDir) {
             forEachCreatureSpawn(presetDirectivesforEachCreatureSpawn);
             forEachItem(presetDirectivesforEachItem);
         }
-
     }
 
     var allChangeableCollectablesInDefaultGame = [];
