@@ -1394,12 +1394,14 @@ function randomize(paramsFile, stDir) {
 
     operate();
 
+    // As can be found in spoilers map.js this is exit in poisonous cavern that leads to stone cavern, I'm setting it directly to the first door to make easier way there. 
+    // shadow_tower_part1.objects[0].setExit(earth_world_poisonous_cavern.objects[13], shuffle.map);
+
     human_world_forgotten_region.objects[4].id.set(0x77); // tortured guy
     human_world_forgotten_region.objects[3].id.set(0x76); // hanging guy
 
     human_world_hidden_region.objects[0].id.set(0xff);
     human_world_hidden_region.objects[1].id.set(0xff);
-    //human_world_hidden_region.objects[2].id.set(0x24); // body leftover
     human_world_hidden_region.objects[3].id.set(0xff);
     human_world_hidden_region.objects[4].id.set(0xff); // removing torture bed
     human_world_hidden_region.objects[5].id.set(0xff); // removing torture bed
