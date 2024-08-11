@@ -543,6 +543,7 @@
       this.tiles_index = logo_index+1; // 42
   // 2 - Maybe_RTIM_texture_for_tile_set > actually the 7th file
   // 3 - MIPS_machine_code_map_script
+      this.mips_index = logo_index+2;
       this.map_index = logo_index+3; // 44
   // 4 - Maybe_Customized_TMD_file_collisions
   // 5 - Maybe_Customized_TMD_file_tiles
@@ -572,6 +573,7 @@
   setup(FDAT, params) {
     this.tiles_file = FDAT.files[this.tiles_index];
     this.map_file = FDAT.files[this.map_index];
+    this.mips_file = FDAT.files[this.mips_index];
     this.texture_file = FDAT.files[this.texture_index];
 
     this.hsvRandomShift = this.texture_file.processRandomizeAndWriteRTIM(

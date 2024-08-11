@@ -1397,6 +1397,23 @@ function randomize(paramsFile, stDir) {
     // As can be found in spoilers map.js this is exit in poisonous cavern that leads to stone cavern, I'm setting it directly to the first door to make easier way there. 
     // shadow_tower_part1.objects[0].setExit(earth_world_poisonous_cavern.objects[13], shuffle.map);
 
+    function setStub(area, address) {
+        let changes = {};
+        changes[(address+0).toString(16)] = "98";
+        changes[(address+1).toString(16)] = "d4";
+        changes[(address+2).toString(16)] = "1e";
+        changes[(address+3).toString(16)] = "80";
+        changeSet.push({
+            "file": area.mips_file.fileName,
+            "bytes": changes
+        });
+    }
+
+
+    for (var address = 0x08; address<=0x70; address+=0x04) {
+        setStub(earth_world_stone_cavern, address);
+    }
+
     human_world_forgotten_region.objects[4].id.set(0x77); // tortured guy
     human_world_forgotten_region.objects[3].id.set(0x76); // hanging guy
 
