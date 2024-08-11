@@ -47,9 +47,29 @@ function walk(areas, skipWayBackVerification) {
 
 	var walkPath = [];
 	var knownPaths = {};//["origin"-"destination": [{"dest":"hidden", "id":"2"}]]
+	var walkedAreasSet = new Set();
 
 	var mapsWithKnownUndiscoveredWays = []; // {name:"forgotten", exits: [{id:"1", dest:"hidden"},{id:"2", dest:"cursed"}]
 	var desiredDestination = null;
+
+	function strongEnoughForArea(areaName) {
+		//console.error("getWalkedAreas - " + walkedAreasSet + " " + areaName);
+		//process.exit(1);
+		if (areaName.includes("earth_world_poisonous_cavern")) {
+			return walkedAreasSet.size>3;
+		}
+		if (areaName.includes("earth_world_stone_cavern")) {
+			return walkedAreasSet.size>5;
+		}
+		if (areaName.includes("water_world")) {
+			return walkedAreasSet.size>10;
+		}
+		if (areaName.includes("illusion_world_worship_domain")) {
+			return walkedAreasSet.size>15;
+		}
+		return true;
+	}
+
 
 	function getKnownUndiscoveredWaysByName(name) {
 		for (var i in mapsWithKnownUndiscoveredWays) {
@@ -70,6 +90,7 @@ function walk(areas, skipWayBackVerification) {
 	}
 
 	function explain(text) {
+		//console.error(text);
 		walkDecisionDetail.push(text);
 	}
 
@@ -79,6 +100,10 @@ function walk(areas, skipWayBackVerification) {
 		// Removing exits whose destination there is an exit
 		explain(" >> All area " + area.name + " exits not being entrance: " + JSON.stringify(exits));
 		exits = exits.filter(exit => {
+
+			//if (!areasMap[exit.dest][exit.wayBackId]) {
+			//	console.error(" >> Verifying " + exit.dest + " " + exit.wayBackId + " " + JSON.stringify(areasMap[exit.dest]));
+			//}
 			var isOk = !exit.wayBackId
 			 	|| !areasMap[exit.dest][exit.wayBackId].direction;
 
@@ -90,9 +115,15 @@ function walk(areas, skipWayBackVerification) {
 
 			if (!isntExit) {
 				explain(" >> Removed exit whose destination is a exit. Way back to id at " + areasMap[exit.dest] + " it is a exit: " + JSON.stringify(areasMap[exit.dest][exit.wayBackId]));
+				return false;
 			}
 
-			return isntExit;
+			if (!strongEnoughForArea(exit.dest)) {
+				explain(" >> Removed exit since player isn't strong enough to go now: " + exit.dest);
+				return false;
+			}
+
+			return true;
 		});
 
 		return exits;
@@ -304,6 +335,9 @@ function walk(areas, skipWayBackVerification) {
 	while(steps ++ < 200) {
 
 		explain("Location " + currentArea);
+		if (!currentArea.includes("tower")) {
+			walkedAreasSet.add(currentArea);
+		}
 		console.error(new Date().toISOString() + "   Step " + steps + " - Location " + currentArea);
 
 		if (currentArea == "earth_world_poisonous_cavern" && steps < 5) {
@@ -339,7 +373,7 @@ function walk(areas, skipWayBackVerification) {
 		console.error(new Date().toISOString() + "    2");
 		//2-if (!desiredDestination) and there is some way in mapsWithKnownUndiscoveredWays for this map, choosenWay=first unknown door In the list, prefer bidirectional or go exitOnly. If there is no way chooseDestination=true;
 		if (!desiredDestination) {
-			var currentAreaExits = getAreaExits(getAreaByName((currentArea)));
+			var currentAreaExits = getAreaExits(getAreaByName(currentArea));
 
 			if (currentAreaExits.length == 1) {
 
@@ -351,7 +385,9 @@ function walk(areas, skipWayBackVerification) {
 				var knownUndiscoveredWays = getKnownUndiscoveredWaysByName(currentArea);
 				if (knownUndiscoveredWays) {
 	
-					explain(" >> All exits to choose from. Trying to the first: " + JSON.stringify(knownUndiscoveredWays.exits));
+					explain(" >> All exits to choose from. Trying to the first possible: " + JSON.stringify(knownUndiscoveredWays.exits));
+					//knownUndiscoveredWays.exits = knownUndiscoveredWays.exits.filter(exit => currentAreaExits.find(available => available.dest = exit.dest));
+					explain(" >>                     All exits to choose from, filtered: " + JSON.stringify(knownUndiscoveredWays.exits));
 					choosenWay = knownUndiscoveredWays.exits[0];
 					if (choosenWay && choosenWay.dest == "water_world_sunken_river_area") {
 						explain(" >> Choosen to go to water_world_sunken_river_area. " + JSON.stringify(choosenWay));
