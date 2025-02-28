@@ -1397,6 +1397,7 @@ function randomize(paramsFile, stDir) {
     // As can be found in spoilers map.js this is exit in poisonous cavern that leads to stone cavern, I'm setting it directly to the first door to make easier way there. 
     // shadow_tower_part1.objects[0].setExit(earth_world_poisonous_cavern.objects[13], shuffle.map);
 
+
     function setStub(area, address) {
         let changes = {};
         changes[(address+0).toString(16)] = "98";
@@ -1408,11 +1409,56 @@ function randomize(paramsFile, stDir) {
             "bytes": changes
         });
     }
-
-
-    for (var address = 0x08; address<=0x70; address+=0x04) {
-        setStub(earth_world_stone_cavern, address);
+/*
+    function findPosition(subject, query, startFrom) {
+        var foundPositions = [];
+        for (var i = startFrom; i< subject.length-query.length; i++) {
+            var found = true;
+            for (var q = 0; q< query.length; q++) {
+                if (subject[i+q] != query[q]) {
+                    found = false;
+                    break;
+                }
+            }
+            if (found) {
+                foundPositions.push(i);
+            }
+        }
+        return foundPositions;
     }
+
+    var endOfCommonCode = [0x20, 0x00, 0xbd, 0x27, 0x08, 0x00, 0xe0, 0x03, 0x00, 0x00, 0x00, 0x00];
+    var noCode = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00];
+    var startCustomCodeSearch=0x1eb0+1;
+
+    /*for (var address = 0x08; address<=0x70; address+=0x04) {
+        setStub(earth_world_stone_cavern, address);
+        setStub(shadow_tower_part1, address);
+        setStub(human_world_solitary_region, address);
+    }*/
+
+    /*for (var address = 0x1d0; address<=0x248; address+=0x04) {
+        setStub(earth_world_stone_cavern, address);
+        setStub(shadow_tower_part1, address);
+        setStub(human_world_solitary_region, address);
+    }*/
+/*
+    function findCustomCode(label, area) {
+        var codeStart = (findPosition(area.mips_file.bin, endOfCommonCode, startCustomCodeSearch).pop() + endOfCommonCode.length).toString(16);
+        var codeEnd = (findPosition(area.mips_file.bin, noCode, startCustomCodeSearch)[0]).toString(16);
+        console.log("start " + label + " " + codeStart + "-" + codeEnd);
+        
+    }
+*/
+    /*for (var address = 0x1f48; address<=0x2044;address+=0x04) {
+        setStub(earth_world_stone_cavern, address);
+        setStub(shadow_tower_part1, address);
+        setStub(human_world_solitary_region, address);
+    }*/
+/*    findCustomCode("earth_world_stone_cavern", earth_world_stone_cavern);
+    findCustomCode("shadow_tower_part1", shadow_tower_part1);
+    findCustomCode("human_world_solitary_region", human_world_solitary_region);
+*/
 
     human_world_forgotten_region.objects[4].id.set(0x77); // tortured guy
     human_world_forgotten_region.objects[3].id.set(0x76); // hanging guy
