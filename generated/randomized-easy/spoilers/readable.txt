@@ -278,8 +278,6 @@ Setting drop chance to 100%, creature 04_dragon_turtle drop item_a8_harden_large
 Setting drop chance to 100%, creature 04_dragon_turtle drop item_a3_small_shield where it was 80
 Setting drop chance to 100%, creature 04_dragon_turtle drop item_6b_frosty_plate_mail where it was 20
 Setting spawn chance to 100%, creature 04_dragon_turtle where it was 25
-Setting drop chance to 100%, creature 05_magi_magus drop item_d_shadow_wolf where it was 20
-Setting drop chance to 100%, creature 05_magi_magus drop item_24_dark_sword where it was 20
 Setting drop chance to 100%, creature 00_hell_hunter drop item_43_warrior_bow where it was 30
 Setting spawn chance to 100%, creature 02_karasu where it was 50
 Setting drop chance to 100%, creature 02_karasu drop item_107_star_amulet where it was 20
@@ -322,9 +320,6 @@ Setting spawn chance to 100%, creature 00_black_onyx where it was 50
 Setting drop chance to 100%, creature 00_black_onyx drop item_11e_anti_venom where it was 50
 Setting spawn chance to 100%, creature 00_black_onyx where it was 25
 Setting spawn chance to 100%, creature 00_black_onyx where it was 25
-Setting drop chance to 100%, creature 04_dread_knight drop item_8_silent_sword where it was 0
-Setting drop chance to 100%, creature 04_dread_knight drop item_2c_deadly_great_sword where it was 0
-Setting drop chance to 100%, creature 04_dread_knight drop item_27_great_sword where it was 0
 Setting drop chance to 100%, creature 02_gordoral drop item_107_star_amulet where it was 10
 Setting drop chance to 100%, creature 04_demon_warrior drop item_eb_bracelet_of_curing where it was 30
 Setting drop chance to 100%, creature 05_gargaral drop item_101_amulet_of_resist where it was 30
@@ -372,10 +367,7 @@ Setting drop chance to 100%, creature 00_red_puppet drop item_103_sorcerer_amule
 Setting drop chance to 100%, creature 01_dark_spirits drop item_86_gauntlet_of_resist where it was 30
 Setting drop chance to 100%, creature 04_dark_spirits drop item_f4_bracelet_of_composure where it was 50
 Setting drop chance to 100%, creature 04_dark_spirits drop item_f5_deadly_bracelet where it was 30
-Setting spawn chance to 100%, creature 08_ring_demon where it was 0
 Setting drop chance to 100%, creature 08_ring_demon drop item_12e_dorados_ashes where it was 50
-Setting spawn chance to 100%, creature 08_ring_demon where it was 0
-Setting spawn chance to 100%, creature 0d_deha where it was 0
 Setting drop chance to 100%, creature 0d_deha drop item_56_great_helm where it was 60
 Setting drop chance to 100%, creature 01_acid_slime drop item_47_cap where it was 80
 Setting spawn chance to 100%, creature 02_blood_slime where it was 25
@@ -386,8 +378,6 @@ Setting drop chance to 100%, creature 00_dark_spider drop item_1_short_sword whe
 Setting spawn chance to 100%, creature 01_acid_slime where it was 50
 Setting spawn chance to 100%, creature 00_dark_spider where it was 25
 Setting spawn chance to 100%, creature 00_dark_spider where it was 25
-Setting drop chance to 100%, creature 09_demon_bat drop item_2_deadly_short_sword where it was 15
-Setting drop chance to 100%, creature 09_demon_bat drop item_3_long_sword where it was 30
 Setting drop chance to 100%, creature 0a_skeleton drop item_a3_small_shield where it was 50
 Setting spawn chance to 100%, creature 08_dark_spider where it was 25
 Setting drop chance to 100%, creature 08_dark_spider drop item_5c_quilted_armor where it was 50
@@ -410,8 +400,6 @@ Setting drop chance to 100%, creature 08_dark_spider drop item_48_crown where it
 Setting drop chance to 100%, creature 08_dark_spider drop item_47_cap where it was 80
 Setting spawn chance to 100%, creature 09_shadow_spider where it was 25
 Setting spawn chance to 100%, creature 09_shadow_spider where it was 25
-Setting drop chance to 100%, creature 0a_guardian_a drop item_36_swift_morning_star where it was 30
-Setting drop chance to 100%, creature 0a_guardian_a drop item_34_shining_mace where it was 30
 Setting spawn chance to 100%, creature 01_chirper where it was 50
 Setting spawn chance to 100%, creature 09_freak where it was 30
 Setting drop chance to 100%, creature 09_freak drop item_40_deadly_battle_axe where it was 50
@@ -483,9 +471,6 @@ Setting spawn chance to 100%, creature 09_cross_breed where it was 50
 Setting drop chance to 100%, creature 09_cross_breed drop item_103_sorcerer_amulet where it was 20
 Setting spawn chance to 100%, creature 09_cross_breed where it was 50
 Setting drop chance to 100%, creature 09_cross_breed drop item_104_priest_amulet where it was 20
-Setting drop chance to 100%, creature 04_wildowess drop item_da_sorcerer_ring_of_poison where it was 40
-Setting drop chance to 100%, creature 01_gorthaur drop item_e0_ring_of_ice where it was 50
-Setting drop chance to 100%, creature 08_fester drop item_f7_priest_bracelet where it was 80
 Setting drop chance to 100%, creature 01_doriwi drop item_df_ring_of_desire where it was 20
 Setting drop chance to 100%, creature 01_doriwi drop item_e0_ring_of_ice where it was 20
 Setting drop chance to 100%, creature 06_hell_warrior drop item_72_holy_plate_mail where it was 20
@@ -502,18 +487,12 @@ Setting drop chance to 100%, creature 0d_blood_bone drop item_13_broad_sword whe
 Setting drop chance to 100%, creature 0d_blood_bone drop item_31_blood_sword where it was 30
 Setting drop chance to 100%, creature 0d_blood_bone drop item_29_great_sword where it was 60
 Setting drop chance to 100%, creature 0d_blood_bone drop item_2a_swift_great_sword where it was 50
-Setting drop chance to 100%, creature 0c_hollow_mage drop item_109_endless_amulet where it was 80
-Setting spawn chance to 100%, creature 02_skeleton where it was 0
 Setting drop chance to 100%, creature 02_skeleton drop item_92_steel_boots_of_resist where it was 20
-Setting spawn chance to 100%, creature 02_skeleton where it was 0
 Setting drop chance to 100%, creature 02_skeleton drop item_82_caustic_hand_guard where it was 30
 Setting drop chance to 100%, creature 02_skeleton drop item_81_fiery_gauntlet where it was 50
-Setting spawn chance to 100%, creature 02_skeleton where it was 0
 Setting drop chance to 100%, creature 02_skeleton drop item_9_rapier where it was 50
-Setting spawn chance to 100%, creature 02_skeleton where it was 0
 Setting drop chance to 100%, creature 02_skeleton drop item_49_crown_of_resist where it was 40
 Setting drop chance to 100%, creature 02_skeleton drop item_48_crown where it was 60
-Setting spawn chance to 100%, creature 02_skeleton where it was 0
 Setting drop chance to 100%, creature 00_acid_skull drop item_8e_leather_boots where it was 50
 Setting drop chance to 100%, creature 01_blood_skull drop item_11f_anti_paralytic where it was 20
 Setting spawn chance to 100%, creature 01_blood_skull where it was 50
@@ -538,8 +517,6 @@ Setting drop chance to 100%, creature 05_cocoon_plant drop item_12e_dorados_ashe
 Setting drop chance to 100%, creature 04_cannon_snail drop item_81_fiery_gauntlet where it was 60
 Setting drop chance to 100%, creature 04_cannon_snail drop item_95_caustic_steel_boots where it was 40
 Setting drop chance to 100%, creature 04_cannon_snail drop item_91_steel_boots where it was 40
-Setting spawn chance to 100%, creature 08_guardian_b where it was 75
-Setting spawn chance to 100%, creature 08_guardian_b where it was 75
 Setting drop chance to 100%, creature 09_sloth_bug drop item_51_full_helm where it was 30
 Setting drop chance to 100%, creature 09_sloth_bug drop item_64_plate_mail where it was 30
 Setting spawn chance to 100%, creature 09_sloth_bug where it was 50
@@ -617,7 +594,6 @@ Setting drop chance to 100%, creature 00_dark_spirits drop item_f4_bracelet_of_c
 Setting drop chance to 100%, creature 00_dark_spirits drop item_57_harden_great_helm where it was 10
 Setting drop chance to 100%, creature 00_dark_spirits drop item_56_great_helm where it was 30
 Setting drop chance to 100%, creature 00_dark_spirits drop item_45_fiery_bow_gun where it was 10
-Setting drop chance to 100%, creature 01_disguise drop item_108_amulet_of_winter where it was 60
 Setting drop chance to 100%, creature 01_beak_plant drop item_33_crushing_mace where it was 60
 Setting spawn chance to 100%, creature 01_beak_plant where it was 50
 Setting spawn chance to 100%, creature 02_watcher_plant where it was 50
@@ -674,7 +650,6 @@ Setting spawn chance to 100%, creature 0c_worm_face where it was 50
 Setting drop chance to 100%, creature 0c_worm_face drop item_1f_frosty_bastard_sword where it was 20
 Setting spawn chance to 100%, creature 0c_worm_face where it was 25
 Setting spawn chance to 100%, creature 0c_worm_face where it was 25
-Setting drop chance to 100%, creature 00_fat_mole_f drop item_127_acid_vaccine where it was 0
 Setting spawn chance to 100%, creature 00_sand_leech_a where it was 50
 Setting drop chance to 100%, creature 00_sand_leech_a drop item_fb_magical_amulet where it was 80
 Setting drop chance to 100%, creature 05_acid_pod drop item_83_gauntlet where it was 20
@@ -693,25 +668,6 @@ Setting spawn chance to 100%, creature 09_cocoon_plant where it was 50
 Setting drop chance to 100%, creature 08_torg drop item_10_broad_sword where it was 90
 Setting drop chance to 100%, creature 08_torg drop item_62_scale_mail_of_curing where it was 80
 Setting drop chance to 100%, creature 02_sand_leech_b drop item_95_caustic_steel_boots where it was 20
-Setting drop chance to 100%, creature 01_demon_bat drop item_5_long_sword where it was 40
-Setting drop chance to 100%, creature 01_demon_bat drop item_7_fiery_long_sword where it was 10
-Setting spawn chance to 100%, creature 05_hobble_worm where it was 50
-Setting spawn chance to 100%, creature 05_hobble_worm where it was 50
-Setting drop chance to 100%, creature 05_hobble_worm drop item_3a_giant_axe where it was 70
-Setting drop chance to 100%, creature 05_hobble_worm drop item_af_dark_great_shield where it was 20
-Setting spawn chance to 100%, creature 05_hobble_worm where it was 50
-Setting drop chance to 100%, creature 05_hobble_worm drop item_4c_devil_crown where it was 50
-Setting spawn chance to 100%, creature 05_hobble_worm where it was 25
-Setting spawn chance to 100%, creature 05_hobble_worm where it was 25
-Setting drop chance to 100%, creature 08_clay_servant drop item_90_steel_boots where it was 50
-Setting drop chance to 100%, creature 08_clay_servant drop item_e9_bracelet_of_movement where it was 40
-Setting spawn chance to 100%, creature 08_clay_servant where it was 80
-Setting spawn chance to 100%, creature 0a_barrel_snail where it was 25
-Setting drop chance to 100%, creature 0a_barrel_snail drop item_60_scale_mail where it was 60
-Setting spawn chance to 100%, creature 0a_barrel_snail where it was 25
-Setting spawn chance to 100%, creature 0a_barrel_snail where it was 25
-Setting drop chance to 100%, creature 0a_barrel_snail drop item_9b_harden_leg_guard where it was 40
-Setting spawn chance to 100%, creature 0d_crying_root where it was 10
 Setting spawn chance to 100%, creature 00_kabasaur where it was 20
 Setting spawn chance to 100%, creature 00_kabasaur where it was 20
 Setting drop chance to 100%, creature 05_water_knight drop item_1f_frosty_bastard_sword where it was 50
