@@ -96,3 +96,16 @@ toNotGenerateImages Doesn't generate map images, that makes it much quicker to r
 # How to convert a map part 7th file to TIM file
 
 npm run map_texture_extract ".\generated\randomized-medium\extracted\ST\COM\FDAT.T_PARTS\47 281000-2c0800.T"
+
+# Package and deploy
+
+- Install docker
+- Install gcould cli https://cloud.google.com/sdk/docs/install
+
+- Run
+docker build -t shadow-tower-randomizer .
+docker stop shadow-tower-randomizer-container
+docker remove shadow-tower-randomizer-container
+docker run -d -p 8080:8080 --name shadow-tower-randomizer-container shadow-tower-randomizer
+
+or one-liner docker build -t shadow-tower-randomizer . && docker stop shadow-tower-randomizer-container && docker remove shadow-tower-randomizer-container && docker run -d -p 8080:8080 --name shadow-tower-randomizer-container shadow-tower-randomizer
