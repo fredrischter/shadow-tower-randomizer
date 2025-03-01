@@ -469,121 +469,52 @@
 		</div>
 
 		<p/>
+<h3>Randomization Info</h3>
 
-		<h3>Randomization info</h3>
+<p>Advanced knowledge of the game is not required to use this tool.</p>
+<p>The preset options configure other parameters to a level that ensures a reasonable playtime based on the expected experience. It is recommended to only modify the difficulty setting, while keeping other parameters at their default values.</p>
+<p>The "Only Swap" option for each parameter disables random generation and simply swaps values. This ensures that no strange values are generated, offering a safer way to play if the randomness becomes unreliable.</p>
+<p>From the selected recipe, a changeset file is generated. This file can be shared with others to allow them to reproduce the exact same output without knowing the spoilers. The changeset can also be uploaded and applied to an ISO. When applied, its checksum is also displayed in the initial short sword description.</p>
 
-		<p>Advanced knowledge of the game is not required.</p>
-		<p>The preset options set the other options to level where it provides reasonable play time for the expected experience. Recommended to not change other parameters other than difficulty.</p>
-		<p>"Only swap" option for each parameter makes no random generation but just swapping, so it is guarenteed that you don't get weird numbers, may be the safer way to play if the randomness gets non-reliable.</p>
-		<p>From the recipe it is generated a changeset file (this is the one to be given to other people in order for them to reproduce the exact same output without knowing the spoilers). It can be uploaded for applying to iso again. When it applies, it's checksum is also applied to display in the initial short sword description.<p>
-			<p>Randomization produces a intermediary Recipe, that contains the readable information of all random set that are intended to be performed. You can also download, change and upload it to do your own customized changes in the game.</p>
+<p>Randomization generates an intermediary recipe file, which contains all the readable information about the random settings applied. You can download, modify, and upload it to make custom changes to your game.</p>
 
-			<p>In-game creature book stats displayed are not changed, while the actual effective data in game is changed. So it is fair to provide creature_book.txt for the player, to even read in advance to know the stats and play accordingly.</p>
+<p>While the in-game creature book stats are not altered, the actual data used in the game is changed. To help players adjust, you can share the `creature_book.txt` file so they can review the stats in advance and plan accordingly.</p>
 
-			<p>I expect to implement also enemy walk speed and attack cooldown time randomization, as well as capability of adding more creatures spawn and items found than the regular game, but as additional features since these seem to be more complex to do.</p>
+<p>Future updates are expected to include randomization for enemy walk speeds, attack cooldowns, as well as the ability to spawn more creatures and items than in the regular game. These features are more complex and will be added later.</p>
 
-			<h3>Game play</h3>
+<h3>Gameplay</h3>
 
-			<p>You need to verify equipment and equips stats in game, as they may differ from regular game.</p>
+<p>Be sure to check your equipment and stat values in-game, as they may differ from the default settings.</p>
 
-			<p>Mind that with randomized areas, you should manage exploration like you do when playing for first time.</p>
+<p>With randomized areas, manage exploration as if you're playing the game for the first time.</p>
 
-			<p>To beat the game, you still need to kill all world bosses. They are in their original areas.
-			For Desguise to spawn you still need to defeat the ilusionists first.</p>
+<p>To complete the game, you must defeat all world bosses, who will remain in their original locations. To spawn Desguise, you still need to defeat the Illusionists first.</p>
 
-			<p>Bosses and NPCs creatures are not randomized.</p>
-		</div>
+<p>Bosses and NPC creatures are not randomized.</p>
 
-		<h3>Credits</h3>
+<h3>Credits</h3>
 
-		<p>Thanks to the FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd) for providing knowledge base about From Software PSX games.</p>
+<p>Special thanks to the FromSoft Modding Committee (Discord: <a href="https://discord.gg/jUzZwWWUXd">https://discord.gg/jUzZwWWUXd</a>) for their valuable knowledge about From Software's PSX games.</p>
 
-		<p>Also thanks for people who contributed with ideas, data and testing. Thanks to Lucifer65535 and David Bunch for online walkthroughs that made it easier to understand the game data and double check as I went finding data during the development. Thanks to martin korth for no$psx, used for testing during mod development.</p>
+<p>Thanks also to everyone who contributed ideas, data, and testing. Special thanks to Lucifer65535 and David Bunch for their online walkthroughs, which made it easier to understand the game data and double-check my findings. A big thank you to Martin Korth for no$psx, which was essential for testing during mod development.</p>
 
-		<h3>Disclaimer</h3>
+<h3>Disclaimer</h3>
 
-		<p>It is provided "as is" with no warranty of functionality or safety. The modified software may harm you or your equipment such as computer or video game console. It is not recommended to be used by anyone. If you use, do on your own responsibility.</p>
+<p>This tool is provided "as is" with no guarantee of functionality or safety. The modified software could potentially harm your computer, video game console, or other equipment. Use it at your own risk.</p>
 
-		<p>This tool development had purely educational purpose, not having any commercial usage. Usage and modification is absolutely allowed for any legal activity. We don't promote piracy or any other illegal activity.</p>
+<p>The development of this tool is for educational purposes only and has no commercial use. We do not promote piracy or any illegal activities. The usage and modification of this tool is permitted for any legal activities.</p>
 
-		<p>This software is totally free for anyone to use, modify, distribute and everything else. If you use it for any online content (such as news, indexing, streaming) I'd thank if you mention author Fredo Rischter, and link to github repo https://github.com/fredrischter/shadow-tower-randomizer and to the FromSoft Modding Committee.</p>
+<p>This software is completely free to use, modify, and distribute. If you use it for online content (such as news, streaming, or indexing), I would appreciate it if you credit the author, Fredo Rischter, and link to the GitHub repository: <a href="https://github.com/fredrischter/shadow-tower-randomizer">https://github.com/fredrischter/shadow-tower-randomizer</a>, as well as to the FromSoft Modding Committee.</p>
 
-		<h3>Contact</h3>
+<h3>Contact</h3>
 
-		fredrischter at gmail dot com
+<p>If you need to reach out, you can contact me at fredrischter at gmail dot com</a>.</p>
 
 		<script src="external/jquery/jquery.js"></script>
 		<script src="Iso9660.js"></script>
 		<script src="KaitaiStream.js"></script>
 		<script src="jquery-ui.js"></script>
-		<script>
+		<script src="index.js"></script>
 
-			$( "#buttonUpload" ).button({icon: "ui-icon-star"});
-			$( "#buttonRandomize" ).button();
-			$( "#buttonRecipe" ).button();
-			$( "#buttonChangeset" ).button();
-			
-			$( "#buttonApply" ).button({icon: "ui-icon-star"});
-
-			$( "#buttonDownloadIso" ).button({icon: "ui-icon-star"});
-			$( "#buttonDownloadSpoilers" ).button();
-
-	/*	$( "#button1" ).button({
-			icon: "ui-icon-gear"
-		});*/
-
-		$( "#dif-radioset" ).buttonset();
-		$( "#purpose-radioset" ).buttonset();
-		$( "#map-radioset" ).buttonset();
-		$( "#equip-radioset" ).buttonset();
-		$( "#spawn-amplitude-radioset" ).buttonset();
-		$( "#spawn-rate-radioset" ).buttonset();
-		$( "#spawn-style-radioset" ).buttonset();
-		$( "#ilusionists-radioset" ).buttonset();
-		$( "#progressivenes-radioset" ).buttonset();
-		$( "#creature-radioset" ).buttonset();
-		$( "#fiery-key-radioset" ).buttonset();
-		$( "#non-essential-keys-radioset" ).buttonset();
-		$( "#remove-randomness-radioset" ).buttonset();
-		$( "#all-equips-radioset" ).buttonset();
-		$( "#no-hp-mp-recovery-radioset" ).buttonset();
-
-		$( "#controlgroup" ).controlgroup();
-
-		$( "#tabs" ).tabs();
-
-		$( "#button4" ).on( "click", function() {
-			document.getElementById("file").click();
-		});
-		
-		//$('#file').change(function(){
-		//	var files = $('#file').prop('files');
-		//	var arrayBuffer = files[0];
-		//	var data = new Iso9660(new KaitaiStream(arrayBuffer));
-		//	console.log(data.sectorSize);
-		//})
-
-		$('#file').change(function() {
-
-			var reader = new FileReader();
-			reader.onload = function() {
-
-				var arrayBuffer = this.result;
-				var array = new Uint8Array(arrayBuffer);
-				//var binaryString = String.fromCharCode.apply(null, array);
-
-				//console.log(binaryString);
-				var data = new Iso9660(new KaitaiStream(arrayBuffer));
-				console.log(data.sectorSize);
-			}
-			reader.readAsArrayBuffer(this.files[0]);
-
-		});
-
-	/*
-		var arrayBuffer = ...;
-		var data = new Iso9660(new KaitaiStream(arrayBuffer));
-		*/
-	</script>
 </body>
 </html>
