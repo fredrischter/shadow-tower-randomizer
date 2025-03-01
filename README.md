@@ -115,8 +115,5 @@ docker stop shadow-tower-randomizer-container && docker remove shadow-tower-rand
 docker exec shadow-tower-randomizer-container ls /app/generated
 
 - Deploy
-docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest
-docker push gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest
-gcloud compute instances list
+docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && docker push gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated
 
-gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated
