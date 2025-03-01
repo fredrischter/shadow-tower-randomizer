@@ -403,7 +403,7 @@ global.logo_files = [
     { index: 271, name: "earth_world_poisonous_cavern" },
     { index: 121, name: "earth_world_quaking_cavern" },
     { index: 151, name: "earth_world_false_pit_cavern" },
-    { index: 281, name: "earth_world_stone_cavern" },
+//    { index: 281, name: "earth_world_stone_cavern" },
     { index: 331, name: "earth_world_hostile_rock_cavern" },
     { index: 101, name: "water_world_impure_pool_area" },
     { index: 211, name: "water_world_sunken_river_area" },

@@ -393,31 +393,6 @@
     ]
   },
   {
-    "name": "earth_world_stone_cavern",
-    "world": "earth_world",
-    "exits": [
-      {
-        "id": "4",
-        "dest": "earth_world_poisonous_cavern",
-        "world": "earth_world",
-        "wayBackId": "13",
-        "type": "door",
-        "rotation": 0,
-        "direction": "entrance"
-      },
-      {
-        "id": "7",
-        "dest": "earth_world_false_pit_cavern",
-        "world": "earth_world",
-        "wayBackId": "3",
-        "type": "door",
-        "rotation": 2,
-        "direction": "exit"
-      }
-    ],
-    "totems": []
-  },
-  {
     "name": "earth_world_quaking_cavern",
     "world": "earth_world",
     "exits": [
@@ -438,9 +413,9 @@
     "exits": [
       {
         "id": "13",
-        "dest": "earth_world_stone_cavern",
+        "dest": "earth_world_false_pit_cavern",
         "world": "earth_world",
-        "wayBackId": "4",
+        "wayBackId": "3",
         "type": "door",
         "rotation": 2
       },
@@ -478,9 +453,9 @@
     "exits": [
       {
         "id": "3",
-        "dest": "earth_world_stone_cavern",
+        "dest": "earth_world_poisonous_cavern",
         "world": "earth_world",
-        "wayBackId": "7",
+        "wayBackId": "13",
         "type": "door",
         "rotation": 3
       },
