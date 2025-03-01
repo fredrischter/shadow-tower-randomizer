@@ -74,6 +74,34 @@ if (!sessionId) {
   localStorage.setItem('sessionId', sessionId); // Store it in localStorage for persistence across page reloads
 }
 
+// Function to check the status of the file processing
+function checkFileStatus(sessionId) {
+  const intervalId = setInterval(() => {
+    // Make the request to the server to check the status
+    fetch(`/status?sessionId=${sessionId}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'completed') {
+          console.log('File processing completed! You can now download it.');
+          // Stop checking the status by clearing the interval
+          clearInterval(intervalId);
+
+          // Provide the presigned URL to download the file
+          console.log('Download URL:', data.presignedUrl);
+          // You can now allow the user to download the file
+          // e.g., create a download button or automatically start download
+        } else {
+          console.log('File is still being processed, checking again...');
+        }
+      })
+      .catch(error => {
+        console.error('Error checking file status:', error);
+        // Optionally clear the interval if an error occurs
+        clearInterval(intervalId);
+      });
+  }, 5000);  // Repeat every 5 seconds
+}
+
 document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', async function(event) {
         event.preventDefault();
@@ -99,7 +127,7 @@ document.querySelectorAll('form').forEach(form => {
         // Request the presigned URL from the server
         try {
             const contentType = file.type; // Content-Type for the file
-            const filename = file.name; // Get the file name
+            const filename = sessionId; // Get the file name
             
             const response = await fetch(`/generate-presigned-url?filename=${filename}&contentType=${contentType}`);
             const data = await response.json();
@@ -116,6 +144,23 @@ document.querySelectorAll('form').forEach(form => {
 
             if (uploadResponse.ok) {
                 console.log('File uploaded successfully to Google Cloud Storage');
+
+				fetch('/upload-complete', {
+				  method: 'POST',
+				  headers: { 'Content-Type': 'application/json' },
+				  body: JSON.stringify({ sessionId })
+				})
+				.then(response => response.json())
+				.then(data => {
+					if (data && data.message && data.message=="Error processing file") {
+						console.log('Processing failed:', data);
+					} else {
+						console.log('Processing started:', data);
+						checkFileStatus(sessionId);
+					}
+				})
+				.catch(error => console.error('Error:', error));
+
             } else {
                 console.error('Failed to upload file:', uploadResponse.statusText);
             }
