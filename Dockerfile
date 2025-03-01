@@ -64,8 +64,9 @@ RUN mkdir -p /app/generated
 
 COPY *.js .
 COPY site /app/site  
+COPY certs /app/certs
 COPY params /app/params
 
 # Expose the port and start the server
-EXPOSE 8080  
+EXPOSE 80  
 CMD ["node", "server.js"]

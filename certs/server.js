@@ -3,10 +3,10 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const uuid = require('uuid');
-const http2 = require('http2');  // Import http2 module
+const http2 = require('http2');
 
 const app = express();
-const PORT = process.env.PORT || 80;  // Typically port 80 for cleartext
+const PORT = process.env.PORT || 8080;
 
 // Storage configuration for multer
 const storage = multer.diskStorage({
@@ -70,7 +70,6 @@ app.use((req, res, next) => {
   next();  // Move to the next middleware
 });
 
-// Create HTTP/2 secure server (for local testing with TLS)
 const serverOptions = {
   key: fs.readFileSync(path.join(__dirname, 'certs', 'server.key')),  // Replace with your actual key
   cert: fs.readFileSync(path.join(__dirname, 'certs', 'server.crt')), // Replace with your actual cert
@@ -78,10 +77,6 @@ const serverOptions = {
 
 const server = http2.createSecureServer(serverOptions, app);
 
-// Create an HTTP/2 cleartext server (no TLS, no HTTPS)
-//const server = http2.createServer(app);  // No need for certificates
-
-// Listen on HTTP port 80 (cleartext HTTP/2)
 server.listen(PORT, () => {
-  console.log(`🚀 Server running with HTTP/2 (cleartext) at http://localhost:${PORT}`);
+  console.log(`🚀 Server running with HTTP/2 at https://localhost:${PORT}`);
 });

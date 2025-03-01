@@ -119,4 +119,5 @@ docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-
 docker push gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest
 gcloud compute instances list
 
-gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated
+gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated --use-http2
+
