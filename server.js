@@ -1,62 +1,53 @@
 const express = require('express');
-const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
-const uuid = require('uuid');
+const cors = require('cors');  // Import the CORS middleware
+const { Storage } = require('@google-cloud/storage');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Storage configuration for multer
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    console.log('Request Body (inside destination):', req.body);  // Log the request body inside multer's destination function
+// Initialize Google Cloud Storage client
+const storage = new Storage();
+const BUCKET_NAME = 'shadow-tower-randomizer';
 
-    const sessionId = req.body.sessionId; // Retrieve sessionId from the request body
-    if (!sessionId) {
-      return cb(new Error('Session ID is required'), null);  // Return an error if sessionId is missing
-    }
+// Enable CORS for all routes
+app.use(cors());  // This will allow all origins. You can configure it for specific origins if needed.
 
-    // Create the directory to store uploaded files, if it doesn't exist
-    const uploadDir = path.join(__dirname, 'generated', sessionId);
-    fs.mkdirSync(uploadDir, { recursive: true });  // Create directory recursively
-    cb(null, uploadDir);  // Specify the directory to store the uploaded file
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);  // Use the original file name
-  }
-});
+const corsOptions = {
+  origin: '*',  // Allow all origins (use specific origin if needed)
+  methods: ['GET', 'POST', 'OPTIONS'],  // Allow GET, POST, and OPTIONS methods
+  allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
+};
 
-// Multer instance to handle file uploads
-const upload = multer({
-  storage: storage,
-  limits: {
-    fileSize: 700 * 1024 * 1024  // Set a file size limit of 700MB
-  }
-});
-
-// Middleware to parse the body for multipart data (before multer processes the form data)
+// Middleware to parse the body for multipart data (before handling the form data)
 app.use(express.urlencoded({ extended: true }));  // For parsing application/x-www-form-urlencoded
 app.use(express.json());  // For parsing JSON bodies (if needed)
 
-// Handle file upload request
-app.post('/upload', upload.single('file'), (req, res) => {
-  console.log('Uploaded File:', req.file);  // Log the uploaded file details
-  console.log('Session ID:', req.body.sessionId);  // Log sessionId
+// Route to generate a presigned URL for file upload
+app.get('/generate-presigned-url', async (req, res) => {
+  const filename = req.query.filename;
+  const contentType = req.query.contentType;
+  const expiresIn = 5 * 60;  // URL expiry time in seconds (5 minutes)
 
-  // Return an error if no file or sessionId is present
-  if (!req.file || !req.body.sessionId) {
-    return res.status(400).json({ message: 'No file uploaded or missing session ID' });
+  const file = storage.bucket(BUCKET_NAME).file(`uploads/${Date.now()}-${filename}`);
+
+  // Generate a signed URL for uploading the file
+  try {
+    const [url] = await file.getSignedUrl({
+      action: 'write', // Allow write access (for uploading)
+      expires: Date.now() + expiresIn * 1000,
+      contentType: contentType,  // Enforce content type validation
+    });
+
+    res.json({ url });
+  } catch (error) {
+    console.error('Error generating presigned URL:', error);
+    res.status(500).json({ message: 'Error generating presigned URL', error: error.message });
   }
-
-  res.json({
-    message: 'File uploaded successfully',
-    file: req.file,
-    sessionId: req.body.sessionId
-  });
 });
 
-// Serve static files from the 'site' folder
+// Serve static files from the 'site' folder (if needed)
 const staticPath = path.join(__dirname, 'site');
 app.use(express.static(staticPath));
 
@@ -68,6 +59,9 @@ app.use((req, res, next) => {
   });
   next();  // Move to the next middleware
 });
+
+// Handle OPTIONS preflight requests (for CORS)
+app.options('*', cors(corsOptions));  // Enable CORS preflight for all routes
 
 // Start the server
 app.listen(PORT, () => {

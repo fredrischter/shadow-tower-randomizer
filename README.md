@@ -102,6 +102,9 @@ npm run map_texture_extract ".\generated\randomized-medium\extracted\ST\COM\FDAT
 - Install docker
 - Install gcould cli https://cloud.google.com/sdk/docs/install
 - gcloud auth configure-docker
+- gcloud auth login
+- gcloud config set project shadow-tower-randomizer
+- gsutil mb gs://shadow-tower-randomizer
 
 - Run
 docker build -t shadow-tower-randomizer .
@@ -113,6 +116,10 @@ or one-liner
 docker stop shadow-tower-randomizer-container && docker remove shadow-tower-randomizer-container && docker build -t shadow-tower-randomizer . && docker run -it -p 8080:8080 --name shadow-tower-randomizer-container shadow-tower-randomizer
 
 docker exec shadow-tower-randomizer-container ls /app/generated
+
+gsutil cors set cors-config.json gs://shadow-tower-randomizer
+gcloud storage buckets describe gs://shadow-tower-randomizer
+gsutil cors get gs://shadow-tower-randomizer
 
 - Deploy
 docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && docker push gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated

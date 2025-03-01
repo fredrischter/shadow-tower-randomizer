@@ -16,7 +16,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^7.15.2",
     "canvas": "2.11.2",
+    "cors": "^2.8.5",
     "eol": "0.9.1",
     "express": "^4.21.2",
     "fs": "0.0.1-security",
