@@ -2,6 +2,7 @@
 <html lang="us">
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shadow Tower Randomizer</title>
 	<link href="jquery-ui.css" rel="stylesheet">
 	<style>
@@ -60,10 +61,25 @@
 
 	<div>
 		<label style="margin-top: 1em;"><b>Input</b></label>
-		<button id="buttonUpload">Upload ISO</button>
-		<button id="buttonRandomize">Randomize</button>
-		<button id="buttonRecipe">Upload Recipe</button>
-		<button id="buttonChangeset">Upload Changeset</button>
+
+
+		<form id="formButtonUpload" enctype="multipart/form-data">
+		  <input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
+		  <button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
+		</form>
+
+		<button id="buttonRandomize" disabled>Randomize</button>
+
+		<form id="formButtonRecipe" enctype="multipart/form-data" style="display:none;">
+		  <input type="file" id="buttonRecipeFile" name="file" accept=".json">
+		  <button type="submit" id="buttonRecipe" class="uploadButton" data-action="buttonRecipe" disabled>Upload Recipe (optional)</button>
+		</form>
+
+		<form id="formButtonChangeset" enctype="multipart/form-data" style="display:none;">
+		  <input type="file" id="buttonChangesetFile" name="file" accept=".json">
+		  <button type="submit" id="buttonChangeset" class="uploadButton" data-action="buttonChangeset" disabled>Upload Changeset (optional)</button>
+		</form>
+
 		<span>&nbspSeed&nbsp</span><input id="seedInput"/>&nbsp
 	</div>
 	<div>
@@ -74,8 +90,6 @@
 		<label style="margin-top: 1em;"><b>Output</b></label>
 		<button id="buttonDownloadIso">Download ISO</button>
 		<button id="buttonDownloadSpoilers">Download Spoilers</button>
-		<span>&nbspSeed&nbsp</span><input disabled id="seedInput"/>&nbsp
-		<span>&nbspHash&nbsp</span><input disabled id="seedInput"/>&nbsp
 	</div>
 	<!--button id="button5">Download ISO</button-->
 
@@ -510,6 +524,7 @@
 
 <p>If you need to reach out, you can contact me at fredrischter at gmail dot com</a>.</p>
 
+		<script src="uuid.min.js"></script>
 		<script src="external/jquery/jquery.js"></script>
 		<script src="Iso9660.js"></script>
 		<script src="KaitaiStream.js"></script>

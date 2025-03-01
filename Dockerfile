@@ -14,7 +14,7 @@ RUN apk update && apk add --no-cache \
     make \
     g++ \
     && rm -rf /var/cache/apk/*
-    
+
 # Install LameGuy64's MKPSXISO
 # Fetch the latest MKPSXISO release JSON and save to a file
 
@@ -60,8 +60,9 @@ RUN [ ! -f /usr/local/bin/dumpsxiso ] && ln -s /usr/local/mkpsxiso/bin/dumpsxiso
 COPY package*.json ./
 RUN npm install --omit=dev  
 
-COPY *.js .
+RUN mkdir -p /app/generated
 
+COPY *.js .
 COPY site /app/site  
 COPY params /app/params
 

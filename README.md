@@ -109,7 +109,10 @@ docker stop shadow-tower-randomizer-container
 docker remove shadow-tower-randomizer-container
 docker run -d -p 8080:8080 --name shadow-tower-randomizer-container shadow-tower-randomizer
 
-or one-liner docker build -t shadow-tower-randomizer . && docker stop shadow-tower-randomizer-container && docker remove shadow-tower-randomizer-container && docker run -d -p 8080:8080 --name shadow-tower-randomizer-container shadow-tower-randomizer
+or one-liner
+docker stop shadow-tower-randomizer-container && docker remove shadow-tower-randomizer-container && docker build -t shadow-tower-randomizer . && docker run -it -p 8080:8080 --name shadow-tower-randomizer-container shadow-tower-randomizer
+
+docker exec shadow-tower-randomizer-container ls /app/generated
 
 - Deploy
 docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest
