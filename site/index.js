@@ -67,12 +67,22 @@ $(document).ready(function() {
 	var arrayBuffer = ...;
 	var data = new Iso9660(new KaitaiStream(arrayBuffer));
 	*/
-// Generate a unique session ID on page load
-let sessionId = localStorage.getItem('sessionId');
-if (!sessionId) {
-  sessionId = uuid.v4(); // Generate a new session ID
-  localStorage.setItem('sessionId', sessionId); // Store it in localStorage for persistence across page reloads
+
+function getSessionId() {
+	let sessionId = localStorage.getItem('sessionId');
+	if (!sessionId) {
+		return generateSessionId();
+	}
+	return sessionId;
 }
+
+function generateSessionId() {
+	let sessionId = uuid.v4(); // Generate a new session ID
+	localStorage.setItem('sessionId', sessionId); // Store it in localStorage for persistence across page reloads
+	return sessionId;
+}
+
+// Generate a unique session ID on page load
 
 // Function to check the status of the file processing
 function checkFileStatus(sessionId) {
@@ -107,7 +117,7 @@ document.querySelectorAll('form').forEach(form => {
         event.preventDefault();
         
         // Retrieve the session ID from localStorage
-        const sessionId = localStorage.getItem('sessionId');
+        const sessionId = generateSessionId();
         
         if (!sessionId) {
             console.error('Session ID is missing');
@@ -156,7 +166,7 @@ document.querySelectorAll('form').forEach(form => {
 						console.log('Processing failed:', data);
 					} else {
 						console.log('Processing started:', data);
-						checkFileStatus(sessionId);
+						checkFileStatus(getSessionId());
 					}
 				})
 				.catch(error => console.error('Error:', error));
