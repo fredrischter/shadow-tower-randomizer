@@ -124,4 +124,4 @@ gsutil cors get gs://shadow-tower-randomizer
 - Deploy
 docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && docker push gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated
 
-gcloud run services update shadow-tower-randomizer --memory 1Gi --cpu 2 --platform managed --region us-central1
+gcloud run services update shadow-tower-randomizer --memory 8Gi --cpu 8 --platform managed --region us-central1

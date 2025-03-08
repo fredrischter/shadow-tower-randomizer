@@ -82,15 +82,31 @@ function generateSessionId() {
 	return sessionId;
 }
 
+function setStatus(status) {
+	if (status) {
+		document.getElementById("status").textContent = "Status " + status;
+	}
+}
 // Generate a unique session ID on page load
 
 // Function to check the status of the file processing
 function checkFileStatus(sessionId) {
+  var attempts = 0;
   const intervalId = setInterval(() => {
+  	if (attempts++>60) {
+        clearInterval(intervalId);
+  	}
     // Make the request to the server to check the status
     fetch(`/status?sessionId=${sessionId}`)
-      .then(response => response.json())
+      .then(response => {
+      	if (!response.ok) {
+	        throw new Error("Not 2xx response", {cause: response});
+	    }
+      	return response.json();
+      })
       .then(data => {
+      	
+      	setStatus(data.status);
         if (data.status === 'completed') {
           console.log('File processing completed! You can now download it.');
           // Stop checking the status by clearing the interval
@@ -109,11 +125,13 @@ function checkFileStatus(sessionId) {
         // Optionally clear the interval if an error occurs
         clearInterval(intervalId);
       });
-  }, 5000);  // Repeat every 5 seconds
+  }, 10000);  // Repeat every 5 seconds
 }
 
 document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', async function(event) {
+
+      	setStatus("connecting");
         event.preventDefault();
         
         // Retrieve the session ID from localStorage
@@ -143,6 +161,8 @@ document.querySelectorAll('form').forEach(form => {
             const data = await response.json();
             const presignedUrl = data.url; // Get the presigned URL from the response
 
+            setStatus("uploadeding");
+
             // Upload the file directly to Google Cloud Storage using the presigned URL
             const uploadResponse = await fetch(presignedUrl, {
                 method: 'PUT',
@@ -153,6 +173,7 @@ document.querySelectorAll('form').forEach(form => {
             });
 
             if (uploadResponse.ok) {
+                setStatus("uploadeded");
                 console.log('File uploaded successfully to Google Cloud Storage');
 
 				fetch('/upload-complete', {

@@ -4,6 +4,21 @@ const path = require('path');
 const { Storage } = require('@google-cloud/storage');
 const uuid = require('uuid');
 const { promisify } = require('util');
+const child_process = require('child_process');
+
+function exec(cmd, callback) {
+	console.log("Running " + cmd);
+	var child = child_process.exec(cmd);
+	child.stdout.pipe(process.stdout);
+	child.stderr.pipe(process.stderr);
+	child.on('exit', function(err) {
+		if (err) {
+			console.log("Step finished with error " + err);
+			return;
+		}
+		callback();
+	});
+}
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -12,6 +27,8 @@ const PORT = process.env.PORT || 8080;
 const storage = new Storage();
 const BUCKET_NAME = 'shadow-tower-randomizer';
 const GENERATED_FOLDER = path.join(__dirname, 'generated');
+const UPLOADS_FOLDER = path.join(__dirname, 'uploads');
+const PARAMS_FOLDER = path.join(__dirname, 'params');
 
 // Create a simple in-memory store to track the status of uploads
 let uploadStatus = {}; // stores sessionId -> { status: "processing"/"completed", presignedUrl: "..." }
@@ -19,13 +36,31 @@ let uploadStatus = {}; // stores sessionId -> { status: "processing"/"completed"
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+async function uploadFolderToGCS(folderPath, destinationPath = '') {
+  const files = await fs.readdir(folderPath, { withFileTypes: true });
+
+  for (const file of files) {
+    const localFilePath = path.join(folderPath, file.name);
+    const relativePath = path.relative(folderPath, localFilePath);
+    const destination = path.join(destinationPath, relativePath).replace(/\\/g, '/');
+
+    if (file.isDirectory()) {
+      await uploadFolderToGCS(localFilePath, destination); // Recurse
+    } else {
+      await storage.bucket(BUCKET_NAME).upload(localFilePath, { destination });
+      console.log(`Uploaded ${localFilePath} to gs://${BUCKET_NAME}/${destination}`);
+    }
+  }
+}
+
+
 // Generate a presigned URL for file upload
 app.get('/generate-presigned-url', async (req, res) => {
   const filename = req.query.filename;
   const contentType = req.query.contentType;
   const expiresIn = 5 * 60;  // URL expiry time in seconds (5 minutes)
 
-  const file = storage.bucket(BUCKET_NAME).file(`uploads/${filename}`);
+  const file = storage.bucket(BUCKET_NAME).file(`uploads/${filename}/st.bin`);
 
   // Generate a signed URL for uploading the file
   const [url] = await file.getSignedUrl({
@@ -45,61 +80,88 @@ app.post('/upload-complete', async (req, res) => {
     return res.status(400).json({ message: 'Session ID and file URL are required' });
   }
 
+  function log(s) {
+	console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' ' + s);
+  }
+
   // Track upload status as "processing"
-  uploadStatus[sessionId] = { status: 'processing' };
+  uploadStatus[sessionId] = { status: 'starting' };
   
   res.json({ message: 'File processing started' });
 
-  console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' processing uploaded file');
+  log('processing uploaded file');
 
   try {
     // Extract the file name from the URL
     const filename = sessionId;
 
     // Step 1: Download the file from Google Cloud Storage
-    const filePath = path.join(GENERATED_FOLDER, sessionId, filename);
-    const file = storage.bucket(BUCKET_NAME).file(`uploads/${filename}`);
-	fs.mkdirSync(path.join(GENERATED_FOLDER, sessionId), { recursive: true });
+    const filePath = path.join(UPLOADS_FOLDER, sessionId, 'st.bin');
+    const file = storage.bucket(BUCKET_NAME).file(`uploads/${filename}/st.bin`);
+	fs.mkdirSync(path.join(UPLOADS_FOLDER, sessionId), { recursive: true });
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Downloading to ' + filePath + ' from ' + JSON.stringify(file));
+    log('Downloading to ' + filePath + ' from ' + JSON.stringify(file));
+    uploadStatus[sessionId] = { status: 'downloading' };
 
     // Download the file to local disk
     await file.download({ destination: filePath });
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Downloaded to ' + filePath + '. Deleting file from bucket');
+    log('Downloaded to ' + filePath + '.');
+    uploadStatus[sessionId] = { status: 'preparing' };
 
-    // Step 2: Delete the file from the bucket
-    await file.delete();
+    const template = path.join(PARAMS_FOLDER, 'bonanza.json');
+    const paramsFileName = path.join(UPLOADS_FOLDER, sessionId, 'params.json');
+    fs.copyFileSync(template, paramsFileName);
+    
+    const paramsObject = JSON.parse(fs.readFileSync(paramsFileName));
+    paramsObject.label = sessionId;
+    fs.writeFileSync(paramsFileName, JSON.stringify(paramsObject, null, 2), 'utf8');
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Processing.');
+    const outputPath = path.join(GENERATED_FOLDER, sessionId);
+
+    log('Processing. Output ' + outputPath + ' Params ' + paramsFileName);
+    log('Params ' + JSON.stringify(paramsObject));
+    uploadStatus[sessionId] = { status: 'processing' };
 
     // Step 3: Wait for 2 minutes before continuing
-    await promisify(setTimeout)(2 * 60 * 1000);  // 2 minutes delay
+	exec('npm run mod "' + filePath + '" "' + paramsFileName + '"', function() {
 
-    // Step 4: Copy the downloaded file
-    const copiedFilePath = path.join(GENERATED_FOLDER, sessionId, `copy-${filename}`);
-    fs.copyFileSync(filePath, copiedFilePath);
+	    log('Finished processing. Generated ' + outputPath);
+	    uploadStatus[sessionId] = { status: 'processed' };
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Finished processing. Generated ' + copiedFilePath);
+	    // Step 5: Upload the copied folder to the bucket
+	    uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
 
-    // Step 5: Upload the copied file back to the bucket
-    const copiedFile = storage.bucket(BUCKET_NAME).file(`uploads/copy-${filename}`);
-    await copiedFile.save(fs.readFileSync(copiedFilePath));
+	    uploadStatus[sessionId] = { status: 'uploaded'};
+	    log('Uploaded to ' + `outputs/${sessionId}`);
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Uploaded to bucket ' + copiedFile);
+	    // Step 6: Generate a new presigned URL for the copied file
+	    //const [newPresignedUrl] = await storage.bucket(BUCKET_NAME).file(`uploads/${sessionId}/st.bin`);.getSignedUrl({
+	    //  action: 'read',
+	    //  expires: Date.now() + 3600 * 1000,  // 1 hour expiration
+	    //});
 
-    // Step 6: Generate a new presigned URL for the copied file
-    const [newPresignedUrl] = await copiedFile.getSignedUrl({
-      action: 'read',
-      expires: Date.now() + 3600 * 1000,  // 1 hour expiration
-    });
+	    //log('Generated presigned url ' + newPresignedUrl);
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Generated presigned url ' + newPresignedUrl);
+	    // Update upload status
+	    //uploadStatus[sessionId] = { status: 'completed', presignedUrl: newPresignedUrl };
 
-    // Update upload status
-    uploadStatus[sessionId] = { status: 'completed', presignedUrl: newPresignedUrl };
+	    log('Cleaning ' + outputPath);
+	    uploadStatus[sessionId] = { status: 'cleaning'};
 
-    console.log(sessionId + ' ' + JSON.stringify(uploadStatus[sessionId]) + ' Completed');
+    	// Step 2: Delete the file from the bucket
+        log('Deleting local folder.');
+        if (fs.existsSync(outputPath)) {
+			fs.rmSync(outputPath, { recursive: true, force: true });
+			log(`Deleted: ${outputPath}`);
+		}
+        log('Deleting file from bucket');
+	    file.delete();
+
+	    log('Completed');
+	    uploadStatus[sessionId] = { status: 'completed'};
+	});
+
 
   } catch (error) {
     console.error(error);
