@@ -6,7 +6,7 @@ const uuid = require('uuid');
 const { promisify } = require('util');
 const child_process = require('child_process');
 
-function exec(cmd, callback) {
+function exec(cmd, callback, errCallback) {
 	console.log("Running " + cmd);
 	var child = child_process.exec(cmd);
 	child.stdout.pipe(process.stdout);
@@ -14,11 +14,19 @@ function exec(cmd, callback) {
 	child.on('exit', function(err) {
 		if (err) {
 			console.log("Step finished with error " + err);
+			if (errCallback) {
+				errCallback();
+			}
 			return;
 		}
 		callback();
 	});
 }
+
+exec('dumpsxiso', function() {
+	exec('mkpsxiso', function() {
+	}, process.exit);
+}, process.exit);
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -177,7 +185,9 @@ app.get('/status', (req, res) => {
     return res.status(404).json({ message: 'Session ID not found' });
   }
 
-  res.json(uploadStatus[sessionId]);
+  setTimeout(function() {
+  	res.json(uploadStatus[sessionId]);
+  }, 10000);
 });
 
 // Serve static files from the 'site' folder (if needed)

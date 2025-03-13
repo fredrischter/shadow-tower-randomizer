@@ -1,61 +1,47 @@
-# Use lightweight Node.js image
-FROM node:18-alpine  
+FROM ubuntu:24.04
 
 WORKDIR /app
 
-RUN apk add --no-cache python3 wget unzip grep curl
+# Install necessary dependencies
+RUN apt update && apt install -y \
+    build-essential \
+    wget \
+    unzip \
+    libstdc++6 \
+    libc6 \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN apk update && apk add --no-cache \
-    pkgconfig \
-    cairo-dev \
-    pango-dev \
-    pixman-dev \
-    python3 \
-    make \
-    g++ \
-    && rm -rf /var/cache/apk/*
+# Copy the .deb package to the container
+COPY mkpsxiso-2.10-Linux.deb /tmp/mkpsxiso.deb
 
-# Install LameGuy64's MKPSXISO
-# Fetch the latest MKPSXISO release JSON and save to a file
+# Install mkpsxiso from the .deb package
+RUN dpkg -i /tmp/mkpsxiso.deb || apt-get install -f -y
 
-# Extract the ZIP URL (modified for better reliability)
-RUN curl -s https://api.github.com/repos/Lameguy64/mkpsxiso/releases/latest | \
-    grep '"browser_download_url":' | \
-    grep '.zip"' | \
-    head -n 1 | \
-    awk -F '"' '{print $4}' > /tmp/mkpsxiso_url.txt  
+# Clean up
+RUN rm -f /tmp/mkpsxiso.deb
 
-# Verify that the URL was extracted
-RUN echo "Extracted URL:" && cat /tmp/mkpsxiso_url.txt  
+# Set environment (if needed)
+ENV LD_LIBRARY_PATH=/usr/lib:/lib:/usr/local/lib
 
-# Read the URL from the file and download the ZIP
-RUN MKPSXISO_URL=$(cat /tmp/mkpsxiso_url.txt) && \
-    [ -n "$MKPSXISO_URL" ] && echo "Downloading from $MKPSXISO_URL" && \
-    wget -O /tmp/mkpsxiso.zip "$MKPSXISO_URL"  
+# Run your binary to check installation
+RUN mkpsxiso --help
+RUN dumpsxiso --help
 
-# Extract the ZIP file
-RUN unzip /tmp/mkpsxiso.zip -d /usr/local/mkpsxiso  
+RUN apt update && apt install -y \
+    build-essential \
+    wget \
+    curl \
+    unzip \
+    libstdc++6 \
+    libc6 \
+    && rm -rf /var/lib/apt/lists/*
 
-# Remove the ZIP file to save space
-RUN rm /tmp/mkpsxiso.zip 
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt install -y nodejs && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN ls -lR /usr/local/mkpsxiso  # Debugging: list extracted files
-
-RUN mkdir -p /usr/local/mkpsxiso/bin
-
-# Find the extracted bin directory and move files if found
-RUN BIN_DIR=$(find /usr/local/mkpsxiso -type d -name 'bin' -exec echo {} \; | head -n 1) && \
-    echo "Found BIN_DIR: $BIN_DIR" && \
-    if [ -n "$BIN_DIR" ]; then \
-        mv $BIN_DIR/* /usr/local/mkpsxiso/bin/; \
-    fi
-
-# Make sure the binaries are executable
-RUN chmod +x /usr/local/mkpsxiso/bin/*
-
-# Create symbolic links to the binaries in /usr/local/bin if they don't already exist
-RUN [ ! -f /usr/local/bin/mkpsxiso ] && ln -s /usr/local/mkpsxiso/bin/mkpsxiso /usr/local/bin/mkpsxiso || echo "mkpsxiso already exists in /usr/local/bin"
-RUN [ ! -f /usr/local/bin/dumpsxiso ] && ln -s /usr/local/mkpsxiso/bin/dumpsxiso /usr/local/bin/dumpsxiso || echo "dumpsxiso already exists in /usr/local/bin"
+# Verify Node.js installation
+RUN node -v && npm -v
 
 COPY package*.json ./
 RUN npm install --omit=dev  
