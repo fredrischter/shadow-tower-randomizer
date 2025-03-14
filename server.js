@@ -62,6 +62,11 @@ async function uploadFolderToGCS(folderPath, destinationPath = '') {
       console.log(`Uploaded ${localFilePath} to gs://${BUCKET_NAME}/${destination}`);
     }
   }
+  log(`Deleting local folder. ${folderPath}`);
+  if (fs.existsSync(folderPath)) {
+    fs.rmSync(folderPath, { recursive: true, force: true });
+    log(`Deleted: ${folderPath}`);
+  }
 }
 
 
@@ -140,6 +145,8 @@ app.post('/upload-complete', async (req, res) => {
 	    log('Finished processing. Generated ' + outputPath);
 	    uploadStatus[sessionId] = { status: 'processed' };
 
+	    fs.rmSync(path.join(UPLOADS_FOLDER, 'extracted'), { recursive: true, force: true });
+
 	    // Step 5: Upload the copied folder to the bucket
 	    uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
 
@@ -161,11 +168,6 @@ app.post('/upload-complete', async (req, res) => {
 	    uploadStatus[sessionId] = { status: 'cleaning'};
 
     	// Step 2: Delete the file from the bucket
-        log('Deleting local folder.');
-        if (fs.existsSync(outputPath)) {
-			fs.rmSync(outputPath, { recursive: true, force: true });
-			log(`Deleted: ${outputPath}`);
-		}
         log('Deleting file from bucket');
 	    file.delete();
 
