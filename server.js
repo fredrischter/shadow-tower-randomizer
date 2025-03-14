@@ -58,7 +58,7 @@ function uploadFolderToGCS(folderPath, destinationPath = '') {
       uploadFolderToGCS(localFilePath, destination); // Recurse
     } else {
 	  console.log(`Uploading file ${localFilePath}`);
-      await storage.bucket(BUCKET_NAME).upload(localFilePath, { destination });
+      storage.bucket(BUCKET_NAME).upload(localFilePath, { destination });
       console.log(`Uploaded ${localFilePath} to gs://${BUCKET_NAME}/${destination}`);
     }
   }

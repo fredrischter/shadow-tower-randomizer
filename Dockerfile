@@ -40,9 +40,9 @@ RUN npm install --omit=dev
 
 RUN mkdir -p /app/generated
 
-COPY *.js .
-COPY *.json .
-COPY *.html .
+COPY *.js ./
+COPY *.json ./
+COPY *.html ./
 COPY site /app/site  
 COPY params /app/params
 
