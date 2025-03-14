@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express');(
 const fs = require('fs');
 const path = require('path');
 const { Storage } = require('@google-cloud/storage');
@@ -168,8 +168,8 @@ app.post('/upload-complete', async (req, res) => {
 	    uploadStatus[sessionId] = { status: 'cleaning'};
 
     	// Step 2: Delete the file from the bucket
-        log('Deleting file from bucket');
-	    file.delete();
+        //log('Deleting file from bucket');
+	    //file.delete();
 
 	    log('Completed');
 	    uploadStatus[sessionId] = { status: 'completed'};
