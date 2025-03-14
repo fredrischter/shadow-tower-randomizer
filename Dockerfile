@@ -6,6 +6,7 @@ WORKDIR /app
 RUN apt update && apt install -y \
     build-essential \
     wget \
+    curl \
     unzip \
     libstdc++6 \
     libc6 \
@@ -27,15 +28,6 @@ ENV LD_LIBRARY_PATH=/usr/lib:/lib:/usr/local/lib
 RUN mkpsxiso --help
 RUN dumpsxiso --help
 
-RUN apt update && apt install -y \
-    build-essential \
-    wget \
-    curl \
-    unzip \
-    libstdc++6 \
-    libc6 \
-    && rm -rf /var/lib/apt/lists/*
-
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
@@ -49,6 +41,8 @@ RUN npm install --omit=dev
 RUN mkdir -p /app/generated
 
 COPY *.js .
+COPY *.json .
+COPY *.html .
 COPY site /app/site  
 COPY params /app/params
 

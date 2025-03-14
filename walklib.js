@@ -338,7 +338,7 @@ function walk(areas, skipWayBackVerification) {
 		if (!currentArea.includes("tower")) {
 			walkedAreasSet.add(currentArea);
 		}
-		console.error(new Date().toISOString() + "   Step " + steps + " - Location " + currentArea);
+		//console.error(new Date().toISOString() + "   Step " + steps + " - Location " + currentArea);
 
 		if (currentArea == "earth_world_poisonous_cavern" && steps < 5) {
 			explain("  earth_world_poisonous_cavern too early");
@@ -357,7 +357,7 @@ function walk(areas, skipWayBackVerification) {
 		};
 
 
-		console.error(new Date().toISOString() + "    1");
+		//console.error(new Date().toISOString() + "    1");
 		//1-If map where you are isn't here mapsWithKnownUndiscoveredWays, add it with all it's ways.
 		//If (map where you are is desiredDestination) desiredDestination=null;
 		if (!getKnownUndiscoveredWaysByName(currentArea)) {
@@ -370,7 +370,7 @@ function walk(areas, skipWayBackVerification) {
 		var chooseDestination = false;
 		var choosenWay;
 
-		console.error(new Date().toISOString() + "    2");
+		//console.error(new Date().toISOString() + "    2");
 		//2-if (!desiredDestination) and there is some way in mapsWithKnownUndiscoveredWays for this map, choosenWay=first unknown door In the list, prefer bidirectional or go exitOnly. If there is no way chooseDestination=true;
 		if (!desiredDestination) {
 			var currentAreaExits = getAreaExits(getAreaByName(currentArea));
@@ -403,17 +403,17 @@ function walk(areas, skipWayBackVerification) {
 		//prefer bidirectional or go exitOnly;
 		}
 
-		console.error(new Date().toISOString() + "    3");
+		//console.error(new Date().toISOString() + "    3");
 		//3-if (chooseDestination) choosenWay=entry from mapsWithKnownUndiscoveredWays with smaller item knownPaths from your point. If there is no entry to choose. The walk is finished.
 		if (chooseDestination && currentArea) {
 			var path = getShorterPathToKnownUndiscoveredWays(currentArea);
 			if (!path) {
-				console.error(new Date().toISOString() + "    3 - recombineAll start");
+				//console.error(new Date().toISOString() + "    3 - recombineAll start");
 	
 				var recombiningCount = 40;
 				while (recombiningCount-->0 && recombineAll(currentArea)) {};
 
-				console.error(new Date().toISOString() + "    3 - recombineAll end");
+				//console.error(new Date().toISOString() + "    3 - recombineAll end");
 			}
 			path = getShorterPathToKnownUndiscoveredWays(currentArea);
 			if (path) {
@@ -430,7 +430,7 @@ function walk(areas, skipWayBackVerification) {
 
 		explain(" >> Desired destination: " + JSON.stringify(desiredDestination));
 
-		console.error(new Date().toISOString() + "    5");
+		//console.error(new Date().toISOString() + "    5");
 		//5-console.log the move
 		explain(" moving to " + choosenWay.dest + " by " + choosenWay.id);
 		walkPath.push(choosenWay);
@@ -445,13 +445,13 @@ function walk(areas, skipWayBackVerification) {
 			getKnownUndiscoveredWaysByName(currentArea)
 		}
 
-		console.error(new Date().toISOString() + "    6");
+		//console.error(new Date().toISOString() + "    6");
 		//6-Move to next map
 		var previousArea = currentArea;
 		currentArea = choosenWay.dest;
 		enteredFromId = choosenWay.id;
 
-		console.error(new Date().toISOString() + "    7");
+		//console.error(new Date().toISOString() + "    7");
 		//7-addKnownPath
 		var addingNew = 3;
 		while (addingNew-->0 && addKnownPath(previousArea, choosenWay)) {};
@@ -460,7 +460,7 @@ function walk(areas, skipWayBackVerification) {
 			console.error("ERROR - was in loop searching for new know paths seems to be always adding new indefinitely - the script believes it should keep trying to find more.");
 		}
 
-		console.error(new Date().toISOString() + "    8");
+		//console.error(new Date().toISOString() + "    8");
 		//8-path enablement
 		//cant go if
 		//- way is an entrance*
@@ -479,7 +479,7 @@ function walk(areas, skipWayBackVerification) {
 			wayBack.direction="bi";
 		}
 
-		console.error(new Date().toISOString() + "    9");
+		//console.error(new Date().toISOString() + "    9");
 		//9-make the way back also known
 		if (wayBack && currentArea &&
 				getAreaExits(getAreaByName(wayBack.dest))

@@ -1,5 +1,5 @@
 const express = require('express');
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const { Storage } = require('@google-cloud/storage');
 const uuid = require('uuid');
@@ -19,7 +19,9 @@ function exec(cmd, callback, errCallback) {
 			}
 			return;
 		}
-		callback();
+		if (callback) {
+			callback();
+		}
 	});
 }
 

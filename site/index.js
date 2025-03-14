@@ -161,7 +161,7 @@ document.querySelectorAll('form').forEach(form => {
             const data = await response.json();
             const presignedUrl = data.url; // Get the presigned URL from the response
 
-            setStatus("uploadeding");
+            setStatus("uploading");
 
             // Upload the file directly to Google Cloud Storage using the presigned URL
             const uploadResponse = await fetch(presignedUrl, {
