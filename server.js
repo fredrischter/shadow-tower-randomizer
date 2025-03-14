@@ -1,5 +1,5 @@
 const express = require('express');
-const fs = require('fs').promises;
+const fs = require('fs');
 const path = require('path');
 const { Storage } = require('@google-cloud/storage');
 const uuid = require('uuid');
@@ -36,7 +36,6 @@ const PORT = process.env.PORT || 8080;
 // Initialize Google Cloud Storage client
 const storage = new Storage();
 const BUCKET_NAME = 'shadow-tower-randomizer';
-const GENERATED_FOLDER = path.join(__dirname, 'generated');
 const UPLOADS_FOLDER = path.join(__dirname, 'uploads');
 const PARAMS_FOLDER = path.join(__dirname, 'params');
 
@@ -47,7 +46,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 async function uploadFolderToGCS(folderPath, destinationPath = '') {
-  const files = await fs.readdir(folderPath, { withFileTypes: true });
+  const files =  fs.readdirSync(folderPath, { withFileTypes: true });
+  console.log(`Uploadeding folder ${folderPath}`);
 
   for (const file of files) {
     const localFilePath = path.join(folderPath, file.name);
@@ -55,6 +55,7 @@ async function uploadFolderToGCS(folderPath, destinationPath = '') {
     const destination = path.join(destinationPath, relativePath).replace(/\\/g, '/');
 
     if (file.isDirectory()) {
+	  console.log(`Uploadeding file ${localFilePath}`);
       await uploadFolderToGCS(localFilePath, destination); // Recurse
     } else {
       await storage.bucket(BUCKET_NAME).upload(localFilePath, { destination });
@@ -127,7 +128,7 @@ app.post('/upload-complete', async (req, res) => {
     paramsObject.label = sessionId;
     fs.writeFileSync(paramsFileName, JSON.stringify(paramsObject, null, 2), 'utf8');
 
-    const outputPath = path.join(GENERATED_FOLDER, sessionId);
+    const outputPath = path.join(UPLOADS_FOLDER, sessionId, sessionId);
 
     log('Processing. Output ' + outputPath + ' Params ' + paramsFileName);
     log('Params ' + JSON.stringify(paramsObject));
