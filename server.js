@@ -45,7 +45,7 @@ let uploadStatus = {}; // stores sessionId -> { status: "processing"/"completed"
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-async function uploadFolderToGCS(folderPath, destinationPath = '') {
+function uploadFolderToGCS(folderPath, destinationPath = '') {
   const files =  fs.readdirSync(folderPath, { withFileTypes: true });
   console.log(`Uploadeding folder ${folderPath}`);
 
@@ -55,17 +55,17 @@ async function uploadFolderToGCS(folderPath, destinationPath = '') {
     const destination = path.join(destinationPath, relativePath).replace(/\\/g, '/');
 
     if (file.isDirectory()) {
-	  console.log(`Uploadeding file ${localFilePath}`);
-      await uploadFolderToGCS(localFilePath, destination); // Recurse
+      uploadFolderToGCS(localFilePath, destination); // Recurse
     } else {
+	  console.log(`Uploading file ${localFilePath}`);
       await storage.bucket(BUCKET_NAME).upload(localFilePath, { destination });
       console.log(`Uploaded ${localFilePath} to gs://${BUCKET_NAME}/${destination}`);
     }
   }
-  log(`Deleting local folder. ${folderPath}`);
+  console.log(`Deleting local folder. ${folderPath}`);
   if (fs.existsSync(folderPath)) {
     fs.rmSync(folderPath, { recursive: true, force: true });
-    log(`Deleted: ${folderPath}`);
+    console.log(`Deleted: ${folderPath}`);
   }
 }
 
@@ -145,7 +145,7 @@ app.post('/upload-complete', async (req, res) => {
 	    log('Finished processing. Generated ' + outputPath);
 	    uploadStatus[sessionId] = { status: 'processed' };
 
-	    fs.rmSync(path.join(UPLOADS_FOLDER, 'extracted'), { recursive: true, force: true });
+	    fs.rmSync(path.join(outputPath, 'extracted'), { recursive: true, force: true });
 
 	    // Step 5: Upload the copied folder to the bucket
 	    uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
