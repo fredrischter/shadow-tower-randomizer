@@ -81,13 +81,13 @@ function uploadFolderToGCS(folderPath, destinationPath = '') {
   }
 }
 
-function generateSignedUrl(filePath, action = 'read', expiresInSeconds = 3600) {
+async function generateSignedUrl(filePath, action = 'read', expiresInSeconds = 3600) {
   const options = {
     action,
     expires: Date.now() + expiresInSeconds * 1000, // Convert to milliseconds
   };
 
-  const [url] = storage.bucket(BUCKET_NAME).file(filePath).getSignedUrl(options);
+  const [url] = await storage.bucket(BUCKET_NAME).file(filePath).getSignedUrl(options);
   return url;
 }
 
@@ -161,7 +161,7 @@ app.post('/upload-complete', async (req, res) => {
     uploadStatus[sessionId] = { status: 'processing' };
 
     // Step 3: Wait for 2 minutes before continuing
-	exec('npm run mod "' + filePath + '" "' + paramsFileName + '"', function() {
+	exec('npm run mod "' + filePath + '" "' + paramsFileName + '"', async function() {
 
 	    log('Finished processing. Generated ' + outputPath);
 	    uploadStatus[sessionId] = { status: 'processed' };
@@ -171,7 +171,7 @@ app.post('/upload-complete', async (req, res) => {
 	    const zipFilePath = outputPath + ".zip";
 	    zipDirectory(outputPath, zipFilePath);
       const destinationZip = `outputs/${sessionId}.zip`;
-	    storage.bucket(BUCKET_NAME).upload(zipFilePath, { destinationZip });
+	    await storage.bucket(BUCKET_NAME).upload(zipFilePath, { destinationZip });
 
 	    // Step 5: Upload the copied folder to the bucket
 	    //uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
@@ -198,7 +198,7 @@ app.post('/upload-complete', async (req, res) => {
 	    //file.delete();
 
 	    log('Completed');
-	    uploadStatus[sessionId] = { status: 'completed', url: generateSignedUrl(destinationZip)};
+	    uploadStatus[sessionId] = { status: 'completed', url: await generateSignedUrl(destinationZip)};
 
 		//console.log(`Deleting local folder. ${folderPath}`);
 		//if (fs.existsSync(folderPath)) {
