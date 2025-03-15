@@ -81,6 +81,15 @@ function uploadFolderToGCS(folderPath, destinationPath = '') {
   }
 }
 
+function generateSignedUrl(filePath, action = 'read', expiresInSeconds = 3600) {
+  const options = {
+    action,
+    expires: Date.now() + expiresInSeconds * 1000, // Convert to milliseconds
+  };
+
+  const [url] = storage.bucket(BUCKET_NAME).file(filePath).getSignedUrl(options);
+  return url;
+}
 
 // Generate a presigned URL for file upload
 app.get('/generate-presigned-url', async (req, res) => {
@@ -189,7 +198,7 @@ app.post('/upload-complete', async (req, res) => {
 	    //file.delete();
 
 	    log('Completed');
-	    uploadStatus[sessionId] = { status: 'completed'};
+	    uploadStatus[sessionId] = { status: 'completed', url: generateSignedUrl(destinationZip)};
 
 		//console.log(`Deleting local folder. ${folderPath}`);
 		//if (fs.existsSync(folderPath)) {
