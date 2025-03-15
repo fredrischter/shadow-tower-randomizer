@@ -169,7 +169,7 @@ app.post('/upload-complete', async (req, res) => {
 	    fs.rmSync(path.join(outputPath, 'extracted'), { recursive: true, force: true });
 
 	    const zipFilePath = outputPath + ".zip";
-	    zipDirectory(outputPath, zipFilePath);
+	    await zipDirectory(outputPath, zipFilePath);
       const destinationZip = `outputs/${sessionId}.zip`.replace(/\\/g, '/');
 	    await storage.bucket(BUCKET_NAME).upload(zipFilePath, { destination: destinationZip });
 
