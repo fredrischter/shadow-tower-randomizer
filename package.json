@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/storage": "^7.15.2",
+    "archiver": "^7.0.1",
     "canvas": "2.11.2",
     "cors": "^2.8.5",
     "eol": "0.9.1",

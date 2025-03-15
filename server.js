@@ -5,6 +5,23 @@ const { Storage } = require('@google-cloud/storage');
 const uuid = require('uuid');
 const { promisify } = require('util');
 const child_process = require('child_process');
+const archiver = require('archiver');
+
+function zipDirectory(sourceDir, outPath) {
+  const archive = archiver('zip', { zlib: { level: 9 }});
+  const stream = fs.createWriteStream(outPath);
+
+  return new Promise((resolve, reject) => {
+    archive
+      .directory(sourceDir, false)
+      .on('error', err => reject(err))
+      .pipe(stream)
+    ;
+
+    stream.on('close', () => resolve());
+    archive.finalize();
+  });
+}
 
 function exec(cmd, callback, errCallback) {
 	console.log("Running " + cmd);
@@ -109,7 +126,7 @@ app.post('/upload-complete', async (req, res) => {
     // Step 1: Download the file from Google Cloud Storage
     const filePath = path.join(UPLOADS_FOLDER, sessionId, 'st.bin');
     const file = storage.bucket(BUCKET_NAME).file(`uploads/${filename}/st.bin`);
-	fs.mkdirSync(path.join(UPLOADS_FOLDER, sessionId), { recursive: true });
+	  fs.mkdirSync(path.join(UPLOADS_FOLDER, sessionId), { recursive: true });
 
     log('Downloading to ' + filePath + ' from ' + JSON.stringify(file));
     uploadStatus[sessionId] = { status: 'downloading' };
@@ -142,8 +159,13 @@ app.post('/upload-complete', async (req, res) => {
 
 	    fs.rmSync(path.join(outputPath, 'extracted'), { recursive: true, force: true });
 
+	    const zipFilePath = outputPath + ".zip";
+	    zipDirectory(outputPath, zipFilePath);
+      const destinationZip = `outputs/${sessionId}.zip`;
+	    storage.bucket(BUCKET_NAME).upload(zipFilePath, { destinationZip });
+
 	    // Step 5: Upload the copied folder to the bucket
-	    uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
+	    //uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
 
 	    uploadStatus[sessionId] = { status: 'uploaded'};
 	    log('Uploaded to ' + `outputs/${sessionId}`);
