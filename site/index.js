@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 	$( "#buttonApply" ).button({icon: "ui-icon-star"});
 
+	$( "#buttonDownload" ).button({icon: "ui-icon-star"});
 	$( "#buttonDownloadIso" ).button({icon: "ui-icon-star"});
 	$( "#buttonDownloadSpoilers" ).button();
 
@@ -113,7 +114,17 @@ function checkFileStatus(sessionId) {
           clearInterval(intervalId);
 
           // Provide the presigned URL to download the file
-          console.log('Download URL:', data.presignedUrl);
+          console.log('Download URL:', data.url);
+
+          $("#buttonDownload").click(function () {
+			const link = $("<a>")
+			.attr("href", data.url)
+			.attr("download", "")  // Let the browser decide filename
+			.appendTo("body");
+
+			link[0].click();
+			link.remove();
+		  });
           // You can now allow the user to download the file
           // e.g., create a download button or automatically start download
         } else {
