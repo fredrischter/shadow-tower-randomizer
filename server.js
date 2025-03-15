@@ -170,8 +170,8 @@ app.post('/upload-complete', async (req, res) => {
 
 	    const zipFilePath = outputPath + ".zip";
 	    zipDirectory(outputPath, zipFilePath);
-      const destinationZip = `outputs/${sessionId}.zip`;
-	    await storage.bucket(BUCKET_NAME).upload(zipFilePath, { destinationZip });
+      const destinationZip = `outputs/${sessionId}.zip`.replace(/\\/g, '/');
+	    await storage.bucket(BUCKET_NAME).upload(zipFilePath, { destination: destinationZip });
 
 	    // Step 5: Upload the copied folder to the bucket
 	    //uploadFolderToGCS(outputPath, `outputs/${sessionId}`);
