@@ -1,4 +1,16 @@
-# Setup Debian
+# Testable online version
+
+https://shadow-tower-randomizer-1023048112324.us-central1.run.app/
+
+# Contact
+
+fredrischter at gmail dot com
+
+FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
+
+# Local setup (for developers)
+
+## Setup Debian
 
 sudo apt-get upgrade -y
 sudo apt-get update -y
@@ -12,7 +24,7 @@ cd shadow-tower-randomizer
 npm install
 export NODE_OPTIONS=--max_old_space_size=4096
 
-# Setup Windows
+## Setup Windows
 
 - Download and install NodeJS
 
@@ -24,17 +36,11 @@ npm install
 - Download, extract and add bin to path LameGuy64's MKPSXISO https://github.com/Lameguy64/mkpsxiso/releases/latest
 You'll end up with programs available mkpsxiso and dumpsxiso.
 
-# Functionality
+## Functionality
 
 Refer to ./site/index.html for features listing.
 
-# Contact
-
-fredrischter at gmail dot com
-
-FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
-
-# Run manually
+## Run manually
 
 Replace st.bin by your image file.
 
@@ -83,21 +89,21 @@ npm run mod ".\generated\st.bin" ".\params\only-bosses.json"
 
 You can also put a image named as st.bin in generated\ folder, run all those commands to verify if produced output is different than one in the repo - that is reference generated files. Any output change indicates there was a code bahavior change, so it works like test.
 
-# Tests
+## Tests
 
 Run, verify updated csv files.
 
 ./test_item_uniques.sh & ./test_items_count.sh & ./test_assertions.sh & ./test_failures.sh &
 
-# Options
+## Options
 
 toNotGenerateImages Doesn't generate map images, that makes it much quicker to run.
 
-# How to convert a map part 7th file to TIM file
+## How to convert a map part 7th file to TIM file
 
 npm run map_texture_extract ".\generated\randomized-medium\extracted\ST\COM\FDAT.T_PARTS\47 281000-2c0800.T"
 
-# Package and deploy
+## Package and deploy
 
 - Install docker
 - Install gcould cli https://cloud.google.com/sdk/docs/install
