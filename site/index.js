@@ -187,10 +187,21 @@ document.querySelectorAll('form').forEach(form => {
                 setStatus("uploadeded");
                 console.log('File uploaded successfully to Google Cloud Storage');
 
+                requestParamsString = JSON.stringify({
+					"preset": $('#purpose-radioset input[name="preset"]:checked').val(),
+					"difficulty": $('#dif-radioset input[name="difficulty"]:checked').val(),
+					"randomizeMap": true,
+					"randomizeCreatures": true,
+					"randomizeCollectablesAndDrops": true,
+					"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
+					"randomizeNonEssentialKeys": true,
+					"seed": ""+ Math.floor(Math.random() * 1000)
+				});
+
 				fetch('/upload-complete', {
 				  method: 'POST',
 				  headers: { 'Content-Type': 'application/json' },
-				  body: JSON.stringify({ sessionId })
+				  body: JSON.stringify({ sessionId, requestParamsString })
 				})
 				.then(response => response.json())
 				.then(data => {

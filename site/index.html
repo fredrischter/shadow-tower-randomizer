@@ -128,21 +128,25 @@
 			<form style="margin-top: 1em;">
 				<h3>Difficulty</h3>
 				<div id="dif-radioset">
-					<input type="radio" id="dif-radio1" name="radio"><label for="dif-radio1">
+					<input type="radio" id="dif-radio0" name="difficulty" value="extreme-easy"><label for="dif-radio0">
+						Extremely Easy
+					</label>
+					<input type="radio" id="dif-radio1" name="difficulty" value="easy"><label for="dif-radio1">
 						Easy
 					</label>
-					<input type="radio" id="dif-radio2" name="radio" checked="checked"><label for="dif-radio2">
+					<input type="radio" id="dif-radio2" name="difficulty" checked="checked" value="medium"><label for="dif-radio2">
 						Medium
 					</label>
-					<input type="radio" id="dif-radio3" name="radio"><label for="dif-radio3">
+					<input type="radio" id="dif-radio3" name="difficulty" value="hard"><label for="dif-radio3">
 						Hard
 					</label>
-					<input type="radio" id="dif-radio4" name="radio"><label for="dif-radio4">
+					<input type="radio" id="dif-radio4" name="difficulty" value="very-hard"><label for="dif-radio4">
 						Very hard
 					</label>
-					<input type="radio" id="dif-radio5" name="radio"><label for="dif-radio5">
+					<input type="radio" id="dif-radio5" name="difficulty" value="even-harder"><label for="dif-radio5">
 						Even harder
 					</label>
+
 				</div>
 			</form>
 
@@ -157,28 +161,28 @@
 			<form style="margin-top: 1em;">
 				<h3>Preset by purpose</h3>
 				<div id="purpose-radioset">
-					<input type="radio" id="purpose-radio1" name="radio" checked="checked"><label for="purpose-radio1">
+					<input type="radio" id="purpose-radio1" name="preset" value="any%" checked="checked"><label for="purpose-radio1">
 						Any%
 					</label>
-					<input type="radio" id="purpose-radio2" name="radio"><label for="purpose-radio2">
+					<input type="radio" id="purpose-radio2" name="preset" value="100%"><label for="purpose-radio2">
 						100%
 					</label>
-					<input type="radio" id="purpose-radio3" name="radio"><label for="purpose-radio3">
+					<input type="radio" id="purpose-radio3" name="preset" value="scary-game"><label for="purpose-radio3">
 						Scary Game
 					</label>
-					<input type="radio" id="purpose-radio4" name="radio"><label for="purpose-radio4">
-						Stable
+					<input type="radio" id="purpose-radio4" name="preset" value="no-change"><label for="purpose-radio4">
+						No Change
 					</label>
-					<input type="radio" id="purpose-radio5" name="radio"><label for="purpose-radio5">
+					<input type="radio" id="purpose-radio5" name="preset" value="comedy"><label for="purpose-radio5">
 						Comedy
 					</label>
-					<input type="radio" id="purpose-radio6" name="radio"><label for="purpose-radio6">
+					<input type="radio" id="purpose-radio6" name="preset" value="bonanza"><label for="purpose-radio6">
 						Bonanza
 					</label>
-					<input type="radio" id="purpose-radio7" name="radio"><label for="purpose-radio7">
+					<input type="radio" id="purpose-radio7" name="preset" value="fix-king-hopper"><label for="purpose-radio7">
 						Only fix King Hopper
 					</label>
-					<input type="radio" id="purpose-radio8" name="radio"><label for="purpose-radio8">
+					<input type="radio" id="purpose-radio8" name="preset" value="apply-directives"><label for="purpose-radio8">
 						Only directives
 					</label>
 				</div>
@@ -187,7 +191,8 @@
 				<li>Any% random challenge - Best recommended randomized game, not able to complete 100% equips collect.</li>
 				<li>100% random challenge - Much more items are available, making it possible to complete 100% of the game in one run.</li>
 				<li>Scary Game - Highest randomness, unpredictability and difficulty. Stability is compromised in favor of horror.</li>
-				<li>Stable - Mild randomization and difficulty in order to keep game reasonable to play.</li>
+				<li>No Change - Just rebuild the game as it is without performing any change - binary may have little difference due to unused values zeroing.</li>
+				<!--li>Stable - Mild randomization and difficulty in order to keep game reasonable to play.</li-->
 				<li>Comedy - Creatures may spawn in bizarre positions. You'll find keys, filled Nadya pitchers and some nice equips in the beginning.</li>
 				<li>Bonanza - All of the nice drops very soon in the game (full armors and other rare and strong equips). It may corrupt textures or be unstable since all that is memory intensive.</li>
 				<li>Only fix King Hopper - Only fix King Hopper spawn, that is just broken in regular game, where if you miss the chance it never spawns.</li>

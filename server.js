@@ -111,7 +111,7 @@ app.get('/generate-presigned-url', async (req, res) => {
 
 // Endpoint for the client to notify the server after upload
 app.post('/upload-complete', async (req, res) => {
-  const { sessionId } = req.body;
+  const { sessionId, requestParamsString } = req.body;
 
   if (!sessionId) {
     return res.status(400).json({ message: 'Session ID and file URL are required' });
@@ -146,11 +146,11 @@ app.post('/upload-complete', async (req, res) => {
     log('Downloaded to ' + filePath + '.');
     uploadStatus[sessionId] = { status: 'preparing' };
 
-    const template = path.join(PARAMS_FOLDER, 'bonanza.json');
+    //const template = path.join(PARAMS_FOLDER, 'bonanza.json');
     const paramsFileName = path.join(UPLOADS_FOLDER, sessionId, 'params.json');
-    fs.copyFileSync(template, paramsFileName);
+    //fs.copyFileSync(template, paramsFileName);
     
-    const paramsObject = JSON.parse(fs.readFileSync(paramsFileName));
+    const paramsObject = JSON.parse(requestParamsString);
     paramsObject.label = sessionId;
     fs.writeFileSync(paramsFileName, JSON.stringify(paramsObject, null, 2), 'utf8');
 
