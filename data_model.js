@@ -1038,6 +1038,14 @@
     "sand_leech_b", "elder", "claw_head"
   ];
 
+  var farReachingRandomizableCreatures = [
+    "demon_bat", "watcher_plant", "elder", "star_serpent", "imp", "beak_plant"
+  ];
+
+  var largeAreaRandomizableCreatures = [
+    "acid_skull", "blood_skull"
+  ];
+
   const CREATURE_DATA_LENGTH = 93;
   const ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET = 96;
   const ENTITY_STATE_OFFSETS_ARRAY_LENGTH = 24;
@@ -1644,6 +1652,22 @@
             if (this.gateKeeperRandomizable) {
               randomizableGateKeeperCreatures.push(this);
             }
+
+            this.farReachingRandomizable = false;
+            farReachingRandomizableCreatures.forEach((name) => {
+              if (this.name.includes(name)) {
+                this.randomizable = true;
+                this.farReachingRandomizable = true;
+              };
+            });
+
+            this.largeAreaRandomizable = false;
+            largeAreaRandomizableCreatures.forEach((name) => {
+              if (this.name.includes(name)) {
+                this.randomizable = true;
+                this.largeAreaRandomizable = true;
+              };
+            });
           }
         }
 
@@ -1797,7 +1821,7 @@
       //      + ",\"offset_in_file\":\"" + this.offset_in_file.toString(16).padStart(4) + "\"" 
       //      + ",\"absoluteIndex\":\"" + this.absoluteIndex.toString(16).padStart(8) + "\"" 
       + ",\"isDoor\":" + this.isDoor
-      + ",\"randomizationGroup\": \"" + this.randomizationGroup() + "\"}";
+      + ",\"randomizationGroup\": \"" + this.randomizationGroup({}) + "\"}";
     }
 
   score() {
@@ -1882,12 +1906,25 @@
 
   }
 
-  randomizationGroup() {
+  randomizationGroup(params) {
     if (!this.randomizable) {
       return null;
     }
 
-    var group = this.area.name.split("_world")[0] + "_world";
+    var group = "";
+    
+    // Task 4: Do not tag monsters by world when in comedy, scary, or bonanza mode
+    const skipWorldTagging = params && (
+      params.preset === "comedy" || 
+      params.preset === "scary-game" || 
+      params.preset === "bonanza"
+    );
+    
+    if (!skipWorldTagging) {
+      group = this.area.name.split("_world")[0] + "_world";
+    } else {
+      group = "all_worlds";
+    }
 
     if (this.flyingRandomizable) {
       group += "-flying";
@@ -1895,6 +1932,21 @@
 
     if (this.gateKeeperRandomizable) {
       group += "-gateKeeper";
+    }
+
+    // Task 3: farReaching tag (only for non-high difficulties)
+    const isHighDifficulty = params && (
+      params.difficulty === "hard" || 
+      params.difficulty === "very-hard" || 
+      params.difficulty === "even-harder"
+    );
+    if (this.farReachingRandomizable && !isHighDifficulty) {
+      group += "-farReaching";
+    }
+
+    // Task 6: largeArea tag
+    if (this.largeAreaRandomizable) {
+      group += "-largeArea";
     }
 
     group += "-textureCost"+this.textureCost;
