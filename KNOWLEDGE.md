@@ -2196,6 +2196,455 @@ if (!toNotGenerateImages) {
 
 ---
 
+## Area Connections and Door System
+
+### Overview of Area Connection Architecture
+
+Shadow Tower's world is composed of discrete **areas** (map files) connected through various types of **exits**. Each exit is a game object within an area that can transport the player to another area. The randomizer can shuffle these connections while maintaining bidirectional consistency and walkability.
+
+### Exit Types
+
+There are four types of exits in Shadow Tower:
+
+1. **door** - Standard fog gates/doorways (most common)
+2. **totem** - Teleport totems that warp players
+3. **portal** - Magical portals (mainly in Fire/Illusion worlds)
+4. **jump** - Special fall-through connections (within same area)
+
+**Randomization Rules:**
+- Only "door" type exits are randomized
+- "totem", "portal", and "jump" types remain fixed (too complex to swap safely)
+
+### Door Data Structure
+
+Each door exit in map.json contains:
+
+```json
+{
+  "id": "0",                           // Exit object ID within source area
+  "dest": "human_world_solitary_region", // Destination area name
+  "world": "human_world",               // Destination world (for filtering)
+  "wayBackId": "38",                    // ID of the return door in destination
+  "type": "door",                       // Exit type
+  "rotation": 0                         // Player rotation when entering (0-3)
+}
+```
+
+### Bidirectional Consistency System
+
+**Critical Concept:** Every door has a **wayback door** - the corresponding door on the other side.
+
+Example pairing:
+```
+Area A, door 5  → Area B, door 12
+Area B, door 12 → Area A, door 5
+```
+
+**wayBackId** creates this bidirectional link:
+- Door 5 in Area A has `wayBackId: "12"` (points to door 12 in Area B)
+- Door 12 in Area B has `wayBackId: "5"` (points back to door 5 in Area A)
+
+### Map Shuffling Algorithm
+
+**File:** map_shuffler.js
+
+**Process:**
+
+1. **Select Random Area:**
+   ```javascript
+   var randomArea = map[Math.floor(Math.random()*map.length)];
+   ```
+
+2. **Filter Switchable Doors:**
+   ```javascript
+   var switchableDoors = randomArea.exits.filter(way => {
+     return way.type == "door";  // Only regular doors
+   });
+   ```
+
+3. **Rotate Doors (if 2+ doors):**
+   ```javascript
+   // Save first door
+   var firstWayCopy = JSON.parse(JSON.stringify(switchableDoors[0]));
+   
+   // Shift all doors forward
+   for (var i=1; i<switchableDoors.length; i++) {
+     assignWay(switchableDoors[i-1], switchableDoors[i], randomArea, map);
+   }
+   
+   // Last door gets first door's original destination
+   assignWay(switchableDoors[switchableDoors.length-1], firstWayCopy, randomArea, map);
+   ```
+
+   This creates a "rotation" effect:
+   ```
+   Before:  Door A→X, Door B→Y, Door C→Z
+   After:   Door A→Y, Door B→Z, Door C→X
+   ```
+
+4. **Update Wayback Doors (Bidirectional Sync):**
+   ```javascript
+   function assignWay(to, from, area, map) {
+     if (consistentDoors && from.wayBackId) {
+       // Find the destination area
+       var wayBackArea = map.find(area => area.name == from.dest);
+       
+       // Find the wayback door in that area
+       var wayBackWay = wayBackArea.exits.find(exit => exit.id == from.wayBackId);
+       
+       // Update the wayback door to point back to us
+       wayBackWay.dest = area.name;
+       wayBackWay.world = area.world;
+       wayBackWay.wayBackId = to.id;  // Point to our new ID
+     }
+     
+     // Update our door
+     to.dest = from.dest;
+     to.world = from.world;
+     to.wayBackId = from.wayBackId;
+   }
+   ```
+
+   **Example:**
+   ```
+   Initial State:
+     Tower door 0 → Solitary door 38
+     Solitary door 38 → Tower door 0
+     Tower door 4 → Cursed door 31
+     Cursed door 31 → Tower door 4
+   
+   After Rotation in Tower:
+     Tower door 0 → Cursed door 31    (was →Solitary)
+     Cursed door 31 → Tower door 0    (auto-updated wayback)
+     Tower door 4 → Solitary door 38  (was →Cursed)
+     Solitary door 38 → Tower door 4  (auto-updated wayback)
+   ```
+
+### Consistency Verification
+
+**File:** map_shuffler.js, walklib.js
+
+After every shuffle, the system validates:
+
+```javascript
+function verifyConsistency(map) {
+  map.forEach(area => {
+    area.exits.forEach(exit => {
+      if (exit.wayBackId) {
+        // Check wayback door exists
+        if (!areasMap[exit.dest][exit.wayBackId]) {
+          console.error("ERROR - wayBackId doesn't exist");
+          process.exit(1);
+        }
+        
+        // Check wayback door points back to us
+        var wayBackDoor = areasMap[exit.dest][exit.wayBackId];
+        if (wayBackDoor.dest != area.name) {
+          console.error("ERROR - wayBackId inconsistent");
+          console.error(`${exit.dest}/${exit.wayBackId} points to ${wayBackDoor.dest}, expected ${area.name}`);
+          process.exit(1);
+        }
+      }
+    });
+  });
+}
+```
+
+**Validation Errors:**
+- **"inconsistent wayBackId doesn't exist"** - wayBackId points to non-existent door
+- **"inconsistent wayBackId doesn't match"** - wayback door doesn't point back
+
+### Binary Implementation
+
+**File:** data_model.js, randomizer_map.js
+
+Doors are represented as game objects with specific binary structure:
+
+```javascript
+class MapObject {
+  constructor(bin, area, offset_in_file) {
+    this.bin = bin;  // Binary data buffer
+    this.area = area;
+    this.offset_in_file = offset_in_file;
+    
+    // Binary field accessors (UInt8, UInt16, Int16)
+    this.id = new UInt8(this.bin, this.offset_in_file + 0x06);
+    this.tileX = new UInt8(this.bin, this.offset_in_file + 0x00);
+    this.tileY = new UInt8(this.bin, this.offset_in_file + 0x01);
+    this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x02);
+    
+    // Exit-specific fields
+    this.destinationMapIndex = new UInt8(this.bin, this.offset_in_file + 0x15);
+    this.destinationXShift = new Int16(this.bin, this.offset_in_file + 0x10);
+    this.destinationYShift = new Int16(this.bin, this.offset_in_file + 0x12);
+    this.destinationZShift = new Int16(this.bin, this.offset_in_file + 0x14);
+    this.destinationRotation = new UInt8(this.bin, this.offset_in_file + 0x16);
+    this.destinationYFineShift = new UInt8(this.bin, this.offset_in_file + 0x17);
+    
+    // Displacement (how far in front of door to spawn player)
+    this.exitDisplacementX = new Int8(this.bin, this.offset_in_file + 0x0D);
+    this.exitDisplacementY = new Int8(this.bin, this.offset_in_file + 0x0E);
+    this.exitDisplacementZ = new Int8(this.bin, this.offset_in_file + 0x0F);
+  }
+  
+  setExit(source, map) {
+    // Copy destination map index
+    this.destinationMapIndex.set(source.destinationMapIndex.get());
+    
+    // Copy spawn position
+    this.destinationXShift.set(source.destinationXShift.get());
+    this.destinationYShift.set(source.destinationYShift.get());
+    this.destinationZShift.set(source.destinationZShift.get());
+    
+    // Calculate rotation relative to wayback door
+    var origin = this.getExit();  // This door's map.json entry
+    var dest = source.getWayBackExit(map);  // Destination's wayback door
+    
+    var rotationToSet = - origin.rotation 
+                        + (dest.type=="totem" ? 0 : -2) 
+                        + dest.rotation;
+    rotationToSet = (rotationToSet + 40) % 4;
+    
+    this.destinationRotation.set(rotationToSet);
+    
+    // Copy displacement (if not totem)
+    if (dest.type != "totem") {
+      this.exitDisplacementX.set(source.exitDisplacementX.get());
+      this.exitDisplacementY.set(source.exitDisplacementY.get());
+      this.exitDisplacementZ.set(source.exitDisplacementZ.get());
+    }
+    
+    this.destinationYFineShift.set(source.destinationYFineShift.get());
+  }
+}
+```
+
+### Application to Binary Files
+
+**File:** randomizer_map.js
+
+After map shuffling, binary data is updated:
+
+```javascript
+function applyShuffledMap(map, changeSet) {
+  // Create registry of original door data (before shuffle)
+  var cloneRegistryPerDestination = {};
+  
+  map.forEach(area => {
+    area.exits.forEach(exit => {
+      if (exit.type == "door") {
+        var originalDoor = area.objects[parseInt(exit.id)];
+        cloneRegistryPerDestination[exit.dest + "/" + exit.wayBackId] = 
+          clone(originalDoor);
+      }
+    });
+  });
+  
+  // Apply shuffled connections
+  map.forEach(targetArea => {
+    targetArea.exits.forEach(targetExit => {
+      if (targetExit.type == "door") {
+        // Find original door that led to this destination
+        var objectToCopyFrom = originalEntranceTo(targetExit.dest, 
+                                                  targetExit.wayBackId);
+        
+        // Get current door object
+        var recipientObject = targetArea.objects[parseInt(targetExit.id)];
+        
+        // Copy binary data
+        recipientObject.setExit(objectToCopyFrom, map);
+      }
+    });
+  });
+}
+```
+
+### Map ID System
+
+**Critical:** Areas are referenced by numeric **map index** in binary data.
+
+**File:** exits.txt (raw dump), data_model.js
+
+```
+Setup Area shadow_tower_part1a in FDAT file index 4 map index 0
+Setup Area human_world_solitary_region in FDAT file index 44 map index 4
+Setup Area earth_world_rotting_cavern in FDAT file index 114 map index 11
+```
+
+- **FDAT file index** - Position in ISO file listing
+- **map index** - Game's internal area ID (what destinationMapIndex uses)
+
+**Mapping:**
+```javascript
+const areaNameToMapIndex = {
+  "shadow_tower_part1a": 0,
+  "shadow_tower_part1b": 0,  // Same area, different section
+  "shadow_tower_part1c": 0,
+  "human_world_solitary_region": 4,
+  "human_world_hidden_region": 5,
+  "earth_world_rotting_cavern": 11,
+  // ... etc
+};
+```
+
+### Position and Rotation
+
+**Player Spawn Position:**
+- `destinationXShift` / `destinationYShift` / `destinationZShift` - Tile coordinates
+- `destinationXFineShift` / `destinationYFineShift` / `destinationZFineShift` - Sub-tile offsets
+- `exitDisplacementX/Y/Z` - How far in front of door to spawn (prevents player clipping)
+
+**Rotation Values:**
+- `0` = North
+- `1` = East
+- `2` = South
+- `3` = West
+
+**Calculation:**
+```javascript
+// Rotation is relative to both doors
+var rotationToSet = - originDoor.rotation    // Cancel origin rotation
+                    - 2                      // Turn around (opposite direction)
+                    + destDoor.rotation;     // Apply destination rotation
+rotationToSet = (rotationToSet + 40) % 4;    // Normalize to 0-3
+```
+
+This ensures player faces correct direction when exiting door.
+
+### Walkability Validation
+
+**File:** walklib.js
+
+After shuffling, map must be walkable (all required areas reachable):
+
+```javascript
+function validateWalkability(map, startArea) {
+  var visited = new Set([startArea]);
+  var queue = [startArea];
+  
+  while (queue.length > 0) {
+    var currentArea = queue.shift();
+    var area = map.find(a => a.name == currentArea);
+    
+    area.exits.forEach(exit => {
+      if (exit.type == "door" && !visited.has(exit.dest)) {
+        visited.add(exit.dest);
+        queue.push(exit.dest);
+      }
+    });
+  }
+  
+  // Check all required areas visited
+  var requiredAreas = [
+    "shadow_tower_part1a",
+    "human_world_solitary_region",
+    "earth_world_poisonous_cavern",
+    "fire_world_ashen_cavern",
+    "water_world_impure_pool_area",
+    "illusion_world_gloomy_domain",
+    "death_world_dark_castle_layer"
+  ];
+  
+  return requiredAreas.every(area => visited.has(area));
+}
+```
+
+If validation fails, shuffle is retried with different random seed.
+
+### Special Cases
+
+**Jump Exits:**
+```json
+{
+  "id": "jump",
+  "dest": "shadow_tower_part1c",
+  "type": "jump"
+}
+```
+- No wayBackId (one-way connection)
+- Connects areas within same physical space (falling through hole)
+- Never randomized
+
+**One-Way Totems:**
+```json
+{
+  "id": "26",
+  "dest": "human_world_forgotten_region",
+  "world": "human_world",
+  "wayBackId": "18",
+  "type": "totem",
+  "direction": "entrance"
+}
+```
+- Has wayBackId but not necessarily bidirectional
+- `direction` field indicates flow (entrance, exit, entrance-bi, exit-bi)
+- Not randomized (teleport networks too complex)
+
+### Difficulty Scaling
+
+Map shuffling respects difficulty:
+
+```javascript
+var difficulty = 115;  // 0-200 scale
+
+// Higher difficulty = more rounds of shuffling
+var maxSwapRounds = Math.floor(difficulty / 10);
+
+for (var i = 0; i < maxSwapRounds; i++) {
+  rotateDoors(map);
+  
+  if (!validateWalkability(map, "shadow_tower_part1a")) {
+    // Revert last change
+    map = JSON.parse(JSON.stringify(lastValidMap));
+    continue;
+  }
+  
+  lastValidMap = JSON.parse(JSON.stringify(map));
+}
+```
+
+**Effect:**
+- **Easy (50)** - 5 swap rounds (minor changes)
+- **Medium (115)** - 11 swap rounds (moderate maze)
+- **Hard (200)** - 20 swap rounds (maximum chaos)
+
+### Example Walkthrough
+
+**Original Map:**
+```
+Tower Part 1A
+  Door 0 → Solitary Region (door 38 back)
+
+Solitary Region
+  Door 38 → Tower Part 1A (door 0 back)
+  Door 31 → Hidden Region (door 9 back)
+  Door 34 → Hidden Region (door 13 back)
+```
+
+**After Shuffle Round:**
+```javascript
+rotateDoors(map.find(a => a.name == "human_world_solitary_region"));
+```
+
+**Result:**
+```
+Tower Part 1A
+  Door 0 → Hidden Region (door 9 back)  // Changed
+
+Solitary Region
+  Door 38 → Hidden Region (door 13 back)  // Shifted
+  Door 31 → Hidden Region (door 9 back)   // Shifted (to Tower now)
+  Door 34 → Tower Part 1A (door 0 back)   // Shifted
+
+Hidden Region
+  Door 9 → Tower Part 1A (door 0 back)   // Auto-updated wayback
+  Door 13 → Solitary Region (door 38 back) // Auto-updated wayback
+```
+
+Notice how all wayback doors automatically updated to maintain consistency!
+
+---
+
 ## Conclusion - Technical Summary
 
 The Shadow Tower Randomizer is a sophisticated binary modding tool that:
