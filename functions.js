@@ -1,6 +1,6 @@
 
 const seedrandom = require('seedrandom');
-const { uuid } = require('uuidv4');
+const { v4: uuid } = require('uuid');
 
 global.getUInt8 = function(bin, offset) {
   return bin[offset];

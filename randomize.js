@@ -1532,7 +1532,7 @@ function randomize(paramsFile, stDir) {
     var htmlFile = mapFolder + path.sep + "maps.html";
     var mapsHTML = ""+fs.readFileSync(htmlFile);
     if (!global.toNotGenerateImages) {
-        var { createCanvas } = require("canvas");
+        var { createCanvas } = require("@napi-rs/canvas");
     }
 
     var mermaidChart = "graph TD\n";
