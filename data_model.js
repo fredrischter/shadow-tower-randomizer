@@ -2216,13 +2216,14 @@
 
               creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
               if (params.colorRandomizationCreatures && params.colorRandomizationCreatures > 0) {
-                let creatureRandomizationFactor = params.colorRandomizationCreatures * 0.3;
+                let creatureRandomizationFactor = params.colorRandomizationCreatures * 0.15;
                 let creatureHsvShift = {
                   v: 0,
                   h: Math.random() * 360 * creatureRandomizationFactor,
                   s: 0
                 };
                 creature.texture.randomize(creatureHsvShift);
+                console.log("Applied individual hue shift to " + creature.name + ": h=" + creatureHsvShift.h.toFixed(1));
               }
               creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
 
