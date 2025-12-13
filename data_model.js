@@ -2215,7 +2215,15 @@
               console.log("Loading texture for creature " + areasByOriginalIndex[i].name + "/" + creature.name + " file " + modelFile.files[c*5+2].fileName);
 
               creature.texture = new TIMTextureFile(modelFile.files[c*5+2].bin);
-              creature.texture.randomize(areasByOriginalIndex[i].hsvRandomShift);
+              if (params.colorRandomizationCreatures && params.colorRandomizationCreatures > 0) {
+                let creatureRandomizationFactor = params.colorRandomizationCreatures * 0.3;
+                let creatureHsvShift = {
+                  v: 0,
+                  h: Math.random() * 360 * creatureRandomizationFactor,
+                  s: 0
+                };
+                creature.texture.randomize(creatureHsvShift);
+              }
               creature.textureCost = Math.ceil(creature.texture.bin.length / 30720);
 
         modelFile.files[c*5+2].setCheckSum();
