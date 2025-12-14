@@ -98,7 +98,9 @@ function randomize(paramsFile, stDir) {
     UNIQUES_SEQUENCE_RANDOMIZATION_SPAN=UNIQUES_SEQUENCE_RANDOMIZATION_SPAN;
 
     const mapFolder = changeSetPath;
-    fs.mkdirSync(mapFolder + path.sep + 'maps');
+    if (!fs.existsSync(mapFolder + path.sep + 'maps')) {
+        fs.mkdirSync(mapFolder + path.sep + 'maps');
+    }
     fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
 
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
@@ -797,7 +799,7 @@ function randomize(paramsFile, stDir) {
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
             item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3))));
-            item.dura.set(Math.min(255, Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
+            item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
         }
         if (primaryConsumables.indexOf(item.itemIndex) == -1 && secondaryConsumables.indexOf(item.itemIndex) == -1) {
             if (item.price.get() > 0) {
@@ -848,6 +850,7 @@ function randomize(paramsFile, stDir) {
                 return toKeep;
             });
             collectable.type.set(chosenItem);
+            
             console.log("DEBUG - Collectable randomization - Placing collectable unique " + items[collectable.type.get()].name + " at " + area.name + " where it was a " + items[previous].name + ". There are more " + collectableUniques.length + " to distribute.");
         } else {
             var chosen = consumablesForRandomization[Math.floor((Math.random()*consumablesForRandomization.length))];
@@ -1183,9 +1186,9 @@ function randomize(paramsFile, stDir) {
         });
     };
 
-    function groupObjectsByKey(objects) {
+    function groupObjectsByKey(objects, params) {
       return objects.reduce((groupedObject, obj) => {
-        const keyValue = obj.randomizationGroup();
+        const keyValue = obj.randomizationGroup(params);
         groupedObject[keyValue] = (groupedObject[keyValue] || []).concat(obj);
         return groupedObject;
       }, {});
@@ -1200,7 +1203,7 @@ function randomize(paramsFile, stDir) {
     forEachValidCreature(addCreaturesToRandomizableList);
     console.log(" allRandomizableCreatures " + allRandomizableCreatures.map(creature => creature.name));
 
-    var creatureRandomizableGroups = groupObjectsByKey(allRandomizableCreatures);
+    var creatureRandomizableGroups = groupObjectsByKey(allRandomizableCreatures, params);
     console.log(" creatureRandomizableGroups " + JSON.stringify(Object.keys(creatureRandomizableGroups)));
     console.log(" creatureRandomizableGroups " + JSON.stringify(Object.keys(creatureRandomizableGroups).reduce((result, key) => {
           result[key] = creatureRandomizableGroups[key].map(creature => creature.name);
@@ -1318,7 +1321,7 @@ function randomize(paramsFile, stDir) {
             
             for (var i =0; i<300; i++) {
                 var creature1 = randomElement(allRandomizableCreatures);
-                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup()]);
+                var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup(params)]);
                 swapCreatures(creature1, creature2, changeSet);
             }
         }
@@ -1535,7 +1538,10 @@ function randomize(paramsFile, stDir) {
         var { createCanvas } = require("@napi-rs/canvas");
     }
 
+    // Generate Mermaid chart with proper sanitization
     var mermaidChart = "graph TD\n";
+    var mermaidNodeId = (name) => name.replace(/[^a-zA-Z0-9]/g, '_');
+    
     shuffle.map.forEach(area => {
         if (area.exits) {
             Object.values(area.exits).forEach((exit) => {
@@ -1546,17 +1552,97 @@ function randomize(paramsFile, stDir) {
                     var exitObj = currentArea.objects[exit.id];
                     var exitObjText = exit.type == "jump" ? "" : "r" + exitObj.destinationRotation.get() + " y" + exitObj.destinationYFineShift.get();
 
-                    var chartText = area.name + "[" + (readableName[area.name] || area.name) + (area.score?" " + area.score:"")
-                    + "] -- " + (exitsNames[exitName] || exitName)+ " " + exitObjText + " --> "
-                    + exit.dest+"["+(readableName[exit.dest] || exit.dest) /*+ (exitArea && exitArea.score?" " + exitArea.score:"")*/ +"]\n";
+                    var sourceId = mermaidNodeId(area.name);
+                    var destId = mermaidNodeId(exit.dest);
+                    var sourceLabel = (readableName[area.name] || area.name) + (area.score?" [" + area.score+"]":"");
+                    var destLabel = (readableName[exit.dest] || exit.dest);
+                    var exitLabel = (exitsNames[exitName] || exitName) + " " + exitObjText;
+                    
+                    // Sanitize labels - remove newlines, quotes and brackets that break mermaid
+                    sourceLabel = (sourceLabel || '').replace(/[\n\r]/g, ' ').replace(/"/g, "'");
+                    destLabel = (destLabel || '').replace(/[\n\r]/g, ' ').replace(/"/g, "'");
+                    exitLabel = (exitLabel || '').replace(/[\n\r]/g, ' ').replace(/"/g, "'");
+
+                    var chartText = sourceId + '["' + sourceLabel + '"] -->|"' + exitLabel + '"| ' + destId + '["' + destLabel + '"]\n';
 
                     console.log("Exit for chart " + chartText + " " + (exit.type == "jump" ? "" : exitObj.toReadableString()));
-                    mermaidChart+="  " + chartText;
+                    mermaidChart += "  " + chartText;
                 }
             });
         }
     });
     mapsHTML = mapsHTML.replace("<!--mermaid-->", mermaidChart);
+
+    // Generate neo4jd3 graph data for better visualization (Task 7)
+    var neo4jData = { nodes: [], relationships: [] };
+    var nodeMap = new Map();
+    var nodeIdCounter = 0;
+    
+    // Build nodes and relationships for neo4jd3
+    shuffle.map.forEach(area => {
+        // Create node for current area if it doesn't exist
+        if (!nodeMap.has(area.name)) {
+            var currentArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(area.name));
+            nodeMap.set(area.name, nodeIdCounter.toString());
+            neo4jData.nodes.push({
+                id: nodeIdCounter.toString(),
+                labels: ['Area'],
+                properties: {
+                    name: (readableName[area.name] || area.name).replace(/\n/g, ' '),
+                    areaId: area.name,
+                    score: area.score || 0,
+                    world: area.name.split('_')[0] // Extract world prefix
+                }
+            });
+            nodeIdCounter++;
+        }
+        
+        // Create relationships for exits
+        if (area.exits) {
+            Object.values(area.exits).forEach((exit) => {
+                if (exit) {
+                    // Create destination node if it doesn't exist
+                    if (!nodeMap.has(exit.dest)) {
+                        var exitArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(exit.dest));
+                        nodeMap.set(exit.dest, nodeIdCounter.toString());
+                        neo4jData.nodes.push({
+                            id: nodeIdCounter.toString(),
+                            labels: ['Area'],
+                            properties: {
+                                name: (readableName[exit.dest] || exit.dest).replace(/[\n\r]/g, ' '),
+                                areaId: exit.dest,
+                                score: exitArea && exitArea.score ? exitArea.score : 0,
+                                world: exit.dest.split('_')[0]
+                            }
+                        });
+                        nodeIdCounter++;
+                    }
+                    
+                    // Create relationship
+                    var currentArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(area.name));
+                    var exitName = normalizeAreaName(area.name)+"/"+exit.id;
+                    var exitObj = currentArea.objects[exit.id];
+                    var exitObjText = exit.type == "jump" ? "" : "r" + exitObj.destinationRotation.get() + " y" + exitObj.destinationYFineShift.get();
+                    
+                    neo4jData.relationships.push({
+                        id: neo4jData.relationships.length.toString(),
+                        type: exit.type === "jump" ? "JUMP" : "EXIT",
+                        startNode: nodeMap.get(area.name),
+                        endNode: nodeMap.get(exit.dest),
+                        properties: {
+                            exitId: exit.id,
+                            exitName: exitsNames[exitName] || exitName,
+                            details: exitObjText
+                        }
+                    });
+                }
+            });
+        }
+    });
+    
+    // Save neo4j data as JSON for the visualization page
+    var neo4jDataJson = JSON.stringify(neo4jData, null, 2);
+    mapsHTML = mapsHTML.replace("<!--neo4j-data-->", "var neo4jGraphData = " + neo4jDataJson + ";");
 
     for (var a in areas) {
         var area = areas[a];
@@ -1593,11 +1679,13 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    // Write item location tracker
+    console.log(" writing item tracker notes");
     console.log(" writing " + changeSetFile);
     fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
 }
 
-if (process.argv[1].indexOf("randomize.js") > -1) {
+if (process.argv[1] && process.argv[1].indexOf("randomize.js") > -1) {
     randomize(process.argv[2], process.argv[3]);
 } else {
     module.exports = randomize;

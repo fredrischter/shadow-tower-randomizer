@@ -23,6 +23,7 @@
     "eol": "^0.9.1",
     "express": "^4.21.2",
     "multer": "^2.0.2",
+    "neo4jd3": "^0.0.5",
     "seedrandom": "^3.0.5",
     "string.prototype.replaceall": "^1.0.10",
     "uuid": "^11.1.0"

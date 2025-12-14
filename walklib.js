@@ -52,9 +52,23 @@ function walk(areas, skipWayBackVerification) {
 	var mapsWithKnownUndiscoveredWays = []; // {name:"forgotten", exits: [{id:"1", dest:"hidden"},{id:"2", dest:"cursed"}]
 	var desiredDestination = null;
 
+	// Task #12: Walklib safe area progression - avoid dangerous areas early
 	function strongEnoughForArea(areaName) {
 		//console.error("getWalkedAreas - " + walkedAreasSet + " " + areaName);
 		//process.exit(1);
+		
+		// Count non-tower areas for progression gating
+		const nonTowerAreas = Array.from(walkedAreasSet).filter(area => !area.includes("shadow_tower"));
+		
+		// Dangerous areas requiring 5+ non-tower areas visited
+		if (areaName.includes("water_world_watery_labyrinth_area")) {
+			return nonTowerAreas.length >= 5;
+		}
+		if (areaName.includes("fire_world_burning_cavern")) {
+			return nonTowerAreas.length >= 5;
+		}
+		
+		// Existing progression gates
 		if (areaName.includes("earth_world_poisonous_cavern")) {
 			return walkedAreasSet.size>3;
 		}

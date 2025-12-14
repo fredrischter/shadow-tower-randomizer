@@ -187,15 +187,34 @@ document.querySelectorAll('form').forEach(form => {
                 setStatus("uploadeded");
                 console.log('File uploaded successfully to Google Cloud Storage');
 
+                // Get seed from input or generate random
+                const seedValue = $('#seedInput').val().trim();
+                const seed = seedValue !== "" ? seedValue : ""+ Math.floor(Math.random() * 100000);
+                
+                // Get fog gate (map randomization) option
+                const mapOption = $('#map-radioset input:checked').attr('id');
+                let randomizeMap = true;
+                if (mapOption === 'map-radio1') {
+                    randomizeMap = false; // Untouched
+                } else if (mapOption === 'map-radio2') {
+                    randomizeMap = true;  // Shuffled
+                } else if (mapOption === 'map-radio3') {
+                    randomizeMap = true;  // Increased (currently same as shuffled)
+                }
+                
+                // Get enemy shuffle option
+                const randomizeCreatures = $('#randomize-creatures-checkbox').is(':checked');
+                
                 requestParamsString = JSON.stringify({
 					"preset": $('#purpose-radioset input[name="preset"]:checked').val(),
 					"difficulty": $('#dif-radioset input[name="difficulty"]:checked').val(),
-					"randomizeMap": true,
-					"randomizeCreatures": true,
+					"randomizeMap": randomizeMap,
+					"randomizeCreatures": randomizeCreatures,
 					"randomizeCollectablesAndDrops": true,
 					"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
 					"randomizeNonEssentialKeys": true,
-					"seed": ""+ Math.floor(Math.random() * 1000)
+					"keepOnlyBosses": $('#keep-only-bosses-checkbox').is(':checked'),
+					"seed": seed
 				});
 
 				fetch('/upload-complete', {

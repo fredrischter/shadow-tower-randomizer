@@ -6,116 +6,304 @@
 	<title>Shadow Tower Randomizer</title>
 	<link href="jquery-ui.css" rel="stylesheet">
 	<style>
-		body{
-			font-family: "Trebuchet MS", sans-serif;
-			margin: 50px;
-		}
-		.demoHeaders {
-			margin-top: 2em;
-		}
-		#dialog-link {
-			padding: .4em 1em .4em 20px;
-			text-decoration: none;
-			position: relative;
-		}
-		#dialog-link span.ui-icon {
-			margin: 0 5px 0 0;
-			position: absolute;
-			left: .2em;
-			top: 50%;
-			margin-top: -8px;
-		}
-		#icons {
+		* {
 			margin: 0;
 			padding: 0;
+			box-sizing: border-box;
 		}
-		#icons li {
-			margin: 2px;
-			position: relative;
-			padding: 4px 0;
+		
+		body {
+			font-family: 'Garamond', 'Georgia', serif;
+			background: linear-gradient(135deg, #1a0a0f 0%, #2d1520 50%, #1a0a0f 100%);
+			background-attachment: fixed;
+			color: #d4c5b9;
+			min-height: 100vh;
+			line-height: 1.6;
+		}
+		
+		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: 
+				radial-gradient(ellipse at top, rgba(139, 69, 19, 0.15), transparent),
+				radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.5), transparent);
+			pointer-events: none;
+			z-index: -1;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		header {
+			text-align: center;
+			padding: 40px 20px;
+			background: rgba(0, 0, 0, 0.6);
+			border: 2px solid #8b4513;
+			border-radius: 10px;
+			margin-bottom: 30px;
+			box-shadow: 0 0 30px rgba(139, 69, 19, 0.3);
+		}
+
+		h1 {
+			font-size: 3em;
+			color: #d4af37;
+			text-shadow: 
+				0 0 10px rgba(212, 175, 55, 0.5),
+				0 0 20px rgba(139, 69, 19, 0.3),
+				2px 2px 4px rgba(0, 0, 0, 0.8);
+			letter-spacing: 3px;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		h2 {
+			color: #c9a961;
+			font-size: 1.8em;
+			margin: 20px 0 15px 0;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+			border-bottom: 2px solid #8b4513;
+			padding-bottom: 10px;
+		}
+
+		h3 {
+			color: #b8956a;
+			font-size: 1.3em;
+			margin: 15px 0 10px 0;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+		}
+
+		#status {
+			color: #d4af37;
+			font-size: 1.2em;
+			margin-top: 10px;
+			min-height: 30px;
+		}
+
+		.main-content {
+			background: rgba(20, 10, 15, 0.85);
+			border: 2px solid #8b4513;
+			border-radius: 10px;
+			padding: 30px;
+			box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+		}
+
+		.section {
+			background: rgba(0, 0, 0, 0.3);
+			border: 1px solid #5a3a2a;
+			border-radius: 5px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		button, input[type="submit"] {
+			background: linear-gradient(to bottom, #8b4513, #5a2d0f);
+			color: #d4af37;
+			border: 2px solid #d4af37;
+			padding: 12px 30px;
+			font-size: 1.1em;
+			font-weight: bold;
 			cursor: pointer;
-			float: left;
-			list-style: none;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			font-family: 'Garamond', 'Georgia', serif;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 		}
-		#icons span.ui-icon {
-			float: left;
-			margin: 0 4px;
+
+		button:hover, input[type="submit"]:hover {
+			background: linear-gradient(to bottom, #a0522d, #6b3410);
+			border-color: #ffd700;
+			color: #ffd700;
+			box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+			transform: translateY(-2px);
 		}
-		.fakewindowcontain .ui-widget-overlay {
-			position: absolute;
+
+		button:active, input[type="submit"]:active {
+			transform: translateY(0);
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 		}
+
+		button:disabled {
+			background: #3a3a3a;
+			border-color: #555;
+			color: #666;
+			cursor: not-allowed;
+			box-shadow: none;
+		}
+
+		input[type="file"] {
+			background: rgba(30, 20, 15, 0.8);
+			color: #d4c5b9;
+			border: 2px solid #8b4513;
+			padding: 10px;
+			border-radius: 5px;
+			font-family: 'Garamond', 'Georgia', serif;
+			cursor: pointer;
+		}
+
+		input[type="file"]::file-selector-button {
+			background: linear-gradient(to bottom, #6b4423, #4a2f18);
+			color: #d4af37;
+			border: 1px solid #8b4513;
+			padding: 8px 15px;
+			border-radius: 3px;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+
+		input[type="file"]::file-selector-button:hover {
+			background: linear-gradient(to bottom, #8b5a2d, #5a3618);
+		}
+
+		form {
+			margin: 15px 0;
+		}
+
+		label {
+			color: #c9a961;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 8px;
+		}
+
 		.ui-widget {
-			padding: 0px 11px 0px 21px !important;
-			font-size: 0.7cm;
+			font-family: 'Garamond', 'Georgia', serif !important;
+			font-size: 1em !important;
+			padding: 10px !important;
 		}
+
+		#tabs {
+			background: rgba(0, 0, 0, 0.4);
+			border: 2px solid #8b4513;
+			border-radius: 8px;
+			margin-top: 20px;
+		}
+
+		.ui-tabs .ui-tabs-nav {
+			background: rgba(40, 20, 10, 0.8);
+			border-bottom: 2px solid #8b4513;
+		}
+
+		.ui-tabs .ui-tabs-nav li {
+			background: rgba(60, 30, 15, 0.7);
+			border: 1px solid #8b4513;
+		}
+
+		.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+			background: rgba(139, 69, 19, 0.6);
+		}
+
+		.ui-tabs .ui-tabs-nav li a {
+			color: #d4af37;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+		}
+
+		.ui-tabs .ui-tabs-panel {
+			background: rgba(20, 10, 5, 0.6);
+			color: #d4c5b9;
+		}
+
+		.ui-state-default, .ui-widget-content .ui-state-default {
+			background: rgba(80, 50, 30, 0.8);
+			border: 1px solid #8b4513;
+			color: #d4c5b9;
+		}
+
+		.ui-state-active, .ui-widget-content .ui-state-active {
+			background: rgba(139, 69, 19, 0.9);
+			border: 1px solid #d4af37;
+			color: #ffd700;
+		}
+
+		ul {
+			list-style-position: inside;
+			margin-left: 20px;
+		}
+
+		ul li {
+			margin: 8px 0;
+			color: #b8a080;
+		}
+
+		p {
+			margin: 12px 0;
+			color: #c9b896;
+		}
+
+		a {
+			color: #d4af37;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		a:hover {
+			color: #ffd700;
+			text-decoration: underline;
+		}
+
+		.info-section {
+			background: rgba(0, 0, 0, 0.4);
+			border-left: 4px solid #8b4513;
+			padding: 15px;
+			margin: 20px 0;
+			border-radius: 5px;
+		}
+
+		@media (max-width: 768px) {
+			h1 {
+				font-size: 2em;
+			}
+			
+			.container {
+				padding: 10px;
+			}
+			
+			.main-content {
+				padding: 15px;
+			}
+		}
+		
 		select {
 			width: 200px;
 		}
 	</style>
 </head>
 <body>
+	<div class="container">
+		<header>
+			<h1>⚔ SHADOW TOWER RANDOMIZER ⚔</h1>
+			<h2 id='status'></h2>
+		</header>
 
-	<h1>Shadow Tower Randomizer - POC</h1>
+		<div class="main-content">
+			<input type="file" id="file" style="display:none;" />
 
-	<h2 id='status'></h2>
+			<div class="section">
+				<label><b>📁 Input File</b></label>
 
-	<input type="file" id="file" style="display:none;" />
+				<form id="formButtonUpload" enctype="multipart/form-data">
+					<input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
+					<button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
+				</form>
+			</div>
 
-	<div>
-		<label style="margin-top: 1em;"><b>Input</b></label>
+			<div class="section">
+				<label><b>🎲 Seed (Optional)</b></label>
+				<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed" style="width: 300px; padding: 10px; background: rgba(30, 20, 15, 0.8); color: #d4c5b9; border: 2px solid #8b4513; border-radius: 5px; font-family: 'Garamond', 'Georgia', serif;">
+				<p style="font-size: 0.8em; margin-top: 5px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
+			</div>
 
-
-		<form id="formButtonUpload" enctype="multipart/form-data">
-		  <input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
-		  <button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
-		</form>
-
-		<!--button id="buttonRandomize" disabled>Randomize</button>
-
-		<form id="formButtonRecipe" enctype="multipart/form-data" style="display:none;">
-		  <input type="file" id="buttonRecipeFile" name="file" accept=".json">
-		  <button type="submit" id="buttonRecipe" class="uploadButton" data-action="buttonRecipe" disabled>Upload Recipe (optional)</button>
-		</form>
-
-		<form id="formButtonChangeset" enctype="multipart/form-data" style="display:none;">
-		  <input type="file" id="buttonChangesetFile" name="file" accept=".json">
-		  <button type="submit" id="buttonChangeset" class="uploadButton" data-action="buttonChangeset" disabled>Upload Changeset (optional)</button>
-		</form>
-
-		<span>&nbspSeed&nbsp</span><input id="seedInput"/-->&nbsp
-	</div>
-	<!--div>
-		<label style="margin-top: 1em;"><b>Process</b></label>
-		<button id="buttonApply">Apply to ISO</button>
-	</div-->
-	<div>
-		<label style="margin-top: 1em;"><b>Output</b></label>
-		<button id="buttonDownload">Download</button>
-		<!--button id="buttonDownloadIso">Download ISO</button>
-		<button id="buttonDownloadSpoilers">Download Spoilers</button-->
-	</div>
-	<!--button id="button5">Download ISO</button-->
-
-		<!--button id="button2">Upload recipe</button>
-			<button id="button3">Download recipe</button-->
-
-				<!-- button id="button-icon">An icon-only button</button-->
-				<br>
-
-		<!--div class="ui-widget">
-			<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
-				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
-					<strong>ISO loaded. Randomization done.</strong></p>
-				</div>
-			</div-->
-	<!--div class="ui-widget">
-		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
-			<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
-			<strong>Error:</strong>Couldn't parse the files.</p>
-		</div>
-	</div-->
-
-	<p/>
+			<div class="section">
+				<label><b>💾 Output</b></label>
+				<button id="buttonDownload">Download Randomized ISO</button>
+			</div>
 
 	<div id="tabs">
 		<ul>
@@ -435,6 +623,32 @@
 
 				<form style="margin-top: 1em;">
 
+					<h3>Enemy/Creature Shuffle</h3>
+					<div>
+						<input type="checkbox" id="randomize-creatures-checkbox" name="randomizeCreatures" checked="checked">
+						<label for="randomize-creatures-checkbox">Randomize enemy creatures</label>
+					</div>
+					<p style="font-size: 0.5em;">
+						Randomize enemy types and spawns. Uncheck to keep original enemies in their original locations.
+					</p>
+
+				</form>
+
+				<form style="margin-top: 1em;">
+
+					<h3>Keep only bosses</h3>
+					<div id="keep-only-bosses-radioset">
+						<input type="checkbox" id="keep-only-bosses-checkbox" name="keepOnlyBosses">
+						<label for="keep-only-bosses-checkbox">Remove all non-boss creatures</label>
+					</div>
+					<p style="font-size: 0.5em;">
+						Removes all regular creatures, keeping only bosses. Useful for testing or speedruns.
+					</p>
+
+				</form>
+
+				<form style="margin-top: 1em;">
+
 					<h3>To remove randomness so it will be total deterministic</h3>
 					<div id="remove-randomness-radioset">
 						<input type="radio" id="remove-randomness-radio1" name="radio" checked="checked"><label for="remove-randomness-radio1">
@@ -490,47 +704,59 @@
 
 		</div-->
 
-		<p/>
-<h3>Randomization Info</h3>
+		<div class="info-section">
+			<h3>📖 Randomization Info</h3>
 
-<p>Advanced knowledge of the game is not required to use this tool.</p>
-<p>The preset options configure other parameters to a level that ensures a reasonable playtime based on the expected experience. It is recommended to only modify the difficulty setting, while keeping other parameters at their default values.</p>
-<p>The "Only Swap" option for each parameter disables random generation and simply swaps values. This ensures that no strange values are generated, offering a safer way to play if the randomness becomes unreliable.</p>
-<p>From the selected recipe, a changeset file is generated. This file can be shared with others to allow them to reproduce the exact same output without knowing the spoilers. The changeset can also be uploaded and applied to an ISO. When applied, its checksum is also displayed in the initial short sword description.</p>
+			<p>Advanced knowledge of the game is not required to use this tool.</p>
+			<p>The preset options configure other parameters to a level that ensures a reasonable playtime based on the expected experience. It is recommended to only modify the difficulty setting, while keeping other parameters at their default values.</p>
+			<p>The "Only Swap" option for each parameter disables random generation and simply swaps values. This ensures that no strange values are generated, offering a safer way to play if the randomness becomes unreliable.</p>
+			<p>From the selected recipe, a changeset file is generated. This file can be shared with others to allow them to reproduce the exact same output without knowing the spoilers. The changeset can also be uploaded and applied to an ISO. When applied, its checksum is also displayed in the initial short sword description.</p>
 
-<p>Randomization generates an intermediary recipe file, which contains all the readable information about the random settings applied. You can download, modify, and upload it to make custom changes to your game.</p>
+			<p>Randomization generates an intermediary recipe file, which contains all the readable information about the random settings applied. You can download, modify, and upload it to make custom changes to your game.</p>
 
-<p>While the in-game creature book stats are not altered, the actual data used in the game is changed. To help players adjust, you can share the `creature_book.txt` file so they can review the stats in advance and plan accordingly.</p>
+			<p>While the in-game creature book stats are not altered, the actual data used in the game is changed. To help players adjust, you can share the `creature_book.txt` file so they can review the stats in advance and plan accordingly.</p>
 
-<p>Future updates are expected to include randomization for enemy walk speeds, attack cooldowns, as well as the ability to spawn more creatures and items than in the regular game. These features are more complex and will be added later.</p>
+			<p>Future updates are expected to include randomization for enemy walk speeds, attack cooldowns, as well as the ability to spawn more creatures and items than in the regular game. These features are more complex and will be added later.</p>
+		</div>
 
-<h3>Gameplay</h3>
+		<div class="info-section">
+			<h3>🎮 Gameplay</h3>
 
-<p>Be sure to check your equipment and stat values in-game, as they may differ from the default settings.</p>
+			<p>Be sure to check your equipment and stat values in-game, as they may differ from the default settings.</p>
 
-<p>With randomized areas, manage exploration as if you're playing the game for the first time.</p>
+			<p>With randomized areas, manage exploration as if you're playing the game for the first time.</p>
 
-<p>To complete the game, you must defeat all world bosses, who will remain in their original locations. To spawn Desguise, you still need to defeat the Illusionists first.</p>
+			<p>To complete the game, you must defeat all world bosses, who will remain in their original locations. To spawn Desguise, you still need to defeat the Illusionists first.</p>
 
-<p>Bosses and NPC creatures are not randomized.</p>
+			<p>Bosses and NPC creatures are not randomized.</p>
+		</div>
 
-<h3>Credits</h3>
+		<div class="info-section">
+			<h3>🏆 Credits</h3>
 
-<p>Special thanks to the FromSoft Modding Committee (Discord: <a href="https://discord.gg/jUzZwWWUXd">https://discord.gg/jUzZwWWUXd</a>) for their valuable knowledge about From Software's PSX games and more specifically to StolenBattenberg for giving comprehensive guidance on the data internals, that was fundamental for the development.</p>	
+			<p>Special thanks to the FromSoft Modding Committee (Discord: <a href="https://discord.gg/jUzZwWWUXd">https://discord.gg/jUzZwWWUXd</a>) for their valuable knowledge about From Software's PSX games and more specifically to StolenBattenberg for giving comprehensive guidance on the data internals, that was fundamental for the development.</p>	
 
-<p>Thanks also to everyone who contributed ideas, data, and testing. Special thanks to Lucifer65535 and David Bunch for their online walkthroughs, which made it easier to understand the game data and double-check my findings. A big thank you to Martin Korth for no$psx, which was essential for testing during mod development. Special thanks to Hashassin for testing thoughtfully and suggesting improvements and fixes.</p>
+			<p>Thanks also to everyone who contributed ideas, data, and testing. Special thanks to Lucifer65535 and David Bunch for their online walkthroughs, which made it easier to understand the game data and double-check my findings. A big thank you to Martin Korth for no$psx, which was essential for testing during mod development. Special thanks to Hashassin for testing thoughtfully and suggesting improvements and fixes.</p>
+		</div>
 
-<h3>Disclaimer</h3>
+		<div class="info-section">
+			<h3>⚠️ Disclaimer</h3>
 
-<p>This tool is provided "as is" with no guarantee of functionality or safety. The modified software could potentially harm your computer, video game console, or other equipment. Use it at your own risk.</p>
+			<p>This tool is provided "as is" with no guarantee of functionality or safety. The modified software could potentially harm your computer, video game console, or other equipment. Use it at your own risk.</p>
 
-<p>The development of this tool is for educational purposes only and has no commercial use. We do not promote piracy or any illegal activities. The usage and modification of this tool is permitted for any legal activities.</p>
+			<p>The development of this tool is for educational purposes only and has no commercial use. We do not promote piracy or any illegal activities. The usage and modification of this tool is permitted for any legal activities.</p>
 
-<p>This software is completely free to use, modify, and distribute. If you use it for online content (such as news, streaming, or indexing), I would appreciate it if you credit the author, Fredo Rischter, and link to the GitHub repository: <a href="https://github.com/fredrischter/shadow-tower-randomizer">https://github.com/fredrischter/shadow-tower-randomizer</a>, as well as to the FromSoft Modding Committee.</p>
+			<p>This software is completely free to use, modify, and distribute. If you use it for online content (such as news, streaming, or indexing), I would appreciate it if you credit the author, Fredo Rischter, and link to the GitHub repository: <a href="https://github.com/fredrischter/shadow-tower-randomizer">https://github.com/fredrischter/shadow-tower-randomizer</a>, as well as to the FromSoft Modding Committee.</p>
+		</div>
 
-<h3>Contact</h3>
+		<div class="info-section">
+			<h3>📧 Contact</h3>
 
-<p>If you need to reach out, you can contact me at fredrischter at gmail dot com</a>.</p>
+			<p>If you need to reach out, you can contact me at fredrischter at gmail dot com.</p>
+		</div>
+
+		</div><!-- end main-content -->
+	</div><!-- end container -->
 
 		<script src="uuid.min.js"></script>
 		<script src="external/jquery/jquery.js"></script>

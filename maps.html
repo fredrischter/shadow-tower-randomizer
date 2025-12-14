@@ -1,4 +1,113 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Tower Map Visualization</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neo4jd3@0.4.30/dist/neo4jd3.min.css">
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #d4c5b9;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #d4af37;
+        }
+        
+        #neo4jd3-container {
+            width: 100%;
+            height: 800px;
+            border: 2px solid #8b4513;
+            border-radius: 10px;
+            background: #0a0a0a;
+            margin-bottom: 40px;
+        }
+        
+        .visualization-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(20, 10, 15, 0.85);
+            border: 2px solid #8b4513;
+            border-radius: 10px;
+        }
+        
+        .tab-buttons {
+            margin-bottom: 20px;
+        }
+        
+        .tab-button {
+            background: #8b4513;
+            color: #d4c5b9;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .tab-button:hover {
+            background: #a0522d;
+        }
+        
+        .tab-button.active {
+            background: #d4af37;
+            color: #1a1a1a;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        img {
+            width: auto;
+            height: 400px;
+        }
+        
+        span {
+            font-family: monospace
+        }
+    </style>
+</head>
+<body>
+    <h1>🗺️ Shadow Tower Map Visualization</h1>
+    
+    <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab('neo4j')">Interactive Graph (neo4jd3)</button>
+        <button class="tab-button" onclick="showTab('mermaid')">Flowchart (Mermaid)</button>
+        <button class="tab-button" onclick="showTab('details')">Area Details</button>
+    </div>
+    
+    <!-- Neo4jd3 Interactive Graph -->
+    <div id="neo4j-tab" class="tab-content active visualization-section">
+        <h2>Interactive Area Connection Graph</h2>
+        <p>Drag nodes to explore connections. Colored by world. Click nodes for details.</p>
+        <div id="neo4jd3-container"></div>
+        <p style="font-size: 0.9em; color: #b8a080;">
+            <strong>Legend:</strong> Nodes represent areas, edges represent exits/jumps between areas. 
+            Node size indicates progression difficulty/score.
+        </p>
+    </div>
+    
+    <!-- Mermaid Flowchart -->
+    <div id="mermaid-tab" class="tab-content visualization-section">
+        <h2>Mermaid Flowchart</h2>
+<pre class="mermaid">
+<!--mermaid-->
+</pre>
+    </div>
+    
+    <!-- Area Details -->
+    <div id="details-tab" class="tab-content">
 <style type="text/css">
     img {
       width: auto;
@@ -8,10 +117,6 @@
       font-family: monospace
     }
 </style>
-
-<pre class="mermaid">
-<!--mermaid-->
-</pre>
 
 <h2>Human World</h2>
 <h3>human_world_solitary_region</h3><br>
@@ -127,6 +232,89 @@
 <!--void-->
 <img src="maps/void.png"/><br>
 
+</div> <!-- End details-tab -->
+
+<!-- Neo4j Data -->
+<script>
+<!--neo4j-data-->
+</script>
+
+<!-- Neo4jd3 Library -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/neo4jd3@0.4.30/dist/neo4jd3.min.js"></script>
+
+<!-- Tab Switching Script -->
+<script>
+function showTab(tabName) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Deactivate all buttons
+    document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Show selected tab
+    document.getElementById(tabName + '-tab').classList.add('active');
+    
+    // Activate corresponding button
+    event.target.classList.add('active');
+}
+</script>
+
+<!-- Neo4jd3 Initialization -->
+<script>
+if (typeof neo4jGraphData !== 'undefined') {
+    // Define color scheme for different worlds
+    var worldColors = {
+        'human': '#4a90e2',
+        'earth': '#8b4513',
+        'fire': '#ff4500',
+        'water': '#1e90ff',
+        'monster': '#9932cc',
+        'illusion': '#ff1493',
+        'death': '#2f4f4f',
+        'shadow': '#000000',
+        'void': '#696969'
+    };
+    
+    // Create neo4jd3 visualization
+    var neo4jd3 = new Neo4jd3('#neo4jd3-container', {
+        highlight: [
+            {
+                class: 'Area',
+                property: 'name',
+                value: 'shadow_tower'
+            }
+        ],
+        icons: {
+            'Area': 'map-marker'
+        },
+        images: {
+            'Area': 'img/area.png'
+        },
+        minCollision: 60,
+        neo4jData: neo4jGraphData,
+        nodeRadius: function(node) {
+            // Size nodes based on score (progression difficulty)
+            var baseRadius = 25;
+            var scoreBonus = (node.properties.score || 0) * 2;
+            return baseRadius + scoreBonus;
+        },
+        relationshipColor: '#8b4513',
+        zoomFit: true,
+        nodeOutlineFillColor: function(node) {
+            // Color nodes based on their world
+            var world = node.properties.world || 'void';
+            return worldColors[world] || '#808080';
+        }
+    });
+} else {
+    document.getElementById('neo4jd3-container').innerHTML = 
+        '<p style="color: #ff6b6b; padding: 20px;">Neo4j graph data not available. Please regenerate the map.</p>';
+}
 </script>
 
 <script type="module">
