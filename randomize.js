@@ -128,6 +128,81 @@ function randomize(paramsFile, stDir) {
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
     const shuffle = map_shuffler(params, stDir);
 
+    // Task #21: Custom Door Assignment for testing specific area connections
+    // NOTE: This is for TESTING only - it directly assigns door destinations without full swap logic
+    if (params.customDoorSwaps && params.customDoorSwaps.length > 0) {
+        console.log("DEBUG ------------------ Applying custom door assignments");
+        
+        params.customDoorSwaps.forEach(swap => {
+            console.log(`Custom assignment: ${swap.from} exit ${swap.exitId} -> ${swap.to} entrance ${swap.entranceId}`);
+            
+            // Find areas in shuffle.map (uses original names like shadow_tower_part1a)
+            var fromAreaInMap = shuffle.map.find(a => a.name == swap.from);
+            var toAreaInMap = shuffle.map.find(a => a.name == swap.to);
+            
+            if (!fromAreaInMap) {
+                console.error(`ERROR - Custom assignment: source area not found in map: ${swap.from}`);
+                return;
+            }
+            if (!toAreaInMap) {
+                console.error(`ERROR - Custom assignment: destination area not found in map: ${swap.to}`);
+                return;
+            }
+            
+            // Find the exit in the source area
+            var fromExit = fromAreaInMap.exits.find(e => e.id == swap.exitId);
+            
+            if (!fromExit) {
+                console.error(`ERROR - Custom assignment: exit ${swap.exitId} not found in area ${swap.from}`);
+                return;
+            }
+            
+            // Task #21: Find an exit in ANY area that goes TO the destination area
+            // We'll copy that exit's destination coordinates to make our exit also go there
+            var exitThatGoesToDest = null;
+            var sourceAreaForExit = null;
+            for (var area of shuffle.map) {
+                for (var exit of area.exits) {
+                    if (exit.dest == swap.to && exit.wayBackId == swap.entranceId) {
+                        exitThatGoesToDest = exit;
+                        sourceAreaForExit = area;
+                        break;
+                    }
+                }
+                if (exitThatGoesToDest) break;
+            }
+            
+            if (!exitThatGoesToDest) {
+                console.error(`ERROR - Could not find any exit that goes to ${swap.to} with wayBackId ${swap.entranceId}`);
+                return;
+            }
+            
+            // Update the map: make fromExit point to destination
+            fromExit.dest = swap.to;
+            fromExit.world = toAreaInMap.world;
+            fromExit.wayBackId = swap.entranceId;
+            
+            // Apply the binary changes by copying from the exit that goes to destination
+            var fromArea = data_model.areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(swap.from));
+            var sourceArea = data_model.areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(sourceAreaForExit.name));
+            
+            if (fromArea && sourceArea) {
+                var fromExitObj = fromArea.objects[parseInt(swap.exitId)];
+                var sourceExitObj = sourceArea.objects[parseInt(exitThatGoesToDest.id)];
+                
+                if (fromExitObj && sourceExitObj) {
+                    fromExitObj.setExit(sourceExitObj, shuffle.map);
+                }
+            }
+            
+            console.log(`  Assigned: ${swap.from}/${swap.exitId} now leads to ${swap.to}/${swap.entranceId}`);
+        });
+        
+        console.log("DEBUG ------------------ Custom door assignments complete");
+        
+        // Task #21: Re-write map.json to include the custom assignments
+    }
+
     fs.writeFileSync(changeSetPath + path.sep + 'map-with-walk-detail.json', JSON.stringify(shuffle, null, 2));
     delete shuffle.explanation;
 
