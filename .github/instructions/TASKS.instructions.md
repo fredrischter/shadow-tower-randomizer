@@ -14,6 +14,203 @@
 
 ---
 
+## Task 21: Fix Door/Entrance ID Mapping Issues
+
+**Status:** TODO
+
+**Title:** Fix incorrect door connections in Bewilderment Domain and Hostile Rock Cavern
+
+**Description:**
+Some doors/entrances in the map are not working correctly - they connect to wrong destinations. The door IDs in map.json must match the actual game object IDs in the binary data, but there's a mismatch causing incorrect connections.
+
+**Problem Areas:**
+- **Bewilderment Domain (illusion_world_bewilderment_domain)** - Some doors lead to wrong locations
+- **Hostile Rock Cavern (earth_world_hostile_rock_cavern)** - Some doors lead to wrong locations
+
+The underlying issue is that the `id` and `wayBackId` fields in map.json may not correctly correspond to the actual exit object IDs in the game's binary data. When doors are randomized, these mismatches cause players to exit through one door but arrive at an unexpected location.
+
+**Testing Strategy:**
+To verify door correctness, we need an easy testing mode that:
+1. Does NOT randomize the map (no door shuffling)
+2. Allows manual specification of specific door swaps
+3. Creates a controlled test path to verify each problematic area
+
+**Implementation Plan:**
+
+### Step 1: Create Custom Door Swap Parameter
+
+Add a new parameter `customDoorSwaps` to params schema:
+
+```json
+{
+  "label": "custom-path-test",
+  "preset": "any%",
+  "difficulty": "medium",
+  "randomizeMap": false,
+  "customDoorSwaps": [
+    {
+      "from": "shadow_tower_part1a",
+      "exitId": "0",
+      "to": "illusion_world_bewilderment_domain",
+      "entranceId": "38"
+    }
+  ]
+}
+```
+
+### Step 2: Create Test Preset File
+
+Create `params/custom-path-swap.json`:
+
+```json
+{
+  "label": "custom-path-swap",
+  "preset": "any%",
+  "difficulty": "medium",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "customDoorSwaps": [
+    {
+      "comment": "Tower part1a exit 0 -> Bewilderment Domain entrance 18",
+      "from": "shadow_tower_part1a",
+      "exitId": "0",
+      "to": "illusion_world_bewilderment_domain",
+      "entranceId": "18"
+    },
+    {
+      "comment": "Bewilderment Domain exit 20 -> Tower part1b entrance 4",
+      "from": "illusion_world_bewilderment_domain",
+      "exitId": "20",
+      "to": "shadow_tower_part1b",
+      "entranceId": "4"
+    },
+    {
+      "comment": "Tower part1b exit 4 -> Hostile Rock Cavern entrance 1",
+      "from": "shadow_tower_part1b",
+      "exitId": "4",
+      "to": "earth_world_hostile_rock_cavern",
+      "entranceId": "1"
+    }
+  ],
+  "seed": "1"
+}
+```
+
+**Proposed values based on map.json:**
+- shadow_tower_part1a has exit id "0" (normally goes to human_world_solitary_region wayback "38")
+- illusion_world_bewilderment_domain has exit id "18" (normally goes to illusion_world_gloomy_domain wayback "3")
+- illusion_world_bewilderment_domain has exit id "20" (normally goes to illusion_world_worship_domain wayback "1")
+- shadow_tower_part1b has exit id "4" (normally goes to human_world_cursed_region wayback "31")
+- earth_world_hostile_rock_cavern has exit id "1" (normally goes to earth_world_false_pit_cavern wayback "1")
+
+### Step 3: Implement Custom Door Swap Logic in randomize.js
+
+Add logic to handle `customDoorSwaps` parameter:
+
+```javascript
+// In randomize.js, after loading params but before normal map shuffling
+
+if (params.customDoorSwaps && params.customDoorSwaps.length > 0) {
+  console.log("Applying custom door swaps...");
+  
+  params.customDoorSwaps.forEach(swap => {
+    var fromArea = areas.find(a => a.name == swap.from);
+    var toArea = areas.find(a => a.name == swap.to);
+    
+    if (!fromArea || !toArea) {
+      console.error("ERROR - Custom swap area not found:", swap);
+      return;
+    }
+    
+    // Find the exit object by ID
+    var exitObj = fromArea.objects.find(obj => obj.id.get() == swap.exitId);
+    if (!exitObj) {
+      console.error("ERROR - Exit object not found:", swap.from, swap.exitId);
+      return;
+    }
+    
+    // Find the entrance object in destination
+    var entranceObj = toArea.objects.find(obj => obj.id.get() == swap.entranceId);
+    if (!entranceObj) {
+      console.error("ERROR - Entrance object not found:", swap.to, swap.entranceId);
+      return;
+    }
+    
+    // Apply the swap (similar to map_shuffler logic)
+    console.log(`Swapping: ${swap.from} exit ${swap.exitId} -> ${swap.to} entrance ${swap.entranceId}`);
+    
+    // Update exit to point to destination
+    exitObj.destinationMapIndex.set(areaNameToMapIndex[swap.to]);
+    // ... copy position, rotation, displacement from entrance
+    
+    // Update entrance wayback to point back to exit
+    // ... ensure bidirectional consistency
+  });
+}
+```
+
+### Step 4: Manual Testing and Investigation (USER INTERVENTION REQUIRED)
+
+**⚠️ This step requires human gameplay testing and discussion**
+
+**Testing procedure:**
+1. Run: `npm run mod "./generated/st.bin" "./params/custom-path-swap.json"`
+2. Load the modified ISO in emulator
+3. Start at Shadow Tower
+4. Go through first door -> Should arrive at Bewilderment Domain
+5. **CRITICAL:** Explore Bewilderment Domain thoroughly:
+   - Test EACH door/exit
+   - Note which doors work correctly
+   - Note which doors lead to wrong destinations
+   - Document expected vs actual behavior
+6. Exit through specified door -> Should arrive at Shadow Tower part1b (or verify actual destination)
+7. Go through next door -> Should arrive at Hostile Rock Cavern
+8. **CRITICAL:** Explore Hostile Rock Cavern thoroughly:
+   - Test EACH door/exit
+   - Note which doors work correctly
+   - Note which doors lead to wrong destinations
+   - Document expected vs actual behavior
+
+**Files to examine during investigation:**
+- `map.json` - Look at exits/entrances for:
+  - `illusion_world_bewilderment_domain`
+  - `earth_world_hostile_rock_cavern`
+  
+**What to check:**
+1. Do the `id` values match actual game object IDs?
+2. Do the `wayBackId` values correctly reference the return door?
+3. Are there duplicate IDs or missing IDs?
+4. Compare with `data_model.js` - MapObject class, Area class
+5. Check how object IDs are read from binary data
+6. Verify offset calculations are correct
+
+**Discussion points after testing:**
+- What doors are broken and how?
+- Is it a map.json data issue or a binary reading issue?
+- Are IDs sequential or do they have gaps?
+- Do IDs need to be adjusted or is the object parsing wrong?
+- Should we add diagnostic logging to identify the root cause?
+
+**Next steps will be determined based on testing results and discussion.**
+
+**Files to Modify:**
+- `params/custom-path-swap.json` - NEW file, test preset
+- `randomize.js` - Add customDoorSwaps parameter handling
+- `map.json` - Fix incorrect door IDs for problematic areas
+- `data_model.js` - Potentially fix object ID reading if offset is wrong
+
+**Success Criteria:**
+- Custom door swap preset works correctly
+- Can navigate: Tower -> Bewilderment -> Tower -> Hostile Rock
+- All exits in problematic areas lead to correct destinations
+- No wayback inconsistency errors
+- Full randomization includes these areas without issues
+
+**Priority:** HIGH - Affects game completability
+
+---
+
 ## Task 7: Improve Map Visualization
 
 **Status:** IN_PROGRESS
