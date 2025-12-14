@@ -1,0 +1,409 @@
+==============================================
+Shadow Tower Randomizer - Batch Test Script
+==============================================
+
+Step 1: Using existing cache at generated\no-change\extracted
+
+Step 2: Testing all presets using cache...
+
+----------------------------------------
+Testing preset: bonanza
+----------------------------------------
+=== Shadow Tower Randomizer Test ===
+Preset: bonanza
+Use cached files: true
+Cache directory: generated\no-change\extracted
+
+Using cached extracted files from: generated\no-change\extracted
+Running randomize only...
+
+Running: node --max-old-space-size=8192 randomize.js "generated\test-bonanza\spoilers\params.json" "generated\no-change\extracted" -toNotGenerateImages
+{
+  label: 'bonanza',
+  preset: 'bonanza',
+  difficulty: 'easy',
+  randomizeMap: false,
+  randomizeCreatures: true,
+  randomizeCollectablesAndDrops: true,
+  removeDirectiveRemovalOfHPMPRecovery: true,
+  fieryKeyFlamingKeyDrop: 'flaming-key-in-the-first-area',
+  randomizeNonEssentialKeys: true,
+  seed: '1',
+  colorRandomizationGeneral: 1,
+  colorRandomizationBossRooms: 1,
+  colorRandomizationCreatures: 2,
+  colorValueFactor: 1
+}
+
+=== Running validation tests ===
+
+=== Validating map.json structure ===
+PASS: map.json structure valid (36 areas)
+
+=== Validating walk.txt ===
+PASS: walk.txt generated successfully
+
+=== Validating unique items ===
+PASS: All 7 key items found
+
+=== Validating item distribution ===
+Item counts:
+  item_10a_cune: 199
+  item_11c_healing_potion: 106
+  item_136_soul_pod_5_sp: 40
+  item_138_soul_pod_29_sp: 13
+  item_137_soul_pod_53_sp: 8
+PASS: Item distribution analyzed
+
+=== Validating maps.html ===
+PASS: maps.html contains expected areas
+
+=== Checking readable.txt for inconsistencies ===
+
+=== Test Summary ===
+  ✓ mapStructure
+  ✓ walkPath
+  ✓ uniqueItems
+  ✓ itemCounts
+  ✓ mapsHTML
+  ✓ readableConsistency
+
+Total: 6/6 tests passed
+
+✓ All validation tests passed!
+✓ bonanza passed
+
+----------------------------------------
+Testing preset: no-change
+----------------------------------------
+=== Shadow Tower Randomizer Test ===
+Preset: no-change
+Use cached files: true
+Cache directory: generated\no-change\extracted
+
+Using cached extracted files from: generated\no-change\extracted
+Running randomize only...
+
+Running: node --max-old-space-size=8192 randomize.js "generated\test-no-change\spoilers\params.json" "generated\no-change\extracted" -toNotGenerateImages
+{
+  label: 'no-change',
+  preset: 'no-change',
+  difficulty: 'medium',
+  seed: '1',
+  colorRandomizationGeneral: 0,
+  colorRandomizationBossRooms: 0,
+  colorRandomizationCreatures: 0,
+  colorValueFactor: 1
+}
+
+=== Running validation tests ===
+
+=== Validating map.json structure ===
+PASS: map.json structure valid (36 areas)
+
+=== Validating walk.txt ===
+PASS: walk.txt generated successfully
+
+=== Validating unique items ===
+SKIP: Preset does not randomize items (validation not applicable)
+
+=== Validating item distribution ===
+Item counts:
+  item_10a_cune: 0
+  item_11c_healing_potion: 0
+  item_136_soul_pod_5_sp: 0
+  item_138_soul_pod_29_sp: 0
+  item_137_soul_pod_53_sp: 0
+PASS: Item distribution analyzed
+
+=== Validating maps.html ===
+PASS: maps.html contains expected areas
+
+=== Checking readable.txt for inconsistencies ===
+PASS: No obvious inconsistencies in readable.txt
+
+=== Test Summary ===
+  ✓ mapStructure
+  ✓ walkPath
+  ✓ uniqueItems
+  ✓ itemCounts
+  ✓ mapsHTML
+  ✓ readableConsistency
+
+Total: 6/6 tests passed
+
+✓ All validation tests passed!
+✓ no-change passed
+
+----------------------------------------
+Testing preset: only-bosses
+----------------------------------------
+=== Shadow Tower Randomizer Test ===
+Preset: only-bosses
+Use cached files: true
+Cache directory: generated\no-change\extracted
+
+Using cached extracted files from: generated\no-change\extracted
+Running randomize only...
+
+Running: node --max-old-space-size=8192 randomize.js "generated\test-only-bosses\spoilers\params.json" "generated\no-change\extracted" -toNotGenerateImages
+{
+  label: 'only-bosses',
+  preset: 'no-change',
+  difficulty: 'medium',
+  keepOnlyBosses: true,
+  seed: '1'
+}
+
+=== Running validation tests ===
+
+=== Validating map.json structure ===
+PASS: map.json structure valid (36 areas)
+
+=== Validating walk.txt ===
+PASS: walk.txt generated successfully
+
+=== Validating unique items ===
+SKIP: Preset does not randomize items (validation not applicable)
+
+=== Validating item distribution ===
+Item counts:
+  item_10a_cune: 0
+  item_11c_healing_potion: 0
+  item_136_soul_pod_5_sp: 0
+  item_138_soul_pod_29_sp: 0
+  item_137_soul_pod_53_sp: 0
+PASS: Item distribution analyzed
+
+=== Validating maps.html ===
+PASS: maps.html contains expected areas
+
+=== Checking readable.txt for inconsistencies ===
+PASS: No obvious inconsistencies in readable.txt
+
+=== Test Summary ===
+  ✓ mapStructure
+  ✓ walkPath
+  ✓ uniqueItems
+  ✓ itemCounts
+  ✓ mapsHTML
+  ✓ readableConsistency
+
+Total: 6/6 tests passed
+
+✓ All validation tests passed!
+✓ only-bosses passed
+
+----------------------------------------
+Testing preset: randomized-easy
+----------------------------------------
+=== Shadow Tower Randomizer Test ===
+Preset: randomized-easy
+Use cached files: true
+Cache directory: generated\no-change\extracted
+
+Using cached extracted files from: generated\no-change\extracted
+Running randomize only...
+
+Running: node --max-old-space-size=8192 randomize.js "generated\test-randomized-easy\spoilers\params.json" "generated\no-change\extracted" -toNotGenerateImages
+{
+  label: 'randomized-easy',
+  preset: 'any%',
+  difficulty: 'easy',
+  randomizeMap: true,
+  randomizeCreatures: true,
+  randomizeCollectablesAndDrops: true,
+  fieryKeyFlamingKeyDrop: 'flaming-key-in-the-first-area',
+  randomizeNonEssentialKeys: true,
+  seed: '1',
+  colorValueFactor: 2
+}
+
+=== Running validation tests ===
+
+=== Validating map.json structure ===
+PASS: map.json structure valid (36 areas)
+
+=== Validating walk.txt ===
+PASS: walk.txt generated successfully
+
+=== Validating unique items ===
+PASS: All 7 key items found
+
+=== Validating item distribution ===
+Item counts:
+  item_10a_cune: 228
+  item_11c_healing_potion: 100
+  item_136_soul_pod_5_sp: 31
+  item_138_soul_pod_29_sp: 12
+  item_137_soul_pod_53_sp: 3
+PASS: Item distribution analyzed
+
+=== Validating maps.html ===
+PASS: maps.html contains expected areas
+
+=== Checking readable.txt for inconsistencies ===
+PASS: No obvious inconsistencies in readable.txt
+
+=== Test Summary ===
+  ✓ mapStructure
+  ✓ walkPath
+  ✓ uniqueItems
+  ✓ itemCounts
+  ✓ mapsHTML
+  ✓ readableConsistency
+
+Total: 6/6 tests passed
+
+✓ All validation tests passed!
+✓ randomized-easy passed
+
+----------------------------------------
+Testing preset: randomized-hard
+----------------------------------------
+=== Shadow Tower Randomizer Test ===
+Preset: randomized-hard
+Use cached files: true
+Cache directory: generated\no-change\extracted
+
+Using cached extracted files from: generated\no-change\extracted
+Running randomize only...
+
+Running: node --max-old-space-size=8192 randomize.js "generated\test-randomized-hard\spoilers\params.json" "generated\no-change\extracted" -toNotGenerateImages
+{
+  label: 'randomized-hard',
+  preset: 'any%',
+  difficulty: 'hard',
+  randomizeMap: true,
+  randomizeCreatures: true,
+  randomizeCollectablesAndDrops: true,
+  fieryKeyFlamingKeyDrop: 'fiery-key-in-fire-world',
+  randomizeNonEssentialKeys: true,
+  seed: '1',
+  colorValueFactor: 0.5
+}
+
+=== Running validation tests ===
+
+=== Validating map.json structure ===
+PASS: map.json structure valid (36 areas)
+
+=== Validating walk.txt ===
+PASS: walk.txt generated successfully
+
+=== Validating unique items ===
+PASS: All 7 key items found
+
+=== Validating item distribution ===
+Item counts:
+  item_10a_cune: 226
+  item_11c_healing_potion: 99
+  item_136_soul_pod_5_sp: 32
+  item_138_soul_pod_29_sp: 11
+  item_137_soul_pod_53_sp: 5
+PASS: Item distribution analyzed
+
+=== Validating maps.html ===
+PASS: maps.html contains expected areas
+
+=== Checking readable.txt for inconsistencies ===
+PASS: No obvious inconsistencies in readable.txt
+
+=== Test Summary ===
+  ✓ mapStructure
+  ✓ walkPath
+  ✓ uniqueItems
+  ✓ itemCounts
+  ✓ mapsHTML
+  ✓ readableConsistency
+
+Total: 6/6 tests passed
+
+✓ All validation tests passed!
+✓ randomized-hard passed
+
+----------------------------------------
+Testing preset: randomized-medium
+----------------------------------------
+=== Shadow Tower Randomizer Test ===
+Preset: randomized-medium
+Use cached files: true
+Cache directory: generated\no-change\extracted
+
+Using cached extracted files from: generated\no-change\extracted
+Running randomize only...
+
+Running: node --max-old-space-size=8192 randomize.js "generated\test-randomized-medium\spoilers\params.json" "generated\no-change\extracted" -toNotGenerateImages
+{
+  label: 'randomized-medium',
+  preset: 'any%',
+  difficulty: 'medium',
+  randomizeMap: true,
+  randomizeCreatures: true,
+  randomizeCollectablesAndDrops: true,
+  fieryKeyFlamingKeyDrop: 'fiery-key-in-fire-world',
+  randomizeNonEssentialKeys: true,
+  seed: '1'
+}
+
+=== Running validation tests ===
+
+=== Validating map.json structure ===
+PASS: map.json structure valid (36 areas)
+
+=== Validating walk.txt ===
+PASS: walk.txt generated successfully
+
+=== Validating unique items ===
+PASS: All 7 key items found
+
+=== Validating item distribution ===
+Item counts:
+  item_10a_cune: 225
+  item_11c_healing_potion: 96
+  item_136_soul_pod_5_sp: 30
+  item_138_soul_pod_29_sp: 10
+  item_137_soul_pod_53_sp: 3
+PASS: Item distribution analyzed
+
+=== Validating maps.html ===
+PASS: maps.html contains expected areas
+
+=== Checking readable.txt for inconsistencies ===
+PASS: No obvious inconsistencies in readable.txt
+
+=== Test Summary ===
+  ✓ mapStructure
+  ✓ walkPath
+  ✓ uniqueItems
+  ✓ itemCounts
+  ✓ mapsHTML
+  ✓ readableConsistency
+
+Total: 6/6 tests passed
+
+✓ All validation tests passed!
+✓ randomized-medium passed
+
+Skipping numbered variant: randomized-medium10
+Skipping numbered variant: randomized-medium11
+Skipping numbered variant: randomized-medium12
+Skipping numbered variant: randomized-medium13
+Skipping numbered variant: randomized-medium14
+Skipping numbered variant: randomized-medium15
+Skipping numbered variant: randomized-medium2
+Skipping numbered variant: randomized-medium3
+Skipping numbered variant: randomized-medium4
+Skipping numbered variant: randomized-medium5
+Skipping numbered variant: randomized-medium6
+Skipping numbered variant: randomized-medium7
+Skipping numbered variant: randomized-medium8
+Skipping numbered variant: randomized-medium9
+==============================================
+Test Summary
+==============================================
+Total presets tested: 6
+Passed: 6
+Failed: 0
+
+✓ All tests passed
