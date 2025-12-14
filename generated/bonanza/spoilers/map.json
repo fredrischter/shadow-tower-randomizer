@@ -100,59 +100,20 @@
     },
     {
       "id": "13",
-      "dest": "earth_world_false_pit_cavern",
+      "dest": "earth_world_stone_cavern",
       "world": "earth_world",
-      "wayBackId": "3",
+      "wayBackId": "4",
       "type": "door",
       "rotation": 2
     },
     {
-      "id": "3",
-      "dest": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 3
-    },
-    {
-      "id": "10",
-      "dest": "earth_world_quaking_cavern",
-      "world": "earth_world",
-      "wayBackId": "3",
-      "type": "door",
-      "rotation": 3,
-      "direction": "bi"
-    },
-    {
-      "id": "3",
-      "dest": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "wayBackId": "10",
-      "type": "door",
-      "rotation": 3
-    },
-    {
-      "id": "17",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "9",
-      "type": "door",
-      "rotation": 1
-    },
-    {
-      "id": "9",
-      "dest": "earth_world_poisonous_cavern",
-      "world": "earth_world",
-      "wayBackId": "17",
-      "type": "door",
-      "rotation": 3
-    },
-    {
-      "id": "13",
+      "id": "7",
       "dest": "earth_world_false_pit_cavern",
       "world": "earth_world",
       "wayBackId": "3",
       "type": "door",
-      "rotation": 2
+      "rotation": 2,
+      "direction": "exit"
     },
     {
       "id": "1",
@@ -210,12 +171,53 @@
       "rotation": 3
     },
     {
+      "id": "10",
+      "dest": "earth_world_quaking_cavern",
+      "world": "earth_world",
+      "wayBackId": "3",
+      "type": "door",
+      "rotation": 3,
+      "direction": "bi"
+    },
+    {
+      "id": "3",
+      "dest": "earth_world_poisonous_cavern",
+      "world": "earth_world",
+      "wayBackId": "10",
+      "type": "door",
+      "rotation": 3
+    },
+    {
+      "id": "17",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "9",
+      "type": "door",
+      "rotation": 1
+    },
+    {
+      "id": "9",
+      "dest": "earth_world_poisonous_cavern",
+      "world": "earth_world",
+      "wayBackId": "17",
+      "type": "door",
+      "rotation": 3
+    },
+    {
       "id": "13",
+      "dest": "earth_world_stone_cavern",
+      "world": "earth_world",
+      "wayBackId": "4",
+      "type": "door",
+      "rotation": 2
+    },
+    {
+      "id": "7",
       "dest": "earth_world_false_pit_cavern",
       "world": "earth_world",
       "wayBackId": "3",
       "type": "door",
-      "rotation": 2
+      "rotation": 2,
+      "direction": "exit"
     },
     {
       "id": "11",
@@ -1101,9 +1103,9 @@
       "exits": [
         {
           "id": "13",
-          "dest": "earth_world_false_pit_cavern",
+          "dest": "earth_world_stone_cavern",
           "world": "earth_world",
-          "wayBackId": "3",
+          "wayBackId": "4",
           "type": "door",
           "rotation": 2
         },
@@ -1127,6 +1129,31 @@
       "depth": 5
     },
     {
+      "name": "earth_world_stone_cavern",
+      "world": "earth_world",
+      "exits": [
+        {
+          "id": "4",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "13",
+          "type": "door",
+          "rotation": 0,
+          "direction": "entrance"
+        },
+        {
+          "id": "7",
+          "dest": "earth_world_false_pit_cavern",
+          "world": "earth_world",
+          "wayBackId": "3",
+          "type": "door",
+          "rotation": 2,
+          "direction": "exit"
+        }
+      ],
+      "depth": 6
+    },
+    {
       "name": "earth_world_quaking_cavern",
       "world": "earth_world",
       "exits": [
@@ -1147,9 +1174,9 @@
       "exits": [
         {
           "id": "3",
-          "dest": "earth_world_poisonous_cavern",
+          "dest": "earth_world_stone_cavern",
           "world": "earth_world",
-          "wayBackId": "13",
+          "wayBackId": "7",
           "type": "door",
           "rotation": 3
         },
@@ -1186,7 +1213,7 @@
           "rotation": 3
         }
       ],
-      "depth": 6
+      "depth": 7
     },
     {
       "name": "shadow_tower_part2a",
@@ -1213,7 +1240,7 @@
           "type": "jump"
         }
       ],
-      "depth": 7
+      "depth": 8
     },
     {
       "name": "earth_world_hostile_rock_cavern",
@@ -1236,7 +1263,7 @@
           "rotation": 1
         }
       ],
-      "depth": 7
+      "depth": 8
     },
     {
       "name": "shadow_tower_part2b",
@@ -1266,7 +1293,7 @@
           "rotation": 3
         }
       ],
-      "depth": 8
+      "depth": 9
     },
     {
       "name": "fire_world_phoenix_cave",
@@ -1287,7 +1314,7 @@
           "rotation": 0
         }
       ],
-      "depth": 8
+      "depth": 9
     },
     {
       "name": "fire_world_burning_cavern",
@@ -1318,7 +1345,7 @@
           "rotation": 0
         }
       ],
-      "depth": 9
+      "depth": 10
     },
     {
       "name": "water_world_impure_pool_area",
@@ -1349,7 +1376,7 @@
           "direction": "bi"
         }
       ],
-      "depth": 9
+      "depth": 10
     },
     {
       "name": "shadow_tower_part3a",
@@ -1384,7 +1411,7 @@
           "type": "jump"
         }
       ],
-      "depth": 10
+      "depth": 11
     },
     {
       "name": "fire_world_molten_cavern",
@@ -1409,7 +1436,7 @@
           "rotation": 3
         }
       ],
-      "depth": 10
+      "depth": 11
     },
     {
       "name": "fire_world_ashen_cavern",
@@ -1432,7 +1459,7 @@
           "rotation": 2
         }
       ],
-      "depth": 10
+      "depth": 11
     },
     {
       "name": "monster_world_screeching_area",
@@ -1462,7 +1489,7 @@
           "rotation": 0
         }
       ],
-      "depth": 10
+      "depth": 11
     },
     {
       "name": "shadow_tower_part3b",
@@ -1497,7 +1524,7 @@
           "type": "jump"
         }
       ],
-      "depth": 11
+      "depth": 12
     },
     {
       "name": "water_world_sunken_river_area",
@@ -1521,7 +1548,7 @@
           "direction": "entrance"
         }
       ],
-      "depth": 11
+      "depth": 12
     },
     {
       "name": "illusion_world_gloomy_domain",
@@ -1551,7 +1578,7 @@
           "rotation": 1
         }
       ],
-      "depth": 11
+      "depth": 12
     },
     {
       "name": "death_world_dark_castle_layer",
@@ -1600,7 +1627,7 @@
           "rotation": 2
         }
       ],
-      "depth": 11
+      "depth": 12
     },
     {
       "name": "water_world_watery_labyrinth_area",
@@ -1623,7 +1650,7 @@
           "rotation": 2
         }
       ],
-      "depth": 12
+      "depth": 13
     },
     {
       "name": "water_world_white_rain_area",
@@ -1646,7 +1673,7 @@
           "rotation": 1
         }
       ],
-      "depth": 12
+      "depth": 13
     },
     {
       "name": "illusion_world_bewilderment_domain",
@@ -1669,7 +1696,7 @@
           "rotation": 2
         }
       ],
-      "depth": 12
+      "depth": 13
     },
     {
       "name": "death_world_lingering_curse_layer",
@@ -1691,7 +1718,7 @@
           "rotation": 1
         }
       ],
-      "depth": 12
+      "depth": 13
     },
     {
       "name": "death_world_gate_of_the_dead",
@@ -1714,7 +1741,7 @@
           "rotation": 3
         }
       ],
-      "depth": 12
+      "depth": 13
     },
     {
       "name": "illusion_world_worship_domain",
@@ -1753,7 +1780,7 @@
           "rotation": 0
         }
       ],
-      "depth": 13
+      "depth": 14
     },
     {
       "name": "illusion_world_dream_domain",
@@ -1776,7 +1803,7 @@
           "rotation": 2
         }
       ],
-      "depth": 14
+      "depth": 15
     },
     {
       "name": "monster_world_false_eye_area",
@@ -1799,7 +1826,7 @@
           "direction": "bi"
         }
       ],
-      "depth": 15
+      "depth": 16
     },
     {
       "name": "shadow_tower_part3c",
@@ -1813,7 +1840,7 @@
           "rotation": 2
         }
       ],
-      "depth": 17
+      "depth": 18
     },
     {
       "name": "death_world_undead_layer",
@@ -1838,7 +1865,7 @@
           "direction": "bi"
         }
       ],
-      "depth": 18
+      "depth": 19
     }
   ],
   "isComplete": true,
