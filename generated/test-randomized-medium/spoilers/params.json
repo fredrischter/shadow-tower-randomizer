@@ -1,0 +1,11 @@
+{
+	"label": "randomized-medium",
+	"preset": "any%",
+	"difficulty": "medium",
+	"randomizeMap": true,
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
+	"randomizeNonEssentialKeys": true,
+	"seed": "1"
+}

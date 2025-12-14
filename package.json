@@ -11,7 +11,8 @@
     "randomize": "node --max-old-space-size=8192 randomize.js",
     "change": "node --max-old-space-size=8192 change.js",
     "mod": "node --max-old-space-size=8192 mod.js",
-    "map_texture_extract": "node map_texture_extract.js"
+    "map_texture_extract": "node map_texture_extract.js",
+    "test-randomizer": "node --max-old-space-size=8192 test_randomizer.js"
   },
   "author": "",
   "license": "ISC",

@@ -89,11 +89,37 @@ npm run mod ".\generated\st.bin" ".\params\only-bosses.json"
 
 You can also put a image named as st.bin in generated\ folder, run all those commands to verify if produced output is different than one in the repo - that is reference generated files. Any output change indicates there was a code bahavior change, so it works like test.
 
+## Cache System
+
+To speed up testing, you can cache extracted ISO files and reuse them:
+
+```bash
+# First, create the cache (required before running tests)
+npm run mod ".\generated\st.bin" ".\params\no-change.json"
+
+# Then reuse extracted files for other presets (~50 seconds, 33% faster)
+# ISO file can be dummy placeholder when using cache
+npm run mod "dummy.bin" ".\params\randomized-hard.json" --use-cache ".\generated\no-change\extracted"
+
+# Or test randomizer output only (~22 seconds, 70% faster)
+npm run test-randomizer ".\params\randomized-hard.json" --use-cache ".\generated\no-change\extracted"
+```
+
+**Note:** When using `--use-cache`, the ISO file argument can be a dummy placeholder since extraction is skipped.
+
 ## Tests
 
-Run, verify updated csv files.
 
-./test_item_uniques.sh & ./test_items_count.sh & ./test_assertions.sh & ./test_failures.sh &
+```bash
+# Test single preset (cache must be created first)
+npm run test-randomizer ".\params\randomized-medium.json" -c ".\generated\no-change\extracted"
+
+# Test all presets (Windows) - creates cache if needed
+test_all_presets.bat
+
+# Test all presets (Linux/Mac)
+./test_all_presets.sh
+```
 
 ## Options
 

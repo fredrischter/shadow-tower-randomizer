@@ -4,18 +4,36 @@ const path = require('path');
 const fs = require('fs');
 const child_process = require('child_process')
 
+// Task: Cache extracted files system - Allow using cached extracted files
 var file = process.argv[2];
-if (!file) {
-	console.log("ERROR - didn't provide file as argument.");
-	process.exit(1);
-	return;
-}
+var useCachedExtracted = false;
+var cachedExtractedPath = null;
 
+// Parse flags first
 for (var i = 2; i < process.argv.length; i++) {
 	if (process.argv[i] == "-toNotGenerateImages") {
 		global.toNotGenerateImages = true;
 		console.log("toNotGenerateImages parameter");
 	}
+	if (process.argv[i] == "-useCache" || process.argv[i] == "--use-cache") {
+		useCachedExtracted = true;
+		cachedExtractedPath = process.argv[i + 1];
+		console.log("Using cached extracted files from: " + cachedExtractedPath);
+		i++; // Skip next argument
+	}
+}
+
+// Task: Cache system - ISO file optional when using cache
+if (!file && !useCachedExtracted) {
+	console.log("ERROR - didn't provide file as argument.");
+	process.exit(1);
+	return;
+}
+
+// If using cache, file argument can be a dummy placeholder
+if (useCachedExtracted && (!file || !fs.existsSync(file))) {
+	console.log("Using cache mode - ISO file not required");
+	file = "dummy.bin"; // Placeholder since we skip extraction
 }
 
 var originalParamsFile = process.argv[3];
@@ -54,19 +72,35 @@ const params = JSON.parse(fs.readFileSync(originalParamsFile));
 const onlyPath = path.dirname(file);
 const onlyFileName = path.basename(file);
 
+// Task: Cache extracted files system - Use cached path if provided
 const productPath = onlyPath + path.sep + params.label;
 const outputImage = productPath + path.sep + 'modified-' + params.label + '-' + onlyFileName;
 //const outputCue = productPath + path.sep + 'modified-' + params.label + '-' + onlyFileName.split(".")[0] + '.cue';
-const extractedPath = productPath + path.sep + 'extracted';
+const extractedPath = useCachedExtracted ? cachedExtractedPath : (productPath + path.sep + 'extracted');
 const spoilersPath = productPath + path.sep + 'spoilers';
 const xmlDescriptor = productPath + path.sep + 'st.xml';
 const paramsFile = spoilersPath + path.sep + "params.json";
 
-if (fs.existsSync(productPath)) {
-	fs.rmdirSync(productPath, { recursive: true });
+if (useCachedExtracted) {
+	if (!fs.existsSync(cachedExtractedPath)) {
+		console.log("ERROR - cached extracted path doesn't exist: " + cachedExtractedPath);
+		process.exit(1);
+		return;
+	}
+	console.log("Using cached extracted files, skipping extraction and unpacking");
+	// Create product path for spoilers only
+	if (fs.existsSync(productPath)) {
+		fs.rmdirSync(productPath, { recursive: true });
+	}
+	fs.mkdirSync(productPath);
+	fs.mkdirSync(spoilersPath);
+} else {
+	if (fs.existsSync(productPath)) {
+		fs.rmdirSync(productPath, { recursive: true });
+	}
+	fs.mkdirSync(productPath);
+	fs.mkdirSync(spoilersPath);
 }
-fs.mkdirSync(productPath);
-fs.mkdirSync(spoilersPath);
 
 fs.copyFileSync(originalParamsFile, paramsFile);
 
@@ -84,26 +118,53 @@ function exec(cmd, callback) {
 	});
 }
 
+// Task: Cache extracted files system - Skip extraction/unpacking if using cache
 var filesToExtract = ['COM' + path.sep + 'FDAT.T', 'CHR0' + path.sep + 'M00.T', 'CHR0' + path.sep + 'M01.T', 'CHR0' + path.sep + 'M02.T', 'CHR0' + path.sep + 'M03.T', 'CHR0' + path.sep + 'M04.T', 'CHR0' + path.sep + 'M05.T', 'CHR0' + path.sep + 'M06.T', 'CHR0' + path.sep + 'M08.T', 'CHR0' + path.sep + 'M09.T', 'CHR1' + path.sep + 'M10.T', 'CHR1' + path.sep + 'M11.T', 'CHR1' + path.sep + 'M12.T', 'CHR1' + path.sep + 'M13.T', 'CHR1' + path.sep + 'M14.T', 'CHR1' + path.sep + 'M15.T', 'CHR1' + path.sep + 'M17.T', 'CHR1' + path.sep + 'M18.T', 'CHR2' + path.sep + 'M20.T', 'CHR2' + path.sep + 'M21.T', 'CHR2' + path.sep + 'M23.T', 'CHR2' + path.sep + 'M24.T', 'CHR2' + path.sep + 'M25.T', 'CHR2' + path.sep + 'M26.T', 'CHR2' + path.sep + 'M27.T', 'CHR2' + path.sep + 'M28.T', 'CHR3' + path.sep + 'M30.T', 'CHR3' + path.sep + 'M32.T', 'CHR3' + path.sep + 'M33.T', 'CHR3' + path.sep + 'M37.T', 'CHR3' + path.sep + 'M38.T', 'CHR4' + path.sep + 'M40.T', 'CHR4' + path.sep + 'M41.T'];
 var filesFullPath = '';
 filesToExtract.forEach((relativePath) => filesFullPath += extractedPath + path.sep + "ST" + path.sep + relativePath + ';');
 
-exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"', function() {
+if (useCachedExtracted) {
+	// Skip extraction and unpacking, go directly to randomize
+	console.log("Skipping dumpsxiso and unpack steps (using cache)");
+	
+	exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' -toNotGenerateImages':''), function() {
 
-	exec('npm run unpack "' + filesFullPath + '"', function() {
+		exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
 
-		exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' -toNotGenerateImages':''), function() {
+			exec('npm run pack "' + filesFullPath + '"', function() {
 
-			exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
+				exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
+					console.log("Finished, output " + outputImage);
+					console.log("Used cached extracted files from " + extractedPath);
+					console.log("Spoilers " + spoilersPath);
+				});
+			
+			});
 
-				exec('npm run pack "' + filesFullPath + '"', function() {
+		});
 
-					exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
-						console.log("Finished, output " + outputImage);
-						console.log("Extraced modified files " + extractedPath);
-						console.log("Spoilers " + spoilersPath);
+	});
+	
+} else {
+	// Full workflow: extract -> unpack -> randomize -> change -> pack -> build ISO
+	exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor + '"', function() {
+
+		exec('npm run unpack "' + filesFullPath + '"', function() {
+
+			exec('npm run randomize "' + paramsFile + '" "' + extractedPath + '"' + (global.toNotGenerateImages?' -toNotGenerateImages':''), function() {
+
+				exec('npm run change "' + spoilersPath + path.sep + "changeset.json" + '"', function() {
+
+					exec('npm run pack "' + filesFullPath + '"', function() {
+
+						exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
+							console.log("Finished, output " + outputImage);
+							console.log("Extracted modified files " + extractedPath);
+							console.log("Spoilers " + spoilersPath);
+						});
+					
 					});
-				
+
 				});
 
 			});
@@ -111,8 +172,7 @@ exec('dumpsxiso "' + file + '" -x "' + extractedPath + '" -s "' + xmlDescriptor 
 		});
 
 	});
-
-});
+}
 
 
 

@@ -1,0 +1,7 @@
+{
+	"label": "only-bosses",
+	"preset": "no-change",
+	"difficulty": "medium",
+	"keepOnlyBosses": true,
+	"seed": "1"
+}

@@ -1,0 +1,12 @@
+{
+	"label": "randomized-hard",
+	"preset": "any%",
+	"difficulty": "hard",
+	"randomizeMap": true,
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
+	"randomizeNonEssentialKeys": true,
+	"seed": "1",
+	"colorValueFactor": 0.5
+}
