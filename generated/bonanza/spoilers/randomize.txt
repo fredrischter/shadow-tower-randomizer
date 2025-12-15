@@ -12684,8 +12684,8 @@ Exit for chart water_world_sunken_river_area["Water World Sunken River Area"] --
  5    5b68    a44368 exit-door                                  tile(  41,  40,  49) Pool          -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  f7   0  f2   0   0  20   1   0
 Exit for chart water_world_sunken_river_area["Water World Sunken River Area"] -->|"Entrance r0 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
  1    5b08    a44308 exit-door                                  tile(  40,  40,  40) Entrance      -> shadow_tower_part3                 pos(  0  ,1  ,0)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
-Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r2 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 3    5b38    4a8b38 exit-door                                  tile(  3e,  42,  39) Ladder down   -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0   f   0  12   0   0   8   2   0
+Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 3    5b38    4a8b38 exit-door                                  tile(  3e,  42,  39) Ladder down   -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0   f   0  12   0   0   8   3   0
 Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Entrance r2 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
  1    5b08    4a8b08 exit-door                                  tile(  39,  40,  40) Entrance      -> shadow_tower_part3                 pos( -4  ,2 ,-4)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
 Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r0 y3"| water_world_white_rain_area["Water World White Rain Area"]
@@ -12708,10 +12708,10 @@ Exit for chart water_world_white_rain_area["Water World White Rain Area"] -->|"E
  4    4230   1010a30 exit-door                                  tile(  3d,  40,  3f) Entrance      -> water_world_watery_labyrinth_area  pos(  8  ,0  ,8)   3d  40  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   8   0  f5   0   0  20   3   0
 Exit for chart water_world_white_rain_area["Water World White Rain Area"] -->|"Totem r0 y3"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
  6    4260   1010a60 exit-totem  teleport                       tile(  3c,  40,  42) Totem         -> shadow_tower_part1                 pos(  9 ,-2  ,9)   3c  40  42   0   3   0   0   4   0   4   0   0   0   8  4d   0   9  fe   0   3  f8   0   0   3
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r0 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
- 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> illusion_world_worship_domain      pos( -4  ,0 ,-4)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  fc   0   6   0   8   d   0   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r2 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> illusion_world_gloomy_domain       pos( -2  ,2 ,-2)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0  fe   2  fa  f8   0   9   2   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
+ 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> illusion_world_worship_domain      pos( -4  ,0 ,-4)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  fc   0   6   0   8   d   1   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> illusion_world_gloomy_domain       pos( -2  ,2 ,-2)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0  fe   2  fa  f8   0   9   1   0
 Exit for chart death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Door r3 y-8"| shadow_tower_part3c["Shadow Tower Part3 C"]
  1    5b08    767b08 exit-door                                  tile(  30,  3e,  3d) Door          -> shadow_tower_part3                 pos(  0  ,6  ,0)   30  3e  3d   0  fc   0   0   0   0   0   0   0   0   0  f5   1   0   6  fc   0   0  29   3  f8
 Exit for chart death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Box room r3 y2"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
@@ -12720,8 +12720,8 @@ Exit for chart death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|
  1    5b08    ad9b08 exit-door                                  tile(  40,  40,  37) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1)   40  40  37   0  fc   0   0   0   0   0   0   0   0   0  e5   1   1   1   0   0   0  1a   0  f8
 Exit for chart death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Totem r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  4    5b50    ad9b50 exit-totem  teleport                       tile(  55,  40,  3f) Totem         -> shadow_tower_part1                 pos( 25,-13 ,25)   55  40  3f   0   3   0   0   a   0  fc   0  fc   0   4  7a   0  19  f3   0   0   0   0   3   0
-Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   4   0  ff   0   0   8   0   0
+Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   4   0  ff   0   0   8   3   0
 Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Connection r0 y2"| illusion_world_worship_domain["Illusion World Worship Domain"]
  6    5b80    6f1380 exit-portal shaking wall portal            tile(  40,  40,  38) Connection    -> shadow_tower_part1                 pos( 13 ,15 ,13)   40  40  38   0  fd   0   0   0   0   0   0   0  ee   2  c6   0   d   f   0   6   0   0   0   2
 Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Exit r2 y0"| illusion_world_dream_domain["Illusion World Dream Domain"]

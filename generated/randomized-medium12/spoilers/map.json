@@ -632,7 +632,7 @@
       "world": "human_world",
       "wayBackId": "38",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "34",
@@ -833,7 +833,7 @@
       "world": "water_world",
       "wayBackId": "9",
       "type": "door",
-      "rotation": 2
+      "rotation": 3
     },
     {
       "id": "14",
@@ -1980,7 +1980,7 @@
           "world": "human_world",
           "wayBackId": "38",
           "type": "door",
-          "rotation": 3
+          "rotation": 2
         },
         {
           "id": "18",
@@ -1988,7 +1988,7 @@
           "world": "water_world",
           "wayBackId": "9",
           "type": "door",
-          "rotation": 2
+          "rotation": 3
         }
       ],
       "depth": 7

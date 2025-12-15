@@ -267,7 +267,7 @@
       "world": "death_world",
       "wayBackId": "2",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "4",
@@ -814,7 +814,7 @@
       "world": "death_world",
       "wayBackId": "2",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "4",
@@ -1036,7 +1036,7 @@
       "world": "death_world",
       "wayBackId": "2",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "7",
@@ -1790,7 +1790,7 @@
           "world": "death_world",
           "wayBackId": "2",
           "type": "door",
-          "rotation": 3
+          "rotation": 2
         },
         {
           "id": "18",
@@ -1798,7 +1798,7 @@
           "world": "water_world",
           "wayBackId": "5",
           "type": "door",
-          "rotation": 2
+          "rotation": 3
         }
       ],
       "depth": 6

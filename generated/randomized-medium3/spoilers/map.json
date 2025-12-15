@@ -842,7 +842,7 @@
       "dest": "shadow_tower_part2b",
       "wayBackId": "4",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "4",
@@ -858,7 +858,7 @@
       "world": "death_world",
       "wayBackId": "2",
       "type": "door",
-      "rotation": 2
+      "rotation": 3
     },
     {
       "id": "0",
@@ -890,7 +890,7 @@
       "world": "death_world",
       "wayBackId": "2",
       "type": "door",
-      "rotation": 2
+      "rotation": 3
     },
     {
       "id": "7",
@@ -969,7 +969,7 @@
       "world": "death_world",
       "wayBackId": "2",
       "type": "door",
-      "rotation": 2
+      "rotation": 3
     },
     {
       "id": "10",
@@ -1976,7 +1976,7 @@
           "dest": "shadow_tower_part2b",
           "wayBackId": "4",
           "type": "door",
-          "rotation": 3
+          "rotation": 2
         },
         {
           "id": "18",
@@ -1984,7 +1984,7 @@
           "world": "death_world",
           "wayBackId": "2",
           "type": "door",
-          "rotation": 2
+          "rotation": 3
         }
       ],
       "depth": 13

@@ -12267,10 +12267,10 @@ Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|
  11   5bf8    5353f8 exit-door                                  tile(  48,  43,  33) Flush down    -> shadow_tower_part2                 pos(  0  ,1  ,0)   48  43  33   0  fc   0   0   0   0  fb   0   0   0   0  93   1   0   1   4   a   0  28   0  f8
 Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Totem r3 y3"| death_world_gate_of_the_dead["Death World Gate Of The Dead"]
  14   5c40    535440 exit-totem  teleport                       tile(  46,  40,  47) Totem         -> shadow_tower_part1                 pos(  5 ,-5  ,5)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1   5  fb   0  fe   0   0   3   3
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r0 y-8"| human_world_solitary_region["Human World Solitary Region"]
- 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> shadow_tower_part3                 pos( -4  ,2 ,-4)   44  40  3e   0  fc   0   0   0   0   0   0   0   0   0  a1   0  fc   2   0   0   0  29   0  f8
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> illusion_world_worship_domain      pos( -4  ,0 ,-4)   50  40  52   0  fc   0   0   0   0   0   0   0   0  fc  76   0  fc   0   6   0   8   d   1   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r1 y-8"| human_world_solitary_region["Human World Solitary Region"]
+ 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> shadow_tower_part3                 pos( -4  ,2 ,-4)   44  40  3e   0  fc   0   0   0   0   0   0   0   0   0  a1   0  fc   2   0   0   0  29   1  f8
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r0 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> illusion_world_worship_domain      pos( -4  ,0 ,-4)   50  40  52   0  fc   0   0   0   0   0   0   0   0  fc  76   0  fc   0   6   0   8   d   0   0
 Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Entrance r1 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
  0    5af0    1c82f0 exit-door                                  tile(  3b,  40,  43) Entrance      -> shadow_tower_part2                 pos(  5  ,3  ,5)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   5   3   3   0   0  28   1  f8
 Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Exit r1 y-8"| earth_world_quaking_cavern["Earth World Quaking Cavern"]

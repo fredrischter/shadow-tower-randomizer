@@ -425,7 +425,7 @@
       "world": "illusion_world",
       "wayBackId": "3",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "1",
@@ -672,7 +672,7 @@
       "dest": "shadow_tower_part3a",
       "wayBackId": "9",
       "type": "door",
-      "rotation": 2
+      "rotation": 3
     },
     {
       "id": "9",
@@ -688,7 +688,7 @@
       "world": "illusion_world",
       "wayBackId": "3",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "10",
@@ -1456,14 +1456,14 @@
           "world": "illusion_world",
           "wayBackId": "3",
           "type": "door",
-          "rotation": 3
+          "rotation": 2
         },
         {
           "id": "18",
           "dest": "shadow_tower_part3a",
           "wayBackId": "9",
           "type": "door",
-          "rotation": 2
+          "rotation": 3
         }
       ],
       "depth": 4

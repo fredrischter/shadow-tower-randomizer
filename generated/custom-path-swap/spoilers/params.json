@@ -1,0 +1,68 @@
+{
+	"label": "custom-path-swap",
+	"preset": "no-change",
+	"difficulty": "easy",
+	"randomizeMap": false,
+	"randomizeCreatures": false,
+	"keepOnlyBosses": true,
+	"randomizeCollectablesAndDrops": false,
+	"customDoorSwaps": [
+		{
+			"comment": "Tower part1a exit 0 -> Bewilderment Domain entrance 20 (force Tower to go to Bewilderment)",
+			"from": "shadow_tower_part1a",
+			"exitId": "0",
+			"to": "illusion_world_bewilderment_domain",
+			"entranceId": "20"
+		},
+		{
+			"comment": "Return",
+			"from": "illusion_world_bewilderment_domain",
+			"exitId": "20",
+			"to": "shadow_tower_part1a",
+			"entranceId": "0"
+		},
+		{
+			"comment": "Bewilderment Domain exit 18 -> Tower part2a",
+			"from": "illusion_world_bewilderment_domain",
+			"exitId": "18",
+			"to": "shadow_tower_part2a",
+			"entranceId": "0"
+		},
+		{
+			"comment": "Tower part2a -> Bewilderment Domain exit 18",
+			"from": "shadow_tower_part2a",
+			"exitId": "0",
+			"to": "illusion_world_bewilderment_domain",
+			"entranceId": "18"
+		},
+		{
+			"comment": "Tower part2a exit 5 -> Hostile Rock Cavern entrance 1",
+			"from": "shadow_tower_part2a",
+			"exitId": "5",
+			"to": "earth_world_hostile_rock_cavern",
+			"entranceId": "1"
+		},
+		{
+			"comment": "Hostile Rock Cavern entrance 1 -> Tower part2a exit 5",
+			"from": "earth_world_hostile_rock_cavern",
+			"exitId": "1",
+			"to": "shadow_tower_part2a",
+			"entranceId": "5"
+		},
+		{
+			"comment": "Hostile Rock Cavern entrance 3 totem -> death_world_gate_of_the_dead 4 totem",
+			"from": "earth_world_hostile_rock_cavern",
+			"exitId": "3",
+			"to": "death_world_gate_of_the_dead",
+			"entranceId": "4"
+		},
+		{
+			"comment": "death_world_gate_of_the_dead 4 totem -> Hostile Rock Cavern entrance 3 totem",
+			"from": "death_world_gate_of_the_dead",
+			"exitId": "4",
+			"to": "earth_world_hostile_rock_cavern",
+			"entranceId": "3"
+		}
+	],
+	"seed": "1"
+}

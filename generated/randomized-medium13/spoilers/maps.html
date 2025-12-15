@@ -157,7 +157,7 @@ graph TD
   shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Middle r1 y-17"| shadow_tower_part3b["Shadow Tower Part3 B"]
   shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Jump "| shadow_tower_part1c["Shadow Tower Part1 C"]
   shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r3 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
-  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r1 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
   shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Edge r3 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
   shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top right r3 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
   shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top left r0 y0"| human_world_hidden_region["Human World Hidden Region"]
@@ -182,8 +182,8 @@ graph TD
   fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Entrance r2 y0"| human_world_solitary_region["Human World Solitary Region"]
   fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Platform r0 y1"| fire_world_molten_cavern["Fire World Molten Cavern"]
   fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Room r0 y0"| fire_world_ashen_cavern["Fire World Ashen Cavern"]
-  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r2 y0"| human_world_hidden_region["Human World Hidden Region"]
-  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
+  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r3 y0"| human_world_hidden_region["Human World Hidden Region"]
+  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r3 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   death_world_undead_layer["Death World Undead Layer"] -->|"King's room r0 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
   death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
   earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Poison r3 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
@@ -194,7 +194,7 @@ graph TD
   fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Entrance r1 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
   fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Exit r3 y-8"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
-  water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r2 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
+  water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
   earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Entrance r1 y-8"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
   earth_world_quaking_cavern["Earth World Quaking Cavern"] -->|"Entrance r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
 
@@ -2828,7 +2828,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "11",
         "exitName": "Bottom Middle",
-        "details": "r0 y0"
+        "details": "r1 y0"
       }
     },
     {
@@ -3103,7 +3103,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "20",
         "exitName": "Exit",
-        "details": "r2 y0"
+        "details": "r3 y0"
       }
     },
     {
@@ -3114,7 +3114,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "18",
         "exitName": "Entrance",
-        "details": "r0 y-8"
+        "details": "r3 y-8"
       }
     },
     {
@@ -3235,7 +3235,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "4",
         "exitName": "Entrance",
-        "details": "r2 y0"
+        "details": "r3 y0"
       }
     },
     {

@@ -322,7 +322,7 @@
       "dest": "shadow_tower_part1c",
       "wayBackId": "5",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "11",
@@ -457,7 +457,7 @@
       "world": "earth_world",
       "wayBackId": "13",
       "type": "door",
-      "rotation": 2
+      "rotation": 3
     },
     {
       "id": "13",
@@ -472,7 +472,7 @@
       "dest": "shadow_tower_part1c",
       "wayBackId": "5",
       "type": "door",
-      "rotation": 3
+      "rotation": 2
     },
     {
       "id": "11",
@@ -1730,7 +1730,7 @@
           "dest": "shadow_tower_part1c",
           "wayBackId": "5",
           "type": "door",
-          "rotation": 3
+          "rotation": 2
         },
         {
           "id": "18",
@@ -1738,7 +1738,7 @@
           "world": "earth_world",
           "wayBackId": "13",
           "type": "door",
-          "rotation": 2
+          "rotation": 3
         }
       ],
       "depth": 8

@@ -117,7 +117,7 @@ graph TD
   human_world_solitary_region["Human World Solitary Region"] -->|"Cemetery r2 y0"| human_world_forgotten_region["Human World Forgotten Region"]
   human_world_solitary_region["Human World Solitary Region"] -->|"Grave r3 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   human_world_solitary_region["Human World Solitary Region"] -->|"Church r3 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
-  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
   shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Middle r0 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
   shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Jump "| shadow_tower_part1c["Shadow Tower Part1 C"]
   shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r1 y0"| human_world_solitary_region["Human World Solitary Region"]
@@ -134,8 +134,8 @@ graph TD
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Exit r1 y-8"| death_world_undead_layer["Death World Undead Layer"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Jump in r0 y3"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Totem r3 y0"| monster_world_false_eye_area["Monster World False Eye Area"]
-  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r3 y-8"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
-  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
+  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r0 y-8"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
+  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r0 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
   death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Prison r1 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
   death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Entrance r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Lower totem r0 y2"| water_world_impure_pool_area["Water World Impure Pool Area"]
@@ -147,7 +147,7 @@ graph TD
   water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Entrance r2 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
   water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Flush down r2 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
   water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Totem r0 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
-  water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r2 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r1 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y-8"| illusion_world_worship_domain["Illusion World Worship Domain"]
   monster_world_false_eye_area["Monster World False Eye Area"] -->|"Entrance r3 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
   monster_world_false_eye_area["Monster World False Eye Area"] -->|"Totem r2 y2"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
@@ -175,7 +175,7 @@ graph TD
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Connection r2 y0"| fire_world_ashen_cavern["Fire World Ashen Cavern"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Exit r0 y2"| fire_world_molten_cavern["Fire World Molten Cavern"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"To Boss r0 y0"| fire_world_ashen_cavern["Fire World Ashen Cavern"]
-  shadow_tower_part3c["Shadow Tower Part3 C"] -->|"Fence r2 y0"| human_world_cursed_region["Human World Cursed Region"]
+  shadow_tower_part3c["Shadow Tower Part3 C"] -->|"Fence r3 y0"| human_world_cursed_region["Human World Cursed Region"]
   human_world_hidden_region["Human World Hidden Region"] -->|"Jail r3 y0"| shadow_tower_part3a["Shadow Tower Part3 A"]
   human_world_hidden_region["Human World Hidden Region"] -->|"Corridor r3 y-8"| human_world_cursed_region["Human World Cursed Region"]
   human_world_hidden_region["Human World Hidden Region"] -->|"Totem r0 y3"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
@@ -2394,7 +2394,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "4",
         "exitName": "Edge",
-        "details": "r3 y0"
+        "details": "r0 y0"
       }
     },
     {
@@ -2581,7 +2581,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "20",
         "exitName": "Exit",
-        "details": "r3 y-8"
+        "details": "r0 y-8"
       }
     },
     {
@@ -2592,7 +2592,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "18",
         "exitName": "Entrance",
-        "details": "r1 y-8"
+        "details": "r0 y-8"
       }
     },
     {
@@ -2724,7 +2724,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "9",
         "exitName": "Exit",
-        "details": "r2 y0"
+        "details": "r1 y0"
       }
     },
     {
@@ -3032,7 +3032,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "10",
         "exitName": "Fence",
-        "details": "r2 y0"
+        "details": "r3 y0"
       }
     },
     {

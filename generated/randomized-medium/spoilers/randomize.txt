@@ -12133,8 +12133,8 @@ Exit for chart death_world_dark_castle_layer["Death World Dark Castle Layer"] --
  10   42c0    bda2c0 exit-totem  teleport                       tile(  33,  40,  3f) Upper totem 2 -> shadow_tower_part1                 pos( 33 ,-1 ,33)   33  40  3f   0   3   0   0   8   0   0   0   0   0   4  74   0  21  ff   0   b   0   0   3   3
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's room r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
  12   5c10    c78c10 exit-door                                  tile(  41,  41,  41) King's room   -> shadow_tower_part1                 pos(  1  ,6  ,1)   41  41  41   0  fc   0   0   0   0   0   0   0   0   0  af   0   1   6   3   1   1   0   1  f8
-Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r2 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   f   0  12   0   0   8   2   0
+Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   f   0  12   0   0   8   3   0
 Exit for chart shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top right r0 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  0    5af0   1195af0 exit-door                                  tile(  45,  41,  3b) Top right     -> death_world_dark_castle_layer      pos(  1  ,0  ,1)   45  41  3b   0  fc   0   0   0   0   0   0  fc   0   0   0   0   1   0  f7   1   1  19   0   0
 Exit for chart shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top left r0 y-17"| human_world_cursed_region["Human World Cursed Region"]
@@ -12153,10 +12153,10 @@ Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|
  1    5b08    4a8b08 exit-door                                  tile(  39,  40,  40) Entrance      -> shadow_tower_part3                 pos( -4  ,2 ,-4)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
 Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r1 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  10   5be0    4a8be0 exit-totem  teleport                       tile(  3d,  40,  43) Totem         -> shadow_tower_part1                 pos( 25 ,-2 ,25)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0  19  fe   0  fb   0   0   1   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r1 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
- 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> earth_world_stone_cavern           pos(-16  ,5,-16)   44  40  3e   0  fc   0   0   0   0   5   0   0   0   0  a1   0  f0   5  f7  f6   0  1c   1   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r2 y0"| death_world_undead_layer["Death World Undead Layer"]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> water_world_impure_pool_area       pos(  8  ,3  ,8)   50  40  52   0  fc   0   0   0   0   0   0  fc   0   0  76   0   8   3  f4   1   1   a   2   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r2 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
+ 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> earth_world_stone_cavern           pos(-16  ,5,-16)   44  40  3e   0  fc   0   0   0   0   5   0   0   0   0  a1   0  f0   5  f7  f6   0  1c   2   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| death_world_undead_layer["Death World Undead Layer"]
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> water_world_impure_pool_area       pos(  8  ,3  ,8)   50  40  52   0  fc   0   0   0   0   0   0  fc   0   0  76   0   8   3  f4   1   1   a   1   0
 Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom middle r2 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
  5    5b68   1195b68 exit-door                                  tile(  45,  43,  40) Bottom middle -> shadow_tower_part1                 pos(  4  ,9  ,4)   45  43  40   0  fc   0   0   0   0  fc   0   0   0   0  e0   1   4   9  ff   7   0   0   2  f8
 Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Top edge r2 y-17"| water_world_sunken_river_area["Water World Sunken River Area"]
@@ -12257,8 +12257,8 @@ Exit for chart earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Ent
  13   5c28    5c9c28 exit-door                                  tile(  38,  40,  35) Entrance      -> shadow_tower_part1                 pos(  2  ,7  ,2)   38  40  35   0  fc   0   0   0  80   0   0   0   0   0  a7   1   2   7  fa   0   0   0   0  f8
 Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Entrance r3 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
  9    5bc8    5353c8 exit-door                                  tile(  44,  40,  33) Entrance      -> earth_world_poisonous_cavern       pos(  9  ,1  ,9)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   9   1   1   0   0  1b   3   0
-Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Flush down r2 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
- 11   5bf8    5353f8 exit-door                                  tile(  48,  43,  33) Flush down    -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   f   0  12   0   0   8   2   0
+Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Flush down r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
+ 11   5bf8    5353f8 exit-door                                  tile(  48,  43,  33) Flush down    -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   f   0  12   0   0   8   3   0
 Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Totem r0 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
  14   5c40    535440 exit-totem  teleport                       tile(  46,  40,  47) Totem         -> shadow_tower_part1                 pos( 25,-13 ,25)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1  19  f3   0   0   0   0   0   0
 Exit for chart shadow_tower_part3c["Shadow Tower Part3 C"] -->|"Fence r1 y0"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]

@@ -12197,8 +12197,8 @@ Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Jump "| shadow_t
  
 Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r3 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
  5    5b68     21368 exit-door                                  tile(  43,  47,  3a) Top           -> human_world_forgotten_region       pos( -3  ,1 ,-3)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0  fd   1   9   1   1   6   3   0
-Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 11   5bf8     213f8 exit-door                                  tile(  40,  49,  44) Bottom Middle -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   40  49  44   0  fc   0   0   0   0   0   0   0   0   0   0   0   f   0  12   0   0   8   0   0
+Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r1 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 11   5bf8     213f8 exit-door                                  tile(  40,  49,  44) Bottom Middle -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   40  49  44   0  fc   0   0   0   0   0   0   0   0   0   0   0   f   0  12   0   0   8   1   0
 Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Edge r3 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
  9    5bc8     213c8 exit-door                                  tile(  45,  49,  3f) Bottom Edge   -> human_world_forgotten_region       pos(  6  ,0  ,6)   45  49  3f   0  fc   0   0   0   0   0   0  fc   0   0   0   0   6   0   5   1   1   6   3   0
 Exit for chart shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top right r3 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
@@ -12247,10 +12247,10 @@ Exit for chart fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Platf
  94   63c0    9b3bc0 exit-portal shaking wall portal            tile(  47,  3f,  46) Platform      -> -                                  pos( 24 ,12 ,24)   47  3f  46   0  fd   0   0   0   0   0   0   0   0   0  d7   0  18   c   0   2   0  f0   0   1
 Exit for chart fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Room r0 y0"| fire_world_ashen_cavern["Fire World Ashen Cavern"]
  93   63a8    9b3ba8 exit-portal shaking wall portal            tile(  3a,  3f,  38) Room          -> shadow_tower_part1                 pos( 18 ,33 ,18)   3a  3f  38   0  fd   0   0   0   0   0   0   4   0   0  8d   0  12  21   4  fc   0   0   0   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r2 y0"| human_world_hidden_region["Human World Hidden Region"]
- 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> water_world_sunken_river_area      pos(  0  ,0  ,0)   44  40  3e   0  fc   0   0   0   0   0   0  fc   0   0  a1   0   0   0   1   1   1  15   2   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> shadow_tower_part1                 pos(  0  ,9  ,0)   50  40  52   0  fc   0   0   0   0  fb   0   0   0   0  76   0   0   9   3   9   0   0   0  f8
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r3 y0"| human_world_hidden_region["Human World Hidden Region"]
+ 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> water_world_sunken_river_area      pos(  0  ,0  ,0)   44  40  3e   0  fc   0   0   0   0   0   0  fc   0   0  a1   0   0   0   1   1   1  15   3   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r3 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> shadow_tower_part1                 pos(  0  ,9  ,0)   50  40  52   0  fc   0   0   0   0  fb   0   0   0   0  76   0   0   9   3   9   0   0   3  f8
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's room r0 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
  12   5c10    c78c10 exit-door                                  tile(  41,  41,  41) King's room   -> shadow_tower_part1                 pos(  5  ,3  ,5)   41  41  41   0  fc   0   0   0   0   0   0   0   0  fc  af   0   5   3   0   0   0   0   0  f8
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
@@ -12271,8 +12271,8 @@ Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Exit r3 y
  1    5b08    1c8308 exit-door                                  tile(  41,  40,  43) Exit          -> shadow_tower_part2                 pos( -5  ,3 ,-5)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0  fb   3   0   0   0  28   3  f8
 Exit for chart water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
  9    5bc8    ee23c8 exit-door                                  tile(  49,  40,  35) Exit          -> shadow_tower_part2                 pos(  5  ,3  ,5)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0   5   3   3   0   0  28   1  f8
-Exit for chart water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r2 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
- 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   37  40  31   0  fc   0   0   0   0   0   0   0   0   0  ec   0   f   0  12   0   0   8   2   0
+Exit for chart water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
+ 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   37  40  31   0  fc   0   0   0   0   0   0   0   0   0  ec   0   f   0  12   0   0   8   3   0
 Exit for chart earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Entrance r1 y-8"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
  13   5c28    5c9c28 exit-door                                  tile(  38,  40,  35) Entrance      -> shadow_tower_part2                 pos(  0  ,1  ,0)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   0   1   4   a   0  28   1  f8
 Exit for chart earth_world_quaking_cavern["Earth World Quaking Cavern"] -->|"Entrance r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]

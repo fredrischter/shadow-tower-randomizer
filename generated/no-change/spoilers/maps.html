@@ -168,7 +168,7 @@ graph TD
   shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Jump "| shadow_tower_part3c["Shadow Tower Part3 C"]
   water_world_sunken_river_area["Water World Sunken River Area"] -->|"Pool r1 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
   water_world_sunken_river_area["Water World Sunken River Area"] -->|"Entrance r0 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
-  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r2 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
   illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Entrance r2 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
   illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r0 y3"| water_world_white_rain_area["Water World White Rain Area"]
   death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Prison r1 y0"| death_world_undead_layer["Death World Undead Layer"]
@@ -180,13 +180,13 @@ graph TD
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
   water_world_white_rain_area["Water World White Rain Area"] -->|"Entrance r3 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
   water_world_white_rain_area["Water World White Rain Area"] -->|"Totem r0 y3"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
-  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r0 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
-  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r2 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
+  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
+  illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
   death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Door r3 y-8"| shadow_tower_part3c["Shadow Tower Part3 C"]
   death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Box room r3 y2"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
   death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Entrance r0 y-8"| death_world_undead_layer["Death World Undead Layer"]
   death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Totem r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
-  illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Connection r0 y2"| illusion_world_worship_domain["Illusion World Worship Domain"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Exit r2 y0"| illusion_world_dream_domain["Illusion World Dream Domain"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"To Boss r0 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
@@ -3131,7 +3131,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "3",
         "exitName": "Ladder down",
-        "details": "r2 y0"
+        "details": "r3 y0"
       }
     },
     {
@@ -3263,7 +3263,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "20",
         "exitName": "Exit",
-        "details": "r0 y0"
+        "details": "r1 y0"
       }
     },
     {
@@ -3274,7 +3274,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "18",
         "exitName": "Entrance",
-        "details": "r2 y0"
+        "details": "r1 y0"
       }
     },
     {
@@ -3329,7 +3329,7 @@ var neo4jGraphData = {
       "properties": {
         "exitId": "1",
         "exitName": "Entrance",
-        "details": "r0 y0"
+        "details": "r3 y0"
       }
     },
     {

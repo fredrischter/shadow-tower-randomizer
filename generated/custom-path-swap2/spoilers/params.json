@@ -1,0 +1,26 @@
+{
+	"label": "custom-path-swap2",
+	"preset": "no-change",
+	"difficulty": "easy",
+	"randomizeMap": false,
+	"randomizeCreatures": false,
+	"keepOnlyBosses": true,
+	"randomizeCollectablesAndDrops": false,
+	"customDoorSwaps": [
+		{
+			"comment": "Tower part1a exit 0 -> human_world_hidden_region 9",
+			"from": "shadow_tower_part1a",
+			"exitId": "0",
+			"to": "human_world_hidden_region",
+			"entranceId": "9"
+		},
+		{
+			"comment": "human_world_hidden_region 9 -> Tower part1a exit 0",
+			"from": "human_world_hidden_region",
+			"exitId": "9",
+			"to": "shadow_tower_part1a",
+			"entranceId": "0"
+		}
+	],
+	"seed": "1"
+}

@@ -12093,20 +12093,20 @@ Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
 Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Skeleton r2 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
  31   5dd8    25b5d8 exit-door                                  tile(  44,  40,  4e) Skeleton      -> earth_world_stone_cavern           pos(  0  ,0  ,0)   44  40  4e   0  fc   0   0   0   0   0   0   0   0  fc  60   0   0   0   1   0   7  1c   2   0
-Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Cemetery r1 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 34   5e20    25b620 exit-door                                  tile(  47,  40,  4e) Cemetery      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0   4   0  ff   0   0   8   1   0
+Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Cemetery r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 34   5e20    25b620 exit-door                                  tile(  47,  40,  4e) Cemetery      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0   4   0  ff   0   0   8   0   0
 Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Grave r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
  35   5e38    25b638 exit-door                                  tile(  49,  42,  47) Grave         -> illusion_world_worship_domain      pos( -4  ,0 ,-4)   49  42  47   0  fc   0   0   0   0   0   0   0   0  fc  5d   0  fc   0   6   0   8   d   1   0
 Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Church r0 y-8"| shadow_tower_part1a["Shadow Tower Part1 A"]
  38   5e80    25b680 exit-door                                  tile(  40,  40,  40) Church        -> shadow_tower_part1                 pos(  5  ,3  ,5)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0   5   3   0   0   0   0   0  f8
 Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Entrance r2 y0"| human_world_solitary_region["Human World Solitary Region"]
  4    4230    db4a30 exit-door                                  tile(  40,  40,  42) Entrance      -> human_world_solitary_region        pos(  4  ,0  ,4)   40  40  42   0  fc   0   0   0   0   0   0   0   0   0   0   0   4   0   d   0   0   4   2   0
-Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Exit r3 y0"| human_world_hidden_region["Human World Hidden Region"]
- 7    4278    db4a78 exit-door                                  tile(  30,  45,  36) Exit          -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0   4   0  ff   0   0   8   3   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r3 y0"| human_world_solitary_region["Human World Solitary Region"]
- 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> human_world_solitary_region        pos(  7  ,0  ,7)   44  40  3e   0  fc   0   0   0   0   0   0   0   0   0  a1   0   7   0   d   0   0   4   3   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r2 y0"| death_world_undead_layer["Death World Undead Layer"]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1)   50  40  52   0  fc   0   0   0   0   0   0   0   0   0  76   0   1   1  ef   0   0  1a   2   0
+Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Exit r2 y0"| human_world_hidden_region["Human World Hidden Region"]
+ 7    4278    db4a78 exit-door                                  tile(  30,  45,  36) Exit          -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0   4   0  ff   0   0   8   2   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r0 y0"| human_world_solitary_region["Human World Solitary Region"]
+ 20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> human_world_solitary_region        pos(  7  ,0  ,7)   44  40  3e   0  fc   0   0   0   0   0   0   0   0   0  a1   0   7   0   d   0   0   4   0   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| death_world_undead_layer["Death World Undead Layer"]
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> death_world_undead_layer           pos(  1  ,1  ,1)   50  40  52   0  fc   0   0   0   0   0   0   0   0   0  76   0   1   1  ef   0   0  1a   1   0
 Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r3 y0"| human_world_solitary_region["Human World Solitary Region"]
  1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> human_world_solitary_region        pos(  9  ,2  ,9)   3b  40  46   0  fc   0   0   0   0   0   0  f8   0   0  a6   1   9   2   8   0   0   4   3   0
 Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Connection r2 y0"| illusion_world_dream_domain["Illusion World Dream Domain"]
@@ -12137,8 +12137,8 @@ Exit for chart illusion_world_dream_domain["Illusion World Dream Domain"] -->|"E
  3    5b38   1095338 exit-portal shaking wall portal            tile(  44,  40,  3f) Entrance      -> illusion_world_bewilderment_domain pos( 20 ,-6 ,20)   44  40  3f   0  fd   0   0   0   0   0   0   0  f7   0  1a   0  14  fa  ff  f8   0   8   0   0
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's room r0 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
  12   5c10    c78c10 exit-door                                  tile(  41,  41,  41) King's room   -> water_world_impure_pool_area       pos(  8  ,3  ,8)   41  41  41   0  fc   0   0   0   0   0   0  fc   0   0  af   0   8   3  f4   1   1   a   0   0
-Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r2 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   f   0  12   0   0   8   2   0
+Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   f   0  12   0   0   8   3   0
 Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r3 y0"| human_world_hidden_region["Human World Hidden Region"]
  5    5b68     21368 exit-door                                  tile(  43,  47,  3a) Top           -> earth_world_stone_cavern           pos(  0  ,0  ,0)   43  47  3a   0  fc   0   0   0   0   0   0   0   0  fc  bc   0   0   0   1   0   7  1c   3   0
 Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r2 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
@@ -12179,8 +12179,8 @@ Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom middle r1
  5    5b68   1195b68 exit-door                                  tile(  45,  43,  40) Bottom middle -> shadow_tower_part3                 pos(  0  ,3  ,0)   45  43  40   0  fc   0   0   0   0   0   0   0   0   0  e0   1   0   3  fc   0   0  29   1  f8
 Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Top edge r3 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
  7    5b98   1195b98 exit-door                                  tile(  40,  43,  3b) Top edge      -> shadow_tower_part1                 pos(  4  ,9  ,4)   40  43  3b   0  fc   0   0   0   0  fc   0   0   0   0   0   0   4   9  ff   7   0   0   3  f8
-Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom end r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
- 13   5c28   1195c28 exit-door                                  tile(  3b,  45,  40) Bottom end    -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   3b  45  40   0  fc   0   0   0   0   0   0   0   0   0  e8   1   f   0  12   0   0   8   3   0
+Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom end r0 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
+ 13   5c28   1195c28 exit-door                                  tile(  3b,  45,  40) Bottom end    -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   3b  45  40   0  fc   0   0   0   0   0   0   0   0   0  e8   1   f   0  12   0   0   8   0   0
 Exit for chart shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Jump "| shadow_tower_part3c["Shadow Tower Part3 C"]
  
 Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Entrance r1 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
