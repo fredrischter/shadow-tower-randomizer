@@ -209,13 +209,12 @@ From `generated\custom-path-swap\spoilers\map.json`:
 
 ## Task 7: Improve Map Visualization
 
-**Status:** IN_PROGRESS
+**Status:** DONE
 
 **Title:** Improve map for better readability
 
 **Description:**
-Instead of drawing mermaid map, try using https://github.com/eisman/neo4jd3 for drawing the map. This would provide bett
-er visualization of area connections.
+Instead of drawing mermaid map, try using https://github.com/eisman/neo4jd3 for drawing the map. This would provide better visualization of area connections.
 
 **Implementation:**
 - ✅ Installed neo4jd3 library via npm
@@ -243,7 +242,27 @@ er visualization of area connections.
 - Fixed mkdir error when maps folder already exists
   - Added existence check before creating maps directory in randomize.js line 101-103
 
-**Completion Date:** 2025-12-13
+**Bug Fixes (2025-12-15):**
+- **Fixed Neo4jd3 library not loading** (Uncaught ReferenceError: Neo4jd3 is not defined)
+  - Root cause: maps.html tried to load neo4jd3 and d3 from CDN, but it's an offline local file
+  - Solution: Bundle libraries locally
+  - Created `maps/libs/` folder with local copies of d3.min.js, neo4jd3.min.js, neo4jd3.min.css
+  - Updated `maps.html` template to use `libs/` paths instead of CDN URLs
+  - Updated `randomize.js` (lines 100-110) to copy libs folder to each generated output
+  
+- **Fixed Neo4jd3 API compatibility issues** (TypeError: Cannot read properties of undefined)
+  - Root cause: Configuration used undocumented options incompatible with neo4jd3 v0.0.5
+  - NPM installed v0.0.5 but template was designed for v0.4.30 (different APIs)
+  - Simplified configuration to only use documented v0.0.5 options
+  - Removed unsupported options: `nodeRadius` as function, `nodeOutlineFillColor`, `relationshipColor`, `icons`, `images`
+  - Added `colors` array option for custom Shadow Tower themed color palette
+  - Files modified:
+    - `maps.html` - Lines 8, 242-244: Changed CDN URLs to local paths
+    - `maps.html` - Lines 267-300: Simplified neo4jd3 configuration with v0.0.5 compatible options
+    - `randomize.js` - Lines 105-110: Added Task #7 comment and libs folder copying logic
+    - Created `maps/libs/` with bundled libraries (d3.min.js v7, neo4jd3.min.js v0.0.5)
+
+**Completion Date:** 2025-12-15
 
 ---
 

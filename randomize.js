@@ -101,7 +101,15 @@ function randomize(paramsFile, stDir) {
     if (!fs.existsSync(mapFolder + path.sep + 'maps')) {
         fs.mkdirSync(mapFolder + path.sep + 'maps');
     }
+    // Task 7: Copy libs folder for local neo4jd3/d3 libraries
+    if (!fs.existsSync(mapFolder + path.sep + 'libs')) {
+        fs.mkdirSync(mapFolder + path.sep + 'libs');
+    }
     fs.copyFileSync('maps.html', changeSetPath + path.sep + 'maps.html');
+    fs.copyFileSync('maps' + path.sep + 'libs' + path.sep + 'd3.min.js', changeSetPath + path.sep + 'libs' + path.sep + 'd3.min.js');
+    fs.copyFileSync('maps' + path.sep + 'libs' + path.sep + 'neo4jd3.min.js', changeSetPath + path.sep + 'libs' + path.sep + 'neo4jd3.min.js');
+    fs.copyFileSync('maps' + path.sep + 'libs' + path.sep + 'neo4jd3.min.css', changeSetPath + path.sep + 'libs' + path.sep + 'neo4jd3.min.css');
+    fs.copyFileSync('maps' + path.sep + 'libs' + path.sep + 'mermaid.min.js', changeSetPath + path.sep + 'libs' + path.sep + 'mermaid.min.js'); // Task 7: Add mermaid
 
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
     var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
@@ -1658,16 +1666,19 @@ function randomize(paramsFile, stDir) {
         // Create node for current area if it doesn't exist
         if (!nodeMap.has(area.name)) {
             var currentArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(area.name));
+            var world = area.name.split('_')[0]; // Extract world prefix
+            var worldLabel = world.charAt(0).toUpperCase() + world.slice(1); // Capitalize
             nodeMap.set(area.name, nodeIdCounter.toString());
             neo4jData.nodes.push({
                 id: nodeIdCounter.toString(),
-                labels: ['Area'],
+                labels: [worldLabel], // Task 7: Use world as label for color assignment
                 properties: {
                     name: (readableName[area.name] || area.name).replace(/\n/g, ' '),
                     areaId: area.name,
                     score: area.score || 0,
-                    world: area.name.split('_')[0] // Extract world prefix
-                }
+                    world: world
+                },
+                caption: (readableName[area.name] || area.name).replace(/\n/g, ' ') // Task 7: Add caption for node label
             });
             nodeIdCounter++;
         }
@@ -1679,16 +1690,19 @@ function randomize(paramsFile, stDir) {
                     // Create destination node if it doesn't exist
                     if (!nodeMap.has(exit.dest)) {
                         var exitArea = areas.find(a => normalizeAreaName(a.name) == normalizeAreaName(exit.dest));
+                        var destWorld = exit.dest.split('_')[0];
+                        var destWorldLabel = destWorld.charAt(0).toUpperCase() + destWorld.slice(1);
                         nodeMap.set(exit.dest, nodeIdCounter.toString());
                         neo4jData.nodes.push({
                             id: nodeIdCounter.toString(),
-                            labels: ['Area'],
+                            labels: [destWorldLabel], // Task 7: Use world as label for color assignment
                             properties: {
                                 name: (readableName[exit.dest] || exit.dest).replace(/[\n\r]/g, ' '),
                                 areaId: exit.dest,
                                 score: exitArea && exitArea.score ? exitArea.score : 0,
-                                world: exit.dest.split('_')[0]
-                            }
+                                world: destWorld
+                            },
+                            caption: (readableName[exit.dest] || exit.dest).replace(/[\n\r]/g, ' ') // Task 7: Add caption for node label
                         });
                         nodeIdCounter++;
                     }
@@ -1716,21 +1730,43 @@ function randomize(paramsFile, stDir) {
     });
     
     // Save neo4j data as JSON for the visualization page
-    var neo4jDataJson = JSON.stringify(neo4jData, null, 2);
+    // Task 7: Wrap in Neo4j query response format for neo4jd3 v0.0.5
+    var neo4jDataWrapped = {
+        results: [
+            {
+                data: [
+                    {
+                        graph: neo4jData
+                    }
+                ]
+            }
+        ]
+    };
+    var neo4jDataJson = JSON.stringify(neo4jDataWrapped, null, 2);
     mapsHTML = mapsHTML.replace("<!--neo4j-data-->", "var neo4jGraphData = " + neo4jDataJson + ";");
+    fs.appendFileSync(logFileRandomize, "DEBUG: About to enter area loop. Total areas: " + Object.keys(areas).length + "\n");
 
     for (var a in areas) {
-        var area = areas[a];
-        area.writeMapImage(createCanvas, mapFolder);
-        var summary = "";
-        for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
-        summary = replaceAll(summary," ","&nbsp;");
-        summary = replaceAll(summary, "span&nbsp;style", "span style");
-        mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
+        try {
+            var area = areas[a];
+            area.writeMapImage(createCanvas, mapFolder);
+            var summary = "";
+            for (var i in area.mapSummary) { summary += area.mapSummary[i] + "<br>"; }
+            summary = replaceAll(summary," ","&nbsp;");
+            summary = replaceAll(summary, "span&nbsp;style", "span style");
+            mapsHTML = mapsHTML.replace("<!--" + area.name + "-->", summary);
 
-        area.reinjectEntityDataFromCreaturesToFile();
+            area.reinjectEntityDataFromCreaturesToFile();
+        } catch (err) {
+            fs.appendFileSync(logFileRandomize, "ERROR in area loop for " + area.name + ": " + err + "\n" + err.stack + "\n");
+        }
     }
-    fs.writeFile(htmlFile, mapsHTML, function() {});
+    try {
+        fs.writeFileSync(htmlFile, mapsHTML); // Task 7: Changed to sync to ensure data is written before script exits
+        fs.appendFileSync(logFileRandomize, "Successfully wrote maps.html - size: " + mapsHTML.length + " bytes\n");
+    } catch (err) {
+        fs.appendFileSync(logFileRandomize, "ERROR writing maps.html: " + err + "\n");
+    }
 
     for (var i in tfileOriginal.files) {
         var originalPart = tfileOriginal.files[i];

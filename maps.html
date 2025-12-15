@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadow Tower Map Visualization</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neo4jd3@0.4.30/dist/neo4jd3.min.css">
+    <link rel="stylesheet" href="libs/neo4jd3.min.css">
     <style type="text/css">
         body {
             font-family: Arial, sans-serif;
@@ -239,9 +239,9 @@
 <!--neo4j-data-->
 </script>
 
-<!-- Neo4jd3 Library -->
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/neo4jd3@0.4.30/dist/neo4jd3.min.js"></script>
+<!-- Neo4jd3 Library (Task 7: Fixed to use local files instead of CDN) -->
+<script src="libs/d3.min.js"></script>
+<script src="libs/neo4jd3.min.js"></script>
 
 <!-- Tab Switching Script -->
 <script>
@@ -267,57 +267,122 @@ function showTab(tabName) {
 <!-- Neo4jd3 Initialization -->
 <script>
 if (typeof neo4jGraphData !== 'undefined') {
-    // Define color scheme for different worlds
-    var worldColors = {
-        'human': '#4a90e2',
-        'earth': '#8b4513',
-        'fire': '#ff4500',
-        'water': '#1e90ff',
-        'monster': '#9932cc',
-        'illusion': '#ff1493',
-        'death': '#2f4f4f',
-        'shadow': '#000000',
-        'void': '#696969'
-    };
+    // Task 7: Configuration for neo4jd3 v0.0.5
+    // Debug: Check data structure
+    console.log('neo4jGraphData:', neo4jGraphData);
+    console.log('Has nodes:', neo4jGraphData.nodes);
+    console.log('Has relationships:', neo4jGraphData.relationships);
     
-    // Create neo4jd3 visualization
-    var neo4jd3 = new Neo4jd3('#neo4jd3-container', {
-        highlight: [
-            {
-                class: 'Area',
-                property: 'name',
-                value: 'shadow_tower'
-            }
-        ],
-        icons: {
-            'Area': 'map-marker'
-        },
-        images: {
-            'Area': 'img/area.png'
-        },
-        minCollision: 60,
-        neo4jData: neo4jGraphData,
-        nodeRadius: function(node) {
-            // Size nodes based on score (progression difficulty)
-            var baseRadius = 25;
-            var scoreBonus = (node.properties.score || 0) * 2;
-            return baseRadius + scoreBonus;
-        },
-        relationshipColor: '#8b4513',
-        zoomFit: true,
-        nodeOutlineFillColor: function(node) {
-            // Color nodes based on their world
-            var world = node.properties.world || 'void';
-            return worldColors[world] || '#808080';
-        }
-    });
+    // Define color palette for node coloring (assigned by label type automatically)
+    var shadowTowerColors = [
+        '#4a90e2', // human world - blue
+        '#8b4513', // earth world - brown
+        '#ff4500', // fire world - orange-red
+        '#1e90ff', // water world - dodger blue
+        '#9932cc', // monster world - purple
+        '#ff1493', // illusion world - deep pink
+        '#2f4f4f', // death world - dark slate
+        '#000000', // shadow tower - black
+        '#d4af37', // gold accent
+        '#696969'  // void/default - gray
+    ];
+    
+    try {
+        // Create neo4jd3 visualization
+        var neo4jd3 = new Neo4jd3('#neo4jd3-container', {
+            colors: shadowTowerColors,
+            highlight: [
+                {
+                    class: 'Area',
+                    property: 'name',
+                    value: 'shadow_tower'
+                }
+            ],
+            infoPanel: true,
+            minCollision: 60,
+            neo4jData: neo4jGraphData,
+            nodeRadius: 25,
+            zoomFit: true
+        });
+        
+        // Task 7: Add text labels to nodes after a short delay (wait for graph to render)
+        setTimeout(function() {
+            var svg = d3.select('#neo4jd3-container svg');
+            var nodes = svg.selectAll('g.node');
+            
+            nodes.each(function(d) {
+                var node = d3.select(this);
+                // Check if text doesn't already exist
+                if (node.select('text.area-label').empty()) {
+                    // Get the area name and split it into parts for multi-line display
+                    var fullName = d.properties && d.properties.name ? d.properties.name : d.id;
+                    var words = fullName.split(' ');
+                    var text = node.append('text')
+                        .attr('class', 'area-label')
+                        .attr('text-anchor', 'middle')
+                        .attr('y', 0) // Center vertically in the circle
+                        .attr('fill', '#ffffff')
+                        .attr('font-size', '9px')
+                        .attr('font-weight', 'bold')
+                        .attr('pointer-events', 'none');
+                    
+                    // Add text as tspan elements for better wrapping
+                    if (words.length <= 2) {
+                        // Short names: single line
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '0.3em')
+                            .text(fullName);
+                    } else if (words.length <= 4) {
+                        // Medium names: two lines
+                        var line1 = words.slice(0, 2).join(' ');
+                        var line2 = words.slice(2).join(' ');
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '-0.3em')
+                            .text(line1);
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '1.1em')
+                            .text(line2);
+                    } else {
+                        // Long names: three lines
+                        var line1 = words.slice(0, 2).join(' ');
+                        var line2 = words.slice(2, 4).join(' ');
+                        var line3 = words.slice(4).join(' ');
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '-0.8em')
+                            .text(line1);
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '1.1em')
+                            .text(line2);
+                        if (line3) {
+                            text.append('tspan')
+                                .attr('x', 0)
+                                .attr('dy', '1.1em')
+                                .text(line3);
+                        }
+                    }
+                }
+            });
+        }, 500);
+    } catch (err) {
+        console.error('Error creating Neo4jd3:', err);
+        document.getElementById('neo4jd3-container').innerHTML = 
+            '<p style="color: #ff6b6b; padding: 20px;">Error initializing graph: ' + err.message + '</p>';
+    }
 } else {
     document.getElementById('neo4jd3-container').innerHTML = 
         '<p style="color: #ff6b6b; padding: 20px;">Neo4j graph data not available. Please regenerate the map.</p>';
 }
 </script>
 
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+<script src="libs/mermaid.min.js"></script>
+<script>
 mermaid.initialize({ startOnLoad: true });
+showTab('mermaid');
+showTab('neo4j');
+
 </script>

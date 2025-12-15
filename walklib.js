@@ -61,25 +61,26 @@ function walk(areas, skipWayBackVerification) {
 		const nonTowerAreas = Array.from(walkedAreasSet).filter(area => !area.includes("shadow_tower"));
 		
 		// Dangerous areas requiring 5+ non-tower areas visited
-		if (areaName.includes("water_world_watery_labyrinth_area")) {
+		if (areaName.includes("fire_world_burning_cavern")) {
 			return nonTowerAreas.length >= 5;
 		}
-		if (areaName.includes("fire_world_burning_cavern")) {
+		// Task #12: General water world gate changed from 10+ total to 5+ non-tower areas
+		if (areaName.includes("water_world")) {
 			return nonTowerAreas.length >= 5;
 		}
 		
 		// Existing progression gates
 		if (areaName.includes("earth_world_poisonous_cavern")) {
-			return walkedAreasSet.size>3;
+			return walkedAreasSet.size>5;
 		}
 		if (areaName.includes("earth_world_stone_cavern")) {
 			return walkedAreasSet.size>5;
 		}
-		if (areaName.includes("water_world")) {
+		if (areaName.includes("illusion_world")) {
 			return walkedAreasSet.size>10;
 		}
-		if (areaName.includes("illusion_world_worship_domain")) {
-			return walkedAreasSet.size>15;
+		if (areaName.includes("death_world")) {
+			return walkedAreasSet.size>10;
 		}
 		return true;
 	}
@@ -115,6 +116,12 @@ function walk(areas, skipWayBackVerification) {
 		explain(" >> All area " + area.name + " exits not being entrance: " + JSON.stringify(exits));
 		exits = exits.filter(exit => {
 
+			// Task #12: Check strength requirement FIRST before other filters
+			if (!strongEnoughForArea(exit.dest)) {
+				explain(" >> Removed exit since player isn't strong enough to go now: " + exit.dest);
+				return false;
+			}
+
 			//if (!areasMap[exit.dest][exit.wayBackId]) {
 			//	console.error(" >> Verifying " + exit.dest + " " + exit.wayBackId + " " + JSON.stringify(areasMap[exit.dest]));
 			//}
@@ -129,11 +136,6 @@ function walk(areas, skipWayBackVerification) {
 
 			if (!isntExit) {
 				explain(" >> Removed exit whose destination is a exit. Way back to id at " + areasMap[exit.dest] + " it is a exit: " + JSON.stringify(areasMap[exit.dest][exit.wayBackId]));
-				return false;
-			}
-
-			if (!strongEnoughForArea(exit.dest)) {
-				explain(" >> Removed exit since player isn't strong enough to go now: " + exit.dest);
 				return false;
 			}
 
@@ -354,21 +356,7 @@ function walk(areas, skipWayBackVerification) {
 		}
 		//console.error(new Date().toISOString() + "   Step " + steps + " - Location " + currentArea);
 
-		if (currentArea == "earth_world_poisonous_cavern" && steps < 5) {
-			explain("  earth_world_poisonous_cavern too early");
-			comment="earth_world_poisonous_cavern too early";
-			break;
-		};
-		if (currentArea == "water_world_watery_labyrinth_area" && steps < 5) {
-			explain("  water_world_watery_labyrinth_area too early");
-			comment="water_world_watery_labyrinth_area too early";
-			break;
-		};
-		if (currentArea == "water_world_sunken_river_area" && steps < 5) {
-			explain("  water_world_sunken_river_area too early");
-			comment="water_world_sunken_river_area too early";
-			break;
-		};
+		// Task #12: Removed hardcoded step checks - now handled by strongEnoughForArea() in getAreaExits()
 
 
 		//console.error(new Date().toISOString() + "    1");
@@ -400,7 +388,8 @@ function walk(areas, skipWayBackVerification) {
 				if (knownUndiscoveredWays) {
 	
 					explain(" >> All exits to choose from. Trying to the first possible: " + JSON.stringify(knownUndiscoveredWays.exits));
-					//knownUndiscoveredWays.exits = knownUndiscoveredWays.exits.filter(exit => currentAreaExits.find(available => available.dest = exit.dest));
+					// Task #12: Filter known exits by strength check (fixed comparison operator)
+					knownUndiscoveredWays.exits = knownUndiscoveredWays.exits.filter(exit => currentAreaExits.find(available => available.dest == exit.dest));
 					explain(" >>                     All exits to choose from, filtered: " + JSON.stringify(knownUndiscoveredWays.exits));
 					choosenWay = knownUndiscoveredWays.exits[0];
 					if (choosenWay && choosenWay.dest == "water_world_sunken_river_area") {
