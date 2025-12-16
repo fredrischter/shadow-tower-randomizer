@@ -107,8 +107,9 @@ function assignWay(to, from, area, map) {
 function rotateDoors(map) {
   var randomArea = map[Math.floor(Math.random()*map.length)];
   
-  // Filter to only include doors that lead outside the contiguous neighborhood
-  // This prevents self-loops when rotating door destinations
+  // Fix: Filter to only include doors that lead outside the contiguous neighborhood
+  // This prevents self-loops when rotating door destinations within the same area group
+  // (e.g., shadow_tower_part1a and shadow_tower_part1b normalize to shadow_tower_part1)
   var normalizedAreaName = normalizeAreaName ? normalizeAreaName(randomArea.name) : randomArea.name;
   var switchableDoors = randomArea.exits.filter(way => {
     if (!switchableWay(way)) {
