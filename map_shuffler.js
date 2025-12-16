@@ -306,10 +306,8 @@ function findContiguousAreas(map, centralArea) {
 function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
 	const outerDoors = [];
 	
-	// For each contiguous area (excluding the central area itself)
+	// For each contiguous area (including the central area)
 	contiguousAreaNames.forEach(areaName => {
-		if (areaName === centralAreaName) return;
-		
 		const area = map.find(a => a.name === areaName);
 		if (!area) return;
 		
@@ -337,47 +335,55 @@ function spinOuterCircleDoors(map, outerDoors) {
 	
 	console.error(" - Spinning " + outerDoors.length + " outer circle doors");
 	
-	// Perform pairwise swaps in a circular manner
-	// Swap door[0] with door[1], door[1] with door[2], ..., door[n-1] with door[0]
-	// This is like rotating the destinations by one position
+	// Shuffle the outer doors array to randomize which doors get paired
+	for (let i = outerDoors.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[outerDoors[i], outerDoors[j]] = [outerDoors[j], outerDoors[i]];
+	}
 	
+	// Save all current door destinations before modifying
+	const originalDestinations = outerDoors.map(door => ({
+		dest: door.exit.dest,
+		world: door.exit.world,
+		wayBackId: door.exit.wayBackId
+	}));
+	
+	// Apply a circular shift: door[i] gets destination of door[i+1]
+	// door[0] -> gets dest of door[1]
+	// door[1] -> gets dest of door[2]  
+	// ...
+	// door[n-1] -> gets dest of door[0]
+	
+	let swapsPerformed = 0;
 	for (let i = 0; i < outerDoors.length; i++) {
 		const currentDoor = outerDoors[i];
-		const nextDoor = outerDoors[(i + 1) % outerDoors.length];
+		const nextIndex = (i + 1) % outerDoors.length;
+		const nextDestination = originalDestinations[nextIndex];
 		
-		// Check if swap would create a self-loop or other conflict
-		if (currentDoor.exit.dest == nextDoor.area.name || nextDoor.exit.dest == currentDoor.area.name) {
-			console.error(" - Spin would create conflict, skipping");
+		// Check if this would create a self-loop
+		if (nextDestination.dest == currentDoor.area.name) {
+			console.error(" - Spin would create self-loop for " + currentDoor.area.name + ", aborting this spin");
 			return;
 		}
 		
-		// Copy the destinations before swapping
-		const currentDestCopy = {
-			dest: currentDoor.exit.dest,
-			world: currentDoor.exit.world,
-			wayBackId: currentDoor.exit.wayBackId
-		};
-		const nextDestCopy = {
-			dest: nextDoor.exit.dest,
-			world: nextDoor.exit.world,
-			wayBackId: nextDoor.exit.wayBackId
-		};
-		
-		// Check if both assignments would be valid
-		if (!goodToAssignWay(currentDoor.exit, nextDestCopy, currentDoor.area, map) ||
-		    !goodToAssignWay(nextDoor.exit, currentDestCopy, nextDoor.area, map)) {
-			console.error(" - Spin would be invalid, skipping this pair");
-			continue;
+		// Check if assignment would be valid
+		if (!goodToAssignWay(currentDoor.exit, nextDestination, currentDoor.area, map)) {
+			console.error(" - Assignment for door " + i + " would be invalid, aborting this spin");
+			return;
 		}
-		
-		// Perform the swap
-		assignWay(currentDoor.exit, nextDestCopy, currentDoor.area, map);
-		assignWay(nextDoor.exit, currentDestCopy, nextDoor.area, map);
-		
-		// Only do one swap per iteration to keep it simple
-		break;
 	}
 	
+	// All checks passed, now apply all the shifts
+	for (let i = 0; i < outerDoors.length; i++) {
+		const currentDoor = outerDoors[i];
+		const nextIndex = (i + 1) % outerDoors.length;
+		const nextDestination = originalDestinations[nextIndex];
+		
+		assignWay(currentDoor.exit, nextDestination, currentDoor.area, map);
+		swapsPerformed++;
+	}
+	
+	console.error(" - Successfully performed " + swapsPerformed + " door shifts");
 	verifyConsistency(map);
 }
 
