@@ -106,7 +106,19 @@ function assignWay(to, from, area, map) {
 
 function rotateDoors(map) {
   var randomArea = map[Math.floor(Math.random()*map.length)];
-  var switchableDoors = randomArea.exits.filter(way => switchableWay(way));
+  
+  // Filter to only include doors that lead outside the contiguous neighborhood
+  // This prevents self-loops when rotating door destinations
+  var normalizedAreaName = normalizeAreaName ? normalizeAreaName(randomArea.name) : randomArea.name;
+  var switchableDoors = randomArea.exits.filter(way => {
+    if (!switchableWay(way)) {
+      return false;
+    }
+    // Only include doors that lead outside the contiguous neighborhood
+    var normalizedDestName = normalizeAreaName ? normalizeAreaName(way.dest) : way.dest;
+    return normalizedDestName !== normalizedAreaName;
+  });
+  
   if (switchableDoors.length<2) {
   	return;
   }
