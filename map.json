@@ -8,7 +8,8 @@
         "world": "human_world",
         "wayBackId": "38",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": true
       }
     ],
     "totems": []
@@ -22,7 +23,8 @@
         "world": "human_world",
         "wayBackId": "31",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "8",
@@ -30,12 +32,14 @@
         "world": "human_world",
         "wayBackId": "34",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part1c",
-        "type": "jump"
+        "type": "jump",
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -49,7 +53,8 @@
         "world": "human_world",
         "wayBackId": "37",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": true
       },
       {
         "id": "11",
@@ -57,7 +62,8 @@
         "world": "earth_world",
         "wayBackId": "13",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": true
       },
       {
         "id": "9",
@@ -65,7 +71,8 @@
         "world": "earth_world",
         "wayBackId": "17",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -79,7 +86,8 @@
         "world": "earth_world",
         "wayBackId": "11",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": true
       },
       {
         "id": "5",
@@ -87,12 +95,14 @@
         "world": "fire_world",
         "wayBackId": "0",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": true
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part2b",
-        "type": "jump"
+        "type": "jump",
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -106,7 +116,8 @@
         "world": "water_world",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       },
       {
         "id": "7",
@@ -114,7 +125,8 @@
         "world": "fire_world",
         "wayBackId": "37",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": true
       },
       {
         "id": "4",
@@ -122,7 +134,8 @@
         "world": "fire_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -136,7 +149,8 @@
         "world": "water_world",
         "wayBackId": "11",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       },
       {
         "id": "3",
@@ -144,7 +158,8 @@
         "world": "water_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "9",
@@ -152,12 +167,14 @@
         "world": "illusion_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part3b",
-        "type": "jump"
+        "type": "jump",
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -171,7 +188,8 @@
         "world": "monster_world",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": true
       },
       {
         "id": "7",
@@ -179,7 +197,8 @@
         "world": "monster_world",
         "wayBackId": "0",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": true
       },
       {
         "id": "13",
@@ -187,12 +206,14 @@
         "world": "death_world",
         "wayBackId": "2",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part3c",
-        "type": "jump"
+        "type": "jump",
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -206,7 +227,8 @@
         "world": "death_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -221,7 +243,8 @@
         "world": "human_world",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "34",
@@ -229,7 +252,8 @@
         "world": "human_world",
         "wayBackId": "13",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": true
       },
       {
         "id": "35",
@@ -238,14 +262,16 @@
         "wayBackId": "3",
         "type": "door",
         "rotation": 2,
-        "direction": "exit"
+        "direction": "exit",
+        "nonSwitchable": false
       },
       {
         "id": "38",
         "dest": "shadow_tower_part1a",
         "wayBackId": "0",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -260,7 +286,8 @@
         "world": "human_world",
         "wayBackId": "31",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": true
       },
       {
         "id": "13",
@@ -268,7 +295,8 @@
         "world": "human_world",
         "wayBackId": "34",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "26",
@@ -276,7 +304,8 @@
         "world": "human_world",
         "wayBackId": "18",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -300,14 +329,16 @@
         "world": "human_world",
         "wayBackId": "35",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "31",
         "dest": "shadow_tower_part1b",
         "wayBackId": "4",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -326,7 +357,8 @@
         "dest": "shadow_tower_part1b",
         "wayBackId": "8",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "37",
@@ -334,7 +366,8 @@
         "wayBackId": "5",
         "type": "door",
         "rotation": 0,
-        "direction": "exit"
+        "direction": "exit",
+        "nonSwitchable": false
       },
       {
         "id": "18",
@@ -342,7 +375,8 @@
         "world": "human_world",
         "wayBackId": "26",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "41",
@@ -351,7 +385,8 @@
         "wayBackId": "16",
         "type": "totem",
         "rotation": 3,
-        "direction": "entrance"
+        "direction": "entrance",
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -374,7 +409,8 @@
         "dest": "shadow_tower_part1c",
         "wayBackId": "11",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": true
       }
     ],
     "totems": [
@@ -403,7 +439,8 @@
         "wayBackId": "13",
         "type": "door",
         "rotation": 0,
-        "direction": "entrance"
+        "direction": "entrance",
+        "nonSwitchable": false
       },
       {
         "id": "7",
@@ -412,7 +449,8 @@
         "wayBackId": "3",
         "type": "door",
         "rotation": 2,
-        "direction": "exit"
+        "direction": "exit",
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -427,7 +465,8 @@
         "world": "earth_world",
         "wayBackId": "10",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": true
       }
     ],
     "totems": []
@@ -442,7 +481,8 @@
         "world": "earth_world",
         "wayBackId": "4",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "10",
@@ -451,14 +491,16 @@
         "wayBackId": "3",
         "type": "door",
         "rotation": 3,
-        "direction": "exit-bi"
+        "direction": "exit-bi",
+        "nonSwitchable": false
       },
       {
         "id": "17",
         "dest": "shadow_tower_part1c",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -482,7 +524,8 @@
         "world": "earth_world",
         "wayBackId": "7",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       },
       {
         "id": "1",
@@ -490,14 +533,16 @@
         "world": "earth_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "11",
         "dest": "shadow_tower_part2a",
         "wayBackId": "0",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "19",
@@ -506,7 +551,8 @@
         "wayBackId": "3",
         "type": "totem",
         "rotation": 1,
-        "direction": "entrance"
+        "direction": "entrance",
+        "nonSwitchable": false
       },
       {
         "id": "16",
@@ -514,7 +560,8 @@
         "world": "human_world",
         "wayBackId": "41",
         "type": "totem",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -534,7 +581,8 @@
         "world": "earth_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": true
       },
       {
         "id": "3",
@@ -542,7 +590,8 @@
         "world": "earth_world",
         "wayBackId": "19",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -556,14 +605,16 @@
         "dest": "shadow_tower_part2a",
         "wayBackId": "5",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "1",
         "dest": "shadow_tower_part2b",
         "wayBackId": "4",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": true
       }
     ],
     "totems": []
@@ -577,7 +628,8 @@
         "dest": "shadow_tower_part2b",
         "wayBackId": "7",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "94",
@@ -585,7 +637,8 @@
         "world": "fire_world",
         "wayBackId": "19",
         "type": "portal",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "93",
@@ -594,7 +647,8 @@
         "wayBackId": "17",
         "type": "portal",
         "direction": "entrance-bi",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -623,7 +677,8 @@
         "wayBackId": "6",
         "type": "portal",
         "direction": "exit-bi",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "19",
@@ -632,7 +687,8 @@
         "wayBackId": "94",
         "type": "portal",
         "direction": "entrance-bi",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -656,7 +712,8 @@
         "world": "fire_world",
         "wayBackId": "93",
         "type": "portal",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "6",
@@ -664,7 +721,8 @@
         "world": "fire_world",
         "wayBackId": "27",
         "type": "portal",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -680,7 +738,8 @@
         "wayBackId": "4",
         "type": "door",
         "rotation": 3,
-        "direction": "exit"
+        "direction": "exit",
+        "nonSwitchable": false
       },
       {
         "id": "1",
@@ -688,7 +747,8 @@
         "wayBackId": "3",
         "type": "door",
         "rotation": 2,
-        "direction": "entrance"
+        "direction": "entrance",
+        "nonSwitchable": true
       }
     ],
     "totems": [
@@ -707,7 +767,8 @@
         "dest": "shadow_tower_part2b",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": true
       },
       {
         "id": "11",
@@ -715,7 +776,8 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 2,
-        "direction": "exit"
+        "direction": "exit",
+        "nonSwitchable": true
       },
       {
         "id": "14",
@@ -724,7 +786,8 @@
         "wayBackId": "3",
         "type": "totem",
         "rotation": 2,
-        "direction": "entrance-bi"
+        "direction": "entrance-bi",
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -752,7 +815,8 @@
         "world": "water_world",
         "wayBackId": "4",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       },
       {
         "id": "4",
@@ -760,7 +824,8 @@
         "world": "water_world",
         "wayBackId": "5",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -796,7 +861,8 @@
         "world": "water_world",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "6",
@@ -804,7 +870,8 @@
         "world": "illusion_world",
         "wayBackId": "10",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -818,7 +885,8 @@
         "dest": "shadow_tower_part3b",
         "wayBackId": "5",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "10",
@@ -827,7 +895,8 @@
         "wayBackId": "4",
         "type": "totem",
         "rotation": 2,
-        "direction": "entrance-bi"
+        "direction": "entrance-bi",
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -841,7 +910,8 @@
         "dest": "shadow_tower_part3b",
         "wayBackId": "7",
         "type": "door",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "3",
@@ -849,7 +919,8 @@
         "world": "water_world",
         "wayBackId": "14",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "6",
@@ -857,7 +928,8 @@
         "world": "death_world",
         "wayBackId": "4",
         "type": "totem",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -885,14 +957,16 @@
         "world": "illusion_world",
         "wayBackId": "18",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "1",
         "dest": "shadow_tower_part3a",
         "wayBackId": "9",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "10",
@@ -900,7 +974,8 @@
         "world": "water_world",
         "wayBackId": "6",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -924,7 +999,8 @@
         "world": "illusion_world",
         "wayBackId": "1",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "18",
@@ -932,7 +1008,8 @@
         "world": "illusion_world",
         "wayBackId": "3",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -947,7 +1024,8 @@
         "world": "illusion_world",
         "wayBackId": "20",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "6",
@@ -955,7 +1033,8 @@
         "world": "illusion_world",
         "wayBackId": "8",
         "type": "portal",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "10",
@@ -963,7 +1042,8 @@
         "world": "illusion_world",
         "wayBackId": "3",
         "type": "portal",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "8",
@@ -971,7 +1051,8 @@
         "world": "illusion_world",
         "wayBackId": "6",
         "type": "portal",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -986,7 +1067,8 @@
         "world": "monster_world",
         "wayBackId": "10",
         "type": "totem",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "3",
@@ -994,7 +1076,8 @@
         "world": "illusion_world",
         "wayBackId": "10",
         "type": "portal",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -1008,7 +1091,8 @@
         "dest": "shadow_tower_part3c",
         "wayBackId": "10",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "2",
@@ -1016,7 +1100,8 @@
         "world": "death_world",
         "wayBackId": "7",
         "type": "totem",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -1040,7 +1125,8 @@
         "world": "death_world",
         "wayBackId": "12",
         "type": "door",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       },
       {
         "id": "4",
@@ -1048,7 +1134,8 @@
         "world": "death_world",
         "wayBackId": "10",
         "type": "totem",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       }
     ],
     "totems": []
@@ -1063,14 +1150,16 @@
         "world": "death_world",
         "wayBackId": "15",
         "type": "door",
-        "rotation": 3
+        "rotation": 3,
+        "nonSwitchable": false
       },
       {
         "id": "2",
         "dest": "shadow_tower_part3b",
         "wayBackId": "13",
         "type": "door",
-        "rotation": 1
+        "rotation": 1,
+        "nonSwitchable": false
       },
       {
         "id": "4",
@@ -1079,7 +1168,8 @@
         "wayBackId": "6",
         "type": "totem",
         "rotation": 2,
-        "direction": "entrance-bi"
+        "direction": "entrance-bi",
+        "nonSwitchable": false
       },
       {
         "id": "7",
@@ -1088,7 +1178,8 @@
         "wayBackId": "2",
         "direction": "entrance-bi",
         "type": "totem",
-        "rotation": 0
+        "rotation": 0,
+        "nonSwitchable": false
       },
       {
         "id": "10",
@@ -1097,7 +1188,8 @@
         "wayBackId": "4",
         "direction": "entrance-bi",
         "type": "totem",
-        "rotation": 2
+        "rotation": 2,
+        "nonSwitchable": false
       }
     ],
     "totems": [
@@ -1118,7 +1210,8 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 0,
-        "direction": "exit-bi"
+        "direction": "exit-bi",
+        "nonSwitchable": false
       },
       {
         "id": "15",
@@ -1127,7 +1220,8 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 2,
-        "direction": "entrance-bi"
+        "direction": "entrance-bi",
+        "nonSwitchable": true
       }
     ],
     "totems": [

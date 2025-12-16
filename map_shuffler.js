@@ -1,6 +1,7 @@
 
 const fs = require('fs');
 const path = require('path');
+require('./functions.js');
 const walklib = require('.' + path.sep + 'walklib');
 const originalMap = JSON.parse(fs.readFileSync("." + path.sep + "map.json"));
 
@@ -32,6 +33,10 @@ function switchableWay(way) {
 		return false;
 	}
 	if (way.type == "portal") {
+		return false;
+	}
+	// New map randomization logic: check nonSwitchable property
+	if (way.nonSwitchable === true) {
 		return false;
 	}
 	return true;
@@ -266,6 +271,136 @@ function resolveRotation(map, areasByName, targetExit) {
 	}
 }*/
 
+// New map randomization logic: Find areas connected to central area through switchable doors
+function findContiguousAreas(map, centralArea) {
+	const contiguousAreas = new Set([centralArea.name]);
+	const toCheck = [centralArea];
+	const checked = new Set();
+	
+	while (toCheck.length > 0) {
+		const currentArea = toCheck.pop();
+		if (checked.has(currentArea.name)) continue;
+		checked.add(currentArea.name);
+		
+		// Find all switchable doors from this area
+		currentArea.exits.forEach(exit => {
+			if (switchableWay(exit)) {
+				// If this door leads to an area not yet in our contiguous set
+				if (!contiguousAreas.has(exit.dest)) {
+					contiguousAreas.add(exit.dest);
+					// Find the destination area and add it to check
+					const destArea = map.find(a => a.name === exit.dest);
+					if (destArea) {
+						toCheck.push(destArea);
+					}
+				}
+			}
+		});
+	}
+	
+	return contiguousAreas;
+}
+
+// New map randomization logic: Find outer circle doors
+// These are switchable doors from contiguous areas that DON'T connect directly to the central area
+function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
+	const outerDoors = [];
+	
+	// For each contiguous area (excluding the central area itself)
+	contiguousAreaNames.forEach(areaName => {
+		if (areaName === centralAreaName) return;
+		
+		const area = map.find(a => a.name === areaName);
+		if (!area) return;
+		
+		// Find switchable doors that DON'T lead directly to the central area
+		area.exits.forEach(exit => {
+			if (switchableWay(exit) && exit.dest !== centralAreaName) {
+				outerDoors.push({
+					area: area,
+					exit: exit
+				});
+			}
+		});
+	});
+	
+	return outerDoors;
+}
+
+// New map randomization logic: Spin the outer circle doors
+// Each door swaps with the one at its "left" (previous position in array)
+function spinOuterCircleDoors(map, outerDoors) {
+	if (outerDoors.length < 2) {
+		console.error(" - Not enough outer doors to spin (need at least 2, have " + outerDoors.length + ")");
+		return;
+	}
+	
+	console.error(" - Spinning " + outerDoors.length + " outer circle doors");
+	
+	// Perform pairwise swaps in a circular manner
+	// Swap door[0] with door[1], door[1] with door[2], ..., door[n-1] with door[0]
+	// This is like rotating the destinations by one position
+	
+	for (let i = 0; i < outerDoors.length; i++) {
+		const currentDoor = outerDoors[i];
+		const nextDoor = outerDoors[(i + 1) % outerDoors.length];
+		
+		// Check if swap would create a self-loop or other conflict
+		if (currentDoor.exit.dest == nextDoor.area.name || nextDoor.exit.dest == currentDoor.area.name) {
+			console.error(" - Spin would create conflict, skipping");
+			return;
+		}
+		
+		// Copy the destinations before swapping
+		const currentDestCopy = {
+			dest: currentDoor.exit.dest,
+			world: currentDoor.exit.world,
+			wayBackId: currentDoor.exit.wayBackId
+		};
+		const nextDestCopy = {
+			dest: nextDoor.exit.dest,
+			world: nextDoor.exit.world,
+			wayBackId: nextDoor.exit.wayBackId
+		};
+		
+		// Check if both assignments would be valid
+		if (!goodToAssignWay(currentDoor.exit, nextDestCopy, currentDoor.area, map) ||
+		    !goodToAssignWay(nextDoor.exit, currentDestCopy, nextDoor.area, map)) {
+			console.error(" - Spin would be invalid, skipping this pair");
+			continue;
+		}
+		
+		// Perform the swap
+		assignWay(currentDoor.exit, nextDestCopy, currentDoor.area, map);
+		assignWay(nextDoor.exit, currentDestCopy, nextDoor.area, map);
+		
+		// Only do one swap per iteration to keep it simple
+		break;
+	}
+	
+	verifyConsistency(map);
+}
+
+// New map randomization logic: Perform one iteration of the new algorithm
+function performCircleSpinIteration(map) {
+	// Pick a random area as the central area
+	const centralArea = map[Math.floor(Math.random() * map.length)];
+	console.error(" - Selected central area: " + centralArea.name);
+	
+	// Find all areas connected to the central area through switchable doors
+	const contiguousAreaNames = findContiguousAreas(map, centralArea);
+	console.error(" - Found " + contiguousAreaNames.size + " contiguous areas");
+	
+	// Find the outer circle doors
+	const outerDoors = findOuterCircleDoors(map, centralArea.name, contiguousAreaNames);
+	console.error(" - Found " + outerDoors.length + " outer circle doors");
+	
+	if (outerDoors.length >= 2) {
+		// Spin the outer circle
+		spinOuterCircleDoors(map, outerDoors);
+	}
+}
+
 function shuffle(params) {
 	params = params || { randomizeMap: true };
 
@@ -303,9 +438,11 @@ function shuffle(params) {
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_sunken_river_area", "1");  // ok
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "11"); // ok
 
-				for (var i=0;i<100;i++) {
-							//rotateDoors(generated); cause bug, would need to revert in case of problematic rotate
-					randomPickSwap(generated);
+				// New map randomization logic: perform circle spin algorithm 2 times
+				console.error(new Date().toISOString() + "  Starting new circle spin randomization");
+				for (var i=0; i<2; i++) {
+					console.error(" Iteration " + (i+1) + "/2:");
+					performCircleSpinIteration(generated);
 				}
 			}
 
