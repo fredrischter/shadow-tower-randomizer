@@ -15,7 +15,7 @@
 		body {
 			font-family: 'Garamond', 'Georgia', serif;
 			background: linear-gradient(135deg, #1a0a0f 0%, #2d1520 50%, #1a0a0f 100%);
-			background-attachment: fixed;
+			/* Task #Mobile-Usability: Removed background-attachment: fixed to prevent mobile scrolling jitter */
 			color: #d4c5b9;
 			min-height: 100vh;
 			line-height: 1.6;
@@ -23,9 +23,10 @@
 		}
 		
 		/* Background image slideshow */
+		/* Task #Mobile-Usability: Changed from fixed to absolute to prevent mobile scrolling jitter */
 		body::before {
 			content: '';
-			position: fixed;
+			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -55,9 +56,10 @@
 			}
 		}
 		
+		/* Task #Mobile-Usability: Changed from fixed to absolute to prevent mobile scrolling jitter */
 		body::after {
 			content: '';
-			position: fixed;
+			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -342,8 +344,9 @@
 		}
 
 		@media (max-width: 768px) {
+			/* Task #Mobile-Usability: Reduced h1 size to minimize initial scrolling */
 			h1 {
-				font-size: 2em;
+				font-size: 1.5em;
 				letter-spacing: 1px;
 			}
 			
@@ -359,9 +362,10 @@
 				padding: 10px;
 			}
 			
+			/* Task #Mobile-Usability: Reduced header padding to minimize vertical space */
 			header {
-				padding: 20px 15px;
-				margin-bottom: 20px;
+				padding: 15px 10px;
+				margin-bottom: 15px;
 			}
 			
 			.main-content {
@@ -419,15 +423,55 @@
 		}
 		
 		/* Image gallery styles */
+		/* Task #Mobile-Usability: Made gallery collapsible and less prominent */
 		.gallery-section {
 			background: rgba(0, 0, 0, 0.85);
 			border: 2px solid #8b4513;
 			border-radius: 10px;
-			padding: 20px;
+			padding: 0;
 			margin-bottom: 30px;
 			backdrop-filter: blur(10px);
 			position: relative;
 			z-index: 2;
+			overflow: hidden;
+		}
+		
+		.gallery-toggle {
+			width: 100%;
+			background: linear-gradient(to bottom, #6b4423, #4a2f18);
+			color: #d4af37;
+			border: none;
+			padding: 15px;
+			font-size: 1.1em;
+			font-weight: bold;
+			cursor: pointer;
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transition: all 0.3s ease;
+			font-family: 'Garamond', 'Georgia', serif;
+		}
+		
+		.gallery-toggle:hover {
+			background: linear-gradient(to bottom, #8b5a2d, #5a3618);
+		}
+		
+		.gallery-toggle-icon {
+			transition: transform 0.3s ease;
+		}
+		
+		.gallery-toggle.active .gallery-toggle-icon {
+			transform: rotate(180deg);
+		}
+		
+		.gallery-content {
+			padding: 20px;
+			display: none;
+		}
+		
+		.gallery-content.active {
+			display: block;
 		}
 		
 		.gallery-title {
@@ -478,8 +522,8 @@
 				gap: 10px;
 			}
 			
+			/* Task #Mobile-Usability: Removed padding override since gallery-content now has it */
 			.gallery-section {
-				padding: 15px;
 				margin-bottom: 20px;
 			}
 		}
@@ -502,27 +546,7 @@
 			<h2 id='status'></h2>
 		</header>
 
-		<!-- Image Gallery Section -->
-		<div class="gallery-section">
-			<h3 class="gallery-title">🎮 Shadow Tower Screenshots</h3>
-			<div class="gallery-container">
-				<div class="gallery-item">
-					<img src="images/SLUS-00863_2023-12-27_02-43-48-1.png" alt="Shadow Tower Gameplay" loading="lazy">
-				</div>
-				<div class="gallery-item">
-					<img src="images/SLUS-00863_2023-12-26_15-49-06-2.png" alt="Shadow Tower Environment" loading="lazy">
-				</div>
-				<div class="gallery-item">
-					<img src="images/SLUS-00863_2023-12-27_04-58-06-1.png" alt="Shadow Tower Combat" loading="lazy">
-				</div>
-				<div class="gallery-item">
-					<img src="images/SLUS-00863_2023-12-26_15-48-59-1.png" alt="Shadow Tower Scene" loading="lazy">
-				</div>
-				<div class="gallery-item">
-					<img src="images/parasite.jpg" alt="Shadow Tower Enemy" loading="lazy">
-				</div>
-			</div>
-		</div>
+		<!-- Task #Mobile-Usability: Gallery moved to bottom for less prominence -->
 
 		<div class="main-content">
 			<input type="file" id="file" style="display:none;" />
@@ -995,6 +1019,33 @@
 			<h3>📧 Contact</h3>
 
 			<p>If you need to reach out, you can contact me at fredrischter at gmail dot com.</p>
+		</div>
+
+		<!-- Task #Mobile-Usability: Image Gallery Section moved here and made collapsible -->
+		<div class="gallery-section">
+			<button class="gallery-toggle" id="galleryToggle">
+				<span>🎮 Shadow Tower Screenshots</span>
+				<span class="gallery-toggle-icon">▼</span>
+			</button>
+			<div class="gallery-content" id="galleryContent">
+				<div class="gallery-container">
+					<div class="gallery-item">
+						<img src="images/SLUS-00863_2023-12-27_02-43-48-1.png" alt="Shadow Tower Gameplay" loading="lazy">
+					</div>
+					<div class="gallery-item">
+						<img src="images/SLUS-00863_2023-12-26_15-49-06-2.png" alt="Shadow Tower Environment" loading="lazy">
+					</div>
+					<div class="gallery-item">
+						<img src="images/SLUS-00863_2023-12-27_04-58-06-1.png" alt="Shadow Tower Combat" loading="lazy">
+					</div>
+					<div class="gallery-item">
+						<img src="images/SLUS-00863_2023-12-26_15-48-59-1.png" alt="Shadow Tower Scene" loading="lazy">
+					</div>
+					<div class="gallery-item">
+						<img src="images/parasite.jpg" alt="Shadow Tower Enemy" loading="lazy">
+					</div>
+				</div>
+			</div>
 		</div>
 
 		</div><!-- end main-content -->
