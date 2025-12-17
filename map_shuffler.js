@@ -315,7 +315,7 @@ function findContiguousAreas(map, centralArea) {
 }
 
 // New map randomization logic: Find outer circle doors
-// These are switchable doors from contiguous areas that DON'T connect directly to the central area
+// These are switchable doors from contiguous areas that lead OUTSIDE the contiguous neighborhood
 function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
 	const outerDoors = [];
 	
@@ -324,9 +324,10 @@ function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
 		const area = map.find(a => a.name === areaName);
 		if (!area) return;
 		
-		// Find switchable doors that DON'T lead directly to the central area
+		// Find switchable doors that lead OUTSIDE the contiguous neighborhood
+		// (i.e., not to the central area and not to any other contiguous area)
 		area.exits.forEach(exit => {
-			if (switchableWay(exit) && exit.dest !== centralAreaName) {
+			if (switchableWay(exit) && !contiguousAreaNames.has(exit.dest)) {
 				outerDoors.push({
 					area: area,
 					exit: exit
