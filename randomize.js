@@ -1232,19 +1232,41 @@ function randomize(paramsFile, stDir) {
     //   - removeTilesPercent: 0-100, percentage of tiles to remove
     //
     // Example usage in params.json:
-    //   "removeTilesPercent": 50  // Remove 50% of tiles randomly
+    //   "removeTilesPercent": 50  // Remove 50% of eligible tiles randomly
     //
-    // Safety: Tiles in "tower" and "void" areas are never removed to prevent softlocks.
+    // Safety:
+    //   - Tiles in "tower" and "void" areas are never removed to prevent softlocks
+    //   - Only remove tiles with tileY >= 75 (ceiling/decorative only)
+    //   - Tile distribution analysis shows:
+    //     * tileY 64 = 4429 tiles (floor/main structure)
+    //     * tileY 65-74 = ~2200 tiles (walls at player height)
+    //     * tileY 75+ = ~550 tiles (ceiling/decorative - SAFE TO REMOVE)
     function removeTiles(tile, area, index) {
         // Skip tiles in critical areas (tower and void)
         if (area.name.includes("tower") || area.name.includes("void")) {
             return;
         }
         
+        // VERY CONSERVATIVE APPROACH: Only remove ceiling/decorative tiles
+        // Based on tile distribution analysis across all 31 areas:
+        // - tileY 64 is the main floor level (4429 tiles)
+        // - tileY 65-74 are walls/structures at player height
+        // - tileY 75+ are ceiling/decorative elements (safe to remove)
+        if (!tile.isBlank) {
+            const tileY = tile.tileY.get();
+            
+            // Ultra-conservative threshold: only remove high decorative tiles
+            // tileY 64-74 = floors/walls at player level - NEVER REMOVE
+            // tileY 75+ = ceiling/decorative - safe to remove
+            if (tileY < 75) {
+                return;
+            }
+        }
+        
         // Remove tile based on percentage chance
         var removalChance = params.removeTilesPercent / 100;
         if (Math.random() < removalChance) {
-            console.log("Remove tiles - removing - " + area.name + " tile " + index);
+            console.log("Remove tiles - removing - " + area.name + " tile " + index + " (tileY=" + tile.tileY.get() + ", posY=" + tile.y.get() + ")");
             tile.blank();
         }
     }

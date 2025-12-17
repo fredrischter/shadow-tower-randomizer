@@ -1,0 +1,225 @@
+{
+  "totalAreas": 31,
+  "totalTiles": 15872,
+  "totalBlankTiles": 6192,
+  "totalNonBlankTiles": 9680,
+  "areaStats": [
+    {
+      "name": "shadow_tower_part1",
+      "index": 0,
+      "totalTiles": 512,
+      "blankTiles": 4,
+      "nonBlankTiles": 508
+    },
+    {
+      "name": "human_world_solitary_region",
+      "index": 1,
+      "totalTiles": 512,
+      "blankTiles": 411,
+      "nonBlankTiles": 101
+    },
+    {
+      "name": "human_world_hidden_region",
+      "index": 2,
+      "totalTiles": 512,
+      "blankTiles": 350,
+      "nonBlankTiles": 162
+    },
+    {
+      "name": "human_world_forgotten_region",
+      "index": 3,
+      "totalTiles": 512,
+      "blankTiles": 386,
+      "nonBlankTiles": 126
+    },
+    {
+      "name": "human_world_cursed_region",
+      "index": 4,
+      "totalTiles": 512,
+      "blankTiles": 357,
+      "nonBlankTiles": 155
+    },
+    {
+      "name": "earth_world_rotting_cavern",
+      "index": 5,
+      "totalTiles": 512,
+      "blankTiles": 80,
+      "nonBlankTiles": 432
+    },
+    {
+      "name": "earth_world_poisonous_cavern",
+      "index": 6,
+      "totalTiles": 512,
+      "blankTiles": 125,
+      "nonBlankTiles": 387
+    },
+    {
+      "name": "earth_world_quaking_cavern",
+      "index": 7,
+      "totalTiles": 512,
+      "blankTiles": 342,
+      "nonBlankTiles": 170
+    },
+    {
+      "name": "earth_world_false_pit_cavern",
+      "index": 8,
+      "totalTiles": 512,
+      "blankTiles": 27,
+      "nonBlankTiles": 485
+    },
+    {
+      "name": "earth_world_stone_cavern",
+      "index": 9,
+      "totalTiles": 512,
+      "blankTiles": 184,
+      "nonBlankTiles": 328
+    },
+    {
+      "name": "earth_world_hostile_rock_cavern",
+      "index": 10,
+      "totalTiles": 512,
+      "blankTiles": 235,
+      "nonBlankTiles": 277
+    },
+    {
+      "name": "water_world_impure_pool_area",
+      "index": 11,
+      "totalTiles": 512,
+      "blankTiles": 108,
+      "nonBlankTiles": 404
+    },
+    {
+      "name": "water_world_sunken_river_area",
+      "index": 12,
+      "totalTiles": 512,
+      "blankTiles": 331,
+      "nonBlankTiles": 181
+    },
+    {
+      "name": "water_world_watery_labyrinth_area",
+      "index": 13,
+      "totalTiles": 512,
+      "blankTiles": 272,
+      "nonBlankTiles": 240
+    },
+    {
+      "name": "water_world_white_rain_area",
+      "index": 14,
+      "totalTiles": 512,
+      "blankTiles": 359,
+      "nonBlankTiles": 153
+    },
+    {
+      "name": "fire_world_phoenix_cave",
+      "index": 15,
+      "totalTiles": 512,
+      "blankTiles": 18,
+      "nonBlankTiles": 494
+    },
+    {
+      "name": "fire_world_burning_cavern",
+      "index": 16,
+      "totalTiles": 512,
+      "blankTiles": 260,
+      "nonBlankTiles": 252
+    },
+    {
+      "name": "fire_world_molten_cavern",
+      "index": 17,
+      "totalTiles": 512,
+      "blankTiles": 43,
+      "nonBlankTiles": 469
+    },
+    {
+      "name": "fire_world_ashen_cavern",
+      "index": 18,
+      "totalTiles": 512,
+      "blankTiles": 57,
+      "nonBlankTiles": 455
+    },
+    {
+      "name": "monster_world_false_eye_area",
+      "index": 19,
+      "totalTiles": 512,
+      "blankTiles": 353,
+      "nonBlankTiles": 159
+    },
+    {
+      "name": "monster_world_screeching_area",
+      "index": 20,
+      "totalTiles": 512,
+      "blankTiles": 377,
+      "nonBlankTiles": 135
+    },
+    {
+      "name": "illusion_world_bewilderment_domain",
+      "index": 21,
+      "totalTiles": 512,
+      "blankTiles": 357,
+      "nonBlankTiles": 155
+    },
+    {
+      "name": "illusion_world_gloomy_domain",
+      "index": 22,
+      "totalTiles": 512,
+      "blankTiles": 206,
+      "nonBlankTiles": 306
+    },
+    {
+      "name": "illusion_world_dream_domain",
+      "index": 23,
+      "totalTiles": 512,
+      "blankTiles": 463,
+      "nonBlankTiles": 49
+    },
+    {
+      "name": "illusion_world_worship_domain",
+      "index": 24,
+      "totalTiles": 512,
+      "blankTiles": 47,
+      "nonBlankTiles": 465
+    },
+    {
+      "name": "death_world_dark_castle_layer",
+      "index": 25,
+      "totalTiles": 512,
+      "blankTiles": 73,
+      "nonBlankTiles": 439
+    },
+    {
+      "name": "death_world_lingering_curse_layer",
+      "index": 26,
+      "totalTiles": 512,
+      "blankTiles": 12,
+      "nonBlankTiles": 500
+    },
+    {
+      "name": "death_world_undead_layer",
+      "index": 27,
+      "totalTiles": 512,
+      "blankTiles": 279,
+      "nonBlankTiles": 233
+    },
+    {
+      "name": "death_world_gate_of_the_dead",
+      "index": 28,
+      "totalTiles": 512,
+      "blankTiles": 7,
+      "nonBlankTiles": 505
+    },
+    {
+      "name": "shadow_tower_part2",
+      "index": 29,
+      "totalTiles": 512,
+      "blankTiles": 46,
+      "nonBlankTiles": 466
+    },
+    {
+      "name": "shadow_tower_part3",
+      "index": 30,
+      "totalTiles": 512,
+      "blankTiles": 23,
+      "nonBlankTiles": 489
+    }
+  ]
+}
