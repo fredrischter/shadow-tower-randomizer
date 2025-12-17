@@ -1221,51 +1221,100 @@ function randomize(paramsFile, stDir) {
     }
 
     // Task #23: Remove tiles based on percentage parameter
-    // This function randomly removes tiles (floor/wall geometry) from areas
+    // This function randomly removes tiles (wall geometry) from areas
     // based on the removeTilesPercent parameter.
     // 
-    // Tiles are the 3D geometry objects that make up the level structure.
-    // Each area has up to 512 tiles (TILE_COUNT = 0x200).
-    // Removing tiles creates walls/ceiling holes, making areas more challenging.
+    // STRATEGY: Path-based wall removal
+    // 1. Identify walkable paths (floor tiles at ground level)
+    // 2. Find tiles adjacent to paths (walls along corridors)
+    // 3. Only remove wall tiles near paths (not isolated tiles)
+    // 4. Never remove the path tiles themselves
+    //
+    // This creates a "crumbling walls" effect without breaking floor continuity.
     //
     // Parameters:
-    //   - removeTilesPercent: 0-100, percentage of eligible tiles to remove
+    //   - removeTilesPercent: 0-100, percentage of wall tiles to remove
     //
     // Example usage in params.json:
-    //   "removeTilesPercent": 30  // Remove 30% of eligible ceiling/wall tiles
-    //
-    // Safety:
-    //   - Tiles in "tower" and "void" areas are never removed to prevent softlocks
-    //   - Only remove tiles with posY > 512 (elevated structures)
-    //   - Tiles with posY <= 512 are floor level and never removed
-    //   - This prevents floor holes while allowing wall/ceiling removal
+    //   "removeTilesPercent": 30  // Remove 30% of corridor walls
     function removeTiles(tile, area, index) {
         // Skip tiles in critical areas (tower and void)
         if (area.name.includes("tower") || area.name.includes("void")) {
             return;
         }
         
-        // SMART APPROACH: Use world position (posY) instead of tile grid (tileY)
-        // Analysis shows:
-        // - posY 0-512: Floor level tiles (player walks here) - NEVER REMOVE
-        // - posY 513+: Elevated structures (walls/ceilings) - SAFE TO REMOVE
-        //
-        // This approach works across all areas regardless of their tileY distribution
+        // PATH-BASED WALL REMOVAL STRATEGY
+        // 
+        // Step 1: Identify floor tiles (walkable paths)
+        // Floor characteristics:
+        // - posY <= 256 (at or near ground level)
+        // - Forms connected grid of tiles
+        
         if (!tile.isBlank) {
             const posY = tile.y.get();
+            const tileX = tile.tileX.get();
+            const tileZ = tile.tileZ.get();
             
-            // Only remove elevated tiles (above floor level)
-            // posY <= 512 = floor level - DO NOT REMOVE (prevents fall-through)
-            // posY > 512 = elevated (walls/ceiling) - safe to remove
-            if (posY <= 512) {
-                return;
+            // PROTECT FLOOR TILES (the walkable path)
+            // Floor tiles are typically at posY <= 256
+            if (posY <= 256) {
+                return; // Never remove floor - this is the walkable path
             }
+            
+            // Step 2: Find tiles adjacent to paths (walls along corridors)
+            // We need to check if there are floor tiles nearby (within 2 grid units)
+            
+            let hasNearbyFloorTile = false;
+            let distanceToNearestFloor = 999;
+            
+            // Check all tiles in the area for nearby floor tiles
+            for (let i = 0; i < area.tiles.length; i++) {
+                const otherTile = area.tiles[i];
+                if (otherTile.isBlank) continue;
+                
+                const otherPosY = otherTile.y.get();
+                const otherTileX = otherTile.tileX.get();
+                const otherTileZ = otherTile.tileZ.get();
+                
+                // Is this a floor tile?
+                if (otherPosY <= 256) {
+                    // Calculate grid distance
+                    const dx = Math.abs(tileX - otherTileX);
+                    const dz = Math.abs(tileZ - otherTileZ);
+                    const distance = Math.max(dx, dz); // Chebyshev distance
+                    
+                    if (distance < distanceToNearestFloor) {
+                        distanceToNearestFloor = distance;
+                    }
+                    
+                    // Is this tile adjacent to the path? (within 2 tiles)
+                    if (distance <= 2) {
+                        hasNearbyFloorTile = true;
+                    }
+                }
+            }
+            
+            // Step 3: Only remove wall tiles near paths
+            // - Must be adjacent to path (hasNearbyFloorTile)
+            // - Must not be too far from any floor (prevents removing isolated decorations)
+            // - Distance 1-2: Walls along corridor - SAFE TO REMOVE
+            // - Distance 3+: Too far from path - DON'T REMOVE (isolated structures)
+            
+            if (!hasNearbyFloorTile) {
+                return; // Not near a path - don't remove
+            }
+            
+            if (distanceToNearestFloor > 2) {
+                return; // Too far from paths - don't remove
+            }
+            
+            // This is a wall tile adjacent to a walkable path - eligible for removal
         }
         
         // Remove tile based on percentage chance
         var removalChance = params.removeTilesPercent / 100;
         if (Math.random() < removalChance) {
-            console.log("Remove tiles - removing - " + area.name + " tile " + index + " (tileY=" + tile.tileY.get() + ", posY=" + tile.y.get() + ")");
+            console.log("Remove tiles - removing - " + area.name + " tile " + index + " (tileY=" + tile.tileY.get() + ", posY=" + tile.y.get() + ", distance=" + "adjacent to path" + ")");
             tile.blank();
         }
     }
