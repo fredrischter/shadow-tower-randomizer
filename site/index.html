@@ -6,6 +6,7 @@
 	<title>Shadow Tower Randomizer</title>
 	<link href="jquery-ui.css" rel="stylesheet">
 	<style>
+		/* Task #Mobile-Flickering-Fix: Drastically simplified CSS to prevent mobile flickering/shaking */
 		* {
 			margin: 0;
 			padding: 0;
@@ -14,69 +15,22 @@
 		
 		body {
 			font-family: 'Garamond', 'Georgia', serif;
-			background: linear-gradient(135deg, #1a0a0f 0%, #2d1520 50%, #1a0a0f 100%);
-			/* Task #Mobile-Usability: Removed background-attachment: fixed to prevent mobile scrolling jitter */
+			/* Task #Mobile-Flickering-Fix: Removed gradient, using simple solid color */
+			background: #1a0a0f;
 			color: #d4c5b9;
-			min-height: 100vh;
+			/* Task #Mobile-Flickering-Fix: Removed vh unit, using auto instead */
+			min-height: 100%;
 			line-height: 1.6;
-			position: relative;
+			/* Task #Mobile-Flickering-Fix: Removed position relative */
 		}
 		
-		/* Background image slideshow */
-		/* Task #Mobile-Usability: Changed from fixed to absolute to prevent mobile scrolling jitter */
-		body::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-image: url('images/SLUS-00863_2023-12-27_02-43-48-1.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			opacity: 0.15;
-			pointer-events: none;
-			z-index: 0;
-			animation: backgroundFade 30s infinite;
-		}
-		
-		@keyframes backgroundFade {
-			0%, 20% { 
-				background-image: url('images/SLUS-00863_2023-12-27_02-43-48-1.png');
-			}
-			25%, 45% { 
-				background-image: url('images/SLUS-00863_2023-12-26_15-49-06-2.png');
-			}
-			50%, 70% { 
-				background-image: url('images/SLUS-00863_2023-12-27_04-58-06-1.png');
-			}
-			75%, 95% { 
-				background-image: url('images/SLUS-00863_2023-12-26_15-48-59-1.png');
-			}
-		}
-		
-		/* Task #Mobile-Usability: Changed from fixed to absolute to prevent mobile scrolling jitter */
-		body::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: 
-				radial-gradient(ellipse at top, rgba(139, 69, 19, 0.15), transparent),
-				radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.5), transparent);
-			pointer-events: none;
-			z-index: 1;
-		}
+		/* Task #Mobile-Flickering-Fix: Removed all pseudo-elements (body::before, body::after) and animations */
+		/* These were causing flickering on mobile due to complex positioning and animations */
 
 		.container {
 			max-width: 1200px;
 			margin: 0 auto;
 			padding: 20px;
-			position: relative;
-			z-index: 2;
 		}
 
 		header {
@@ -86,20 +40,24 @@
 			border: 2px solid #8b4513;
 			border-radius: 10px;
 			margin-bottom: 30px;
-			box-shadow: 0 0 30px rgba(139, 69, 19, 0.5), inset 0 0 50px rgba(139, 69, 19, 0.1);
-			backdrop-filter: blur(10px);
+			/* Task #Mobile-Flickering-Fix: Removed box-shadow and backdrop-filter */
 		}
 
 		h1 {
 			font-size: clamp(1.8em, 5vw, 3em);
 			color: #d4af37;
-			text-shadow: 
-				0 0 10px rgba(212, 175, 55, 0.5),
-				0 0 20px rgba(139, 69, 19, 0.3),
-				2px 2px 4px rgba(0, 0, 0, 0.8);
+			/* Task #Mobile-Flickering-Fix: Simplified text-shadow */
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 			letter-spacing: 3px;
 			margin-bottom: 10px;
 			font-weight: bold;
+		}
+		
+		/* Task #Mobile-Layout: Grid layout for input sections on mobile */
+		.input-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
 		}
 
 		h2 {
@@ -130,8 +88,7 @@
 			border: 2px solid #8b4513;
 			border-radius: 10px;
 			padding: 30px;
-			box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
-			backdrop-filter: blur(5px);
+			/* Task #Mobile-Flickering-Fix: Removed box-shadow and backdrop-filter */
 		}
 
 		.section {
@@ -140,17 +97,14 @@
 			border-radius: 8px;
 			padding: 20px;
 			margin-bottom: 20px;
-			backdrop-filter: blur(3px);
-			transition: all 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed backdrop-filter and transition */
 		}
 		
-		.section:hover {
-			border-color: #8b4513;
-			box-shadow: 0 0 15px rgba(139, 69, 19, 0.3);
-		}
+		/* Task #Mobile-Flickering-Fix: Removed hover effect with box-shadow */
 
 		button, input[type="submit"] {
-			background: linear-gradient(to bottom, #8b4513, #5a2d0f);
+			/* Task #Mobile-Flickering-Fix: Simplified gradient */
+			background: #6b3410;
 			color: #d4af37;
 			border: 2px solid #d4af37;
 			padding: 12px 30px;
@@ -158,23 +112,22 @@
 			font-weight: bold;
 			cursor: pointer;
 			border-radius: 5px;
-			transition: all 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 			font-family: 'Garamond', 'Georgia', serif;
 			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+			/* Task #Mobile-Flickering-Fix: Removed box-shadow */
 		}
 
+		/* Task #Mobile-Flickering-Fix: Simplified hover - no transform or glow effects */
 		button:hover, input[type="submit"]:hover {
-			background: linear-gradient(to bottom, #a0522d, #6b3410);
+			background: #8b5a2d;
 			border-color: #ffd700;
 			color: #ffd700;
-			box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-			transform: translateY(-2px);
 		}
 
+		/* Task #Mobile-Flickering-Fix: Removed active transform */
 		button:active, input[type="submit"]:active {
-			transform: translateY(0);
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+			background: #5a2d0f;
 		}
 
 		button:disabled {
@@ -182,7 +135,6 @@
 			border-color: #555;
 			color: #666;
 			cursor: not-allowed;
-			box-shadow: none;
 		}
 
 		input[type="file"] {
@@ -198,7 +150,7 @@
 		}
 
 		input[type="file"]::file-selector-button {
-			background: linear-gradient(to bottom, #6b4423, #4a2f18);
+			background: #4a2f18;
 			color: #d4af37;
 			border: 1px solid #8b4513;
 			padding: 10px 20px;
@@ -209,7 +161,7 @@
 		}
 
 		input[type="file"]::file-selector-button:hover {
-			background: linear-gradient(to bottom, #8b5a2d, #5a3618);
+			background: #5a3618;
 		}
 		
 		input[type="text"] {
@@ -222,13 +174,13 @@
 			border-radius: 5px;
 			font-family: 'Garamond', 'Georgia', serif;
 			font-size: 1em;
-			transition: all 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 		}
 		
 		input[type="text"]:focus {
 			outline: none;
 			border-color: #d4af37;
-			box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+			/* Task #Mobile-Flickering-Fix: Removed box-shadow */
 		}
 
 		form {
@@ -327,7 +279,7 @@
 		a {
 			color: #d4af37;
 			text-decoration: none;
-			transition: color 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 		}
 
 		a:hover {
@@ -344,10 +296,11 @@
 		}
 
 		@media (max-width: 768px) {
-			/* Task #Mobile-Usability: Reduced h1 size to minimize initial scrolling */
+			/* Task #Mobile-Layout: Further reduced header size to minimize scrolling */
 			h1 {
-				font-size: 1.5em;
+				font-size: 1.2em;
 				letter-spacing: 1px;
+				margin-bottom: 5px;
 			}
 			
 			h2 {
@@ -362,25 +315,38 @@
 				padding: 10px;
 			}
 			
-			/* Task #Mobile-Usability: Reduced header padding to minimize vertical space */
+			/* Task #Mobile-Layout: Further reduced header padding */
 			header {
-				padding: 15px 10px;
-				margin-bottom: 15px;
+				padding: 10px;
+				margin-bottom: 10px;
 			}
 			
 			.main-content {
-				padding: 20px 15px;
+				padding: 15px 10px;
 			}
 			
 			.section {
-				padding: 15px;
+				padding: 12px;
+				margin-bottom: 10px;
+			}
+			
+			/* Task #Mobile-Layout: Enable grid for input sections */
+			.input-grid {
+				grid-template-columns: 1fr;
+				gap: 10px;
+			}
+			
+			/* Task #Mobile-Layout: Compact section labels */
+			.section label {
+				font-size: 0.9em;
+				margin-bottom: 5px;
 			}
 			
 			button, input[type="submit"] {
 				width: 100%;
-				padding: 15px 20px;
-				font-size: 1em;
-				margin-bottom: 10px;
+				padding: 12px 15px;
+				font-size: 0.95em;
+				margin-bottom: 5px;
 			}
 			
 			.ui-tabs .ui-tabs-nav li {
@@ -401,6 +367,12 @@
 				max-width: 100%;
 			}
 			
+			/* Task #Mobile-Layout: Smaller explanatory text */
+			.section p {
+				font-size: 0.8em;
+				margin-top: 5px;
+			}
+			
 			#dif-radioset label,
 			#purpose-radioset label,
 			#map-radioset label,
@@ -408,6 +380,14 @@
 			#creature-radioset label {
 				padding: 10px 8px !important;
 				font-size: 0.85em !important;
+			}
+		}
+		
+		@media (min-width: 769px) {
+			/* Task #Mobile-Layout: Desktop layout - 3 columns for input sections */
+			.input-grid {
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 20px;
 			}
 		}
 		
@@ -430,15 +410,13 @@
 			border-radius: 10px;
 			padding: 0;
 			margin-bottom: 30px;
-			backdrop-filter: blur(10px);
-			position: relative;
-			z-index: 2;
+			/* Task #Mobile-Flickering-Fix: Removed backdrop-filter */
 			overflow: hidden;
 		}
 		
 		.gallery-toggle {
 			width: 100%;
-			background: linear-gradient(to bottom, #6b4423, #4a2f18);
+			background: #4a2f18;
 			color: #d4af37;
 			border: none;
 			padding: 15px;
@@ -449,21 +427,19 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			transition: all 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 			font-family: 'Garamond', 'Georgia', serif;
 		}
 		
 		.gallery-toggle:hover {
-			background: linear-gradient(to bottom, #8b5a2d, #5a3618);
+			background: #5a3618;
 		}
 		
 		.gallery-toggle-icon {
-			transition: transform 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 		}
 		
-		.gallery-toggle.active .gallery-toggle-icon {
-			transform: rotate(180deg);
-		}
+		/* Task #Mobile-Flickering-Fix: Icon change handled via JavaScript instead of CSS transform */
 		
 		.gallery-content {
 			padding: 20px;
@@ -494,27 +470,21 @@
 			overflow: hidden;
 			border-radius: 8px;
 			border: 2px solid #5a3a2a;
-			transition: all 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 			cursor: pointer;
 			aspect-ratio: 4/3;
 		}
 		
-		.gallery-item:hover {
-			border-color: #d4af37;
-			box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-			transform: translateY(-5px);
-		}
+		/* Task #Mobile-Flickering-Fix: Removed hover effects with box-shadow and transform */
 		
 		.gallery-item img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: transform 0.3s ease;
+			/* Task #Mobile-Flickering-Fix: Removed transition */
 		}
 		
-		.gallery-item:hover img {
-			transform: scale(1.1);
-		}
+		/* Task #Mobile-Flickering-Fix: Removed hover transform on img */
 		
 		@media (max-width: 768px) {
 			.gallery-container {
@@ -543,7 +513,7 @@
 	<div class="container">
 		<header>
 			<h1>⚔ SHADOW TOWER RANDOMIZER ⚔</h1>
-			<h2 id='status'></h2>
+			<!-- Task #Mobile-Layout: Removed empty h2#status line below title -->
 		</header>
 
 		<!-- Task #Mobile-Usability: Gallery moved to bottom for less prominence -->
@@ -551,24 +521,29 @@
 		<div class="main-content">
 			<input type="file" id="file" style="display:none;" />
 
-			<div class="section">
-				<label><b>📁 Input File</b></label>
+			<!-- Task #Mobile-Layout: Grid container for input sections -->
+			<div class="input-grid">
+				<div class="section">
+					<label><b>📁 Input File</b></label>
 
-				<form id="formButtonUpload" enctype="multipart/form-data">
-					<input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
-					<button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
-				</form>
-			</div>
+					<form id="formButtonUpload" enctype="multipart/form-data">
+						<input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
+						<button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
+					</form>
+				</div>
 
-			<div class="section">
-				<label><b>🎲 Seed (Optional)</b></label>
-				<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed">
-				<p style="font-size: 0.9em; margin-top: 8px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
-			</div>
+				<div class="section">
+					<label><b>🎲 Seed (Optional)</b></label>
+					<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed">
+					<p style="font-size: 0.9em; margin-top: 8px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
+				</div>
 
-			<div class="section">
-				<label><b>💾 Output</b></label>
-				<button id="buttonDownload">Download Randomized ISO</button>
+				<div class="section">
+					<label><b>💾 Output</b></label>
+					<button id="buttonDownload">Download Randomized ISO</button>
+					<!-- Task #Mobile-Layout: Moved status from header to output section -->
+					<div id='status' style="margin-top: 10px; font-size: 0.9em; color: #d4af37;"></div>
+				</div>
 			</div>
 
 	<div id="tabs">
