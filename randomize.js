@@ -37,6 +37,11 @@ function randomize(paramsFile, stDir) {
         //logFileRandomize.write(util.format.apply(null, arguments) + '\n');
         fs.writeSync(logFileRandomize, util.format.apply(null, arguments) + '\n');
     }
+    
+    // Task #24: Redirect console.error to capture circle spin algorithm logs
+    console.error = function() {
+        fs.writeSync(logFileRandomize, util.format.apply(null, arguments) + '\n');
+    }
 
     if (!paramsFile || !paramsFile.endsWith(".json")) {
         console.log("ERROR - didn't provide .json file part as argument.");
