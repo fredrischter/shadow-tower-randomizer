@@ -1,6 +1,12 @@
 
 $(document).ready(function() {
 
+	// Task #Mobile-Usability: Gallery toggle functionality
+	$('#galleryToggle').on('click', function() {
+		$(this).toggleClass('active');
+		$('#galleryContent').toggleClass('active');
+	});
+
 	$( "#buttonUpload" ).button({icon: "ui-icon-star"});
 	$( "#buttonRandomize" ).button();
 	$( "#buttonRecipe" ).button();
