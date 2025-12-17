@@ -2175,32 +2175,6 @@ function randomize(paramsFile, stDir) {
         }
     });
     
-    // Sort relationships by source and target to enable linknum calculation
-    // This helps neo4jd3 detect and curve multiple links between the same nodes
-    neo4jData.relationships.sort(function(a, b) {
-        if (a.startNode > b.startNode) return 1;
-        if (a.startNode < b.startNode) return -1;
-        if (a.endNode > b.endNode) return 1;
-        if (a.endNode < b.endNode) return -1;
-        return 0;
-    });
-    
-    // Assign linknum to enable curved arrows for multiple links
-    for (var r = 0; r < neo4jData.relationships.length; r++) {
-        if (r === 0) {
-            neo4jData.relationships[r].linknum = 1;
-        } else {
-            var prev = neo4jData.relationships[r - 1];
-            var curr = neo4jData.relationships[r];
-            if (curr.startNode === prev.startNode && curr.endNode === prev.endNode) {
-                // Multiple links between same nodes - increment linknum
-                neo4jData.relationships[r].linknum = prev.linknum + 1;
-            } else {
-                neo4jData.relationships[r].linknum = 1;
-            }
-        }
-    }
-    
     // Save neo4j data as JSON for the visualization page
     // Task 7: Wrap in Neo4j query response format for neo4jd3 v0.0.5
     var neo4jDataWrapped = {
