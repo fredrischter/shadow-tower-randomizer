@@ -493,7 +493,7 @@ function shuffle(params) {
 				// New map randomization logic: perform circle spin algorithm 3 times
 				// Task #24: Changed from 2 to 3 iterations as requested
 				console.error(new Date().toISOString() + "  Starting new circle spin randomization");
-				for (var i=0; i<3; i++) {
+				for (var i=0; i<20; i++) {
 					console.error(" Iteration " + (i+1) + "/3:");
 					performCircleSpinIteration(generated);
 				}
