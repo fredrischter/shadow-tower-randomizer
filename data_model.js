@@ -1025,7 +1025,9 @@
     "fester", "wildowess", "gorthaur",
     "shadow_spider", "demon_bat", "dark_fairy", "bone_demon", "demons_eye", "apocrypha", "rotting_face",
     "fanged_worm", "dark_imp", "master_howler", "black_imp", "claw_head", "hanging_dead", "dragon_turtle",
-    "guardian", "guardian_b", "04_dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
+    "guardian", "guardian_b", "04_dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king",
+    // Fix for Stone Cavern freeze issue - these creatures have hardcoded event scripts/conversations
+    "hobble_worm", "barrel_snail", "crying_root", "clay_servant"
   ];
 
   // Task #11: Creature naming and categories improvements
