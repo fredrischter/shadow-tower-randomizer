@@ -28,21 +28,46 @@
       "nonSwitchable": true
     },
     {
-      "id": "35",
-      "dest": "human_world_cursed_region",
-      "world": "human_world",
-      "wayBackId": "3",
+      "id": "38",
+      "dest": "shadow_tower_part1a",
+      "wayBackId": "0",
       "type": "door",
       "rotation": 2,
-      "direction": "exit",
       "nonSwitchable": false
     },
     {
-      "id": "31",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "4",
+      "id": "0",
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "38",
       "type": "door",
-      "rotation": 2,
+      "rotation": 0,
+      "nonSwitchable": true
+    },
+    {
+      "id": "31",
+      "dest": "human_world_hidden_region",
+      "world": "human_world",
+      "wayBackId": "9",
+      "type": "door",
+      "rotation": 0,
+      "nonSwitchable": false
+    },
+    {
+      "id": "26",
+      "dest": "human_world_forgotten_region",
+      "world": "human_world",
+      "wayBackId": "18",
+      "type": "totem",
+      "rotation": 1,
+      "nonSwitchable": false
+    },
+    {
+      "id": "34",
+      "dest": "shadow_tower_part1b",
+      "wayBackId": "8",
+      "type": "door",
+      "rotation": 0,
       "nonSwitchable": false
     },
     {
@@ -72,35 +97,13 @@
       "nonSwitchable": false
     },
     {
-      "id": "34",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "8",
+      "id": "37",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "5",
       "type": "door",
       "rotation": 0,
+      "direction": "exit",
       "nonSwitchable": false
-    },
-    {
-      "id": "jump",
-      "dest": "shadow_tower_part1c",
-      "type": "jump",
-      "nonSwitchable": false
-    },
-    {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
     },
     {
       "id": "11",
@@ -1745,7 +1748,7 @@
           "nonSwitchable": false
         }
       ],
-      "depth": 3
+      "depth": 4
     },
     {
       "name": "shadow_tower_part1c",
@@ -1846,18 +1849,18 @@
       "exits": [
         {
           "id": "0",
-          "dest": "water_world_impure_pool_area",
+          "dest": "water_world_sunken_river_area",
           "world": "water_world",
-          "wayBackId": "11",
+          "wayBackId": "1",
           "type": "door",
           "rotation": 3,
           "nonSwitchable": false
         },
         {
           "id": "3",
-          "dest": "water_world_sunken_river_area",
+          "dest": "water_world_impure_pool_area",
           "world": "water_world",
-          "wayBackId": "1",
+          "wayBackId": "11",
           "type": "door",
           "rotation": 0,
           "nonSwitchable": false
@@ -1955,9 +1958,9 @@
         },
         {
           "id": "35",
-          "dest": "human_world_cursed_region",
-          "world": "human_world",
-          "wayBackId": "3",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "10",
           "type": "door",
           "rotation": 2,
           "direction": "exit",
@@ -2009,30 +2012,6 @@
       "depth": 2
     },
     {
-      "name": "human_world_cursed_region",
-      "world": "human_world",
-      "exits": [
-        {
-          "id": "3",
-          "dest": "human_world_solitary_region",
-          "world": "human_world",
-          "wayBackId": "35",
-          "type": "door",
-          "rotation": 2,
-          "nonSwitchable": false
-        },
-        {
-          "id": "31",
-          "dest": "shadow_tower_part1b",
-          "wayBackId": "4",
-          "type": "door",
-          "rotation": 2,
-          "nonSwitchable": false
-        }
-      ],
-      "depth": 2
-    },
-    {
       "name": "human_world_forgotten_region",
       "world": "human_world",
       "exits": [
@@ -2073,7 +2052,31 @@
           "nonSwitchable": false
         }
       ],
-      "depth": 4
+      "depth": 3
+    },
+    {
+      "name": "human_world_cursed_region",
+      "world": "human_world",
+      "exits": [
+        {
+          "id": "3",
+          "dest": "earth_world_stone_cavern",
+          "world": "earth_world",
+          "wayBackId": "4",
+          "type": "door",
+          "rotation": 2,
+          "nonSwitchable": false
+        },
+        {
+          "id": "31",
+          "dest": "shadow_tower_part1b",
+          "wayBackId": "4",
+          "type": "door",
+          "rotation": 2,
+          "nonSwitchable": false
+        }
+      ],
+      "depth": 5
     },
     {
       "name": "earth_world_rotting_cavern",
@@ -2096,9 +2099,9 @@
       "exits": [
         {
           "id": "4",
-          "dest": "earth_world_poisonous_cavern",
-          "world": "earth_world",
-          "wayBackId": "13",
+          "dest": "human_world_cursed_region",
+          "world": "human_world",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 0,
           "direction": "entrance",
@@ -2124,7 +2127,7 @@
           "id": "3",
           "dest": "earth_world_poisonous_cavern",
           "world": "earth_world",
-          "wayBackId": "10",
+          "wayBackId": "13",
           "type": "door",
           "rotation": 3,
           "nonSwitchable": true
@@ -2137,18 +2140,18 @@
       "exits": [
         {
           "id": "13",
-          "dest": "earth_world_stone_cavern",
+          "dest": "earth_world_quaking_cavern",
           "world": "earth_world",
-          "wayBackId": "4",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 2,
           "nonSwitchable": false
         },
         {
           "id": "10",
-          "dest": "earth_world_quaking_cavern",
-          "world": "earth_world",
-          "wayBackId": "3",
+          "dest": "human_world_solitary_region",
+          "world": "human_world",
+          "wayBackId": "35",
           "type": "door",
           "rotation": 3,
           "direction": "exit-bi",
@@ -2361,7 +2364,7 @@
         {
           "id": "1",
           "dest": "shadow_tower_part3a",
-          "wayBackId": "3",
+          "wayBackId": "0",
           "type": "door",
           "rotation": 2,
           "direction": "entrance",
@@ -2384,7 +2387,7 @@
         {
           "id": "11",
           "dest": "shadow_tower_part3a",
-          "wayBackId": "0",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 2,
           "direction": "exit",
@@ -2758,15 +2761,12 @@
   "isComplete": false,
   "pathDifficulty": 201,
   "deadEnds": [
-    "shadow_tower_part1b",
     "shadow_tower_part1c",
     "shadow_tower_part2a",
     "shadow_tower_part2b",
     "shadow_tower_part3a",
     "shadow_tower_part3b",
     "shadow_tower_part3c",
-    "human_world_cursed_region",
-    "human_world_forgotten_region",
     "earth_world_rotting_cavern",
     "earth_world_stone_cavern",
     "earth_world_quaking_cavern",

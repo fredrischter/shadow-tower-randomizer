@@ -12089,6 +12089,163 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\randomi
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-medium8\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\randomized-medium8\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-medium8\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
+2025-12-17T17:56:44.905Z  Attempt started 0
+2025-12-17T17:56:44.907Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 3 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:56:44.908Z   Walking
+2025-12-17T17:56:44.927Z  Attempt started 1
+2025-12-17T17:56:44.927Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: fire_world_burning_cavern
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: human_world_cursed_region
+ - Found 6 contiguous areas
+ - Found 1 outer circle doors
+2025-12-17T17:56:44.928Z   Walking
+2025-12-17T17:56:44.947Z  Attempt started 2
+2025-12-17T17:56:44.948Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 4 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: illusion_world_dream_domain
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:56:44.948Z   Walking
+2025-12-17T17:56:44.972Z  Attempt started 3
+2025-12-17T17:56:44.972Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 7 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: illusion_world_worship_domain
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+2025-12-17T17:56:44.974Z   Walking
+2025-12-17T17:56:45.002Z  Attempt started 4
+2025-12-17T17:56:45.002Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: water_world_watery_labyrinth_area
+ - Found 3 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: monster_world_false_eye_area
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: water_world_watery_labyrinth_area
+ - Found 3 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:56:45.003Z   Walking
+2025-12-17T17:56:45.031Z  Attempt started 5
+2025-12-17T17:56:45.032Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part1b
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Assignment for door 1 would be invalid, aborting this spin
+ Iteration 2/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+2025-12-17T17:56:45.032Z   Walking
+2025-12-17T17:56:45.060Z  Attempt started 6
+2025-12-17T17:56:45.060Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 4 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:56:45.061Z   Walking
+2025-12-17T17:56:45.086Z  Attempt started 7
+2025-12-17T17:56:45.086Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 3/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:56:45.087Z   Walking
+2025-12-17T17:56:45.111Z  Attempt started 8
+2025-12-17T17:56:45.112Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+2025-12-17T17:56:45.112Z   Walking
+2025-12-17T17:56:45.141Z  Attempt started 9
+2025-12-17T17:56:45.142Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part1a
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: fire_world_burning_cavern
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+2025-12-17T17:56:45.142Z   Walking
+Gave up after 10 attempts, 1 swapRounds.
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_solitary_region["Human World Solitary Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
 Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]
@@ -12278,6 +12435,6 @@ Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's 
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> death_world_dark_castle_layer      pos( 10 ,-1 ,10)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
 DEBUG: About to enter area loop. Total areas: 31
-Successfully wrote maps.html - size: 268427 bytes
+Successfully wrote maps.html - size: 268834 bytes
  writing item tracker notes
  writing .\generated\randomized-medium8\spoilers\changeset.json

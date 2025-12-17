@@ -2408,9 +2408,9 @@
       "exits": [
         {
           "id": "9",
-          "dest": "water_world_white_rain_area",
-          "world": "water_world",
-          "wayBackId": "4",
+          "dest": "illusion_world_worship_domain",
+          "world": "illusion_world",
+          "wayBackId": "1",
           "type": "door",
           "rotation": 3,
           "nonSwitchable": false
@@ -2432,9 +2432,9 @@
       "exits": [
         {
           "id": "4",
-          "dest": "water_world_watery_labyrinth_area",
-          "world": "water_world",
-          "wayBackId": "9",
+          "dest": "illusion_world_bewilderment_domain",
+          "world": "illusion_world",
+          "wayBackId": "20",
           "type": "door",
           "rotation": 2,
           "nonSwitchable": false
@@ -2544,9 +2544,9 @@
       "exits": [
         {
           "id": "20",
-          "dest": "illusion_world_worship_domain",
-          "world": "illusion_world",
-          "wayBackId": "1",
+          "dest": "water_world_white_rain_area",
+          "world": "water_world",
+          "wayBackId": "4",
           "type": "door",
           "rotation": 2,
           "nonSwitchable": false
@@ -2568,9 +2568,9 @@
       "exits": [
         {
           "id": "1",
-          "dest": "illusion_world_bewilderment_domain",
-          "world": "illusion_world",
-          "wayBackId": "20",
+          "dest": "water_world_watery_labyrinth_area",
+          "world": "water_world",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 1,
           "nonSwitchable": false

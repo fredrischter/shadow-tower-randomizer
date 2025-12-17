@@ -342,7 +342,7 @@ Writing TIM file 232384 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area shadow_tower_part1 in FDAT file index 4 map index 0
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -644,7 +644,7 @@ Writing TIM file 259904 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area human_world_solitary_region in FDAT file index 44 map index 4
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -986,7 +986,7 @@ Writing TIM file 269760 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area human_world_hidden_region in FDAT file index 54 map index 5
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -1310,7 +1310,7 @@ Writing TIM file 268736 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area human_world_forgotten_region in FDAT file index 64 map index 6
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -1632,7 +1632,7 @@ Writing TIM file 34944 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area human_world_cursed_region in FDAT file index 14 map index 1
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -1953,7 +1953,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area earth_world_rotting_cavern in FDAT file index 114 map index 11
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -2308,7 +2308,7 @@ Writing TIM file 276800 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area earth_world_poisonous_cavern in FDAT file index 274 map index 27
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -2624,7 +2624,7 @@ Writing TIM file 260416 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area earth_world_quaking_cavern in FDAT file index 124 map index 12
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -2937,7 +2937,7 @@ Writing TIM file 34400 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area earth_world_false_pit_cavern in FDAT file index 154 map index 15
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -3240,7 +3240,7 @@ Writing TIM file 39648 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area earth_world_stone_cavern in FDAT file index 284 map index 28
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -3659,7 +3659,7 @@ Writing TIM file 269248 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area earth_world_hostile_rock_cavern in FDAT file index 334 map index 33
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -3965,7 +3965,7 @@ Writing TIM file 235584 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area water_world_impure_pool_area in FDAT file index 104 map index 10
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -4280,7 +4280,7 @@ Writing TIM file 94400 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area water_world_sunken_river_area in FDAT file index 214 map index 21
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -4628,7 +4628,7 @@ Writing TIM file 234816 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area water_world_watery_labyrinth_area in FDAT file index 324 map index 32
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -4957,7 +4957,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area water_world_white_rain_area in FDAT file index 374 map index 37
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -5262,7 +5262,7 @@ Writing TIM file 171200 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area fire_world_phoenix_cave in FDAT file index 34 map index 3
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -5574,7 +5574,7 @@ Writing TIM file 121920 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area fire_world_burning_cavern in FDAT file index 204 map index 20
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -5947,7 +5947,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area fire_world_molten_cavern in FDAT file index 244 map index 24
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -6256,7 +6256,7 @@ Writing TIM file 26208 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area fire_world_ashen_cavern in FDAT file index 184 map index 18
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -6576,7 +6576,7 @@ Writing TIM file 38496 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area monster_world_false_eye_area in FDAT file index 24 map index 2
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -7065,7 +7065,7 @@ Writing TIM file 236480 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area monster_world_screeching_area in FDAT file index 174 map index 17
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -7369,7 +7369,7 @@ Writing TIM file 256320 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area illusion_world_bewilderment_domain in FDAT file index 84 map index 8
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -7664,7 +7664,7 @@ Writing TIM file 5184 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\F
 
 Setup Area illusion_world_gloomy_domain in FDAT file index 94 map index 9
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -7966,7 +7966,7 @@ Writing TIM file 67264 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\
 
 Setup Area illusion_world_dream_domain in FDAT file index 384 map index 38
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -8324,7 +8324,7 @@ Writing TIM file 206816 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area illusion_world_worship_domain in FDAT file index 134 map index 13
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -8630,7 +8630,7 @@ Writing TIM file 264512 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area death_world_dark_castle_layer in FDAT file index 254 map index 25
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -8921,7 +8921,7 @@ Writing TIM file 9280 bytes to .\generated\removed10prc-tiles\extracted\ST\COM\F
 
 Setup Area death_world_lingering_curse_layer in FDAT file index 144 map index 14
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -9254,7 +9254,7 @@ Writing TIM file 268736 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area death_world_undead_layer in FDAT file index 264 map index 26
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -9554,7 +9554,7 @@ Found the finisher 0xffff 0xffff 0xffff 0xffff.
 
 Setup Area death_world_gate_of_the_dead in FDAT file index 234 map index 23
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -9889,7 +9889,7 @@ Writing TIM file 232384 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area shadow_tower_part2 in FDAT file index 404 map index 40
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -10191,7 +10191,7 @@ Writing TIM file 232384 bytes to .\generated\removed10prc-tiles\extracted\ST\COM
 
 Setup Area shadow_tower_part3 in FDAT file index 414 map index 41
 
- params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
+ params {"label":"removed10prc-tiles","preset":"no-change","difficulty":"medium","randomizeMap":false,"randomizeCreatures":false,"randomizeCollectablesAndDrops":false,"removeTilesPercent":10,"seed":"1","_comment":"Removes 10% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates a 'crumbling walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF.","fieryKeyFlamingKeyDrop":"keep-on-cerberus"}
 
 Tiles
 idx                                                                     x       y       z     rot      tile xyz  ----
@@ -12089,6 +12089,27 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\removed
 skipping setting checksum, not possible since bin is <4 bytes .\generated\removed10prc-tiles\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\removed10prc-tiles\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\removed10prc-tiles\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
+2025-12-17T18:01:44.552Z  Attempt started 0
+2025-12-17T18:01:44.554Z   Walking
+2025-12-17T18:01:44.573Z  Attempt started 1
+2025-12-17T18:01:44.573Z   Walking
+2025-12-17T18:01:44.593Z  Attempt started 2
+2025-12-17T18:01:44.593Z   Walking
+2025-12-17T18:01:44.617Z  Attempt started 3
+2025-12-17T18:01:44.618Z   Walking
+2025-12-17T18:01:44.643Z  Attempt started 4
+2025-12-17T18:01:44.644Z   Walking
+2025-12-17T18:01:44.669Z  Attempt started 5
+2025-12-17T18:01:44.669Z   Walking
+2025-12-17T18:01:44.694Z  Attempt started 6
+2025-12-17T18:01:44.695Z   Walking
+2025-12-17T18:01:44.720Z  Attempt started 7
+2025-12-17T18:01:44.721Z   Walking
+2025-12-17T18:01:44.749Z  Attempt started 8
+2025-12-17T18:01:44.750Z   Walking
+2025-12-17T18:01:44.775Z  Attempt started 9
+2025-12-17T18:01:44.776Z   Walking
+Gave up after 10 attempts, 1 swapRounds.
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_solitary_region["Human World Solitary Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
 Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]

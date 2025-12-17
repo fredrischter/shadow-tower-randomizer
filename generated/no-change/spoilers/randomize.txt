@@ -12089,6 +12089,27 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\no-chan
 skipping setting checksum, not possible since bin is <4 bytes .\generated\no-change\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\no-change\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\no-change\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
+2025-12-17T17:19:40.421Z  Attempt started 0
+2025-12-17T17:19:40.423Z   Walking
+2025-12-17T17:19:40.443Z  Attempt started 1
+2025-12-17T17:19:40.444Z   Walking
+2025-12-17T17:19:40.464Z  Attempt started 2
+2025-12-17T17:19:40.464Z   Walking
+2025-12-17T17:19:40.488Z  Attempt started 3
+2025-12-17T17:19:40.489Z   Walking
+2025-12-17T17:19:40.516Z  Attempt started 4
+2025-12-17T17:19:40.517Z   Walking
+2025-12-17T17:19:40.548Z  Attempt started 5
+2025-12-17T17:19:40.548Z   Walking
+2025-12-17T17:19:40.576Z  Attempt started 6
+2025-12-17T17:19:40.576Z   Walking
+2025-12-17T17:19:40.603Z  Attempt started 7
+2025-12-17T17:19:40.604Z   Walking
+2025-12-17T17:19:40.629Z  Attempt started 8
+2025-12-17T17:19:40.633Z   Walking
+2025-12-17T17:19:40.659Z  Attempt started 9
+2025-12-17T17:19:40.660Z   Walking
+Gave up after 10 attempts, 1 swapRounds.
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_solitary_region["Human World Solitary Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
 Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]

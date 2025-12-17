@@ -12089,6 +12089,137 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\randomi
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-easy\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\randomized-easy\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-easy\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
+2025-12-17T17:22:57.851Z  Attempt started 0
+2025-12-17T17:22:57.852Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part1c
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: shadow_tower_part1a
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: water_world_white_rain_area
+ - Found 3 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:22:57.854Z   Walking
+2025-12-17T17:22:57.873Z  Attempt started 1
+2025-12-17T17:22:57.874Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: human_world_forgotten_region
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 3/3:
+ - Selected central area: human_world_forgotten_region
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+2025-12-17T17:22:57.876Z   Walking
+2025-12-17T17:22:57.897Z  Attempt started 2
+2025-12-17T17:22:57.897Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 7 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:22:57.898Z   Walking
+2025-12-17T17:22:57.923Z  Attempt started 3
+2025-12-17T17:22:57.924Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: monster_world_false_eye_area
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 3/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:22:57.924Z   Walking
+2025-12-17T17:22:57.951Z  Attempt started 4
+2025-12-17T17:22:57.951Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 2/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 3 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:22:57.952Z   Walking
+2025-12-17T17:22:57.978Z  Attempt started 5
+2025-12-17T17:22:57.978Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: water_world_white_rain_area
+ - Found 3 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: shadow_tower_part2b
+ - Found 4 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:22:57.979Z   Walking
+2025-12-17T17:22:58.007Z  Attempt started 6
+2025-12-17T17:22:58.007Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 3/3:
+ - Selected central area: water_world_impure_pool_area
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-17T17:22:58.008Z   Walking
+2025-12-17T17:22:58.034Z  Attempt started 7
+2025-12-17T17:22:58.035Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 7 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: human_world_forgotten_region
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+2025-12-17T17:22:58.035Z   Walking
+2025-12-17T17:23:06.888Z Accepting circle spin result with difficulty 113
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_solitary_region["Human World Solitary Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
 Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Skeleton r0 y0"| human_world_hidden_region["Human World Hidden Region"]

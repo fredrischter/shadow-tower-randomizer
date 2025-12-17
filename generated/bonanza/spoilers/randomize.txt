@@ -12554,6 +12554,27 @@ skipping setting checksum, not possible since bin is <4 bytes .\generated\bonanz
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\bonanza\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 Applied individual hue shift to 0e_door: h=53.8
 skipping setting checksum, not possible since bin is <4 bytes .\generated\bonanza\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
+2025-12-17T17:12:49.468Z  Attempt started 0
+2025-12-17T17:12:49.470Z   Walking
+2025-12-17T17:12:49.490Z  Attempt started 1
+2025-12-17T17:12:49.491Z   Walking
+2025-12-17T17:12:49.510Z  Attempt started 2
+2025-12-17T17:12:49.511Z   Walking
+2025-12-17T17:12:49.542Z  Attempt started 3
+2025-12-17T17:12:49.543Z   Walking
+2025-12-17T17:12:49.570Z  Attempt started 4
+2025-12-17T17:12:49.570Z   Walking
+2025-12-17T17:12:49.597Z  Attempt started 5
+2025-12-17T17:12:49.597Z   Walking
+2025-12-17T17:12:49.624Z  Attempt started 6
+2025-12-17T17:12:49.624Z   Walking
+2025-12-17T17:12:49.650Z  Attempt started 7
+2025-12-17T17:12:49.650Z   Walking
+2025-12-17T17:12:49.675Z  Attempt started 8
+2025-12-17T17:12:49.676Z   Walking
+2025-12-17T17:12:49.702Z  Attempt started 9
+2025-12-17T17:12:49.702Z   Walking
+Gave up after 10 attempts, 1 swapRounds.
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_solitary_region["Human World Solitary Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
 Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]
@@ -12743,6 +12764,6 @@ Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's 
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> death_world_dark_castle_layer      pos( 10 ,-1 ,10)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
 DEBUG: About to enter area loop. Total areas: 31
-Successfully wrote maps.html - size: 267578 bytes
+Successfully wrote maps.html - size: 267626 bytes
  writing item tracker notes
  writing .\generated\bonanza\spoilers\changeset.json

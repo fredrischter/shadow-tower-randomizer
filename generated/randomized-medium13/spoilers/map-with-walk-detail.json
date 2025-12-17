@@ -1846,18 +1846,18 @@
       "exits": [
         {
           "id": "0",
-          "dest": "water_world_impure_pool_area",
+          "dest": "water_world_sunken_river_area",
           "world": "water_world",
-          "wayBackId": "11",
+          "wayBackId": "1",
           "type": "door",
           "rotation": 3,
           "nonSwitchable": false
         },
         {
           "id": "3",
-          "dest": "water_world_sunken_river_area",
+          "dest": "water_world_impure_pool_area",
           "world": "water_world",
-          "wayBackId": "1",
+          "wayBackId": "11",
           "type": "door",
           "rotation": 0,
           "nonSwitchable": false
@@ -2361,7 +2361,7 @@
         {
           "id": "1",
           "dest": "shadow_tower_part3a",
-          "wayBackId": "3",
+          "wayBackId": "0",
           "type": "door",
           "rotation": 2,
           "direction": "entrance",
@@ -2384,7 +2384,7 @@
         {
           "id": "11",
           "dest": "shadow_tower_part3a",
-          "wayBackId": "0",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 2,
           "direction": "exit",
