@@ -1,0 +1,10 @@
+{
+  "label": "test-apocrypha-weak",
+  "preset": "no-change",
+  "difficulty": "extreme-easy",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "seed": "test123",
+  "testApocryphaInSolitaryRegion": true
+}
