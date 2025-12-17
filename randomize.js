@@ -1619,7 +1619,8 @@ function randomize(paramsFile, stDir) {
 
     console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables."); // + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
 
-    // Test parameter: Place apocrypha (late-game projectile enemy) in first area for testing attack scaling
+    // Issue #14: Test parameter: Place apocrypha (late-game projectile enemy) in first area for testing attack scaling
+    // To isolate magic attack issues, remove all other creatures and items from the area
     if (params.testApocryphaInSolitaryRegion) {
         console.log("\n\n========== TEST: Placing Apocrypha in Solitary Region ==========\n");
         
@@ -1638,6 +1639,31 @@ function randomize(paramsFile, stDir) {
                 console.log("TEST: Replacing " + darkSpider.name + " with " + apocrypha.name);
                 setCreature(darkSpider, apocrypha, changeSet);
                 console.log("TEST: Apocrypha placed successfully. Attack scaling should apply based on difficulty=" + params.difficulty);
+                
+                // Issue #14: Remove all other spawns and items to check if magic attack issue is memory-related
+                console.log("\nTEST: Removing all other spawns and collectables from " + solitaryRegion.name);
+                
+                // Blank all spawns except the first one (which now has apocrypha)
+                var blankedSpawns = 0;
+                solitaryRegion.spawns.forEach((spawn, index) => {
+                    if (index !== 0 && !spawn.isBlank) {
+                        spawn.blank();
+                        blankedSpawns++;
+                    }
+                });
+                console.log("TEST: Blanked " + blankedSpawns + " spawns (keeping only apocrypha)");
+                
+                // Blank all collectables
+                var blankedCollectables = 0;
+                solitaryRegion.collectables.forEach((collectable) => {
+                    if (!collectable.isBlank()) {
+                        collectable.blank();
+                        blankedCollectables++;
+                    }
+                });
+                console.log("TEST: Blanked " + blankedCollectables + " collectables");
+                
+                console.log("TEST: Solitary region now has only apocrypha and no items");
             } else {
                 console.log("ERROR: Could not find dark_spider or apocrypha creatures");
             }
