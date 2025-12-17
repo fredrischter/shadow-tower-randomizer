@@ -1792,7 +1792,8 @@ function randomize(paramsFile, stDir) {
                     if (!creature.isBlank && !creature.isDoor) {
                         allCreatures.push({
                             creature: creature,
-                            area: area.name
+                            areaName: area.name,
+                            areaScore: area.score || 0
                         });
                     }
                 }
@@ -1802,10 +1803,11 @@ function randomize(paramsFile, stDir) {
         console.log(`Found ${allCreatures.length} creatures to analyze`);
         
         // Calculate power scores and extract data
-        const creatureData = allCreatures.map(({ creature, area }) => {
+        const creatureData = allCreatures.map(({ creature, areaName, areaScore }) => {
             const data = {
                 name: creature.name || 'unknown',
-                area: area,
+                area: areaName,
+                areaScore: areaScore,
                 // Base attributes
                 str: creature.str ? creature.str.get() : 0,
                 spd: creature.spd ? creature.spd.get() : 0,
@@ -1953,18 +1955,27 @@ function randomize(paramsFile, stDir) {
         md += `- **Average Power Score**: ${avgPower}\n`;
         md += `- **Highest Power Score**: ${maxPower}\n`;
         md += `- **Lowest Power Score**: ${minPower}\n\n`;
+        md += '### Important Notes\n\n';
+        md += '⚠️ **Progression-Based Scaling:** The power values shown reflect global difficulty scaling only.\n';
+        md += 'They do NOT include position-based normalization (e.g., strong creatures weakened when placed in early areas).\n';
+        md += 'This feature is planned but not yet implemented.\n\n';
+        md += '- **Area Score**: Indicates creature\'s position in randomized map progression (0 = start, higher = later)\n';
+        md += '- **Power Score**: Calculated from base attributes + attacks + defenses after difficulty scaling\n';
+        md += '- **Attack Values**: Shown are the actual scaled values (Type 0x20 = physical, Type 0x30 = magic)\n\n';
         
         md += '---\n\n';
         md += '## Compact Creature Table (Sorted by Power)\n\n';
-        md += '| Creature Name | Power | HP | Physical (0x20) | Magic (0x30) | Key Stats |\n';
-        md += '|---------------|-------|----|-----------------|--------------|-----------|\n';
+        md += '**Note:** Power values shown are after global difficulty scaling but do NOT include progression-based normalization.\n';
+        md += 'Area Score indicates the creature\'s position in game progression (0 = start area, higher = later areas).\n\n';
+        md += '| Creature Name | Power | HP | Area Score | Physical (0x20) | Magic (0x30) | Area |\n';
+        md += '|---------------|-------|----|-----------|-----------------|--------------|-----------|\n';
         
         sortedData.forEach(data => {
             const physAttacks = data.physicalAttacks.length > 0 ? data.physicalAttacks.join('; ') : '-';
             const magAttacks = data.magicAttacks.length > 0 ? data.magicAttacks.join('; ') : '-';
-            const keyStats = `STR:${data.str} DEF:${data.def} HP:${data.hp}`;
+            const areaShort = data.area.replace(/_/g, ' ').substring(0, 25);
             
-            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${physAttacks} | ${magAttacks} | ${keyStats} |\n`;
+            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${data.areaScore} | ${physAttacks} | ${magAttacks} | ${areaShort} |\n`;
         });
         
         md += '\n---\n\n';
@@ -2010,7 +2021,7 @@ function randomize(paramsFile, stDir) {
         
         // Also generate CSV for spreadsheet analysis
         const csvHeaders = [
-            'Creature Name', 'Power Score', 'HP',
+            'Creature Name', 'Power Score', 'HP', 'Area Score', 'Area',
             'STR', 'SPD', 'DEF', 'BAL', 'SLA', 'SMH', 'PIR', 'SPR',
             'FOC', 'HAM', 'PUR', 'PAR', 'MEL', 'SOL',
             'Attack1', 'Attack2', 'Magic1',
@@ -2019,7 +2030,7 @@ function randomize(paramsFile, stDir) {
         
         const csvRows = sortedData.map(data => {
             return [
-                data.name, data.powerScore, data.hp,
+                data.name, data.powerScore, data.hp, data.areaScore, '"' + data.area + '"',
                 data.str, data.spd, data.def, data.bal, data.sla, data.smh, data.pir, data.spr,
                 data.foc, data.ham, data.pur, data.par, data.mel, data.sol,
                 data.attack1, data.attack2, data.magic1,
