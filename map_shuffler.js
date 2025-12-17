@@ -285,15 +285,22 @@ function resolveRotation(map, areasByName, targetExit) {
 }*/
 
 // New map randomization logic: Find areas connected to central area through switchable doors
-function findContiguousAreas(map, centralArea) {
+// Task #24: Limited depth BFS to prevent finding all areas in connected map
+function findContiguousAreas(map, centralArea, maxDepth = 2) {
 	const contiguousAreas = new Set([centralArea.name]);
-	const toCheck = [centralArea];
+	const toCheck = [{area: centralArea, depth: 0}];
 	const checked = new Set();
 	
 	while (toCheck.length > 0) {
-		const currentArea = toCheck.pop();
+		const current = toCheck.pop();
+		const currentArea = current.area;
+		const currentDepth = current.depth;
+		
 		if (checked.has(currentArea.name)) continue;
 		checked.add(currentArea.name);
+		
+		// Stop expanding if we've reached max depth
+		if (currentDepth >= maxDepth) continue;
 		
 		// Find all switchable doors from this area
 		currentArea.exits.forEach(exit => {
@@ -304,7 +311,7 @@ function findContiguousAreas(map, centralArea) {
 					// Find the destination area and add it to check
 					const destArea = map.find(a => a.name === exit.dest);
 					if (destArea) {
-						toCheck.push(destArea);
+						toCheck.push({area: destArea, depth: currentDepth + 1});
 					}
 				}
 			}
@@ -483,10 +490,11 @@ function shuffle(params) {
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_sunken_river_area", "1");  // ok
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "11"); // ok
 
-				// New map randomization logic: perform circle spin algorithm 2 times
+				// New map randomization logic: perform circle spin algorithm 3 times
+				// Task #24: Changed from 2 to 3 iterations as requested
 				console.error(new Date().toISOString() + "  Starting new circle spin randomization");
-				for (var i=0; i<2; i++) {
-					console.error(" Iteration " + (i+1) + "/2:");
+				for (var i=0; i<3; i++) {
+					console.error(" Iteration " + (i+1) + "/3:");
 					performCircleSpinIteration(generated);
 				}
 			}
