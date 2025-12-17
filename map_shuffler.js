@@ -532,22 +532,12 @@ function shuffle(params) {
 		if (walkResult && walkResult.isComplete) {
 			if (!params.randomizeMap) {
 				result = walkResult;
-			} else if (swapRounds<0) {
-				// First swaps are free, always taking new map if it is just valid;
-				console.error(new Date().toISOString() + " " + swapRounds + " new generated map, difficulty "+walkResult.pathDifficulty+" but still doing more swaps");
-				lastValidMap = walkResult;
 			} else {
-				console.error(new Date().toISOString() + " " + swapRounds + " need to get a map, with difficulty around "+difficulty+". lastValidMap "+lastValidMap.pathDifficulty+", new one "+walkResult.pathDifficulty+".");
-
-				// Next rounds get new map only if it is better for difficulty, to narrow it towards better map
-				lastValidMap = chooseBetterForDifficulty(walkResult, lastValidMap, difficulty);
-				//console.log(" taken lastValidMap as one with difficulty "+lastValidMap.pathDifficulty);
-
-				// After first rounds, try to get as soon as get one suitable for the difficulty
-				if (goodForDificulty(walkResult, difficulty)) {
-					result = walkResult;
-					//console.log(" resolved as map with difficulty "+walkResult.pathDifficulty);
-				}
+				// Task #24: Circle spin algorithm fix - accept first valid map
+				// The circle spin algorithm performs 3 complete iterations of randomization.
+				// Unlike the old incremental swap system, we should accept the first walkable result.
+				console.error(new Date().toISOString() + " Accepting circle spin result with difficulty " + walkResult.pathDifficulty);
+				result = walkResult;
 			}
 
 		} else {
