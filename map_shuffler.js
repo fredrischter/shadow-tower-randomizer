@@ -386,14 +386,39 @@ function spinOuterCircleDoors(map, outerDoors) {
 		}
 	}
 	
-	// All checks passed, now apply all the shifts
+	// Fix: Two-pass approach to avoid wayback conflicts during circular shift
+	// Pass 1: Update all forward door destinations without touching waybacks
 	for (let i = 0; i < outerDoors.length; i++) {
 		const currentDoor = outerDoors[i];
 		const nextIndex = (i + 1) % outerDoors.length;
 		const nextDestination = originalDestinations[nextIndex];
 		
-		assignWay(currentDoor.exit, nextDestination, currentDoor.area, map);
+		// Update the door's destination, world, and wayBackId
+		currentDoor.exit.dest = nextDestination.dest;
+		currentDoor.exit.world = nextDestination.world;
+		currentDoor.exit.wayBackId = nextDestination.wayBackId;
 		swapsPerformed++;
+	}
+	
+	// Pass 2: Update all wayback doors to point to the correct source areas
+	if (consistentDoors) {
+		for (let i = 0; i < outerDoors.length; i++) {
+			const currentDoor = outerDoors[i];
+			
+			// Find the wayback door in the destination area
+			if (currentDoor.exit.wayBackId) {
+				const wayBackArea = map.find(area => area.name == currentDoor.exit.dest);
+				if (wayBackArea) {
+					const wayBackWay = wayBackArea.exits.find(exit => exit.id == currentDoor.exit.wayBackId);
+					if (wayBackWay) {
+						// Update wayback to point back to the current door's area
+						wayBackWay.dest = currentDoor.area.name;
+						wayBackWay.world = currentDoor.area.world;
+						wayBackWay.wayBackId = currentDoor.exit.id;
+					}
+				}
+			}
+		}
 	}
 	
 	console.error(" - Successfully performed " + swapsPerformed + " door shifts");
