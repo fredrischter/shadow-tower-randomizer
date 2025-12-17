@@ -509,28 +509,29 @@ function randomize(paramsFile, stDir) {
         console.log("DEBUG - Creature " + creature.name);
         
         // Fix for magic/projectile attack damage scaling
-        // Scale attack values in entityState data (type 0x20 = attack)
+        // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
         if (creature.entityStates && creature.entityStates.length > 0) {
             creature.entityStates.forEach((entityState) => {
-                if (entityState.type == 0x20) {
-                    // EntityStateData with type 0x20 contains attack1, attack2, attack3 (UInt16 at offsets 0x1a, 0x1c, 0x1e)
+                if (entityState.type == 0x20 || entityState.type == 0x30) {
+                    var attackType = entityState.type == 0x20 ? "physical" : "spell/magic";
+                    // EntityStateData with type 0x20/0x30 contains attack1, attack2, attack3 (UInt16 at offsets 0x1a, 0x1c, 0x1e)
                     if (entityState.attack1) {
                         var oldValue = entityState.attack1.get();
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack1.set(newValue);
-                        console.log("  Scaled attack1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                        console.log("  Scaled " + attackType + " attack1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
                     if (entityState.attack2) {
                         var oldValue = entityState.attack2.get();
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack2.set(newValue);
-                        console.log("  Scaled attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                        console.log("  Scaled " + attackType + " attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
                     if (entityState.attack3) {
                         var oldValue = entityState.attack3.get();
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack3.set(newValue);
-                        console.log("  Scaled attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                        console.log("  Scaled " + attackType + " attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
                 }
             });

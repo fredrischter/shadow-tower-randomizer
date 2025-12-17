@@ -10,25 +10,30 @@ Monsters' magic and projectile attacks were **not being scaled** by difficulty s
 
 ## Root Cause
 
-In `randomize.js` lines 513-520, the code to scale creature attack values in EntityStateData was **commented out**. Additionally, the commented code had incorrect property names (`weaponAttack1/2/3` instead of `attack1/2/3`).
+**Initial Issue:** In `randomize.js` lines 513-520, the code to scale creature attack values in EntityStateData was **commented out**. Additionally, the commented code had incorrect property names (`weaponAttack1/2/3` instead of `attack1/2/3`).
+
+**Subsequent Issue:** The initial fix only handled EntityStateData **type 0x20** (physical attacks) but **NOT type 0x30** (spell/magic attacks). This meant magic-based enemies still dealt full damage regardless of difficulty.
 
 ## Solution
 
-### 1. Fixed Attack Scaling (`randomize.js` lines 486-535)
+### 1. Fixed Attack Scaling (`randomize.js` lines 486-535, `data_model.js` lines 1088-1101)
 
-Uncommented and corrected the attack scaling logic in `applyDifficultyForEachValidCreature()`:
+**Initial Fix:** Uncommented and corrected the attack scaling logic for type 0x20 (physical attacks).
+
+**Complete Fix:** Extended to handle **both type 0x20 (physical) AND type 0x30 (spell/magic)** attacks:
 
 ```javascript
-// Scale attack values in entityState data (type 0x20 = attack)
+// Scale attack values in entityState data (type 0x20 = physical, type 0x30 = spell/magic)
 if (creature.entityStates && creature.entityStates.length > 0) {
     creature.entityStates.forEach((entityState) => {
-        if (entityState.type == 0x20) {
-            // EntityStateData with type 0x20 contains attack1, attack2, attack3
+        if (entityState.type == 0x20 || entityState.type == 0x30) {
+            var attackType = entityState.type == 0x20 ? "physical" : "spell/magic";
+            // EntityStateData with type 0x20/0x30 contains attack1, attack2, attack3
             if (entityState.attack1) {
                 var oldValue = entityState.attack1.get();
                 var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                 entityState.attack1.set(newValue);
-                console.log("  Scaled attack1: " + oldValue + " -> " + newValue);
+                console.log("  Scaled " + attackType + " attack1: " + oldValue + " -> " + newValue);
             }
             // Same for attack2 and attack3...
         }
@@ -39,8 +44,10 @@ if (creature.entityStates && creature.entityStates.length > 0) {
 **Key Changes:**
 - Fixed property names: `attack1/2/3` (not `weaponAttack1/2/3`)
 - Added bounds checking for UInt16: `Math.min(65535, ...)`
-- Added detailed logging to verify scaling
+- **Added support for type 0x30 (spell/magic attacks)**
+- Added attack type labeling in logs (physical vs spell/magic)
 - Scales by `creatureAttributeFactor` (based on difficulty setting)
+- Modified `data_model.js` to parse attack values for type 0x30 entities
 
 ### 2. Added Test Preset (`params/test-apocrypha-weak.json`)
 
@@ -81,15 +88,24 @@ if (params.testApocryphaInSolitaryRegion) {
 
 ### EntityStateData Structure
 
-- **Type 0x20** = Attack entity state
+Shadow Tower uses two types of attack entity states:
+
+- **Type 0x20** = Physical attack entity state
+- **Type 0x30** = Spell/magic attack entity state
+
+**Both types use the same attack value offsets:**
 - **attack1** (UInt16 @ offset 0x1a): Primary attack damage
-- **attack2** (UInt16 @ offset 0x1c): Secondary attack damage
+- **attack2** (UInt16 @ offset 0x1c): Secondary attack damage  
 - **attack3** (UInt16 @ offset 0x1e): Tertiary attack damage
 
-These values control the damage dealt by:
-- Projectile attacks (Apocrypha's fireballs, Imp's magic, etc.)
-- Magic attacks
-- Special attack moves
+**Type 0x20 (Physical) controls:**
+- Melee attacks
+- Physical projectiles (thrown objects, etc.)
+
+**Type 0x30 (Spell/Magic) controls:**
+- Magic projectile attacks (Apocrypha's fireballs, Imp's magic shots)
+- Spell-based attacks (Dark Spirits, Death Mage)
+- Breath weapons and energy attacks
 
 ### Difficulty Scaling
 
@@ -132,8 +148,9 @@ npm run mod "path/to/st.bin" "./params/test-apocrypha-weak.json"
    TEST: Placing Apocrypha in Solitary Region
    TEST: Replacing 00_dark_spider with 08_apocrypha
    DEBUG - Creature 08_apocrypha
-     Scaled attack1: 100 -> 10 (factor: 0.1)
-     Scaled attack2: 150 -> 15 (factor: 0.1)
+     Scaled physical attack1: 100 -> 10 (factor: 0.1)
+     Scaled spell/magic attack1: 500 -> 50 (factor: 0.1)
+     Scaled spell/magic attack2: 300 -> 30 (factor: 0.1)
    ```
 
 2. **In-Game**:
@@ -195,9 +212,10 @@ To verify the fix is working:
 
 ## Files Modified
 
-- `randomize.js` (lines 486-535, 1612-1640)
+- `randomize.js` (lines 486-538, 1612-1640) - Extended to handle type 0x30
+- `data_model.js` (lines 1088-1101) - Parse attack values for type 0x30
 - `params/test-apocrypha-weak.json` (new file)
-- `PROJECTILE_ATTACK_FIX.md` (this file)
+- `PROJECTILE_ATTACK_FIX.md` (this file - updated to document type 0x30 fix)
 
 ## Related Issues
 
