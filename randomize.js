@@ -1224,6 +1224,11 @@ function randomize(paramsFile, stDir) {
     // This function randomly removes tiles (wall geometry) from areas
     // based on the removeTilesPercent parameter.
     // 
+    // IMPORTANT FIX: Fixed tile.blank() bug in data_model.js
+    // - Previously set this.x.set(0xff) which sets POSITION x to 0xFF
+    // - Now correctly sets this.tileX.set(0xff) which marks tile as blank
+    // - isBlank check looks at tileX (byte 0x08), not position x (byte 0x00)
+    //
     // STRATEGY: Path-based wall removal
     // 1. Identify walkable paths (floor tiles at ground level)
     // 2. Find tiles adjacent to paths (walls along corridors)
@@ -1231,6 +1236,11 @@ function randomize(paramsFile, stDir) {
     // 4. Never remove the path tiles themselves
     //
     // This creates a "crumbling walls" effect without breaking floor continuity.
+    //
+    // TILE CLASSIFICATION (based on tile dump analysis):
+    // - Floor tiles: posY <= 256 (ground level walkable surfaces)
+    // - Wall/Decoration tiles: posY > 256 (elevated structures)
+    // - See TILE_CLASSIFICATION_ANALYSIS.md for detailed analysis
     //
     // Parameters:
     //   - removeTilesPercent: 0-100, percentage of wall tiles to remove

@@ -1565,7 +1565,7 @@
 
       blank() {
         binSet(this.bin, this.offset_in_file, TILE_SIZE, 0x00);
-        this.x.set(0xff);
+        this.tileX.set(0xff);  // Mark as blank by setting tileX to 0xFF (not position x)
       }
     }
 
