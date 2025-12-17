@@ -1637,20 +1637,23 @@ function randomize(paramsFile, stDir) {
             
             if (darkSpider && apocrypha) {
                 console.log("TEST: Replacing " + darkSpider.name + " with " + apocrypha.name);
+                
                 setCreature(darkSpider, apocrypha, changeSet);
                 console.log("TEST: Apocrypha placed successfully. Attack scaling should apply based on difficulty=" + params.difficulty);
-                
+
                 // Issue #14: Remove all other spawns and items to check if magic attack issue is memory-related
                 console.log("\nTEST: Removing all other spawns and collectables from " + solitaryRegion.name);
                 
                 // Blank all spawns except the first one (which now has apocrypha)
                 var blankedSpawns = 0;
                 solitaryRegion.spawns.forEach((spawn, index) => {
-                    if (index !== 0 && !spawn.isBlank) {
+                    if (!spawn.isBlank && !spawn.isDoor && spawn.type.get()!=0) {
                         spawn.blank();
                         blankedSpawns++;
                     }
                 });
+
+
                 console.log("TEST: Blanked " + blankedSpawns + " spawns (keeping only apocrypha)");
                 
                 // Blank all collectables
