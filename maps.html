@@ -299,7 +299,7 @@ if (typeof neo4jGraphData !== 'undefined') {
                 }
             ],
             infoPanel: true,
-            minCollision: 60,
+            minCollision: 80,  // Increased from 60 to spread nodes apart more
             neo4jData: neo4jGraphData,
             nodeRadius: 25,
             zoomFit: true
@@ -368,6 +368,144 @@ if (typeof neo4jGraphData !== 'undefined') {
                 }
             });
         }, 500);
+        
+        // Fix overlapping arrows by curving bidirectional relationships
+        // Wait for graph to settle and apply curve to offset arrows
+        setTimeout(function() {
+            var svg = d3.select('#neo4jd3-container svg');
+            
+            // Get all relationships and nodes with their current positions
+            var relationships = neo4jGraphData.results[0].data[0].graph.relationships;
+            
+            // Build a map to identify bidirectional relationships
+            var linkPairs = new Map();
+            relationships.forEach(function(rel, idx) {
+                var key = rel.startNode + '-' + rel.endNode;
+                var reverseKey = rel.endNode + '-' + rel.startNode;
+                
+                if (!linkPairs.has(key)) {
+                    linkPairs.set(key, []);
+                }
+                linkPairs.get(key).push(idx);
+                
+                // Check if reverse exists
+                if (linkPairs.has(reverseKey)) {
+                    // Mark both as bidirectional
+                    rel.isBidirectional = true;
+                    var reverseIndices = linkPairs.get(reverseKey);
+                    reverseIndices.forEach(function(revIdx) {
+                        relationships[revIdx].isBidirectional = true;
+                    });
+                }
+            });
+            
+            // Get node elements to access their computed positions
+            var nodeElements = svg.selectAll('g.node');
+            var nodePositions = {};
+            nodeElements.each(function(d) {
+                if (d && d.id) {
+                    // Get the transform translate values
+                    var transform = d3.select(this).attr('transform');
+                    if (transform) {
+                        var match = transform.match(/translate\(([^,]+),([^)]+)\)/);
+                        if (match) {
+                            nodePositions[d.id] = {
+                                x: parseFloat(match[1]),
+                                y: parseFloat(match[2])
+                            };
+                        }
+                    }
+                }
+            });
+            
+            // Apply curved path and styling to bidirectional arrows
+            var relationshipElements = svg.selectAll('g.relationship');
+            
+            relationshipElements.each(function(d, i) {
+                var relElement = d3.select(this);
+                var relData = relationships[i];
+                
+                if (!relData || !relData.isBidirectional) return;
+                
+                // Get source and target node positions
+                var sourcePos = nodePositions[relData.startNode];
+                var targetPos = nodePositions[relData.endNode];
+                
+                if (!sourcePos || !targetPos) return;
+                
+                // Determine which arrow to curve (curve the one with higher startNode ID)
+                var shouldCurve = relData.startNode > relData.endNode;
+                
+                if (shouldCurve) {
+                    // Calculate curve offset - perpendicular to the line
+                    var dx = targetPos.x - sourcePos.x;
+                    var dy = targetPos.y - sourcePos.y;
+                    var dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist > 0) {
+                        // Perpendicular offset (20 pixels to the right of travel direction)
+                        var offsetDist = 20;
+                        var offsetX = -dy / dist * offsetDist;
+                        var offsetY = dx / dist * offsetDist;
+                        
+                        // Get existing paths
+                        var overlay = relElement.select('path.overlay');
+                        var outline = relElement.select('path.outline');
+                        
+                        // Create curved path using quadratic bezier
+                        // Control point is at midpoint with offset
+                        var midX = (sourcePos.x + targetPos.x) / 2 + offsetX;
+                        var midY = (sourcePos.y + targetPos.y) / 2 + offsetY;
+                        
+                        // Build new path data
+                        var nodeRadius = 25;
+                        var arrowSize = 4;
+                        
+                        // Start at source node edge
+                        var angle = Math.atan2(dy, dx);
+                        var startX = sourcePos.x + Math.cos(angle) * nodeRadius;
+                        var startY = sourcePos.y + Math.sin(angle) * nodeRadius;
+                        
+                        // End at target node edge (leaving room for arrow)
+                        var endX = targetPos.x - Math.cos(angle) * (nodeRadius + arrowSize);
+                        var endY = targetPos.y - Math.sin(angle) * (nodeRadius + arrowSize);
+                        
+                        // Create curved path
+                        var pathData = 'M ' + startX + ' ' + startY + 
+                                      ' Q ' + midX + ' ' + midY + 
+                                      ' ' + endX + ' ' + endY;
+                        
+                        // Apply curved path - use stroke only, no fill
+                        overlay.attr('d', pathData)
+                               .attr('fill', 'none')
+                               .style('stroke', '#a5abb6')
+                               .style('stroke-width', '2px')
+                               .style('stroke-dasharray', '5,3');
+                        
+                        outline.attr('d', pathData)
+                               .attr('fill', 'none')
+                               .style('stroke', '#fff')
+                               .style('stroke-width', '4px')
+                               .style('stroke-dasharray', '5,3');
+                        
+                        // Reposition text to curved path midpoint
+                        var textElement = relElement.select('text');
+                        if (!textElement.empty()) {
+                            // Position relative to group's transform (which is at source)
+                            textElement.attr('x', midX - sourcePos.x)
+                                      .attr('y', midY - sourcePos.y)
+                                      .attr('dy', '-5')
+                                      .style('fill', '#666');
+                        }
+                    }
+                } else {
+                    // This is the straight arrow - just make it slightly more visible
+                    var overlay = relElement.select('path.overlay');
+                    overlay.style('stroke-width', '2.5px');
+                }
+            });
+            
+        }, 1500);  // Wait for simulation to settle completely
     } catch (err) {
         console.error('Error creating Neo4jd3:', err);
         document.getElementById('neo4jd3-container').innerHTML = 
