@@ -6,5 +6,6 @@
   "randomizeCreatures": false,
   "randomizeCollectablesAndDrops": false,
   "removeTilesPercent": 50,
-  "seed": "1"
+  "seed": "1",
+  "_comment": "Removes 50% of wall/decoration tiles while preserving floors. Tiles with posY > 256 (elevated structures) are removed. Floor tiles (posY <= 256) are protected. Creates an 'open walls' aesthetic. Bug fix: tile.blank() now correctly sets tileX to 0xFF."
 }
