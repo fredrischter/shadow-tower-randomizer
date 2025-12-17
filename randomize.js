@@ -1637,23 +1637,20 @@ function randomize(paramsFile, stDir) {
             
             if (darkSpider && apocrypha) {
                 console.log("TEST: Replacing " + darkSpider.name + " with " + apocrypha.name);
-                
                 setCreature(darkSpider, apocrypha, changeSet);
                 console.log("TEST: Apocrypha placed successfully. Attack scaling should apply based on difficulty=" + params.difficulty);
-
+                
                 // Issue #14: Remove all other spawns and items to check if magic attack issue is memory-related
                 console.log("\nTEST: Removing all other spawns and collectables from " + solitaryRegion.name);
                 
                 // Blank all spawns except the first one (which now has apocrypha)
                 var blankedSpawns = 0;
                 solitaryRegion.spawns.forEach((spawn, index) => {
-                    if (!spawn.isBlank && !spawn.isDoor && spawn.type.get()!=0) {
+                    if (index !== 0 && !spawn.isBlank) {
                         spawn.blank();
                         blankedSpawns++;
                     }
                 });
-
-
                 console.log("TEST: Blanked " + blankedSpawns + " spawns (keeping only apocrypha)");
                 
                 // Blank all collectables
@@ -2203,6 +2200,90 @@ function randomize(paramsFile, stDir) {
             });
         }
     });
+    
+    // Task: Merge bidirectional relationships to avoid overlapping arrows
+    // Create a map to track bidirectional pairs
+    var relationshipMap = new Map();
+    var mergedRelationships = [];
+    var processedPairs = new Set();
+    
+    neo4jData.relationships.forEach(function(rel) {
+        var key = rel.startNode + '-' + rel.endNode;
+        var reverseKey = rel.endNode + '-' + rel.startNode;
+        
+        // Check if we've already processed this as part of a bidirectional pair
+        if (processedPairs.has(key)) {
+            return; // Skip, already handled
+        }
+        
+        // Look for the reverse relationship
+        var reverseRel = neo4jData.relationships.find(function(r) {
+            return r.startNode === rel.endNode && r.endNode === rel.startNode;
+        });
+        
+        if (reverseRel) {
+            // Bidirectional relationship found - merge into one with both directions
+            // Use the relationship with lower startNode for consistency
+            var primaryRel = rel.startNode < rel.endNode ? rel : reverseRel;
+            var secondaryRel = rel.startNode < rel.endNode ? reverseRel : rel;
+            
+            // Mark as bidirectional and store both relationship types
+            mergedRelationships.push({
+                id: primaryRel.id,
+                type: primaryRel.type,
+                reverseType: secondaryRel.type,
+                startNode: primaryRel.startNode,
+                endNode: primaryRel.endNode,
+                properties: primaryRel.properties,
+                isBidirectional: true,
+                linknum: 1
+            });
+            
+            // Mark both directions as processed
+            processedPairs.add(key);
+            processedPairs.add(reverseKey);
+        } else {
+            // Unidirectional relationship - keep as is
+            mergedRelationships.push({
+                id: rel.id,
+                type: rel.type,
+                startNode: rel.startNode,
+                endNode: rel.endNode,
+                properties: rel.properties,
+                isBidirectional: false,
+                linknum: 1
+            });
+            processedPairs.add(key);
+        }
+    });
+    
+    // Replace with merged relationships
+    neo4jData.relationships = mergedRelationships;
+    
+    // Sort relationships by source and target for consistent ordering
+    neo4jData.relationships.sort(function(a, b) {
+        if (a.startNode > b.startNode) return 1;
+        if (a.startNode < b.startNode) return -1;
+        if (a.endNode > b.endNode) return 1;
+        if (a.endNode < b.endNode) return -1;
+        return 0;
+    });
+    
+    // Assign linknum for multiple links between same nodes (rare but possible)
+    for (var r = 0; r < neo4jData.relationships.length; r++) {
+        if (r === 0) {
+            neo4jData.relationships[r].linknum = 1;
+        } else {
+            var prev = neo4jData.relationships[r - 1];
+            var curr = neo4jData.relationships[r];
+            if (curr.startNode === prev.startNode && curr.endNode === prev.endNode) {
+                // Multiple links between same nodes - increment linknum
+                neo4jData.relationships[r].linknum = prev.linknum + 1;
+            } else {
+                neo4jData.relationships[r].linknum = 1;
+            }
+        }
+    }
     
     // Save neo4j data as JSON for the visualization page
     // Task 7: Wrap in Neo4j query response format for neo4jd3 v0.0.5

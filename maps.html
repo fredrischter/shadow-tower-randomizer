@@ -368,6 +368,65 @@ if (typeof neo4jGraphData !== 'undefined') {
                 }
             });
         }, 500);
+        
+        // Task: Render bidirectional arrows with arrowheads on both ends
+        // Wait for graph to settle then add double-headed arrows for bidirectional relationships
+        setTimeout(function() {
+            var svg = d3.select('#neo4jd3-container svg');
+            
+            // Get all relationships
+            var relationships = neo4jGraphData.results[0].data[0].graph.relationships;
+            
+            // Define marker for reverse arrow (arrow on the start of the line)
+            svg.append('defs').append('marker')
+                .attr('id', 'arrowhead-reverse')
+                .attr('viewBox', '-10 -10 20 20')
+                .attr('refX', -5)
+                .attr('refY', 0)
+                .attr('markerWidth', 8)
+                .attr('markerHeight', 8)
+                .attr('orient', 'auto-start-reverse')
+                .append('path')
+                .attr('d', 'M 0,0 L -10,-5 L -10,5 Z')
+                .attr('fill', '#a5abb6');
+            
+            // Apply double-headed arrow styling to bidirectional relationships
+            var relationshipElements = svg.selectAll('g.relationship');
+            
+            relationshipElements.each(function(d, i) {
+                var relElement = d3.select(this);
+                var relData = relationships[i];
+                
+                if (!relData) return;
+                
+                if (relData.isBidirectional) {
+                    // This is a bidirectional relationship - add arrow on both ends
+                    var overlay = relElement.select('path.overlay');
+                    var outline = relElement.select('path.outline');
+                    
+                    // Add marker for reverse direction (start of line)
+                    overlay.attr('marker-start', 'url(#arrowhead-reverse)')
+                           .style('stroke-width', '2.5px')
+                           .style('stroke', '#a5abb6');
+                    
+                    // Update text label to show it's bidirectional
+                    var textElement = relElement.select('text');
+                    if (!textElement.empty() && relData.reverseType) {
+                        // Show both direction labels if they're different
+                        if (relData.type !== relData.reverseType) {
+                            textElement.text(relData.type + ' ↔ ' + relData.reverseType);
+                        } else {
+                            textElement.text(relData.type + ' ↔');
+                        }
+                    }
+                } else {
+                    // Unidirectional arrow - keep default appearance but make slightly more visible
+                    var overlay = relElement.select('path.overlay');
+                    overlay.style('stroke-width', '2px');
+                }
+            });
+            
+        }, 1500);  // Wait for simulation to settle completely
     } catch (err) {
         console.error('Error creating Neo4jd3:', err);
         document.getElementById('neo4jd3-container').innerHTML = 
