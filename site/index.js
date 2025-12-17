@@ -2,9 +2,18 @@
 $(document).ready(function() {
 
 	// Task #Mobile-Usability: Gallery toggle functionality
+	// Task #Mobile-Flickering-Fix: Updated to change icon text instead of CSS transform
 	$('#galleryToggle').on('click', function() {
 		$(this).toggleClass('active');
 		$('#galleryContent').toggleClass('active');
+		
+		// Change icon based on state
+		var icon = $(this).find('.gallery-toggle-icon');
+		if ($(this).hasClass('active')) {
+			icon.text('▲');
+		} else {
+			icon.text('▼');
+		}
 	});
 
 	$( "#buttonUpload" ).button({icon: "ui-icon-star"});
