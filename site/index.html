@@ -52,6 +52,13 @@
 			margin-bottom: 10px;
 			font-weight: bold;
 		}
+		
+		/* Task #Mobile-Layout: Grid layout for input sections on mobile */
+		.input-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
 
 		h2 {
 			color: #c9a961;
@@ -289,10 +296,11 @@
 		}
 
 		@media (max-width: 768px) {
-			/* Task #Mobile-Usability: Reduced h1 size to minimize initial scrolling */
+			/* Task #Mobile-Layout: Further reduced header size to minimize scrolling */
 			h1 {
-				font-size: 1.5em;
+				font-size: 1.2em;
 				letter-spacing: 1px;
+				margin-bottom: 5px;
 			}
 			
 			h2 {
@@ -307,25 +315,38 @@
 				padding: 10px;
 			}
 			
-			/* Task #Mobile-Usability: Reduced header padding to minimize vertical space */
+			/* Task #Mobile-Layout: Further reduced header padding */
 			header {
-				padding: 15px 10px;
-				margin-bottom: 15px;
+				padding: 10px;
+				margin-bottom: 10px;
 			}
 			
 			.main-content {
-				padding: 20px 15px;
+				padding: 15px 10px;
 			}
 			
 			.section {
-				padding: 15px;
+				padding: 12px;
+				margin-bottom: 10px;
+			}
+			
+			/* Task #Mobile-Layout: Enable grid for input sections */
+			.input-grid {
+				grid-template-columns: 1fr;
+				gap: 10px;
+			}
+			
+			/* Task #Mobile-Layout: Compact section labels */
+			.section label {
+				font-size: 0.9em;
+				margin-bottom: 5px;
 			}
 			
 			button, input[type="submit"] {
 				width: 100%;
-				padding: 15px 20px;
-				font-size: 1em;
-				margin-bottom: 10px;
+				padding: 12px 15px;
+				font-size: 0.95em;
+				margin-bottom: 5px;
 			}
 			
 			.ui-tabs .ui-tabs-nav li {
@@ -346,6 +367,12 @@
 				max-width: 100%;
 			}
 			
+			/* Task #Mobile-Layout: Smaller explanatory text */
+			.section p {
+				font-size: 0.8em;
+				margin-top: 5px;
+			}
+			
 			#dif-radioset label,
 			#purpose-radioset label,
 			#map-radioset label,
@@ -353,6 +380,14 @@
 			#creature-radioset label {
 				padding: 10px 8px !important;
 				font-size: 0.85em !important;
+			}
+		}
+		
+		@media (min-width: 769px) {
+			/* Task #Mobile-Layout: Desktop layout - 3 columns for input sections */
+			.input-grid {
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 20px;
 			}
 		}
 		
@@ -486,24 +521,27 @@
 		<div class="main-content">
 			<input type="file" id="file" style="display:none;" />
 
-			<div class="section">
-				<label><b>📁 Input File</b></label>
+			<!-- Task #Mobile-Layout: Grid container for input sections -->
+			<div class="input-grid">
+				<div class="section">
+					<label><b>📁 Input File</b></label>
 
-				<form id="formButtonUpload" enctype="multipart/form-data">
-					<input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
-					<button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
-				</form>
-			</div>
+					<form id="formButtonUpload" enctype="multipart/form-data">
+						<input type="file" id="buttonUploadFile" name="file" accept=".bin" required>
+						<button type="submit" id="buttonUpload" class="uploadButton" data-action="buttonUpload">Upload ISO</button>
+					</form>
+				</div>
 
-			<div class="section">
-				<label><b>🎲 Seed (Optional)</b></label>
-				<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed">
-				<p style="font-size: 0.9em; margin-top: 8px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
-			</div>
+				<div class="section">
+					<label><b>🎲 Seed (Optional)</b></label>
+					<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed">
+					<p style="font-size: 0.9em; margin-top: 8px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
+				</div>
 
-			<div class="section">
-				<label><b>💾 Output</b></label>
-				<button id="buttonDownload">Download Randomized ISO</button>
+				<div class="section">
+					<label><b>💾 Output</b></label>
+					<button id="buttonDownload">Download Randomized ISO</button>
+				</div>
 			</div>
 
 	<div id="tabs">
