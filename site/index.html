@@ -19,9 +19,43 @@
 			color: #d4c5b9;
 			min-height: 100vh;
 			line-height: 1.6;
+			position: relative;
 		}
 		
+		/* Background image slideshow */
 		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('images/SLUS-00863_2023-12-27_02-43-48-1.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 0.15;
+			pointer-events: none;
+			z-index: 0;
+			animation: backgroundFade 30s infinite;
+		}
+		
+		@keyframes backgroundFade {
+			0%, 20% { 
+				background-image: url('images/SLUS-00863_2023-12-27_02-43-48-1.png');
+			}
+			25%, 45% { 
+				background-image: url('images/SLUS-00863_2023-12-26_15-49-06-2.png');
+			}
+			50%, 70% { 
+				background-image: url('images/SLUS-00863_2023-12-27_04-58-06-1.png');
+			}
+			75%, 95% { 
+				background-image: url('images/SLUS-00863_2023-12-26_15-48-59-1.png');
+			}
+		}
+		
+		body::after {
 			content: '';
 			position: fixed;
 			top: 0;
@@ -32,27 +66,30 @@
 				radial-gradient(ellipse at top, rgba(139, 69, 19, 0.15), transparent),
 				radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.5), transparent);
 			pointer-events: none;
-			z-index: -1;
+			z-index: 1;
 		}
 
 		.container {
 			max-width: 1200px;
 			margin: 0 auto;
 			padding: 20px;
+			position: relative;
+			z-index: 2;
 		}
 
 		header {
 			text-align: center;
 			padding: 40px 20px;
-			background: rgba(0, 0, 0, 0.6);
+			background: rgba(0, 0, 0, 0.85);
 			border: 2px solid #8b4513;
 			border-radius: 10px;
 			margin-bottom: 30px;
-			box-shadow: 0 0 30px rgba(139, 69, 19, 0.3);
+			box-shadow: 0 0 30px rgba(139, 69, 19, 0.5), inset 0 0 50px rgba(139, 69, 19, 0.1);
+			backdrop-filter: blur(10px);
 		}
 
 		h1 {
-			font-size: 3em;
+			font-size: clamp(1.8em, 5vw, 3em);
 			color: #d4af37;
 			text-shadow: 
 				0 0 10px rgba(212, 175, 55, 0.5),
@@ -87,19 +124,27 @@
 		}
 
 		.main-content {
-			background: rgba(20, 10, 15, 0.85);
+			background: rgba(20, 10, 15, 0.92);
 			border: 2px solid #8b4513;
 			border-radius: 10px;
 			padding: 30px;
 			box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+			backdrop-filter: blur(5px);
 		}
 
 		.section {
-			background: rgba(0, 0, 0, 0.3);
+			background: rgba(0, 0, 0, 0.4);
 			border: 1px solid #5a3a2a;
-			border-radius: 5px;
+			border-radius: 8px;
 			padding: 20px;
 			margin-bottom: 20px;
+			backdrop-filter: blur(3px);
+			transition: all 0.3s ease;
+		}
+		
+		.section:hover {
+			border-color: #8b4513;
+			box-shadow: 0 0 15px rgba(139, 69, 19, 0.3);
 		}
 
 		button, input[type="submit"] {
@@ -142,24 +187,46 @@
 			background: rgba(30, 20, 15, 0.8);
 			color: #d4c5b9;
 			border: 2px solid #8b4513;
-			padding: 10px;
+			padding: 12px;
 			border-radius: 5px;
 			font-family: 'Garamond', 'Georgia', serif;
 			cursor: pointer;
+			width: 100%;
+			font-size: 1em;
 		}
 
 		input[type="file"]::file-selector-button {
 			background: linear-gradient(to bottom, #6b4423, #4a2f18);
 			color: #d4af37;
 			border: 1px solid #8b4513;
-			padding: 8px 15px;
+			padding: 10px 20px;
 			border-radius: 3px;
 			cursor: pointer;
 			margin-right: 10px;
+			font-size: 1em;
 		}
 
 		input[type="file"]::file-selector-button:hover {
 			background: linear-gradient(to bottom, #8b5a2d, #5a3618);
+		}
+		
+		input[type="text"] {
+			width: 100%;
+			max-width: 400px;
+			padding: 12px;
+			background: rgba(30, 20, 15, 0.8);
+			color: #d4c5b9;
+			border: 2px solid #8b4513;
+			border-radius: 5px;
+			font-family: 'Garamond', 'Georgia', serif;
+			font-size: 1em;
+			transition: all 0.3s ease;
+		}
+		
+		input[type="text"]:focus {
+			outline: none;
+			border-color: #d4af37;
+			box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
 		}
 
 		form {
@@ -214,12 +281,30 @@
 			background: rgba(80, 50, 30, 0.8);
 			border: 1px solid #8b4513;
 			color: #d4c5b9;
+			padding: 8px 12px;
+			min-height: 44px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		.ui-state-active, .ui-widget-content .ui-state-active {
 			background: rgba(139, 69, 19, 0.9);
 			border: 1px solid #d4af37;
 			color: #ffd700;
+		}
+		
+		/* Improve radio button groups for mobile */
+		.ui-buttonset {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+			margin: 10px 0;
+		}
+		
+		.ui-buttonset label {
+			flex: 1 1 auto;
+			min-width: 120px;
 		}
 
 		ul {
@@ -259,14 +344,149 @@
 		@media (max-width: 768px) {
 			h1 {
 				font-size: 2em;
+				letter-spacing: 1px;
+			}
+			
+			h2 {
+				font-size: 1.5em;
+			}
+			
+			h3 {
+				font-size: 1.2em;
 			}
 			
 			.container {
 				padding: 10px;
 			}
 			
+			header {
+				padding: 20px 15px;
+				margin-bottom: 20px;
+			}
+			
 			.main-content {
+				padding: 20px 15px;
+			}
+			
+			.section {
 				padding: 15px;
+			}
+			
+			button, input[type="submit"] {
+				width: 100%;
+				padding: 15px 20px;
+				font-size: 1em;
+				margin-bottom: 10px;
+			}
+			
+			.ui-tabs .ui-tabs-nav li {
+				margin: 0 2px;
+			}
+			
+			.ui-tabs .ui-tabs-nav li a {
+				padding: 8px 10px;
+				font-size: 0.9em;
+			}
+			
+			ul {
+				margin-left: 10px;
+				font-size: 0.9em !important;
+			}
+			
+			input[type="text"] {
+				max-width: 100%;
+			}
+			
+			#dif-radioset label,
+			#purpose-radioset label,
+			#map-radioset label,
+			#equip-radioset label,
+			#creature-radioset label {
+				padding: 10px 8px !important;
+				font-size: 0.85em !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			h1 {
+				font-size: 1.5em;
+			}
+			
+			.ui-tabs .ui-tabs-nav li a {
+				padding: 6px 5px;
+				font-size: 0.8em;
+			}
+		}
+		
+		/* Image gallery styles */
+		.gallery-section {
+			background: rgba(0, 0, 0, 0.85);
+			border: 2px solid #8b4513;
+			border-radius: 10px;
+			padding: 20px;
+			margin-bottom: 30px;
+			backdrop-filter: blur(10px);
+			position: relative;
+			z-index: 2;
+		}
+		
+		.gallery-title {
+			color: #d4af37;
+			font-size: 1.5em;
+			text-align: center;
+			margin-bottom: 15px;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+		}
+		
+		.gallery-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 15px;
+			margin-top: 10px;
+		}
+		
+		.gallery-item {
+			position: relative;
+			overflow: hidden;
+			border-radius: 8px;
+			border: 2px solid #5a3a2a;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			aspect-ratio: 4/3;
+		}
+		
+		.gallery-item:hover {
+			border-color: #d4af37;
+			box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+			transform: translateY(-5px);
+		}
+		
+		.gallery-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+		
+		.gallery-item:hover img {
+			transform: scale(1.1);
+		}
+		
+		@media (max-width: 768px) {
+			.gallery-container {
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: 10px;
+			}
+			
+			.gallery-section {
+				padding: 15px;
+				margin-bottom: 20px;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			.gallery-container {
+				grid-template-columns: repeat(2, 1fr);
 			}
 		}
 		
@@ -282,6 +502,28 @@
 			<h2 id='status'></h2>
 		</header>
 
+		<!-- Image Gallery Section -->
+		<div class="gallery-section">
+			<h3 class="gallery-title">🎮 Shadow Tower Screenshots</h3>
+			<div class="gallery-container">
+				<div class="gallery-item">
+					<img src="images/SLUS-00863_2023-12-27_02-43-48-1.png" alt="Shadow Tower Gameplay" loading="lazy">
+				</div>
+				<div class="gallery-item">
+					<img src="images/SLUS-00863_2023-12-26_15-49-06-2.png" alt="Shadow Tower Environment" loading="lazy">
+				</div>
+				<div class="gallery-item">
+					<img src="images/SLUS-00863_2023-12-27_04-58-06-1.png" alt="Shadow Tower Combat" loading="lazy">
+				</div>
+				<div class="gallery-item">
+					<img src="images/SLUS-00863_2023-12-26_15-48-59-1.png" alt="Shadow Tower Scene" loading="lazy">
+				</div>
+				<div class="gallery-item">
+					<img src="images/parasite.jpg" alt="Shadow Tower Enemy" loading="lazy">
+				</div>
+			</div>
+		</div>
+
 		<div class="main-content">
 			<input type="file" id="file" style="display:none;" />
 
@@ -296,8 +538,8 @@
 
 			<div class="section">
 				<label><b>🎲 Seed (Optional)</b></label>
-				<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed" style="width: 300px; padding: 10px; background: rgba(30, 20, 15, 0.8); color: #d4c5b9; border: 2px solid #8b4513; border-radius: 5px; font-family: 'Garamond', 'Georgia', serif;">
-				<p style="font-size: 0.8em; margin-top: 5px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
+				<input type="text" id="seedInput" name="seed" placeholder="Leave empty for random seed">
+				<p style="font-size: 0.9em; margin-top: 8px; color: #b8a080;">Enter a number to use a specific seed, or leave empty for a random one. Same seed = same randomization.</p>
 			</div>
 
 			<div class="section">
