@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadow Tower Map Visualization</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neo4jd3@0.4.30/dist/neo4jd3.min.css">
+    <link rel="stylesheet" href="libs/neo4jd3.min.css">
     <style type="text/css">
         body {
             font-family: Arial, sans-serif;
@@ -104,6 +104,27 @@
 <pre class="mermaid">
 graph TD
   shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]
+  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Middle r3 y0"| human_world_forgotten_region["Human World Forgotten Region"]
+  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Jump "| shadow_tower_part1c["Shadow Tower Part1 C"]
+  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r3 y0"| human_world_forgotten_region["Human World Forgotten Region"]
+  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r3 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
+  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Edge r0 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
+  shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Top left r1 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Edge r0 y0"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
+  shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Jump "| shadow_tower_part2b["Shadow Tower Part2 B"]
+  shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Bottom r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
+  shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Top Middle r3 y0"| fire_world_burning_cavern["Fire World Burning Cavern"]
+  shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Top right r3 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
+  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top right r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
+  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top left r0 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
+  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Bottom r2 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
+  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Jump "| shadow_tower_part3b["Shadow Tower Part3 B"]
+  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom middle r1 y0"| monster_world_false_eye_area["Monster World False Eye Area"]
+  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Top edge r0 y0"| monster_world_screeching_area["Monster World Screeching Area"]
+  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom end r2 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
+  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Jump "| shadow_tower_part3c["Shadow Tower Part3 C"]
+  shadow_tower_part3c["Shadow Tower Part3 C"] -->|"Fence r1 y0"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
   human_world_solitary_region["Human World Solitary Region"] -->|"Skeleton r0 y0"| human_world_hidden_region["Human World Hidden Region"]
   human_world_solitary_region["Human World Solitary Region"] -->|"Cemetery r0 y0"| human_world_hidden_region["Human World Hidden Region"]
   human_world_solitary_region["Human World Solitary Region"] -->|"Grave r2 y-17"| human_world_cursed_region["Human World Cursed Region"]
@@ -113,88 +134,67 @@ graph TD
   human_world_hidden_region["Human World Hidden Region"] -->|"Totem r0 y3"| human_world_forgotten_region["Human World Forgotten Region"]
   human_world_cursed_region["Human World Cursed Region"] -->|"Entrance r2 y0"| human_world_solitary_region["Human World Solitary Region"]
   human_world_cursed_region["Human World Cursed Region"] -->|"Guardian side r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
-  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]
-  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Middle r3 y0"| human_world_forgotten_region["Human World Forgotten Region"]
-  shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Jump "| shadow_tower_part1c["Shadow Tower Part1 C"]
   human_world_forgotten_region["Human World Forgotten Region"] -->|"Exit r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
   human_world_forgotten_region["Human World Forgotten Region"] -->|"Jump down r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   human_world_forgotten_region["Human World Forgotten Region"] -->|"Totem r0 y3"| human_world_hidden_region["Human World Hidden Region"]
   human_world_forgotten_region["Human World Forgotten Region"] -->|"Drop in r0 y3"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
-  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r3 y0"| human_world_forgotten_region["Human World Forgotten Region"]
-  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r3 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
-  shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Edge r0 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
   earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Entrance r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
-  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Poison r0 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
-  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Rock guy r2 y0"| earth_world_quaking_cavern["Earth World Quaking Cavern"]
-  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Entrance r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Entrance r0 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
   earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Exit r3 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
   earth_world_quaking_cavern["Earth World Quaking Cavern"] -->|"Entrance r2 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
+  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Poison r0 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
+  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Rock guy r2 y0"| earth_world_quaking_cavern["Earth World Quaking Cavern"]
+  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Entrance r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Entrance r1 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Bridge r3 y0"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Exit r1 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Jump in r0 y3"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
   earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Totem r0 y1"| human_world_forgotten_region["Human World Forgotten Region"]
-  shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Top left r1 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
-  shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Edge r0 y0"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
-  shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Jump "| shadow_tower_part2b["Shadow Tower Part2 B"]
   earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"] -->|"Entrance r0 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
   earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"] -->|"Boss room r2 y0"| death_world_gate_of_the_dead["Death World Gate Of The Dead"]
-  shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Bottom r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
-  shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Top Middle r3 y0"| fire_world_burning_cavern["Fire World Burning Cavern"]
-  shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Top right r3 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
   fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Entrance r1 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
   fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Exit r1 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
   fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Entrance r1 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
   fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Platform r0 y1"| fire_world_molten_cavern["Fire World Molten Cavern"]
   fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Room r0 y0"| fire_world_ashen_cavern["Fire World Ashen Cavern"]
-  water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Entrance r3 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
-  water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Flush down r3 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
-  water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Totem r3 y3"| monster_world_screeching_area["Monster World Screeching Area"]
-  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top right r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
-  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Top left r0 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
-  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Bottom r2 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
-  shadow_tower_part3a["Shadow Tower Part3 A"] -->|"Jump "| shadow_tower_part3b["Shadow Tower Part3 B"]
   fire_world_molten_cavern["Fire World Molten Cavern"] -->|"Abraxus r0 y0"| fire_world_ashen_cavern["Fire World Ashen Cavern"]
   fire_world_molten_cavern["Fire World Molten Cavern"] -->|"Platform r0 y3"| fire_world_burning_cavern["Fire World Burning Cavern"]
   fire_world_ashen_cavern["Fire World Ashen Cavern"] -->|"Cerberus r0 y0"| fire_world_burning_cavern["Fire World Burning Cavern"]
   fire_world_ashen_cavern["Fire World Ashen Cavern"] -->|"Start r0 y2"| fire_world_molten_cavern["Fire World Molten Cavern"]
-  monster_world_screeching_area["Monster World Screeching Area"] -->|"Entrance r0 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
-  monster_world_screeching_area["Monster World Screeching Area"] -->|"Totem r1 y2"| water_world_impure_pool_area["Water World Impure Pool Area"]
-  monster_world_screeching_area["Monster World Screeching Area"] -->|"Necron r2 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
-  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom middle r1 y0"| monster_world_false_eye_area["Monster World False Eye Area"]
-  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Top edge r0 y0"| monster_world_screeching_area["Monster World Screeching Area"]
-  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Bottom end r2 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
-  shadow_tower_part3b["Shadow Tower Part3 B"] -->|"Jump "| shadow_tower_part3c["Shadow Tower Part3 C"]
   water_world_sunken_river_area["Water World Sunken River Area"] -->|"Pool r1 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
   water_world_sunken_river_area["Water World Sunken River Area"] -->|"Entrance r0 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
-  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
-  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Entrance r2 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
-  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r0 y3"| water_world_white_rain_area["Water World White Rain Area"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Prison r1 y0"| death_world_undead_layer["Death World Undead Layer"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Entrance r2 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Lower totem r2 y2"| monster_world_screeching_area["Monster World Screeching Area"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 1 r1 y3"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 2 r1 y0"| death_world_gate_of_the_dead["Death World Gate Of The Dead"]
+  water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Entrance r3 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
+  water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Flush down r3 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
+  water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Totem r3 y3"| monster_world_screeching_area["Monster World Screeching Area"]
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r1 y0"| water_world_white_rain_area["Water World White Rain Area"]
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
   water_world_white_rain_area["Water World White Rain Area"] -->|"Entrance r3 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
   water_world_white_rain_area["Water World White Rain Area"] -->|"Totem r0 y3"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
+  monster_world_false_eye_area["Monster World False Eye Area"] -->|"Entrance r3 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
+  monster_world_false_eye_area["Monster World False Eye Area"] -->|"Totem r2 y2"| illusion_world_dream_domain["Illusion World Dream Domain"]
+  monster_world_screeching_area["Monster World Screeching Area"] -->|"Entrance r0 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
+  monster_world_screeching_area["Monster World Screeching Area"] -->|"Totem r1 y2"| water_world_impure_pool_area["Water World Impure Pool Area"]
+  monster_world_screeching_area["Monster World Screeching Area"] -->|"Necron r2 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
+  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Entrance r2 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
+  illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r0 y3"| water_world_white_rain_area["Water World White Rain Area"]
   illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r0 y-8"| shadow_tower_part1a["Shadow Tower Part1 A"]
   illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r3 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
-  death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Door r3 y-8"| shadow_tower_part3c["Shadow Tower Part3 C"]
-  death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Box room r3 y2"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
-  death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Entrance r0 y-8"| death_world_undead_layer["Death World Undead Layer"]
-  death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Totem r2 y3"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Connection r0 y2"| illusion_world_worship_domain["Illusion World Worship Domain"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Exit r2 y0"| illusion_world_dream_domain["Illusion World Dream Domain"]
   illusion_world_worship_domain["Illusion World Worship Domain"] -->|"To Boss r0 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
   illusion_world_dream_domain["Illusion World Dream Domain"] -->|"Totem r2 y0"| monster_world_false_eye_area["Monster World False Eye Area"]
   illusion_world_dream_domain["Illusion World Dream Domain"] -->|"Entrance r2 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
-  monster_world_false_eye_area["Monster World False Eye Area"] -->|"Entrance r3 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
-  monster_world_false_eye_area["Monster World False Eye Area"] -->|"Totem r2 y2"| illusion_world_dream_domain["Illusion World Dream Domain"]
-  shadow_tower_part3c["Shadow Tower Part3 C"] -->|"Fence r1 y0"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
+  death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Door r3 y-8"| shadow_tower_part3c["Shadow Tower Part3 C"]
+  death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Box room r3 y2"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
+  death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Entrance r0 y-8"| death_world_undead_layer["Death World Undead Layer"]
+  death_world_gate_of_the_dead["Death World Gate Of The Dead"] -->|"Totem r2 y3"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Prison r1 y0"| death_world_undead_layer["Death World Undead Layer"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Entrance r2 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Lower totem r2 y2"| monster_world_screeching_area["Monster World Screeching Area"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 1 r1 y3"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 2 r1 y0"| death_world_gate_of_the_dead["Death World Gate Of The Dead"]
   death_world_undead_layer["Death World Undead Layer"] -->|"King's room r0 y0"| death_world_gate_of_the_dead["Death World Gate Of The Dead"]
   death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
 
@@ -215,7 +215,7 @@ graph TD
 
 <h2>Human World</h2>
 <h3>human_world_solitary_region</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;13</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;15</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;80%&nbsp;item_47_cap</span>
@@ -238,7 +238,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x35&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">a&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x35&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#ff8080">b&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x35&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">c&nbsp;&nbsp;09_demon_bat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;137</span>
 <span style="background:#ffff00">&nbsp;&nbsp;15%&nbsp;item_2_deadly_short_sword</span>
@@ -267,11 +267,11 @@ graph TD
 <br><span style="background:#30f030">5&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">7&nbsp;item_136_soul_pod_5_sp</span>
 <br><span style="background:#30f030">8&nbsp;item_10a_cune</span>
-<br><span style="background:#30f030">9&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">9&nbsp;item_10c_torch</span>
 <br>
 <img src="maps/human_world_solitary_region.png"/><br>
 <h3>human_world_hidden_region</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;14</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;13</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_11e_anti_venom</span>
@@ -301,7 +301,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_3_long_sword</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_10c_torch</span>
 <br><span style="background:#ff8080">d&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_10c_torch</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">e&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#ff8080">f&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;156</span>
@@ -322,11 +322,11 @@ graph TD
 <br><span style="background:#30f030">3&nbsp;item_7e_metal_glove</span>
 <br><span style="background:#30f030">4&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">5&nbsp;item_a6_large_shield</span>
-<br><span style="background:#30f030">6&nbsp;item_10c_torch</span>
+<br><span style="background:#30f030">6&nbsp;item_137_soul_pod_53_sp</span>
 <br><span style="background:#30f030">7&nbsp;item_136_soul_pod_5_sp</span>
 <br><span style="background:#30f030">8&nbsp;item_136_soul_pod_5_sp</span>
 <br><span style="background:#30f030">9&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#30f030">a&nbsp;item_11c_healing_potion</span>
+<br><span style="background:#30f030">a&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#30f030">b&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#30f030">c&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">d&nbsp;item_11c_healing_potion</span>
@@ -358,16 +358,16 @@ graph TD
 <br><span style="background:#ff8080">a&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#ff8080">b&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_11f_anti_paralytic</span>
 <br><span style="background:#ff8080">c&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_124_poison_vaccine</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11f_anti_paralytic</span>
 <br><span style="background:#ff8080">d&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;10%&nbsp;item_4a_crown_of_composure</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#ff8080">e&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_a4_small_shield</span>
 <br><span style="background:#ff8080">f&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_126_bottle_of_light</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#ff8080">10&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">11&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_90_steel_boots</span>
@@ -395,13 +395,13 @@ graph TD
 <br>
 <img src="maps/human_world_forgotten_region.png"/><br>
 <h3>human_world_cursed_region</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;15</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;16</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;70%&nbsp;item_a2_buckler</span>
 <br><span style="background:#ff8080">1&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">2&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x35&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#ff8080">3&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x35&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_8d_leather_boots</span>
 <br><span style="background:#ff8080">4&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
@@ -414,7 +414,7 @@ graph TD
 <br><span style="background:#ff8080">7&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x35&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">8&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x35&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_12e_dorados_ashes</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_5f_magical_leather_armor</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_5e_leather_armor</span>
@@ -429,7 +429,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_48_crown</span>
 <span style="background:#ffff00">&nbsp;&nbsp;80%&nbsp;item_47_cap</span>
 <br><span style="background:#ff8080">f&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x80&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_10e_sacred_feather</span>
 <br><span style="background:#ff8080">10&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x10&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_10e_sacred_feather</span>
 <br><span style="background:#ff8080">21&nbsp;0a_guardian_a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;251</span>
@@ -451,7 +451,7 @@ graph TD
 
 <h2>Earth World</h2>
 <h3>earth_world_rotting_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;15</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;16</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
@@ -503,7 +503,7 @@ graph TD
 <br><span style="background:#ff8080">1b&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x60&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;80%&nbsp;item_49_crown_of_resist</span>
 <br><span style="background:#ff8080">1c&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11d_magic_potion</span>
 <br><span style="background:#ff8080">1d&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_120_divine_symbol</span>
 <br><span style="background:#ff8080">1e&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x30&nbsp;score&nbsp;156</span>
@@ -546,7 +546,7 @@ graph TD
 <br><span style="background:#ff8080">b&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;70%&nbsp;item_5f_magical_leather_armor</span>
 <br><span style="background:#ff8080">c&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x60&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_10c_torch</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">d&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;40%&nbsp;item_ec_bracelet_of_recovery</span>
 <br><span style="background:#ff8080">e&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
@@ -807,7 +807,7 @@ graph TD
 <br>
 <img src="maps/earth_world_false_pit_cavern.png"/><br>
 <h3>earth_world_hostile_rock_cavern</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;13</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;12</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;159</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_11f_anti_paralytic</span>
@@ -829,9 +829,9 @@ graph TD
 <br><span style="background:#ff8080">8&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_11e_anti_venom</span>
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#ff8080">a&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_126_bottle_of_light</span>
 <br><span style="background:#ff8080">21&nbsp;04_dread_knight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;782</span>
 <span style="background:#ffff00">&nbsp;&nbsp;&nbsp;0%&nbsp;item_8_silent_sword</span>
 <span style="background:#ffff00">&nbsp;&nbsp;&nbsp;0%&nbsp;item_2c_deadly_great_sword</span>
@@ -841,7 +841,7 @@ graph TD
 <br><span style="background:#30f030">0&nbsp;item_9a_leg_guard</span>
 <br><span style="background:#30f030">1&nbsp;item_d7_ring_of_poison</span>
 <br><span style="background:#30f030">2&nbsp;item_67_plate_mail_of_curing</span>
-<br><span style="background:#30f030">3&nbsp;item_128_spirit_book</span>
+<br><span style="background:#30f030">3&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">4&nbsp;item_136_soul_pod_5_sp</span>
 <br>
 <img src="maps/earth_world_hostile_rock_cavern.png"/><br>
@@ -1161,14 +1161,14 @@ graph TD
 <br>
 <img src="maps/water_world_impure_pool_area.png"/><br>
 <h3>water_world_sunken_river_area</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;14</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;12</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_114_floodgate_key</span>
 <br><span style="background:#ff8080">1&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%&nbsp;0x50&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_122_evil_eye</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">2&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%&nbsp;0x50&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11d_magic_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">3&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_1f_frosty_bastard_sword</span>
 <br><span style="background:#ff8080">4&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x70&nbsp;score&nbsp;156</span>
@@ -1209,7 +1209,7 @@ graph TD
 <br>
 <img src="maps/water_world_sunken_river_area.png"/><br>
 <h3>water_world_white_rain_area</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;12</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;11</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;162</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;60%&nbsp;item_3b_giant_axe</span>
@@ -1221,9 +1221,9 @@ graph TD
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#ff8080">4&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">5&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#ff8080">6&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_10e_sacred_feather</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">7&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x60&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_bc_gothic_shield_of_resist</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_a8_harden_large_shield</span>
@@ -1232,7 +1232,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_6b_frosty_plate_mail</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25%&nbsp;0x90&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_137_soul_pod_53_sp</span>
 <br><span style="background:#ff8080">20&nbsp;05_magi_magus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x10&nbsp;score&nbsp;1311</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_d_shadow_wolf</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_24_dark_sword</span>
@@ -1448,7 +1448,7 @@ graph TD
 <span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;16</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_127_acid_vaccine</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11d_magic_potion</span>
 <br><span style="background:#ff8080">1&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_127_acid_vaccine</span>
 <br><span style="background:#ff8080">2&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x30&nbsp;score&nbsp;156</span>
@@ -1465,7 +1465,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_120_divine_symbol</span>
 <br><span style="background:#ff8080">7&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">8&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50%&nbsp;0x40&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_120_divine_symbol</span>
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_10a_cune</span>
 <br><span style="background:#ff8080">a&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
@@ -1590,7 +1590,7 @@ graph TD
 <br>
 <img src="maps/illusion_world_bewilderment_domain.png"/><br>
 <h3>illusion_world_worship_domain</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;15</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;13</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;259</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">1&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
@@ -1625,9 +1625,9 @@ graph TD
 <br><span style="background:#ff8080">f&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_cc_priest_ring_of_frost</span>
 <br><span style="background:#ff8080">10&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_137_soul_pod_53_sp</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">11&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_126_bottle_of_light</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">12&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_102_mind_amulet</span>
 <span style="background:#ffff00">&nbsp;&nbsp;40%&nbsp;item_105_amulet_of_balance</span>
@@ -1653,7 +1653,7 @@ graph TD
 <br>
 <img src="maps/illusion_world_worship_domain.png"/><br>
 <h3>illusion_world_dream_domain</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;6</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;5</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;161</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_f0_guardian_bracelet</span>
@@ -1671,7 +1671,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_59_mystic_great_helm</span>
 <br><span style="background:#808080">&nbsp;3&nbsp;exit-portal&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;13&nbsp;,15&nbsp;,13)</span>
 <br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;illusion_world_bewilderment_domain&nbsp;pos(&nbsp;&nbsp;2&nbsp;,-1&nbsp;&nbsp;,2)</span>
-<br><span style="background:#30f030">0&nbsp;item_11f_anti_paralytic</span>
+<br><span style="background:#30f030">0&nbsp;item_137_soul_pod_53_sp</span>
 <br><span style="background:#30f030">1&nbsp;item_139_soul_pod_14_sp</span>
 <br><span style="background:#30f030">2&nbsp;item_138_soul_pod_29_sp</span>
 <br>
@@ -1740,14 +1740,14 @@ graph TD
 <br>
 <img src="maps/death_world_dark_castle_layer.png"/><br>
 <h3>death_world_gate_of_the_dead</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;14</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;15</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;2238</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_df_ring_of_desire</span>
 <br><span style="background:#ff8080">1&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_e0_ring_of_ice</span>
 <br><span style="background:#ff8080">2&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#ff8080">3&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_72_holy_plate_mail</span>
 <br><span style="background:#ff8080">4&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
@@ -1764,9 +1764,9 @@ graph TD
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;40%&nbsp;item_f0_guardian_bracelet</span>
 <br><span style="background:#ff8080">a&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_11c_healing_potion</span>
-<br><span style="background:#ff8080">b&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_10e_sacred_feather</span>
+<br><span style="background:#ff8080">b&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
+<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">c&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">d&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_128_spirit_book</span>
@@ -1792,15 +1792,15 @@ graph TD
 <br>
 <img src="maps/death_world_gate_of_the_dead.png"/><br>
 <h3>death_world_lingering_curse_layer</h3><br>
-<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;14</span>
+<span style="background:#f0f0f0">Item&nbsp;Memory&nbsp;used&nbsp;12</span>
 <br><span style="background:#f0f0f0">Creatures&nbsp;score&nbsp;1259</span>
 <br><span style="background:#ff8080">0&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">1&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#ff8080">2&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_126_bottle_of_light</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">3&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_126_bottle_of_light</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#ff8080">4&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_12e_dorados_ashes</span>
 <br><span style="background:#ff8080">5&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
@@ -1852,12 +1852,12 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;30%&nbsp;item_e2_black_ring</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_d3_dark_ring</span>
 <br><span style="background:#ff8080">23&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;100%&nbsp;item_122_evil_eye</span>
+<span style="background:#ffff00">&nbsp;100%&nbsp;item_11d_magic_potion</span>
 <br><span style="background:#ff8080">30&nbsp;00_panak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;1434</span>
 <br><span style="background:#ff8080">31&nbsp;04_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x20&nbsp;score&nbsp;192</span>
 <br><span style="background:#808080">&nbsp;1&nbsp;exit-door&nbsp;&nbsp;Door&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,6&nbsp;&nbsp;,0)</span>
 <br><span style="background:#808080">&nbsp;2&nbsp;exit-totem&nbsp;Box&nbsp;room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;25,-13&nbsp;,25)</span>
-<br><span style="background:#30f030">0&nbsp;item_137_soul_pod_53_sp</span>
+<br><span style="background:#30f030">0&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#30f030">1&nbsp;item_112_key_of_knowledge</span>
 <br><span style="background:#30f030">2&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">3&nbsp;item_d6_dark_sorcerer_ring</span>
@@ -1873,7 +1873,7 @@ graph TD
 <br><span style="background:#ff8080">2&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_120_divine_symbol</span>
 <br><span style="background:#ff8080">3&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x40&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_11e_anti_venom</span>
+<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_124_poison_vaccine</span>
 <br><span style="background:#ff8080">4&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">5&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_41_keenest_battle_axe</span>
@@ -1881,7 +1881,7 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;&nbsp;5%&nbsp;item_71_devil_plate_mail</span>
 <br><span style="background:#ff8080">7&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x15&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">8&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x15&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_137_soul_pod_53_sp</span>
+<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#ff8080">9&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x15&nbsp;score&nbsp;156</span>
 <br><span style="background:#ff8080">a&nbsp;&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x15&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_125_dust_of_rage</span>
@@ -1898,7 +1898,7 @@ graph TD
 <br><span style="background:#ff8080">10&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x15&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;15%&nbsp;item_e2_black_ring</span>
 <br><span style="background:#ff8080">11&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
-<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_124_poison_vaccine</span>
+<span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_10c_torch</span>
 <br><span style="background:#ff8080">12&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_10c_torch</span>
 <br><span style="background:#ff8080">13&nbsp;01_acid_slime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;156</span>
@@ -1973,1482 +1973,1528 @@ graph TD
 <!-- Neo4j Data -->
 <script>
 var neo4jGraphData = {
-  "nodes": [
-    {
-      "id": "0",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part1 A",
-        "areaId": "shadow_tower_part1a",
-        "score": 0,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "1",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Illusion World Bewilderment Domain",
-        "areaId": "illusion_world_bewilderment_domain",
-        "score": 13,
-        "world": "illusion"
-      }
-    },
-    {
-      "id": "2",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Human World Solitary Region",
-        "areaId": "human_world_solitary_region",
-        "score": 0,
-        "world": "human"
-      }
-    },
-    {
-      "id": "3",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Human World Hidden Region",
-        "areaId": "human_world_hidden_region",
-        "score": 2,
-        "world": "human"
-      }
-    },
-    {
-      "id": "4",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Human World Cursed Region",
-        "areaId": "human_world_cursed_region",
-        "score": 2,
-        "world": "human"
-      }
-    },
-    {
-      "id": "5",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Human World Forgotten Region",
-        "areaId": "human_world_forgotten_region",
-        "score": 3,
-        "world": "human"
-      }
-    },
-    {
-      "id": "6",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part1 B",
-        "areaId": "shadow_tower_part1b",
-        "score": 0,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "7",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part1 C",
-        "areaId": "shadow_tower_part1c",
-        "score": 0,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "8",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Earth World False Pit Cavern",
-        "areaId": "earth_world_false_pit_cavern",
-        "score": 7,
-        "world": "earth"
-      }
-    },
-    {
-      "id": "9",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Earth World Rotting Cavern",
-        "areaId": "earth_world_rotting_cavern",
-        "score": 5,
-        "world": "earth"
-      }
-    },
-    {
-      "id": "10",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Earth World Poisonous Cavern",
-        "areaId": "earth_world_poisonous_cavern",
-        "score": 5,
-        "world": "earth"
-      }
-    },
-    {
-      "id": "11",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Earth World Stone Cavern",
-        "areaId": "earth_world_stone_cavern",
-        "score": 6,
-        "world": "earth"
-      }
-    },
-    {
-      "id": "12",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Earth World Quaking Cavern",
-        "areaId": "earth_world_quaking_cavern",
-        "score": 6,
-        "world": "earth"
-      }
-    },
-    {
-      "id": "13",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Earth World Hostile Rock Cavern",
-        "areaId": "earth_world_hostile_rock_cavern",
-        "score": 8,
-        "world": "earth"
-      }
-    },
-    {
-      "id": "14",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part2 A",
-        "areaId": "shadow_tower_part2a",
-        "score": 9,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "15",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part2 B",
-        "areaId": "shadow_tower_part2b",
-        "score": 9,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "16",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Death World Gate Of The Dead",
-        "areaId": "death_world_gate_of_the_dead",
-        "score": 13,
-        "world": "death"
-      }
-    },
-    {
-      "id": "17",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Water World Impure Pool Area",
-        "areaId": "water_world_impure_pool_area",
-        "score": 10,
-        "world": "water"
-      }
-    },
-    {
-      "id": "18",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Fire World Burning Cavern",
-        "areaId": "fire_world_burning_cavern",
-        "score": 10,
-        "world": "fire"
-      }
-    },
-    {
-      "id": "19",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Fire World Phoenix Cave",
-        "areaId": "fire_world_phoenix_cave",
-        "score": 9,
-        "world": "fire"
-      }
-    },
-    {
-      "id": "20",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Fire World Molten Cavern",
-        "areaId": "fire_world_molten_cavern",
-        "score": 11,
-        "world": "fire"
-      }
-    },
-    {
-      "id": "21",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Fire World Ashen Cavern",
-        "areaId": "fire_world_ashen_cavern",
-        "score": 11,
-        "world": "fire"
-      }
-    },
-    {
-      "id": "22",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part3 A",
-        "areaId": "shadow_tower_part3a",
-        "score": 18,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "23",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Monster World Screeching Area",
-        "areaId": "monster_world_screeching_area",
-        "score": 11,
-        "world": "monster"
-      }
-    },
-    {
-      "id": "24",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Water World Sunken River Area",
-        "areaId": "water_world_sunken_river_area",
-        "score": 12,
-        "world": "water"
-      }
-    },
-    {
-      "id": "25",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Illusion World Gloomy Domain",
-        "areaId": "illusion_world_gloomy_domain",
-        "score": 12,
-        "world": "illusion"
-      }
-    },
-    {
-      "id": "26",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part3 B",
-        "areaId": "shadow_tower_part3b",
-        "score": 18,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "27",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Death World Dark Castle Layer",
-        "areaId": "death_world_dark_castle_layer",
-        "score": 12,
-        "world": "death"
-      }
-    },
-    {
-      "id": "28",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Monster World False Eye Area",
-        "areaId": "monster_world_false_eye_area",
-        "score": 16,
-        "world": "monster"
-      }
-    },
-    {
-      "id": "29",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Shadow Tower Part3 C",
-        "areaId": "shadow_tower_part3c",
-        "score": 18,
-        "world": "shadow"
-      }
-    },
-    {
-      "id": "30",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Water World Watery Labyrinth Area",
-        "areaId": "water_world_watery_labyrinth_area",
-        "score": 13,
-        "world": "water"
-      }
-    },
-    {
-      "id": "31",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Water World White Rain Area",
-        "areaId": "water_world_white_rain_area",
-        "score": 13,
-        "world": "water"
-      }
-    },
-    {
-      "id": "32",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Death World Undead Layer",
-        "areaId": "death_world_undead_layer",
-        "score": 19,
-        "world": "death"
-      }
-    },
-    {
-      "id": "33",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Death World Lingering Curse Layer",
-        "areaId": "death_world_lingering_curse_layer",
-        "score": 13,
-        "world": "death"
-      }
-    },
-    {
-      "id": "34",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Illusion World Worship Domain",
-        "areaId": "illusion_world_worship_domain",
-        "score": 0,
-        "world": "illusion"
-      }
-    },
-    {
-      "id": "35",
-      "labels": [
-        "Area"
-      ],
-      "properties": {
-        "name": "Illusion World Dream Domain",
-        "areaId": "illusion_world_dream_domain",
-        "score": 15,
-        "world": "illusion"
-      }
-    }
-  ],
-  "relationships": [
-    {
-      "id": "0",
-      "type": "EXIT",
-      "startNode": "0",
-      "endNode": "1",
-      "properties": {
-        "exitId": "0",
-        "exitName": "Tower Top",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "1",
-      "type": "EXIT",
-      "startNode": "2",
-      "endNode": "3",
-      "properties": {
-        "exitId": "31",
-        "exitName": "Skeleton",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "2",
-      "type": "EXIT",
-      "startNode": "2",
-      "endNode": "3",
-      "properties": {
-        "exitId": "34",
-        "exitName": "Cemetery",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "3",
-      "type": "EXIT",
-      "startNode": "2",
-      "endNode": "4",
-      "properties": {
-        "exitId": "35",
-        "exitName": "Grave",
-        "details": "r2 y-17"
-      }
-    },
-    {
-      "id": "4",
-      "type": "EXIT",
-      "startNode": "2",
-      "endNode": "0",
-      "properties": {
-        "exitId": "38",
-        "exitName": "Church",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "5",
-      "type": "EXIT",
-      "startNode": "3",
-      "endNode": "2",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Jail",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "6",
-      "type": "EXIT",
-      "startNode": "3",
-      "endNode": "2",
-      "properties": {
-        "exitId": "13",
-        "exitName": "Corridor",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "7",
-      "type": "EXIT",
-      "startNode": "3",
-      "endNode": "5",
-      "properties": {
-        "exitId": "26",
-        "exitName": "Totem",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "8",
-      "type": "EXIT",
-      "startNode": "4",
-      "endNode": "2",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Entrance",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "9",
-      "type": "EXIT",
-      "startNode": "4",
-      "endNode": "6",
-      "properties": {
-        "exitId": "31",
-        "exitName": "Guardian side",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "10",
-      "type": "EXIT",
-      "startNode": "6",
-      "endNode": "4",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Edge",
-        "details": "r3 y8"
-      }
-    },
-    {
-      "id": "11",
-      "type": "EXIT",
-      "startNode": "6",
-      "endNode": "5",
-      "properties": {
-        "exitId": "8",
-        "exitName": "Middle",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "12",
-      "type": "JUMP",
-      "startNode": "6",
-      "endNode": "7",
-      "properties": {
-        "exitId": "jump",
-        "exitName": "Jump",
-        "details": ""
-      }
-    },
-    {
-      "id": "13",
-      "type": "EXIT",
-      "startNode": "5",
-      "endNode": "6",
-      "properties": {
-        "exitId": "34",
-        "exitName": "Exit",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "14",
-      "type": "EXIT",
-      "startNode": "5",
-      "endNode": "7",
-      "properties": {
-        "exitId": "37",
-        "exitName": "Jump down",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "15",
-      "type": "EXIT",
-      "startNode": "5",
-      "endNode": "3",
-      "properties": {
-        "exitId": "18",
-        "exitName": "Totem",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "16",
-      "type": "EXIT",
-      "startNode": "5",
-      "endNode": "8",
-      "properties": {
-        "exitId": "41",
-        "exitName": "Drop in",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "17",
-      "type": "EXIT",
-      "startNode": "7",
-      "endNode": "5",
-      "properties": {
-        "exitId": "5",
-        "exitName": "Top",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "18",
-      "type": "EXIT",
-      "startNode": "7",
-      "endNode": "9",
-      "properties": {
-        "exitId": "11",
-        "exitName": "Bottom Middle",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "19",
-      "type": "EXIT",
-      "startNode": "7",
-      "endNode": "10",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Bottom Edge",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "20",
-      "type": "EXIT",
-      "startNode": "9",
-      "endNode": "7",
-      "properties": {
-        "exitId": "13",
-        "exitName": "Entrance",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "21",
-      "type": "EXIT",
-      "startNode": "10",
-      "endNode": "11",
-      "properties": {
-        "exitId": "13",
-        "exitName": "Poison",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "22",
-      "type": "EXIT",
-      "startNode": "10",
-      "endNode": "12",
-      "properties": {
-        "exitId": "10",
-        "exitName": "Rock guy",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "23",
-      "type": "EXIT",
-      "startNode": "10",
-      "endNode": "7",
-      "properties": {
-        "exitId": "17",
-        "exitName": "Entrance",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "24",
-      "type": "EXIT",
-      "startNode": "11",
-      "endNode": "10",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Entrance",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "25",
-      "type": "EXIT",
-      "startNode": "11",
-      "endNode": "8",
-      "properties": {
-        "exitId": "7",
-        "exitName": "Exit",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "26",
-      "type": "EXIT",
-      "startNode": "12",
-      "endNode": "10",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Entrance",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "27",
-      "type": "EXIT",
-      "startNode": "8",
-      "endNode": "11",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Entrance",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "28",
-      "type": "EXIT",
-      "startNode": "8",
-      "endNode": "13",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Bridge",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "29",
-      "type": "EXIT",
-      "startNode": "8",
-      "endNode": "14",
-      "properties": {
-        "exitId": "11",
-        "exitName": "Exit",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "30",
-      "type": "EXIT",
-      "startNode": "8",
-      "endNode": "13",
-      "properties": {
-        "exitId": "19",
-        "exitName": "Jump in",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "31",
-      "type": "EXIT",
-      "startNode": "8",
-      "endNode": "5",
-      "properties": {
-        "exitId": "16",
-        "exitName": "Totem",
-        "details": "r0 y1"
-      }
-    },
-    {
-      "id": "32",
-      "type": "EXIT",
-      "startNode": "14",
-      "endNode": "1",
-      "properties": {
-        "exitId": "0",
-        "exitName": "Top left",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "33",
-      "type": "EXIT",
-      "startNode": "14",
-      "endNode": "13",
-      "properties": {
-        "exitId": "5",
-        "exitName": "Edge",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "34",
-      "type": "JUMP",
-      "startNode": "14",
-      "endNode": "15",
-      "properties": {
-        "exitId": "jump",
-        "exitName": "Jump",
-        "details": ""
-      }
-    },
-    {
-      "id": "35",
-      "type": "EXIT",
-      "startNode": "13",
-      "endNode": "14",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Entrance",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "36",
-      "type": "EXIT",
-      "startNode": "13",
-      "endNode": "16",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Boss room",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "37",
-      "type": "EXIT",
-      "startNode": "15",
-      "endNode": "17",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Bottom",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "38",
-      "type": "EXIT",
-      "startNode": "15",
-      "endNode": "18",
-      "properties": {
-        "exitId": "7",
-        "exitName": "Top Middle",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "39",
-      "type": "EXIT",
-      "startNode": "15",
-      "endNode": "19",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Top right",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "40",
-      "type": "EXIT",
-      "startNode": "19",
-      "endNode": "14",
-      "properties": {
-        "exitId": "0",
-        "exitName": "Entrance",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "41",
-      "type": "EXIT",
-      "startNode": "19",
-      "endNode": "15",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Exit",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "42",
-      "type": "EXIT",
-      "startNode": "18",
-      "endNode": "15",
-      "properties": {
-        "exitId": "37",
-        "exitName": "Entrance",
-        "details": "r1 y-8"
-      }
-    },
-    {
-      "id": "43",
-      "type": "EXIT",
-      "startNode": "18",
-      "endNode": "20",
-      "properties": {
-        "exitId": "94",
-        "exitName": "Platform",
-        "details": "r0 y1"
-      }
-    },
-    {
-      "id": "44",
-      "type": "EXIT",
-      "startNode": "18",
-      "endNode": "21",
-      "properties": {
-        "exitId": "93",
-        "exitName": "Room",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "45",
-      "type": "EXIT",
-      "startNode": "17",
-      "endNode": "15",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Entrance",
-        "details": "r3 y-8"
-      }
-    },
-    {
-      "id": "46",
-      "type": "EXIT",
-      "startNode": "17",
-      "endNode": "22",
-      "properties": {
-        "exitId": "11",
-        "exitName": "Flush down",
-        "details": "r3 y-8"
-      }
-    },
-    {
-      "id": "47",
-      "type": "EXIT",
-      "startNode": "17",
-      "endNode": "23",
-      "properties": {
-        "exitId": "14",
-        "exitName": "Totem",
-        "details": "r3 y3"
-      }
-    },
-    {
-      "id": "48",
-      "type": "EXIT",
-      "startNode": "22",
-      "endNode": "17",
-      "properties": {
-        "exitId": "0",
-        "exitName": "Top right",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "49",
-      "type": "EXIT",
-      "startNode": "22",
-      "endNode": "24",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Top left",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "50",
-      "type": "EXIT",
-      "startNode": "22",
-      "endNode": "25",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Bottom",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "51",
-      "type": "JUMP",
-      "startNode": "22",
-      "endNode": "26",
-      "properties": {
-        "exitId": "jump",
-        "exitName": "Jump",
-        "details": ""
-      }
-    },
-    {
-      "id": "52",
-      "type": "EXIT",
-      "startNode": "20",
-      "endNode": "21",
-      "properties": {
-        "exitId": "27",
-        "exitName": "Abraxus",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "53",
-      "type": "EXIT",
-      "startNode": "20",
-      "endNode": "18",
-      "properties": {
-        "exitId": "19",
-        "exitName": "Platform",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "54",
-      "type": "EXIT",
-      "startNode": "21",
-      "endNode": "18",
-      "properties": {
-        "exitId": "17",
-        "exitName": "Cerberus",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "55",
-      "type": "EXIT",
-      "startNode": "21",
-      "endNode": "20",
-      "properties": {
-        "exitId": "6",
-        "exitName": "Start",
-        "details": "r0 y2"
-      }
-    },
-    {
-      "id": "56",
-      "type": "EXIT",
-      "startNode": "23",
-      "endNode": "26",
-      "properties": {
-        "exitId": "0",
-        "exitName": "Entrance",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "57",
-      "type": "EXIT",
-      "startNode": "23",
-      "endNode": "17",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Totem",
-        "details": "r1 y2"
-      }
-    },
-    {
-      "id": "58",
-      "type": "EXIT",
-      "startNode": "23",
-      "endNode": "27",
-      "properties": {
-        "exitId": "6",
-        "exitName": "Necron",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "59",
-      "type": "EXIT",
-      "startNode": "26",
-      "endNode": "28",
-      "properties": {
-        "exitId": "5",
-        "exitName": "Bottom middle",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "60",
-      "type": "EXIT",
-      "startNode": "26",
-      "endNode": "23",
-      "properties": {
-        "exitId": "7",
-        "exitName": "Top edge",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "61",
-      "type": "EXIT",
-      "startNode": "26",
-      "endNode": "27",
-      "properties": {
-        "exitId": "13",
-        "exitName": "Bottom end",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "62",
-      "type": "JUMP",
-      "startNode": "26",
-      "endNode": "29",
-      "properties": {
-        "exitId": "jump",
-        "exitName": "Jump",
-        "details": ""
-      }
-    },
-    {
-      "id": "63",
-      "type": "EXIT",
-      "startNode": "24",
-      "endNode": "30",
-      "properties": {
-        "exitId": "5",
-        "exitName": "Pool",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "64",
-      "type": "EXIT",
-      "startNode": "24",
-      "endNode": "22",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Entrance",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "65",
-      "type": "EXIT",
-      "startNode": "25",
-      "endNode": "1",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Ladder down",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "66",
-      "type": "EXIT",
-      "startNode": "25",
-      "endNode": "22",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Entrance",
-        "details": "r2 y-8"
-      }
-    },
-    {
-      "id": "67",
-      "type": "EXIT",
-      "startNode": "25",
-      "endNode": "31",
-      "properties": {
-        "exitId": "10",
-        "exitName": "Totem",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "68",
-      "type": "EXIT",
-      "startNode": "27",
-      "endNode": "32",
-      "properties": {
-        "exitId": "0",
-        "exitName": "Prison",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "69",
-      "type": "EXIT",
-      "startNode": "27",
-      "endNode": "26",
-      "properties": {
-        "exitId": "2",
-        "exitName": "Entrance",
-        "details": "r2 y-8"
-      }
-    },
-    {
-      "id": "70",
-      "type": "EXIT",
-      "startNode": "27",
-      "endNode": "23",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Lower totem",
-        "details": "r2 y2"
-      }
-    },
-    {
-      "id": "71",
-      "type": "EXIT",
-      "startNode": "27",
-      "endNode": "33",
-      "properties": {
-        "exitId": "7",
-        "exitName": "Upper totem 1",
-        "details": "r1 y3"
-      }
-    },
-    {
-      "id": "72",
-      "type": "EXIT",
-      "startNode": "27",
-      "endNode": "16",
-      "properties": {
-        "exitId": "10",
-        "exitName": "Upper totem 2",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "73",
-      "type": "EXIT",
-      "startNode": "30",
-      "endNode": "31",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Exit",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "74",
-      "type": "EXIT",
-      "startNode": "30",
-      "endNode": "24",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Entrance",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "75",
-      "type": "EXIT",
-      "startNode": "31",
-      "endNode": "30",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Entrance",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "76",
-      "type": "EXIT",
-      "startNode": "31",
-      "endNode": "25",
-      "properties": {
-        "exitId": "6",
-        "exitName": "Totem",
-        "details": "r0 y3"
-      }
-    },
-    {
-      "id": "77",
-      "type": "EXIT",
-      "startNode": "1",
-      "endNode": "0",
-      "properties": {
-        "exitId": "20",
-        "exitName": "Exit",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "78",
-      "type": "EXIT",
-      "startNode": "1",
-      "endNode": "14",
-      "properties": {
-        "exitId": "18",
-        "exitName": "Entrance",
-        "details": "r3 y-8"
-      }
-    },
-    {
-      "id": "79",
-      "type": "EXIT",
-      "startNode": "33",
-      "endNode": "29",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Door",
-        "details": "r3 y-8"
-      }
-    },
-    {
-      "id": "80",
-      "type": "EXIT",
-      "startNode": "33",
-      "endNode": "27",
-      "properties": {
-        "exitId": "2",
-        "exitName": "Box room",
-        "details": "r3 y2"
-      }
-    },
-    {
-      "id": "81",
-      "type": "EXIT",
-      "startNode": "16",
-      "endNode": "32",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Entrance",
-        "details": "r0 y-8"
-      }
-    },
-    {
-      "id": "82",
-      "type": "EXIT",
-      "startNode": "16",
-      "endNode": "13",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Totem",
-        "details": "r2 y3"
-      }
-    },
-    {
-      "id": "83",
-      "type": "EXIT",
-      "startNode": "34",
-      "endNode": "1",
-      "properties": {
-        "exitId": "1",
-        "exitName": "Entrance",
-        "details": "r3 y0"
-      }
-    },
-    {
-      "id": "84",
-      "type": "EXIT",
-      "startNode": "34",
-      "endNode": "34",
-      "properties": {
-        "exitId": "6",
-        "exitName": "Connection",
-        "details": "r0 y2"
-      }
-    },
-    {
-      "id": "85",
-      "type": "EXIT",
-      "startNode": "34",
-      "endNode": "35",
-      "properties": {
-        "exitId": "10",
-        "exitName": "Exit",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "86",
-      "type": "EXIT",
-      "startNode": "34",
-      "endNode": "34",
-      "properties": {
-        "exitId": "8",
-        "exitName": "To Boss",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "87",
-      "type": "EXIT",
-      "startNode": "35",
-      "endNode": "28",
-      "properties": {
-        "exitId": "4",
-        "exitName": "Totem",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "88",
-      "type": "EXIT",
-      "startNode": "35",
-      "endNode": "34",
-      "properties": {
-        "exitId": "3",
-        "exitName": "Entrance",
-        "details": "r2 y0"
-      }
-    },
-    {
-      "id": "89",
-      "type": "EXIT",
-      "startNode": "28",
-      "endNode": "26",
-      "properties": {
-        "exitId": "9",
-        "exitName": "Entrance",
-        "details": "r3 y-8"
-      }
-    },
-    {
-      "id": "90",
-      "type": "EXIT",
-      "startNode": "28",
-      "endNode": "35",
-      "properties": {
-        "exitId": "10",
-        "exitName": "Totem",
-        "details": "r2 y2"
-      }
-    },
-    {
-      "id": "91",
-      "type": "EXIT",
-      "startNode": "29",
-      "endNode": "33",
-      "properties": {
-        "exitId": "10",
-        "exitName": "Fence",
-        "details": "r1 y0"
-      }
-    },
-    {
-      "id": "92",
-      "type": "EXIT",
-      "startNode": "32",
-      "endNode": "16",
-      "properties": {
-        "exitId": "12",
-        "exitName": "King's room",
-        "details": "r0 y0"
-      }
-    },
-    {
-      "id": "93",
-      "type": "EXIT",
-      "startNode": "32",
-      "endNode": "27",
-      "properties": {
-        "exitId": "15",
-        "exitName": "Entrance",
-        "details": "r3 y0"
-      }
+  "results": [
+    {
+      "data": [
+        {
+          "graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part1 A",
+                  "areaId": "shadow_tower_part1a",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part1 A"
+              },
+              {
+                "id": "1",
+                "labels": [
+                  "Illusion"
+                ],
+                "properties": {
+                  "name": "Illusion World Bewilderment Domain",
+                  "areaId": "illusion_world_bewilderment_domain",
+                  "score": 0,
+                  "world": "illusion"
+                },
+                "caption": "Illusion World Bewilderment Domain"
+              },
+              {
+                "id": "2",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part1 B",
+                  "areaId": "shadow_tower_part1b",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part1 B"
+              },
+              {
+                "id": "3",
+                "labels": [
+                  "Human"
+                ],
+                "properties": {
+                  "name": "Human World Cursed Region",
+                  "areaId": "human_world_cursed_region",
+                  "score": 2,
+                  "world": "human"
+                },
+                "caption": "Human World Cursed Region"
+              },
+              {
+                "id": "4",
+                "labels": [
+                  "Human"
+                ],
+                "properties": {
+                  "name": "Human World Forgotten Region",
+                  "areaId": "human_world_forgotten_region",
+                  "score": 4,
+                  "world": "human"
+                },
+                "caption": "Human World Forgotten Region"
+              },
+              {
+                "id": "5",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part1 C",
+                  "areaId": "shadow_tower_part1c",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part1 C"
+              },
+              {
+                "id": "6",
+                "labels": [
+                  "Earth"
+                ],
+                "properties": {
+                  "name": "Earth World Rotting Cavern",
+                  "areaId": "earth_world_rotting_cavern",
+                  "score": 5,
+                  "world": "earth"
+                },
+                "caption": "Earth World Rotting Cavern"
+              },
+              {
+                "id": "7",
+                "labels": [
+                  "Earth"
+                ],
+                "properties": {
+                  "name": "Earth World Poisonous Cavern",
+                  "areaId": "earth_world_poisonous_cavern",
+                  "score": 0,
+                  "world": "earth"
+                },
+                "caption": "Earth World Poisonous Cavern"
+              },
+              {
+                "id": "8",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part2 A",
+                  "areaId": "shadow_tower_part2a",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part2 A"
+              },
+              {
+                "id": "9",
+                "labels": [
+                  "Earth"
+                ],
+                "properties": {
+                  "name": "Earth World Hostile Rock Cavern",
+                  "areaId": "earth_world_hostile_rock_cavern",
+                  "score": 0,
+                  "world": "earth"
+                },
+                "caption": "Earth World Hostile Rock Cavern"
+              },
+              {
+                "id": "10",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part2 B",
+                  "areaId": "shadow_tower_part2b",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part2 B"
+              },
+              {
+                "id": "11",
+                "labels": [
+                  "Water"
+                ],
+                "properties": {
+                  "name": "Water World Impure Pool Area",
+                  "areaId": "water_world_impure_pool_area",
+                  "score": 0,
+                  "world": "water"
+                },
+                "caption": "Water World Impure Pool Area"
+              },
+              {
+                "id": "12",
+                "labels": [
+                  "Fire"
+                ],
+                "properties": {
+                  "name": "Fire World Burning Cavern",
+                  "areaId": "fire_world_burning_cavern",
+                  "score": 0,
+                  "world": "fire"
+                },
+                "caption": "Fire World Burning Cavern"
+              },
+              {
+                "id": "13",
+                "labels": [
+                  "Fire"
+                ],
+                "properties": {
+                  "name": "Fire World Phoenix Cave",
+                  "areaId": "fire_world_phoenix_cave",
+                  "score": 0,
+                  "world": "fire"
+                },
+                "caption": "Fire World Phoenix Cave"
+              },
+              {
+                "id": "14",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part3 A",
+                  "areaId": "shadow_tower_part3a",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part3 A"
+              },
+              {
+                "id": "15",
+                "labels": [
+                  "Water"
+                ],
+                "properties": {
+                  "name": "Water World Sunken River Area",
+                  "areaId": "water_world_sunken_river_area",
+                  "score": 0,
+                  "world": "water"
+                },
+                "caption": "Water World Sunken River Area"
+              },
+              {
+                "id": "16",
+                "labels": [
+                  "Illusion"
+                ],
+                "properties": {
+                  "name": "Illusion World Gloomy Domain",
+                  "areaId": "illusion_world_gloomy_domain",
+                  "score": 0,
+                  "world": "illusion"
+                },
+                "caption": "Illusion World Gloomy Domain"
+              },
+              {
+                "id": "17",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part3 B",
+                  "areaId": "shadow_tower_part3b",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part3 B"
+              },
+              {
+                "id": "18",
+                "labels": [
+                  "Monster"
+                ],
+                "properties": {
+                  "name": "Monster World False Eye Area",
+                  "areaId": "monster_world_false_eye_area",
+                  "score": 0,
+                  "world": "monster"
+                },
+                "caption": "Monster World False Eye Area"
+              },
+              {
+                "id": "19",
+                "labels": [
+                  "Monster"
+                ],
+                "properties": {
+                  "name": "Monster World Screeching Area",
+                  "areaId": "monster_world_screeching_area",
+                  "score": 0,
+                  "world": "monster"
+                },
+                "caption": "Monster World Screeching Area"
+              },
+              {
+                "id": "20",
+                "labels": [
+                  "Death"
+                ],
+                "properties": {
+                  "name": "Death World Dark Castle Layer",
+                  "areaId": "death_world_dark_castle_layer",
+                  "score": 0,
+                  "world": "death"
+                },
+                "caption": "Death World Dark Castle Layer"
+              },
+              {
+                "id": "21",
+                "labels": [
+                  "Shadow"
+                ],
+                "properties": {
+                  "name": "Shadow Tower Part3 C",
+                  "areaId": "shadow_tower_part3c",
+                  "score": 0,
+                  "world": "shadow"
+                },
+                "caption": "Shadow Tower Part3 C"
+              },
+              {
+                "id": "22",
+                "labels": [
+                  "Death"
+                ],
+                "properties": {
+                  "name": "Death World Lingering Curse Layer",
+                  "areaId": "death_world_lingering_curse_layer",
+                  "score": 0,
+                  "world": "death"
+                },
+                "caption": "Death World Lingering Curse Layer"
+              },
+              {
+                "id": "23",
+                "labels": [
+                  "Human"
+                ],
+                "properties": {
+                  "name": "Human World Solitary Region",
+                  "areaId": "human_world_solitary_region",
+                  "score": 0,
+                  "world": "human"
+                },
+                "caption": "Human World Solitary Region"
+              },
+              {
+                "id": "24",
+                "labels": [
+                  "Human"
+                ],
+                "properties": {
+                  "name": "Human World Hidden Region",
+                  "areaId": "human_world_hidden_region",
+                  "score": 2,
+                  "world": "human"
+                },
+                "caption": "Human World Hidden Region"
+              },
+              {
+                "id": "25",
+                "labels": [
+                  "Earth"
+                ],
+                "properties": {
+                  "name": "Earth World False Pit Cavern",
+                  "areaId": "earth_world_false_pit_cavern",
+                  "score": 0,
+                  "world": "earth"
+                },
+                "caption": "Earth World False Pit Cavern"
+              },
+              {
+                "id": "26",
+                "labels": [
+                  "Earth"
+                ],
+                "properties": {
+                  "name": "Earth World Stone Cavern",
+                  "areaId": "earth_world_stone_cavern",
+                  "score": 0,
+                  "world": "earth"
+                },
+                "caption": "Earth World Stone Cavern"
+              },
+              {
+                "id": "27",
+                "labels": [
+                  "Earth"
+                ],
+                "properties": {
+                  "name": "Earth World Quaking Cavern",
+                  "areaId": "earth_world_quaking_cavern",
+                  "score": 0,
+                  "world": "earth"
+                },
+                "caption": "Earth World Quaking Cavern"
+              },
+              {
+                "id": "28",
+                "labels": [
+                  "Death"
+                ],
+                "properties": {
+                  "name": "Death World Gate Of The Dead",
+                  "areaId": "death_world_gate_of_the_dead",
+                  "score": 0,
+                  "world": "death"
+                },
+                "caption": "Death World Gate Of The Dead"
+              },
+              {
+                "id": "29",
+                "labels": [
+                  "Fire"
+                ],
+                "properties": {
+                  "name": "Fire World Molten Cavern",
+                  "areaId": "fire_world_molten_cavern",
+                  "score": 0,
+                  "world": "fire"
+                },
+                "caption": "Fire World Molten Cavern"
+              },
+              {
+                "id": "30",
+                "labels": [
+                  "Fire"
+                ],
+                "properties": {
+                  "name": "Fire World Ashen Cavern",
+                  "areaId": "fire_world_ashen_cavern",
+                  "score": 0,
+                  "world": "fire"
+                },
+                "caption": "Fire World Ashen Cavern"
+              },
+              {
+                "id": "31",
+                "labels": [
+                  "Water"
+                ],
+                "properties": {
+                  "name": "Water World Watery Labyrinth Area",
+                  "areaId": "water_world_watery_labyrinth_area",
+                  "score": 0,
+                  "world": "water"
+                },
+                "caption": "Water World Watery Labyrinth Area"
+              },
+              {
+                "id": "32",
+                "labels": [
+                  "Water"
+                ],
+                "properties": {
+                  "name": "Water World White Rain Area",
+                  "areaId": "water_world_white_rain_area",
+                  "score": 0,
+                  "world": "water"
+                },
+                "caption": "Water World White Rain Area"
+              },
+              {
+                "id": "33",
+                "labels": [
+                  "Illusion"
+                ],
+                "properties": {
+                  "name": "Illusion World Dream Domain",
+                  "areaId": "illusion_world_dream_domain",
+                  "score": 0,
+                  "world": "illusion"
+                },
+                "caption": "Illusion World Dream Domain"
+              },
+              {
+                "id": "34",
+                "labels": [
+                  "Illusion"
+                ],
+                "properties": {
+                  "name": "Illusion World Worship Domain",
+                  "areaId": "illusion_world_worship_domain",
+                  "score": 0,
+                  "world": "illusion"
+                },
+                "caption": "Illusion World Worship Domain"
+              },
+              {
+                "id": "35",
+                "labels": [
+                  "Death"
+                ],
+                "properties": {
+                  "name": "Death World Undead Layer",
+                  "areaId": "death_world_undead_layer",
+                  "score": 0,
+                  "world": "death"
+                },
+                "caption": "Death World Undead Layer"
+              }
+            ],
+            "relationships": [
+              {
+                "id": "0",
+                "type": "EXIT",
+                "startNode": "0",
+                "endNode": "1",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Tower Top",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "1",
+                "type": "EXIT",
+                "startNode": "2",
+                "endNode": "3",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Edge",
+                  "details": "r3 y8"
+                }
+              },
+              {
+                "id": "2",
+                "type": "EXIT",
+                "startNode": "2",
+                "endNode": "4",
+                "properties": {
+                  "exitId": "8",
+                  "exitName": "Middle",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "3",
+                "type": "JUMP",
+                "startNode": "2",
+                "endNode": "5",
+                "properties": {
+                  "exitId": "jump",
+                  "exitName": "Jump",
+                  "details": ""
+                }
+              },
+              {
+                "id": "4",
+                "type": "EXIT",
+                "startNode": "5",
+                "endNode": "4",
+                "properties": {
+                  "exitId": "5",
+                  "exitName": "Top",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "5",
+                "type": "EXIT",
+                "startNode": "5",
+                "endNode": "6",
+                "properties": {
+                  "exitId": "11",
+                  "exitName": "Bottom Middle",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "6",
+                "type": "EXIT",
+                "startNode": "5",
+                "endNode": "7",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Bottom Edge",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "7",
+                "type": "EXIT",
+                "startNode": "8",
+                "endNode": "1",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Top left",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "8",
+                "type": "EXIT",
+                "startNode": "8",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "5",
+                  "exitName": "Edge",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "9",
+                "type": "JUMP",
+                "startNode": "8",
+                "endNode": "10",
+                "properties": {
+                  "exitId": "jump",
+                  "exitName": "Jump",
+                  "details": ""
+                }
+              },
+              {
+                "id": "10",
+                "type": "EXIT",
+                "startNode": "10",
+                "endNode": "11",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Bottom",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "11",
+                "type": "EXIT",
+                "startNode": "10",
+                "endNode": "12",
+                "properties": {
+                  "exitId": "7",
+                  "exitName": "Top Middle",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "12",
+                "type": "EXIT",
+                "startNode": "10",
+                "endNode": "13",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Top right",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "13",
+                "type": "EXIT",
+                "startNode": "14",
+                "endNode": "11",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Top right",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "14",
+                "type": "EXIT",
+                "startNode": "14",
+                "endNode": "15",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Top left",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "15",
+                "type": "EXIT",
+                "startNode": "14",
+                "endNode": "16",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Bottom",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "16",
+                "type": "JUMP",
+                "startNode": "14",
+                "endNode": "17",
+                "properties": {
+                  "exitId": "jump",
+                  "exitName": "Jump",
+                  "details": ""
+                }
+              },
+              {
+                "id": "17",
+                "type": "EXIT",
+                "startNode": "17",
+                "endNode": "18",
+                "properties": {
+                  "exitId": "5",
+                  "exitName": "Bottom middle",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "18",
+                "type": "EXIT",
+                "startNode": "17",
+                "endNode": "19",
+                "properties": {
+                  "exitId": "7",
+                  "exitName": "Top edge",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "19",
+                "type": "EXIT",
+                "startNode": "17",
+                "endNode": "20",
+                "properties": {
+                  "exitId": "13",
+                  "exitName": "Bottom end",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "20",
+                "type": "JUMP",
+                "startNode": "17",
+                "endNode": "21",
+                "properties": {
+                  "exitId": "jump",
+                  "exitName": "Jump",
+                  "details": ""
+                }
+              },
+              {
+                "id": "21",
+                "type": "EXIT",
+                "startNode": "21",
+                "endNode": "22",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Fence",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "22",
+                "type": "EXIT",
+                "startNode": "23",
+                "endNode": "24",
+                "properties": {
+                  "exitId": "31",
+                  "exitName": "Skeleton",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "23",
+                "type": "EXIT",
+                "startNode": "23",
+                "endNode": "24",
+                "properties": {
+                  "exitId": "34",
+                  "exitName": "Cemetery",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "24",
+                "type": "EXIT",
+                "startNode": "23",
+                "endNode": "3",
+                "properties": {
+                  "exitId": "35",
+                  "exitName": "Grave",
+                  "details": "r2 y-17"
+                }
+              },
+              {
+                "id": "25",
+                "type": "EXIT",
+                "startNode": "23",
+                "endNode": "0",
+                "properties": {
+                  "exitId": "38",
+                  "exitName": "Church",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "26",
+                "type": "EXIT",
+                "startNode": "24",
+                "endNode": "23",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Jail",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "27",
+                "type": "EXIT",
+                "startNode": "24",
+                "endNode": "23",
+                "properties": {
+                  "exitId": "13",
+                  "exitName": "Corridor",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "28",
+                "type": "EXIT",
+                "startNode": "24",
+                "endNode": "4",
+                "properties": {
+                  "exitId": "26",
+                  "exitName": "Totem",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "29",
+                "type": "EXIT",
+                "startNode": "3",
+                "endNode": "23",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Entrance",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "30",
+                "type": "EXIT",
+                "startNode": "3",
+                "endNode": "2",
+                "properties": {
+                  "exitId": "31",
+                  "exitName": "Guardian side",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "31",
+                "type": "EXIT",
+                "startNode": "4",
+                "endNode": "2",
+                "properties": {
+                  "exitId": "34",
+                  "exitName": "Exit",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "32",
+                "type": "EXIT",
+                "startNode": "4",
+                "endNode": "5",
+                "properties": {
+                  "exitId": "37",
+                  "exitName": "Jump down",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "33",
+                "type": "EXIT",
+                "startNode": "4",
+                "endNode": "24",
+                "properties": {
+                  "exitId": "18",
+                  "exitName": "Totem",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "34",
+                "type": "EXIT",
+                "startNode": "4",
+                "endNode": "25",
+                "properties": {
+                  "exitId": "41",
+                  "exitName": "Drop in",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "35",
+                "type": "EXIT",
+                "startNode": "6",
+                "endNode": "5",
+                "properties": {
+                  "exitId": "13",
+                  "exitName": "Entrance",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "36",
+                "type": "EXIT",
+                "startNode": "26",
+                "endNode": "7",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Entrance",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "37",
+                "type": "EXIT",
+                "startNode": "26",
+                "endNode": "25",
+                "properties": {
+                  "exitId": "7",
+                  "exitName": "Exit",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "38",
+                "type": "EXIT",
+                "startNode": "27",
+                "endNode": "7",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Entrance",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "39",
+                "type": "EXIT",
+                "startNode": "7",
+                "endNode": "26",
+                "properties": {
+                  "exitId": "13",
+                  "exitName": "Poison",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "40",
+                "type": "EXIT",
+                "startNode": "7",
+                "endNode": "27",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Rock guy",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "41",
+                "type": "EXIT",
+                "startNode": "7",
+                "endNode": "5",
+                "properties": {
+                  "exitId": "17",
+                  "exitName": "Entrance",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "42",
+                "type": "EXIT",
+                "startNode": "25",
+                "endNode": "26",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Entrance",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "43",
+                "type": "EXIT",
+                "startNode": "25",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Bridge",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "44",
+                "type": "EXIT",
+                "startNode": "25",
+                "endNode": "8",
+                "properties": {
+                  "exitId": "11",
+                  "exitName": "Exit",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "45",
+                "type": "EXIT",
+                "startNode": "25",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "19",
+                  "exitName": "Jump in",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "46",
+                "type": "EXIT",
+                "startNode": "25",
+                "endNode": "4",
+                "properties": {
+                  "exitId": "16",
+                  "exitName": "Totem",
+                  "details": "r0 y1"
+                }
+              },
+              {
+                "id": "47",
+                "type": "EXIT",
+                "startNode": "9",
+                "endNode": "8",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "48",
+                "type": "EXIT",
+                "startNode": "9",
+                "endNode": "28",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Boss room",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "49",
+                "type": "EXIT",
+                "startNode": "13",
+                "endNode": "8",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Entrance",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "50",
+                "type": "EXIT",
+                "startNode": "13",
+                "endNode": "10",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Exit",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "51",
+                "type": "EXIT",
+                "startNode": "12",
+                "endNode": "10",
+                "properties": {
+                  "exitId": "37",
+                  "exitName": "Entrance",
+                  "details": "r1 y-8"
+                }
+              },
+              {
+                "id": "52",
+                "type": "EXIT",
+                "startNode": "12",
+                "endNode": "29",
+                "properties": {
+                  "exitId": "94",
+                  "exitName": "Platform",
+                  "details": "r0 y1"
+                }
+              },
+              {
+                "id": "53",
+                "type": "EXIT",
+                "startNode": "12",
+                "endNode": "30",
+                "properties": {
+                  "exitId": "93",
+                  "exitName": "Room",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "54",
+                "type": "EXIT",
+                "startNode": "29",
+                "endNode": "30",
+                "properties": {
+                  "exitId": "27",
+                  "exitName": "Abraxus",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "55",
+                "type": "EXIT",
+                "startNode": "29",
+                "endNode": "12",
+                "properties": {
+                  "exitId": "19",
+                  "exitName": "Platform",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "56",
+                "type": "EXIT",
+                "startNode": "30",
+                "endNode": "12",
+                "properties": {
+                  "exitId": "17",
+                  "exitName": "Cerberus",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "57",
+                "type": "EXIT",
+                "startNode": "30",
+                "endNode": "29",
+                "properties": {
+                  "exitId": "6",
+                  "exitName": "Start",
+                  "details": "r0 y2"
+                }
+              },
+              {
+                "id": "58",
+                "type": "EXIT",
+                "startNode": "15",
+                "endNode": "31",
+                "properties": {
+                  "exitId": "5",
+                  "exitName": "Pool",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "59",
+                "type": "EXIT",
+                "startNode": "15",
+                "endNode": "14",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "60",
+                "type": "EXIT",
+                "startNode": "11",
+                "endNode": "10",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Entrance",
+                  "details": "r3 y-8"
+                }
+              },
+              {
+                "id": "61",
+                "type": "EXIT",
+                "startNode": "11",
+                "endNode": "14",
+                "properties": {
+                  "exitId": "11",
+                  "exitName": "Flush down",
+                  "details": "r3 y-8"
+                }
+              },
+              {
+                "id": "62",
+                "type": "EXIT",
+                "startNode": "11",
+                "endNode": "19",
+                "properties": {
+                  "exitId": "14",
+                  "exitName": "Totem",
+                  "details": "r3 y3"
+                }
+              },
+              {
+                "id": "63",
+                "type": "EXIT",
+                "startNode": "31",
+                "endNode": "32",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Exit",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "64",
+                "type": "EXIT",
+                "startNode": "31",
+                "endNode": "15",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Entrance",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "65",
+                "type": "EXIT",
+                "startNode": "32",
+                "endNode": "31",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Entrance",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "66",
+                "type": "EXIT",
+                "startNode": "32",
+                "endNode": "16",
+                "properties": {
+                  "exitId": "6",
+                  "exitName": "Totem",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "67",
+                "type": "EXIT",
+                "startNode": "18",
+                "endNode": "17",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Entrance",
+                  "details": "r3 y-8"
+                }
+              },
+              {
+                "id": "68",
+                "type": "EXIT",
+                "startNode": "18",
+                "endNode": "33",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Totem",
+                  "details": "r2 y2"
+                }
+              },
+              {
+                "id": "69",
+                "type": "EXIT",
+                "startNode": "19",
+                "endNode": "17",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Entrance",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "70",
+                "type": "EXIT",
+                "startNode": "19",
+                "endNode": "11",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Totem",
+                  "details": "r1 y2"
+                }
+              },
+              {
+                "id": "71",
+                "type": "EXIT",
+                "startNode": "19",
+                "endNode": "20",
+                "properties": {
+                  "exitId": "6",
+                  "exitName": "Necron",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "72",
+                "type": "EXIT",
+                "startNode": "16",
+                "endNode": "1",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Ladder down",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "73",
+                "type": "EXIT",
+                "startNode": "16",
+                "endNode": "14",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r2 y-8"
+                }
+              },
+              {
+                "id": "74",
+                "type": "EXIT",
+                "startNode": "16",
+                "endNode": "32",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Totem",
+                  "details": "r0 y3"
+                }
+              },
+              {
+                "id": "75",
+                "type": "EXIT",
+                "startNode": "1",
+                "endNode": "0",
+                "properties": {
+                  "exitId": "20",
+                  "exitName": "Exit",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "76",
+                "type": "EXIT",
+                "startNode": "1",
+                "endNode": "8",
+                "properties": {
+                  "exitId": "18",
+                  "exitName": "Entrance",
+                  "details": "r3 y-8"
+                }
+              },
+              {
+                "id": "77",
+                "type": "EXIT",
+                "startNode": "34",
+                "endNode": "1",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r3 y0"
+                }
+              },
+              {
+                "id": "78",
+                "type": "EXIT",
+                "startNode": "34",
+                "endNode": "34",
+                "properties": {
+                  "exitId": "6",
+                  "exitName": "Connection",
+                  "details": "r0 y2"
+                }
+              },
+              {
+                "id": "79",
+                "type": "EXIT",
+                "startNode": "34",
+                "endNode": "33",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Exit",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "80",
+                "type": "EXIT",
+                "startNode": "34",
+                "endNode": "34",
+                "properties": {
+                  "exitId": "8",
+                  "exitName": "To Boss",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "81",
+                "type": "EXIT",
+                "startNode": "33",
+                "endNode": "18",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Totem",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "82",
+                "type": "EXIT",
+                "startNode": "33",
+                "endNode": "34",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Entrance",
+                  "details": "r2 y0"
+                }
+              },
+              {
+                "id": "83",
+                "type": "EXIT",
+                "startNode": "22",
+                "endNode": "21",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Door",
+                  "details": "r3 y-8"
+                }
+              },
+              {
+                "id": "84",
+                "type": "EXIT",
+                "startNode": "22",
+                "endNode": "20",
+                "properties": {
+                  "exitId": "2",
+                  "exitName": "Box room",
+                  "details": "r3 y2"
+                }
+              },
+              {
+                "id": "85",
+                "type": "EXIT",
+                "startNode": "28",
+                "endNode": "35",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r0 y-8"
+                }
+              },
+              {
+                "id": "86",
+                "type": "EXIT",
+                "startNode": "28",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Totem",
+                  "details": "r2 y3"
+                }
+              },
+              {
+                "id": "87",
+                "type": "EXIT",
+                "startNode": "20",
+                "endNode": "35",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Prison",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "88",
+                "type": "EXIT",
+                "startNode": "20",
+                "endNode": "17",
+                "properties": {
+                  "exitId": "2",
+                  "exitName": "Entrance",
+                  "details": "r2 y-8"
+                }
+              },
+              {
+                "id": "89",
+                "type": "EXIT",
+                "startNode": "20",
+                "endNode": "19",
+                "properties": {
+                  "exitId": "4",
+                  "exitName": "Lower totem",
+                  "details": "r2 y2"
+                }
+              },
+              {
+                "id": "90",
+                "type": "EXIT",
+                "startNode": "20",
+                "endNode": "22",
+                "properties": {
+                  "exitId": "7",
+                  "exitName": "Upper totem 1",
+                  "details": "r1 y3"
+                }
+              },
+              {
+                "id": "91",
+                "type": "EXIT",
+                "startNode": "20",
+                "endNode": "28",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Upper totem 2",
+                  "details": "r1 y0"
+                }
+              },
+              {
+                "id": "92",
+                "type": "EXIT",
+                "startNode": "35",
+                "endNode": "28",
+                "properties": {
+                  "exitId": "12",
+                  "exitName": "King's room",
+                  "details": "r0 y0"
+                }
+              },
+              {
+                "id": "93",
+                "type": "EXIT",
+                "startNode": "35",
+                "endNode": "20",
+                "properties": {
+                  "exitId": "15",
+                  "exitName": "Entrance",
+                  "details": "r3 y0"
+                }
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 };
 </script>
 
-<!-- Neo4jd3 Library -->
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/neo4jd3@0.4.30/dist/neo4jd3.min.js"></script>
+<!-- Neo4jd3 Library (Task 7: Fixed to use local files instead of CDN) -->
+<script src="libs/d3.min.js"></script>
+<script src="libs/neo4jd3.min.js"></script>
 
 <!-- Tab Switching Script -->
 <script>
@@ -3474,57 +3520,122 @@ function showTab(tabName) {
 <!-- Neo4jd3 Initialization -->
 <script>
 if (typeof neo4jGraphData !== 'undefined') {
-    // Define color scheme for different worlds
-    var worldColors = {
-        'human': '#4a90e2',
-        'earth': '#8b4513',
-        'fire': '#ff4500',
-        'water': '#1e90ff',
-        'monster': '#9932cc',
-        'illusion': '#ff1493',
-        'death': '#2f4f4f',
-        'shadow': '#000000',
-        'void': '#696969'
-    };
+    // Task 7: Configuration for neo4jd3 v0.0.5
+    // Debug: Check data structure
+    console.log('neo4jGraphData:', neo4jGraphData);
+    console.log('Has nodes:', neo4jGraphData.nodes);
+    console.log('Has relationships:', neo4jGraphData.relationships);
     
-    // Create neo4jd3 visualization
-    var neo4jd3 = new Neo4jd3('#neo4jd3-container', {
-        highlight: [
-            {
-                class: 'Area',
-                property: 'name',
-                value: 'shadow_tower'
-            }
-        ],
-        icons: {
-            'Area': 'map-marker'
-        },
-        images: {
-            'Area': 'img/area.png'
-        },
-        minCollision: 60,
-        neo4jData: neo4jGraphData,
-        nodeRadius: function(node) {
-            // Size nodes based on score (progression difficulty)
-            var baseRadius = 25;
-            var scoreBonus = (node.properties.score || 0) * 2;
-            return baseRadius + scoreBonus;
-        },
-        relationshipColor: '#8b4513',
-        zoomFit: true,
-        nodeOutlineFillColor: function(node) {
-            // Color nodes based on their world
-            var world = node.properties.world || 'void';
-            return worldColors[world] || '#808080';
-        }
-    });
+    // Define color palette for node coloring (assigned by label type automatically)
+    var shadowTowerColors = [
+        '#4a90e2', // human world - blue
+        '#8b4513', // earth world - brown
+        '#ff4500', // fire world - orange-red
+        '#1e90ff', // water world - dodger blue
+        '#9932cc', // monster world - purple
+        '#ff1493', // illusion world - deep pink
+        '#2f4f4f', // death world - dark slate
+        '#000000', // shadow tower - black
+        '#d4af37', // gold accent
+        '#696969'  // void/default - gray
+    ];
+    
+    try {
+        // Create neo4jd3 visualization
+        var neo4jd3 = new Neo4jd3('#neo4jd3-container', {
+            colors: shadowTowerColors,
+            highlight: [
+                {
+                    class: 'Area',
+                    property: 'name',
+                    value: 'shadow_tower'
+                }
+            ],
+            infoPanel: true,
+            minCollision: 60,
+            neo4jData: neo4jGraphData,
+            nodeRadius: 25,
+            zoomFit: true
+        });
+        
+        // Task 7: Add text labels to nodes after a short delay (wait for graph to render)
+        setTimeout(function() {
+            var svg = d3.select('#neo4jd3-container svg');
+            var nodes = svg.selectAll('g.node');
+            
+            nodes.each(function(d) {
+                var node = d3.select(this);
+                // Check if text doesn't already exist
+                if (node.select('text.area-label').empty()) {
+                    // Get the area name and split it into parts for multi-line display
+                    var fullName = d.properties && d.properties.name ? d.properties.name : d.id;
+                    var words = fullName.split(' ');
+                    var text = node.append('text')
+                        .attr('class', 'area-label')
+                        .attr('text-anchor', 'middle')
+                        .attr('y', 0) // Center vertically in the circle
+                        .attr('fill', '#ffffff')
+                        .attr('font-size', '9px')
+                        .attr('font-weight', 'bold')
+                        .attr('pointer-events', 'none');
+                    
+                    // Add text as tspan elements for better wrapping
+                    if (words.length <= 2) {
+                        // Short names: single line
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '0.3em')
+                            .text(fullName);
+                    } else if (words.length <= 4) {
+                        // Medium names: two lines
+                        var line1 = words.slice(0, 2).join(' ');
+                        var line2 = words.slice(2).join(' ');
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '-0.3em')
+                            .text(line1);
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '1.1em')
+                            .text(line2);
+                    } else {
+                        // Long names: three lines
+                        var line1 = words.slice(0, 2).join(' ');
+                        var line2 = words.slice(2, 4).join(' ');
+                        var line3 = words.slice(4).join(' ');
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '-0.8em')
+                            .text(line1);
+                        text.append('tspan')
+                            .attr('x', 0)
+                            .attr('dy', '1.1em')
+                            .text(line2);
+                        if (line3) {
+                            text.append('tspan')
+                                .attr('x', 0)
+                                .attr('dy', '1.1em')
+                                .text(line3);
+                        }
+                    }
+                }
+            });
+        }, 500);
+    } catch (err) {
+        console.error('Error creating Neo4jd3:', err);
+        document.getElementById('neo4jd3-container').innerHTML = 
+            '<p style="color: #ff6b6b; padding: 20px;">Error initializing graph: ' + err.message + '</p>';
+    }
 } else {
     document.getElementById('neo4jd3-container').innerHTML = 
         '<p style="color: #ff6b6b; padding: 20px;">Neo4j graph data not available. Please regenerate the map.</p>';
 }
 </script>
 
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+<script src="libs/mermaid.min.js"></script>
+<script>
 mermaid.initialize({ startOnLoad: true });
+showTab('mermaid');
+showTab('neo4j');
+
 </script>
