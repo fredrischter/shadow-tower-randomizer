@@ -502,36 +502,34 @@ function randomize(paramsFile, stDir) {
         //creature.sol.set(Math.min(255, Math.ceil(creature.sol.get() * creatureAttributeFactor)));
 
         console.log("DEBUG - Creature " + creature.name);
-        //creature.weight.set(0x1);
-        /*if (creature.weaponDefense1) {
-            console.log("DEBUG - Changing denfese. " + creature.weaponDefense1.get() + " to " + Math.min(255, creature.weaponDefense1.get() * creatureAttributeFactor));
-            creature.weaponDefense1.set(Math.min(255, creature.weaponDefense1.get() * creatureAttributeFactor));
-            creature.weaponDefense2.set(Math.min(255, creature.weaponDefense2.get() * creatureAttributeFactor));
-            creature.minMagicDefense.set(Math.min(255, creature.minMagicDefense.get() * creatureAttributeFactor));
-            creature.maxMagicDefense.set(Math.min(255, creature.maxMagicDefense.get() * creatureAttributeFactor));
+        
+        // Fix for magic/projectile attack damage scaling
+        // Scale attack values in entityState data (type 0x20 = attack)
+        if (creature.entityStates && creature.entityStates.length > 0) {
+            creature.entityStates.forEach((entityState) => {
+                if (entityState.type == 0x20) {
+                    // EntityStateData with type 0x20 contains attack1, attack2, attack3 (UInt16 at offsets 0x1a, 0x1c, 0x1e)
+                    if (entityState.attack1) {
+                        var oldValue = entityState.attack1.get();
+                        var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+                        entityState.attack1.set(newValue);
+                        console.log("  Scaled attack1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                    }
+                    if (entityState.attack2) {
+                        var oldValue = entityState.attack2.get();
+                        var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+                        entityState.attack2.set(newValue);
+                        console.log("  Scaled attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                    }
+                    if (entityState.attack3) {
+                        var oldValue = entityState.attack3.get();
+                        var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+                        entityState.attack3.set(newValue);
+                        console.log("  Scaled attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                    }
+                }
+            });
         }
-        creature.entityStates.forEach((entityState) => {
-            if (entityState.type == 0x20) {
-                console.log("DEBUG - Changing attack. " + entityState.weaponAttack1.get() + " to " + Math.min(255, entityState.weaponAttack1.get() * creatureAttributeFactor));
-                entityState.weaponAttack1.set(Math.min(255, entityState.weaponAttack1.get() * creatureAttributeFactor));
-                entityState.weaponAttack2.set(Math.min(255, entityState.weaponAttack2.get() * creatureAttributeFactor));
-                entityState.weaponAttack3.set(Math.min(255, entityState.weaponAttack3.get() * creatureAttributeFactor));
-            }
-        });
-
-        console.log("Applying factor " + creatureAttributeFactor + " to creature " + creature.name + ". Attributes " + 
-            (creature.weaponDefense1? 
-                "weaponDefense1 " + creature.weaponDefense1.get() + 
-                " weaponDefense2 " + creature.weaponDefense2.get() + 
-                " minMagicDefense " + creature.minMagicDefense.get() + 
-                " maxMagicDefense " + creature.maxMagicDefense.get() : "") + 
-            (creature.weaponAttack1?
-                " weaponAttack1 " + creature.weaponAttack1.get() + 
-                " weaponAttack2 " + creature.weaponAttack2.get() + 
-                " weaponAttack3 " + creature.weaponAttack3.get(): ""));
-        //It is too much, makes the game to take too long
-        //creature.hp.set(Math.min(256,Math.floor( creature.hp.get() * creatureAttributeFactor)));
-*/
     }
 
     function applyDifficultyForEachItem(item) {
@@ -1614,6 +1612,35 @@ function randomize(paramsFile, stDir) {
     console.log("DEBUG - The game has " + allSpawnsInDefaultGame.length + " spawns.");
 
     console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables."); // + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
+
+    // Test parameter: Place apocrypha (late-game projectile enemy) in first area for testing attack scaling
+    if (params.testApocryphaInSolitaryRegion) {
+        console.log("\n\n========== TEST: Placing Apocrypha in Solitary Region ==========\n");
+        
+        // Find the areas
+        var solitaryRegion = areas.find(a => a.name === "human_world_solitary_region");
+        var lingeringCurse = areas.find(a => a.name === "death_world_lingering_curse_layer");
+        
+        if (solitaryRegion && lingeringCurse) {
+            // Find the creatures
+            // In solitary region: dark_spider is creature 0
+            // In lingering curse: apocrypha is creature 8 (based on magic.txt line 469-471)
+            var darkSpider = solitaryRegion.creatures[0];
+            var apocrypha = lingeringCurse.creatures[8];
+            
+            if (darkSpider && apocrypha) {
+                console.log("TEST: Replacing " + darkSpider.name + " with " + apocrypha.name);
+                setCreature(darkSpider, apocrypha, changeSet);
+                console.log("TEST: Apocrypha placed successfully. Attack scaling should apply based on difficulty=" + params.difficulty);
+            } else {
+                console.log("ERROR: Could not find dark_spider or apocrypha creatures");
+            }
+        } else {
+            console.log("ERROR: Could not find solitary region or lingering curse areas");
+        }
+        
+        console.log("========== END TEST ==========\n\n");
+    }
 
     operate();
 
