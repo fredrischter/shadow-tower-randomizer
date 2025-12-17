@@ -2148,9 +2148,20 @@ function randomize(paramsFile, stDir) {
                     var exitObj = currentArea.objects[exit.id];
                     var exitObjText = exit.type == "jump" ? "" : "r" + exitObj.destinationRotation.get() + " y" + exitObj.destinationYFineShift.get();
                     
+                    // Neo4j map generation: Show exit and entrance names on arrows instead of generic "EXIT" label
+                    // Get exit and entrance names for the relationship label
+                    var exitLabel = exitsNames[exitName] || exit.id;
+                    var entranceLabel = "";
+                    if (exit.wayBackId) {
+                        var entranceName = normalizeAreaName(exit.dest) + "/" + exit.wayBackId;
+                        entranceLabel = exitsNames[entranceName] || exit.wayBackId;
+                    }
+                    // Format: "exitName - entranceName" for better visualization (e.g., "Tower Top - Church")
+                    var relationshipType = exit.type === "jump" ? "JUMP" : (entranceLabel ? exitLabel + " - " + entranceLabel : exitLabel);
+                    
                     neo4jData.relationships.push({
                         id: neo4jData.relationships.length.toString(),
-                        type: exit.type === "jump" ? "JUMP" : "EXIT",
+                        type: relationshipType,
                         startNode: nodeMap.get(area.name),
                         endNode: nodeMap.get(exit.dest),
                         properties: {
