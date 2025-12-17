@@ -1153,14 +1153,14 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    // Creatures that should not be removed in "keepOnlyBosses" preset
+    // Note: Stone Cavern creatures (hobble_worm, barrel_snail, crying_root, clay_servant)
+    // are now protected in data_model.js nonRandomizableCreatureNames instead
     var nonRemovable = [
         "unknown", "unused", "door", "blank",
         "dybbuk", "lizard_servant", "mole", "auriel", "akryal", "abraxus", "panak", "king_edward", "pulsating_heart", "duhrin",
         "fester", "wildowess", "gorthaur",
         "guardian", "dread_knight", "ebony_knight", "magi_magus", "necron", "disguise", "hollow_mage", "balron", "demon_king"
-        
-        // To avoid stone cavern models and freeze bug
-        ,"hobble_worm","barrel_snail","crying_root","demon_bat","clay_servant"
     ];
 
     function keepOnlyBosses(creature, area, index) {
