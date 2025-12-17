@@ -9,7 +9,7 @@
         "wayBackId": "38",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Tower Top"
       }
     ],
@@ -58,7 +58,7 @@
         "wayBackId": "37",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Top"
       },
       {
@@ -68,7 +68,7 @@
         "wayBackId": "13",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Bottom Middle"
       },
       {
@@ -94,7 +94,7 @@
         "wayBackId": "11",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Top left"
       },
       {
@@ -104,7 +104,7 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Edge"
       },
       {
@@ -137,7 +137,7 @@
         "wayBackId": "37",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Top Middle"
       },
       {
@@ -206,7 +206,7 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Bottom middle"
       },
       {
@@ -216,7 +216,7 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Top edge"
       },
       {
@@ -276,7 +276,7 @@
         "wayBackId": "13",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Cemetery"
       },
       {
@@ -313,7 +313,7 @@
         "wayBackId": "31",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Jail"
       },
       {
@@ -445,7 +445,7 @@
         "wayBackId": "11",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Entrance"
       }
     ],
@@ -504,7 +504,7 @@
         "wayBackId": "10",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Entrance"
       }
     ],
@@ -629,7 +629,7 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -664,7 +664,7 @@
         "wayBackId": "4",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Exit"
       }
     ],
@@ -807,7 +807,7 @@
         "type": "door",
         "rotation": 2,
         "direction": "entrance",
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Entrance"
       }
     ],
@@ -828,7 +828,7 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -838,7 +838,7 @@
         "type": "door",
         "rotation": 2,
         "direction": "exit",
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Flush down"
       },
       {
@@ -1314,7 +1314,7 @@
         "type": "door",
         "rotation": 2,
         "direction": "entrance-bi",
-        "nonSwitchable": true,
+        "nonSwitchable": false,
         "label": "Entrance"
       }
     ],
