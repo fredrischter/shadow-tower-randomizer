@@ -315,7 +315,7 @@ function findContiguousAreas(map, centralArea) {
 }
 
 // New map randomization logic: Find outer circle doors
-// These are switchable doors from contiguous areas that DON'T connect directly to the central area
+// These are switchable doors from contiguous areas that lead OUTSIDE the contiguous neighborhood
 function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
 	const outerDoors = [];
 	
@@ -324,9 +324,10 @@ function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
 		const area = map.find(a => a.name === areaName);
 		if (!area) return;
 		
-		// Find switchable doors that DON'T lead directly to the central area
+		// Find switchable doors that lead OUTSIDE the contiguous neighborhood
+		// (i.e., not to the central area and not to any other contiguous area)
 		area.exits.forEach(exit => {
-			if (switchableWay(exit) && exit.dest !== centralAreaName) {
+			if (switchableWay(exit) && !contiguousAreaNames.has(exit.dest)) {
 				outerDoors.push({
 					area: area,
 					exit: exit
@@ -386,14 +387,39 @@ function spinOuterCircleDoors(map, outerDoors) {
 		}
 	}
 	
-	// All checks passed, now apply all the shifts
+	// Fix: Two-pass approach to avoid wayback conflicts during circular shift
+	// Pass 1: Update all forward door destinations without touching waybacks
 	for (let i = 0; i < outerDoors.length; i++) {
 		const currentDoor = outerDoors[i];
 		const nextIndex = (i + 1) % outerDoors.length;
 		const nextDestination = originalDestinations[nextIndex];
 		
-		assignWay(currentDoor.exit, nextDestination, currentDoor.area, map);
+		// Update the door's destination, world, and wayBackId
+		currentDoor.exit.dest = nextDestination.dest;
+		currentDoor.exit.world = nextDestination.world;
+		currentDoor.exit.wayBackId = nextDestination.wayBackId;
 		swapsPerformed++;
+	}
+	
+	// Pass 2: Update all wayback doors to point to the correct source areas
+	if (consistentDoors) {
+		for (let i = 0; i < outerDoors.length; i++) {
+			const currentDoor = outerDoors[i];
+			
+			// Find the wayback door in the destination area
+			if (currentDoor.exit.wayBackId) {
+				const wayBackArea = map.find(area => area.name == currentDoor.exit.dest);
+				if (wayBackArea) {
+					const wayBackWay = wayBackArea.exits.find(exit => exit.id == currentDoor.exit.wayBackId);
+					if (wayBackWay) {
+						// Update wayback to point back to the current door's area
+						wayBackWay.dest = currentDoor.area.name;
+						wayBackWay.world = currentDoor.area.world;
+						wayBackWay.wayBackId = currentDoor.exit.id;
+					}
+				}
+			}
+		}
 	}
 	
 	console.error(" - Successfully performed " + swapsPerformed + " door shifts");
