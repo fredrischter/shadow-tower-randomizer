@@ -19,6 +19,15 @@ function randomize(paramsFile, stDir) {
 
     let params = JSON.parse(fs.readFileSync(paramsFile));
     let changeSetPath = path.dirname(paramsFile);
+    
+    // Safety check: Don't write output files to params/ folder
+    if (changeSetPath.endsWith('params') || changeSetPath.endsWith('params' + path.sep)) {
+        console.error("ERROR: Cannot run randomize.js directly with params file in params/ folder.");
+        console.error("Please use mod.js instead: npm run mod \"path/to/st.bin\" \"" + paramsFile + "\"");
+        console.error("Or copy the params file to a spoilers directory first.");
+        process.exit(1);
+    }
+    
     let changeSetFile = changeSetPath + path.sep + "changeset.json"
     console.log(params);
 
@@ -1211,6 +1220,35 @@ function randomize(paramsFile, stDir) {
         }*/
     }
 
+    // Task #23: Remove tiles based on percentage parameter
+    // This function randomly removes tiles (floor/wall geometry) from areas
+    // based on the removeTilesPercent parameter.
+    // 
+    // Tiles are the 3D geometry objects that make up the level structure.
+    // Each area has up to 512 tiles (TILE_COUNT = 0x200).
+    // Removing tiles creates holes in floors/walls, making areas more challenging.
+    //
+    // Parameters:
+    //   - removeTilesPercent: 0-100, percentage of tiles to remove
+    //
+    // Example usage in params.json:
+    //   "removeTilesPercent": 50  // Remove 50% of tiles randomly
+    //
+    // Safety: Tiles in "tower" and "void" areas are never removed to prevent softlocks.
+    function removeTiles(tile, area, index) {
+        // Skip tiles in critical areas (tower and void)
+        if (area.name.includes("tower") || area.name.includes("void")) {
+            return;
+        }
+        
+        // Remove tile based on percentage chance
+        var removalChance = params.removeTilesPercent / 100;
+        if (Math.random() < removalChance) {
+            console.log("Remove tiles - removing - " + area.name + " tile " + index);
+            tile.blank();
+        }
+    }
+
     function forEachValidCreature(func) {
         console.log("\n\nDEBUG ------------------ Randomization engine - forEachValidCreature - " + func.name + "\n\n");
         for (var a in areas) {
@@ -1268,6 +1306,20 @@ function randomize(paramsFile, stDir) {
             func(spawn.spawn, spawn.area, spawn.index);
         });
     };
+
+    // Task #23: Add forEachTile function for tile randomization/removal
+    function forEachTile(func) {
+        console.log("\n\nDEBUG ------------------ Randomization engine - forEachTile - " + func.name + "\n\n");
+        for (var a in areas) {
+            var area = areas[a];
+            for (var index = 0; index < TILE_COUNT; index++) {
+                var tile = area.tiles[index];
+                if (!tile.isBlank) {
+                    func(tile, area, index);
+                }
+            }
+        }
+    }
 
     function groupObjectsByKey(objects, params) {
       return objects.reduce((groupedObject, obj) => {
@@ -1428,6 +1480,11 @@ function randomize(paramsFile, stDir) {
 
         if (params.removeScenery) {
             forEachObject(removeSceneryObjects);
+        }
+
+        // Task #23: Remove tiles based on percentage parameter
+        if (params.removeTilesPercent && params.removeTilesPercent > 0) {
+            forEachTile(removeTiles);
         }
 
         // ------- PRESET Directives

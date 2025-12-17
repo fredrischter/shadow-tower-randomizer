@@ -1,0 +1,10 @@
+{
+  "label": "removed10prc-tiles",
+  "preset": "no-change",
+  "difficulty": "medium",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "removeTilesPercent": 10,
+  "seed": "1"
+}
