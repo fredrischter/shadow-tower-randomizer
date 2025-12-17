@@ -1226,39 +1226,38 @@ function randomize(paramsFile, stDir) {
     // 
     // Tiles are the 3D geometry objects that make up the level structure.
     // Each area has up to 512 tiles (TILE_COUNT = 0x200).
-    // Removing tiles creates holes in floors/walls, making areas more challenging.
+    // Removing tiles creates walls/ceiling holes, making areas more challenging.
     //
     // Parameters:
-    //   - removeTilesPercent: 0-100, percentage of tiles to remove
+    //   - removeTilesPercent: 0-100, percentage of eligible tiles to remove
     //
     // Example usage in params.json:
-    //   "removeTilesPercent": 50  // Remove 50% of eligible tiles randomly
+    //   "removeTilesPercent": 30  // Remove 30% of eligible ceiling/wall tiles
     //
     // Safety:
     //   - Tiles in "tower" and "void" areas are never removed to prevent softlocks
-    //   - Only remove tiles with tileY >= 75 (ceiling/decorative only)
-    //   - Tile distribution analysis shows:
-    //     * tileY 64 = 4429 tiles (floor/main structure)
-    //     * tileY 65-74 = ~2200 tiles (walls at player height)
-    //     * tileY 75+ = ~550 tiles (ceiling/decorative - SAFE TO REMOVE)
+    //   - Only remove tiles with posY > 512 (elevated structures)
+    //   - Tiles with posY <= 512 are floor level and never removed
+    //   - This prevents floor holes while allowing wall/ceiling removal
     function removeTiles(tile, area, index) {
         // Skip tiles in critical areas (tower and void)
         if (area.name.includes("tower") || area.name.includes("void")) {
             return;
         }
         
-        // VERY CONSERVATIVE APPROACH: Only remove ceiling/decorative tiles
-        // Based on tile distribution analysis across all 31 areas:
-        // - tileY 64 is the main floor level (4429 tiles)
-        // - tileY 65-74 are walls/structures at player height
-        // - tileY 75+ are ceiling/decorative elements (safe to remove)
+        // SMART APPROACH: Use world position (posY) instead of tile grid (tileY)
+        // Analysis shows:
+        // - posY 0-512: Floor level tiles (player walks here) - NEVER REMOVE
+        // - posY 513+: Elevated structures (walls/ceilings) - SAFE TO REMOVE
+        //
+        // This approach works across all areas regardless of their tileY distribution
         if (!tile.isBlank) {
-            const tileY = tile.tileY.get();
+            const posY = tile.y.get();
             
-            // Ultra-conservative threshold: only remove high decorative tiles
-            // tileY 64-74 = floors/walls at player level - NEVER REMOVE
-            // tileY 75+ = ceiling/decorative - safe to remove
-            if (tileY < 75) {
+            // Only remove elevated tiles (above floor level)
+            // posY <= 512 = floor level - DO NOT REMOVE (prevents fall-through)
+            // posY > 512 = elevated (walls/ceiling) - safe to remove
+            if (posY <= 512) {
                 return;
             }
         }
