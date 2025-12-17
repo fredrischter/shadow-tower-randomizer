@@ -2201,8 +2201,66 @@ function randomize(paramsFile, stDir) {
         }
     });
     
-    // Sort relationships by source and target to enable linknum calculation
-    // This helps neo4jd3 detect and curve multiple links between the same nodes
+    // Task: Merge bidirectional relationships to avoid overlapping arrows
+    // Create a map to track bidirectional pairs
+    var relationshipMap = new Map();
+    var mergedRelationships = [];
+    var processedPairs = new Set();
+    
+    neo4jData.relationships.forEach(function(rel) {
+        var key = rel.startNode + '-' + rel.endNode;
+        var reverseKey = rel.endNode + '-' + rel.startNode;
+        
+        // Check if we've already processed this as part of a bidirectional pair
+        if (processedPairs.has(key)) {
+            return; // Skip, already handled
+        }
+        
+        // Look for the reverse relationship
+        var reverseRel = neo4jData.relationships.find(function(r) {
+            return r.startNode === rel.endNode && r.endNode === rel.startNode;
+        });
+        
+        if (reverseRel) {
+            // Bidirectional relationship found - merge into one with both directions
+            // Use the relationship with lower startNode for consistency
+            var primaryRel = rel.startNode < rel.endNode ? rel : reverseRel;
+            var secondaryRel = rel.startNode < rel.endNode ? reverseRel : rel;
+            
+            // Mark as bidirectional and store both relationship types
+            mergedRelationships.push({
+                id: primaryRel.id,
+                type: primaryRel.type,
+                reverseType: secondaryRel.type,
+                startNode: primaryRel.startNode,
+                endNode: primaryRel.endNode,
+                properties: primaryRel.properties,
+                isBidirectional: true,
+                linknum: 1
+            });
+            
+            // Mark both directions as processed
+            processedPairs.add(key);
+            processedPairs.add(reverseKey);
+        } else {
+            // Unidirectional relationship - keep as is
+            mergedRelationships.push({
+                id: rel.id,
+                type: rel.type,
+                startNode: rel.startNode,
+                endNode: rel.endNode,
+                properties: rel.properties,
+                isBidirectional: false,
+                linknum: 1
+            });
+            processedPairs.add(key);
+        }
+    });
+    
+    // Replace with merged relationships
+    neo4jData.relationships = mergedRelationships;
+    
+    // Sort relationships by source and target for consistent ordering
     neo4jData.relationships.sort(function(a, b) {
         if (a.startNode > b.startNode) return 1;
         if (a.startNode < b.startNode) return -1;
@@ -2211,7 +2269,7 @@ function randomize(paramsFile, stDir) {
         return 0;
     });
     
-    // Assign linknum to enable curved arrows for multiple links
+    // Assign linknum for multiple links between same nodes (rare but possible)
     for (var r = 0; r < neo4jData.relationships.length; r++) {
         if (r === 0) {
             neo4jData.relationships[r].linknum = 1;
