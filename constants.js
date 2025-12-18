@@ -425,11 +425,7 @@ global.logo_files = [
     { index: 231, name: "death_world_gate_of_the_dead" },
 //    { index: 301, name: "void" },
     { index: 401, name: "shadow_tower_part2" },
-    { index: 411, name: "shadow_tower_part3" },
-    { index: 441, name: "wat1" },
-    { index: 451, name: "wat2" },
-    { index: 461, name: "wat3" },
-    { index: 471, name: "wat4" }
+    { index: 411, name: "shadow_tower_part3" }
   ];
   
 global.readableName={

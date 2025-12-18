@@ -778,11 +778,7 @@
             "water_world_white_rain_area": {},
             "illusion_world_dream_domain": {},
             "shadow_tower_part2": {},
-            "shadow_tower_part3": {},
-            "wat1": {},
-            "wat2": {},
-            "wat3": {},
-            "wat4": {}
+            "shadow_tower_part3": {}
           }
 
       // Find lower values

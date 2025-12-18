@@ -1382,28 +1382,4 @@ global.GAME_DATA={"items":[
   "spawn_3e":{"chance":100,"name":"03_door"             ,"tileId":"486"            ,"x":0         ,"y":0         ,"z":252       ,"group":20,"drop":[]},
 }, "collectables":{
 }},
- {"name":"wat1", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100, "attack1":    0, "attack2":    0, "magic1":    1, "height":    0, "weight":    0, "something3":65280, "something4":18431, "weaponDefense1":    0, "weaponDefense2":    0, "weaponDefense3":    0, "magDefense1":    0, "magDefense2":    0, "magDefense3":    0, "magDefense4":    0, "magDefense5":    0, "attacks": [],"isDoor":false,"randomizationGroup": "null"},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"1"              ,"x":0         ,"y":0         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
- {"name":"wat2", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100, "attack1":    0, "attack2":    0, "magic1":    2, "height":    0, "weight":    0, "something3":65280, "something4":29439, "weaponDefense1":    0, "weaponDefense2":    0, "weaponDefense3":    0, "magDefense1":    0, "magDefense2":    0, "magDefense3":    0, "magDefense4":    0, "magDefense5":    0, "attacks": [],"isDoor":false,"randomizationGroup": "null"},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"0"              ,"x":0         ,"y":0         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
- {"name":"wat3", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100, "attack1":    0, "attack2":    0, "magic1":    3, "height":    0, "weight":    0, "something3":65280, "something4":18943, "weaponDefense1":    0, "weaponDefense2":    0, "weaponDefense3":    0, "magDefense1":    0, "magDefense2":    0, "magDefense3":    0, "magDefense4":    0, "magDefense5":    0, "attacks": [],"isDoor":false,"randomizationGroup": "null"},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"0"              ,"x":0         ,"y":2         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
- {"name":"wat4", "creatures":[
-  {"name":"00_blank"             , "str":    0, "spd":    0, "def":    0, "bal":    0, "sla":    0, "smh":    0, "pir":    0, "spr":    0, "foc":    0, "ham":    0, "pur":    0, "par":    0, "mel":    0, "sol":    0, "hp":  100, "attack1":    0, "attack2":    0, "magic1":    4, "height":    0, "weight":    0, "something3":65280, "something4":25343, "weaponDefense1":    0, "weaponDefense2":    0, "weaponDefense3":    0, "magDefense1":    0, "magDefense2":    0, "magDefense3":    0, "magDefense4":    0, "magDefense5":    0, "attacks": [],"isDoor":false,"randomizationGroup": "null"},
-], "spawns":{
-  "spawn_0" :{"chance":100,"name":"00_blank"            ,"tileId":"0"              ,"x":0         ,"y":2         ,"z":0         ,"group":0,"drop":[]},
-}, "collectables":{
-}},
 ]};
