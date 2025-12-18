@@ -1100,6 +1100,12 @@
         if (!att.isNull()) {
           this.attack3 = att;
         }
+        
+        // Task: Add creature movement/rotation speed parameters
+        // Offset 0x03: Animation/Action Speed Timer (lower value = slower actions)
+        // Offset 0x08: Movement Speed (higher value = faster movement)
+        this.actionSpeedTimer = new UInt8(this.bin, this.offset_in_file + 0x03);
+        this.movementSpeed = new UInt8(this.bin, this.offset_in_file + 0x08);
       }
   }
 
