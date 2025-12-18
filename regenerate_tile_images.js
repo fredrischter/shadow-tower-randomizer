@@ -127,14 +127,16 @@ jsonFiles.forEach((jsonFile, index) => {
                 ctx.fillText(tileZ.toString(), margin - 5, margin + z * baseTileSize);
             }
             
-            // Draw tiles with fine positioning offsets
+            // Pre-calculate positions and group overlapping tiles
+            const tilePositions = [];
+            const positionGroups = {};
+            
             nonBlankTiles.forEach(tile => {
                 // Major position: tile grid coordinates
                 const gridX = margin + (tile.tileX - minTileX) * baseTileSize + baseTileSize / 2;
                 const gridZ = margin + (tile.tileZ - minTileZ) * baseTileSize + baseTileSize / 2;
                 
                 // Minor position: world coordinate offset within the tile
-                // Calculate offset as percentage of tile's world coordinate range
                 const key = `${tile.tileX}_${tile.tileZ}`;
                 const range = tileWorldRanges[key];
                 const worldRangeX = range.maxPosX - range.minPosX;
@@ -153,49 +155,103 @@ jsonFiles.forEach((jsonFile, index) => {
                 const x = gridX + offsetX;
                 const z = gridZ + offsetZ;
                 
-                // Object size (smaller than grid tile to fit multiple objects)
+                // Group by position (rounded to detect overlaps)
+                const posKey = `${Math.round(x)}_${Math.round(z)}`;
+                if (!positionGroups[posKey]) {
+                    positionGroups[posKey] = [];
+                }
+                positionGroups[posKey].push({ tile, x, z });
+                
+                tilePositions.push({ tile, x, z });
+            });
+            
+            // Draw tiles with overlap handling
+            const overlapMarkers = [];
+            Object.values(positionGroups).forEach(group => {
                 const objSize = Math.min(24, baseTileSize * 0.35);
                 
-                // Color based on posY (height/elevation)
-                const heightNorm = heightRange > 0 ? (tile.posY - minPosY) / heightRange : 0.5;
-                const hue = 180 + heightNorm * 120; // Blue (low) to green (high)
-                const saturation = 70;
-                const lightness = 45 + heightNorm * 25;
-                
-                // Draw object circle
-                ctx.fillStyle = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-                ctx.beginPath();
-                ctx.arc(x, z, objSize / 2, 0, 2 * Math.PI);
-                ctx.fill();
-                
-                // Draw border
-                ctx.strokeStyle = '#ffffff';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-                
-                // Draw rotation indicator (small line from center)
-                if (tile.rotationZ > 0) {
-                    const angle = (tile.rotationZ / 65536) * 2 * Math.PI;
-                    const lineLength = objSize / 2;
-                    ctx.strokeStyle = '#ffff00';
-                    ctx.lineWidth = 2;
+                if (group.length === 1) {
+                    // Single object - draw normally
+                    const { tile, x, z } = group[0];
+                    
+                    // Color based on posY (height/elevation)
+                    const heightNorm = heightRange > 0 ? (tile.posY - minPosY) / heightRange : 0.5;
+                    const hue = 180 + heightNorm * 120;
+                    const saturation = 70;
+                    const lightness = 45 + heightNorm * 25;
+                    
+                    ctx.fillStyle = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
                     ctx.beginPath();
-                    ctx.moveTo(x, z);
-                    ctx.lineTo(x + Math.cos(angle) * lineLength, z + Math.sin(angle) * lineLength);
+                    ctx.arc(x, z, objSize / 2, 0, 2 * Math.PI);
+                    ctx.fill();
+                    
+                    ctx.strokeStyle = '#ffffff';
+                    ctx.lineWidth = 2;
                     ctx.stroke();
+                    
+                    // Draw rotation indicator
+                    if (tile.rotationZ > 0) {
+                        const angle = (tile.rotationZ / 65536) * 2 * Math.PI;
+                        const lineLength = objSize / 2;
+                        ctx.strokeStyle = '#ffff00';
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.moveTo(x, z);
+                        ctx.lineTo(x + Math.cos(angle) * lineLength, z + Math.sin(angle) * lineLength);
+                        ctx.stroke();
+                    }
+                    
+                    // Draw object index number
+                    ctx.fillStyle = '#ffffff';
+                    ctx.strokeStyle = '#000000';
+                    ctx.lineWidth = 3;
+                    ctx.font = `bold ${Math.min(12, objSize * 0.5)}px Arial`;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    
+                    ctx.strokeText(tile.index.toString(), x, z);
+                    ctx.fillText(tile.index.toString(), x, z);
+                } else {
+                    // Multiple objects at same position - use marker with legend
+                    const centerX = group.reduce((sum, g) => sum + g.x, 0) / group.length;
+                    const centerZ = group.reduce((sum, g) => sum + g.z, 0) / group.length;
+                    
+                    // Draw larger circle with asterisk
+                    const avgHeightNorm = group.reduce((sum, g) => {
+                        return sum + (heightRange > 0 ? (g.tile.posY - minPosY) / heightRange : 0.5);
+                    }, 0) / group.length;
+                    const hue = 180 + avgHeightNorm * 120;
+                    
+                    ctx.fillStyle = `hsl(${hue}, 70%, 50%)`;
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerZ, objSize / 2, 0, 2 * Math.PI);
+                    ctx.fill();
+                    
+                    ctx.strokeStyle = '#ffff00';  // Yellow border for overlaps
+                    ctx.lineWidth = 3;
+                    ctx.stroke();
+                    
+                    // Draw asterisk marker
+                    ctx.fillStyle = '#ffffff';
+                    ctx.strokeStyle = '#000000';
+                    ctx.lineWidth = 3;
+                    ctx.font = `bold ${Math.min(14, objSize * 0.6)}px Arial`;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    
+                    const markerIndex = overlapMarkers.length + 1;
+                    const markerText = `*${markerIndex}`;
+                    ctx.strokeText(markerText, centerX, centerZ);
+                    ctx.fillText(markerText, centerX, centerZ);
+                    
+                    // Store for legend
+                    overlapMarkers.push({
+                        index: markerIndex,
+                        tiles: group.map(g => g.tile),
+                        x: centerX,
+                        z: centerZ
+                    });
                 }
-                
-                // Draw object index number
-                ctx.fillStyle = '#ffffff';
-                ctx.strokeStyle = '#000000';
-                ctx.lineWidth = 3;
-                ctx.font = `bold ${Math.min(12, objSize * 0.5)}px Arial`;
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                
-                const text = tile.index.toString();
-                ctx.strokeText(text, x, z);
-                ctx.fillText(text, x, z);
             });
             
             // Draw title and info
@@ -242,6 +298,52 @@ jsonFiles.forEach((jsonFile, index) => {
             ctx.fillText(`Low (${minPosY})`, legendX, legendY + 67);
             ctx.textAlign = 'right';
             ctx.fillText(`High (${maxPosY})`, legendX + legendBarWidth, legendY + 67);
+            
+            // Draw overlap markers legend if there are any overlaps
+            if (overlapMarkers.length > 0) {
+                const overlapLegendX = canvasWidth - 250;
+                const overlapLegendY = margin + 20;
+                const boxWidth = 240;
+                const lineHeight = 16;
+                
+                // Calculate box height
+                let totalLines = 1; // Title
+                overlapMarkers.forEach(marker => {
+                    totalLines += 1 + marker.tiles.length; // Marker header + tile IDs
+                });
+                const boxHeight = totalLines * lineHeight + 20;
+                
+                // Draw semi-transparent background box
+                ctx.fillStyle = 'rgba(10, 10, 10, 0.85)';
+                ctx.fillRect(overlapLegendX - 10, overlapLegendY - 10, boxWidth, boxHeight);
+                ctx.strokeStyle = '#ffff00';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(overlapLegendX - 10, overlapLegendY - 10, boxWidth, boxHeight);
+                
+                // Draw title
+                ctx.fillStyle = '#ffff00';
+                ctx.font = 'bold 12px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText('Overlapping Objects:', overlapLegendX, overlapLegendY);
+                
+                let yPos = overlapLegendY + lineHeight + 5;
+                
+                // Draw each marker group
+                overlapMarkers.forEach(marker => {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = 'bold 11px Arial';
+                    ctx.fillText(`*${marker.index} (${marker.tiles.length} objects):`, overlapLegendX, yPos);
+                    yPos += lineHeight;
+                    
+                    // List IDs vertically
+                    ctx.font = '10px Arial';
+                    ctx.fillStyle = '#aaaaaa';
+                    marker.tiles.forEach(tile => {
+                        ctx.fillText(`  • ID ${tile.index}`, overlapLegendX + 10, yPos);
+                        yPos += lineHeight;
+                    });
+                });
+            }
             
             // Save image
             const imageBuffer = canvas.toBuffer('image/png');
