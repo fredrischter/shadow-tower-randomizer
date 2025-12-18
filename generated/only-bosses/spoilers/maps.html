@@ -24,7 +24,7 @@
             height: 800px;
             border: 2px solid #8b4513;
             border-radius: 10px;
-            background: #0a0a0a;
+            background: #ffffff;
             margin-bottom: 40px;
         }
         
@@ -2451,179 +2451,185 @@ var neo4jGraphData = {
             "relationships": [
               {
                 "id": "0",
-                "type": "EXIT",
+                "type": "Tower Top - Church",
+                "reverseType": "Church - Tower Top",
                 "startNode": "0",
                 "endNode": "1",
                 "properties": {
                   "exitId": "0",
                   "exitName": "Tower Top",
                   "details": "r0 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "1",
-                "type": "EXIT",
-                "startNode": "2",
+                "id": "22",
+                "type": "Skeleton - Jail",
+                "reverseType": "Jail - Skeleton",
+                "startNode": "1",
+                "endNode": "23",
+                "properties": {
+                  "exitId": "31",
+                  "exitName": "Skeleton",
+                  "details": "r0 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "24",
+                "type": "Grave - Entrance",
+                "reverseType": "Entrance - Grave",
+                "startNode": "1",
                 "endNode": "3",
                 "properties": {
-                  "exitId": "4",
-                  "exitName": "Edge",
-                  "details": "r3 y8"
-                }
+                  "exitId": "35",
+                  "exitName": "Grave",
+                  "details": "r2 y-17"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "2",
-                "type": "EXIT",
-                "startNode": "2",
-                "endNode": "4",
-                "properties": {
-                  "exitId": "8",
-                  "exitName": "Middle",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "3",
-                "type": "JUMP",
-                "startNode": "2",
-                "endNode": "5",
-                "properties": {
-                  "exitId": "jump",
-                  "exitName": "Jump",
-                  "details": ""
-                }
-              },
-              {
-                "id": "4",
-                "type": "EXIT",
-                "startNode": "5",
-                "endNode": "4",
-                "properties": {
-                  "exitId": "5",
-                  "exitName": "Top",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "5",
-                "type": "EXIT",
-                "startNode": "5",
-                "endNode": "6",
-                "properties": {
-                  "exitId": "11",
-                  "exitName": "Bottom Middle",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "6",
-                "type": "EXIT",
-                "startNode": "5",
-                "endNode": "7",
-                "properties": {
-                  "exitId": "9",
-                  "exitName": "Bottom Edge",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "7",
-                "type": "EXIT",
-                "startNode": "8",
-                "endNode": "9",
-                "properties": {
-                  "exitId": "0",
-                  "exitName": "Top left",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "8",
-                "type": "EXIT",
-                "startNode": "8",
-                "endNode": "10",
-                "properties": {
-                  "exitId": "5",
-                  "exitName": "Edge",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "9",
-                "type": "JUMP",
-                "startNode": "8",
+                "id": "50",
+                "type": "Exit - Top right",
+                "reverseType": "Top right - Exit",
+                "startNode": "10",
                 "endNode": "11",
                 "properties": {
-                  "exitId": "jump",
-                  "exitName": "Jump",
-                  "details": ""
-                }
+                  "exitId": "1",
+                  "exitName": "Exit",
+                  "details": "r1 y-8"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "49",
+                "type": "Entrance - Edge",
+                "reverseType": "Edge - Entrance",
+                "startNode": "10",
+                "endNode": "8",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Entrance",
+                  "details": "r1 y-8"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "10",
-                "type": "EXIT",
+                "type": "Bottom - Entrance",
+                "reverseType": "Entrance - Bottom",
                 "startNode": "11",
                 "endNode": "12",
                 "properties": {
                   "exitId": "9",
                   "exitName": "Bottom",
                   "details": "r1 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "11",
-                "type": "EXIT",
+                "type": "Top Middle - Entrance",
+                "reverseType": "Entrance - Top Middle",
                 "startNode": "11",
                 "endNode": "13",
                 "properties": {
                   "exitId": "7",
                   "exitName": "Top Middle",
                   "details": "r3 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "12",
-                "type": "EXIT",
-                "startNode": "11",
-                "endNode": "10",
+                "id": "61",
+                "type": "Flush down - Top right",
+                "reverseType": "Top right - Flush down",
+                "startNode": "12",
+                "endNode": "14",
                 "properties": {
-                  "exitId": "4",
-                  "exitName": "Top right",
-                  "details": "r3 y0"
-                }
+                  "exitId": "11",
+                  "exitName": "Flush down",
+                  "details": "r3 y-8"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "13",
-                "type": "EXIT",
-                "startNode": "14",
-                "endNode": "12",
+                "id": "62",
+                "type": "Totem - Totem",
+                "reverseType": "Totem - Totem",
+                "startNode": "12",
+                "endNode": "19",
                 "properties": {
-                  "exitId": "0",
-                  "exitName": "Top right",
-                  "details": "r1 y0"
-                }
+                  "exitId": "14",
+                  "exitName": "Totem",
+                  "details": "r3 y3"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "52",
+                "type": "Platform - Platform",
+                "reverseType": "Platform - Platform",
+                "startNode": "13",
+                "endNode": "27",
+                "properties": {
+                  "exitId": "94",
+                  "exitName": "Platform",
+                  "details": "r0 y1"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "53",
+                "type": "Room - Cerberus",
+                "reverseType": "Cerberus - Room",
+                "startNode": "13",
+                "endNode": "28",
+                "properties": {
+                  "exitId": "93",
+                  "exitName": "Room",
+                  "details": "r0 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "14",
-                "type": "EXIT",
+                "type": "Top left - Entrance",
+                "reverseType": "Entrance - Top left",
                 "startNode": "14",
                 "endNode": "15",
                 "properties": {
                   "exitId": "3",
                   "exitName": "Top left",
                   "details": "r0 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "15",
-                "type": "EXIT",
+                "type": "Bottom - Entrance",
+                "reverseType": "Entrance - Bottom",
                 "startNode": "14",
                 "endNode": "16",
                 "properties": {
                   "exitId": "9",
                   "exitName": "Bottom",
                   "details": "r2 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "16",
@@ -2634,40 +2640,93 @@ var neo4jGraphData = {
                   "exitId": "jump",
                   "exitName": "Jump",
                   "details": ""
-                }
+                },
+                "isBidirectional": false,
+                "linknum": 1
+              },
+              {
+                "id": "58",
+                "type": "Pool - Entrance",
+                "reverseType": "Entrance - Pool",
+                "startNode": "15",
+                "endNode": "29",
+                "properties": {
+                  "exitId": "5",
+                  "exitName": "Pool",
+                  "details": "r1 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "74",
+                "type": "Totem - Totem",
+                "reverseType": "Totem - Totem",
+                "startNode": "16",
+                "endNode": "30",
+                "properties": {
+                  "exitId": "10",
+                  "exitName": "Totem",
+                  "details": "r0 y3"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "72",
+                "type": "Ladder down - Entrance",
+                "reverseType": "Entrance - Ladder down",
+                "startNode": "16",
+                "endNode": "32",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Ladder down",
+                  "details": "r3 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "17",
-                "type": "EXIT",
+                "type": "Bottom middle - Entrance",
+                "reverseType": "Entrance - Bottom middle",
                 "startNode": "17",
                 "endNode": "18",
                 "properties": {
                   "exitId": "5",
                   "exitName": "Bottom middle",
                   "details": "r1 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "18",
-                "type": "EXIT",
+                "type": "Top edge - Entrance",
+                "reverseType": "Entrance - Top edge",
                 "startNode": "17",
                 "endNode": "19",
                 "properties": {
                   "exitId": "7",
                   "exitName": "Top edge",
                   "details": "r0 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "19",
-                "type": "EXIT",
+                "type": "Bottom end - Entrance",
+                "reverseType": "Entrance - Bottom end",
                 "startNode": "17",
                 "endNode": "20",
                 "properties": {
                   "exitId": "13",
                   "exitName": "Bottom end",
                   "details": "r2 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "20",
@@ -2678,810 +2737,371 @@ var neo4jGraphData = {
                   "exitId": "jump",
                   "exitName": "Jump",
                   "details": ""
-                }
-              },
-              {
-                "id": "21",
-                "type": "EXIT",
-                "startNode": "21",
-                "endNode": "22",
-                "properties": {
-                  "exitId": "10",
-                  "exitName": "Fence",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "22",
-                "type": "EXIT",
-                "startNode": "1",
-                "endNode": "23",
-                "properties": {
-                  "exitId": "31",
-                  "exitName": "Skeleton",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "23",
-                "type": "EXIT",
-                "startNode": "1",
-                "endNode": "23",
-                "properties": {
-                  "exitId": "34",
-                  "exitName": "Cemetery",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "24",
-                "type": "EXIT",
-                "startNode": "1",
-                "endNode": "3",
-                "properties": {
-                  "exitId": "35",
-                  "exitName": "Grave",
-                  "details": "r2 y-17"
-                }
-              },
-              {
-                "id": "25",
-                "type": "EXIT",
-                "startNode": "1",
-                "endNode": "0",
-                "properties": {
-                  "exitId": "38",
-                  "exitName": "Church",
-                  "details": "r0 y-8"
-                }
-              },
-              {
-                "id": "26",
-                "type": "EXIT",
-                "startNode": "23",
-                "endNode": "1",
-                "properties": {
-                  "exitId": "9",
-                  "exitName": "Jail",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "27",
-                "type": "EXIT",
-                "startNode": "23",
-                "endNode": "1",
-                "properties": {
-                  "exitId": "13",
-                  "exitName": "Corridor",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "28",
-                "type": "EXIT",
-                "startNode": "23",
-                "endNode": "4",
-                "properties": {
-                  "exitId": "26",
-                  "exitName": "Totem",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "29",
-                "type": "EXIT",
-                "startNode": "3",
-                "endNode": "1",
-                "properties": {
-                  "exitId": "3",
-                  "exitName": "Entrance",
-                  "details": "r2 y0"
-                }
-              },
-              {
-                "id": "30",
-                "type": "EXIT",
-                "startNode": "3",
-                "endNode": "2",
-                "properties": {
-                  "exitId": "31",
-                  "exitName": "Guardian side",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "31",
-                "type": "EXIT",
-                "startNode": "4",
-                "endNode": "2",
-                "properties": {
-                  "exitId": "34",
-                  "exitName": "Exit",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "32",
-                "type": "EXIT",
-                "startNode": "4",
-                "endNode": "5",
-                "properties": {
-                  "exitId": "37",
-                  "exitName": "Jump down",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "33",
-                "type": "EXIT",
-                "startNode": "4",
-                "endNode": "23",
-                "properties": {
-                  "exitId": "18",
-                  "exitName": "Totem",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "34",
-                "type": "EXIT",
-                "startNode": "4",
-                "endNode": "9",
-                "properties": {
-                  "exitId": "41",
-                  "exitName": "Drop in",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "35",
-                "type": "EXIT",
-                "startNode": "6",
-                "endNode": "5",
-                "properties": {
-                  "exitId": "13",
-                  "exitName": "Entrance",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "36",
-                "type": "EXIT",
-                "startNode": "24",
-                "endNode": "7",
-                "properties": {
-                  "exitId": "4",
-                  "exitName": "Entrance",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "37",
-                "type": "EXIT",
-                "startNode": "24",
-                "endNode": "9",
-                "properties": {
-                  "exitId": "7",
-                  "exitName": "Exit",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "38",
-                "type": "EXIT",
-                "startNode": "25",
-                "endNode": "7",
-                "properties": {
-                  "exitId": "3",
-                  "exitName": "Entrance",
-                  "details": "r2 y0"
-                }
-              },
-              {
-                "id": "39",
-                "type": "EXIT",
-                "startNode": "7",
-                "endNode": "24",
-                "properties": {
-                  "exitId": "13",
-                  "exitName": "Poison",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "40",
-                "type": "EXIT",
-                "startNode": "7",
-                "endNode": "25",
-                "properties": {
-                  "exitId": "10",
-                  "exitName": "Rock guy",
-                  "details": "r2 y0"
-                }
-              },
-              {
-                "id": "41",
-                "type": "EXIT",
-                "startNode": "7",
-                "endNode": "5",
-                "properties": {
-                  "exitId": "17",
-                  "exitName": "Entrance",
-                  "details": "r0 y-8"
-                }
-              },
-              {
-                "id": "42",
-                "type": "EXIT",
-                "startNode": "9",
-                "endNode": "24",
-                "properties": {
-                  "exitId": "3",
-                  "exitName": "Entrance",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "43",
-                "type": "EXIT",
-                "startNode": "9",
-                "endNode": "26",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Bridge",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "44",
-                "type": "EXIT",
-                "startNode": "9",
-                "endNode": "8",
-                "properties": {
-                  "exitId": "11",
-                  "exitName": "Exit",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "45",
-                "type": "EXIT",
-                "startNode": "9",
-                "endNode": "26",
-                "properties": {
-                  "exitId": "19",
-                  "exitName": "Jump in",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "46",
-                "type": "EXIT",
-                "startNode": "9",
-                "endNode": "4",
-                "properties": {
-                  "exitId": "16",
-                  "exitName": "Totem",
-                  "details": "r0 y1"
-                }
-              },
-              {
-                "id": "47",
-                "type": "EXIT",
-                "startNode": "26",
-                "endNode": "9",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Entrance",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "48",
-                "type": "EXIT",
-                "startNode": "26",
-                "endNode": "9",
-                "properties": {
-                  "exitId": "3",
-                  "exitName": "Boss room",
-                  "details": "r0 y1"
-                }
-              },
-              {
-                "id": "49",
-                "type": "EXIT",
-                "startNode": "10",
-                "endNode": "8",
-                "properties": {
-                  "exitId": "0",
-                  "exitName": "Entrance",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "50",
-                "type": "EXIT",
-                "startNode": "10",
-                "endNode": "11",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Exit",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "51",
-                "type": "EXIT",
-                "startNode": "13",
-                "endNode": "11",
-                "properties": {
-                  "exitId": "37",
-                  "exitName": "Entrance",
-                  "details": "r1 y-8"
-                }
-              },
-              {
-                "id": "52",
-                "type": "EXIT",
-                "startNode": "13",
-                "endNode": "27",
-                "properties": {
-                  "exitId": "94",
-                  "exitName": "Platform",
-                  "details": "r0 y1"
-                }
-              },
-              {
-                "id": "53",
-                "type": "EXIT",
-                "startNode": "13",
-                "endNode": "28",
-                "properties": {
-                  "exitId": "93",
-                  "exitName": "Room",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "54",
-                "type": "EXIT",
-                "startNode": "27",
-                "endNode": "28",
-                "properties": {
-                  "exitId": "27",
-                  "exitName": "Abraxus",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "55",
-                "type": "EXIT",
-                "startNode": "27",
-                "endNode": "13",
-                "properties": {
-                  "exitId": "19",
-                  "exitName": "Platform",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "56",
-                "type": "EXIT",
-                "startNode": "28",
-                "endNode": "13",
-                "properties": {
-                  "exitId": "17",
-                  "exitName": "Cerberus",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "57",
-                "type": "EXIT",
-                "startNode": "28",
-                "endNode": "27",
-                "properties": {
-                  "exitId": "6",
-                  "exitName": "Start",
-                  "details": "r0 y2"
-                }
-              },
-              {
-                "id": "58",
-                "type": "EXIT",
-                "startNode": "15",
-                "endNode": "29",
-                "properties": {
-                  "exitId": "5",
-                  "exitName": "Pool",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "59",
-                "type": "EXIT",
-                "startNode": "15",
-                "endNode": "14",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Entrance",
-                  "details": "r0 y-8"
-                }
-              },
-              {
-                "id": "60",
-                "type": "EXIT",
-                "startNode": "12",
-                "endNode": "11",
-                "properties": {
-                  "exitId": "9",
-                  "exitName": "Entrance",
-                  "details": "r3 y-8"
-                }
-              },
-              {
-                "id": "61",
-                "type": "EXIT",
-                "startNode": "12",
-                "endNode": "14",
-                "properties": {
-                  "exitId": "11",
-                  "exitName": "Flush down",
-                  "details": "r3 y-8"
-                }
-              },
-              {
-                "id": "62",
-                "type": "EXIT",
-                "startNode": "12",
-                "endNode": "19",
-                "properties": {
-                  "exitId": "14",
-                  "exitName": "Totem",
-                  "details": "r3 y3"
-                }
-              },
-              {
-                "id": "63",
-                "type": "EXIT",
-                "startNode": "29",
-                "endNode": "30",
-                "properties": {
-                  "exitId": "9",
-                  "exitName": "Exit",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "64",
-                "type": "EXIT",
-                "startNode": "29",
-                "endNode": "15",
-                "properties": {
-                  "exitId": "4",
-                  "exitName": "Entrance",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "65",
-                "type": "EXIT",
-                "startNode": "30",
-                "endNode": "29",
-                "properties": {
-                  "exitId": "4",
-                  "exitName": "Entrance",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "66",
-                "type": "EXIT",
-                "startNode": "30",
-                "endNode": "16",
-                "properties": {
-                  "exitId": "6",
-                  "exitName": "Totem",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "67",
-                "type": "EXIT",
-                "startNode": "18",
-                "endNode": "17",
-                "properties": {
-                  "exitId": "9",
-                  "exitName": "Entrance",
-                  "details": "r3 y-8"
-                }
+                },
+                "isBidirectional": false,
+                "linknum": 1
               },
               {
                 "id": "68",
-                "type": "EXIT",
+                "type": "Totem - Totem",
+                "reverseType": "Totem - Totem",
                 "startNode": "18",
                 "endNode": "31",
                 "properties": {
                   "exitId": "10",
                   "exitName": "Totem",
                   "details": "r2 y2"
-                }
-              },
-              {
-                "id": "69",
-                "type": "EXIT",
-                "startNode": "19",
-                "endNode": "17",
-                "properties": {
-                  "exitId": "0",
-                  "exitName": "Entrance",
-                  "details": "r0 y-8"
-                }
-              },
-              {
-                "id": "70",
-                "type": "EXIT",
-                "startNode": "19",
-                "endNode": "12",
-                "properties": {
-                  "exitId": "3",
-                  "exitName": "Totem",
-                  "details": "r1 y2"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "71",
-                "type": "EXIT",
+                "type": "Necron - Lower totem",
+                "reverseType": "Lower totem - Necron",
                 "startNode": "19",
                 "endNode": "20",
                 "properties": {
                   "exitId": "6",
                   "exitName": "Necron",
                   "details": "r2 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "72",
-                "type": "EXIT",
-                "startNode": "16",
-                "endNode": "32",
+                "id": "1",
+                "type": "Edge - Guardian side",
+                "reverseType": "Guardian side - Edge",
+                "startNode": "2",
+                "endNode": "3",
                 "properties": {
-                  "exitId": "3",
-                  "exitName": "Ladder down",
-                  "details": "r3 y0"
-                }
+                  "exitId": "4",
+                  "exitName": "Edge",
+                  "details": "r3 y8"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "73",
-                "type": "EXIT",
-                "startNode": "16",
-                "endNode": "14",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Entrance",
-                  "details": "r2 y-8"
-                }
-              },
-              {
-                "id": "74",
-                "type": "EXIT",
-                "startNode": "16",
-                "endNode": "30",
-                "properties": {
-                  "exitId": "10",
-                  "exitName": "Totem",
-                  "details": "r0 y3"
-                }
-              },
-              {
-                "id": "75",
-                "type": "EXIT",
-                "startNode": "32",
-                "endNode": "33",
-                "properties": {
-                  "exitId": "20",
-                  "exitName": "Exit",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "76",
-                "type": "EXIT",
-                "startNode": "32",
-                "endNode": "16",
-                "properties": {
-                  "exitId": "18",
-                  "exitName": "Entrance",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "77",
-                "type": "EXIT",
-                "startNode": "33",
-                "endNode": "32",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Entrance",
-                  "details": "r3 y0"
-                }
-              },
-              {
-                "id": "78",
-                "type": "EXIT",
-                "startNode": "33",
-                "endNode": "33",
-                "properties": {
-                  "exitId": "6",
-                  "exitName": "Connection",
-                  "details": "r0 y2"
-                }
-              },
-              {
-                "id": "79",
-                "type": "EXIT",
-                "startNode": "33",
-                "endNode": "31",
-                "properties": {
-                  "exitId": "10",
-                  "exitName": "Exit",
-                  "details": "r2 y0"
-                }
-              },
-              {
-                "id": "80",
-                "type": "EXIT",
-                "startNode": "33",
-                "endNode": "33",
+                "id": "2",
+                "type": "Middle - Exit",
+                "reverseType": "Exit - Middle",
+                "startNode": "2",
+                "endNode": "4",
                 "properties": {
                   "exitId": "8",
-                  "exitName": "To Boss",
-                  "details": "r0 y0"
-                }
-              },
-              {
-                "id": "81",
-                "type": "EXIT",
-                "startNode": "31",
-                "endNode": "18",
-                "properties": {
-                  "exitId": "4",
-                  "exitName": "Totem",
-                  "details": "r2 y0"
-                }
-              },
-              {
-                "id": "82",
-                "type": "EXIT",
-                "startNode": "31",
-                "endNode": "33",
-                "properties": {
-                  "exitId": "3",
-                  "exitName": "Entrance",
-                  "details": "r2 y0"
-                }
-              },
-              {
-                "id": "83",
-                "type": "EXIT",
-                "startNode": "22",
-                "endNode": "21",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Door",
-                  "details": "r3 y-8"
-                }
-              },
-              {
-                "id": "84",
-                "type": "EXIT",
-                "startNode": "22",
-                "endNode": "20",
-                "properties": {
-                  "exitId": "2",
-                  "exitName": "Box room",
-                  "details": "r3 y2"
-                }
-              },
-              {
-                "id": "85",
-                "type": "EXIT",
-                "startNode": "34",
-                "endNode": "35",
-                "properties": {
-                  "exitId": "1",
-                  "exitName": "Entrance",
-                  "details": "r0 y-8"
-                }
-              },
-              {
-                "id": "86",
-                "type": "EXIT",
-                "startNode": "34",
-                "endNode": "20",
-                "properties": {
-                  "exitId": "4",
-                  "exitName": "Totem",
+                  "exitName": "Middle",
                   "details": "r3 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "87",
-                "type": "EXIT",
-                "startNode": "20",
-                "endNode": "35",
+                "id": "3",
+                "type": "JUMP",
+                "startNode": "2",
+                "endNode": "5",
                 "properties": {
-                  "exitId": "0",
-                  "exitName": "Prison",
-                  "details": "r1 y0"
-                }
-              },
-              {
-                "id": "88",
-                "type": "EXIT",
-                "startNode": "20",
-                "endNode": "17",
-                "properties": {
-                  "exitId": "2",
-                  "exitName": "Entrance",
-                  "details": "r2 y-8"
-                }
-              },
-              {
-                "id": "89",
-                "type": "EXIT",
-                "startNode": "20",
-                "endNode": "19",
-                "properties": {
-                  "exitId": "4",
-                  "exitName": "Lower totem",
-                  "details": "r2 y2"
-                }
+                  "exitId": "jump",
+                  "exitName": "Jump",
+                  "details": ""
+                },
+                "isBidirectional": false,
+                "linknum": 1
               },
               {
                 "id": "90",
-                "type": "EXIT",
+                "type": "Upper totem 1 - Box room",
+                "reverseType": "Box room - Upper totem 1",
                 "startNode": "20",
                 "endNode": "22",
                 "properties": {
                   "exitId": "7",
                   "exitName": "Upper totem 1",
                   "details": "r1 y3"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
                 "id": "91",
-                "type": "EXIT",
+                "type": "Upper totem 2 - Totem",
+                "reverseType": "Totem - Upper totem 2",
                 "startNode": "20",
                 "endNode": "34",
                 "properties": {
                   "exitId": "10",
                   "exitName": "Upper totem 2",
                   "details": "r1 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "92",
-                "type": "EXIT",
-                "startNode": "35",
-                "endNode": "34",
+                "id": "87",
+                "type": "Prison - Entrance",
+                "reverseType": "Entrance - Prison",
+                "startNode": "20",
+                "endNode": "35",
                 "properties": {
-                  "exitId": "12",
-                  "exitName": "King's room",
-                  "details": "r0 y0"
-                }
+                  "exitId": "0",
+                  "exitName": "Prison",
+                  "details": "r1 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               },
               {
-                "id": "93",
-                "type": "EXIT",
-                "startNode": "35",
-                "endNode": "20",
+                "id": "21",
+                "type": "Fence - Door",
+                "reverseType": "Door - Fence",
+                "startNode": "21",
+                "endNode": "22",
                 "properties": {
-                  "exitId": "15",
+                  "exitId": "10",
+                  "exitName": "Fence",
+                  "details": "r1 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "28",
+                "type": "Totem - Totem",
+                "reverseType": "Totem - Totem",
+                "startNode": "23",
+                "endNode": "4",
+                "properties": {
+                  "exitId": "26",
+                  "exitName": "Totem",
+                  "details": "r0 y3"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "36",
+                "type": "Entrance - Poison",
+                "reverseType": "Poison - Entrance",
+                "startNode": "24",
+                "endNode": "7",
+                "properties": {
+                  "exitId": "4",
                   "exitName": "Entrance",
+                  "details": "r0 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "37",
+                "type": "Exit - Entrance",
+                "reverseType": "Entrance - Exit",
+                "startNode": "24",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "7",
+                  "exitName": "Exit",
                   "details": "r3 y0"
-                }
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "38",
+                "type": "Entrance - Rock guy",
+                "reverseType": "Rock guy - Entrance",
+                "startNode": "25",
+                "endNode": "7",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Entrance",
+                  "details": "r2 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "47",
+                "type": "Entrance - Bridge",
+                "reverseType": "Bridge - Entrance",
+                "startNode": "26",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r1 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "54",
+                "type": "Abraxus - Start",
+                "reverseType": "Start - Abraxus",
+                "startNode": "27",
+                "endNode": "28",
+                "properties": {
+                  "exitId": "27",
+                  "exitName": "Abraxus",
+                  "details": "r0 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "63",
+                "type": "Exit - Entrance",
+                "reverseType": "Entrance - Exit",
+                "startNode": "29",
+                "endNode": "30",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Exit",
+                  "details": "r1 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "82",
+                "type": "Entrance - Exit",
+                "reverseType": "Exit - Entrance",
+                "startNode": "31",
+                "endNode": "33",
+                "properties": {
+                  "exitId": "3",
+                  "exitName": "Entrance",
+                  "details": "r2 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "75",
+                "type": "Exit - Entrance",
+                "reverseType": "Entrance - Exit",
+                "startNode": "32",
+                "endNode": "33",
+                "properties": {
+                  "exitId": "20",
+                  "exitName": "Exit",
+                  "details": "r1 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "78",
+                "type": "Connection - To Boss",
+                "reverseType": "Connection - To Boss",
+                "startNode": "33",
+                "endNode": "33",
+                "properties": {
+                  "exitId": "6",
+                  "exitName": "Connection",
+                  "details": "r0 y2"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "85",
+                "type": "Entrance - King's room",
+                "reverseType": "King's room - Entrance",
+                "startNode": "34",
+                "endNode": "35",
+                "properties": {
+                  "exitId": "1",
+                  "exitName": "Entrance",
+                  "details": "r0 y-8"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "32",
+                "type": "Jump down - Top",
+                "reverseType": "Top - Jump down",
+                "startNode": "4",
+                "endNode": "5",
+                "properties": {
+                  "exitId": "37",
+                  "exitName": "Jump down",
+                  "details": "r1 y-8"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "34",
+                "type": "Drop in - Totem",
+                "reverseType": "Totem - Drop in",
+                "startNode": "4",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "41",
+                  "exitName": "Drop in",
+                  "details": "r0 y3"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "5",
+                "type": "Bottom Middle - Entrance",
+                "reverseType": "Entrance - Bottom Middle",
+                "startNode": "5",
+                "endNode": "6",
+                "properties": {
+                  "exitId": "11",
+                  "exitName": "Bottom Middle",
+                  "details": "r3 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "6",
+                "type": "Bottom Edge - Entrance",
+                "reverseType": "Entrance - Bottom Edge",
+                "startNode": "5",
+                "endNode": "7",
+                "properties": {
+                  "exitId": "9",
+                  "exitName": "Bottom Edge",
+                  "details": "r0 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
+              },
+              {
+                "id": "9",
+                "type": "JUMP",
+                "startNode": "8",
+                "endNode": "11",
+                "properties": {
+                  "exitId": "jump",
+                  "exitName": "Jump",
+                  "details": ""
+                },
+                "isBidirectional": false,
+                "linknum": 1
+              },
+              {
+                "id": "7",
+                "type": "Top left - Exit",
+                "reverseType": "Exit - Top left",
+                "startNode": "8",
+                "endNode": "9",
+                "properties": {
+                  "exitId": "0",
+                  "exitName": "Top left",
+                  "details": "r3 y0"
+                },
+                "isBidirectional": true,
+                "linknum": 1
               }
             ]
           }
@@ -3552,7 +3172,7 @@ if (typeof neo4jGraphData !== 'undefined') {
                 }
             ],
             infoPanel: true,
-            minCollision: 60,
+            minCollision: 80,  // Increased from 60 to spread nodes apart more
             neo4jData: neo4jGraphData,
             nodeRadius: 25,
             zoomFit: true
@@ -3574,7 +3194,7 @@ if (typeof neo4jGraphData !== 'undefined') {
                         .attr('class', 'area-label')
                         .attr('text-anchor', 'middle')
                         .attr('y', 0) // Center vertically in the circle
-                        .attr('fill', '#ffffff')
+                        .attr('fill', '#000000')
                         .attr('font-size', '9px')
                         .attr('font-weight', 'bold')
                         .attr('pointer-events', 'none');
@@ -3621,6 +3241,44 @@ if (typeof neo4jGraphData !== 'undefined') {
                 }
             });
         }, 500);
+        
+        // Task: Show only single arrows for bidirectional relationships
+        // Issue: User reports double-headed arrows look bad with overlapping
+        // Solution: Display merged bidirectional relationships as simple single arrows
+        // Note: The merging in randomize.js already reduces 94 arrows to 51 by combining bidirectional pairs
+        setTimeout(function() {
+            var svg = d3.select('#neo4jd3-container svg');
+            
+            // Get all relationships
+            var relationships = neo4jGraphData.results[0].data[0].graph.relationships;
+            
+            // Apply consistent styling to all arrows - no special bidirectional treatment
+            var relationshipElements = svg.selectAll('g.relationship');
+            
+            relationshipElements.each(function(d, i) {
+                var relElement = d3.select(this);
+                var relData = relationships[i];
+                
+                if (!relData) return;
+                
+                // All arrows get the same styling - simple single-headed arrows
+                var overlay = relElement.select('path.overlay');
+                overlay.style('stroke-width', '2px');
+                
+                // For bidirectional relationships, show both labels in the text
+                if (relData.isBidirectional) {
+                    var textElement = relElement.select('text');
+                    if (!textElement.empty() && relData.reverseType) {
+                        // Show both direction labels if they're different
+                        if (relData.type !== relData.reverseType) {
+                            textElement.text(relData.type + ' / ' + relData.reverseType);
+                        }
+                        // If labels are the same, just show one (no change needed)
+                    }
+                }
+            });
+            
+        }, 1500);  // Wait for simulation to settle completely
     } catch (err) {
         console.error('Error creating Neo4jd3:', err);
         document.getElementById('neo4jd3-container').innerHTML = 

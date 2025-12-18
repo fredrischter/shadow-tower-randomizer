@@ -7,7 +7,8 @@
       "wayBackId": "38",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Tower Top"
     },
     {
       "id": "31",
@@ -16,7 +17,8 @@
       "wayBackId": "9",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Skeleton"
     },
     {
       "id": "9",
@@ -25,7 +27,8 @@
       "wayBackId": "31",
       "type": "door",
       "rotation": 2,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Jail"
     },
     {
       "id": "35",
@@ -35,7 +38,8 @@
       "type": "door",
       "rotation": 2,
       "direction": "exit",
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Grave"
     },
     {
       "id": "31",
@@ -43,7 +47,8 @@
       "wayBackId": "4",
       "type": "door",
       "rotation": 2,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Guardian side"
     },
     {
       "id": "4",
@@ -52,7 +57,8 @@
       "wayBackId": "31",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Edge"
     },
     {
       "id": "31",
@@ -60,7 +66,8 @@
       "wayBackId": "4",
       "type": "door",
       "rotation": 2,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Guardian side"
     },
     {
       "id": "8",
@@ -69,7 +76,8 @@
       "wayBackId": "34",
       "type": "door",
       "rotation": 3,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Middle"
     },
     {
       "id": "34",
@@ -77,13 +85,15 @@
       "wayBackId": "8",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
       "id": "jump",
       "dest": "shadow_tower_part1c",
       "type": "jump",
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Jump"
     },
     {
       "id": "11",
@@ -92,7 +102,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -100,7 +111,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -109,7 +121,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -117,7 +130,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -126,7 +140,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -134,7 +149,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -143,7 +159,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -151,7 +168,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -160,7 +178,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -168,7 +187,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -177,7 +197,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -185,7 +206,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -194,7 +216,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -202,7 +225,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -211,7 +235,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -219,7 +244,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -228,7 +254,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -236,7 +263,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -245,7 +273,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -253,7 +282,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -262,7 +292,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -270,7 +301,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -279,7 +311,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -287,7 +320,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -296,7 +330,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -304,7 +339,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -313,7 +349,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -321,7 +358,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -330,7 +368,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -338,7 +377,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -347,7 +387,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -355,7 +396,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -364,7 +406,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -372,7 +415,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -381,7 +425,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -389,7 +434,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -398,7 +444,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -406,7 +453,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -415,7 +463,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -423,7 +472,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -432,7 +482,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -440,7 +491,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -449,7 +501,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -457,7 +510,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -466,7 +520,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -474,7 +529,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -483,7 +539,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -491,7 +548,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -500,7 +558,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -508,7 +567,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -517,7 +577,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -525,7 +586,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -534,7 +596,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -542,7 +605,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -551,7 +615,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -559,7 +624,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -568,7 +634,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -576,7 +643,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -585,7 +653,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -593,7 +662,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -602,7 +672,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -610,7 +681,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -619,7 +691,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -627,7 +700,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -636,7 +710,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -644,7 +719,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -653,7 +729,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -661,7 +738,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -670,7 +748,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -678,7 +757,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -687,7 +767,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -695,7 +776,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -704,7 +786,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -712,7 +795,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -721,7 +805,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -729,7 +814,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -738,7 +824,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -746,7 +833,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -755,7 +843,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -763,7 +852,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -772,7 +862,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -780,7 +871,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -789,7 +881,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -797,7 +890,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -806,7 +900,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -814,7 +909,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -823,7 +919,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -831,7 +928,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -840,7 +938,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -848,7 +947,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -857,7 +957,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -865,7 +966,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -874,7 +976,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -882,7 +985,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -891,7 +995,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -899,7 +1004,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -908,7 +1014,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -916,7 +1023,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -925,7 +1033,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -933,7 +1042,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -942,7 +1052,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -950,7 +1061,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -959,7 +1071,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -967,7 +1080,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -976,7 +1090,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -984,7 +1099,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -993,7 +1109,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1001,7 +1118,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1010,7 +1128,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1018,7 +1137,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1027,7 +1147,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1035,7 +1156,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1044,7 +1166,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1052,7 +1175,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1061,7 +1185,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1069,7 +1194,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1078,7 +1204,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1086,7 +1213,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1095,7 +1223,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1103,7 +1232,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1112,7 +1242,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1120,7 +1251,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1129,7 +1261,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1137,7 +1270,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1146,7 +1280,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1154,7 +1289,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1163,7 +1299,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1171,7 +1308,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1180,7 +1318,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1188,7 +1327,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1197,7 +1337,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1205,7 +1346,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1214,7 +1356,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1222,7 +1365,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1231,7 +1375,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1239,7 +1384,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1248,7 +1394,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1256,7 +1403,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1265,7 +1413,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1273,7 +1422,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1282,7 +1432,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1290,7 +1441,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1299,7 +1451,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1307,7 +1460,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1316,7 +1470,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1324,7 +1479,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1333,7 +1489,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1341,7 +1498,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1350,7 +1508,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1358,7 +1517,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1367,7 +1527,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1375,7 +1536,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1384,7 +1546,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1392,7 +1555,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1401,7 +1565,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1409,7 +1574,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1418,7 +1584,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1426,7 +1593,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1435,7 +1603,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1443,7 +1612,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1452,7 +1622,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1460,7 +1631,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1469,7 +1641,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1477,7 +1650,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1486,7 +1660,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1494,7 +1669,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1503,7 +1679,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1511,7 +1688,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1520,7 +1698,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1528,7 +1707,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1537,7 +1717,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1545,7 +1726,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1554,7 +1736,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1562,7 +1745,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1571,7 +1755,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1579,7 +1764,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1588,7 +1774,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1596,7 +1783,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1605,7 +1793,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1613,7 +1802,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1622,7 +1812,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1630,7 +1821,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1639,7 +1831,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1647,7 +1840,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1656,7 +1850,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1664,7 +1859,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1673,7 +1869,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1681,7 +1878,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "11",
@@ -1690,7 +1888,8 @@
       "wayBackId": "13",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
     },
     {
       "id": "13",
@@ -1698,7 +1897,8 @@
       "wayBackId": "11",
       "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance"
     }
   ],
   "map": [
@@ -1712,7 +1912,8 @@
           "wayBackId": "20",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Tower Top"
         }
       ],
       "depth": 0
@@ -1727,7 +1928,8 @@
           "wayBackId": "31",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Edge"
         },
         {
           "id": "8",
@@ -1736,13 +1938,15 @@
           "wayBackId": "34",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Middle"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part1c",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ],
       "depth": 3
@@ -1757,7 +1961,8 @@
           "wayBackId": "37",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top"
         },
         {
           "id": "11",
@@ -1766,7 +1971,8 @@
           "wayBackId": "13",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Bottom Middle"
         },
         {
           "id": "9",
@@ -1775,7 +1981,8 @@
           "wayBackId": "17",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom Edge"
         }
       ],
       "depth": 4
@@ -1790,7 +1997,8 @@
           "wayBackId": "18",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top left"
         },
         {
           "id": "5",
@@ -1799,13 +2007,15 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Edge"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part2b",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ]
     },
@@ -1819,7 +2029,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom"
         },
         {
           "id": "7",
@@ -1828,7 +2039,8 @@
           "wayBackId": "37",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top Middle"
         },
         {
           "id": "4",
@@ -1837,7 +2049,8 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Top right"
         }
       ]
     },
@@ -1851,7 +2064,8 @@
           "wayBackId": "11",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Top right"
         },
         {
           "id": "3",
@@ -1860,7 +2074,8 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Top left"
         },
         {
           "id": "9",
@@ -1869,13 +2084,15 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part3b",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ]
     },
@@ -1889,7 +2106,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Bottom middle"
         },
         {
           "id": "7",
@@ -1898,7 +2116,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top edge"
         },
         {
           "id": "13",
@@ -1907,13 +2126,15 @@
           "wayBackId": "2",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom end"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part3c",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ]
     },
@@ -1927,7 +2148,8 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Fence"
         }
       ]
     },
@@ -1942,7 +2164,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Skeleton"
         },
         {
           "id": "34",
@@ -1951,7 +2174,8 @@
           "wayBackId": "13",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Cemetery"
         },
         {
           "id": "35",
@@ -1961,7 +2185,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Grave"
         },
         {
           "id": "38",
@@ -1969,7 +2194,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Church"
         }
       ],
       "depth": 1
@@ -1985,7 +2211,8 @@
           "wayBackId": "31",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Jail"
         },
         {
           "id": "13",
@@ -1994,7 +2221,8 @@
           "wayBackId": "34",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Corridor"
         },
         {
           "id": "26",
@@ -2003,7 +2231,8 @@
           "wayBackId": "18",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ],
       "depth": 2
@@ -2019,7 +2248,8 @@
           "wayBackId": "35",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "31",
@@ -2027,7 +2257,8 @@
           "wayBackId": "4",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Guardian side"
         }
       ],
       "depth": 2
@@ -2042,7 +2273,8 @@
           "wayBackId": "8",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "37",
@@ -2051,7 +2283,8 @@
           "type": "door",
           "rotation": 0,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump down"
         },
         {
           "id": "18",
@@ -2060,7 +2293,8 @@
           "wayBackId": "26",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         },
         {
           "id": "41",
@@ -2070,7 +2304,8 @@
           "type": "totem",
           "rotation": 3,
           "direction": "entrance",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Drop in"
         }
       ],
       "depth": 4
@@ -2085,7 +2320,8 @@
           "wayBackId": "11",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ],
       "depth": 5
@@ -2102,7 +2338,8 @@
           "type": "door",
           "rotation": 0,
           "direction": "entrance",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "7",
@@ -2112,7 +2349,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         }
       ]
     },
@@ -2127,7 +2365,8 @@
           "wayBackId": "10",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2142,7 +2381,8 @@
           "wayBackId": "4",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Poison"
         },
         {
           "id": "10",
@@ -2152,7 +2392,8 @@
           "type": "door",
           "rotation": 3,
           "direction": "exit-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Rock guy"
         },
         {
           "id": "17",
@@ -2160,7 +2401,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2175,7 +2417,8 @@
           "wayBackId": "7",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "1",
@@ -2184,7 +2427,8 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bridge"
         },
         {
           "id": "11",
@@ -2192,7 +2436,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "19",
@@ -2202,7 +2447,8 @@
           "type": "totem",
           "rotation": 1,
           "direction": "entrance",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump in"
         },
         {
           "id": "16",
@@ -2211,7 +2457,8 @@
           "wayBackId": "41",
           "type": "totem",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2225,7 +2472,8 @@
           "wayBackId": "5",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "3",
@@ -2234,7 +2482,8 @@
           "wayBackId": "4",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Boss room"
         }
       ]
     },
@@ -2248,7 +2497,8 @@
           "wayBackId": "5",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "1",
@@ -2256,7 +2506,8 @@
           "wayBackId": "4",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Exit"
         }
       ]
     },
@@ -2270,7 +2521,8 @@
           "wayBackId": "7",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "94",
@@ -2279,7 +2531,8 @@
           "wayBackId": "19",
           "type": "portal",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Platform"
         },
         {
           "id": "93",
@@ -2289,7 +2542,8 @@
           "type": "portal",
           "direction": "entrance-bi",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Room"
         }
       ]
     },
@@ -2305,7 +2559,8 @@
           "type": "portal",
           "direction": "exit-bi",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Abraxus"
         },
         {
           "id": "19",
@@ -2315,7 +2570,8 @@
           "type": "portal",
           "direction": "entrance-bi",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Platform"
         }
       ]
     },
@@ -2330,7 +2586,8 @@
           "wayBackId": "93",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Cerberus"
         },
         {
           "id": "6",
@@ -2339,7 +2596,8 @@
           "wayBackId": "27",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Start"
         }
       ]
     },
@@ -2355,7 +2613,8 @@
           "type": "door",
           "rotation": 3,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Pool"
         },
         {
           "id": "1",
@@ -2364,7 +2623,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "entrance",
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2378,7 +2638,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "11",
@@ -2387,7 +2648,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "exit",
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Flush down"
         },
         {
           "id": "14",
@@ -2397,7 +2659,8 @@
           "type": "totem",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2412,7 +2675,8 @@
           "wayBackId": "4",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "4",
@@ -2421,7 +2685,8 @@
           "wayBackId": "5",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2436,7 +2701,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "6",
@@ -2445,7 +2711,8 @@
           "wayBackId": "10",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2459,7 +2726,8 @@
           "wayBackId": "5",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "10",
@@ -2469,7 +2737,8 @@
           "type": "totem",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2483,7 +2752,8 @@
           "wayBackId": "7",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "3",
@@ -2492,7 +2762,8 @@
           "wayBackId": "14",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         },
         {
           "id": "6",
@@ -2501,7 +2772,8 @@
           "wayBackId": "4",
           "type": "totem",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Necron"
         }
       ]
     },
@@ -2516,7 +2788,8 @@
           "wayBackId": "18",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Ladder down"
         },
         {
           "id": "1",
@@ -2524,7 +2797,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "10",
@@ -2533,7 +2807,8 @@
           "wayBackId": "6",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2547,7 +2822,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "18",
@@ -2555,7 +2831,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2570,7 +2847,8 @@
           "wayBackId": "20",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "6",
@@ -2579,7 +2857,8 @@
           "wayBackId": "8",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Connection"
         },
         {
           "id": "10",
@@ -2588,7 +2867,8 @@
           "wayBackId": "3",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "8",
@@ -2597,7 +2877,8 @@
           "wayBackId": "6",
           "type": "portal",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "To Boss"
         }
       ]
     },
@@ -2612,7 +2893,8 @@
           "wayBackId": "10",
           "type": "totem",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         },
         {
           "id": "3",
@@ -2621,7 +2903,8 @@
           "wayBackId": "10",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2635,7 +2918,8 @@
           "wayBackId": "10",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Door"
         },
         {
           "id": "2",
@@ -2644,7 +2928,8 @@
           "wayBackId": "7",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Box room"
         }
       ]
     },
@@ -2659,7 +2944,8 @@
           "wayBackId": "12",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "4",
@@ -2668,7 +2954,8 @@
           "wayBackId": "3",
           "type": "totem",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2683,7 +2970,8 @@
           "wayBackId": "15",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Prison"
         },
         {
           "id": "2",
@@ -2691,7 +2979,8 @@
           "wayBackId": "13",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "4",
@@ -2701,7 +2990,8 @@
           "type": "totem",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Lower totem"
         },
         {
           "id": "7",
@@ -2711,7 +3001,8 @@
           "direction": "entrance-bi",
           "type": "totem",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Upper totem 1"
         },
         {
           "id": "10",
@@ -2721,7 +3012,8 @@
           "direction": "entrance-bi",
           "type": "totem",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Upper totem 2"
         }
       ]
     },
@@ -2737,7 +3029,8 @@
           "type": "door",
           "rotation": 0,
           "direction": "exit-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "King's room"
         },
         {
           "id": "15",
@@ -2747,7 +3040,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     }

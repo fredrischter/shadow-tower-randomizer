@@ -12089,26 +12089,26 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\custom-
 skipping setting checksum, not possible since bin is <4 bytes .\generated\custom-path-swap2\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\custom-path-swap2\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\custom-path-swap2\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
-2025-12-17T17:16:46.274Z  Attempt started 0
-2025-12-17T17:16:46.276Z   Walking
-2025-12-17T17:16:46.296Z  Attempt started 1
-2025-12-17T17:16:46.297Z   Walking
-2025-12-17T17:16:46.316Z  Attempt started 2
-2025-12-17T17:16:46.316Z   Walking
-2025-12-17T17:16:46.340Z  Attempt started 3
-2025-12-17T17:16:46.341Z   Walking
-2025-12-17T17:16:46.366Z  Attempt started 4
-2025-12-17T17:16:46.367Z   Walking
-2025-12-17T17:16:46.392Z  Attempt started 5
-2025-12-17T17:16:46.393Z   Walking
-2025-12-17T17:16:46.419Z  Attempt started 6
-2025-12-17T17:16:46.420Z   Walking
-2025-12-17T17:16:46.445Z  Attempt started 7
-2025-12-17T17:16:46.446Z   Walking
-2025-12-17T17:16:46.474Z  Attempt started 8
-2025-12-17T17:16:46.475Z   Walking
-2025-12-17T17:16:46.501Z  Attempt started 9
-2025-12-17T17:16:46.501Z   Walking
+2025-12-18T10:40:51.245Z  Attempt started 0
+2025-12-18T10:40:51.248Z   Walking
+2025-12-18T10:40:51.284Z  Attempt started 1
+2025-12-18T10:40:51.285Z   Walking
+2025-12-18T10:40:51.319Z  Attempt started 2
+2025-12-18T10:40:51.320Z   Walking
+2025-12-18T10:40:51.347Z  Attempt started 3
+2025-12-18T10:40:51.347Z   Walking
+2025-12-18T10:40:51.378Z  Attempt started 4
+2025-12-18T10:40:51.378Z   Walking
+2025-12-18T10:40:51.409Z  Attempt started 5
+2025-12-18T10:40:51.410Z   Walking
+2025-12-18T10:40:51.442Z  Attempt started 6
+2025-12-18T10:40:51.443Z   Walking
+2025-12-18T10:40:51.476Z  Attempt started 7
+2025-12-18T10:40:51.476Z   Walking
+2025-12-18T10:40:51.510Z  Attempt started 8
+2025-12-18T10:40:51.510Z   Walking
+2025-12-18T10:40:51.537Z  Attempt started 9
+2025-12-18T10:40:51.538Z   Walking
 Gave up after 10 attempts, 1 swapRounds.
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_hidden_region["Human World Hidden Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_hidden_region          pos( -3  ,0 ,-3)   45  43  41   0  fc   0   0   0   0   0   0   0   0   0  3e   0  fd   0  fc   0   0   5   0   0
@@ -12299,6 +12299,11 @@ Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's 
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> death_world_dark_castle_layer      pos( 10 ,-1 ,10)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
 DEBUG: About to enter area loop. Total areas: 31
-Successfully wrote maps.html - size: 285625 bytes
+Successfully wrote maps.html - size: 279111 bytes
+ generating creature power value table
+Generating creature power value table...
+Found 210 creatures to analyze
+Creature power table written to: .\generated\custom-path-swap2\spoilers\creature_power_table.md
+CSV table written to: .\generated\custom-path-swap2\spoilers\creature_power_table.csv
  writing item tracker notes
  writing .\generated\custom-path-swap2\spoilers\changeset.json
