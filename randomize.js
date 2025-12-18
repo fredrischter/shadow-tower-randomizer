@@ -531,7 +531,7 @@ function randomize(paramsFile, stDir) {
         
         // Fix for magic/projectile attack damage scaling
         // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
-        if (creature.entityStates && creature.entityStates.length > 0) {
+        /*if (creature.entityStates && creature.entityStates.length > 0) {
             creature.entityStates.forEach((entityState) => {
                 if (entityState.type == 0x20 || entityState.type == 0x30) {
                     var attackType = entityState.type == 0x20 ? "physical" : "spell/magic";
@@ -580,7 +580,7 @@ function randomize(paramsFile, stDir) {
                     }
                 }
             });
-        }
+        }*/
     }
 
     function applyDifficultyForEachItem(item) {
