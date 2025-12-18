@@ -12089,185 +12089,1083 @@ Loading texture for creature shadow_tower_part3/0d_door file .\generated\randomi
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-medium10\extracted\ST\CHR4\M41.T_PARTS\67 3b000-3b000.T
 Loading texture for creature shadow_tower_part3/0e_door file .\generated\randomized-medium10\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
 skipping setting checksum, not possible since bin is <4 bytes .\generated\randomized-medium10\extracted\ST\CHR4\M41.T_PARTS\72 3b000-3b000.T
-2025-12-17T17:31:06.561Z  Attempt started 0
-2025-12-17T17:31:06.563Z  Starting new circle spin randomization
+2025-12-18T10:55:07.977Z  Attempt started 0
+2025-12-18T10:55:07.979Z  Starting new circle spin randomization
  Iteration 1/3:
  - Selected central area: fire_world_ashen_cavern
  - Found 1 contiguous areas
  - Found 0 outer circle doors
  Iteration 2/3:
  - Selected central area: human_world_forgotten_region
- - Found 5 contiguous areas
+ - Found 6 contiguous areas
  - Found 3 outer circle doors
  - Spinning 3 outer circle doors
  - Successfully performed 3 door shifts
  Iteration 3/3:
  - Selected central area: earth_world_hostile_rock_cavern
- - Found 1 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.565Z   Walking
-2025-12-17T17:31:06.587Z  Attempt started 1
-2025-12-17T17:31:06.588Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: death_world_undead_layer
- - Found 2 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: shadow_tower_part3c
- - Found 2 contiguous areas
- - Found 0 outer circle doors
- Iteration 3/3:
- - Selected central area: water_world_watery_labyrinth_area
- - Found 3 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.588Z   Walking
-2025-12-17T17:31:06.609Z  Attempt started 2
-2025-12-17T17:31:06.609Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: illusion_world_dream_domain
- - Found 1 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: death_world_gate_of_the_dead
- - Found 2 contiguous areas
- - Found 0 outer circle doors
- Iteration 3/3:
- - Selected central area: earth_world_quaking_cavern
- - Found 1 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.609Z   Walking
-2025-12-17T17:31:06.635Z  Attempt started 3
-2025-12-17T17:31:06.635Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: illusion_world_dream_domain
- - Found 1 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: earth_world_hostile_rock_cavern
- - Found 1 contiguous areas
- - Found 0 outer circle doors
- Iteration 3/3:
- - Selected central area: death_world_gate_of_the_dead
- - Found 2 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.636Z   Walking
-2025-12-17T17:31:06.663Z  Attempt started 4
-2025-12-17T17:31:06.663Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: shadow_tower_part2a
- - Found 1 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: monster_world_false_eye_area
- - Found 3 contiguous areas
- - Found 1 outer circle doors
- Iteration 3/3:
- - Selected central area: earth_world_stone_cavern
- - Found 7 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.664Z   Walking
-2025-12-17T17:31:06.690Z  Attempt started 5
-2025-12-17T17:31:06.690Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: fire_world_ashen_cavern
- - Found 1 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: monster_world_screeching_area
- - Found 3 contiguous areas
- - Found 1 outer circle doors
- Iteration 3/3:
- - Selected central area: earth_world_quaking_cavern
- - Found 1 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.690Z   Walking
-2025-12-17T17:31:06.717Z  Attempt started 6
-2025-12-17T17:31:06.717Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: illusion_world_dream_domain
- - Found 1 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: death_world_lingering_curse_layer
- - Found 2 contiguous areas
- - Found 0 outer circle doors
- Iteration 3/3:
- - Selected central area: death_world_gate_of_the_dead
- - Found 2 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.717Z   Walking
-2025-12-17T17:31:06.744Z  Attempt started 7
-2025-12-17T17:31:06.744Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: death_world_gate_of_the_dead
- - Found 2 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: shadow_tower_part3a
- - Found 6 contiguous areas
+ - Found 4 contiguous areas
  - Found 2 outer circle doors
  - Spinning 2 outer circle doors
  - Successfully performed 2 door shifts
- Iteration 3/3:
- - Selected central area: illusion_world_worship_domain
- - Found 3 contiguous areas
+ Iteration 4/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
  - Found 0 outer circle doors
-2025-12-17T17:31:06.745Z   Walking
-2025-12-17T17:31:06.774Z  Attempt started 8
-2025-12-17T17:31:06.774Z  Starting new circle spin randomization
- Iteration 1/3:
- - Selected central area: water_world_white_rain_area
- - Found 3 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
- - Selected central area: human_world_solitary_region
- - Found 5 contiguous areas
- - Found 1 outer circle doors
- Iteration 3/3:
- - Selected central area: shadow_tower_part2b
- - Found 4 contiguous areas
- - Found 0 outer circle doors
-2025-12-17T17:31:06.775Z   Walking
-2025-12-17T17:31:06.800Z  Attempt started 9
-2025-12-17T17:31:06.800Z  Starting new circle spin randomization
- Iteration 1/3:
+ Iteration 5/3:
  - Selected central area: water_world_watery_labyrinth_area
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 6/3:
+ - Selected central area: death_world_gate_of_the_dead
  - Found 3 contiguous areas
- - Found 0 outer circle doors
- Iteration 2/3:
+ - Found 1 outer circle doors
+ Iteration 7/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 4 contiguous areas
+ - Found 5 outer circle doors
+ - Spinning 5 outer circle doors
+ - Successfully performed 5 door shifts
+ Iteration 8/3:
+ - Selected central area: monster_world_false_eye_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 9/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 10/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 4 contiguous areas
+ - Found 5 outer circle doors
+ - Spinning 5 outer circle doors
+ - Assignment for door 4 would be invalid, aborting this spin
+ Iteration 11/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 12/3:
+ - Selected central area: human_world_solitary_region
+ - Found 7 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 13/3:
+ - Selected central area: shadow_tower_part2b
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 14/3:
  - Selected central area: shadow_tower_part1b
  - Found 5 contiguous areas
  - Found 3 outer circle doors
  - Spinning 3 outer circle doors
- - Assignment for door 1 would be invalid, aborting this spin
+ - Successfully performed 3 door shifts
+ Iteration 15/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 16/3:
+ - Selected central area: shadow_tower_part2b
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 17/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 18/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 19/3:
+ - Selected central area: shadow_tower_part1a
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 20/3:
+ - Selected central area: illusion_world_worship_domain
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+2025-12-18T10:55:07.988Z   Walking
+2025-12-18T10:55:08.041Z  Attempt started 1
+2025-12-18T10:55:08.041Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 2/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
  Iteration 3/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 4/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 5/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 6/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 7/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 8/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 9/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 10/3:
+ - Selected central area: death_world_gate_of_the_dead
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 11/3:
+ - Selected central area: shadow_tower_part1b
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 12/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 13/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 3 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 14/3:
+ - Selected central area: shadow_tower_part1c
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 15/3:
+ - Selected central area: monster_world_false_eye_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 16/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 17/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 18/3:
+ - Selected central area: water_world_watery_labyrinth_area
+ - Found 6 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 19/3:
+ - Selected central area: human_world_cursed_region
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 20/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+2025-12-18T10:55:08.045Z   Walking
+2025-12-18T10:55:08.050Z  Attempt started 2
+2025-12-18T10:55:08.050Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: water_world_watery_labyrinth_area
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 2/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 3/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 4/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 5/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 6/3:
+ - Selected central area: illusion_world_dream_domain
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 7/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 8/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 9/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 10/3:
+ - Selected central area: shadow_tower_part1a
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 11/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 12/3:
+ - Selected central area: shadow_tower_part1c
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 13/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 14/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 15/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 16/3:
+ - Selected central area: earth_world_false_pit_cavern
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 17/3:
+ - Selected central area: fire_world_ashen_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 18/3:
+ - Selected central area: fire_world_burning_cavern
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 19/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 20/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+2025-12-18T10:55:08.052Z   Walking
+2025-12-18T10:55:08.074Z  Attempt started 3
+2025-12-18T10:55:08.074Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 3/3:
+ - Selected central area: human_world_hidden_region
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 4/3:
+ - Selected central area: illusion_world_gloomy_domain
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 5/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 3 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 6/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 7/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 3 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 8/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 9/3:
+ - Selected central area: fire_world_ashen_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 10/3:
  - Selected central area: earth_world_stone_cavern
  - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 11/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
  - Found 0 outer circle doors
-2025-12-17T17:31:06.801Z   Walking
+ Iteration 12/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 13/3:
+ - Selected central area: human_world_hidden_region
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 14/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 6 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 15/3:
+ - Selected central area: illusion_world_worship_domain
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 16/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 17/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 18/3:
+ - Selected central area: death_world_lingering_curse_layer
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 19/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 20/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+2025-12-18T10:55:08.076Z   Walking
+2025-12-18T10:55:08.077Z  Attempt started 4
+2025-12-18T10:55:08.077Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: illusion_world_gloomy_domain
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 2/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 3/3:
+ - Selected central area: death_world_gate_of_the_dead
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 4/3:
+ - Selected central area: earth_world_false_pit_cavern
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 5/3:
+ - Selected central area: shadow_tower_part1a
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 6/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 7/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 8/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 9/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 10/3:
+ - Selected central area: water_world_impure_pool_area
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 11/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 12/3:
+ - Selected central area: illusion_world_gloomy_domain
+ - Found 7 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 13/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 14/3:
+ - Selected central area: shadow_tower_part2b
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 15/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 16/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 17/3:
+ - Selected central area: illusion_world_gloomy_domain
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 18/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 19/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 20/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+2025-12-18T10:55:08.080Z   Walking
+2025-12-18T10:55:08.086Z  Attempt started 5
+2025-12-18T10:55:08.086Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 3/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 4/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 5/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 6/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 7/3:
+ - Selected central area: shadow_tower_part2b
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 8/3:
+ - Selected central area: water_world_watery_labyrinth_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 9/3:
+ - Selected central area: human_world_hidden_region
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 10/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 11/3:
+ - Selected central area: death_world_gate_of_the_dead
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 12/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 13/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 14/3:
+ - Selected central area: shadow_tower_part2b
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 15/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 16/3:
+ - Selected central area: earth_world_false_pit_cavern
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 17/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 8 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 18/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 19/3:
+ - Selected central area: death_world_gate_of_the_dead
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 20/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 5 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+2025-12-18T10:55:08.090Z   Walking
+2025-12-18T10:55:08.093Z  Attempt started 6
+2025-12-18T10:55:08.094Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: death_world_lingering_curse_layer
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 2/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 3/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 6 contiguous areas
+ - Found 5 outer circle doors
+ - Spinning 5 outer circle doors
+ - Successfully performed 5 door shifts
+ Iteration 4/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 5/3:
+ - Selected central area: death_world_lingering_curse_layer
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 6/3:
+ - Selected central area: water_world_impure_pool_area
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 7/3:
+ - Selected central area: fire_world_burning_cavern
+ - Found 3 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 8/3:
+ - Selected central area: water_world_impure_pool_area
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 9/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 10/3:
+ - Selected central area: human_world_hidden_region
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 11/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 12/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 6 contiguous areas
+ - Found 5 outer circle doors
+ - Spinning 5 outer circle doors
+ - Successfully performed 5 door shifts
+ Iteration 13/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 14/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 15/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 16/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 17/3:
+ - Selected central area: human_world_cursed_region
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 18/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 19/3:
+ - Selected central area: water_world_impure_pool_area
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 20/3:
+ - Selected central area: illusion_world_worship_domain
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+2025-12-18T10:55:08.097Z   Walking
+2025-12-18T10:55:09.735Z  Attempt started 7
+2025-12-18T10:55:09.736Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 2/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 3/3:
+ - Selected central area: illusion_world_gloomy_domain
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 4/3:
+ - Selected central area: death_world_gate_of_the_dead
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 5/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 6/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 7/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 8/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 9/3:
+ - Selected central area: earth_world_false_pit_cavern
+ - Found 6 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 10/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 11/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 12/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 13/3:
+ - Selected central area: fire_world_burning_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 14/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 15/3:
+ - Selected central area: monster_world_screeching_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 16/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 17/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 18/3:
+ - Selected central area: shadow_tower_part2a
+ - Found 7 contiguous areas
+ - Found 5 outer circle doors
+ - Spinning 5 outer circle doors
+ - Successfully performed 5 door shifts
+ Iteration 19/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 20/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+2025-12-18T10:55:09.740Z   Walking
+2025-12-18T10:55:09.836Z  Attempt started 8
+2025-12-18T10:55:09.837Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: shadow_tower_part3b
+ - Found 5 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 2/3:
+ - Selected central area: shadow_tower_part1c
+ - Found 7 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 3/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 4/3:
+ - Selected central area: human_world_hidden_region
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 5/3:
+ - Selected central area: death_world_gate_of_the_dead
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 6/3:
+ - Selected central area: shadow_tower_part3a
+ - Found 7 contiguous areas
+ - Found 4 outer circle doors
+ - Spinning 4 outer circle doors
+ - Successfully performed 4 door shifts
+ Iteration 7/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 5 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 8/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 9/3:
+ - Selected central area: earth_world_stone_cavern
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 10/3:
+ - Selected central area: water_world_white_rain_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 11/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 7 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 12/3:
+ - Selected central area: human_world_solitary_region
+ - Found 5 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 13/3:
+ - Selected central area: death_world_lingering_curse_layer
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 14/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 15/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 16/3:
+ - Selected central area: water_world_white_rain_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 17/3:
+ - Selected central area: illusion_world_bewilderment_domain
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 18/3:
+ - Selected central area: water_world_white_rain_area
+ - Found 4 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 19/3:
+ - Selected central area: earth_world_rotting_cavern
+ - Found 3 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 20/3:
+ - Selected central area: fire_world_ashen_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+2025-12-18T10:55:09.839Z   Walking
+2025-12-18T10:55:10.078Z  Attempt started 9
+2025-12-18T10:55:10.078Z  Starting new circle spin randomization
+ Iteration 1/3:
+ - Selected central area: earth_world_quaking_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 2/3:
+ - Selected central area: earth_world_poisonous_cavern
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 3/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 4/3:
+ - Selected central area: water_world_sunken_river_area
+ - Found 6 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 5/3:
+ - Selected central area: shadow_tower_part3c
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 6/3:
+ - Selected central area: earth_world_hostile_rock_cavern
+ - Found 4 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 7/3:
+ - Selected central area: human_world_cursed_region
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 8/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 9/3:
+ - Selected central area: death_world_dark_castle_layer
+ - Found 6 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 10/3:
+ - Selected central area: death_world_undead_layer
+ - Found 4 contiguous areas
+ - Found 2 outer circle doors
+ - Spinning 2 outer circle doors
+ - Successfully performed 2 door shifts
+ Iteration 11/3:
+ - Selected central area: illusion_world_worship_domain
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 12/3:
+ - Selected central area: death_world_lingering_curse_layer
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 13/3:
+ - Selected central area: illusion_world_gloomy_domain
+ - Found 7 contiguous areas
+ - Found 3 outer circle doors
+ - Spinning 3 outer circle doors
+ - Successfully performed 3 door shifts
+ Iteration 14/3:
+ - Selected central area: death_world_lingering_curse_layer
+ - Found 2 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 15/3:
+ - Selected central area: illusion_world_dream_domain
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 16/3:
+ - Selected central area: fire_world_phoenix_cave
+ - Found 6 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 17/3:
+ - Selected central area: water_world_white_rain_area
+ - Found 3 contiguous areas
+ - Found 1 outer circle doors
+ Iteration 18/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 19/3:
+ - Selected central area: fire_world_molten_cavern
+ - Found 1 contiguous areas
+ - Found 0 outer circle doors
+ Iteration 20/3:
+ - Selected central area: human_world_forgotten_region
+ - Found 6 contiguous areas
+ - Found 5 outer circle doors
+ - Spinning 5 outer circle doors
+ - Successfully performed 5 door shifts
+2025-12-18T10:55:10.082Z   Walking
 Gave up after 10 attempts, 1 swapRounds.
 Exit for chart shadow_tower_part1a["Shadow Tower Part1 A"] -->|"Tower Top r0 y0"| human_world_solitary_region["Human World Solitary Region"]
  0    5af0     212f0 exit-door                                  tile(  45,  43,  41) Tower Top     -> human_world_solitary_region        pos(  0  ,0  ,0)   45  43  41   0  fc   0   0   0   0   0   0  fc   0   0  3e   0   0   0   1   1   1   4   0   0
-Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r3 y8"| human_world_cursed_region["Human World Cursed Region"]
- 4    5b50     21350 exit-door                                  tile(  3b,  46,  3f) Edge          -> human_world_cursed_region          pos( 13 ,-1 ,13)   3b  46  3f   0  fc   0   0   0   0   0   0  fc   0   0  bb   0   d  ff   8   1   1   1   3   8
+Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Edge r2 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
+ 4    5b50     21350 exit-door                                  tile(  3b,  46,  3f) Edge          -> earth_world_poisonous_cavern       pos( -7  ,1 ,-7)   3b  46  3f   0  fc   0   0   0   0   0   0   0   0   0  bb   0  f9   1  ef   1   1  1b   2   0
 Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Middle r3 y0"| human_world_forgotten_region["Human World Forgotten Region"]
  8    5bb0     213b0 exit-door                                  tile(  42,  46,  43) Middle        -> human_world_forgotten_region       pos(  6  ,0  ,6)   42  46  43   0  fc   0   0   0   0   0   0  fc   0   0  74   0   6   0   5   1   1   6   3   0
 Exit for chart shadow_tower_part1b["Shadow Tower Part1 B"] -->|"Jump "| shadow_tower_part1c["Shadow Tower Part1 C"]
  
-Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r3 y0"| human_world_forgotten_region["Human World Forgotten Region"]
- 5    5b68     21368 exit-door                                  tile(  43,  47,  3a) Top           -> human_world_forgotten_region       pos( -3  ,1 ,-3)   43  47  3a   0  fc   0   0   0   0   0   0  fc   0   0  bc   0  fd   1   9   1   1   6   3   0
-Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r3 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
- 11   5bf8     213f8 exit-door                                  tile(  40,  49,  44) Bottom Middle -> earth_world_rotting_cavern         pos( -7  ,0 ,-7)   40  49  44   0  fc   0   0   0   0   0   0  fc   0   0   0   0  f9   0  f5   1   1   b   3   0
-Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Edge r0 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
- 9    5bc8     213c8 exit-door                                  tile(  45,  49,  3f) Bottom Edge   -> earth_world_poisonous_cavern       pos( -7  ,1 ,-7)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0  f9   1  ef   1   1  1b   0   0
-Exit for chart shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Top left r3 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
- 0    5af0   111a2f0 exit-door                                  tile(  40,  41,  45) Top left      -> earth_world_false_pit_cavern       pos( -8  ,0 ,-8)   40  41  45   0  fc   0   0   0   0   0   0  fc   0   0  bb   1  f8   0  f5   1   1   f   3   0
-Exit for chart shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Edge r3 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
- 5    5b68   111a368 exit-door                                  tile(  46,  43,  3d) Edge          -> fire_world_phoenix_cave            pos( -5  ,0 ,-5)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1  fb   0   2   1   1   3   3   0
+Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Top r2 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
+ 5    5b68     21368 exit-door                                  tile(  43,  47,  3a) Top           -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3)   43  47  3a   0  fc   0   0   0   0   0   0   0   0   0  bc   0  fd   0  f5   0   0   f   2   0
+Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Middle r3 y0"| human_world_cursed_region["Human World Cursed Region"]
+ 11   5bf8     213f8 exit-door                                  tile(  40,  49,  44) Bottom Middle -> earth_world_poisonous_cavern       pos( -7  ,1 ,-7)   40  49  44   0  fc   0   0   0   0   0   0   0   0   0   0   0  f9   1  ef   1   1  1b   3   0
+Exit for chart shadow_tower_part1c["Shadow Tower Part1 C"] -->|"Bottom Edge r2 y0"| human_world_forgotten_region["Human World Forgotten Region"]
+ 9    5bc8     213c8 exit-door                                  tile(  45,  49,  3f) Bottom Edge   -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3)   45  49  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0  fd   0  f5   0   0   f   2   0
+Exit for chart shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Top left r0 y-17"| human_world_cursed_region["Human World Cursed Region"]
+ 0    5af0   111a2f0 exit-door                                  tile(  40,  41,  45) Top left      -> human_world_cursed_region          pos(  0  ,0  ,0)   40  41  45   0  fc   0   0   0   0   0   0   0   0   0  bb   1   0   0  f9   0   0   1   0  ef
+Exit for chart shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Edge r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
+ 5    5b68   111a368 exit-door                                  tile(  46,  43,  3d) Edge          -> water_world_impure_pool_area       pos(  4  ,0  ,4)   46  43  3d   0  fc   0   0   0   0   0   0  fc   0   0  ca   1   4   0  f4   1   1   a   1   0
 Exit for chart shadow_tower_part2a["Shadow Tower Part2 A"] -->|"Jump "| shadow_tower_part2b["Shadow Tower Part2 B"]
  
-Exit for chart shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Bottom r1 y0"| water_world_impure_pool_area["Water World Impure Pool Area"]
- 9    5bc8   111a3c8 exit-door                                  tile(  45,  45,  40) Bottom        -> water_world_impure_pool_area       pos(  4  ,0  ,4)   45  45  40   0  fc   0   0   0   0   0   0  fc   0   0  cf   1   4   0  f4   1   1   a   1   0
+Exit for chart shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Bottom r1 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
+ 9    5bc8   111a3c8 exit-door                                  tile(  45,  45,  40) Bottom        -> illusion_world_gloomy_domain       pos( -2  ,2 ,-2)   45  45  40   0  fc   0   0   0   0   4   0   0   0   0  cf   1  fe   2  fa  f8   0   9   1   0
 Exit for chart shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Top Middle r3 y0"| fire_world_burning_cavern["Fire World Burning Cavern"]
  7    5b98   111a398 exit-door                                  tile(  3a,  43,  40) Top Middle    -> fire_world_burning_cavern          pos( -4  ,0 ,-4)   3a  43  40   0  fc   0   0   0   0   0   0  fc   0   0  cd   1  fc   0  f2   1   1  14   3   0
 Exit for chart shadow_tower_part2b["Shadow Tower Part2 B"] -->|"Top right r3 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
@@ -12294,8 +13192,8 @@ Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"S
  31   5dd8    25b5d8 exit-door                                  tile(  44,  40,  4e) Skeleton      -> human_world_hidden_region          pos( -3  ,0 ,-3)   44  40  4e   0  fc   0   0   0   0   0   0   0   0   0  60   0  fd   0  fc   0   0   5   0   0
 Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Cemetery r0 y0"| human_world_hidden_region["Human World Hidden Region"]
  34   5e20    25b620 exit-door                                  tile(  47,  40,  4e) Cemetery      -> human_world_hidden_region          pos(  0  ,0  ,0)   47  40  4e   0  fc   0   0   0   0   0   0   0   0   0  5a   0   0   0  fc   1   1   5   0   0
-Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Grave r2 y-17"| human_world_cursed_region["Human World Cursed Region"]
- 35   5e38    25b638 exit-door                                  tile(  49,  42,  47) Grave         -> human_world_cursed_region          pos(  0  ,0  ,0)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0   0   0  f9   0   0   1   2  ef
+Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Grave r2 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
+ 35   5e38    25b638 exit-door                                  tile(  49,  42,  47) Grave         -> earth_world_poisonous_cavern       pos( 10  ,1 ,10)   49  42  47   0  fc   0   0   0   0   0   0   0   0   0  5d   0   a   1   9   0   0  1b   2   0
 Exit for chart human_world_solitary_region["Human World Solitary Region"] -->|"Church r0 y-8"| shadow_tower_part1a["Shadow Tower Part1 A"]
  38   5e80    25b680 exit-door                                  tile(  40,  40,  40) Church        -> shadow_tower_part1                 pos(  5  ,3  ,5)   40  40  40   0  fc   0   0   0   0   0   0   0   0  fc   0   0   5   3   0   0   0   0   0  f8
 Exit for chart human_world_hidden_region["Human World Hidden Region"] -->|"Jail r0 y0"| human_world_solitary_region["Human World Solitary Region"]
@@ -12304,48 +13202,48 @@ Exit for chart human_world_hidden_region["Human World Hidden Region"] -->|"Corri
  13   5c28    2f5c28 exit-door                                  tile(  40,  40,  3b) Corridor      -> human_world_solitary_region        pos(  7  ,0  ,7)   40  40  3b   0  fc   0   0   0   0   0   0   0   0   0  1f   0   7   0   d   0   0   4   0   0
 Exit for chart human_world_hidden_region["Human World Hidden Region"] -->|"Totem r0 y3"| human_world_forgotten_region["Human World Forgotten Region"]
  26   5d60    2f5d60 exit-totem  teleport                       tile(  3b,  40,  3e) Totem         -> shadow_tower_part1                 pos(  6 ,-6  ,6)   3b  40  3e   0   3   0   0   4   0  f4   0   0   0   0  96   0   6  fa   0   5   0   0   0   3
-Exit for chart human_world_cursed_region["Human World Cursed Region"] -->|"Entrance r2 y0"| human_world_solitary_region["Human World Solitary Region"]
- 3    5b38     a0338 exit-door                                  tile(  40,  40,  38) Entrance      -> human_world_solitary_region        pos(  9  ,2  ,9)   40  40  38   0  fc   0   0   0   0   0   0  f8   0   0   0   0   9   2   8   0   0   4   2   0
-Exit for chart human_world_cursed_region["Human World Cursed Region"] -->|"Guardian side r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
- 31   5dd8     a05d8 exit-door                                  tile(  4d,  40,  47) Guardian side -> shadow_tower_part1                 pos( -4  ,6 ,-4)   4d  40  47   0  fc   0   0   0   0   0   0  f6   0   0  75   0  fc   6  ff   0   0   0   1  f8
 Exit for chart human_world_forgotten_region["Human World Forgotten Region"] -->|"Exit r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
  34   5e20    38c620 exit-door                                  tile(  46,  40,  46) Exit          -> shadow_tower_part1                 pos(  1  ,6  ,1)   46  40  46   0  fc   0   0   0   0   0   0   0   0   0   0   0   1   6   3   1   1   0   1  f8
 Exit for chart human_world_forgotten_region["Human World Forgotten Region"] -->|"Jump down r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
- 37   5e68    38c668 exit-door                                  tile(  3d,  41,  4a) Jump down     -> shadow_tower_part1                 pos(  2  ,7  ,2)   3d  41  4a   0  fc   0   0   0   0   0   0   0   0   0  73   0   2   7  fa   0   0   0   1  f8
+ 37   5e68    38c668 exit-door                                  tile(  3d,  41,  4a) Jump down     -> shadow_tower_part1                 pos(  4  ,9  ,4)   3d  41  4a   0  fc   0   0   0   0  fc   0   0   0   0  73   0   4   9  ff   7   0   0   1  f8
 Exit for chart human_world_forgotten_region["Human World Forgotten Region"] -->|"Totem r0 y3"| human_world_hidden_region["Human World Hidden Region"]
  18   5ca0    38c4a0 exit-totem  teleport                       tile(  39,  40,  45) Totem         -> shadow_tower_part1                 pos(  5 ,-5  ,5)   39  40  45   0   3   0   0   4   0   8   0   0   0   0  68   0   5  fb   0  fe   0   0   0   3
 Exit for chart human_world_forgotten_region["Human World Forgotten Region"] -->|"Drop in r0 y3"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
  41   5ec8    38c6c8 exit-totem  teleport                       tile(  43,  3f,  44) Drop in       -> shadow_tower_part1                 pos( 15 ,-8 ,15)   43  3f  44   0   3   0   0   c   0  fc   0   0   0   0  67   0   f  f8   0  f6   0   0   0   3
-Exit for chart earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Entrance r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
- 13   5c28    5c9c28 exit-door                                  tile(  38,  40,  35) Entrance      -> shadow_tower_part1                 pos(  0  ,9  ,0)   38  40  35   0  fc   0   0   0  80  fb   0   0   0   0  a7   1   0   9   3   9   0   0   1  f8
-Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Entrance r0 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
- 4    4230    db4a30 exit-door                                  tile(  40,  40,  42) Entrance      -> earth_world_poisonous_cavern       pos( 10  ,1 ,10)   40  40  42   0  fc   0   0   0   0   0   0   0   0   0   0   0   a   1   9   0   0  1b   0   0
-Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Exit r3 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
- 7    4278    db4a78 exit-door                                  tile(  30,  45,  36) Exit          -> earth_world_false_pit_cavern       pos( -3  ,0 ,-3)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0  fd   0  f5   0   0   f   3   0
-Exit for chart earth_world_quaking_cavern["Earth World Quaking Cavern"] -->|"Entrance r2 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
- 3    5b38    65fb38 exit-door                                  tile(  41,  40,  40) Entrance      -> earth_world_poisonous_cavern       pos(  9  ,1  ,9)   41  40  40   0  fc   0   0   0   0   0   0   0   0   0  a5   0   9   1   1   0   0  1b   2   0
-Exit for chart earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Poison r0 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
- 13   4308    d17308 exit-door                                  tile(  4a,  41,  48) Poison        -> earth_world_stone_cavern           pos(  0  ,0  ,0)   4a  41  48   0  fc   0   0   0   0   0   0   0  80  fc  48   1   0   0   1   0   7  1c   0   0
-Exit for chart earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Rock guy r2 y0"| earth_world_quaking_cavern["Earth World Quaking Cavern"]
- 10   42c0    d172c0 exit-door                                  tile(  4a,  41,  41) Rock guy      -> earth_world_quaking_cavern         pos(  0  ,0  ,0)   4a  41  41   0  fc   0   0   0  80   3   0   0   0   0   c   1   0   0   0  f9   0   c   2   0
-Exit for chart earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Entrance r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
- 17   4368    d17368 exit-door                                  tile(  38,  41,  2f) Entrance      -> shadow_tower_part1                 pos(  4  ,9  ,4)   38  41  2f   0  fc   0   0   0  80  fc   0   0   0   0  8b   0   4   9  ff   7   0   0   0  f8
-Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Entrance r1 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
- 3    5b38    7f8b38 exit-door                                  tile(  3e,  40,  35) Entrance      -> earth_world_stone_cavern           pos(-16  ,5,-16)   3e  40  35   0  fc   0   0   0   0   5   0   0   0   0  b6   0  f0   5  f7  f6   0  1c   1   0
-Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Bridge r3 y0"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
- 1    5b08    7f8b08 exit-door                                  tile(  4a,  40,  4a) Bridge        -> earth_world_hostile_rock_cavern    pos( -2  ,0 ,-2)   4a  40  4a   0  fc   0   0   0   0   0   0   0   0   0  d5   1  fe   0  f8   0   0  21   3   0
-Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Exit r1 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
- 11   5bf8    7f8bf8 exit-door                                  tile(  37,  40,  35) Exit          -> shadow_tower_part2                 pos(  0  ,1  ,0)   37  40  35   0  fc   0   0   0   0  fb   0   0   0   0  b8   0   0   1   4   a   0  28   1  f8
+Exit for chart human_world_cursed_region["Human World Cursed Region"] -->|"Entrance r0 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
+ 3    5b38     a0338 exit-door                                  tile(  40,  40,  38) Entrance      -> shadow_tower_part2                 pos(  0  ,1  ,0)   40  40  38   0  fc   0   0   0   0  fb   0   0   0   0   0   0   0   1   4   a   0  28   0  f8
+Exit for chart human_world_cursed_region["Human World Cursed Region"] -->|"Guardian side r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
+ 31   5dd8     a05d8 exit-door                                  tile(  4d,  40,  47) Guardian side -> shadow_tower_part1                 pos(  0  ,9  ,0)   4d  40  47   0  fc   0   0   0   0  fb   0   0   0   0  75   0   0   9   3   9   0   0   0  f8
+Exit for chart earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Entrance r3 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
+ 13   5c28    5c9c28 exit-door                                  tile(  38,  40,  35) Entrance      -> earth_world_stone_cavern           pos(-16  ,5,-16)   38  40  35   0  fc   0   0   0  80   5   0   0   0   0  a7   1  f0   5  f7  f6   0  1c   3   0
+Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Entrance r2 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
+ 4    4230    db4a30 exit-door                                  tile(  40,  40,  42) Entrance      -> earth_world_false_pit_cavern       pos( 10  ,0 ,10)   40  40  42   0  fc   0   0   0   0  fd   0   0   0   0   0   0   a   0   9   6   0   f   2   0
+Exit for chart earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Exit r2 y0"| earth_world_rotting_cavern["Earth World Rotting Cavern"]
+ 7    4278    db4a78 exit-door                                  tile(  30,  45,  36) Exit          -> earth_world_poisonous_cavern       pos( -7  ,1 ,-7)   30  45  36   0  fc   0   0   0   0   0   0   0   0   0  ab   0  f9   1  ef   1   1  1b   2   0
+Exit for chart earth_world_quaking_cavern["Earth World Quaking Cavern"] -->|"Entrance r1 y-17"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
+ 3    5b38    65fb38 exit-door                                  tile(  41,  40,  40) Entrance      -> human_world_cursed_region          pos(  0  ,0  ,0)   41  40  40   0  fc   0   0   0   0   0   0   0   0   0  a5   0   0   0  f9   0   0   1   1  ef
+Exit for chart earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Poison r0 y-8"| human_world_solitary_region["Human World Solitary Region"]
+ 13   4308    d17308 exit-door                                  tile(  4a,  41,  48) Poison        -> shadow_tower_part2                 pos(  0  ,1  ,0)   4a  41  48   0  fc   0   0   0   0  fb   0   0  80   0  48   1   0   1   4   a   0  28   0  f8
+Exit for chart earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Rock guy r0 y0"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
+ 10   42c0    d172c0 exit-door                                  tile(  4a,  41,  41) Rock guy      -> earth_world_hostile_rock_cavern    pos( -2  ,0 ,-2)   4a  41  41   0  fc   0   0   0  80   0   0   0   0   0   c   1  fe   0  f8   0   0  21   0   0
+Exit for chart earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Entrance r1 y-8"| shadow_tower_part1b["Shadow Tower Part1 B"]
+ 17   4368    d17368 exit-door                                  tile(  38,  41,  2f) Entrance      -> shadow_tower_part1                 pos(  0  ,9  ,0)   38  41  2f   0  fc   0   0   0  80  fb   0   0   0   0  8b   0   0   9   3   9   0   0   1  f8
+Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Entrance r2 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
+ 3    5b38    7f8b38 exit-door                                  tile(  3e,  40,  35) Entrance      -> shadow_tower_part1                 pos(  4  ,9  ,4)   3e  40  35   0  fc   0   0   0   0  fc   0   0   0   0  b6   0   4   9  ff   7   0   0   2  f8
+Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Bridge r0 y-8"| earth_world_stone_cavern["Earth World Stone Cavern"]
+ 1    5b08    7f8b08 exit-door                                  tile(  4a,  40,  4a) Bridge        -> shadow_tower_part2                 pos(  0  ,1  ,0)   4a  40  4a   0  fc   0   0   0   0  fb   0   0   0   0  d5   1   0   1   4   a   0  28   0  f8
+Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Exit r2 y0"| earth_world_quaking_cavern["Earth World Quaking Cavern"]
+ 11   5bf8    7f8bf8 exit-door                                  tile(  37,  40,  35) Exit          -> earth_world_hostile_rock_cavern    pos( -2  ,0 ,-2)   37  40  35   0  fc   0   0   0   0   0   0   0   0   0  b8   0  fe   0  f8   0   0  21   2   0
 Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Jump in r0 y3"| earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"]
  19   5cb8    7f8cb8 exit-totem  teleport                       tile(  3e,  3f,  36) Jump in       -> shadow_tower_part1                 pos( 33 ,-1 ,33)   3e  3f  36   0   3   0   0   c   0  fc   0  fc   0   0  d7   1  21  ff   0   b   0   0   0   3
 Exit for chart earth_world_false_pit_cavern["Earth World False Pit Cavern"] -->|"Totem r0 y1"| human_world_forgotten_region["Human World Forgotten Region"]
  16   5c70    7f8c70 exit-totem  teleport                       tile(  37,  40,  36) Totem         -> shadow_tower_part1                 pos(  6  ,1  ,6)   37  40  36   0   3   0   0   4   0   4   0   0   0   0  d9   1   6   1  ff   4   0   0   0   1
-Exit for chart earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"] -->|"Entrance r1 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
- 1    5b08    f78b08 exit-door                                  tile(  3d,  40,  38) Entrance      -> earth_world_false_pit_cavern       pos( 10  ,0 ,10)   3d  40  38   0  fc   0   0   0   0  fd   0   0   0   0   8   1   a   0   9   6   0   f   1   0
+Exit for chart earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"] -->|"Entrance r2 y-17"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
+ 1    5b08    f78b08 exit-door                                  tile(  3d,  40,  38) Entrance      -> human_world_cursed_region          pos(  0  ,0  ,0)   3d  40  38   0  fc   0   0   0   0   0   0   0   0   0   8   1   0   0  f9   0   0   1   2  ef
 Exit for chart earth_world_hostile_rock_cavern["Earth World Hostile Rock Cavern"] -->|"Boss room r0 y1"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
  3    5b38    f78b38 exit-totem  teleport                       tile(  3e,  40,  4b) Boss room     -> -                                  pos( 15 ,-3 ,15)   3e  40  4b   0   3   0   0   4   0   0   0   0   0   0  a0   0   f  fd  ff  f6   0  f8   0   1
-Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Entrance r1 y-8"| shadow_tower_part2a["Shadow Tower Part2 A"]
- 0    5af0    1c82f0 exit-door                                  tile(  3b,  40,  43) Entrance      -> shadow_tower_part2                 pos(  5  ,3  ,5)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0   5   3  fd   0   0  28   1  f8
+Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Entrance r0 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
+ 0    5af0    1c82f0 exit-door                                  tile(  3b,  40,  43) Entrance      -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9)   3b  40  43   0  fc   0   0   0   0   0   0   0   0   0   9   0  f7   0  f2   0   0  20   0   0
 Exit for chart fire_world_phoenix_cave["Fire World Phoenix Cave"] -->|"Exit r1 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
  1    5b08    1c8308 exit-door                                  tile(  41,  40,  43) Exit          -> shadow_tower_part2                 pos(  5  ,3  ,5)   41  40  43   0  fc   0   0   0   0   0   0   0   0   0   2   0   5   3   3   0   0  28   1  f8
 Exit for chart fire_world_burning_cavern["Fire World Burning Cavern"] -->|"Entrance r1 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
@@ -12362,20 +13260,20 @@ Exit for chart fire_world_ashen_cavern["Fire World Ashen Cavern"] -->|"Cerberus 
  17   5c88    92c488 exit-portal shaking wall portal            tile(  61,  44,  3c) Cerberus      -> illusion_world_bewilderment_domain pos( 20 ,-6 ,20)   61  44  3c   0  fd   0   0   0   0   0   0   0   0   0  21   1  14  fa  ff  f8   0   8   0   0
 Exit for chart fire_world_ashen_cavern["Fire World Ashen Cavern"] -->|"Start r0 y2"| fire_world_molten_cavern["Fire World Molten Cavern"]
  6    5b80    92c380 exit-portal shaking wall portal            tile(  41,  40,  36) Start         -> -                                  pos( 24  ,0 ,24)   41  40  36   0  fd   0   0   0   0   8   0   8   0   0  50   1  18   0   0   2   0  e0   0   2
-Exit for chart water_world_sunken_river_area["Water World Sunken River Area"] -->|"Pool r1 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
- 5    5b68    a44368 exit-door                                  tile(  41,  40,  49) Pool          -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0  f7   0  f2   0   0  20   1   0
+Exit for chart water_world_sunken_river_area["Water World Sunken River Area"] -->|"Pool r2 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
+ 5    5b68    a44368 exit-door                                  tile(  41,  40,  49) Pool          -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   41  40  49   0  fc   0   0   0   0   0   0   0   0   0  99   0   f   0  12   0   0   8   2   0
 Exit for chart water_world_sunken_river_area["Water World Sunken River Area"] -->|"Entrance r0 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
  1    5b08    a44308 exit-door                                  tile(  40,  40,  40) Entrance      -> shadow_tower_part3                 pos(  0  ,1  ,0)   40  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0   0   1   4   0   0  29   0  f8
-Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Entrance r3 y-8"| shadow_tower_part2b["Shadow Tower Part2 B"]
- 9    5bc8    5353c8 exit-door                                  tile(  44,  40,  33) Entrance      -> shadow_tower_part2                 pos(  4  ,5  ,4)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0   4   5   0   0   0  28   3  f8
+Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Entrance r2 y0"| shadow_tower_part2a["Shadow Tower Part2 A"]
+ 9    5bc8    5353c8 exit-door                                  tile(  44,  40,  33) Entrance      -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9)   44  40  33   0  fc   0   0   0   0   0   0   0   0   0  c4   0  f7   0  f2   0   0  20   2   0
 Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Flush down r3 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
  11   5bf8    5353f8 exit-door                                  tile(  48,  43,  33) Flush down    -> shadow_tower_part3                 pos(  4  ,1  ,4)   48  43  33   0  fc   0   0   0   0   0   0   0   0   0  93   1   4   1  fb   0   0  29   3  f8
 Exit for chart water_world_impure_pool_area["Water World Impure Pool Area"] -->|"Totem r3 y3"| monster_world_screeching_area["Monster World Screeching Area"]
  14   5c40    535440 exit-totem  teleport                       tile(  46,  40,  47) Totem         -> shadow_tower_part1                 pos( 17  ,8 ,17)   46  40  47   0   3   0   0   0   0   0   0   0   0  fc  89   1  11   8   0   3   0   0   3   3
 Exit for chart water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r1 y0"| water_world_white_rain_area["Water World White Rain Area"]
  9    5bc8    ee23c8 exit-door                                  tile(  49,  40,  35) Exit          -> water_world_white_rain_area        pos( -3  ,0 ,-3)   49  40  35   0  fc   0   0   0   0   0   0   0   0   0  eb   0  fd   0   0   0   0  25   1   0
-Exit for chart water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
- 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> water_world_sunken_river_area      pos(  0  ,0  ,0)   37  40  31   0  fc   0   0   0   0   0   0   0   0   0  ec   0   0   0   9   0   0  15   3   0
+Exit for chart water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r2 y0"| fire_world_phoenix_cave["Fire World Phoenix Cave"]
+ 4    5b50    ee2350 exit-door                                  tile(  37,  40,  31) Entrance      -> water_world_impure_pool_area       pos(  4  ,0  ,4)   37  40  31   0  fc   0   0   0   0   0   0  fc   0   0  ec   0   4   0  f4   1   1   a   2   0
 Exit for chart water_world_white_rain_area["Water World White Rain Area"] -->|"Entrance r3 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
  4    4230   1010a30 exit-door                                  tile(  3d,  40,  3f) Entrance      -> water_world_watery_labyrinth_area  pos(  8  ,0  ,8)   3d  40  3f   0  fc   0   0   0   0   0   0   0   0   0   0   0   8   0  f5   0   0  20   3   0
 Exit for chart water_world_white_rain_area["Water World White Rain Area"] -->|"Totem r0 y3"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
@@ -12390,16 +13288,16 @@ Exit for chart monster_world_screeching_area["Monster World Screeching Area"] --
  3    5b38    899338 exit-totem  teleport                       tile(  48,  40,  43) Totem         -> shadow_tower_part1                 pos( 10  ,6 ,10)   48  40  43   0   3   0   0   4   0  fc   0   0   0   4  32   0   a   6   0   6   0   0   1   2
 Exit for chart monster_world_screeching_area["Monster World Screeching Area"] -->|"Necron r2 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  6    5b80    899380 exit-totem  teleport                       tile(  44,  40,  4e) Necron        -> shadow_tower_part1                 pos( 25 ,-2 ,25)   44  40  4e   0   3   0   0   0   0   0   0   0   0  fc  54   0  19  fe   0  fb   0   0   2   0
-Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
- 3    5b38    4a8b38 exit-door                                  tile(  3e,  42,  39) Ladder down   -> illusion_world_bewilderment_domain pos( 15  ,0 ,15)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0   f   0  12   0   0   8   3   0
+Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Ladder down r3 y0"| shadow_tower_part2b["Shadow Tower Part2 B"]
+ 3    5b38    4a8b38 exit-door                                  tile(  3e,  42,  39) Ladder down   -> water_world_watery_labyrinth_area  pos( -9  ,0 ,-9)   3e  42  39   0  fc   0   0   0   0   0   0   0   0   0  69   0  f7   0  f2   0   0  20   3   0
 Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Entrance r2 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
  1    5b08    4a8b08 exit-door                                  tile(  39,  40,  40) Entrance      -> shadow_tower_part3                 pos( -4  ,2 ,-4)   39  40  40   0  fc   0   0   0   0   0   0   0   0   0   0   0  fc   2   0   0   0  29   2  f8
 Exit for chart illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r0 y3"| water_world_white_rain_area["Water World White Rain Area"]
  10   5be0    4a8be0 exit-totem  teleport                       tile(  3d,  40,  43) Totem         -> shadow_tower_part1                 pos( 37 ,-3 ,37)   3d  40  43   0   3   0   0   4   0   4   0   0   0   0  70   0  25  fd   0   2  f8   0   0   3
 Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
  20   5cd0    41b4d0 exit-door                                  tile(  44,  40,  3e) Exit          -> illusion_world_worship_domain      pos( -4  ,0 ,-4)   44  40  3e   0  fc   0   0   0   0   0   0   0   0  fc  a1   0  fc   0   6   0   8   d   1   0
-Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
- 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> illusion_world_gloomy_domain       pos( -2  ,2 ,-2)   50  40  52   0  fc   0   0   0   0   4   0   0   0   0  76   0  fe   2  fa  f8   0   9   1   0
+Exit for chart illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r3 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
+ 18   5ca0    41b4a0 exit-door                                  tile(  50,  40,  52) Entrance      -> water_world_impure_pool_area       pos(  4  ,0  ,4)   50  40  52   0  fc   0   0   0   0   0   0  fc   0   0  76   0   4   0  f4   1   1   a   3   0
 Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Entrance r3 y0"| illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"]
  1    5b08    6f1308 exit-door                                  tile(  3b,  40,  46) Entrance      -> illusion_world_bewilderment_domain pos(  4  ,0  ,4)   3b  40  46   0  fc   0   0   0   0   0   0   0   0   0  a6   1   4   0  ff   0   0   8   3   0
 Exit for chart illusion_world_worship_domain["Illusion World Worship Domain"] -->|"Connection r0 y2"| illusion_world_worship_domain["Illusion World Worship Domain"]
@@ -12435,6 +13333,11 @@ Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"King's 
 Exit for chart death_world_undead_layer["Death World Undead Layer"] -->|"Entrance r3 y0"| death_world_dark_castle_layer["Death World Dark Castle Layer"]
  15   5c58    c78c58 exit-door                                  tile(  41,  41,  2e) Entrance      -> death_world_dark_castle_layer      pos( 10 ,-1 ,10)   41  41  2e   0  fc   0   0   0   0   0   0   0   0   0  5e   0   a  ff   4   0   0  19   3   0
 DEBUG: About to enter area loop. Total areas: 31
-Successfully wrote maps.html - size: 268264 bytes
+Successfully wrote maps.html - size: 261401 bytes
+ generating creature power value table
+Generating creature power value table...
+Found 210 creatures to analyze
+Creature power table written to: .\generated\randomized-medium10\spoilers\creature_power_table.md
+CSV table written to: .\generated\randomized-medium10\spoilers\creature_power_table.csv
  writing item tracker notes
  writing .\generated\randomized-medium10\spoilers\changeset.json

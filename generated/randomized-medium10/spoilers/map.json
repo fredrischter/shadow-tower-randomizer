@@ -7,7 +7,8 @@
       "wayBackId": "38",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Tower Top"
     },
     {
       "id": "31",
@@ -16,7 +17,8 @@
       "wayBackId": "9",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Skeleton"
     },
     {
       "id": "9",
@@ -25,42 +27,56 @@
       "wayBackId": "31",
       "type": "door",
       "rotation": 2,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Jail"
     },
     {
-      "id": "35",
-      "dest": "human_world_cursed_region",
-      "world": "human_world",
-      "wayBackId": "3",
+      "id": "38",
+      "dest": "shadow_tower_part1a",
+      "wayBackId": "0",
       "type": "door",
       "rotation": 2,
-      "direction": "exit",
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Church"
+    },
+    {
+      "id": "0",
+      "dest": "human_world_solitary_region",
+      "world": "human_world",
+      "wayBackId": "38",
+      "type": "door",
+      "rotation": 0,
+      "nonSwitchable": false,
+      "label": "Tower Top"
     },
     {
       "id": "31",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "4",
+      "dest": "human_world_hidden_region",
+      "world": "human_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 2,
-      "nonSwitchable": false
+      "rotation": 0,
+      "nonSwitchable": false,
+      "label": "Skeleton"
     },
     {
-      "id": "4",
-      "dest": "human_world_cursed_region",
+      "id": "26",
+      "dest": "human_world_forgotten_region",
       "world": "human_world",
-      "wayBackId": "31",
-      "type": "door",
+      "wayBackId": "18",
+      "type": "totem",
       "rotation": 1,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Totem"
     },
     {
-      "id": "31",
+      "id": "34",
       "dest": "shadow_tower_part1b",
-      "wayBackId": "4",
+      "wayBackId": "8",
       "type": "door",
-      "rotation": 2,
-      "nonSwitchable": false
+      "rotation": 0,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
       "id": "8",
@@ -69,1636 +85,1908 @@
       "wayBackId": "34",
       "type": "door",
       "rotation": 3,
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Middle"
     },
     {
-      "id": "34",
-      "dest": "shadow_tower_part1b",
-      "wayBackId": "8",
+      "id": "37",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "9",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": false
+      "direction": "exit",
+      "nonSwitchable": false,
+      "label": "Jump down"
+    },
+    {
+      "id": "5",
+      "dest": "earth_world_false_pit_cavern",
+      "world": "earth_world",
+      "wayBackId": "3",
+      "type": "door",
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Top"
+    },
+    {
+      "id": "3",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "5",
+      "type": "door",
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Entrance"
+    },
+    {
+      "id": "11",
+      "dest": "human_world_cursed_region",
+      "world": "human_world",
+      "wayBackId": "31",
+      "type": "door",
+      "rotation": 0,
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
+    },
+    {
+      "id": "3",
+      "dest": "shadow_tower_part2a",
+      "wayBackId": "0",
+      "type": "door",
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
+    },
+    {
+      "id": "0",
+      "dest": "human_world_cursed_region",
+      "world": "human_world",
+      "wayBackId": "3",
+      "type": "door",
+      "rotation": 0,
+      "nonSwitchable": false,
+      "label": "Top left"
+    },
+    {
+      "id": "31",
+      "dest": "shadow_tower_part1c",
+      "wayBackId": "11",
+      "type": "door",
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Guardian side"
+    },
+    {
+      "id": "11",
+      "dest": "human_world_cursed_region",
+      "world": "human_world",
+      "wayBackId": "31",
+      "type": "door",
+      "rotation": 0,
+      "nonSwitchable": false,
+      "label": "Bottom Middle"
+    },
+    {
+      "id": "3",
+      "dest": "shadow_tower_part2a",
+      "wayBackId": "0",
+      "type": "door",
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
+    },
+    {
+      "id": "5",
+      "dest": "water_world_impure_pool_area",
+      "world": "water_world",
+      "wayBackId": "9",
+      "type": "door",
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Edge"
+    },
+    {
+      "id": "9",
+      "dest": "shadow_tower_part2a",
+      "wayBackId": "5",
+      "type": "door",
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
       "id": "jump",
-      "dest": "shadow_tower_part1c",
+      "dest": "shadow_tower_part2b",
       "type": "jump",
-      "nonSwitchable": false
+      "nonSwitchable": false,
+      "label": "Jump"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "7",
+      "dest": "fire_world_burning_cavern",
+      "world": "fire_world",
+      "wayBackId": "37",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
-    },
-    {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
-    },
-    {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
-    },
-    {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
-    },
-    {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
-    },
-    {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
-      "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
-    },
-    {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
-      "type": "door",
       "rotation": 1,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Top Middle"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "37",
+      "dest": "shadow_tower_part2b",
+      "wayBackId": "7",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "4",
+      "dest": "fire_world_phoenix_cave",
+      "world": "fire_world",
+      "wayBackId": "1",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Top right"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "0",
+      "dest": "water_world_watery_labyrinth_area",
+      "wayBackId": "4",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance",
+      "world": "water_world"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "4",
+      "dest": "fire_world_phoenix_cave",
+      "world": "fire_world",
+      "wayBackId": "0",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "1",
+      "dest": "shadow_tower_part2b",
+      "wayBackId": "4",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "4",
+      "dest": "fire_world_phoenix_cave",
+      "world": "fire_world",
+      "wayBackId": "1",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Top right"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "0",
+      "dest": "water_world_watery_labyrinth_area",
+      "wayBackId": "4",
       "type": "door",
       "rotation": 0,
-      "nonSwitchable": true
+      "nonSwitchable": false,
+      "label": "Entrance",
+      "world": "water_world"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     },
     {
-      "id": "11",
-      "dest": "earth_world_rotting_cavern",
-      "world": "earth_world",
-      "wayBackId": "13",
+      "id": "4",
+      "dest": "water_world_watery_labyrinth_area",
+      "world": "water_world",
+      "wayBackId": "9",
       "type": "door",
-      "rotation": 0,
-      "nonSwitchable": true
+      "rotation": 2,
+      "nonSwitchable": false,
+      "label": "Entrance"
     },
     {
-      "id": "13",
-      "dest": "shadow_tower_part1c",
-      "wayBackId": "11",
+      "id": "9",
+      "dest": "water_world_white_rain_area",
+      "world": "water_world",
+      "wayBackId": "4",
       "type": "door",
-      "rotation": 1,
-      "nonSwitchable": true
+      "rotation": 3,
+      "nonSwitchable": false,
+      "label": "Exit"
     }
   ],
   "map": [
@@ -1712,7 +2000,8 @@
           "wayBackId": "38",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Tower Top"
         }
       ],
       "depth": 0
@@ -1722,12 +2011,13 @@
       "exits": [
         {
           "id": "4",
-          "dest": "human_world_cursed_region",
-          "world": "human_world",
-          "wayBackId": "31",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "17",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Edge"
         },
         {
           "id": "8",
@@ -1736,46 +2026,51 @@
           "wayBackId": "34",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Middle"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part1c",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ],
-      "depth": 3
+      "depth": 4
     },
     {
       "name": "shadow_tower_part1c",
       "exits": [
         {
           "id": "5",
+          "dest": "earth_world_false_pit_cavern",
+          "world": "earth_world",
+          "wayBackId": "3",
+          "type": "door",
+          "rotation": 3,
+          "nonSwitchable": false,
+          "label": "Top"
+        },
+        {
+          "id": "11",
+          "dest": "human_world_cursed_region",
+          "world": "human_world",
+          "wayBackId": "31",
+          "type": "door",
+          "rotation": 0,
+          "nonSwitchable": false,
+          "label": "Bottom Middle"
+        },
+        {
+          "id": "9",
           "dest": "human_world_forgotten_region",
           "world": "human_world",
           "wayBackId": "37",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
-        },
-        {
-          "id": "11",
-          "dest": "earth_world_rotting_cavern",
-          "world": "earth_world",
-          "wayBackId": "13",
-          "type": "door",
-          "rotation": 0,
-          "nonSwitchable": true
-        },
-        {
-          "id": "9",
-          "dest": "earth_world_poisonous_cavern",
-          "world": "earth_world",
-          "wayBackId": "17",
-          "type": "door",
-          "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom Edge"
         }
       ],
       "depth": 4
@@ -1785,41 +2080,46 @@
       "exits": [
         {
           "id": "0",
-          "dest": "earth_world_false_pit_cavern",
-          "world": "earth_world",
-          "wayBackId": "11",
+          "dest": "human_world_cursed_region",
+          "world": "human_world",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top left"
         },
         {
           "id": "5",
-          "dest": "fire_world_phoenix_cave",
-          "world": "fire_world",
-          "wayBackId": "0",
+          "dest": "water_world_impure_pool_area",
+          "world": "water_world",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Edge"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part2b",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
-      ]
+      ],
+      "depth": 6
     },
     {
       "name": "shadow_tower_part2b",
       "exits": [
         {
           "id": "9",
-          "dest": "water_world_impure_pool_area",
-          "world": "water_world",
-          "wayBackId": "9",
+          "dest": "illusion_world_gloomy_domain",
+          "world": "illusion_world",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom"
         },
         {
           "id": "7",
@@ -1828,7 +2128,8 @@
           "wayBackId": "37",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top Middle"
         },
         {
           "id": "4",
@@ -1837,9 +2138,11 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Top right"
         }
-      ]
+      ],
+      "depth": 7
     },
     {
       "name": "shadow_tower_part3a",
@@ -1851,7 +2154,8 @@
           "wayBackId": "11",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Top right"
         },
         {
           "id": "3",
@@ -1860,7 +2164,8 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Top left"
         },
         {
           "id": "9",
@@ -1869,13 +2174,15 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part3b",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ]
     },
@@ -1889,7 +2196,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Bottom middle"
         },
         {
           "id": "7",
@@ -1898,7 +2206,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Top edge"
         },
         {
           "id": "13",
@@ -1907,13 +2216,15 @@
           "wayBackId": "2",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bottom end"
         },
         {
           "id": "jump",
           "dest": "shadow_tower_part3c",
           "type": "jump",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump"
         }
       ]
     },
@@ -1927,7 +2238,8 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Fence"
         }
       ]
     },
@@ -1942,7 +2254,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Skeleton"
         },
         {
           "id": "34",
@@ -1951,17 +2264,19 @@
           "wayBackId": "13",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Cemetery"
         },
         {
           "id": "35",
-          "dest": "human_world_cursed_region",
-          "world": "human_world",
-          "wayBackId": "3",
+          "dest": "earth_world_poisonous_cavern",
+          "world": "earth_world",
+          "wayBackId": "13",
           "type": "door",
           "rotation": 2,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Grave"
         },
         {
           "id": "38",
@@ -1969,7 +2284,8 @@
           "wayBackId": "0",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Church"
         }
       ],
       "depth": 1
@@ -1985,7 +2301,8 @@
           "wayBackId": "31",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Jail"
         },
         {
           "id": "13",
@@ -1994,7 +2311,8 @@
           "wayBackId": "34",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Corridor"
         },
         {
           "id": "26",
@@ -2003,31 +2321,8 @@
           "wayBackId": "18",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
-        }
-      ],
-      "depth": 2
-    },
-    {
-      "name": "human_world_cursed_region",
-      "world": "human_world",
-      "exits": [
-        {
-          "id": "3",
-          "dest": "human_world_solitary_region",
-          "world": "human_world",
-          "wayBackId": "35",
-          "type": "door",
-          "rotation": 2,
-          "nonSwitchable": false
-        },
-        {
-          "id": "31",
-          "dest": "shadow_tower_part1b",
-          "wayBackId": "4",
-          "type": "door",
-          "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ],
       "depth": 2
@@ -2042,16 +2337,18 @@
           "wayBackId": "8",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "37",
           "dest": "shadow_tower_part1c",
-          "wayBackId": "5",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 0,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump down"
         },
         {
           "id": "18",
@@ -2060,7 +2357,8 @@
           "wayBackId": "26",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         },
         {
           "id": "41",
@@ -2070,10 +2368,36 @@
           "type": "totem",
           "rotation": 3,
           "direction": "entrance",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Drop in"
         }
       ],
-      "depth": 4
+      "depth": 3
+    },
+    {
+      "name": "human_world_cursed_region",
+      "world": "human_world",
+      "exits": [
+        {
+          "id": "3",
+          "dest": "shadow_tower_part2a",
+          "wayBackId": "0",
+          "type": "door",
+          "rotation": 2,
+          "nonSwitchable": false,
+          "label": "Entrance"
+        },
+        {
+          "id": "31",
+          "dest": "shadow_tower_part1c",
+          "wayBackId": "11",
+          "type": "door",
+          "rotation": 2,
+          "nonSwitchable": false,
+          "label": "Guardian side"
+        }
+      ],
+      "depth": 5
     },
     {
       "name": "earth_world_rotting_cavern",
@@ -2081,11 +2405,13 @@
       "exits": [
         {
           "id": "13",
-          "dest": "shadow_tower_part1c",
-          "wayBackId": "11",
+          "dest": "earth_world_stone_cavern",
+          "wayBackId": "7",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance",
+          "world": "earth_world"
         }
       ],
       "depth": 5
@@ -2096,23 +2422,25 @@
       "exits": [
         {
           "id": "4",
-          "dest": "earth_world_poisonous_cavern",
+          "dest": "earth_world_false_pit_cavern",
           "world": "earth_world",
-          "wayBackId": "13",
+          "wayBackId": "1",
           "type": "door",
           "rotation": 0,
           "direction": "entrance",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "7",
-          "dest": "earth_world_false_pit_cavern",
+          "dest": "earth_world_rotting_cavern",
           "world": "earth_world",
-          "wayBackId": "3",
+          "wayBackId": "13",
           "type": "door",
           "rotation": 2,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         }
       ]
     },
@@ -2122,12 +2450,13 @@
       "exits": [
         {
           "id": "3",
-          "dest": "earth_world_poisonous_cavern",
+          "dest": "earth_world_false_pit_cavern",
           "world": "earth_world",
-          "wayBackId": "10",
+          "wayBackId": "11",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2137,30 +2466,33 @@
       "exits": [
         {
           "id": "13",
-          "dest": "earth_world_stone_cavern",
-          "world": "earth_world",
-          "wayBackId": "4",
+          "dest": "human_world_solitary_region",
+          "world": "human_world",
+          "wayBackId": "35",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Poison"
         },
         {
           "id": "10",
-          "dest": "earth_world_quaking_cavern",
+          "dest": "earth_world_hostile_rock_cavern",
           "world": "earth_world",
-          "wayBackId": "3",
+          "wayBackId": "1",
           "type": "door",
           "rotation": 3,
           "direction": "exit-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Rock guy"
         },
         {
           "id": "17",
-          "dest": "shadow_tower_part1c",
-          "wayBackId": "9",
+          "dest": "shadow_tower_part1b",
+          "wayBackId": "4",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2170,29 +2502,32 @@
       "exits": [
         {
           "id": "3",
-          "dest": "earth_world_stone_cavern",
-          "world": "earth_world",
-          "wayBackId": "7",
+          "dest": "shadow_tower_part1c",
+          "wayBackId": "5",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "1",
-          "dest": "earth_world_hostile_rock_cavern",
+          "dest": "earth_world_stone_cavern",
           "world": "earth_world",
-          "wayBackId": "1",
+          "wayBackId": "4",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Bridge"
         },
         {
           "id": "11",
-          "dest": "shadow_tower_part2a",
-          "wayBackId": "0",
+          "dest": "earth_world_quaking_cavern",
+          "wayBackId": "3",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit",
+          "world": "earth_world"
         },
         {
           "id": "19",
@@ -2202,7 +2537,8 @@
           "type": "totem",
           "rotation": 1,
           "direction": "entrance",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Jump in"
         },
         {
           "id": "16",
@@ -2211,9 +2547,11 @@
           "wayBackId": "41",
           "type": "totem",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
-      ]
+      ],
+      "depth": 5
     },
     {
       "name": "earth_world_hostile_rock_cavern",
@@ -2221,12 +2559,13 @@
       "exits": [
         {
           "id": "1",
-          "dest": "earth_world_false_pit_cavern",
+          "dest": "earth_world_poisonous_cavern",
           "world": "earth_world",
-          "wayBackId": "1",
+          "wayBackId": "10",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "3",
@@ -2235,7 +2574,8 @@
           "wayBackId": "19",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Boss room"
         }
       ]
     },
@@ -2245,11 +2585,13 @@
       "exits": [
         {
           "id": "0",
-          "dest": "shadow_tower_part2a",
-          "wayBackId": "5",
+          "dest": "water_world_watery_labyrinth_area",
+          "wayBackId": "4",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance",
+          "world": "water_world"
         },
         {
           "id": "1",
@@ -2257,9 +2599,11 @@
           "wayBackId": "4",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Exit"
         }
-      ]
+      ],
+      "depth": 8
     },
     {
       "name": "fire_world_burning_cavern",
@@ -2271,7 +2615,8 @@
           "wayBackId": "7",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "94",
@@ -2280,7 +2625,8 @@
           "wayBackId": "19",
           "type": "portal",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Platform"
         },
         {
           "id": "93",
@@ -2290,9 +2636,11 @@
           "type": "portal",
           "direction": "entrance-bi",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Room"
         }
-      ]
+      ],
+      "depth": 8
     },
     {
       "name": "fire_world_molten_cavern",
@@ -2306,7 +2654,8 @@
           "type": "portal",
           "direction": "exit-bi",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Abraxus"
         },
         {
           "id": "19",
@@ -2316,7 +2665,8 @@
           "type": "portal",
           "direction": "entrance-bi",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Platform"
         }
       ]
     },
@@ -2331,7 +2681,8 @@
           "wayBackId": "93",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Cerberus"
         },
         {
           "id": "6",
@@ -2340,7 +2691,8 @@
           "wayBackId": "27",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Start"
         }
       ]
     },
@@ -2350,13 +2702,14 @@
       "exits": [
         {
           "id": "5",
-          "dest": "water_world_watery_labyrinth_area",
-          "world": "water_world",
-          "wayBackId": "4",
+          "dest": "illusion_world_bewilderment_domain",
+          "world": "illusion_world",
+          "wayBackId": "18",
           "type": "door",
           "rotation": 3,
           "direction": "exit",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Pool"
         },
         {
           "id": "1",
@@ -2365,7 +2718,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "entrance",
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2375,11 +2729,12 @@
       "exits": [
         {
           "id": "9",
-          "dest": "shadow_tower_part2b",
-          "wayBackId": "9",
+          "dest": "shadow_tower_part2a",
+          "wayBackId": "5",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "11",
@@ -2388,7 +2743,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "exit",
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Flush down"
         },
         {
           "id": "14",
@@ -2398,9 +2754,11 @@
           "type": "totem",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
-      ]
+      ],
+      "depth": 7
     },
     {
       "name": "water_world_watery_labyrinth_area",
@@ -2413,18 +2771,21 @@
           "wayBackId": "4",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "4",
-          "dest": "water_world_sunken_river_area",
-          "world": "water_world",
-          "wayBackId": "5",
+          "dest": "fire_world_phoenix_cave",
+          "world": "fire_world",
+          "wayBackId": "0",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
-      ]
+      ],
+      "depth": 9
     },
     {
       "name": "water_world_white_rain_area",
@@ -2437,7 +2798,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "6",
@@ -2446,9 +2808,11 @@
           "wayBackId": "10",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
-      ]
+      ],
+      "depth": 10
     },
     {
       "name": "monster_world_false_eye_area",
@@ -2460,7 +2824,8 @@
           "wayBackId": "5",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "10",
@@ -2470,7 +2835,8 @@
           "type": "totem",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2484,7 +2850,8 @@
           "wayBackId": "7",
           "type": "door",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "3",
@@ -2493,7 +2860,8 @@
           "wayBackId": "14",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         },
         {
           "id": "6",
@@ -2502,7 +2870,8 @@
           "wayBackId": "4",
           "type": "totem",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Necron"
         }
       ]
     },
@@ -2512,12 +2881,12 @@
       "exits": [
         {
           "id": "3",
-          "dest": "illusion_world_bewilderment_domain",
-          "world": "illusion_world",
-          "wayBackId": "18",
+          "dest": "shadow_tower_part2b",
+          "wayBackId": "9",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Ladder down"
         },
         {
           "id": "1",
@@ -2525,7 +2894,8 @@
           "wayBackId": "9",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "10",
@@ -2534,7 +2904,8 @@
           "wayBackId": "6",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2549,16 +2920,18 @@
           "wayBackId": "1",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "18",
-          "dest": "illusion_world_gloomy_domain",
-          "world": "illusion_world",
-          "wayBackId": "3",
+          "dest": "water_world_sunken_river_area",
+          "world": "water_world",
+          "wayBackId": "5",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2573,7 +2946,8 @@
           "wayBackId": "20",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "6",
@@ -2582,7 +2956,8 @@
           "wayBackId": "8",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Connection"
         },
         {
           "id": "10",
@@ -2591,7 +2966,8 @@
           "wayBackId": "3",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Exit"
         },
         {
           "id": "8",
@@ -2600,7 +2976,8 @@
           "wayBackId": "6",
           "type": "portal",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "To Boss"
         }
       ]
     },
@@ -2615,7 +2992,8 @@
           "wayBackId": "10",
           "type": "totem",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         },
         {
           "id": "3",
@@ -2624,7 +3002,8 @@
           "wayBackId": "10",
           "type": "portal",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     },
@@ -2638,7 +3017,8 @@
           "wayBackId": "10",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Door"
         },
         {
           "id": "2",
@@ -2647,7 +3027,8 @@
           "wayBackId": "7",
           "type": "totem",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Box room"
         }
       ]
     },
@@ -2662,7 +3043,8 @@
           "wayBackId": "12",
           "type": "door",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "4",
@@ -2671,7 +3053,8 @@
           "wayBackId": "10",
           "type": "totem",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Totem"
         }
       ]
     },
@@ -2686,7 +3069,8 @@
           "wayBackId": "15",
           "type": "door",
           "rotation": 3,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Prison"
         },
         {
           "id": "2",
@@ -2694,7 +3078,8 @@
           "wayBackId": "13",
           "type": "door",
           "rotation": 1,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Entrance"
         },
         {
           "id": "4",
@@ -2704,7 +3089,8 @@
           "type": "totem",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Lower totem"
         },
         {
           "id": "7",
@@ -2714,7 +3100,8 @@
           "direction": "entrance-bi",
           "type": "totem",
           "rotation": 0,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Upper totem 1"
         },
         {
           "id": "10",
@@ -2724,7 +3111,8 @@
           "direction": "entrance-bi",
           "type": "totem",
           "rotation": 2,
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "Upper totem 2"
         }
       ]
     },
@@ -2740,7 +3128,8 @@
           "type": "door",
           "rotation": 0,
           "direction": "exit-bi",
-          "nonSwitchable": false
+          "nonSwitchable": false,
+          "label": "King's room"
         },
         {
           "id": "15",
@@ -2750,7 +3139,8 @@
           "type": "door",
           "rotation": 2,
           "direction": "entrance-bi",
-          "nonSwitchable": true
+          "nonSwitchable": false,
+          "label": "Entrance"
         }
       ]
     }
@@ -2758,7 +3148,6 @@
   "isComplete": false,
   "pathDifficulty": 201,
   "deadEnds": [
-    "shadow_tower_part1b",
     "shadow_tower_part1c",
     "shadow_tower_part2a",
     "shadow_tower_part2b",
@@ -2766,7 +3155,6 @@
     "shadow_tower_part3b",
     "shadow_tower_part3c",
     "human_world_cursed_region",
-    "human_world_forgotten_region",
     "earth_world_rotting_cavern",
     "earth_world_stone_cavern",
     "earth_world_quaking_cavern",
@@ -2793,24 +3181,17 @@
     "death_world_undead_layer"
   ],
   "notWalkedAreas": [
-    "shadow_tower_part2a",
-    "shadow_tower_part2b",
     "shadow_tower_part3a",
     "shadow_tower_part3b",
     "shadow_tower_part3c",
+    "earth_world_rotting_cavern",
     "earth_world_stone_cavern",
     "earth_world_quaking_cavern",
     "earth_world_poisonous_cavern",
-    "earth_world_false_pit_cavern",
     "earth_world_hostile_rock_cavern",
-    "fire_world_phoenix_cave",
-    "fire_world_burning_cavern",
     "fire_world_molten_cavern",
     "fire_world_ashen_cavern",
     "water_world_sunken_river_area",
-    "water_world_impure_pool_area",
-    "water_world_watery_labyrinth_area",
-    "water_world_white_rain_area",
     "monster_world_false_eye_area",
     "monster_world_screeching_area",
     "illusion_world_gloomy_domain",
