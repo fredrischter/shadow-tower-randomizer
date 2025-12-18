@@ -529,6 +529,58 @@ function randomize(paramsFile, stDir) {
             console.log("  Scaled base magic1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
         }
         
+        // Task #25: Scale weapon defense attributes
+        if (creature.weaponDefense1 && !creature.weaponDefense1.isNull()) {
+            var oldValue = creature.weaponDefense1.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.weaponDefense1.set(newValue);
+            console.log("  Scaled weaponDefense1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.weaponDefense2 && !creature.weaponDefense2.isNull()) {
+            var oldValue = creature.weaponDefense2.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.weaponDefense2.set(newValue);
+            console.log("  Scaled weaponDefense2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.weaponDefense3 && !creature.weaponDefense3.isNull()) {
+            var oldValue = creature.weaponDefense3.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.weaponDefense3.set(newValue);
+            console.log("  Scaled weaponDefense3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        
+        // Task #25: Scale magic defense attributes
+        if (creature.magDefense1 && !creature.magDefense1.isNull()) {
+            var oldValue = creature.magDefense1.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.magDefense1.set(newValue);
+            console.log("  Scaled magDefense1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.magDefense2 && !creature.magDefense2.isNull()) {
+            var oldValue = creature.magDefense2.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.magDefense2.set(newValue);
+            console.log("  Scaled magDefense2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.magDefense3 && !creature.magDefense3.isNull()) {
+            var oldValue = creature.magDefense3.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.magDefense3.set(newValue);
+            console.log("  Scaled magDefense3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.magDefense4 && !creature.magDefense4.isNull()) {
+            var oldValue = creature.magDefense4.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.magDefense4.set(newValue);
+            console.log("  Scaled magDefense4: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.magDefense5 && !creature.magDefense5.isNull()) {
+            var oldValue = creature.magDefense5.get();
+            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.magDefense5.set(newValue);
+            console.log("  Scaled magDefense5: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        
         // Fix for magic/projectile attack damage scaling
         // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
         if (creature.entityStates && creature.entityStates.length > 0) {
