@@ -42,51 +42,52 @@ jsonFiles.forEach((jsonFile, index) => {
     try {
         const areaStats = JSON.parse(fs.readFileSync(areaJsonPath, 'utf8'));
         
-        // Find bounds of tiles using world coordinates for fine positioning
-        let minPosX = Infinity, maxPosX = -Infinity;
+        // Find tile grid bounds (major positioning)
+        let minTileX = Infinity, maxTileX = -Infinity;
+        let minTileZ = Infinity, maxTileZ = -Infinity;
         let minPosY = Infinity, maxPosY = -Infinity;
-        let minPosZ = Infinity, maxPosZ = -Infinity;
         
         const nonBlankTiles = areaStats.tiles.filter(tile => !tile.isBlank);
         
+        // Calculate grid boundaries and world coordinate ranges per tile
+        const tileWorldRanges = {};
         nonBlankTiles.forEach(tile => {
-            if (tile.posX < minPosX) minPosX = tile.posX;
-            if (tile.posX > maxPosX) maxPosX = tile.posX;
+            if (tile.tileX < minTileX) minTileX = tile.tileX;
+            if (tile.tileX > maxTileX) maxTileX = tile.tileX;
+            if (tile.tileZ < minTileZ) minTileZ = tile.tileZ;
+            if (tile.tileZ > maxTileZ) maxTileZ = tile.tileZ;
             if (tile.posY < minPosY) minPosY = tile.posY;
             if (tile.posY > maxPosY) maxPosY = tile.posY;
-            if (tile.posZ < minPosZ) minPosZ = tile.posZ;
-            if (tile.posZ > maxPosZ) maxPosZ = tile.posZ;
+            
+            // Track world coordinate range for each grid tile
+            const key = `${tile.tileX}_${tile.tileZ}`;
+            if (!tileWorldRanges[key]) {
+                tileWorldRanges[key] = {
+                    minPosX: tile.posX, maxPosX: tile.posX,
+                    minPosZ: tile.posZ, maxPosZ: tile.posZ
+                };
+            } else {
+                if (tile.posX < tileWorldRanges[key].minPosX) tileWorldRanges[key].minPosX = tile.posX;
+                if (tile.posX > tileWorldRanges[key].maxPosX) tileWorldRanges[key].maxPosX = tile.posX;
+                if (tile.posZ < tileWorldRanges[key].minPosZ) tileWorldRanges[key].minPosZ = tile.posZ;
+                if (tile.posZ > tileWorldRanges[key].maxPosZ) tileWorldRanges[key].maxPosZ = tile.posZ;
+            }
         });
         
-        if (nonBlankTiles.length > 0 && minPosX !== Infinity) {
+        if (nonBlankTiles.length > 0 && minTileX !== Infinity) {
             const { createCanvas } = require('@napi-rs/canvas');
             
-            // Calculate world space dimensions
-            const worldWidth = maxPosX - minPosX;
-            const worldHeight = maxPosZ - minPosZ;
+            // Calculate grid dimensions
+            const gridWidth = maxTileX - minTileX + 1;
+            const gridHeight = maxTileZ - minTileZ + 1;
             const heightRange = maxPosY - minPosY;
             
-            // Determine scale to fit canvas while maintaining detail
-            // Target canvas size: 2000-3000 pixels for better resolution
-            const maxCanvasSize = 2500;
-            const margin = 100;
+            // Tile size: large enough to show fine offsets and numbering clearly
+            const baseTileSize = 60; // pixels per grid tile
+            const margin = 80;
             
-            let scale;
-            if (worldWidth > worldHeight) {
-                scale = (maxCanvasSize - 2 * margin) / worldWidth;
-            } else {
-                scale = (maxCanvasSize - 2 * margin) / worldHeight;
-            }
-            
-            // Ensure tiles are at least 20 pixels wide for visibility and numbering
-            const minTileSize = 20;
-            const avgTileSpacing = worldWidth / Math.max(1, nonBlankTiles.length / 10);
-            if (scale * avgTileSpacing < minTileSize) {
-                scale = minTileSize / avgTileSpacing;
-            }
-            
-            const canvasWidth = Math.ceil(worldWidth * scale) + 2 * margin;
-            const canvasHeight = Math.ceil(worldHeight * scale) + 2 * margin + 150; // Extra space for legend
+            const canvasWidth = gridWidth * baseTileSize + 2 * margin;
+            const canvasHeight = gridHeight * baseTileSize + 2 * margin + 120;
             
             const canvas = createCanvas(canvasWidth, canvasHeight);
             const ctx = canvas.getContext('2d');
@@ -95,59 +96,92 @@ jsonFiles.forEach((jsonFile, index) => {
             ctx.fillStyle = '#0a0a0a';
             ctx.fillRect(0, 0, canvasWidth, canvasHeight);
             
-            // Draw grid lines (every 1000 world units)
-            ctx.strokeStyle = '#1a1a1a';
+            // Draw tile grid
+            ctx.strokeStyle = '#2a2a2a';
             ctx.lineWidth = 1;
-            const gridStep = 1000;
-            
-            for (let wx = Math.floor(minPosX / gridStep) * gridStep; wx <= maxPosX; wx += gridStep) {
-                const x = margin + (wx - minPosX) * scale;
+            for (let x = 0; x <= gridWidth; x++) {
                 ctx.beginPath();
-                ctx.moveTo(x, margin);
-                ctx.lineTo(x, canvasHeight - margin - 150);
+                ctx.moveTo(margin + x * baseTileSize, margin);
+                ctx.lineTo(margin + x * baseTileSize, margin + gridHeight * baseTileSize);
+                ctx.stroke();
+            }
+            for (let z = 0; z <= gridHeight; z++) {
+                ctx.beginPath();
+                ctx.moveTo(margin, margin + z * baseTileSize);
+                ctx.lineTo(margin + gridWidth * baseTileSize, margin + z * baseTileSize);
                 ctx.stroke();
             }
             
-            for (let wz = Math.floor(minPosZ / gridStep) * gridStep; wz <= maxPosZ; wz += gridStep) {
-                const y = margin + (wz - minPosZ) * scale;
-                ctx.beginPath();
-                ctx.moveTo(margin, y);
-                ctx.lineTo(canvasWidth - margin, y);
-                ctx.stroke();
+            // Draw grid labels
+            ctx.fillStyle = '#555555';
+            ctx.font = '10px Arial';
+            ctx.textAlign = 'center';
+            for (let x = 0; x <= gridWidth; x++) {
+                const tileX = minTileX + x;
+                ctx.fillText(tileX.toString(), margin + x * baseTileSize, margin - 5);
+            }
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let z = 0; z <= gridHeight; z++) {
+                const tileZ = minTileZ + z;
+                ctx.fillText(tileZ.toString(), margin - 5, margin + z * baseTileSize);
             }
             
-            // Draw tiles with fine positioning
+            // Draw tiles with fine positioning offsets
             nonBlankTiles.forEach(tile => {
-                const x = margin + (tile.posX - minPosX) * scale;
-                const y = margin + (tile.posZ - minPosZ) * scale;
+                // Major position: tile grid coordinates
+                const gridX = margin + (tile.tileX - minTileX) * baseTileSize + baseTileSize / 2;
+                const gridZ = margin + (tile.tileZ - minTileZ) * baseTileSize + baseTileSize / 2;
                 
-                // Determine tile size based on scale
-                const tileSize = Math.max(16, Math.min(40, scale * 10));
+                // Minor position: world coordinate offset within the tile
+                // Calculate offset as percentage of tile's world coordinate range
+                const key = `${tile.tileX}_${tile.tileZ}`;
+                const range = tileWorldRanges[key];
+                const worldRangeX = range.maxPosX - range.minPosX;
+                const worldRangeZ = range.maxPosZ - range.minPosZ;
+                
+                // Offset within +/- 40% of tile size to show fine positioning
+                const maxOffset = baseTileSize * 0.4;
+                let offsetX = 0, offsetZ = 0;
+                if (worldRangeX > 0) {
+                    offsetX = ((tile.posX - range.minPosX) / worldRangeX - 0.5) * 2 * maxOffset;
+                }
+                if (worldRangeZ > 0) {
+                    offsetZ = ((tile.posZ - range.minPosZ) / worldRangeZ - 0.5) * 2 * maxOffset;
+                }
+                
+                const x = gridX + offsetX;
+                const z = gridZ + offsetZ;
+                
+                // Object size (smaller than grid tile to fit multiple objects)
+                const objSize = Math.min(24, baseTileSize * 0.35);
                 
                 // Color based on posY (height/elevation)
                 const heightNorm = heightRange > 0 ? (tile.posY - minPosY) / heightRange : 0.5;
                 const hue = 180 + heightNorm * 120; // Blue (low) to green (high)
                 const saturation = 70;
-                const lightness = 40 + heightNorm * 30;
+                const lightness = 45 + heightNorm * 25;
                 
-                // Draw tile rectangle
+                // Draw object circle
                 ctx.fillStyle = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-                ctx.fillRect(x - tileSize/2, y - tileSize/2, tileSize, tileSize);
+                ctx.beginPath();
+                ctx.arc(x, z, objSize / 2, 0, 2 * Math.PI);
+                ctx.fill();
                 
                 // Draw border
                 ctx.strokeStyle = '#ffffff';
-                ctx.lineWidth = 1;
-                ctx.strokeRect(x - tileSize/2, y - tileSize/2, tileSize, tileSize);
+                ctx.lineWidth = 2;
+                ctx.stroke();
                 
                 // Draw rotation indicator (small line from center)
                 if (tile.rotationZ > 0) {
                     const angle = (tile.rotationZ / 65536) * 2 * Math.PI;
-                    const lineLength = tileSize / 3;
+                    const lineLength = objSize / 2;
                     ctx.strokeStyle = '#ffff00';
                     ctx.lineWidth = 2;
                     ctx.beginPath();
-                    ctx.moveTo(x, y);
-                    ctx.lineTo(x + Math.cos(angle) * lineLength, y + Math.sin(angle) * lineLength);
+                    ctx.moveTo(x, z);
+                    ctx.lineTo(x + Math.cos(angle) * lineLength, z + Math.sin(angle) * lineLength);
                     ctx.stroke();
                 }
                 
@@ -155,66 +189,66 @@ jsonFiles.forEach((jsonFile, index) => {
                 ctx.fillStyle = '#ffffff';
                 ctx.strokeStyle = '#000000';
                 ctx.lineWidth = 3;
-                ctx.font = `bold ${Math.max(8, Math.min(14, tileSize/2))}px Arial`;
+                ctx.font = `bold ${Math.min(12, objSize * 0.5)}px Arial`;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 
                 const text = tile.index.toString();
-                ctx.strokeText(text, x, y);
-                ctx.fillText(text, x, y);
+                ctx.strokeText(text, x, z);
+                ctx.fillText(text, x, z);
             });
             
             // Draw title and info
             ctx.fillStyle = '#ffffff';
-            ctx.font = 'bold 20px Arial';
+            ctx.font = 'bold 18px Arial';
             ctx.textAlign = 'left';
-            ctx.fillText(areaName, 10, 30);
+            ctx.fillText(areaName, 10, 25);
             
-            ctx.font = '14px Arial';
-            ctx.fillText(`Non-blank Tiles: ${areaStats.nonBlankTiles} / ${areaStats.totalTiles}`, 10, 55);
-            ctx.fillText(`World Dimensions: ${worldWidth} x ${worldHeight} units`, 10, 75);
-            ctx.fillText(`Scale: ${scale.toFixed(4)} pixels/unit`, 10, 95);
+            ctx.font = '12px Arial';
+            ctx.fillText(`Tiles: ${areaStats.nonBlankTiles} / ${areaStats.totalTiles}`, 10, 45);
+            ctx.fillText(`Grid: ${gridWidth} x ${gridHeight} (tileX: ${minTileX}-${maxTileX}, tileZ: ${minTileZ}-${maxTileZ})`, 10, 62);
             
-            // Draw coordinate ranges at bottom
-            const legendY = canvasHeight - 120;
+            // Draw legend at bottom
+            const legendY = canvasHeight - 90;
             ctx.fillStyle = '#aaaaaa';
-            ctx.font = '12px monospace';
-            ctx.fillText(`PosX Range: ${minPosX} to ${maxPosX}`, 10, legendY);
-            ctx.fillText(`PosY Range: ${minPosY} to ${maxPosY} (height)`, 10, legendY + 20);
-            ctx.fillText(`PosZ Range: ${minPosZ} to ${maxPosZ}`, 10, legendY + 40);
+            ctx.font = '11px Arial';
+            ctx.fillText(`Height (posY): ${minPosY} to ${maxPosY}`, 10, legendY);
+            ctx.fillText(`Position: Tile grid (major) + World coords (fine offset)`, 10, legendY + 18);
             
             // Draw color legend
-            ctx.font = 'bold 12px Arial';
+            ctx.font = 'bold 11px Arial';
             ctx.fillStyle = '#ffffff';
-            ctx.fillText('Height Legend:', 10, legendY + 70);
+            ctx.fillText('Height:', 10, legendY + 45);
             
-            const legendBarWidth = 200;
-            const legendBarHeight = 20;
-            const legendX = 120;
+            const legendBarWidth = 150;
+            const legendBarHeight = 16;
+            const legendX = 70;
             
             // Draw gradient bar
             for (let i = 0; i < legendBarWidth; i++) {
                 const h = i / legendBarWidth;
                 const hue = 180 + h * 120;
-                const lightness = 40 + h * 30;
+                const lightness = 45 + h * 25;
                 ctx.fillStyle = `hsl(${hue}, 70%, ${lightness}%)`;
-                ctx.fillRect(legendX + i, legendY + 60, 1, legendBarHeight);
+                ctx.fillRect(legendX + i, legendY + 35, 1, legendBarHeight);
             }
             
             ctx.strokeStyle = '#ffffff';
-            ctx.strokeRect(legendX, legendY + 60, legendBarWidth, legendBarHeight);
+            ctx.strokeRect(legendX, legendY + 35, legendBarWidth, legendBarHeight);
             
             ctx.fillStyle = '#aaaaaa';
-            ctx.font = '10px Arial';
-            ctx.fillText(`Low (${minPosY})`, legendX, legendY + 95);
-            ctx.fillText(`High (${maxPosY})`, legendX + legendBarWidth - 60, legendY + 95);
+            ctx.font = '9px Arial';
+            ctx.textAlign = 'left';
+            ctx.fillText(`Low (${minPosY})`, legendX, legendY + 67);
+            ctx.textAlign = 'right';
+            ctx.fillText(`High (${maxPosY})`, legendX + legendBarWidth, legendY + 67);
             
             // Save image
             const imageBuffer = canvas.toBuffer('image/png');
             const imagePath = path.join(imagesDir, areaName + '.png');
             fs.writeFileSync(imagePath, imageBuffer);
             
-            console.log(`  ✓ Generated: ${Math.ceil(worldWidth * scale)}x${Math.ceil(worldHeight * scale)}px (scale: ${scale.toFixed(4)})`);
+            console.log(`  ✓ Generated: ${canvasWidth}x${canvasHeight}px (grid: ${gridWidth}x${gridHeight})`);
             processedCount++;
         } else {
             console.log('  ⊘ Skipped: No non-blank tiles');
