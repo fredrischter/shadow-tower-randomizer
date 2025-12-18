@@ -1328,5 +1328,29 @@
         "type": "store"
       }
     ]
+  },
+  {
+    "name": "wat1",
+    "world": "death_world",
+    "exits": [],
+    "totems": []
+  },
+  {
+    "name": "wat2",
+    "world": "death_world",
+    "exits": [],
+    "totems": []
+  },
+  {
+    "name": "wat3",
+    "world": "death_world",
+    "exits": [],
+    "totems": []
+  },
+  {
+    "name": "wat4",
+    "world": "death_world",
+    "exits": [],
+    "totems": []
   }
 ]
