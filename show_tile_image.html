@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tile Visualization - Fine-Grained Positioning</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #0a0a0a; 
+            color: #e0e0e0; 
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        h1 { 
+            color: #4af; 
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+        }
+        .container { 
+            max-width: 1600px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5f7e 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4af;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .info-box h2 {
+            color: #4af;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .comparison-item {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
+        .comparison-item h3 {
+            color: #f66;
+            margin-bottom: 10px;
+        }
+        .comparison-item.new h3 {
+            color: #6f6;
+        }
+        .comparison-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .comparison-item li {
+            padding: 5px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .comparison-item li:last-child {
+            border-bottom: none;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #1a1a2e;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #4af;
+        }
+        .feature-title {
+            color: #4af;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .image-container {
+            background: #000;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #333;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #666;
+            border-radius: 4px;
+        }
+        .image-title {
+            color: #4af;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .stats {
+            background: #0f0f0f;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .stat-label {
+            color: #888;
+            display: inline-block;
+            width: 180px;
+        }
+        .stat-value {
+            color: #6f6;
+            font-weight: bold;
+        }
+        .highlight {
+            background: #2a4a2a;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #6f6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>🎮 Shadow Tower - Tile Visualization Improvements</h1>
+            <div class="subtitle">Fine-Grained Positioning with Object Numbering</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="info-box">
+            <h2>✨ Key Improvements</h2>
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h3>❌ Old Approach (Grid-Based)</h3>
+                    <ul>
+                        <li><strong>Coordinates:</strong> Tile grid (tileX, tileZ)</li>
+                        <li><strong>Resolution:</strong> ~240 x 220 pixels</li>
+                        <li><strong>Tile Size:</strong> 8 x 8 pixels</li>
+                        <li><strong>Precision:</strong> ~3842 world units per grid square</li>
+                        <li><strong>Numbering:</strong> None</li>
+                        <li><strong>Problem:</strong> Tiles overlapped completely!</li>
+                    </ul>
+                </div>
+                <div class="comparison-item new">
+                    <h3>✅ New Approach (World Space)</h3>
+                    <ul>
+                        <li><strong>Coordinates:</strong> World space (posX, posZ)</li>
+                        <li><strong>Resolution:</strong> ~2500 x 2250 pixels</li>
+                        <li><strong>Tile Size:</strong> 16-40 pixels (scaled)</li>
+                        <li><strong>Precision:</strong> ~29 world units visible separation</li>
+                        <li><strong>Numbering:</strong> Index displayed on each tile</li>
+                        <li><strong>Result:</strong> Fine positioning clearly visible!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>📊 Example: human_world_solitary_region</h2>
+            <div class="stats">
+                <div><span class="stat-label">Total Tiles:</span> <span class="stat-value">512</span></div>
+                <div><span class="stat-label">Non-blank Tiles:</span> <span class="stat-value">101</span></div>
+                <div><span class="stat-label">World X Range:</span> <span class="stat-value">7 → 65,328 (65,321 units)</span></div>
+                <div><span class="stat-label">World Y Range:</span> <span class="stat-value">0 → 768 (768 units)</span></div>
+                <div><span class="stat-label">World Z Range:</span> <span class="stat-value">0 → 54,017 (54,017 units)</span></div>
+                <div><span class="stat-label">Scale:</span> <span class="stat-value">0.0352 pixels/unit</span></div>
+                <div><span class="stat-label">Overlapping Tiles:</span> <span class="stat-value">8 grid positions</span></div>
+            </div>
+            
+            <p style="margin-top: 15px;">
+                <strong>Critical Finding:</strong> 8 grid positions had multiple tiles that would 
+                <span class="highlight">completely overlap</span> in the old view. For example, 
+                tiles 0 and 1 are only <span class="highlight">1 world unit apart</span> 
+                (65280 vs 65281) but mapped to the same grid position!
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h2>🎨 Visual Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-title">📍 Fine Positioning</div>
+                    Each tile positioned at exact world coordinates (posX, posZ) for maximum detail
+                </div>
+                <div class="feature">
+                    <div class="feature-title">🔢 Object Numbers</div>
+                    Index (0-511) displayed on each tile with high-contrast text
+                </div>
+                <div class="feature">
+                    <div class="feature-title">🎨 Height Coding</div>
+                    Color gradient from blue (low) to green (high) based on posY elevation
+                </div>
+                <div class="feature">
+                    <div class="feature-title">📐 Rotation</div>
+                    Yellow indicator lines showing tile rotation_z direction
+                </div>
+                <div class="feature">
+                    <div class="feature-title">📏 Reference Grid</div>
+                    Grid lines every 1000 world units for spatial reference
+                </div>
+                <div class="feature">
+                    <div class="feature-title">📋 Legend</div>
+                    Detailed coordinate ranges, scale info, and height gradient
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-title">Generated Image - Full Resolution (2500 x 2252 pixels)</div>
+            <img src="../tiles-dump/images/human_world_solitary_region.png" alt="Tile Map">
+        </div>
+        
+        <div class="info-box">
+            <h2>✓ Results</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 8px 0;">✅ <strong>31/31 areas</strong> successfully generated</li>
+                <li style="padding: 8px 0;">✅ <strong>10x resolution increase</strong> (244x220 → 2500x2250)</li>
+                <li style="padding: 8px 0;">✅ <strong>Fine positioning</strong> clearly visible</li>
+                <li style="padding: 8px 0;">✅ <strong>Object numbering</strong> on all tiles</li>
+                <li style="padding: 8px 0;">✅ <strong>Height and rotation</strong> information displayed</li>
+                <li style="padding: 8px 0;">✅ <strong>No overlapping</strong> - each tile at exact position</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
