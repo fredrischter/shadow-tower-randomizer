@@ -4,7 +4,10 @@
 **Original PR Comment:** [PR #27 Review Comment](https://github.com/fredrischter/shadow-tower-randomizer/pull/27#pullrequestreview-3594682806)
 > "Are you sure these changes are applying? The speed doesn't seem to change at all."
 
-**Answer:** You were absolutely correct! The speed changes were NOT applying. This has now been fixed.
+**Answer:** You were absolutely correct! The speed changes were NOT applying. This has now been fixed in TWO parts:
+
+1. **Part 1 (Commit e310103):** Fixed EntityStateData accessor pattern - changes now persist correctly
+2. **Part 2 (Commit 848fb42):** Fixed to modify creature.spd field - actual movement speed now changes
 
 ---
 
@@ -148,6 +151,21 @@ The fix ensures two speed bytes are correctly modified:
 - **INVERSE:** Lower value = faster actions
 - Formula: `newTimer = oldTimer ÷ multiplier`
 - Inverse relationship
+
+**⚠️ IMPORTANT UPDATE (December 18, 2025):**
+
+User testing revealed that EntityStateData offsets 0x03 and 0x08 do NOT control movement speed. They control **AI behavior/aggression**. The actual movement speed is in `creature.spd` field at offset 0x25 in the Creature data structure.
+
+**New findings:**
+- `creature.spd` (offset 0x25) = **Actual movement speed**
+- `entityState.actionSpeedTimer` (offset 0x03) = **AI timing**
+- `entityState.movementSpeed` (offset 0x08) = **AI aggression/pursuit**
+
+**Fix updated in commit 848fb42** to modify both:
+1. EntityStateData fields (for AI behavior)
+2. creature.spd field (for actual movement speed)
+
+See `CREATURE_SPEED_FIX_COMPLETE.md` for full analysis.
 
 ---
 
