@@ -1,0 +1,10 @@
+{
+  "label": "slow-creatures",
+  "preset": "no-change",
+  "difficulty": "medium",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "creatureSpeedMultiplier": 0.5,
+  "seed": "1"
+}
