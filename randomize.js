@@ -508,6 +508,27 @@ function randomize(paramsFile, stDir) {
 
         console.log("DEBUG - Creature " + creature.name);
         
+        // Fix for magic damage problem - Scale creature base attack attributes
+        // These are separate from EntityStateData attacks and must be scaled too
+        if (creature.attack1 && !creature.attack1.isNull()) {
+            var oldValue = creature.attack1.get();
+            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.attack1.set(newValue);
+            console.log("  Scaled base attack1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.attack2 && !creature.attack2.isNull()) {
+            var oldValue = creature.attack2.get();
+            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.attack2.set(newValue);
+            console.log("  Scaled base attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.magic1 && !creature.magic1.isNull()) {
+            var oldValue = creature.magic1.get();
+            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.magic1.set(newValue);
+            console.log("  Scaled base magic1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        
         // Fix for magic/projectile attack damage scaling
         // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
         if (creature.entityStates && creature.entityStates.length > 0) {
