@@ -581,6 +581,19 @@ function randomize(paramsFile, stDir) {
                 }
             });
         }
+        
+        // ACTUAL movement speed is in creature.spd field (offset 0x25), NOT in EntityStateData
+        // EntityStateData offsets 0x03 and 0x08 appear to control AI behavior/aggression, not movement
+        if (params.creatureSpeedMultiplier && params.creatureSpeedMultiplier !== 1.0) {
+            var speedMultiplier = params.creatureSpeedMultiplier;
+            
+            if (creature.spd && !creature.spd.isNull()) {
+                var oldSpeed = creature.spd.get();
+                var newSpeed = Math.min(255, Math.max(1, Math.ceil(oldSpeed * speedMultiplier)));
+                creature.spd.set(newSpeed);
+                console.log("  Scaled creature.spd (actual movement speed): " + oldSpeed + " -> " + newSpeed + " (x" + speedMultiplier + ")");
+            }
+        }
     }
 
     function applyDifficultyForEachItem(item) {
