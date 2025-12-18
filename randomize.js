@@ -508,7 +508,7 @@ function randomize(paramsFile, stDir) {
 
         console.log("DEBUG - Creature " + creature.name);
         
-        // Fix for magic damage problem - Scale creature base attack attributes
+        // Fix for base attack damage scaling
         // These are separate from EntityStateData attacks and must be scaled too
         if (creature.attack1 && !creature.attack1.isNull()) {
             var oldValue = creature.attack1.get();
@@ -522,89 +522,36 @@ function randomize(paramsFile, stDir) {
             creature.attack2.set(newValue);
             console.log("  Scaled base attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
         }
-        if (creature.magic1 && !creature.magic1.isNull()) {
-            var oldValue = creature.magic1.get();
-            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magic1.set(newValue);
-            console.log("  Scaled base magic1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
         
-        // Task #25: Scale weapon defense attributes
-        if (creature.weaponDefense1 && !creature.weaponDefense1.isNull()) {
-            var oldValue = creature.weaponDefense1.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.weaponDefense1.set(newValue);
-            console.log("  Scaled weaponDefense1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        if (creature.weaponDefense2 && !creature.weaponDefense2.isNull()) {
-            var oldValue = creature.weaponDefense2.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.weaponDefense2.set(newValue);
-            console.log("  Scaled weaponDefense2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        if (creature.weaponDefense3 && !creature.weaponDefense3.isNull()) {
-            var oldValue = creature.weaponDefense3.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.weaponDefense3.set(newValue);
-            console.log("  Scaled weaponDefense3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
+        // Task #25: DO NOT scale creature.magic1 - it doesn't affect magic damage
+        // Magic damage appears to be controlled elsewhere (likely by spell IDs in EntityStateData type 0x30)
+        // Scaling magic1 has no effect on actual magic damage in-game
         
-        // Task #25: Scale magic defense attributes
-        if (creature.magDefense1 && !creature.magDefense1.isNull()) {
-            var oldValue = creature.magDefense1.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magDefense1.set(newValue);
-            console.log("  Scaled magDefense1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        if (creature.magDefense2 && !creature.magDefense2.isNull()) {
-            var oldValue = creature.magDefense2.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magDefense2.set(newValue);
-            console.log("  Scaled magDefense2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        if (creature.magDefense3 && !creature.magDefense3.isNull()) {
-            var oldValue = creature.magDefense3.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magDefense3.set(newValue);
-            console.log("  Scaled magDefense3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        if (creature.magDefense4 && !creature.magDefense4.isNull()) {
-            var oldValue = creature.magDefense4.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magDefense4.set(newValue);
-            console.log("  Scaled magDefense4: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        if (creature.magDefense5 && !creature.magDefense5.isNull()) {
-            var oldValue = creature.magDefense5.get();
-            var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magDefense5.set(newValue);
-            console.log("  Scaled magDefense5: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-        }
-        
-        // Fix for magic/projectile attack damage scaling
-        // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
+        // Fix for physical attack damage scaling
+        // Task #25: DO NOT scale type 0x30 (spell/magic) - those values are spell IDs, not damage values
+        // Scaling them changes the spell ID to invalid values, causing magic to not work at all
+        // Scale attack values in entityState data (type 0x20 = physical attack ONLY)
         if (creature.entityStates && creature.entityStates.length > 0) {
             creature.entityStates.forEach((entityState) => {
-                if (entityState.type == 0x20 || entityState.type == 0x30) {
-                    var attackType = entityState.type == 0x20 ? "physical" : "spell/magic";
-                    // EntityStateData with type 0x20/0x30 contains attack1, attack2, attack3 (UInt16 at offsets 0x1a, 0x1c, 0x1e)
+                if (entityState.type == 0x20) {
+                    // EntityStateData with type 0x20 contains attack1, attack2, attack3 (UInt16 at offsets 0x1a, 0x1c, 0x1e)
                     if (entityState.attack1) {
                         var oldValue = entityState.attack1.get();
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack1.set(newValue);
-                        console.log("  Scaled " + attackType + " attack1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                        console.log("  Scaled physical attack1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
                     if (entityState.attack2) {
                         var oldValue = entityState.attack2.get();
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack2.set(newValue);
-                        console.log("  Scaled " + attackType + " attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                        console.log("  Scaled physical attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
                     if (entityState.attack3) {
                         var oldValue = entityState.attack3.get();
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack3.set(newValue);
-                        console.log("  Scaled " + attackType + " attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+                        console.log("  Scaled physical attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
                     
                     // Task: Add creature movement/rotation speed parameters
