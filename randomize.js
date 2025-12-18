@@ -1691,7 +1691,7 @@ function randomize(paramsFile, stDir) {
                 // Blank all spawns except the first one (which now has apocrypha)
                 var blankedSpawns = 0;
                 solitaryRegion.spawns.forEach((spawn, index) => {
-                    if (index !== 0 && !spawn.isBlank) {
+                    if (index !== 3 && !spawn.isBlank) {
                         spawn.blank();
                         blankedSpawns++;
                     }
