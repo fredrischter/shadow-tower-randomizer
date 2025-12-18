@@ -554,6 +554,30 @@ function randomize(paramsFile, stDir) {
                         entityState.attack3.set(newValue);
                         console.log("  Scaled " + attackType + " attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
+                    
+                    // Task: Add creature movement/rotation speed parameters
+                    // Scale speed parameters if creatureSpeedMultiplier is specified
+                    if (params.creatureSpeedMultiplier && params.creatureSpeedMultiplier !== 1.0) {
+                        var speedMultiplier = params.creatureSpeedMultiplier;
+                        
+                        // Scale movement speed (offset 0x08) - higher value = faster
+                        if (entityState.movementSpeed && !entityState.movementSpeed.isNull()) {
+                            var oldSpeed = entityState.movementSpeed.get();
+                            var newSpeed = Math.min(255, Math.max(1, Math.ceil(oldSpeed * speedMultiplier)));
+                            entityState.movementSpeed.set(newSpeed);
+                            console.log("  Scaled movement speed: " + oldSpeed + " -> " + newSpeed + " (x" + speedMultiplier + ")");
+                        }
+                        
+                        // Scale action speed timer (offset 0x03) - INVERSE: lower value = slower
+                        // So to make creatures faster, we DIVIDE by the multiplier
+                        if (entityState.actionSpeedTimer && !entityState.actionSpeedTimer.isNull()) {
+                            var oldTimer = entityState.actionSpeedTimer.get();
+                            // Inverse relationship: divide to speed up, multiply to slow down
+                            var newTimer = Math.min(255, Math.max(1, Math.ceil(oldTimer / speedMultiplier)));
+                            entityState.actionSpeedTimer.set(newTimer);
+                            console.log("  Scaled action speed timer: " + oldTimer + " -> " + newTimer + " (x" + speedMultiplier + ")");
+                        }
+                    }
                 }
             });
         }
