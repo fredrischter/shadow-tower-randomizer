@@ -1,0 +1,10 @@
+{
+  "label": "fast-creatures",
+  "preset": "no-change",
+  "difficulty": "medium",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "creatureSpeedMultiplier": 5.0,
+  "seed": "1"
+}

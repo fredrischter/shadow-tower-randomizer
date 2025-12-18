@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overlap Handling - Fixed</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #0a0a0a; 
+            color: #e0e0e0; 
+            padding: 20px;
+        }
+        .container { max-width: 1800px; margin: 0 auto; }
+        h1 { color: #4af; margin-bottom: 15px; }
+        .info-box {
+            background: #1a1a2e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #4af;
+        }
+        .info-box h2 { color: #4af; margin-bottom: 12px; font-size: 18px; }
+        .info-box ul { list-style: none; padding-left: 20px; margin-top: 10px; }
+        .info-box li { margin: 8px 0; }
+        .highlight { background: #2a4a2a; padding: 2px 6px; border-radius: 3px; color: #6f6; font-weight: bold; }
+        .highlight-yellow { background: #4a4a2a; padding: 2px 6px; border-radius: 3px; color: #ff6; font-weight: bold; }
+        .image-container {
+            background: #000;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #333;
+        }
+        .image-container img { max-width: 100%; height: auto; border: 1px solid #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Overlap Handling: Multiple Objects at Same Position</h1>
+        
+        <div class="info-box">
+            <h2>Solution Implemented</h2>
+            <p>When multiple objects are at the same position (within 1 pixel), they are now displayed with a marker system:</p>
+            <ul>
+                <li>✓ <span class="highlight-yellow">Yellow border</span> on overlapping objects to make them stand out</li>
+                <li>✓ <span class="highlight-yellow">*1, *2, *3...</span> notation instead of individual IDs</li>
+                <li>✓ <span class="highlight">Side legend box</span> showing all object IDs for each marker</li>
+                <li>✓ Objects listed <span class="highlight">vertically with bullet points</span> for clarity</li>
+                <li>✓ Shows <span class="highlight">count of objects</span> in each overlap group</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h2>Visual Indicators</h2>
+            <ul>
+                <li><strong>Single object:</strong> White border, shows object ID directly</li>
+                <li><strong>Multiple overlapping objects:</strong> Yellow border, shows *N marker</li>
+                <li><strong>Legend box:</strong> Top-right corner with semi-transparent black background and yellow border</li>
+                <li><strong>Legend content:</strong> Lists all IDs vertically with bullet points for each marker</li>
+            </ul>
+        </div>
+
+        <div class="image-container">
+            <h2 style="color: #4af; margin-bottom: 15px; text-align: left;">Example: human_world_solitary_region</h2>
+            <p style="text-align: left; margin-bottom: 15px; color: #aaa;">
+                This area has 8 grid positions with overlapping tiles. Look for yellow-bordered circles with *1, *2, etc. markers.
+            </p>
+            <img src="tiles-dump/images/human_world_solitary_region.png" alt="Overlap Handling Example">
+        </div>
+        
+        <div class="info-box">
+            <h2>Technical Details</h2>
+            <p><strong>Overlap Detection:</strong></p>
+            <ul>
+                <li>Objects are grouped by their final position (rounded to nearest pixel)</li>
+                <li>Groups with 2+ objects are marked as overlapping</li>
+                <li>Each overlap group gets a unique marker number (*1, *2, *3...)</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>Legend Positioning:</strong></p>
+            <ul>
+                <li>Positioned in top-right corner (canvas width - 250)</li>
+                <li>Semi-transparent black background (85% opacity)</li>
+                <li>Yellow border matching the overlap marker borders</li>
+                <li>Dynamically sized based on number of overlaps</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
