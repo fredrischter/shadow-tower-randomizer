@@ -2227,8 +2227,9 @@ function randomize(paramsFile, stDir) {
                         var entranceName = normalizeAreaName(exit.dest) + "/" + exit.wayBackId;
                         entranceLabel = exitsNames[entranceName] || exit.wayBackId;
                     }
-                    // Format: "exitName - entranceName" for better visualization (e.g., "Tower Top - Church")
-                    var relationshipType = exit.type === "jump" ? "JUMP" : (entranceLabel ? exitLabel + " - " + entranceLabel : exitLabel);
+                    // Task: Fix bidirectional arrow labels - use only exit label (not "exit - entrance")
+                    // The bidirectional arrow (↔) itself shows it goes both ways, no need for redundant text
+                    var relationshipType = exit.type === "jump" ? "JUMP" : (entranceLabel || "-");
                     
                     neo4jData.relationships.push({
                         id: neo4jData.relationships.length.toString(),

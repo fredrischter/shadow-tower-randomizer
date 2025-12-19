@@ -456,7 +456,7 @@ function performCircleSpinIteration(map) {
 function shuffle(params) {
 	params = params || { randomizeMap: true };
 
-	const LIMIT_ATTEMPTS = 10;
+	const LIMIT_ATTEMPTS = 20;
 	const LIMIT_SWAP_ROUNDS = 50;
 
 	var result;
@@ -493,7 +493,7 @@ function shuffle(params) {
 				// New map randomization logic: perform circle spin algorithm 3 times
 				// Task #24: Changed from 2 to 3 iterations as requested
 				console.error(new Date().toISOString() + "  Starting new circle spin randomization");
-				for (var i=0; i<20; i++) {
+				for (var i=0; i<3; i++) {
 					console.error(" Iteration " + (i+1) + "/3:");
 					performCircleSpinIteration(generated);
 				}
@@ -521,11 +521,11 @@ function shuffle(params) {
 				"pathDifficulty":123
 			}*/
 
-			//console.log(" complete:" + walkResult.isComplete);
+			console.error(" complete:" + walkResult.isComplete);
 	//		if (walkResult.isComplete && walkResult.pathDifficulty < 50 || walkResult.pathDifficulty > 200) {
 	//			console.log(" map:" + JSON.stringify(walkResult.map));
 	//		}
-			//console.log(" difficulty:" + walkResult.pathDifficulty);
+			console.error(" difficulty:" + walkResult.pathDifficulty);
 
 		} while((!walkResult || !walkResult.isComplete) && ++attempts<LIMIT_ATTEMPTS);
 
