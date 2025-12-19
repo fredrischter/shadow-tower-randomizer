@@ -1,91 +1,178 @@
-# 20 Experimental EXE Patches for Magic Damage Testing
+# 20 Experimental EXE Patches - Based on WORKING Pattern
 
-This folder contains 20 different experimental patches to ST.EXE.
+## Important: Experiment 14 WORKS!
 
-## Key Change: ALL Experiments Reduce Magic Damage to 1/4
+**User feedback:**
+- Experiments 1-13, 15-20 (previous version): Failed to load
+- **Experiment 14: LOADS SUCCESSFULLY** ✓
 
-**Every experiment applies the same modification:** Reduce magic damage to 25% (divide by 4)
+**Working pattern (Experiment 14):**
+- Memory region: 0x40000-0x60000
+- Instruction type: ADDIU only (0x24000000 opcode)
+- Value range: 10-100
+- Changes: 1,057 modifications
 
-**The variety is in WHERE the patches are applied:**
-- Different code regions (first 32KB, middle, last 128KB)
-- Different instruction types (ADDIU, LUI, ORI, ANDI, SLTI, shifts)
-- Different value ranges (low 4-30, mid 30-100, high 100-255)
-- Different patterns (alternating, branch delays, near multiplies)
+## New Experiments - Variations of Working Pattern
 
-This allows testing which code location actually controls magic damage.
+All experiments use the same safe approach as Experiment 14, with variations to identify what actually affects magic damage.
 
 ---
 
-## Experiments Quick Reference
+## Experiments
 
-| # | Description | Changes | Risk |
+### EXACT WORKING BASELINE
+
+| # | Description | Changes | Status |
+|---|-------------|---------|--------|
+| **14** | **Region 0x40000-0x60000, values 10-100** | **1,057** | **✓ WORKS** |
+
+### VALUE RANGE VARIATIONS (Same Region)
+
+Test different value ranges within the working region:
+
+| # | Description | Changes | Tests |
+|---|-------------|---------|-------|
+| 01 | Values 20-60 (narrower) | 522 | Mid values only |
+| 02 | Values 30-80 (shifted up) | 395 | Higher values |
+| 13 | Values 15-50 (lower half) | 681 | Lower-mid values |
+| 15 | Values 40-100 (upper half) | 384 | Higher values |
+| 16 | Values 10-40 (lower third) | 713 | Lower values |
+
+### SPECIFIC VALUE PATTERNS (Same Region)
+
+| # | Description | Changes | Pattern |
+|---|-------------|---------|---------|
+| 03 | Specific: 10,12,16,20,24,32,40,48,64,80 | 639 | Common magic values |
+| 09 | Power-of-2: 8,16,32,64 | 319 | Powers of 2 |
+| 10 | Multiples of 10: 10,20,30,...,100 | 150 | Round numbers |
+| 20 | Even values 10-100 | 910 | Even numbers only |
+
+### REGIONAL VARIATIONS
+
+#### Overlapping Regions
+| # | Description | Changes | Region |
+|---|-------------|---------|--------|
+| 04 | 0x30000-0x50000 (shifted down) | 1,002 | Earlier code |
+| 05 | 0x50000-0x70000 (shifted up) | 856 | Later code |
+| 11 | 0x38000-0x68000 (larger) | 1,511 | Expanded range |
+
+#### Sub-Regions Within Working Area
+| # | Description | Changes | Size |
 |---|-------------|---------|------|
-| 01 | First 32KB region | 271 | Low |
-| 02 | 32-64KB region | 399 | Low |
-| 03 | 64-128KB region | 1,536 | Low |
-| 04 | ALL constants (broad) | 6,912 | Med |
-| 05 | Shift operations | 441 | Med |
-| 06 | LUI instructions | 518 | Med |
-| 07 | Specific magic values | 2,948 | Low |
-| 08 | ORI instructions | 173 | Low |
-| 09 | ANDI instructions | 894 | Med |
-| 10 | Raw bytes (aggressive) | 35,479 | High |
-| 11 | 16-bit values (extreme) | 54,749 | High |
-| 12 | Comparison thresholds | 623 | Med |
-| 13 | Branch delay slots | 412 | Med |
-| 14 | Store operations | 0 | Skip |
-| 15 | High values (100-255) | 1,646 | Low |
-| 16 | Mid values (30-100) | 2,240 | Low |
-| 17 | Low values (4-30) | 3,081 | Low |
-| 18 | Near multiply | 63 | Low |
-| 19 | Alternating pattern | 3,386 | Med |
-| 20 | Last 128KB | 925 | Low |
+| 06 | 0x48000-0x58000 (center) | 549 | Smaller |
+| 07 | 0x40000-0x50000 (first half) | 563 | First half |
+| 08 | 0x50000-0x60000 (second half) | 494 | Second half |
+| 12 | 0x4C000-0x54000 (very narrow) | 219 | Very small |
+| 19 | Two regions: 0x40000-0x48000 + 0x58000-0x60000 | 508 | Split regions |
+
+#### Different Regions Entirely
+| # | Description | Changes | Location |
+|---|-------------|---------|----------|
+| 17 | 0x60000-0x70000 | 362 | After working region |
+| 18 | 0x28000-0x38000 | 537 | Before working region |
 
 ---
 
-## Testing Priority
+## Testing Strategy
 
-**Start with these (best candidates):**
-1. Experiment 04 - Broadest coverage
-2. Experiment 07 - Specific magic damage values
-3. Experiment 11 - 16-bit data values (if no crashes)
+### Phase 1: Confirm Baseline (MUST TEST FIRST)
+- **Test Experiment 14** - Verify it still loads and check for magic damage change
 
-**Then narrow down location:**
-- Experiments 01, 02, 03, 20 - Regional testing
+### Phase 2: Find Value Range
+If Exp 14 affects magic damage, narrow down which values:
+- Test 16 (values 10-40)
+- Test 15 (values 40-100)
+- Test 01 (values 20-60)
 
-**Then test value ranges:**
-- Experiments 15, 16, 17 - High/mid/low values
+### Phase 3: Identify Specific Values
+Once range is known, test specific patterns:
+- Test 03 (specific values)
+- Test 09 (power-of-2)
+- Test 10 (multiples of 10)
 
-**Finally try special patterns:**
-- Experiments 05, 06, 08, 09, 12, 13, 18, 19 - Instruction types
+### Phase 4: Find Exact Location
+Narrow down which part of region 0x40000-0x60000:
+- Test 07 (first half)
+- Test 08 (second half)
+- Test 12 (center)
+
+### Phase 5: Try Adjacent Regions
+If nothing affects magic damage in 0x40000-0x60000:
+- Test 04 (earlier region)
+- Test 05 (later region)
+- Test 17, 18 (different regions)
 
 ---
 
 ## How to Test
 
 ```bash
-# Copy experiment to test location
-cp experimental-exe-patches/ST-experiment-04.EXE iso-dump/ST.EXE
+# Always test experiment 14 first!
+cp experimental-exe-patches/ST-experiment-14.EXE iso-dump/ST.EXE
 
 # Build ISO
 npm run mod "./path/to/st.bin" "./params/no-change.json"
 
 # Test in PSX emulator
-# Check if magic damage is ~1/4 normal
+# Check:
+#  1. Does it load? (Should - it worked before)
+#  2. Does magic damage change?
+#  3. How much? (Should be ~1/4 if it works)
 ```
 
 ---
 
-## Expected Result
+## What to Report
 
-If an experiment works:
-- ✅ Magic attacks deal 25% damage
-- ✅ Spells weakened to 1/4 power
-- ✅ Physical attacks unchanged
-- ✅ Game stable
+**For Experiment 14 (CRITICAL):**
+- Does it still load? (Should be YES)
+- Does magic damage change? (YES/NO/CAN'T TELL)
+- If YES: By how much? (~1/4, 1/2, other?)
+- Are physical attacks unchanged?
 
-Report which experiment(s) successfully reduce magic damage!
+**For Other Experiments:**
+- Does it load? (YES/NO)
+- If YES: Does magic damage change? (YES/NO)
+- Any crashes or glitches?
 
 ---
 
-Generated by `generate_experiments_v2.js`
+## Why This Approach Works
+
+**Experiment 14 pattern is SAFE because:**
+1. Only targets specific memory region (0x40000-0x60000)
+2. Only modifies ADDIU instructions (not raw data)
+3. Moderate number of changes (1,057)
+4. Conservative value range (10-100)
+
+**Previous failures were caused by:**
+- Modifying entire EXE (too many changes)
+- Changing 16-bit data directly (corrupts game data)
+- Wrong memory regions (critical game code)
+- Too aggressive modifications
+
+---
+
+## Technical Details
+
+All experiments modify only ADDIU instructions in the specified regions:
+
+```asm
+addiu $register, $zero, [immediate_value]
+Opcode: 0x24000000
+```
+
+**Damage reduction:**
+```javascript
+newValue = Math.max(1, Math.floor(oldValue / 4))
+```
+
+**Examples:**
+- 20 → 5
+- 32 → 8
+- 64 → 16
+- 100 → 25
+
+---
+
+Generated by `generate_experiments_v4.js` - Based on working Experiment 14 pattern
