@@ -1,185 +1,222 @@
 [
   {
     "experiment": 1,
-    "region": "Highest mult/div density - likely damage calc",
-    "start": "0x37274",
-    "end": "0x3dd58",
-    "multDivCount": 198,
-    "arithmeticCount": 1739,
-    "patchesApplied": 277,
-    "divideBy": 4
+    "region": "HP Store #1 (Actual Damage)",
+    "priority": "HIGH",
+    "description": "HP Store #1 (Actual Damage), Broad (10-100)",
+    "startOffset": "0x2bfac",
+    "endOffset": "0x2cf4c",
+    "centerOffset": "0x2c77c",
+    "valueRange": "10-100",
+    "patchCount": 36
   },
   {
     "experiment": 2,
-    "region": "High mult/div with loads of arithmetic",
-    "start": "0x79f0",
-    "end": "0x16358",
-    "multDivCount": 95,
-    "arithmeticCount": 3309,
-    "patchesApplied": 770,
-    "divideBy": 4
+    "region": "HP Store #1 (Actual Damage)",
+    "priority": "HIGH",
+    "description": "HP Store #1 (Actual Damage), Mid (20-60)",
+    "startOffset": "0x2bfac",
+    "endOffset": "0x2cf4c",
+    "centerOffset": "0x2c77c",
+    "valueRange": "20-60",
+    "patchCount": 14
   },
   {
     "experiment": 3,
-    "region": "Very high arithmetic density",
-    "start": "0x40148",
-    "end": "0x4e790",
-    "multDivCount": 93,
-    "arithmeticCount": 4134,
-    "patchesApplied": 878,
-    "divideBy": 4
+    "region": "HP Store #1 (Actual Damage)",
+    "priority": "HIGH",
+    "description": "HP Store #1 (Actual Damage), Upper-Mid (30-80)",
+    "startOffset": "0x2bfac",
+    "endOffset": "0x2cf4c",
+    "centerOffset": "0x2c77c",
+    "valueRange": "30-80",
+    "patchCount": 10
   },
   {
     "experiment": 4,
-    "region": "Compact mult/div heavy region",
-    "start": "0x60c74",
-    "end": "0x63e90",
-    "multDivCount": 92,
-    "arithmeticCount": 836,
-    "patchesApplied": 86,
-    "divideBy": 4
+    "region": "HP Store #1 (Actual Damage)",
+    "priority": "HIGH",
+    "description": "HP Store #1 (Actual Damage), High (40-100)",
+    "startOffset": "0x2bfac",
+    "endOffset": "0x2cf4c",
+    "centerOffset": "0x2c77c",
+    "valueRange": "40-100",
+    "patchCount": 15
   },
   {
     "experiment": 5,
-    "region": "Medium mult/div region",
-    "start": "0x257d0",
-    "end": "0x2b98c",
-    "multDivCount": 59,
-    "arithmeticCount": 1638,
-    "patchesApplied": 564,
-    "divideBy": 4
+    "region": "HP Store #1 (Actual Damage)",
+    "priority": "HIGH",
+    "description": "HP Store #1 (Actual Damage), Lower-Mid (15-50)",
+    "startOffset": "0x2bfac",
+    "endOffset": "0x2cf4c",
+    "centerOffset": "0x2c77c",
+    "valueRange": "15-50",
+    "patchCount": 19
   },
   {
     "experiment": 6,
-    "region": "Balanced mult/div region",
-    "start": "0x2f060",
-    "end": "0x32bac",
-    "multDivCount": 50,
-    "arithmeticCount": 915,
-    "patchesApplied": 124,
-    "divideBy": 4
+    "region": "HP Store #2 (Entity Init)",
+    "priority": "MEDIUM",
+    "description": "HP Store #2 (Entity Init), Broad (10-100)",
+    "startOffset": "0x5e19c",
+    "endOffset": "0x5f13c",
+    "centerOffset": "0x5e96c",
+    "valueRange": "10-100",
+    "patchCount": 24
   },
   {
     "experiment": 7,
-    "region": "Medium mult/div region 2",
-    "start": "0x2147c",
-    "end": "0x25780",
-    "multDivCount": 48,
-    "arithmeticCount": 1058,
-    "patchesApplied": 303,
-    "divideBy": 4
+    "region": "HP Store #2 (Entity Init)",
+    "priority": "MEDIUM",
+    "description": "HP Store #2 (Entity Init), Mid (20-60)",
+    "startOffset": "0x5e19c",
+    "endOffset": "0x5f13c",
+    "centerOffset": "0x5e96c",
+    "valueRange": "20-60",
+    "patchCount": 15
   },
   {
     "experiment": 8,
-    "region": "Medium mult/div region 3",
-    "start": "0x2b9bc",
-    "end": "0x2f020",
-    "multDivCount": 44,
-    "arithmeticCount": 973,
-    "patchesApplied": 181,
-    "divideBy": 4
+    "region": "HP Store #2 (Entity Init)",
+    "priority": "MEDIUM",
+    "description": "HP Store #2 (Entity Init), Upper-Mid (30-80)",
+    "startOffset": "0x5e19c",
+    "endOffset": "0x5f13c",
+    "centerOffset": "0x5e96c",
+    "valueRange": "30-80",
+    "patchCount": 17
   },
   {
     "experiment": 9,
-    "region": "Lower mult/div, high arith",
-    "start": "0x16570",
-    "end": "0x1dc00",
-    "multDivCount": 36,
-    "arithmeticCount": 2481,
-    "patchesApplied": 800,
-    "divideBy": 4
+    "region": "HP Store #2 (Entity Init)",
+    "priority": "MEDIUM",
+    "description": "HP Store #2 (Entity Init), High (40-100)",
+    "startOffset": "0x5e19c",
+    "endOffset": "0x5f13c",
+    "centerOffset": "0x5e96c",
+    "valueRange": "40-100",
+    "patchCount": 13
   },
   {
     "experiment": 10,
-    "region": "Low mult/div control test",
-    "start": "0x55960",
-    "end": "0x5c50c",
-    "multDivCount": 10,
-    "arithmeticCount": 1707,
-    "patchesApplied": 352,
-    "divideBy": 4
+    "region": "HP Store #2 (Entity Init)",
+    "priority": "MEDIUM",
+    "description": "HP Store #2 (Entity Init), Lower-Mid (15-50)",
+    "startOffset": "0x5e19c",
+    "endOffset": "0x5f13c",
+    "centerOffset": "0x5e96c",
+    "valueRange": "15-50",
+    "patchCount": 13
   },
   {
     "experiment": 11,
-    "description": "Top 2 mult/div regions combined",
-    "regions": [
-      1,
-      2
-    ],
-    "patchesApplied": 1047
+    "region": "HP Store #3 (State Reset)",
+    "priority": "MEDIUM",
+    "description": "HP Store #3 (State Reset), Broad (10-100)",
+    "startOffset": "0x5f6a8",
+    "endOffset": "0x60648",
+    "centerOffset": "0x5fe78",
+    "valueRange": "10-100",
+    "patchCount": 21
   },
   {
     "experiment": 12,
-    "description": "Top 3 mult/div regions combined",
-    "regions": [
-      1,
-      2,
-      3
-    ],
-    "patchesApplied": 1925
+    "region": "HP Store #3 (State Reset)",
+    "priority": "MEDIUM",
+    "description": "HP Store #3 (State Reset), Mid (20-60)",
+    "startOffset": "0x5f6a8",
+    "endOffset": "0x60648",
+    "centerOffset": "0x5fe78",
+    "valueRange": "20-60",
+    "patchCount": 9
   },
   {
     "experiment": 13,
-    "description": "Regions 1 and 4 (both compact, high mult/div)",
-    "regions": [
-      1,
-      4
-    ],
-    "patchesApplied": 363
+    "region": "HP Store #3 (State Reset)",
+    "priority": "MEDIUM",
+    "description": "HP Store #3 (State Reset), Upper-Mid (30-80)",
+    "startOffset": "0x5f6a8",
+    "endOffset": "0x60648",
+    "centerOffset": "0x5fe78",
+    "valueRange": "30-80",
+    "patchCount": 5
   },
   {
     "experiment": 14,
-    "description": "Regions 2 and 3 (high arithmetic)",
-    "regions": [
-      2,
-      3
-    ],
-    "patchesApplied": 1648
+    "region": "HP Store #3 (State Reset)",
+    "priority": "MEDIUM",
+    "description": "HP Store #3 (State Reset), High (40-100)",
+    "startOffset": "0x5f6a8",
+    "endOffset": "0x60648",
+    "centerOffset": "0x5fe78",
+    "valueRange": "40-100",
+    "patchCount": 8
   },
   {
     "experiment": 15,
-    "description": "Medium mult/div regions 5-8",
-    "regions": [
-      5,
-      6,
-      7,
-      8
-    ],
-    "patchesApplied": 1172
+    "region": "HP Store #3 (State Reset)",
+    "priority": "MEDIUM",
+    "description": "HP Store #3 (State Reset), Lower-Mid (15-50)",
+    "startOffset": "0x5f6a8",
+    "endOffset": "0x60648",
+    "centerOffset": "0x5fe78",
+    "valueRange": "15-50",
+    "patchCount": 12
   },
   {
     "experiment": 16,
-    "description": "First 8KB of region 1",
-    "start": "0x37274",
-    "end": "0x39274",
-    "patchesApplied": 28
+    "region": "HP Store #4 (Full Init)",
+    "priority": "LOW",
+    "description": "HP Store #4 (Full Init), Broad (10-100)",
+    "startOffset": "0x60d7c",
+    "endOffset": "0x61d1c",
+    "centerOffset": "0x6154c",
+    "valueRange": "10-100",
+    "patchCount": 16
   },
   {
     "experiment": 17,
-    "description": "Second 8KB of region 1",
-    "start": "0x39274",
-    "end": "0x3b274",
-    "patchesApplied": 66
+    "region": "HP Store #4 (Full Init)",
+    "priority": "LOW",
+    "description": "HP Store #4 (Full Init), Mid (20-60)",
+    "startOffset": "0x60d7c",
+    "endOffset": "0x61d1c",
+    "centerOffset": "0x6154c",
+    "valueRange": "20-60",
+    "patchCount": 9
   },
   {
     "experiment": 18,
-    "description": "Third 8KB of region 1",
-    "start": "0x3b274",
-    "end": "0x3d274",
-    "patchesApplied": 154
+    "region": "HP Store #4 (Full Init)",
+    "priority": "LOW",
+    "description": "HP Store #4 (Full Init), Upper-Mid (30-80)",
+    "startOffset": "0x60d7c",
+    "endOffset": "0x61d1c",
+    "centerOffset": "0x6154c",
+    "valueRange": "30-80",
+    "patchCount": 8
   },
   {
     "experiment": 19,
-    "description": "First 12KB of region 2",
-    "start": "0x79f0",
-    "end": "0xa9f0",
-    "patchesApplied": 135
+    "region": "HP Store #4 (Full Init)",
+    "priority": "LOW",
+    "description": "HP Store #4 (Full Init), High (40-100)",
+    "startOffset": "0x60d7c",
+    "endOffset": "0x61d1c",
+    "centerOffset": "0x6154c",
+    "valueRange": "40-100",
+    "patchCount": 3
   },
   {
     "experiment": 20,
-    "description": "First 12KB of region 3",
-    "start": "0x40148",
-    "end": "0x43148",
-    "patchesApplied": 131
+    "region": "HP Store #4 (Full Init)",
+    "priority": "LOW",
+    "description": "HP Store #4 (Full Init), Lower-Mid (15-50)",
+    "startOffset": "0x60d7c",
+    "endOffset": "0x61d1c",
+    "centerOffset": "0x6154c",
+    "valueRange": "15-50",
+    "patchCount": 13
   }
 ]

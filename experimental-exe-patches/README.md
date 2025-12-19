@@ -1,152 +1,86 @@
-# Experimental ST.EXE Patches - MIPS Analysis Based
-
-**Generated based on MIPS disassembly analysis of damage calculation regions**
-
-All experiments reduce magic damage to 1/4 by dividing ADDIU immediate values by 4.
+# Experimental ST.EXE Patches - HP Store Region Targeting
 
 ## Approach
 
-Used MIPS disassembler to find arithmetic-heavy code regions with high multiplication/division density.
-These regions likely contain damage calculations.
+Based on MIPS disassembly analysis, found 4 instructions that store to HP address 0x198f2a:
+
+1. **0x02c77c:** `SH $s0, 0x8f2a($v0)` - **Actual HP value storage** (HIGH PRIORITY)
+2. **0x05e96c:** `SH $zero, 0x8f2a($at)` - Entity initialization
+3. **0x05fe78:** `SH $zero, 0x8f2a($at)` - State reset
+4. **0x06154c:** `SH $zero, 0x8f2a($at)` - Full initialization
+
+Previous experiments failed because they targeted arithmetic-heavy regions (damage calculation),
+but HP stores are in separate regions. This approach targets code AROUND HP store instructions.
 
 ## Experiments
 
-### Single Regions (1-10)
-Target individual arithmetic-heavy regions sorted by mult/div count.
+All 20 experiments modify ADDIU instructions in regions around HP stores to reduce values by 1/4.
 
-**Experiment 1:** Highest mult/div density - likely damage calc
-- Region: 0x37274-0x3dd58
-- Mult/Div operations: 198
-- Arithmetic operations: 1739
-- Patches applied: 277
+### Experiments 1-5: HP Store #1 Region (0x02c77c) ⭐ HIGHEST PRIORITY
 
-**Experiment 2:** High mult/div with loads of arithmetic
-- Region: 0x79f0-0x16358
-- Mult/Div operations: 95
-- Arithmetic operations: 3309
-- Patches applied: 770
+These target the region where actual damage values get stored to HP.
 
-**Experiment 3:** Very high arithmetic density
-- Region: 0x40148-0x4e790
-- Mult/Div operations: 93
-- Arithmetic operations: 4134
-- Patches applied: 878
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+|  1 | 10-100 | 36 | Broad (10-100) |
+|  2 | 20-60 | 14 | Mid (20-60) |
+|  3 | 30-80 | 10 | Upper-Mid (30-80) |
+|  4 | 40-100 | 15 | High (40-100) |
+|  5 | 15-50 | 19 | Lower-Mid (15-50) |
 
-**Experiment 4:** Compact mult/div heavy region
-- Region: 0x60c74-0x63e90
-- Mult/Div operations: 92
-- Arithmetic operations: 836
-- Patches applied: 86
+### Experiments 6-10: HP Store #2 Region (0x05e96c)
 
-**Experiment 5:** Medium mult/div region
-- Region: 0x257d0-0x2b98c
-- Mult/Div operations: 59
-- Arithmetic operations: 1638
-- Patches applied: 564
+Entity initialization code.
 
-**Experiment 6:** Balanced mult/div region
-- Region: 0x2f060-0x32bac
-- Mult/Div operations: 50
-- Arithmetic operations: 915
-- Patches applied: 124
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+|  6 | 10-100 | 24 | Broad (10-100) |
+|  7 | 20-60 | 15 | Mid (20-60) |
+|  8 | 30-80 | 17 | Upper-Mid (30-80) |
+|  9 | 40-100 | 13 | High (40-100) |
+| 10 | 15-50 | 13 | Lower-Mid (15-50) |
 
-**Experiment 7:** Medium mult/div region 2
-- Region: 0x2147c-0x25780
-- Mult/Div operations: 48
-- Arithmetic operations: 1058
-- Patches applied: 303
+### Experiments 11-15: HP Store #3 Region (0x05fe78)
 
-**Experiment 8:** Medium mult/div region 3
-- Region: 0x2b9bc-0x2f020
-- Mult/Div operations: 44
-- Arithmetic operations: 973
-- Patches applied: 181
+State reset code.
 
-**Experiment 9:** Lower mult/div, high arith
-- Region: 0x16570-0x1dc00
-- Mult/Div operations: 36
-- Arithmetic operations: 2481
-- Patches applied: 800
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+| 11 | 10-100 | 21 | Broad (10-100) |
+| 12 | 20-60 | 9 | Mid (20-60) |
+| 13 | 30-80 | 5 | Upper-Mid (30-80) |
+| 14 | 40-100 | 8 | High (40-100) |
+| 15 | 15-50 | 12 | Lower-Mid (15-50) |
 
-**Experiment 10:** Low mult/div control test
-- Region: 0x55960-0x5c50c
-- Mult/Div operations: 10
-- Arithmetic operations: 1707
-- Patches applied: 352
+### Experiments 16-20: HP Store #4 Region (0x06154c)
 
+Full entity initialization.
 
-### Combined Regions (11-15)
-Test multiple regions together to increase coverage.
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+| 16 | 10-100 | 16 | Broad (10-100) |
+| 17 | 20-60 | 9 | Mid (20-60) |
+| 18 | 30-80 | 8 | Upper-Mid (30-80) |
+| 19 | 40-100 | 3 | High (40-100) |
+| 20 | 15-50 | 13 | Lower-Mid (15-50) |
 
-**Experiment 11:** Top 2 mult/div regions combined
-- Regions: 1, 2
-- Patches applied: 1047
+## Testing Strategy
 
-**Experiment 12:** Top 3 mult/div regions combined
-- Regions: 1, 2, 3
-- Patches applied: 1925
+1. **Start with Experiments 1-5** (HP Store #1 - actual damage application)
+2. If one works, test others in same region to narrow down value range
+3. If none work, try Experiments 6-10 (initialization)
+4. Experiments 11-20 are lower priority (reset/init code)
 
-**Experiment 13:** Regions 1 and 4 (both compact, high mult/div)
-- Regions: 1, 4
-- Patches applied: 363
-
-**Experiment 14:** Regions 2 and 3 (high arithmetic)
-- Regions: 2, 3
-- Patches applied: 1648
-
-**Experiment 15:** Medium mult/div regions 5-8
-- Regions: 5, 6, 7, 8
-- Patches applied: 1172
-
-
-### Sub-Regions (16-20)
-Narrow down to specific parts of top regions.
-
-**Experiment 16:** First 8KB of region 1
-- Range: 0x37274-0x39274
-- Patches applied: 28
-
-**Experiment 17:** Second 8KB of region 1
-- Range: 0x39274-0x3b274
-- Patches applied: 66
-
-**Experiment 18:** Third 8KB of region 1
-- Range: 0x3b274-0x3d274
-- Patches applied: 154
-
-**Experiment 19:** First 12KB of region 2
-- Range: 0x79f0-0xa9f0
-- Patches applied: 135
-
-**Experiment 20:** First 12KB of region 3
-- Range: 0x40148-0x43148
-- Patches applied: 131
-
-
-## Testing Priority
-
-1. **Start with Experiments 1-3** (highest mult/div count - most likely damage calculations)
-2. **Try Experiment 11** (top 2 regions combined)
-3. **Try Experiments 16-18** (sub-regions of top region)
-4. **If none work, try Experiments 4-10** (other arithmetic regions)
-
-## Expected Result
+## Expected Results
 
 If experiment works:
-- ✅ Magic damage reduced to ~25% (1/4 of original)
+- ✅ Magic damage ~25% (1/4 of original)
+- ✅ Physical damage may also be affected (modifies final HP store)
 - ✅ Game loads and runs normally
-- ✅ No crashes or glitches
 
-Report which experiment number affects magic damage!
+## Why This Approach is Better
 
-## Technical Details
+**Previous:** Targeted arithmetic regions (damage calculation) → wrong code path for magic  
+**New:** Targets HP store regions (final damage application) → affects all damage types
 
-- All experiments modify ADDIU instructions (immediate add)
-- Only targets values 4-200 (avoids system-critical values)
-- Patches are applied to specific memory regions identified by disassembly
-- Regions were ranked by multiplication/division density (damage calcs use mult/div)
-
-## Analysis Source
-
-Generated from `disassemble_mips.js` analysis of ST.EXE.
-See `mips_analysis_report.json` for complete disassembly data.
+See HP_STORE_ANALYSIS.md for complete technical details.
