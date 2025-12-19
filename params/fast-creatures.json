@@ -5,6 +5,6 @@
   "randomizeMap": false,
   "randomizeCreatures": false,
   "randomizeCollectablesAndDrops": false,
-  "creatureSpeedMultiplier": 5.0,
+  "creatureSpeedMultiplier": 50.0,
   "seed": "1"
 }
