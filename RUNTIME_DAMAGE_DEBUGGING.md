@@ -1,5 +1,25 @@
 # Shadow Tower - Runtime Debugging for Damage Calculation
 
+## ⚠️ DEBUGGER NOT STOPPING? Read This First!
+
+**Most common issue:** PSX memory is mirrored at different addresses.
+
+If you found HP at `0x001A3C40`, your breakpoint needs to use:
+- `0x801A3C40` (add 0x80000000) - **try this first**
+- OR `0xA01A3C40` (add 0xA0000000)
+
+**Quick Fix in no$psx:**
+```
+1. Found HP address: 0x00xxxxxx
+2. Set breakpoint at: 0x80xxxxxx (same digits, add 0x80 prefix)
+3. Breakpoint type: [W] Write (not Read)
+4. Make sure "Break" is enabled in debugger window
+```
+
+**Still not working?** See [Troubleshooting Section](#troubleshooting-debugger-not-stopping) below for 7 common issues and fixes.
+
+---
+
 ## Goal
 Find the actual damage calculation code in Shadow Tower's MIPS executable at runtime, so you can understand how damage is calculated and create patches to modify it.
 
@@ -438,6 +458,220 @@ To make defense less effective (half value):
 | no$psx | Medium | Full MIPS debugging | Free |
 | Ghidra | Hard | Understanding full code logic | Free |
 | Combined | Hard | Complete understanding | Free |
+
+---
+
+## Troubleshooting: Debugger Not Stopping
+
+### Problem: Set breakpoint but debugger doesn't stop when HP changes
+
+This is the most common issue. Here are solutions:
+
+#### Issue 1: Wrong Memory Region (PSX Memory Mirroring)
+
+PSX RAM is mirrored at multiple addresses:
+- `0x00000000-0x001FFFFF` - Main RAM (2MB)
+- `0x80000000-0x801FFFFF` - Cached mirror (use this)
+- `0xA0000000-0xA01FFFFF` - Uncached mirror
+
+**Solution:**
+If you found HP at `0x001A3C40`, try these addresses instead:
+- `0x801A3C40` (cached - most common)
+- `0xA01A3C40` (uncached)
+
+**In no$psx:**
+```
+1. When you find HP address, note the value
+2. Try adding 0x80000000 to the address
+3. Set breakpoint on the 0x80xxxxxx version
+4. If that doesn't work, try 0xA0xxxxxx
+```
+
+#### Issue 2: Breakpoint Type Wrong
+
+**no$psx breakpoint types:**
+- **[R]** = Read (triggers when memory is read)
+- **[W]** = Write (triggers when memory is written)
+- **[C]** = Change (triggers when value changes)
+
+For HP monitoring, you want **[W]** or **[C]**.
+
+**Solution:**
+```
+1. Right-click breakpoint in list
+2. Check it says [W] or [C], not [R]
+3. If wrong, delete and recreate with correct type
+```
+
+#### Issue 3: Breakpoint Size Wrong
+
+HP might be 8-bit, 16-bit, or 32-bit.
+
+**Solution - Try all sizes:**
+```
+Common HP sizes:
+- 16-bit (halfword): Most likely for HP values < 65535
+- 32-bit (word): For games with very high HP
+- 8-bit (byte): Unlikely but possible
+
+In no$psx, set breakpoint width:
+- Halfword (16-bit): Most emulators default to this
+- Word (32-bit): If 16-bit doesn't work
+```
+
+#### Issue 4: no$psx Debugger Not Enabled
+
+**Solution:**
+```
+1. Window > Show Debug Windows
+2. Ensure "Break" checkbox is enabled in debugger window
+3. Check "Break on Exceptions" is OFF (causes too many breaks)
+4. Verify game is running, not paused
+```
+
+#### Issue 5: Game Uses DMA or Indirect Updates
+
+Some games update HP through DMA transfers or unusual methods.
+
+**Solution - Use execution breakpoint instead:**
+```
+Instead of memory breakpoint:
+1. Find code that accesses HP first
+2. Set execution breakpoint on that code
+3. This always works
+
+Steps:
+1. Use Cheat Engine or memory viewer to find HP
+2. In no$psx, use disassembler view
+3. Search for instructions that access your HP address
+4. Set breakpoint on that instruction (execution breakpoint)
+```
+
+#### Issue 6: Cached vs Uncached Access
+
+Game might read from cached but write to uncached (or vice versa).
+
+**Solution - Set breakpoints on both:**
+```
+Found HP at: 0x801A3C40
+
+Set TWO breakpoints:
+1. At 0x801A3C40 (cached)
+2. At 0xA01A3C40 (uncached)
+
+One of them will trigger.
+```
+
+#### Issue 7: Address Changes (Dynamic Allocation)
+
+HP address might change when you restart or load save.
+
+**Solution:**
+```
+1. Don't restart game between finding address and setting breakpoint
+2. Use same play session
+3. If you must restart:
+   - Find HP address again
+   - Update breakpoint address
+   - Don't assume same address
+```
+
+### Step-by-Step Debugging If Breakpoint Doesn't Work
+
+#### Alternative Method 1: Use Execution Breakpoint on Known Function
+
+If you know approximate location of damage code:
+
+```
+1. Load game in no$psx
+2. Go to debugger window
+3. Set execution breakpoint at 0x80010000 (arbitrary start)
+4. Run for a bit, see what code executes
+5. Look for patterns (loops, function calls)
+6. Narrow down to damage-related code
+```
+
+#### Alternative Method 2: Cheat Engine to Find Code
+
+```
+1. Use Cheat Engine on emulator process (ePSXe works well)
+2. Find HP address
+3. Right-click > "Find out what writes to this address"
+4. Get hit by enemy
+5. Cheat Engine shows the EXACT instruction that wrote to HP
+6. Note the code address from Cheat Engine
+7. Use that address in no$psx or Ghidra
+```
+
+#### Alternative Method 3: Logging Approach
+
+If breakpoints aren't working at all:
+
+```
+In no$psx:
+1. Window > TTY Debug Messages
+2. Some games print debug info here
+3. Look for damage-related messages
+4. This gives clues about where damage code is
+
+OR use memory view:
+1. Window > Memory Editor
+2. Go to your HP address
+3. Watch it in real-time
+4. When it changes, pause emulator manually (ESC)
+5. Look at disassembly to see what just executed
+```
+
+### Quick Diagnostic Checklist
+
+Run through this if breakpoint not stopping:
+
+```
+✓ Is game actually running (not paused)?
+✓ Did I find the correct HP address (test by modifying it)?
+✓ Did I use 0x80xxxxxx or 0xA0xxxxxx address format?
+✓ Is breakpoint type [W] or [C], not [R]?
+✓ Is "Break" enabled in debugger window?
+✓ Did I try both cached (0x80xx) and uncached (0xA0xx) versions?
+✓ Did HP actually change when I got hit?
+✓ Am I getting hit hard enough to see HP drop?
+```
+
+### Example: Complete Working Setup in no$psx
+
+```
+1. Start no$psx, load Shadow Tower ISO
+2. Window > Show Debug Windows
+3. Start game, enter first area
+4. Note HP: 500
+5. Debug > Search Memory > Value: 500, Type: Halfword
+6. Get hit by enemy, HP becomes 450
+7. Search again: Value: 450
+8. Found address: 0x001A3C40
+9. Convert to cached: 0x801A3C40
+10. In breakpoint list, right-click > Add Memory Breakpoint
+11. Address: 801A3C40 (without 0x prefix)
+12. Type: [W] Write
+13. Size: Halfword
+14. Enable: Checked
+15. Click OK
+16. Resume game (F5 or Run button)
+17. Get hit by enemy
+18. Debugger should pause showing assembly code
+```
+
+If above STILL doesn't work:
+
+```
+Try DuckStation instead:
+1. Has better debugging tools
+2. Built-in memory scanner
+3. Easier breakpoint setup
+4. Tools > Memory Scanner
+5. Search for HP value
+6. Set watch/breakpoint
+7. More reliable than no$psx for beginners
+```
 
 ---
 
