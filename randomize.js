@@ -529,6 +529,83 @@ function randomize(paramsFile, stDir) {
             console.log("  Scaled base magic1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
         }
         
+        // Issue #31: Fix creature speed not changing - try multiple places aggressively
+        // Scale creature speed parameters if creatureSpeedMultiplier is specified
+        if (params.creatureSpeedMultiplier && params.creatureSpeedMultiplier !== 1.0) {
+            var speedMultiplier = params.creatureSpeedMultiplier;
+            console.log("  Applying speed multiplier: " + speedMultiplier);
+            
+            // APPROACH 1: Scale Creature.spd field (offset 0x25 in Creature structure)
+            // This is the creature's base speed attribute
+            if (creature.spd && !creature.spd.isNull()) {
+                var oldCreatureSpd = creature.spd.get();
+                var newCreatureSpd = Math.min(255, Math.max(1, Math.ceil(oldCreatureSpd * speedMultiplier)));
+                creature.spd.set(newCreatureSpd);
+                console.log("  Scaled Creature.spd: " + oldCreatureSpd + " -> " + newCreatureSpd + " (x" + speedMultiplier + ")");
+            }
+            
+            // APPROACH 2: Scale EntityStateData speed fields (types 0x20 and 0x30)
+            // These control movement speed and action/animation timing
+            if (creature.entityStates && creature.entityStates.length > 0) {
+                creature.entityStates.forEach((entityState) => {
+                    if (entityState.type == 0x20 || entityState.type == 0x30) {
+                        // Scale movement speed (offset 0x08) - higher value = faster
+                        if (entityState.movementSpeed && !entityState.movementSpeed.isNull()) {
+                            var oldSpeed = entityState.movementSpeed.get();
+                            var newSpeed = Math.min(255, Math.max(1, Math.ceil(oldSpeed * speedMultiplier)));
+                            entityState.movementSpeed.set(newSpeed);
+                            console.log("  Scaled EntityStateData.movementSpeed: " + oldSpeed + " -> " + newSpeed + " (x" + speedMultiplier + ")");
+                        }
+                        
+                        // Scale action speed timer (offset 0x03) - INVERSE: lower value = faster
+                        // To make creatures faster, we DIVIDE by the multiplier
+                        if (entityState.actionSpeedTimer && !entityState.actionSpeedTimer.isNull()) {
+                            var oldTimer = entityState.actionSpeedTimer.get();
+                            // Inverse relationship: divide to speed up, multiply to slow down
+                            var newTimer = Math.min(255, Math.max(1, Math.ceil(oldTimer / speedMultiplier)));
+                            entityState.actionSpeedTimer.set(newTimer);
+                            console.log("  Scaled EntityStateData.actionSpeedTimer: " + oldTimer + " -> " + newTimer + " (÷" + speedMultiplier + ")");
+                        }
+                        
+                        // APPROACH 3 (AGGRESSIVE): Try additional bytes that might affect speed
+                        // Offset 0x02 - Unknown byte, might be related to speed/behavior
+                        var byte02 = getUInt8(entityState.bin, entityState.offset_in_file + 0x02);
+                        if (byte02 > 0 && byte02 < 0xFF) {
+                            var newByte02 = Math.min(255, Math.max(1, Math.ceil(byte02 * speedMultiplier)));
+                            setUInt8(entityState.bin, entityState.offset_in_file + 0x02, newByte02);
+                            console.log("  EXPERIMENTAL: Scaled EntityStateData[0x02]: " + byte02 + " -> " + newByte02);
+                        }
+                        
+                        // Offset 0x04-0x07 - Unknown bytes, might affect movement/rotation
+                        for (var i = 0x04; i <= 0x07; i++) {
+                            var byteVal = getUInt8(entityState.bin, entityState.offset_in_file + i);
+                            if (byteVal > 0 && byteVal < 0xFF) {
+                                var newByteVal = Math.min(255, Math.max(1, Math.ceil(byteVal * speedMultiplier)));
+                                if (newByteVal !== byteVal) {
+                                    setUInt8(entityState.bin, entityState.offset_in_file + i, newByteVal);
+                                    console.log("  EXPERIMENTAL: Scaled EntityStateData[0x" + i.toString(16) + "]: " + byteVal + " -> " + newByteVal);
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // APPROACH 4 (AGGRESSIVE): Try modifying bytes near Creature.spd
+            // These undefined fields around 0x25 might be speed-related
+            var tryOffsets = [0x23, 0x24, 0x26, 0x27];  // Bytes around spd (0x25)
+            tryOffsets.forEach(function(offset) {
+                var byteVal = getUInt8(creature.bin, creature.offset_in_file + offset);
+                if (byteVal > 0 && byteVal < 0xFF) {
+                    var newByteVal = Math.min(255, Math.max(1, Math.ceil(byteVal * speedMultiplier)));
+                    if (newByteVal !== byteVal) {
+                        setUInt8(creature.bin, creature.offset_in_file + offset, newByteVal);
+                        console.log("  EXPERIMENTAL: Scaled Creature[0x" + offset.toString(16) + "]: " + byteVal + " -> " + newByteVal);
+                    }
+                }
+            });
+        }
+        
         // Fix for magic/projectile attack damage scaling
         // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
         /*if (creature.entityStates && creature.entityStates.length > 0) {
@@ -553,30 +630,6 @@ function randomize(paramsFile, stDir) {
                         var newValue = Math.min(65535, Math.ceil(oldValue * creatureAttributeFactor));
                         entityState.attack3.set(newValue);
                         console.log("  Scaled " + attackType + " attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
-                    }
-                    
-                    // Task: Add creature movement/rotation speed parameters
-                    // Scale speed parameters if creatureSpeedMultiplier is specified
-                    if (params.creatureSpeedMultiplier && params.creatureSpeedMultiplier !== 1.0) {
-                        var speedMultiplier = params.creatureSpeedMultiplier;
-                        
-                        // Scale movement speed (offset 0x08) - higher value = faster
-                        if (entityState.movementSpeed && !entityState.movementSpeed.isNull()) {
-                            var oldSpeed = entityState.movementSpeed.get();
-                            var newSpeed = Math.min(255, Math.max(1, Math.ceil(oldSpeed * speedMultiplier)));
-                            entityState.movementSpeed.set(newSpeed);
-                            console.log("  Scaled movement speed: " + oldSpeed + " -> " + newSpeed + " (x" + speedMultiplier + ")");
-                        }
-                        
-                        // Scale action speed timer (offset 0x03) - INVERSE: lower value = slower
-                        // So to make creatures faster, we DIVIDE by the multiplier
-                        if (entityState.actionSpeedTimer && !entityState.actionSpeedTimer.isNull()) {
-                            var oldTimer = entityState.actionSpeedTimer.get();
-                            // Inverse relationship: divide to speed up, multiply to slow down
-                            var newTimer = Math.min(255, Math.max(1, Math.ceil(oldTimer / speedMultiplier)));
-                            entityState.actionSpeedTimer.set(newTimer);
-                            console.log("  Scaled action speed timer: " + oldTimer + " -> " + newTimer + " (x" + speedMultiplier + ")");
-                        }
                     }
                 }
             });
