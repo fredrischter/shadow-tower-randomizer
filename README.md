@@ -157,3 +157,23 @@ gsutil cors get gs://shadow-tower-randomizer
 docker tag shadow-tower-randomizer:latest gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && docker push gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest && gcloud run deploy shadow-tower-randomizer --image gcr.io/shadow-tower-randomizer/shadow-tower-randomizer:latest --platform managed --region us-central1 --allow-unauthenticated
 
 gcloud run services update shadow-tower-randomizer --memory 8Gi --cpu 8 --platform managed --region us-central1
+
+## ST.EXE Analysis Tool
+
+For developers interested in understanding Shadow Tower's damage calculation code, we provide a MIPS disassembly tool:
+
+```bash
+# Show statistics about attack value loads and multiply operations
+python3 analyze_st_exe.py --stats
+
+# Search for loads from a specific offset (e.g., magic1 at offset 0x09)
+python3 analyze_st_exe.py --search 09
+
+# Disassemble a specific memory region
+python3 analyze_st_exe.py --region 8001C6E8
+
+# Show key damage calculation regions (default)
+python3 analyze_st_exe.py
+```
+
+This tool helps verify that our data structure modifications in `data_model.js` target the correct offsets that the game's runtime code actually uses. See `RUNTIME_DAMAGE_DEBUGGING.md` for a complete analysis of Shadow Tower's damage calculation system.
