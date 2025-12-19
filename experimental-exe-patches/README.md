@@ -1,178 +1,152 @@
-# 20 Experimental EXE Patches - Based on WORKING Pattern
+# Experimental ST.EXE Patches - MIPS Analysis Based
 
-## Important: Experiment 14 WORKS!
+**Generated based on MIPS disassembly analysis of damage calculation regions**
 
-**User feedback:**
-- Experiments 1-13, 15-20 (previous version): Failed to load
-- **Experiment 14: LOADS SUCCESSFULLY** ✓
+All experiments reduce magic damage to 1/4 by dividing ADDIU immediate values by 4.
 
-**Working pattern (Experiment 14):**
-- Memory region: 0x40000-0x60000
-- Instruction type: ADDIU only (0x24000000 opcode)
-- Value range: 10-100
-- Changes: 1,057 modifications
+## Approach
 
-## New Experiments - Variations of Working Pattern
-
-All experiments use the same safe approach as Experiment 14, with variations to identify what actually affects magic damage.
-
----
+Used MIPS disassembler to find arithmetic-heavy code regions with high multiplication/division density.
+These regions likely contain damage calculations.
 
 ## Experiments
 
-### EXACT WORKING BASELINE
+### Single Regions (1-10)
+Target individual arithmetic-heavy regions sorted by mult/div count.
 
-| # | Description | Changes | Status |
-|---|-------------|---------|--------|
-| **14** | **Region 0x40000-0x60000, values 10-100** | **1,057** | **✓ WORKS** |
+**Experiment 1:** Highest mult/div density - likely damage calc
+- Region: 0x37274-0x3dd58
+- Mult/Div operations: 198
+- Arithmetic operations: 1739
+- Patches applied: 277
 
-### VALUE RANGE VARIATIONS (Same Region)
+**Experiment 2:** High mult/div with loads of arithmetic
+- Region: 0x79f0-0x16358
+- Mult/Div operations: 95
+- Arithmetic operations: 3309
+- Patches applied: 770
 
-Test different value ranges within the working region:
+**Experiment 3:** Very high arithmetic density
+- Region: 0x40148-0x4e790
+- Mult/Div operations: 93
+- Arithmetic operations: 4134
+- Patches applied: 878
 
-| # | Description | Changes | Tests |
-|---|-------------|---------|-------|
-| 01 | Values 20-60 (narrower) | 522 | Mid values only |
-| 02 | Values 30-80 (shifted up) | 395 | Higher values |
-| 13 | Values 15-50 (lower half) | 681 | Lower-mid values |
-| 15 | Values 40-100 (upper half) | 384 | Higher values |
-| 16 | Values 10-40 (lower third) | 713 | Lower values |
+**Experiment 4:** Compact mult/div heavy region
+- Region: 0x60c74-0x63e90
+- Mult/Div operations: 92
+- Arithmetic operations: 836
+- Patches applied: 86
 
-### SPECIFIC VALUE PATTERNS (Same Region)
+**Experiment 5:** Medium mult/div region
+- Region: 0x257d0-0x2b98c
+- Mult/Div operations: 59
+- Arithmetic operations: 1638
+- Patches applied: 564
 
-| # | Description | Changes | Pattern |
-|---|-------------|---------|---------|
-| 03 | Specific: 10,12,16,20,24,32,40,48,64,80 | 639 | Common magic values |
-| 09 | Power-of-2: 8,16,32,64 | 319 | Powers of 2 |
-| 10 | Multiples of 10: 10,20,30,...,100 | 150 | Round numbers |
-| 20 | Even values 10-100 | 910 | Even numbers only |
+**Experiment 6:** Balanced mult/div region
+- Region: 0x2f060-0x32bac
+- Mult/Div operations: 50
+- Arithmetic operations: 915
+- Patches applied: 124
 
-### REGIONAL VARIATIONS
+**Experiment 7:** Medium mult/div region 2
+- Region: 0x2147c-0x25780
+- Mult/Div operations: 48
+- Arithmetic operations: 1058
+- Patches applied: 303
 
-#### Overlapping Regions
-| # | Description | Changes | Region |
-|---|-------------|---------|--------|
-| 04 | 0x30000-0x50000 (shifted down) | 1,002 | Earlier code |
-| 05 | 0x50000-0x70000 (shifted up) | 856 | Later code |
-| 11 | 0x38000-0x68000 (larger) | 1,511 | Expanded range |
+**Experiment 8:** Medium mult/div region 3
+- Region: 0x2b9bc-0x2f020
+- Mult/Div operations: 44
+- Arithmetic operations: 973
+- Patches applied: 181
 
-#### Sub-Regions Within Working Area
-| # | Description | Changes | Size |
-|---|-------------|---------|------|
-| 06 | 0x48000-0x58000 (center) | 549 | Smaller |
-| 07 | 0x40000-0x50000 (first half) | 563 | First half |
-| 08 | 0x50000-0x60000 (second half) | 494 | Second half |
-| 12 | 0x4C000-0x54000 (very narrow) | 219 | Very small |
-| 19 | Two regions: 0x40000-0x48000 + 0x58000-0x60000 | 508 | Split regions |
+**Experiment 9:** Lower mult/div, high arith
+- Region: 0x16570-0x1dc00
+- Mult/Div operations: 36
+- Arithmetic operations: 2481
+- Patches applied: 800
 
-#### Different Regions Entirely
-| # | Description | Changes | Location |
-|---|-------------|---------|----------|
-| 17 | 0x60000-0x70000 | 362 | After working region |
-| 18 | 0x28000-0x38000 | 537 | Before working region |
+**Experiment 10:** Low mult/div control test
+- Region: 0x55960-0x5c50c
+- Mult/Div operations: 10
+- Arithmetic operations: 1707
+- Patches applied: 352
 
----
 
-## Testing Strategy
+### Combined Regions (11-15)
+Test multiple regions together to increase coverage.
 
-### Phase 1: Confirm Baseline (MUST TEST FIRST)
-- **Test Experiment 14** - Verify it still loads and check for magic damage change
+**Experiment 11:** Top 2 mult/div regions combined
+- Regions: 1, 2
+- Patches applied: 1047
 
-### Phase 2: Find Value Range
-If Exp 14 affects magic damage, narrow down which values:
-- Test 16 (values 10-40)
-- Test 15 (values 40-100)
-- Test 01 (values 20-60)
+**Experiment 12:** Top 3 mult/div regions combined
+- Regions: 1, 2, 3
+- Patches applied: 1925
 
-### Phase 3: Identify Specific Values
-Once range is known, test specific patterns:
-- Test 03 (specific values)
-- Test 09 (power-of-2)
-- Test 10 (multiples of 10)
+**Experiment 13:** Regions 1 and 4 (both compact, high mult/div)
+- Regions: 1, 4
+- Patches applied: 363
 
-### Phase 4: Find Exact Location
-Narrow down which part of region 0x40000-0x60000:
-- Test 07 (first half)
-- Test 08 (second half)
-- Test 12 (center)
+**Experiment 14:** Regions 2 and 3 (high arithmetic)
+- Regions: 2, 3
+- Patches applied: 1648
 
-### Phase 5: Try Adjacent Regions
-If nothing affects magic damage in 0x40000-0x60000:
-- Test 04 (earlier region)
-- Test 05 (later region)
-- Test 17, 18 (different regions)
+**Experiment 15:** Medium mult/div regions 5-8
+- Regions: 5, 6, 7, 8
+- Patches applied: 1172
 
----
 
-## How to Test
+### Sub-Regions (16-20)
+Narrow down to specific parts of top regions.
 
-```bash
-# Always test experiment 14 first!
-cp experimental-exe-patches/ST-experiment-14.EXE iso-dump/ST.EXE
+**Experiment 16:** First 8KB of region 1
+- Range: 0x37274-0x39274
+- Patches applied: 28
 
-# Build ISO
-npm run mod "./path/to/st.bin" "./params/no-change.json"
+**Experiment 17:** Second 8KB of region 1
+- Range: 0x39274-0x3b274
+- Patches applied: 66
 
-# Test in PSX emulator
-# Check:
-#  1. Does it load? (Should - it worked before)
-#  2. Does magic damage change?
-#  3. How much? (Should be ~1/4 if it works)
-```
+**Experiment 18:** Third 8KB of region 1
+- Range: 0x3b274-0x3d274
+- Patches applied: 154
 
----
+**Experiment 19:** First 12KB of region 2
+- Range: 0x79f0-0xa9f0
+- Patches applied: 135
 
-## What to Report
+**Experiment 20:** First 12KB of region 3
+- Range: 0x40148-0x43148
+- Patches applied: 131
 
-**For Experiment 14 (CRITICAL):**
-- Does it still load? (Should be YES)
-- Does magic damage change? (YES/NO/CAN'T TELL)
-- If YES: By how much? (~1/4, 1/2, other?)
-- Are physical attacks unchanged?
 
-**For Other Experiments:**
-- Does it load? (YES/NO)
-- If YES: Does magic damage change? (YES/NO)
-- Any crashes or glitches?
+## Testing Priority
 
----
+1. **Start with Experiments 1-3** (highest mult/div count - most likely damage calculations)
+2. **Try Experiment 11** (top 2 regions combined)
+3. **Try Experiments 16-18** (sub-regions of top region)
+4. **If none work, try Experiments 4-10** (other arithmetic regions)
 
-## Why This Approach Works
+## Expected Result
 
-**Experiment 14 pattern is SAFE because:**
-1. Only targets specific memory region (0x40000-0x60000)
-2. Only modifies ADDIU instructions (not raw data)
-3. Moderate number of changes (1,057)
-4. Conservative value range (10-100)
+If experiment works:
+- ✅ Magic damage reduced to ~25% (1/4 of original)
+- ✅ Game loads and runs normally
+- ✅ No crashes or glitches
 
-**Previous failures were caused by:**
-- Modifying entire EXE (too many changes)
-- Changing 16-bit data directly (corrupts game data)
-- Wrong memory regions (critical game code)
-- Too aggressive modifications
-
----
+Report which experiment number affects magic damage!
 
 ## Technical Details
 
-All experiments modify only ADDIU instructions in the specified regions:
+- All experiments modify ADDIU instructions (immediate add)
+- Only targets values 4-200 (avoids system-critical values)
+- Patches are applied to specific memory regions identified by disassembly
+- Regions were ranked by multiplication/division density (damage calcs use mult/div)
 
-```asm
-addiu $register, $zero, [immediate_value]
-Opcode: 0x24000000
-```
+## Analysis Source
 
-**Damage reduction:**
-```javascript
-newValue = Math.max(1, Math.floor(oldValue / 4))
-```
-
-**Examples:**
-- 20 → 5
-- 32 → 8
-- 64 → 16
-- 100 → 25
-
----
-
-Generated by `generate_experiments_v4.js` - Based on working Experiment 14 pattern
+Generated from `disassemble_mips.js` analysis of ST.EXE.
+See `mips_analysis_report.json` for complete disassembly data.
