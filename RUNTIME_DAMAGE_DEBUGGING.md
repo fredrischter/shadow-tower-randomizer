@@ -429,6 +429,85 @@ To complete the picture, we should:
 # Element type checking (look for comparisons with element constants)
 ```
 
+## Player HP Memory Location
+
+**Discovery:** Player HP is stored at runtime memory address **0x198F28**
+
+This memory location was identified through debugging and represents where the player's current HP value is stored during gameplay. Understanding this location is crucial for completing the damage calculation analysis because:
+
+1. **HP Subtraction Point** - This is where calculated damage values are ultimately applied
+2. **Debugging Aid** - Setting a write breakpoint at 0x198F28 in a debugger will trigger when damage is applied
+3. **Complete Flow Tracking** - Traces the path from attack calculation → final HP modification
+
+### Analyzing HP Modification Code
+
+To find the code that modifies player HP at 0x198F28, we can search for store instructions (SW/SH/SB) that write to this address:
+
+```python
+# Use analyze_st_exe.py to search for HP modification code
+python3 analyze_st_exe.py --search-stores 198F28
+```
+
+**Expected Pattern:**
+```assembly
+; After damage calculation completes...
+lui    $t0, 0x8019              ; Load upper 16 bits of address
+lw     $v0, 0x0F28($t0)         ; Load current HP from 0x80190F28
+subu   $v0, $v0, $a0            ; Subtract damage (in $a0)
+sw     $v0, 0x0F28($t0)         ; Store new HP back to 0x80190F28
+```
+
+### Why HP Changes Are Hard to Debug
+
+The difficulty in catching the exact moment HP changes is because:
+
+1. **Distributed Calculation** - Damage is calculated over multiple functions
+2. **Delayed Application** - Damage may be calculated in one frame but applied in another
+3. **Interrupt Handling** - HP modification might occur in interrupt handlers
+4. **Multiple Code Paths** - Different attack types (melee, projectile, magic) may use different HP modification routines
+
+### Connecting Attack Calculation to HP Modification
+
+The complete damage flow likely follows this pattern:
+
+```
+1. Load attack values (0x80019000, 0x8001C6E8) ← We found this
+   ↓
+2. Calculate damage with modifiers
+   ↓
+3. Load target defense values
+   ↓
+4. Apply defense reduction
+   ↓
+5. Clamp damage to valid range (0-9999)
+   ↓
+6. Store damage to temporary variable
+   ↓
+7. Load current HP from 0x198F28         ← HP location known
+   ↓
+8. Subtract damage from HP
+   ↓
+9. Store new HP to 0x198F28              ← This is the moment to debug
+   ↓
+10. Check for death condition (HP <= 0)
+```
+
+By setting a memory write breakpoint at **0x198F28** in no$psx or PCSX-Redux, you can:
+- Capture the exact instruction that modifies HP
+- Examine the call stack to see which function performed the modification
+- Trace backwards to find the damage calculation code path
+- Verify the damage value before it's applied
+
+### Next Steps for Complete Analysis
+
+1. **Set Write Breakpoint** - Use debugger to break on writes to 0x198F28
+2. **Capture Call Stack** - When breakpoint triggers, examine the return addresses
+3. **Trace Backwards** - Follow the code path from HP modification back to damage calculation
+4. **Verify Values** - Confirm calculated damage matches the amount subtracted from HP
+5. **Document Complete Flow** - Map the entire damage calculation → HP subtraction pipeline
+
+This HP memory location is a critical piece of the puzzle that bridges the gap between our discovered attack value loading code and the final damage application.
+
 ## Conclusion
 
 We have successfully located the "palace" - the runtime damage calculation code in Shadow Tower's executable. The analysis confirms:

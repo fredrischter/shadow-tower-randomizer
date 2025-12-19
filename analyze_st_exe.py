@@ -9,10 +9,11 @@ Usage:
     python3 analyze_st_exe.py [options]
 
 Options:
-    --full          Show full disassembly output
-    --region ADDR   Disassemble specific region (hex address)
-    --search OFFSET Search for loads from specific offset
-    --stats         Show statistics only
+    --full                Show full disassembly output
+    --region ADDR         Disassemble specific region (hex address)
+    --search OFFSET       Search for loads from specific offset
+    --search-stores ADDR  Search for stores to specific memory address (e.g., HP at 0x198F28)
+    --stats               Show statistics only
 """
 
 import struct
@@ -204,11 +205,49 @@ def disasm_region(code, file_offset, vaddr, num_instrs=20, before=0):
     
     return '\n'.join(lines)
 
+def find_memory_stores(code, text_addr, target_addr):
+    """Search for store instructions to a specific memory address"""
+    stores = []
+    
+    # Calculate the parts of the address
+    addr_upper = (target_addr >> 16) & 0xFFFF
+    addr_lower = target_addr & 0xFFFF
+    if addr_lower >= 0x8000:
+        addr_lower = addr_lower - 0x10000  # Sign-extend for negative offset
+    
+    for i in range(0, len(code) - 20, 4):
+        instr = read_mips_instruction(code, i)
+        if instr is None:
+            break
+            
+        dec = decode_mips_basic(instr)
+        
+        # SW (Store Word) opcode = 0x2b
+        # SH (Store Halfword) opcode = 0x29
+        # SB (Store Byte) opcode = 0x28
+        if dec['opcode'] in [0x28, 0x29, 0x2b]:
+            # Check if the immediate offset matches
+            simm = dec['imm'] if dec['imm'] < 0x8000 else dec['imm'] - 0x10000
+            if simm == addr_lower:
+                vaddr = text_addr + i
+                store_type = {0x28: 'sb', 0x29: 'sh', 0x2b: 'sw'}[dec['opcode']]
+                stores.append({
+                    'file_offset': i + 0x800,
+                    'vaddr': vaddr,
+                    'type': store_type,
+                    'instr': instr,
+                    'offset': simm,
+                    'reg': MIPS_REGS[dec['rs']]
+                })
+    
+    return stores
+
 def main():
     parser = argparse.ArgumentParser(description='Analyze Shadow Tower ST.EXE')
     parser.add_argument('--full', action='store_true', help='Show full disassembly output')
     parser.add_argument('--region', type=str, help='Disassemble specific region (hex address)')
     parser.add_argument('--search', type=str, help='Search for loads from specific offset (hex)')
+    parser.add_argument('--search-stores', type=str, help='Search for stores to specific memory address (hex)')
     parser.add_argument('--stats', action='store_true', help='Show statistics only')
     args = parser.parse_args()
     
@@ -254,6 +293,31 @@ def main():
     print()
     
     if args.stats:
+        return 0
+    
+    # Search for stores to specific memory address
+    if args.search_stores:
+        addr = int(args.search_stores, 16)
+        print(f"Searching for store instructions to memory address 0x{addr:08X}...")
+        print("=" * 80)
+        
+        stores = find_memory_stores(code, text_addr, addr)
+        
+        if len(stores) == 0:
+            print(f"\nNo store instructions found writing to 0x{addr:08X}")
+            print("\nNote: This searches for direct stores with matching offset.")
+            print("The address might be accessed via pointer arithmetic or")
+            print("loaded into a register first. Try searching for the base")
+            print("address pattern (e.g., LUI + offset calculations).")
+        else:
+            print(f"\nFound {len(stores)} store instruction(s):\n")
+            for s in stores[:20]:
+                print(f"Virtual Address: 0x{s['vaddr']:08X}")
+                print(f"File Offset:     0x{s['file_offset']:08X}")
+                print(f"Type:            {s['type'].upper()} (Store via ${s['reg']} + {s['offset']})")
+                print()
+                print(disasm_region(code, s['file_offset'], s['vaddr'], 10, before=5))
+                print()
         return 0
     
     # Search for specific offset
