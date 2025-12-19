@@ -431,30 +431,30 @@ To complete the picture, we should:
 
 ## Player HP Memory Location
 
-**Discovery:** Player HP is stored at runtime memory address **0x198F28**
+**Discovery:** Player HP is stored at runtime memory address **0x198F2A**
 
 This memory location was identified through debugging and represents where the player's current HP value is stored during gameplay. Understanding this location is crucial for completing the damage calculation analysis because:
 
 1. **HP Subtraction Point** - This is where calculated damage values are ultimately applied
-2. **Debugging Aid** - Setting a write breakpoint at 0x198F28 in a debugger will trigger when damage is applied
+2. **Debugging Aid** - Setting a write breakpoint at 0x198F2A in a debugger will trigger when damage is applied
 3. **Complete Flow Tracking** - Traces the path from attack calculation → final HP modification
 
 ### Analyzing HP Modification Code
 
-To find the code that modifies player HP at 0x198F28, we can search for store instructions (SW/SH/SB) that write to this address:
+To find the code that modifies player HP at 0x198F2A, we can search for store instructions (SW/SH/SB) that write to this address:
 
 ```python
 # Use analyze_st_exe.py to search for HP modification code
-python3 analyze_st_exe.py --search-stores 198F28
+python3 analyze_st_exe.py --search-stores 198F2A
 ```
 
 **Expected Pattern:**
 ```assembly
 ; After damage calculation completes...
 lui    $t0, 0x8019              ; Load upper 16 bits of address
-lw     $v0, 0x0F28($t0)         ; Load current HP from 0x80190F28
+lw     $v0, 0x0F2A($t0)         ; Load current HP from 0x80190F2A
 subu   $v0, $v0, $a0            ; Subtract damage (in $a0)
-sw     $v0, 0x0F28($t0)         ; Store new HP back to 0x80190F28
+sw     $v0, 0x0F2A($t0)         ; Store new HP back to 0x80190F2A
 ```
 
 ### Why HP Changes Are Hard to Debug
@@ -483,24 +483,57 @@ The complete damage flow likely follows this pattern:
    ↓
 6. Store damage to temporary variable
    ↓
-7. Load current HP from 0x198F28         ← HP location known
+7. Load current HP from 0x198F2A         ← HP location known
    ↓
 8. Subtract damage from HP
    ↓
-9. Store new HP to 0x198F28              ← This is the moment to debug
+9. Store new HP to 0x198F2A              ← This is the moment to debug
    ↓
 10. Check for death condition (HP <= 0)
 ```
 
-By setting a memory write breakpoint at **0x198F28** in no$psx or PCSX-Redux, you can:
+By setting a memory write breakpoint at **0x198F2A** in no$psx or PCSX-Redux, you can:
 - Capture the exact instruction that modifies HP
 - Examine the call stack to see which function performed the modification
 - Trace backwards to find the damage calculation code path
 - Verify the damage value before it's applied
 
+### Actual HP Modification Code Found
+
+Using the analyze_st_exe.py tool with the correct address, we found **4 locations** that write to 0x198F2A:
+
+1. **0x8003CF7C** - Store halfword via $v0 register
+   ```assembly
+   lui    $v0, 0x801a
+   sh     $s0, -28886($v0)    ; Stores to 0x801A + 0x8F2A = 0x198F2A
+   ```
+
+2. **0x8006F16C** - Store halfword via $at register  
+   ```assembly
+   lui    $at, 0x801f
+   addu   $at, $at, $v1
+   sh     $zero, -28886($at)  ; Stores 0 to HP (reset/initialization)
+   ```
+
+3. **0x80070678** - Store halfword via $at register
+   ```assembly
+   lui    $at, 0x801f
+   addu   $at, $at, $v1
+   sh     $zero, -28886($at)  ; Another HP reset/initialization
+   ```
+
+4. **0x80071D4C** - Store halfword via $at register
+   ```assembly
+   lui    $at, 0x801f
+   addu   $at, $at, $v0
+   sh     $zero, -28886($at)  ; Yet another HP initialization
+   ```
+
+Note: Addresses 0x801A and 0x801F as base addresses suggest these access different memory regions or contexts. The offset -28886 (0x8F2A in signed 16-bit) is consistent across all accesses.
+
 ### Next Steps for Complete Analysis
 
-1. **Set Write Breakpoint** - Use debugger to break on writes to 0x198F28
+1. **Set Write Breakpoint** - Use debugger to break on writes to 0x198F2A
 2. **Capture Call Stack** - When breakpoint triggers, examine the return addresses
 3. **Trace Backwards** - Follow the code path from HP modification back to damage calculation
 4. **Verify Values** - Confirm calculated damage matches the amount subtracted from HP

@@ -12,7 +12,7 @@ Options:
     --full                Show full disassembly output
     --region ADDR         Disassemble specific region (hex address)
     --search OFFSET       Search for loads from specific offset
-    --search-stores ADDR  Search for stores to specific memory address (e.g., HP at 0x198F28)
+    --search-stores ADDR  Search for stores to specific memory address (e.g., HP at 0x198F2A)
     --stats               Show statistics only
 """
 

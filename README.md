@@ -169,8 +169,8 @@ python3 analyze_st_exe.py --stats
 # Search for loads from a specific offset (e.g., magic1 at offset 0x09)
 python3 analyze_st_exe.py --search 09
 
-# Search for stores to a memory address (e.g., HP at 0x198F28)
-python3 analyze_st_exe.py --search-stores 198F28
+# Search for stores to a memory address (e.g., HP at 0x198F2A)
+python3 analyze_st_exe.py --search-stores 198F2A
 
 # Disassemble a specific memory region
 python3 analyze_st_exe.py --region 8001C6E8
@@ -179,4 +179,4 @@ python3 analyze_st_exe.py --region 8001C6E8
 python3 analyze_st_exe.py
 ```
 
-This tool helps verify that our data structure modifications in `data_model.js` target the correct offsets that the game's runtime code actually uses. The `--search-stores` option is particularly useful for finding where player HP (at 0x198F28) is modified during damage application. See `RUNTIME_DAMAGE_DEBUGGING.md` for a complete analysis of Shadow Tower's damage calculation system.
+This tool helps verify that our data structure modifications in `data_model.js` target the correct offsets that the game's runtime code actually uses. The `--search-stores` option is particularly useful for finding where player HP (at 0x198F2A) is modified during damage application. See `RUNTIME_DAMAGE_DEBUGGING.md` for a complete analysis of Shadow Tower's damage calculation system.
