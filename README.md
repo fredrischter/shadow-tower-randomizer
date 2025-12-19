@@ -8,6 +8,41 @@ fredrischter at gmail dot com
 
 FromSoft Modding Committee (discord https://discord.gg/jUzZwWWUXd)
 
+# Documentation
+
+## Debugging and Modding Guides
+
+Want to understand or modify Shadow Tower's damage calculations and game logic?
+
+- **[DAMAGE_DEBUGGING_GUIDE.md](DAMAGE_DEBUGGING_GUIDE.md)** - Comprehensive guide for debugging damage calculations
+  - Extract all creature attack/defense values
+  - Understand the dual attack system (base + EntityStateData)
+  - Learn reverse engineering methodology
+  - Create custom damage patches
+  - Step-by-step workflows with examples
+
+- **[DAMAGE_DEBUGGING_QUICK_REF.md](DAMAGE_DEBUGGING_QUICK_REF.md)** - Quick reference cheat sheet
+  - TL;DR commands to extract damage data (30 seconds)
+  - Data structure offsets reference
+  - Example workflows
+  - Known vs unknown formulas
+
+- **[CREATURE_POWER_TABLE_README.md](CREATURE_POWER_TABLE_README.md)** - Power table generation
+  - Auto-generated tables showing all creature stats
+  - Attack values, defenses, HP, and power scores
+  - Verification of magic attack scaling (PR #14)
+
+- **[SPEED_BYTE_IDENTIFICATION_METHODOLOGY.md](SPEED_BYTE_IDENTIFICATION_METHODOLOGY.md)** - Reverse engineering methodology
+  - How to discover unknown game mechanics
+  - Statistical analysis approach
+  - Pattern recognition techniques
+
+## Other Documentation
+
+- **[MAGIC_DAMAGE_COMPLETE_FIX.md](MAGIC_DAMAGE_COMPLETE_FIX.md)** - Explanation of magic attack scaling fix
+- **[PROJECTILE_ATTACK_FIX.md](PROJECTILE_ATTACK_FIX.md)** - Details on projectile damage implementation
+- **[CREATURE_SPEED_DOCUMENTATION.md](CREATURE_SPEED_DOCUMENTATION.md)** - Creature movement and attack speed
+
 # Local setup (for developers)
 
 ## Setup Debian
