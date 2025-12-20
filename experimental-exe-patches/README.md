@@ -1,86 +1,156 @@
-# Experimental ST.EXE Patches - HP Store Region Targeting
+# Experimental EXE Patches - Magic Damage Calculation Targeting
 
-## Approach
+## Overview
 
-Based on MIPS disassembly analysis, found 4 instructions that store to HP address 0x198f2a:
+20 experimental ST.EXE files targeting magic damage calculation regions based on backward tracing analysis and previous test results.
 
-1. **0x02c77c:** `SH $s0, 0x8f2a($v0)` - **Actual HP value storage** (HIGH PRIORITY)
-2. **0x05e96c:** `SH $zero, 0x8f2a($at)` - Entity initialization
-3. **0x05fe78:** `SH $zero, 0x8f2a($at)` - State reset
-4. **0x06154c:** `SH $zero, 0x8f2a($at)` - Full initialization
+## Previous Test Results
 
-Previous experiments failed because they targeted arithmetic-heavy regions (damage calculation),
-but HP stores are in separate regions. This approach targets code AROUND HP store instructions.
+**HP Store Approach (Failed):**
+- Exp 1-7, 10-19: Freeze on map load (hit critical HP init/reset code)
+- Exp 8, 9: Load but freeze 1s after (hit entity initialization code)
+- Exp 20: Works normally, no effect (safe but ineffective region)
+
+**Lesson Learned:** HP storage regions are final step with surrounding init/reset code. Need to target CALCULATION regions instead.
+
+## New Approach: Magic Damage Calculation
+
+Based on backward tracing analysis:
+- **Region 0x36000** (43 MULT ops) - TOP CANDIDATE for magic damage calculation
+- Adjacent to physical damage region (0x37000) but distinct
+- High arithmetic density suggests damage calculation code
 
 ## Experiments
 
-All 20 experiments modify ADDIU instructions in regions around HP stores to reduce values by 1/4.
-
-### Experiments 1-5: HP Store #1 Region (0x02c77c) ⭐ HIGHEST PRIORITY
-
-These target the region where actual damage values get stored to HP.
-
-| Exp | Value Range | Patches | Description |
-|-----|-------------|---------|-------------|
-|  1 | 10-100 | 36 | Broad (10-100) |
-|  2 | 20-60 | 14 | Mid (20-60) |
-|  3 | 30-80 | 10 | Upper-Mid (30-80) |
-|  4 | 40-100 | 15 | High (40-100) |
-|  5 | 15-50 | 19 | Lower-Mid (15-50) |
-
-### Experiments 6-10: HP Store #2 Region (0x05e96c)
-
-Entity initialization code.
+### Experiments 1-5: Core Magic Region (512B) ⭐ START HERE
+**Region:** 0x35f00-0x36100 (focused on center of suspected magic region)  
+**Strategy:** MINIMAL patches (0-11) to avoid crashes  
+**Priority:** HIGHEST
 
 | Exp | Value Range | Patches | Description |
 |-----|-------------|---------|-------------|
-|  6 | 10-100 | 24 | Broad (10-100) |
-|  7 | 20-60 | 15 | Mid (20-60) |
-|  8 | 30-80 | 17 | Upper-Mid (30-80) |
-|  9 | 40-100 | 13 | High (40-100) |
-| 10 | 15-50 | 13 | Lower-Mid (15-50) |
+| 01  | 10-100      | 11      | Broad range |
+| 02  | 20-60       | 1       | Mid range |
+| 03  | 30-80       | 1       | Upper-mid range |
+| 04  | 40-100      | 0       | High range (no patches found) |
+| 05  | 15-50       | 9       | Lower-mid range |
 
-### Experiments 11-15: HP Store #3 Region (0x05fe78)
-
-State reset code.
-
-| Exp | Value Range | Patches | Description |
-|-----|-------------|---------|-------------|
-| 11 | 10-100 | 21 | Broad (10-100) |
-| 12 | 20-60 | 9 | Mid (20-60) |
-| 13 | 30-80 | 5 | Upper-Mid (30-80) |
-| 14 | 40-100 | 8 | High (40-100) |
-| 15 | 15-50 | 12 | Lower-Mid (15-50) |
-
-### Experiments 16-20: HP Store #4 Region (0x06154c)
-
-Full entity initialization.
+### Experiments 6-10: Broader Magic Region (4KB)
+**Region:** 0x35800-0x36800  
+**Strategy:** More coverage while staying conservative  
+**Priority:** HIGH
 
 | Exp | Value Range | Patches | Description |
 |-----|-------------|---------|-------------|
-| 16 | 10-100 | 16 | Broad (10-100) |
-| 17 | 20-60 | 9 | Mid (20-60) |
-| 18 | 30-80 | 8 | Upper-Mid (30-80) |
-| 19 | 40-100 | 3 | High (40-100) |
-| 20 | 15-50 | 13 | Lower-Mid (15-50) |
+| 06  | 10-100      | 31      | Broad range |
+| 07  | 20-60       | 12      | Mid range |
+| 08  | 30-80       | 6       | Upper-mid range |
+| 09  | 40-100      | 5       | High range |
+| 10  | 15-50       | 21      | Lower-mid range |
 
-## Testing Strategy
+### Experiments 11-15: Extended Magic Region (8KB)
+**Region:** 0x35000-0x37000 (full suspected magic area)  
+**Strategy:** Comprehensive coverage  
+**Priority:** MEDIUM
 
-1. **Start with Experiments 1-5** (HP Store #1 - actual damage application)
-2. If one works, test others in same region to narrow down value range
-3. If none work, try Experiments 6-10 (initialization)
-4. Experiments 11-20 are lower priority (reset/init code)
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+| 11  | 10-100      | 50      | Broad range |
+| 12  | 20-60       | 18      | Mid range |
+| 13  | 30-80       | 14      | Upper-mid range |
+| 14  | 40-100      | 15      | High range |
+| 15  | 15-50       | 31      | Lower-mid range |
+
+### Experiments 16-18: Alternative Region 0x07000
+**Region:** 0x06f00-0x07700 (2KB)  
+**Strategy:** Test alternative magic location (40 MULT ops)  
+**Priority:** LOW
+
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+| 16  | 10-100      | 15      | Broad range |
+| 17  | 20-60       | 11      | Mid range |
+| 18  | 15-50       | 12      | Lower-mid range |
+
+### Experiments 19-20: Alternative Region 0x22000
+**Region:** 0x21f00-0x22300 (1KB)  
+**Strategy:** Test third candidate location (24 MULT ops)  
+**Priority:** LOW
+
+| Exp | Value Range | Patches | Description |
+|-----|-------------|---------|-------------|
+| 19  | 10-100      | 14      | Broad range |
+| 20  | 20-60       | 0       | Mid range (no patches found) |
+
+## Testing Instructions
+
+### 1. Copy Experimental EXE
+```bash
+cp experimental-exe-patches/ST-experiment-01.EXE iso-dump/ST.EXE
+```
+
+### 2. Build ISO
+Build ISO using your preferred method (mkpsxiso, etc.)
+
+### 3. Test in Emulator
+- Load game and enter combat
+- Test magic attacks
+- Expected: ~25% magic damage (1/4 of original)
+- Physical damage should remain unchanged
+
+### 4. Report Findings
+Note which experiment affects magic damage to identify the calculation region.
+
+## Testing Priority
+
+**Phase 1: Core Magic Region (Exp 1-5)**
+- Start with Exp 01 (11 patches, broad range)
+- If successful, test Exp 02-05 to narrow down value range
+- These have minimal patches to minimize crash risk
+
+**Phase 2: Broader Magic Region (Exp 6-10)**
+- If Phase 1 unsuccessful or to confirm findings
+- More comprehensive coverage
+
+**Phase 3: Extended Magic Region (Exp 11-15)**
+- If Phase 2 successful, test for completeness
+- May affect both magic and physical if hitting shared code
+
+**Phase 4: Alternative Regions (Exp 16-20)**
+- If Region 0x36000 unsuccessful
+- Test alternative magic damage candidates
 
 ## Expected Results
 
-If experiment works:
-- ✅ Magic damage ~25% (1/4 of original)
-- ✅ Physical damage may also be affected (modifies final HP store)
-- ✅ Game loads and runs normally
+### If Region 0x36000 is Correct
+✅ Magic damage reduced to ~25%  
+✅ Physical damage unchanged (100%)  
+✅ Game loads and works normally  
+✅ Can narrow down to specific value ranges
+
+### If Wrong Region
+❌ No effect on magic damage  
+OR ❌ Game crashes/freezes  
+OR ⚠️ Both magic and physical affected (hit shared arithmetic code)
 
 ## Why This Approach is Better
 
-**Previous:** Targeted arithmetic regions (damage calculation) → wrong code path for magic  
-**New:** Targets HP store regions (final damage application) → affects all damage types
+**Previous (HP Store):**
+- ❌ Targeted storage/init regions
+- ❌ Hit entity initialization → freezes
+- ❌ Affects ALL damage types
 
-See HP_STORE_ANALYSIS.md for complete technical details.
+**New (Magic Calc):**
+- ✅ Targets calculation region
+- ✅ Avoids initialization code
+- ✅ Should only affect magic (physical is separate)
+- ✅ More conservative (0-50 patches vs 36)
+
+## Generation Details
+
+- **Generator:** generate_experiments_v7_magic_calc.js
+- **Method:** ADDIU instruction modification (divide immediate by 4)
+- **Total Patches:** 0-50 per experiment
+- **Average:** ~13 patches (MUCH lower than HP store approach)
+
+See `generation_log.json` for detailed specifications of each experiment.
