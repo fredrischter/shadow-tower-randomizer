@@ -1,182 +1,182 @@
 [
   {
     "experiment": 1,
-    "description": "Core Magic (512B), Broad 10-100",
-    "region": "0x35f00-0x36100",
-    "regionSize": 512,
+    "name": "Region 0x22000 center (0 patches baseline)",
+    "region": "0x22000-0x22000",
     "valueRange": "10-100",
-    "patchCount": 11,
-    "priority": "HIGHEST"
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-01.EXE"
   },
   {
     "experiment": 2,
-    "description": "Core Magic (512B), Mid 20-60",
-    "region": "0x35f00-0x36100",
-    "regionSize": 512,
-    "valueRange": "20-60",
-    "patchCount": 1,
-    "priority": "HIGHEST"
+    "name": "Region 0x21f00-0x22100 narrow (512B)",
+    "region": "0x21f00-0x22100",
+    "valueRange": "20-80",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-02.EXE"
   },
   {
     "experiment": 3,
-    "description": "Core Magic (512B), Upper 30-80",
-    "region": "0x35f00-0x36100",
-    "regionSize": 512,
-    "valueRange": "30-80",
-    "patchCount": 1,
-    "priority": "HIGHEST"
+    "name": "Region 0x21e00-0x22200 (1KB)",
+    "region": "0x21e00-0x22200",
+    "valueRange": "15-60",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-03.EXE"
   },
   {
     "experiment": 4,
-    "description": "Core Magic (512B), High 40-100",
-    "region": "0x35f00-0x36100",
-    "regionSize": 512,
-    "valueRange": "40-100",
+    "name": "Region 0x22000-0x22080 first 128B",
+    "region": "0x22000-0x22080",
+    "valueRange": "10-50",
+    "modification": "SET to 0",
     "patchCount": 0,
-    "priority": "HIGHEST"
+    "outputFile": "ST-experiment-04.EXE"
   },
   {
     "experiment": 5,
-    "description": "Core Magic (512B), Lower 15-50",
-    "region": "0x35f00-0x36100",
-    "regionSize": 512,
-    "valueRange": "15-50",
-    "patchCount": 9,
-    "priority": "HIGHEST"
+    "name": "Region 0x21f80-0x22080 around center",
+    "region": "0x21f80-0x22080",
+    "valueRange": "12-70",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-05.EXE"
   },
   {
     "experiment": 6,
-    "description": "Broader Magic (4KB), Broad 10-100",
-    "region": "0x35800-0x36800",
-    "regionSize": 4096,
+    "name": "Region 0x40000-0x41000 (4KB safe)",
+    "region": "0x40000-0x41000",
     "valueRange": "10-100",
-    "patchCount": 31,
-    "priority": "HIGH"
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-06.EXE"
   },
   {
     "experiment": 7,
-    "description": "Broader Magic (4KB), Mid 20-60",
-    "region": "0x35800-0x36800",
-    "regionSize": 4096,
-    "valueRange": "20-60",
-    "patchCount": 12,
-    "priority": "HIGH"
+    "name": "Region 0x48000-0x49000 (mid safe)",
+    "region": "0x48000-0x49000",
+    "valueRange": "15-80",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-07.EXE"
   },
   {
     "experiment": 8,
-    "description": "Broader Magic (4KB), Upper 30-80",
-    "region": "0x35800-0x36800",
-    "regionSize": 4096,
-    "valueRange": "30-80",
-    "patchCount": 6,
-    "priority": "HIGH"
+    "name": "Region 0x4f000-0x50000 (high safe)",
+    "region": "0x4f000-0x50000",
+    "valueRange": "20-90",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-08.EXE"
   },
   {
     "experiment": 9,
-    "description": "Broader Magic (4KB), High 40-100",
-    "region": "0x35800-0x36800",
-    "regionSize": 4096,
-    "valueRange": "40-100",
-    "patchCount": 5,
-    "priority": "HIGH"
+    "name": "Region 0x45000-0x46000 (safe mid-low)",
+    "region": "0x45000-0x46000",
+    "valueRange": "10-60",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-09.EXE"
   },
   {
     "experiment": 10,
-    "description": "Broader Magic (4KB), Lower 15-50",
-    "region": "0x35800-0x36800",
-    "regionSize": 4096,
-    "valueRange": "15-50",
-    "patchCount": 21,
-    "priority": "HIGH"
+    "name": "Region 0x4a000-0x4b000 (safe mid-high)",
+    "region": "0x4a000-0x4b000",
+    "valueRange": "25-95",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-10.EXE"
   },
   {
     "experiment": 11,
-    "description": "Extended Magic (8KB), Broad 10-100",
-    "region": "0x35000-0x37000",
-    "regionSize": 8192,
+    "name": "Region 0x21000-0x23000 (broad 0x22000)",
+    "region": "0x21000-0x23000",
     "valueRange": "10-100",
-    "patchCount": 50,
-    "priority": "MEDIUM"
+    "modification": "SET to 0",
+    "patchCount": 1,
+    "outputFile": "ST-experiment-11.EXE"
   },
   {
     "experiment": 12,
-    "description": "Extended Magic (8KB), Mid 20-60",
-    "region": "0x35000-0x37000",
-    "regionSize": 8192,
-    "valueRange": "20-60",
-    "patchCount": 18,
-    "priority": "MEDIUM"
+    "name": "Region 0x21800-0x22800 (1KB each side)",
+    "region": "0x21800-0x22800",
+    "valueRange": "15-75",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-12.EXE"
   },
   {
     "experiment": 13,
-    "description": "Extended Magic (8KB), Upper 30-80",
-    "region": "0x35000-0x37000",
-    "regionSize": 8192,
-    "valueRange": "30-80",
-    "patchCount": 14,
-    "priority": "MEDIUM"
+    "name": "Region 0x40000-0x42000 + 0x22000",
+    "region": "0x40000-0x42000",
+    "valueRange": "20-80",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-13.EXE"
   },
   {
     "experiment": 14,
-    "description": "Extended Magic (8KB), High 40-100",
-    "region": "0x35000-0x37000",
-    "regionSize": 8192,
-    "valueRange": "40-100",
-    "patchCount": 15,
-    "priority": "MEDIUM"
+    "name": "Region 0x21600-0x22400",
+    "region": "0x21600-0x22400",
+    "valueRange": "12-65",
+    "modification": "SET to 0",
+    "patchCount": 1,
+    "outputFile": "ST-experiment-14.EXE"
   },
   {
     "experiment": 15,
-    "description": "Extended Magic (8KB), Lower 15-50",
-    "region": "0x35000-0x37000",
-    "regionSize": 8192,
-    "valueRange": "15-50",
-    "patchCount": 31,
-    "priority": "MEDIUM"
+    "name": "Region 0x48000-0x4a000",
+    "region": "0x48000-0x4a000",
+    "valueRange": "30-90",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-15.EXE"
   },
   {
     "experiment": 16,
-    "description": "Alt Region 0x07000, Broad 10-100",
-    "region": "0x6f00-0x7700",
-    "regionSize": 2048,
-    "valueRange": "10-100",
-    "patchCount": 15,
-    "priority": "LOW"
+    "name": "Region 0x22040-0x22140 (256B offset)",
+    "region": "0x22040-0x22140",
+    "valueRange": "10-50",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-16.EXE"
   },
   {
     "experiment": 17,
-    "description": "Alt Region 0x07000, Mid 20-60",
-    "region": "0x6f00-0x7700",
-    "regionSize": 2048,
-    "valueRange": "20-60",
-    "patchCount": 11,
-    "priority": "LOW"
+    "name": "Region 0x21fc0-0x220c0 (256B)",
+    "region": "0x21fc0-0x220c0",
+    "valueRange": "15-55",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-17.EXE"
   },
   {
     "experiment": 18,
-    "description": "Alt Region 0x07000, Lower 15-50",
-    "region": "0x6f00-0x7700",
-    "regionSize": 2048,
-    "valueRange": "15-50",
-    "patchCount": 12,
-    "priority": "LOW"
+    "name": "Region 0x45800-0x46800",
+    "region": "0x45800-0x46800",
+    "valueRange": "20-70",
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-18.EXE"
   },
   {
     "experiment": 19,
-    "description": "Alt Region 0x22000, Broad 10-100",
-    "region": "0x21f00-0x22300",
-    "regionSize": 1024,
+    "name": "Region 0x22000 exact (0 patches - Exp 19 baseline)",
+    "region": "0x22000-0x22000",
     "valueRange": "10-100",
-    "patchCount": 14,
-    "priority": "LOW"
+    "modification": "SET to 0",
+    "patchCount": 0,
+    "outputFile": "ST-experiment-19.EXE"
   },
   {
     "experiment": 20,
-    "description": "Alt Region 0x22000, Mid 20-60",
-    "region": "0x21f00-0x22300",
-    "regionSize": 1024,
-    "valueRange": "20-60",
+    "name": "Region 0x49000-0x49800",
+    "region": "0x49000-0x49800",
+    "valueRange": "25-85",
+    "modification": "SET to 0",
     "patchCount": 0,
-    "priority": "LOW"
+    "outputFile": "ST-experiment-20.EXE"
   }
 ]
