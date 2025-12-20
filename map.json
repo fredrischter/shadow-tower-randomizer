@@ -9,7 +9,6 @@
         "wayBackId": "38",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Tower Top"
       }
     ],
@@ -25,7 +24,6 @@
         "wayBackId": "31",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Edge"
       },
       {
@@ -35,14 +33,12 @@
         "wayBackId": "34",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Middle"
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part1c",
         "type": "jump",
-        "nonSwitchable": false,
         "label": "Jump"
       }
     ],
@@ -58,7 +54,6 @@
         "wayBackId": "37",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Top"
       },
       {
@@ -68,7 +63,6 @@
         "wayBackId": "13",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Bottom Middle"
       },
       {
@@ -78,7 +72,6 @@
         "wayBackId": "17",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Bottom Edge"
       }
     ],
@@ -94,7 +87,6 @@
         "wayBackId": "11",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Top left"
       },
       {
@@ -104,14 +96,12 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Edge"
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part2b",
         "type": "jump",
-        "nonSwitchable": false,
         "label": "Jump"
       }
     ],
@@ -127,7 +117,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Bottom"
       },
       {
@@ -137,7 +126,6 @@
         "wayBackId": "37",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Top Middle"
       },
       {
@@ -147,7 +135,6 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Top right"
       }
     ],
@@ -163,7 +150,6 @@
         "wayBackId": "11",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Top right"
       },
       {
@@ -173,7 +159,6 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Top left"
       },
       {
@@ -183,14 +168,12 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Bottom"
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part3b",
         "type": "jump",
-        "nonSwitchable": false,
         "label": "Jump"
       }
     ],
@@ -206,7 +189,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Bottom middle"
       },
       {
@@ -216,7 +198,6 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Top edge"
       },
       {
@@ -226,14 +207,12 @@
         "wayBackId": "2",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Bottom end"
       },
       {
         "id": "jump",
         "dest": "shadow_tower_part3c",
         "type": "jump",
-        "nonSwitchable": false,
         "label": "Jump"
       }
     ],
@@ -249,7 +228,6 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Fence"
       }
     ],
@@ -266,7 +244,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Skeleton"
       },
       {
@@ -276,7 +253,6 @@
         "wayBackId": "13",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Cemetery"
       },
       {
@@ -287,7 +263,6 @@
         "type": "door",
         "rotation": 2,
         "direction": "exit",
-        "nonSwitchable": false,
         "label": "Grave"
       },
       {
@@ -296,7 +271,6 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Church"
       }
     ],
@@ -313,7 +287,6 @@
         "wayBackId": "31",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Jail"
       },
       {
@@ -323,7 +296,6 @@
         "wayBackId": "34",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Corridor"
       },
       {
@@ -333,7 +305,6 @@
         "wayBackId": "18",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -359,8 +330,8 @@
         "wayBackId": "35",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "pipe-end"
       },
       {
         "id": "31",
@@ -368,8 +339,8 @@
         "wayBackId": "4",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
-        "label": "Guardian side"
+        "label": "Guardian side",
+        "archetype": "pipe-end"
       }
     ],
     "totems": [
@@ -389,7 +360,6 @@
         "wayBackId": "8",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Exit"
       },
       {
@@ -399,7 +369,6 @@
         "type": "door",
         "rotation": 0,
         "direction": "exit",
-        "nonSwitchable": false,
         "label": "Jump down"
       },
       {
@@ -409,7 +378,6 @@
         "wayBackId": "26",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Totem"
       },
       {
@@ -420,7 +388,6 @@
         "type": "totem",
         "rotation": 3,
         "direction": "entrance",
-        "nonSwitchable": false,
         "label": "Drop in"
       }
     ],
@@ -445,8 +412,8 @@
         "wayBackId": "11",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "dead-end"
       }
     ],
     "totems": [
@@ -476,8 +443,8 @@
         "type": "door",
         "rotation": 0,
         "direction": "entrance",
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "funnel-input"
       },
       {
         "id": "7",
@@ -487,8 +454,8 @@
         "type": "door",
         "rotation": 2,
         "direction": "exit",
-        "nonSwitchable": false,
-        "label": "Exit"
+        "label": "Exit",
+        "archetype": "funnel-output"
       }
     ],
     "totems": []
@@ -504,8 +471,8 @@
         "wayBackId": "10",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "dead-end"
       }
     ],
     "totems": []
@@ -521,7 +488,6 @@
         "wayBackId": "4",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Poison"
       },
       {
@@ -532,7 +498,6 @@
         "type": "door",
         "rotation": 3,
         "direction": "exit-bi",
-        "nonSwitchable": false,
         "label": "Rock guy"
       },
       {
@@ -541,7 +506,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Entrance"
       }
     ],
@@ -567,7 +531,6 @@
         "wayBackId": "7",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -577,7 +540,6 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Bridge"
       },
       {
@@ -586,7 +548,6 @@
         "wayBackId": "0",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Exit"
       },
       {
@@ -597,7 +558,6 @@
         "type": "totem",
         "rotation": 1,
         "direction": "entrance",
-        "nonSwitchable": false,
         "label": "Jump in"
       },
       {
@@ -607,7 +567,6 @@
         "wayBackId": "41",
         "type": "totem",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -629,7 +588,6 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -639,7 +597,6 @@
         "wayBackId": "19",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Boss room"
       }
     ],
@@ -655,8 +612,8 @@
         "wayBackId": "5",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "funnel-input"
       },
       {
         "id": "1",
@@ -664,8 +621,8 @@
         "wayBackId": "4",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
-        "label": "Exit"
+        "label": "Exit",
+        "archetype": "funnel-output"
       }
     ],
     "totems": []
@@ -680,7 +637,6 @@
         "wayBackId": "7",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -690,7 +646,6 @@
         "wayBackId": "19",
         "type": "portal",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Platform"
       },
       {
@@ -701,7 +656,6 @@
         "type": "portal",
         "direction": "entrance-bi",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Room"
       }
     ],
@@ -732,7 +686,6 @@
         "type": "portal",
         "direction": "exit-bi",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Abraxus"
       },
       {
@@ -743,7 +696,6 @@
         "type": "portal",
         "direction": "entrance-bi",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Platform"
       }
     ],
@@ -769,7 +721,6 @@
         "wayBackId": "93",
         "type": "portal",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Cerberus"
       },
       {
@@ -779,7 +730,6 @@
         "wayBackId": "27",
         "type": "portal",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Start"
       }
     ],
@@ -797,8 +747,8 @@
         "type": "door",
         "rotation": 3,
         "direction": "exit",
-        "nonSwitchable": false,
-        "label": "Pool"
+        "label": "Pool",
+        "archetype": "funnel-output"
       },
       {
         "id": "1",
@@ -807,8 +757,8 @@
         "type": "door",
         "rotation": 2,
         "direction": "entrance",
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "funnel-input"
       }
     ],
     "totems": [
@@ -828,7 +778,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -838,7 +787,6 @@
         "type": "door",
         "rotation": 2,
         "direction": "exit",
-        "nonSwitchable": false,
         "label": "Flush down"
       },
       {
@@ -849,7 +797,6 @@
         "type": "totem",
         "rotation": 2,
         "direction": "entrance-bi",
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -879,8 +826,8 @@
         "wayBackId": "4",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
-        "label": "Exit"
+        "label": "Exit",
+        "archetype": "funnel-output"
       },
       {
         "id": "4",
@@ -889,8 +836,8 @@
         "wayBackId": "5",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "funnel-input"
       }
     ],
     "totems": [
@@ -927,7 +874,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -937,7 +883,6 @@
         "wayBackId": "10",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -953,7 +898,6 @@
         "wayBackId": "5",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -964,7 +908,6 @@
         "type": "totem",
         "rotation": 2,
         "direction": "entrance-bi",
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -980,7 +923,6 @@
         "wayBackId": "7",
         "type": "door",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -990,7 +932,6 @@
         "wayBackId": "14",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Totem"
       },
       {
@@ -1000,7 +941,6 @@
         "wayBackId": "4",
         "type": "totem",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Necron"
       }
     ],
@@ -1030,7 +970,6 @@
         "wayBackId": "18",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Ladder down"
       },
       {
@@ -1039,7 +978,6 @@
         "wayBackId": "9",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -1049,7 +987,6 @@
         "wayBackId": "6",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -1075,8 +1012,8 @@
         "wayBackId": "1",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
-        "label": "Exit"
+        "label": "Exit",
+        "archetype": "pipe-end"
       },
       {
         "id": "18",
@@ -1085,8 +1022,8 @@
         "wayBackId": "3",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "pipe-end"
       }
     ],
     "totems": []
@@ -1102,7 +1039,6 @@
         "wayBackId": "20",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -1112,7 +1048,6 @@
         "wayBackId": "8",
         "type": "portal",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Connection"
       },
       {
@@ -1122,7 +1057,6 @@
         "wayBackId": "3",
         "type": "portal",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Exit"
       },
       {
@@ -1132,7 +1066,6 @@
         "wayBackId": "6",
         "type": "portal",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "To Boss"
       }
     ],
@@ -1149,7 +1082,6 @@
         "wayBackId": "10",
         "type": "totem",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Totem"
       },
       {
@@ -1159,7 +1091,6 @@
         "wayBackId": "10",
         "type": "portal",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Entrance"
       }
     ],
@@ -1175,7 +1106,6 @@
         "wayBackId": "10",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Door"
       },
       {
@@ -1185,7 +1115,6 @@
         "wayBackId": "7",
         "type": "totem",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Box room"
       }
     ],
@@ -1211,7 +1140,6 @@
         "wayBackId": "12",
         "type": "door",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -1221,7 +1149,6 @@
         "wayBackId": "10",
         "type": "totem",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Totem"
       }
     ],
@@ -1238,7 +1165,6 @@
         "wayBackId": "15",
         "type": "door",
         "rotation": 3,
-        "nonSwitchable": false,
         "label": "Prison"
       },
       {
@@ -1247,7 +1173,6 @@
         "wayBackId": "13",
         "type": "door",
         "rotation": 1,
-        "nonSwitchable": false,
         "label": "Entrance"
       },
       {
@@ -1258,7 +1183,6 @@
         "type": "totem",
         "rotation": 2,
         "direction": "entrance-bi",
-        "nonSwitchable": false,
         "label": "Lower totem"
       },
       {
@@ -1269,7 +1193,6 @@
         "direction": "entrance-bi",
         "type": "totem",
         "rotation": 0,
-        "nonSwitchable": false,
         "label": "Upper totem 1"
       },
       {
@@ -1280,7 +1203,6 @@
         "direction": "entrance-bi",
         "type": "totem",
         "rotation": 2,
-        "nonSwitchable": false,
         "label": "Upper totem 2"
       }
     ],
@@ -1303,8 +1225,8 @@
         "type": "door",
         "rotation": 0,
         "direction": "exit-bi",
-        "nonSwitchable": false,
-        "label": "King's room"
+        "label": "King's room",
+        "archetype": "funnel-output"
       },
       {
         "id": "15",
@@ -1314,8 +1236,8 @@
         "type": "door",
         "rotation": 2,
         "direction": "entrance-bi",
-        "nonSwitchable": false,
-        "label": "Entrance"
+        "label": "Entrance",
+        "archetype": "funnel-input"
       }
     ],
     "totems": [

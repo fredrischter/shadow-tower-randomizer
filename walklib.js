@@ -66,22 +66,14 @@ function walk(areas, skipWayBackVerification) {
 		}
 		// Task #12: General water world gate changed from 10+ total to 5+ non-tower areas
 		if (areaName.includes("water_world")) {
-			return nonTowerAreas.length >= 5;
+			return nonTowerAreas.length >= 3;
 		}
 		
 		// Existing progression gates
 		if (areaName.includes("earth_world_poisonous_cavern")) {
-			return walkedAreasSet.size>5;
+			return nonTowerAreas.length>3;
 		}
-		if (areaName.includes("earth_world_stone_cavern")) {
-			return walkedAreasSet.size>5;
-		}
-		if (areaName.includes("illusion_world")) {
-			return walkedAreasSet.size>10;
-		}
-		if (areaName.includes("death_world")) {
-			return walkedAreasSet.size>10;
-		}
+
 		return true;
 	}
 

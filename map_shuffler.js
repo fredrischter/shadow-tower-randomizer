@@ -35,10 +35,6 @@ function switchableWay(way) {
 	if (way.type == "portal") {
 		return false;
 	}
-	// New map randomization logic: check nonSwitchable property
-	if (way.nonSwitchable === true) {
-		return false;
-	}
 	return true;
 }
 
@@ -284,173 +280,257 @@ function resolveRotation(map, areasByName, targetExit) {
 	}
 }*/
 
-// New map randomization logic: Find areas connected to central area through switchable doors
-// Task #24: Limited depth BFS to prevent finding all areas in connected map
-function findContiguousAreas(map, centralArea, maxDepth = 2) {
-	const contiguousAreas = new Set([centralArea.name]);
-	const toCheck = [{area: centralArea, depth: 0}];
-	const checked = new Set();
+// Task #25: Archetype-based area randomization system
+// Classifies area based on exit archetype fields set in map.json
+function classifyAreaArchetype(area) {
+	const doorExits = area.exits.filter(exit => exit.type === "door");
 	
-	while (toCheck.length > 0) {
-		const current = toCheck.pop();
-		const currentArea = current.area;
-		const currentDepth = current.depth;
-		
-		if (checked.has(currentArea.name)) continue;
-		checked.add(currentArea.name);
-		
-		// Stop expanding if we've reached max depth
-		if (currentDepth >= maxDepth) continue;
-		
-		// Find all switchable doors from this area
-		currentArea.exits.forEach(exit => {
-			if (switchableWay(exit)) {
-				// If this door leads to an area not yet in our contiguous set
-				if (!contiguousAreas.has(exit.dest)) {
-					contiguousAreas.add(exit.dest);
-					// Find the destination area and add it to check
-					const destArea = map.find(a => a.name === exit.dest);
-					if (destArea) {
-						toCheck.push({area: destArea, depth: currentDepth + 1});
-					}
-				}
-			}
-		});
+	if (doorExits.length === 0) {
+		return null; // No door exits - don't randomize
 	}
 	
-	return contiguousAreas;
+	// Collect all archetype values from the door exits
+	const archetypes = doorExits.map(exit => exit.archetype).filter(a => a);
+	
+	// If no archetypes set, return null (not classified)
+	if (archetypes.length === 0) {
+		return null;
+	}
+	
+	// Determine area archetype based on exit archetypes
+	if (archetypes.includes("funnel-input") && archetypes.includes("funnel-output")) {
+		return "funnel";
+	} else if (archetypes.includes("pipe-end")) {
+		return "pipe";
+	} else if (archetypes.includes("dead-end")) {
+		return "dead-end";
+	} else if (archetypes.includes("3-way-pipe-joint-end")) {
+		return "3-way-pipe-joint";
+	}
+	
+	return null; // Unknown or unclassified
 }
 
-// New map randomization logic: Find outer circle doors
-// These are switchable doors from contiguous areas that lead OUTSIDE the contiguous neighborhood
-function findOuterCircleDoors(map, centralAreaName, contiguousAreaNames) {
-	const outerDoors = [];
+// Task #25: Build allow-lists for area swapping based on archetypes
+function buildArchetypeAllowLists(map) {
+	const allowLists = {
+		"pipe": [],
+		"funnel": [],
+		"dead-end": [],
+		"3-way-pipe-joint": []
+	};
 	
-	// For each contiguous area (including the central area)
-	contiguousAreaNames.forEach(areaName => {
-		const area = map.find(a => a.name === areaName);
-		if (!area) return;
-		
-		// Find switchable doors that lead OUTSIDE the contiguous neighborhood
-		// (i.e., not to the central area and not to any other contiguous area)
-		area.exits.forEach(exit => {
-			if (switchableWay(exit) && !contiguousAreaNames.has(exit.dest)) {
-				outerDoors.push({
-					area: area,
-					exit: exit
-				});
-			}
-		});
+	map.forEach(area => {
+		const archetype = classifyAreaArchetype(area);
+		if (archetype && allowLists[archetype]) {
+			allowLists[archetype].push(area.name);
+		}
 	});
 	
-	return outerDoors;
+	return allowLists;
 }
 
-// New map randomization logic: Spin the outer circle doors
-// Each door swaps with the one at its "left" (previous position in array)
-function spinOuterCircleDoors(map, outerDoors) {
-	if (outerDoors.length < 2) {
-		console.error(" - Not enough outer doors to spin (need at least 2, have " + outerDoors.length + ")");
-		return;
+// Task #25: Total area replacement - swap positions of two areas in the map graph
+// All incoming connections to area1 now point to area2, and vice versa
+// For pipes: can optionally invert direction (reverse which end is which)
+// For 3-way-pipe-joints: can shuffle ends in any order
+function swapAreasByArchetype(map, area1Name, area2Name, invertPipe = false) {
+	const area1 = map.find(a => a.name === area1Name);
+	const area2 = map.find(a => a.name === area2Name);
+	
+	if (!area1 || !area2) {
+		console.error("ERROR - Cannot find areas for swap: " + area1Name + ", " + area2Name);
+		return false;
 	}
 	
-	console.error(" - Spinning " + outerDoors.length + " outer circle doors");
+	const archetype1 = classifyAreaArchetype(area1);
+	const archetype2 = classifyAreaArchetype(area2);
 	
-	// Shuffle the outer doors array to randomize which doors get paired
-	for (let i = outerDoors.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[outerDoors[i], outerDoors[j]] = [outerDoors[j], outerDoors[i]];
+	if (archetype1 !== archetype2) {
+		console.error("ERROR - Cannot swap areas with different archetypes: " + archetype1 + " vs " + archetype2);
+		return false;
 	}
 	
-	// Save all current door destinations before modifying
-	const originalDestinations = outerDoors.map(door => ({
-		dest: door.exit.dest,
-		world: door.exit.world,
-		wayBackId: door.exit.wayBackId
-	}));
+	// Get door exits for both areas (only those with archetype field set)
+	const doors1 = area1.exits.filter(exit => exit.type === "door" && exit.archetype);
+	const doors2 = area2.exits.filter(exit => exit.type === "door" && exit.archetype);
 	
-	// Apply a circular shift: door[i] gets destination of door[i+1]
-	// door[0] -> gets dest of door[1]
-	// door[1] -> gets dest of door[2]  
-	// ...
-	// door[n-1] -> gets dest of door[0]
-	
-	let swapsPerformed = 0;
-	for (let i = 0; i < outerDoors.length; i++) {
-		const currentDoor = outerDoors[i];
-		const nextIndex = (i + 1) % outerDoors.length;
-		const nextDestination = originalDestinations[nextIndex];
-		
-		// Check if this would create a self-loop
-		if (nextDestination.dest == currentDoor.area.name) {
-			console.error(" - Spin would create self-loop for " + currentDoor.area.name + ", aborting this spin");
-			return;
-		}
-		
-		// Check if assignment would be valid
-		if (!goodToAssignWay(currentDoor.exit, nextDestination, currentDoor.area, map)) {
-			console.error(" - Assignment for door " + i + " would be invalid, aborting this spin");
-			return;
-		}
+	if (doors1.length !== doors2.length) {
+		console.error("ERROR - Areas have different number of archetype doors: " + doors1.length + " vs " + doors2.length);
+		return false;
 	}
 	
-	// Fix: Two-pass approach to avoid wayback conflicts during circular shift
-	// Pass 1: Update all forward door destinations without touching waybacks
-	for (let i = 0; i < outerDoors.length; i++) {
-		const currentDoor = outerDoors[i];
-		const nextIndex = (i + 1) % outerDoors.length;
-		const nextDestination = originalDestinations[nextIndex];
-		
-		// Update the door's destination, world, and wayBackId
-		currentDoor.exit.dest = nextDestination.dest;
-		currentDoor.exit.world = nextDestination.world;
-		currentDoor.exit.wayBackId = nextDestination.wayBackId;
-		swapsPerformed++;
-	}
+	// Step 1: Find all incoming connections to both areas from OTHER areas
+	const incomingToArea1 = [];
+	const incomingToArea2 = [];
 	
-	// Pass 2: Update all wayback doors to point to the correct source areas
-	if (consistentDoors) {
-		for (let i = 0; i < outerDoors.length; i++) {
-			const currentDoor = outerDoors[i];
-			
-			// Find the wayback door in the destination area
-			if (currentDoor.exit.wayBackId) {
-				const wayBackArea = map.find(area => area.name == currentDoor.exit.dest);
-				if (wayBackArea) {
-					const wayBackWay = wayBackArea.exits.find(exit => exit.id == currentDoor.exit.wayBackId);
-					if (wayBackWay) {
-						// Update wayback to point back to the current door's area
-						wayBackWay.dest = currentDoor.area.name;
-						wayBackWay.world = currentDoor.area.world;
-						wayBackWay.wayBackId = currentDoor.exit.id;
-					}
+	map.forEach(area => {
+		if (area.name !== area1Name && area.name !== area2Name) {
+			area.exits.forEach(exit => {
+				if (exit.dest === area1Name) {
+					incomingToArea1.push({ area: area, exit: exit });
+				} else if (exit.dest === area2Name) {
+					incomingToArea2.push({ area: area, exit: exit });
 				}
-			}
+			});
+		}
+	});
+	
+	// Step 2: Determine mapping between doors based on archetype
+	let doorMapping1to2 = []; // Maps area1's door index to area2's door index
+	let doorMapping2to1 = []; // Maps area2's door index to area1's door index
+	
+	if (archetype1 === "pipe" && invertPipe) {
+		// Inverted pipe: reverse the order
+		doorMapping1to2 = [1, 0];
+		doorMapping2to1 = [1, 0];
+	} else if (archetype1 === "funnel") {
+		// Funnel: input stays input, output stays output
+		const input1Idx = doors1.findIndex(d => d.archetype === "funnel-input");
+		const output1Idx = doors1.findIndex(d => d.archetype === "funnel-output");
+		const input2Idx = doors2.findIndex(d => d.archetype === "funnel-input");
+		const output2Idx = doors2.findIndex(d => d.archetype === "funnel-output");
+		
+		if (input1Idx === -1 || output1Idx === -1 || input2Idx === -1 || output2Idx === -1) {
+			console.error("ERROR - Funnel areas missing input or output");
+			return false;
+		}
+		
+		doorMapping1to2[input1Idx] = input2Idx;
+		doorMapping1to2[output1Idx] = output2Idx;
+		doorMapping2to1[input2Idx] = input1Idx;
+		doorMapping2to1[output2Idx] = output1Idx;
+		
+	} else if (archetype1 === "3-way-pipe-joint") {
+		// Random permutation for 3-way joint
+		doorMapping1to2 = [0, 1, 2];
+		for (let i = doorMapping1to2.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[doorMapping1to2[i], doorMapping1to2[j]] = [doorMapping1to2[j], doorMapping1to2[i]];
+		}
+		// Create inverse mapping
+		doorMapping2to1 = new Array(3);
+		for (let i = 0; i < 3; i++) {
+			doorMapping2to1[doorMapping1to2[i]] = i;
+		}
+	} else {
+		// Regular swap: 1-to-1 mapping (dead-end, pipe without inversion)
+		for (let i = 0; i < doors1.length; i++) {
+			doorMapping1to2[i] = i;
+			doorMapping2to1[i] = i;
 		}
 	}
 	
-	console.error(" - Successfully performed " + swapsPerformed + " door shifts");
+	// Task #25: PRE-CHECK for self-loops before making any changes
+	// Check if area1 would point to itself
+	const originalDoors2 = JSON.parse(JSON.stringify(doors2));
+	for (let i = 0; i < doors1.length; i++) {
+		const mappedIdx = doorMapping1to2[i];
+		const newDest = originalDoors2[mappedIdx].dest;
+		if (newDest === area1Name) {
+			console.error("ERROR - Would create self-loop: " + area1Name + " -> " + area1Name + " (skipping swap)");
+			return false;
+		}
+	}
+	
+	// Check if area2 would point to itself
+	const originalDoors1 = JSON.parse(JSON.stringify(doors1));
+	for (let i = 0; i < doors2.length; i++) {
+		const mappedIdx = doorMapping2to1[i];
+		const newDest = originalDoors1[mappedIdx].dest;
+		if (newDest === area2Name) {
+			console.error("ERROR - Would create self-loop: " + area2Name + " -> " + area2Name + " (skipping swap)");
+			return false;
+		}
+	}
+	
+	// Step 3: Redirect all incoming connections to area1 -> now point to area2 (with door mapping)
+	incomingToArea1.forEach(incoming => {
+		const oldWayBackId = incoming.exit.wayBackId;
+		const oldDoorIdx = doors1.findIndex(d => d.id === oldWayBackId);
+		
+		if (oldDoorIdx !== -1) {
+			const newDoorIdx = doorMapping1to2[oldDoorIdx];
+			const newWayBackId = doors2[newDoorIdx].id;
+			
+			incoming.exit.dest = area2Name;
+			incoming.exit.world = area2.world;
+			incoming.exit.wayBackId = newWayBackId;
+		}
+	});
+	
+	// Step 4: Redirect all incoming connections to area2 -> now point to area1 (with door mapping)
+	incomingToArea2.forEach(incoming => {
+		const oldWayBackId = incoming.exit.wayBackId;
+		const oldDoorIdx = doors2.findIndex(d => d.id === oldWayBackId);
+		
+		if (oldDoorIdx !== -1) {
+			const newDoorIdx = doorMapping2to1[oldDoorIdx];
+			const newWayBackId = doors1[newDoorIdx].id;
+			
+			incoming.exit.dest = area1Name;
+			incoming.exit.world = area1.world;
+			incoming.exit.wayBackId = newWayBackId;
+		}
+	});
+	
+	// Step 5: Update area1's outgoing exits to point to what area2 was pointing to (with mapping)
+	for (let i = 0; i < doors1.length; i++) {
+		const mappedIdx = doorMapping1to2[i];
+		doors1[i].dest = originalDoors2[mappedIdx].dest;
+		doors1[i].world = originalDoors2[mappedIdx].world;
+		doors1[i].wayBackId = originalDoors2[mappedIdx].wayBackId;
+	}
+	
+	// Step 6: Update area2's outgoing exits to point to what area1 was pointing to (with mapping)
+	for (let i = 0; i < doors2.length; i++) {
+		const mappedIdx = doorMapping2to1[i];
+		doors2[i].dest = originalDoors1[mappedIdx].dest;
+		doors2[i].world = originalDoors1[mappedIdx].world;
+		doors2[i].wayBackId = originalDoors1[mappedIdx].wayBackId;
+	}
+	
 	verifyConsistency(map);
+	return true;
 }
 
-// New map randomization logic: Perform one iteration of the new algorithm
-function performCircleSpinIteration(map) {
-	// Pick a random area as the central area
-	const centralArea = map[Math.floor(Math.random() * map.length)];
-	console.error(" - Selected central area: " + centralArea.name);
+// Task #25: Perform one iteration of archetype-based randomization
+function performArchetypeRandomization(map, allowLists) {
+	// Pick a random archetype that has multiple areas
+	const validArchetypes = Object.keys(allowLists).filter(arch => 
+		allowLists[arch].length >= 2
+	);
 	
-	// Find all areas connected to the central area through switchable doors
-	const contiguousAreaNames = findContiguousAreas(map, centralArea);
-	console.error(" - Found " + contiguousAreaNames.size + " contiguous areas");
-	
-	// Find the outer circle doors
-	const outerDoors = findOuterCircleDoors(map, centralArea.name, contiguousAreaNames);
-	console.error(" - Found " + outerDoors.length + " outer circle doors");
-	
-	if (outerDoors.length >= 2) {
-		// Spin the outer circle
-		spinOuterCircleDoors(map, outerDoors);
+	if (validArchetypes.length === 0) {
+		console.error(" - No valid archetypes with 2+ areas for swapping");
+		return false;
 	}
+	
+	const randomArchetype = validArchetypes[Math.floor(Math.random() * validArchetypes.length)];
+	const areaList = allowLists[randomArchetype];
+	
+	// Pick two random areas from this archetype
+	const area1Name = areaList[Math.floor(Math.random() * areaList.length)];
+	let area2Name = areaList[Math.floor(Math.random() * areaList.length)];
+	
+	// Ensure different areas
+	let retries = 0;
+	while (area1Name === area2Name && retries < 10) {
+		area2Name = areaList[Math.floor(Math.random() * areaList.length)];
+		retries++;
+	}
+	
+	if (area1Name === area2Name) {
+		return false;
+	}
+	
+	// For pipes, randomly decide to invert or not
+	const invertPipe = (randomArchetype === "pipe" && Math.random() < 0.5);
+	
+	console.error(" - Swapping " + randomArchetype + " areas: " + area1Name + " <-> " + area2Name + 
+	              (invertPipe ? " (inverted)" : ""));
+	
+	return swapAreasByArchetype(map, area1Name, area2Name, invertPipe);
 }
 
 function shuffle(params) {
@@ -490,12 +570,19 @@ function shuffle(params) {
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_sunken_river_area", "1");  // ok
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "11"); // ok
 
-				// New map randomization logic: perform circle spin algorithm 3 times
-				// Task #24: Changed from 2 to 3 iterations as requested
-				console.error(new Date().toISOString() + "  Starting new circle spin randomization");
-				for (var i=0; i<3; i++) {
-					console.error(" Iteration " + (i+1) + "/3:");
-					performCircleSpinIteration(generated);
+				// Task #25: Archetype-based randomization - perform multiple swap iterations
+				console.error(new Date().toISOString() + "  Starting archetype-based randomization");
+				
+				const allowLists = buildArchetypeAllowLists(generated);
+				console.error(" - Allow lists built:");
+				Object.keys(allowLists).forEach(archetype => {
+					console.error("   " + archetype + ": " + allowLists[archetype].length + " areas");
+				});
+				
+				const swapIterations = 5;
+				for (var i = 0; i < swapIterations; i++) {
+					console.error(" Iteration " + (i+1) + "/" + swapIterations + ":");
+					performArchetypeRandomization(generated, allowLists);
 				}
 			}
 
@@ -533,10 +620,7 @@ function shuffle(params) {
 			if (!params.randomizeMap) {
 				result = walkResult;
 			} else {
-				// Task #24: Circle spin algorithm fix - accept first valid map
-				// The circle spin algorithm performs 3 complete iterations of randomization.
-				// Unlike the old incremental swap system, we should accept the first walkable result.
-				console.error(new Date().toISOString() + " Accepting circle spin result with difficulty " + walkResult.pathDifficulty);
+				console.error(new Date().toISOString() + " Accepting valid map with difficulty " + walkResult.pathDifficulty);
 				result = walkResult;
 			}
 

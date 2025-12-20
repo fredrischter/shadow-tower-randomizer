@@ -1927,6 +1927,8 @@
     var group = "";
     
     // Task 4: Do not tag monsters by world when in comedy, scary, or bonanza mode
+    // Task #25: Commenting out world tagging - leave it disabled for all modes
+    /*
     const skipWorldTagging = params && (
       params.preset === "comedy" || 
       params.preset === "scary-game" || 
@@ -1938,6 +1940,10 @@
     } else {
       group = "all_worlds";
     }
+    */
+    
+    // World tagging disabled - all creatures can swap across all worlds
+    group = "all_worlds";
 
     if (this.flyingRandomizable) {
       group += "-flying";
