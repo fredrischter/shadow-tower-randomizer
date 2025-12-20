@@ -1,6 +1,6 @@
 # Shadow Tower Creature Power Value Table
 
-**Generated:** 2025-12-20T13:32:34.787Z
+**Generated:** 2025-12-20T13:41:53.877Z
 
 **Purpose:** Verify PR #14 magic/projectile attack damage scaling fix
 
@@ -39,16 +39,16 @@ Area Score indicates the creature's position in game progression (0 = start area
 | Creature Name | Power | HP | Area Score | Physical (0x20) | Magic (0x30) | Area |
 |---------------|-------|----|-----------|-----------------|--------------|-----------|
 | 00_abraxus | 33726 | 65535 | 11 | - | 95/181/181; 95/181/181 | fire world molten cavern |
-| 0d_fat_mole_e | 32867 | 65535 | 19 | - | - | death world undead layer |
+| 0d_fat_mole_e | 32867 | 65535 | 12 | - | - | death world undead layer |
 | 02_fat_mole_d | 32846 | 65535 | 14 | - | - | illusion world worship do |
 | 00_fat_mole_f | 32840 | 65535 | 10 | - | - | water world impure pool a |
 | 08_fat_mole_b | 32807 | 65535 | 11 | - | - | fire world molten cavern |
 | 0c_fat_mole_c | 32807 | 65535 | 11 | - | - | fire world molten cavern |
-| 04_fat_mole_a | 32768 | 65535 | 2 | - | - | human world cursed region |
-| 01_unknown_b | 5838 | 7560 | 19 | 520/450/550; 620/480/550 | 124; 125 | death world undead layer |
+| 04_fat_mole_a | 32768 | 65535 | 13 | - | - | human world cursed region |
+| 01_unknown_b | 5838 | 7560 | 12 | 520/450/550; 620/480/550 | 124; 125 | death world undead layer |
 | 01_auriel_c | 5793 | 7560 | 11 | 550/450/540; 550/450/540 | 160; 161 | monster world screeching  |
 | 0c_hollow_mage | 5167 | 7800 | 13 | - | 59; 64 | death world gate of the d |
-| 04_king_edward | 4829 | 6500 | 19 | 50/45/50; 40/40/20; 90/40/80 | 246 | death world undead layer |
+| 04_king_edward | 4829 | 6500 | 12 | 50/45/50; 40/40/20; 90/40/80 | 246 | death world undead layer |
 | 04_wildowess | 4765 | 6600 | 14 | 205/150/340 | 242 | illusion world worship do |
 | 00_unused_a | 4522 | 6000 | 13 | - | - | death world gate of the d |
 | 0e_necron | 4459 | 4800 | 11 | 340/290/460; 100/120/400; 350/250/270 | 164/308; 163/279; 162/365 | monster world screeching  |
@@ -57,20 +57,20 @@ Area Score indicates the creature's position in game progression (0 = start area
 | 05_magi_magus | 3276 | 3730 | 13 | - | 117/298; 118 | water world white rain ar |
 | 08_fester | 2964 | 4650 | 14 | - | 145 | illusion world worship do |
 | 00_panak | 2714 | 5100 | 13 | - | - | death world lingering cur |
-| 01_disguise | 2375 | 2700 | 15 | - | 151; 150/23 | illusion world dream doma |
+| 01_disguise | 2375 | 2700 | 14 | - | 151; 150/23 | illusion world dream doma |
 | 01_gorthaur | 2292 | 3450 | 14 | 195/110/180 | 146 | illusion world worship do |
 | 04_dread_knight | 1949 | 2400 | 8 | 190/145/112; 110/155/245 | 84 | earth world hostile rock  |
-| 09_pulsating_heart | 1767 | 2000 | 19 | 150/100/140 | 127/40/84 | death world undead layer |
+| 09_pulsating_heart | 1767 | 2000 | 12 | 150/100/140 | 127/40/84 | death world undead layer |
 | 04_auriel_b | 1041 | 1000 | 5 | - | - | earth world poisonous cav |
 | 08_guardian_b | 886 | 870 | 7 | 92/70/148; 92/70/218 | 200/1 | earth world false pit cav |
 | 02_dead_abraxus | 687 | 1 | 11 | - | - | fire world molten cavern |
-| 0a_guardian_a | 510 | 480 | 2 | 30/33/91 | 200/1 | human world cursed region |
+| 0a_guardian_a | 510 | 480 | 13 | 30/33/91 | 200/1 | human world cursed region |
 | 0c_dybbuk | 445 | 520 | 6 | - | 75 | earth world stone cavern |
 | 00_dybbuk | 423 | 520 | 6 | - | - | earth world stone cavern |
 | 04_dybbuk | 423 | 520 | 6 | - | - | earth world stone cavern |
 | 00_duhrin | 390 | 600 | 5 | - | - | earth world poisonous cav |
-| 02_lizard_servant | 355 | 1 | 16 | - | - | monster world false eye a |
-| 06_lizard_servant | 355 | 1 | 16 | - | - | monster world false eye a |
+| 02_lizard_servant | 355 | 1 | 13 | - | - | monster world false eye a |
+| 06_lizard_servant | 355 | 1 | 13 | - | - | monster world false eye a |
 | 01_acid_slime | 154 | 95 | 1 | 10/11/13 | 49 | human world solitary regi |
 
 ---
