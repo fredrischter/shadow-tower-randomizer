@@ -145,26 +145,29 @@ function verifyConsistency(map) {
 		});
 	});
 
+	var hasError = false;
 	map.forEach(area => {
 		area.exits.forEach(exit => {
 			if (exit.wayBackId) {
 				if (!areasMap[exit.dest][exit.wayBackId]) {
 					console.error("ERROR - inconsistent wayBackId "+exit.wayBackId+" doesnt exist in area "+exit.dest);
 					console.error("ERROR detail area - "+JSON.stringify(areasMap[exit.dest]));
-					failed = true;
-					process.exit(1);
+					hasError = true;
 				} 
 
-				if (areasMap[exit.dest][exit.wayBackId].dest != area.name) {
+				if (areasMap[exit.dest][exit.wayBackId] && areasMap[exit.dest][exit.wayBackId].dest != area.name) {
 					console.error("ERROR - inconsistent wayBackId "+exit.wayBackId+" of expected area "+exit.dest+" doesnt match "+area.name+" exit "+exit.id+": ");
 					console.error("ERROR detail - "+areasMap[exit.dest][exit.wayBackId].dest +"!="+ area.name);
-					console.error("ERROR map - "+JSON.stringify(map));
-					failed = true;
-					process.exit(1);
+					hasError = true;
 				}
 			}
 		});
 	});
+	
+	if (hasError) {
+		console.error("ERROR - Map has consistency errors, throwing exception");
+		throw new Error("Map consistency check failed");
+	}
 }
 
 function exitsSwap(map, areaName1, exitId1, areaName2, exitId2) {
@@ -577,6 +580,11 @@ function extractSegment(map, segmentAreaName) {
 		return null;
 	}
 	
+	// Save the ORIGINAL state of the exits before we modify anything
+	// This is what we'll use when re-inserting the segment
+	const originalInputExit = JSON.parse(JSON.stringify(inputExit));
+	const originalOutputExit = JSON.parse(JSON.stringify(outputExit));
+	
 	// Find all connections TO this segment (incoming edges)
 	const incomingToInput = [];
 	const incomingToOutput = [];
@@ -640,12 +648,20 @@ function extractSegment(map, segmentAreaName) {
 		incoming.exit.wayBackId = inputExit.wayBackId;
 	});
 	
+	// Step 3: Clear the segment's own exits since it's been extracted
+	// This prevents stale connections from causing issues
+	inputExit.dest = null;
+	inputExit.wayBackId = null;
+	outputExit.dest = null;
+	outputExit.wayBackId = null;
+	
 	// Return segment info for later insertion
+	// Use the ORIGINAL exit state, not the modified state
 	return {
 		area: area,
 		areaName: segmentAreaName,
-		inputExit: JSON.parse(JSON.stringify(inputExit)),
-		outputExit: JSON.parse(JSON.stringify(outputExit)),
+		inputExit: originalInputExit,
+		outputExit: originalOutputExit,
 		archetype: archetype
 	};
 }
@@ -664,7 +680,15 @@ function insertSegment(map, segment, referenceWalk) {
 		if (area.name !== segment.areaName) {
 			area.exits.forEach(exit => {
 				if (exit.type === "door" && exit.wayBackId) {
-					allDoors.push({ area: area, exit: exit });
+					// Skip doors that originally connected to this segment
+					// This prevents re-inserting at the same location
+					const originallyConnectedToSegment = (
+						(exit.dest === segment.inputExit.dest && exit.wayBackId === segment.inputExit.wayBackId) ||
+						(exit.dest === segment.outputExit.dest && exit.wayBackId === segment.outputExit.wayBackId)
+					);
+					if (!originallyConnectedToSegment) {
+						allDoors.push({ area: area, exit: exit });
+					}
 				}
 			});
 		}
@@ -755,10 +779,14 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 	console.error(" - Pipe areas: " + pipeAreas.length + " (" + pipeAreas.join(", ") + ")");
 	console.error(" - Funnel areas: " + funnelAreas.length + " (" + funnelAreas.join(", ") + ")");
 	
+	// Extract all segments (pipes and funnels)
+	const testSegments = [...pipeAreas, ...funnelAreas];
+	console.error(" - Processing " + testSegments.length + " segments total");
+	
 	// Extract all segments first
 	const extractedSegments = [];
 	
-	[...pipeAreas, ...funnelAreas].forEach(areaName => {
+	testSegments.forEach(areaName => {
 		console.error(" - Extracting segment: " + areaName);
 		const segment = extractSegment(map, areaName);
 		if (segment) {
@@ -780,9 +808,14 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 	// Insert segments at random locations
 	extractedSegments.forEach(segment => {
 		console.error(" - Attempting to insert segment: " + segment.areaName);
-		const success = insertSegment(map, segment, referenceWalk);
-		if (!success) {
-			console.error("   ✗ Failed to insert " + segment.areaName);
+		try {
+			const success = insertSegment(map, segment, referenceWalk);
+			if (!success) {
+				console.error("   ✗ Failed to insert " + segment.areaName);
+			}
+		} catch (error) {
+			console.error("   ✗ Exception during insertion of " + segment.areaName + ": " + error.message);
+			console.error("   Stack: " + error.stack);
 		}
 	});
 	
@@ -828,10 +861,9 @@ function shuffle(params) {
 
 				// Task #NEW: Pipe/Funnel segment extraction and insertion
 				// This replaces the swap-based archetype randomization
-				// TEMPORARILY DISABLED FOR DEBUGGING
-				console.error(new Date().toISOString() + "  SKIPPING segment extraction-insertion (disabled for testing)");
+				console.error(new Date().toISOString() + "  Starting segment extraction-insertion randomization");
 				
-				// performSegmentExtractionInsertion(generated, lastValidMap.walk);
+				performSegmentExtractionInsertion(generated, lastValidMap.walk);
 			}
 
 			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
