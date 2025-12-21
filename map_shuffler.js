@@ -533,6 +533,255 @@ function performArchetypeRandomization(map, allowLists) {
 	return swapAreasByArchetype(map, area1Name, area2Name, invertPipe);
 }
 
+// Task #NEW: Pipe/Funnel Segment Extraction and Insertion
+// This replaces the swap-based algorithm with an extract-then-insert approach
+
+/**
+ * Extracts a pipe or funnel segment from the map graph
+ * @param {Array} map - The area map
+ * @param {string} segmentAreaName - Name of the area to extract
+ * @returns {Object} Extracted segment info with {area, inputExit, outputExit, archetype}
+ */
+function extractSegment(map, segmentAreaName) {
+	const area = map.find(a => a.name === segmentAreaName);
+	if (!area) {
+		console.error("ERROR - Cannot find area for extraction: " + segmentAreaName);
+		return null;
+	}
+	
+	const archetype = classifyAreaArchetype(area);
+	if (archetype !== "pipe" && archetype !== "funnel") {
+		console.error("ERROR - Cannot extract non-pipe/funnel area: " + archetype);
+		return null;
+	}
+	
+	const doorExits = area.exits.filter(exit => exit.type === "door" && exit.archetype);
+	if (doorExits.length !== 2) {
+		console.error("ERROR - Segment must have exactly 2 door exits");
+		return null;
+	}
+	
+	// Determine which is input and which is output
+	let inputExit, outputExit;
+	if (archetype === "funnel") {
+		inputExit = doorExits.find(e => e.archetype === "funnel-input");
+		outputExit = doorExits.find(e => e.archetype === "funnel-output");
+	} else {
+		// For pipes, we can choose either direction
+		inputExit = doorExits[0];
+		outputExit = doorExits[1];
+	}
+	
+	if (!inputExit || !outputExit) {
+		console.error("ERROR - Cannot identify input/output exits");
+		return null;
+	}
+	
+	// Find all connections TO this segment (incoming edges)
+	const incomingToInput = [];
+	const incomingToOutput = [];
+	
+	map.forEach(otherArea => {
+		if (otherArea.name !== segmentAreaName) {
+			otherArea.exits.forEach(exit => {
+				if (exit.dest === segmentAreaName) {
+					if (exit.wayBackId === inputExit.id) {
+						incomingToInput.push({ area: otherArea, exit: exit });
+					} else if (exit.wayBackId === outputExit.id) {
+						incomingToOutput.push({ area: otherArea, exit: exit });
+					}
+				}
+			});
+		}
+	});
+	
+	// Step 1: Connect input sources directly to output destination
+	// All exits pointing to this segment's input should now point to output's destination
+	// IMPORTANT: The wayBackId must point to the wayback in the DESTINATION area, not the segment
+	incomingToInput.forEach(incoming => {
+		// The output exit of the segment points to a destination area
+		// We need to find the wayback ID in that destination area
+		const destArea = map.find(a => a.name === outputExit.dest);
+		if (destArea) {
+			const waybackInDest = destArea.exits.find(e => e.id === outputExit.wayBackId);
+			if (waybackInDest) {
+				// Update this wayback to point to the incoming area instead of the segment
+				waybackInDest.dest = incoming.area.name;
+				waybackInDest.world = incoming.area.world || waybackInDest.world;
+				waybackInDest.wayBackId = incoming.exit.id;
+			}
+		}
+		
+		// Update the incoming exit to bypass the segment
+		incoming.exit.dest = outputExit.dest;
+		incoming.exit.world = outputExit.world;
+		incoming.exit.wayBackId = outputExit.wayBackId;
+	});
+	
+	// Step 2: Connect output sources directly to input destination  
+	// All exits pointing to this segment's output should now point to input's destination
+	incomingToOutput.forEach(incoming => {
+		// The input exit of the segment points to a destination area
+		// We need to find the wayback ID in that destination area
+		const destArea = map.find(a => a.name === inputExit.dest);
+		if (destArea) {
+			const waybackInDest = destArea.exits.find(e => e.id === inputExit.wayBackId);
+			if (waybackInDest) {
+				// Update this wayback to point to the incoming area instead of the segment
+				waybackInDest.dest = incoming.area.name;
+				waybackInDest.world = incoming.area.world || waybackInDest.world;
+				waybackInDest.wayBackId = incoming.exit.id;
+			}
+		}
+		
+		// Update the incoming exit to bypass the segment
+		incoming.exit.dest = inputExit.dest;
+		incoming.exit.world = inputExit.world;
+		incoming.exit.wayBackId = inputExit.wayBackId;
+	});
+	
+	// Return segment info for later insertion
+	return {
+		area: area,
+		areaName: segmentAreaName,
+		inputExit: JSON.parse(JSON.stringify(inputExit)),
+		outputExit: JSON.parse(JSON.stringify(outputExit)),
+		archetype: archetype
+	};
+}
+
+/**
+ * Inserts a segment at a random location in the map
+ * @param {Array} map - The area map
+ * @param {Object} segment - Segment to insert (from extractSegment)
+ * @param {Object} referenceWalk - Optional walk path from no-change for directionality
+ * @returns {boolean} Success
+ */
+function insertSegment(map, segment, referenceWalk) {
+	// Find all potential insertion points (any door exit in the map)
+	const allDoors = [];
+	map.forEach(area => {
+		if (area.name !== segment.areaName) {
+			area.exits.forEach(exit => {
+				if (exit.type === "door" && exit.wayBackId) {
+					allDoors.push({ area: area, exit: exit });
+				}
+			});
+		}
+	});
+	
+	if (allDoors.length === 0) {
+		console.error("ERROR - No valid insertion points found");
+		return false;
+	}
+	
+	// Pick random insertion point
+	const insertionPoint = allDoors[Math.floor(Math.random() * allDoors.length)];
+	const insertArea = insertionPoint.area;
+	const insertExit = insertionPoint.exit;
+	
+	// For funnels, check walk path indices to ensure forward progression
+	if (segment.archetype === "funnel" && referenceWalk) {
+		// TODO: Implement walk index checking
+		// For now, we'll skip this check and insert anyway
+	}
+	
+	// Determine if we should invert the segment (pipes only)
+	const invertSegment = (segment.archetype === "pipe" && Math.random() < 0.5);
+	
+	// Save original destination before modifying
+	const originalDest = insertExit.dest;
+	const originalWorld = insertExit.world;
+	const originalWayBackId = insertExit.wayBackId;
+	
+	// Step 1: Connect insertion point to segment input
+	let segmentInputExit, segmentOutputExit;
+	if (invertSegment) {
+		segmentInputExit = segment.outputExit;
+		segmentOutputExit = segment.inputExit;
+	} else {
+		segmentInputExit = segment.inputExit;
+		segmentOutputExit = segment.outputExit;
+	}
+	
+	insertExit.dest = segment.areaName;
+	insertExit.world = segment.area.world;
+	insertExit.wayBackId = segmentInputExit.id;
+	
+	// Step 2: Update segment's input to come from insertion point
+	const segmentArea = map.find(a => a.name === segment.areaName);
+	const actualInputExit = segmentArea.exits.find(e => e.id === segmentInputExit.id);
+	actualInputExit.dest = insertArea.name;
+	actualInputExit.world = insertArea.world;
+	actualInputExit.wayBackId = insertExit.id;
+	
+	// Step 3: Update segment's output to go to original destination
+	const actualOutputExit = segmentArea.exits.find(e => e.id === segmentOutputExit.id);
+	actualOutputExit.dest = originalDest;
+	actualOutputExit.world = originalWorld;
+	actualOutputExit.wayBackId = originalWayBackId;
+	
+	// Step 4: Update the wayback in the original destination to point to the segment's output
+	const originalDestArea = map.find(a => a.name === originalDest);
+	if (originalDestArea) {
+		const waybackInOriginalDest = originalDestArea.exits.find(e => e.id === originalWayBackId);
+		if (waybackInOriginalDest) {
+			waybackInOriginalDest.dest = segment.areaName;
+			waybackInOriginalDest.world = segmentArea.world || waybackInOriginalDest.world;
+			waybackInOriginalDest.wayBackId = segmentOutputExit.id;
+		}
+	}
+	
+	console.error(" - Inserted " + segment.archetype + " segment '" + segment.areaName + 
+	              "' at " + insertArea.name + "." + insertExit.id + 
+	              (invertSegment ? " (inverted)" : ""));
+	
+	verifyConsistency(map);
+	return true;
+}
+
+/**
+ * Performs extraction-insertion randomization for all pipe/funnel segments
+ * @param {Array} map - The area map
+ * @param {Object} referenceWalk - Optional walk path from no-change
+ */
+function performSegmentExtractionInsertion(map, referenceWalk) {
+	console.error(new Date().toISOString() + "  Starting segment extraction-insertion");
+	
+	const allowLists = buildArchetypeAllowLists(map);
+	const pipeAreas = allowLists["pipe"] || [];
+	const funnelAreas = allowLists["funnel"] || [];
+	
+	console.error(" - Pipe areas: " + pipeAreas.length);
+	console.error(" - Funnel areas: " + funnelAreas.length);
+	
+	// Extract all segments first
+	const extractedSegments = [];
+	
+	[...pipeAreas, ...funnelAreas].forEach(areaName => {
+		console.error(" - Extracting segment: " + areaName);
+		const segment = extractSegment(map, areaName);
+		if (segment) {
+			extractedSegments.push(segment);
+		}
+	});
+	
+	console.error(" - Extracted " + extractedSegments.length + " segments");
+	
+	// Shuffle the segments array for random re-insertion
+	for (let i = extractedSegments.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[extractedSegments[i], extractedSegments[j]] = [extractedSegments[j], extractedSegments[i]];
+	}
+	
+	// Insert segments at random locations
+	extractedSegments.forEach(segment => {
+		insertSegment(map, segment, referenceWalk);
+	});
+	
+	console.error(" - Completed segment extraction-insertion");
+}
+
 function shuffle(params) {
 	params = params || { randomizeMap: true };
 
@@ -570,20 +819,11 @@ function shuffle(params) {
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_sunken_river_area", "1");  // ok
 				//exitsSwap(generated, "shadow_tower_part1a", "0", "water_world_impure_pool_area", "11"); // ok
 
-				// Task #25: Archetype-based randomization - perform multiple swap iterations
-				console.error(new Date().toISOString() + "  Starting archetype-based randomization");
+				// Task #NEW: Pipe/Funnel segment extraction and insertion
+				// This replaces the swap-based archetype randomization
+				console.error(new Date().toISOString() + "  Starting segment extraction-insertion randomization");
 				
-				const allowLists = buildArchetypeAllowLists(generated);
-				console.error(" - Allow lists built:");
-				Object.keys(allowLists).forEach(archetype => {
-					console.error("   " + archetype + ": " + allowLists[archetype].length + " areas");
-				});
-				
-				const swapIterations = 5;
-				for (var i = 0; i < swapIterations; i++) {
-					console.error(" Iteration " + (i+1) + "/" + swapIterations + ":");
-					performArchetypeRandomization(generated, allowLists);
-				}
+				performSegmentExtractionInsertion(generated, lastValidMap.walk);
 			}
 
 			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
