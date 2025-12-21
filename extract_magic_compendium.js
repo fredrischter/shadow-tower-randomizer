@@ -67,6 +67,7 @@ console.log(`Found FDAT.T_PARTS at: ${fdatPartsDir}\n`);
 console.log('Scanning parts 482-808 for candidate projectile arrays...\n');
 
 const candidates = [];
+const MAX_CANDIDATES = 50; // Limit to top 50 candidates to avoid memory issues
 
 for (let partNum = 482; partNum <= 808; partNum++) {
   const files = fs.readdirSync(fdatPartsDir);
@@ -77,15 +78,33 @@ for (let partNum = 482; partNum <= 808; partNum++) {
   const partPath = path.join(fdatPartsDir, partFile);
   const partData = fs.readFileSync(partPath);
   
+  if (partNum % 50 === 0) {
+    console.log(`Scanning part ${partNum}... (${candidates.length} candidates found so far)`);
+  }
+  
   // Test different entry sizes
   for (const entrySize of entrySizes) {
     const maxIndex = 256; // Arrays go from 0x00 to 0xFF
     const arraySize = maxIndex * entrySize;
     
-    // Test different starting offsets (aligned to 16 bytes)
-    for (let offset = 0; offset < partData.length - arraySize; offset += 16) {
+    // Only test well-aligned offsets (256-byte alignment is common for data arrays)
+    // This dramatically reduces search space
+    for (let offset = 0; offset < partData.length - arraySize; offset += 256) {
       
-      // Extract entries for all magic IDs
+      // Quick validation: check if first few entries look reasonable
+      let quickValid = 0;
+      for (let testId of [0x30, 0x31, 0x32, 0x33, 0x34]) {
+        const testOffset = offset + (testId * entrySize);
+        if (testOffset + entrySize <= partData.length) {
+          const testEntry = partData.slice(testOffset, testOffset + entrySize);
+          if (testEntry.some(b => b !== 0)) quickValid++;
+        }
+      }
+      
+      // Skip if quick test fails
+      if (quickValid < 3) continue;
+      
+      // Full validation: extract entries for all magic IDs
       const entries = [];
       let validCount = 0;
       let damageCount = 0;
@@ -119,7 +138,6 @@ for (let partNum = 482; partNum <= 808; partNum++) {
       
       // Validate candidate
       const validRatio = validCount / validMagicIds.length;
-      const damageRatio = damageCount / validMagicIds.length;
       
       if (validRatio >= 0.3 && damageCount >= 20) {
         const score = validCount + (damageCount * 0.5);
@@ -133,6 +151,12 @@ for (let partNum = 482; partNum <= 808; partNum++) {
           score,
           entries
         });
+        
+        // Keep only top candidates to avoid memory issues
+        if (candidates.length > MAX_CANDIDATES * 2) {
+          candidates.sort((a, b) => b.score - a.score);
+          candidates.length = MAX_CANDIDATES;
+        }
       }
     }
   }
