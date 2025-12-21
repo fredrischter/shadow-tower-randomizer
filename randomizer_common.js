@@ -567,9 +567,11 @@ class TFormatPart {
     }
 
     // write sized mix parts
-    /*if (this.sizedMixParts) {
+    if (this.sizedMixParts) {
       var sizedPartsDir = this.fileName + "_SIZED_MIX_PARTS";
-      fs.mkdirSync(sizedPartsDir);
+      if (!fs.existsSync(sizedPartsDir)) {
+        fs.mkdirSync(sizedPartsDir);
+      }
       var cursor = 0x04;
       for (var i = 0 ; i < this.sizedMixParts.length ; i++) {
         var newCursor = cursor + this.sizedMixParts[i].length;
@@ -577,7 +579,7 @@ class TFormatPart {
         cursor = newCursor;
         fs.writeFileSync(fileName, Buffer.from(this.sizedMixParts[i]));
       }
-    }*/
+    }
   }
 
   reload(offset) {
@@ -718,7 +720,9 @@ class TFormat {
 
     } else {
       //fs.rmdirSync(this.partsFolderName, { recursive: true, force: true });
-      fs.mkdirSync(this.partsFolderName);
+      if (!fs.existsSync(this.partsFolderName)) {
+        fs.mkdirSync(this.partsFolderName);
+      }
       for (var i = 0 ; i < this.files.length ; i++) {
         this.files[i].write();
       }
