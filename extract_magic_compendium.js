@@ -3,15 +3,19 @@
 /**
  * Magic Data Compendium Extractor
  * 
- * Extracts ALL data for ALL 117 valid magic IDs from FDAT.T parts 482-808
- * and creates a comprehensive markdown file showing all attributes for each
- * magic entry so user can identify which fields are damage/power values.
+ * Extracts projectile/spell data from FDAT.T parts 482-808 using array index approach.
+ * Magic IDs (0x30-0xFF) are treated as array indices, not byte values to search for.
+ * 
+ * Usage:
+ *   1. npm run mod "./generated/st.bin" "./params/no-change.json"
+ *   2. node extract_magic_compendium.js
+ *   3. Review MAGIC_DATA_COMPENDIUM.md
  */
 
 const fs = require('fs');
 const path = require('path');
 
-// All 117 valid magic IDs from magic.txt
+// All 117 valid magic IDs from magic.txt (as array indices)
 const validMagicIds = [
   0x30, 0x31, 0x32, 0x33, 0x34, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c,
   0x3e, 0x40, 0x41, 0x43, 0x44, 0x45, 0x47, 0x4a, 0x4b, 0x4c, 0x4d, 0x4e,
@@ -25,212 +29,223 @@ const validMagicIds = [
   0xeb, 0xee, 0xf0, 0xf2, 0xf3, 0xf4, 0xf5, 0xf6, 0xff
 ];
 
-// Magic names from magic.txt (known names)
+// Magic names from magic.txt (for documentation)
 const magicNames = {
   0x31: 'acid_slime',
-  0x30: 'unknown_0x30',
-  0x32: 'unknown_0x32',
-  // Add more as we discover them
+  // Add more as needed for documentation
 };
 
-function getMagicName(id) {
-  return magicNames[id] || `magic_0x${id.toString(16).toUpperCase()}`;
-}
+// Entry sizes to test
+const entrySizes = [16, 20, 24, 28, 32, 40, 48, 56, 64];
 
-function findFDATPartsDir() {
-  const possiblePaths = [
-    'generated/no-change/extracted/ST/COM/FDAT.T_PARTS',
-    'generated/randomized-medium/extracted/ST/COM/FDAT.T_PARTS',
-    'generated/bonanza/extracted/ST/COM/FDAT.T_PARTS',
-  ];
-  
-  for (const p of possiblePaths) {
-    if (fs.existsSync(p)) {
-      return p;
-    }
+console.log('Magic Data Compendium Extractor');
+console.log('================================\n');
+
+// Find FDAT.T_PARTS directory
+const searchPaths = [
+  'generated/no-change/extracted/ST/COM/FDAT.T_PARTS',
+  'generated/randomized-medium/extracted/ST/COM/FDAT.T_PARTS',
+];
+
+let fdatPartsDir = null;
+for (const searchPath of searchPaths) {
+  if (fs.existsSync(searchPath)) {
+    fdatPartsDir = searchPath;
+    break;
   }
-  
-  throw new Error('FDAT.T_PARTS not found. Run: npm run mod "./generated/st.bin" "./params/no-change.json"');
 }
 
-function extractMagicData() {
-  const partsDir = findFDATPartsDir();
-  console.log(`Found FDAT.T_PARTS at: ${partsDir}\n`);
+if (!fdatPartsDir) {
+  console.error('ERROR: Could not find FDAT.T_PARTS directory');
+  console.error('Please run: npm run mod "./generated/st.bin" "./params/no-change.json"');
+  process.exit(1);
+}
+
+console.log(`Found FDAT.T_PARTS at: ${fdatPartsDir}\n`);
+
+// Scan for candidate arrays
+console.log('Scanning parts 482-808 for candidate projectile arrays...\n');
+
+const candidates = [];
+
+for (let partNum = 482; partNum <= 808; partNum++) {
+  const files = fs.readdirSync(fdatPartsDir);
+  const partFile = files.find(f => f.startsWith(`${partNum} `));
   
-  const allMagicEntries = [];
-  let totalOccurrences = 0;
+  if (!partFile) continue;
   
-  // Scan parts 482-808
-  for (let partNum = 482; partNum <= 808; partNum++) {
-    const partFiles = fs.readdirSync(partsDir).filter(f => {
-      const match = f.match(/^(\d+)\s/);
-      return match && parseInt(match[1]) === partNum;
-    });
+  const partPath = path.join(fdatPartsDir, partFile);
+  const partData = fs.readFileSync(partPath);
+  
+  // Test different entry sizes
+  for (const entrySize of entrySizes) {
+    const maxIndex = 256; // Arrays go from 0x00 to 0xFF
+    const arraySize = maxIndex * entrySize;
     
-    if (partFiles.length === 0) continue;
-    
-    const partFile = path.join(partsDir, partFiles[0]);
-    const data = fs.readFileSync(partFile);
-    
-    // Scan for magic IDs
-    for (let offset = 0; offset < data.length - 19; offset++) {
-      const byte = data[offset];
+    // Test different starting offsets (aligned to 16 bytes)
+    for (let offset = 0; offset < partData.length - arraySize; offset += 16) {
       
-      if (validMagicIds.includes(byte)) {
-        // Found a magic ID - extract 20 bytes starting from this position
-        const entry = {
-          magicId: byte,
-          magicName: getMagicName(byte),
-          part: partNum,
-          offset: offset,
-          bytes: []
-        };
+      // Extract entries for all magic IDs
+      const entries = [];
+      let validCount = 0;
+      let damageCount = 0;
+      
+      for (const magicId of validMagicIds) {
+        const entryOffset = offset + (magicId * entrySize);
         
-        // Extract all 20 bytes
-        for (let i = 0; i < 20 && offset + i < data.length; i++) {
-          entry.bytes.push(data[offset + i]);
-        }
+        if (entryOffset + entrySize > partData.length) break;
         
-        allMagicEntries.push(entry);
-        totalOccurrences++;
-      }
-    }
-  }
-  
-  console.log(`Found ${totalOccurrences} magic ID occurrences\n`);
-  return allMagicEntries;
-}
-
-function formatByteAsHex(byte) {
-  return byte.toString(16).toUpperCase().padStart(2, '0');
-}
-
-function formatByteAsDecimal(byte) {
-  return byte.toString().padStart(3, ' ');
-}
-
-function get16BitValue(bytes, offset) {
-  if (offset + 1 >= bytes.length) return null;
-  return bytes[offset] | (bytes[offset + 1] << 8);
-}
-
-function generateMarkdownCompendium(entries) {
-  let md = '# Magic Data Compendium - FDAT.T Analysis\n\n';
-  md += 'Comprehensive extraction of all magic/projectile data from FDAT.T parts 482-808.\n\n';
-  md += `**Total magic ID occurrences found:** ${entries.length}\n\n`;
-  md += '---\n\n';
-  
-  // Group by magic ID
-  const groupedByID = {};
-  for (const entry of entries) {
-    if (!groupedByID[entry.magicId]) {
-      groupedByID[entry.magicId] = [];
-    }
-    groupedByID[entry.magicId].push(entry);
-  }
-  
-  // Sort by magic ID
-  const sortedIds = Object.keys(groupedByID).map(k => parseInt(k)).sort((a, b) => a - b);
-  
-  md += '## Table of Contents\n\n';
-  for (const id of sortedIds) {
-    md += `- [0x${id.toString(16).toUpperCase()} - ${getMagicName(id)}](#0x${id.toString(16)})\n`;
-  }
-  md += '\n---\n\n';
-  
-  // Detailed entries for each magic ID
-  for (const id of sortedIds) {
-    const entries = groupedByID[id];
-    md += `## 0x${id.toString(16).toUpperCase()} - ${getMagicName(id)}\n\n`;
-    md += `**Occurrences found:** ${entries.length}\n\n`;
-    
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
-      md += `### Occurrence ${i + 1} (Part ${entry.part}, Offset 0x${entry.offset.toString(16).toUpperCase()})\n\n`;
-      
-      // Show all 20 bytes in different formats
-      md += '**Raw Bytes (Hex):**\n```\n';
-      for (let j = 0; j < entry.bytes.length; j++) {
-        md += formatByteAsHex(entry.bytes[j]) + ' ';
-        if ((j + 1) % 10 === 0) md += '\n';
-      }
-      md += '\n```\n\n';
-      
-      md += '**Byte-by-Byte Breakdown:**\n\n';
-      md += '| Offset | Hex | Dec | Interpretation |\n';
-      md += '|--------|-----|-----|----------------|\n';
-      md += `| +0 | 0x${formatByteAsHex(entry.bytes[0])} | ${formatByteAsDecimal(entry.bytes[0])} | **Magic ID** |\n`;
-      md += `| +1 | 0x${formatByteAsHex(entry.bytes[1])} | ${formatByteAsDecimal(entry.bytes[1])} | **Type/Flags** |\n`;
-      
-      for (let j = 2; j < entry.bytes.length; j++) {
-        const byte = entry.bytes[j];
-        let interpretation = 'Unknown attribute';
+        const entry = partData.slice(entryOffset, entryOffset + entrySize);
         
-        // Highlight potential damage values (typical range 10-500)
-        if (byte >= 10 && byte <= 255) {
-          interpretation = `Potential damage/stat value (${byte})`;
-        } else if (byte === 0) {
-          interpretation = 'Zero (unused or coordinate)';
-        } else if (byte === 0xff) {
-          interpretation = 'FF (null/max marker)';
-        }
+        // Check if entry has data (not all zeros)
+        const hasData = entry.some(b => b !== 0);
+        if (hasData) validCount++;
         
-        md += `| +${j} | 0x${formatByteAsHex(byte)} | ${formatByteAsDecimal(byte)} | ${interpretation} |\n`;
-      }
-      md += '\n';
-      
-      // Show 16-bit interpretations
-      md += '**16-bit Value Interpretations:**\n\n';
-      md += '| Offset | Value (16-bit LE) | Dec | Notes |\n';
-      md += '|--------|-------------------|-----|-------|\n';
-      
-      for (let j = 2; j < entry.bytes.length - 1; j += 2) {
-        const val = get16BitValue(entry.bytes, j);
-        if (val !== null) {
-          let notes = '';
-          if (val >= 10 && val <= 1000) {
-            notes = '**Potential damage value**';
-          } else if (val === 0) {
-            notes = 'Zero';
-          } else if (val > 1000 && val < 10000) {
-            notes = 'Potential coordinate/large value';
+        // Check for damage-like values
+        for (let i = 0; i < entry.length; i++) {
+          const byte = entry[i];
+          if (byte >= 10 && byte <= 255) {
+            damageCount++;
+            break;
           }
-          md += `| +${j} | 0x${val.toString(16).toUpperCase().padStart(4, '0')} | ${val} | ${notes} |\n`;
         }
+        
+        entries.push({
+          magicId,
+          offset: entryOffset,
+          data: entry
+        });
       }
-      md += '\n';
       
-      if (i < entries.length - 1) {
-        md += '---\n\n';
+      // Validate candidate
+      const validRatio = validCount / validMagicIds.length;
+      const damageRatio = damageCount / validMagicIds.length;
+      
+      if (validRatio >= 0.3 && damageCount >= 20) {
+        const score = validCount + (damageCount * 0.5);
+        
+        candidates.push({
+          part: partNum,
+          offset,
+          entrySize,
+          validCount,
+          damageCount,
+          score,
+          entries
+        });
       }
     }
-    
-    md += '\n';
   }
+}
+
+console.log(`Found ${candidates.length} candidate arrays\n`);
+
+if (candidates.length === 0) {
+  console.error('No candidate arrays found. The data structure may be different than expected.');
+  process.exit(1);
+}
+
+// Sort by score (highest first)
+candidates.sort((a, b) => b.score - a.score);
+
+// Generate markdown compendium
+let markdown = '# Magic Projectile Data Compendium\n\n';
+markdown += 'Generated from FDAT.T parts 482-808\n';
+markdown += 'Treating magic IDs as array indices\n\n';
+
+markdown += `## Summary\n\n`;
+markdown += `Found ${candidates.length} candidate arrays\n`;
+markdown += `Candidates ranked by confidence score (higher = better)\n\n`;
+
+markdown += '| Rank | Part | Offset | Size | Valid | Damage | Score |\n';
+markdown += '|------|------|--------|------|-------|--------|-------|\n';
+
+candidates.slice(0, 10).forEach((cand, idx) => {
+  markdown += `| ${idx + 1} | ${cand.part} | 0x${cand.offset.toString(16).toUpperCase()} | ${cand.entrySize} | ${cand.validCount} | ${cand.damageCount} | ${Math.floor(cand.score)} |\n`;
+});
+
+markdown += '\n---\n\n';
+
+// Document top 5 candidates in detail
+const topCandidates = candidates.slice(0, 5);
+
+topCandidates.forEach((candidate, candIdx) => {
+  markdown += `## Candidate ${candIdx + 1}`;
+  if (candIdx === 0) markdown += ' ⭐ HIGHEST CONFIDENCE';
+  markdown += '\n\n';
   
-  return md;
-}
+  markdown += `**Part:** ${candidate.part}\n`;
+  markdown += `**Offset:** 0x${candidate.offset.toString(16).toUpperCase()}\n`;
+  markdown += `**Entry Size:** ${candidate.entrySize} bytes\n`;
+  markdown += `**Valid Entries:** ${candidate.validCount}/${validMagicIds.length} (${Math.floor(candidate.validCount / validMagicIds.length * 100)}%)\n`;
+  markdown += `**Damage Candidates:** ${candidate.damageCount}/${validMagicIds.length} (${Math.floor(candidate.damageCount / validMagicIds.length * 100)}%)\n`;
+  markdown += `**Confidence Score:** ${Math.floor(candidate.score)}\n\n`;
+  
+  markdown += '### Entries for All 117 Magic IDs\n\n';
+  
+  // Show entries for all magic IDs
+  candidate.entries.forEach((entry, idx) => {
+    const magicId = entry.magicId;
+    const magicName = magicNames[magicId] || '';
+    
+    markdown += `#### Index 0x${magicId.toString(16).toUpperCase()} (${magicId})`;
+    if (magicName) markdown += ` - ${magicName}`;
+    if (magicId === 0x31) markdown += ' ⭐'; // Highlight acid slime
+    markdown += '\n\n';
+    
+    markdown += `**Calculated Offset:** 0x${candidate.offset.toString(16).toUpperCase()} + (${magicId} × ${candidate.entrySize}) = 0x${entry.offset.toString(16).toUpperCase()}\n\n`;
+    
+    // Raw bytes
+    markdown += '**Raw Bytes (Hex):**\n```\n';
+    const hexBytes = [];
+    for (let i = 0; i < entry.data.length; i++) {
+      hexBytes.push(entry.data[i].toString(16).toUpperCase().padStart(2, '0'));
+    }
+    markdown += hexBytes.join(' ') + '\n```\n\n';
+    
+    // Byte-by-byte breakdown
+    markdown += '| Offset | Hex | Dec | 16-bit LE | Notes |\n';
+    markdown += '|--------|-----|-----|-----------|-------|\n';
+    
+    for (let i = 0; i < entry.data.length; i++) {
+      const byte = entry.data[i];
+      const hex = '0x' + byte.toString(16).toUpperCase().padStart(2, '0');
+      const dec = byte;
+      
+      let val16 = '';
+      let notes = '';
+      
+      if (i + 1 < entry.data.length) {
+        const val = entry.data[i] | (entry.data[i + 1] << 8);
+        val16 = val;
+      }
+      
+      if (i === 0) notes = 'Magic ID';
+      else if (i === 1) notes = 'Type/flags';
+      else if (byte >= 10 && byte <= 255) notes = '**Potential damage/stat**';
+      
+      markdown += `| +${i} | ${hex} | ${dec} | ${val16} | ${notes} |\n`;
+    }
+    
+    markdown += '\n';
+    
+    // Only show first 10 entries in detail, then summarize
+    if (idx === 9 && candidate.entries.length > 10) {
+      markdown += `... and ${candidate.entries.length - 10} more entries\n\n`;
+      markdown += '(Full data available, showing first 10 for brevity)\n\n';
+      return;
+    }
+  });
+  
+  markdown += '---\n\n';
+});
 
-function main() {
-  try {
-    console.log('Extracting magic data from FDAT.T parts 482-808...\n');
-    
-    const entries = extractMagicData();
-    
-    console.log('Generating markdown compendium...\n');
-    const markdown = generateMarkdownCompendium(entries);
-    
-    const outputFile = 'MAGIC_DATA_COMPENDIUM.md';
-    fs.writeFileSync(outputFile, markdown);
-    
-    console.log(`✓ Created ${outputFile}`);
-    console.log(`✓ Found data for ${Object.keys(entries.reduce((acc, e) => { acc[e.magicId] = true; return acc; }, {})).length} unique magic IDs`);
-    console.log(`✓ Total occurrences: ${entries.length}`);
-    console.log('\nReview the compendium file to identify which byte offsets contain damage/power values.');
-  } catch (error) {
-    console.error('Error:', error.message);
-    process.exit(1);
-  }
-}
+// Write compendium
+const outputPath = 'MAGIC_DATA_COMPENDIUM.md';
+fs.writeFileSync(outputPath, markdown);
 
-main();
+console.log(`✅ Generated: ${outputPath}`);
+console.log(`\nTop candidate: Part ${candidates[0].part}, Offset 0x${candidates[0].offset.toString(16).toUpperCase()}, Entry Size ${candidates[0].entrySize} bytes`);
+console.log(`Confidence Score: ${Math.floor(candidates[0].score)}`);
+console.log(`\nReview the compendium to identify which candidate has sensible magic damage values.`);
+console.log(`Check if acid slime (0x31) has low damage and boss magics have high damage.\n`);
