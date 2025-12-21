@@ -80,7 +80,7 @@
         /* Fixed Layout Chart Styles */
         #fixed-layout-container {
             width: 100%;
-            height: 1000px;
+            height: 1100px;
             border: 2px solid #8b4513;
             border-radius: 10px;
             background: #2a2a2a;
@@ -192,7 +192,7 @@ graph TD
   earth_world_rotting_cavern["Earth World Rotting Cavern"] -->|"Entrance r1 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
   earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Poison r0 y0"| earth_world_stone_cavern["Earth World Stone Cavern"]
   earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Rock guy r2 y0"| earth_world_quaking_cavern["Earth World Quaking Cavern"]
-  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Entrance r0 y-8"| shadow_tower_part1c["Shadow Tower Part1 C"]
+  earth_world_poisonous_cavern["Earth World Poisonous Cavern"] -->|"Entrance r0 y0"| shadow_tower_part1c["Shadow Tower Part1 C"]
   earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Entrance r0 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
   earth_world_stone_cavern["Earth World Stone Cavern"] -->|"Exit r3 y0"| earth_world_false_pit_cavern["Earth World False Pit Cavern"]
   earth_world_quaking_cavern["Earth World Quaking Cavern"] -->|"Entrance r2 y0"| earth_world_poisonous_cavern["Earth World Poisonous Cavern"]
@@ -238,14 +238,14 @@ graph TD
   illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Entrance r2 y-8"| shadow_tower_part3a["Shadow Tower Part3 A"]
   illusion_world_gloomy_domain["Illusion World Gloomy Domain"] -->|"Totem r0 y3"| water_world_white_rain_area["Water World White Rain Area"]
   death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Prison r1 y0"| death_world_undead_layer["Death World Undead Layer"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Entrance r2 y-8"| shadow_tower_part3b["Shadow Tower Part3 B"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Lower totem r2 y2"| monster_world_screeching_area["Monster World Screeching Area"]
-  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 1 r1 y3"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Entrance r2 y0"| shadow_tower_part3b["Shadow Tower Part3 B"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Lower totem r2 y0"| monster_world_screeching_area["Monster World Screeching Area"]
+  death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 1 r1 y0"| death_world_lingering_curse_layer["Death World Lingering Curse Layer"]
   death_world_dark_castle_layer["Death World Dark Castle Layer"] -->|"Upper totem 2 r1 y0"| death_world_gate_of_the_dead["Death World Gate Of The Dead"]
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Exit r1 y0"| water_world_white_rain_area["Water World White Rain Area"]
   water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"] -->|"Entrance r3 y0"| water_world_sunken_river_area["Water World Sunken River Area"]
   water_world_white_rain_area["Water World White Rain Area"] -->|"Entrance r3 y0"| water_world_watery_labyrinth_area["Water World Watery Labyrinth Area"]
-  water_world_white_rain_area["Water World White Rain Area"] -->|"Totem r0 y3"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
+  water_world_white_rain_area["Water World White Rain Area"] -->|"Totem r0 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
   illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Exit r1 y0"| illusion_world_worship_domain["Illusion World Worship Domain"]
   illusion_world_bewilderment_domain["Illusion World Bewilderment Domain"] -->|"Entrance r1 y0"| illusion_world_gloomy_domain["Illusion World Gloomy Domain"]
   death_world_lingering_curse_layer["Death World Lingering Curse Layer"] -->|"Door r3 y-8"| shadow_tower_part3c["Shadow Tower Part3 C"]
@@ -647,9 +647,9 @@ graph TD
 <br><span style="background:#ff8080">31&nbsp;04_auriel_b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x70&nbsp;score&nbsp;421</span>
 <br><span style="background:#ff8080">32&nbsp;0b_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;NaN</span>
 <br><span style="background:#ff8080">33&nbsp;0a_blank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;39</span>
-<br><span style="background:#808080">10&nbsp;exit-door&nbsp;&nbsp;Rock&nbsp;guy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_quaking_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
-<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Poison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_stone_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
-<br><span style="background:#808080">17&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;4&nbsp;&nbsp;,9&nbsp;&nbsp;,4)</span>
+<br><span style="background:#808080">10&nbsp;exit-door&nbsp;&nbsp;Rock&nbsp;guy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">13&nbsp;exit-door&nbsp;&nbsp;Poison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">17&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
 <br><span style="background:#30f030">0&nbsp;item_10c_torch</span>
 <br><span style="background:#30f030">1&nbsp;item_11c_healing_potion</span>
 <br><span style="background:#30f030">2&nbsp;item_a5_shield_of_resist</span>
@@ -716,8 +716,8 @@ graph TD
 <br><span style="background:#ff8080">30&nbsp;00_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x50&nbsp;score&nbsp;237</span>
 <br><span style="background:#ff8080">31&nbsp;04_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x0&nbsp;score&nbsp;237</span>
 <br><span style="background:#ff8080">32&nbsp;04_dybbuk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x0&nbsp;score&nbsp;237</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_poisonous_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;10&nbsp;&nbsp;,1&nbsp;,10)</span>
-<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;earth_world_false_pit_cavern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-3&nbsp;&nbsp;,0&nbsp;,-3)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">&nbsp;7&nbsp;exit-door&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
 <br><span style="background:#30f030">0&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">1&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">2&nbsp;item_130_blue_crystal</span>
@@ -1303,8 +1303,8 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_d_shadow_wolf</span>
 <span style="background:#ffff00">&nbsp;&nbsp;20%&nbsp;item_24_dark_sword</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_ee_mighty_ring</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;water_world_watery_labyrinth_area&nbsp;&nbsp;pos(&nbsp;&nbsp;8&nbsp;&nbsp;,0&nbsp;&nbsp;,8)</span>
-<br><span style="background:#808080">&nbsp;6&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;9&nbsp;,-2&nbsp;&nbsp;,9)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">&nbsp;6&nbsp;exit-totem&nbsp;Totem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
 <br><span style="background:#30f030">0&nbsp;item_55_great_helm</span>
 <br><span style="background:#30f030">1&nbsp;item_de_caustic_sorcerer_ring</span>
 <br><span style="background:#30f030">2&nbsp;item_136_soul_pod_5_sp</span>
@@ -1793,11 +1793,11 @@ graph TD
 <span style="background:#ffff00">&nbsp;&nbsp;50%&nbsp;item_af_dark_great_shield</span>
 <br><span style="background:#ff8080">20&nbsp;08_armored_guardian&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;0x30&nbsp;score&nbsp;1259</span>
 <span style="background:#ffff00">&nbsp;100%&nbsp;item_129_sealed_sword_stone</span>
-<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Prison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;death_world_undead_layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;1&nbsp;&nbsp;,1&nbsp;&nbsp;,1)</span>
-<br><span style="background:#808080">&nbsp;2&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;-4&nbsp;&nbsp;,5&nbsp;,-4)</span>
-<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Lower&nbsp;totem&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;17&nbsp;&nbsp;,4&nbsp;,17)</span>
-<br><span style="background:#808080">&nbsp;7&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;1&nbsp;->&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;14,-14&nbsp;,14)</span>
-<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;2&nbsp;->&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;23&nbsp;,20&nbsp;,23)</span>
+<br><span style="background:#808080">&nbsp;0&nbsp;exit-door&nbsp;&nbsp;Prison&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">&nbsp;2&nbsp;exit-door&nbsp;&nbsp;Entrance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">&nbsp;4&nbsp;exit-totem&nbsp;Lower&nbsp;totem&nbsp;&nbsp;&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">&nbsp;7&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;1&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
+<br><span style="background:#808080">10&nbsp;exit-totem&nbsp;Upper&nbsp;totem&nbsp;2&nbsp;->&nbsp;shadow_tower_part1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos(&nbsp;&nbsp;0&nbsp;&nbsp;,0&nbsp;&nbsp;,0)</span>
 <br><span style="background:#30f030">0&nbsp;item_f6_harden_bracelet</span>
 <br><span style="background:#30f030">1&nbsp;item_10a_cune</span>
 <br><span style="background:#30f030">2&nbsp;item_139_soul_pod_14_sp</span>
@@ -2955,7 +2955,7 @@ var neo4jGraphData = {
                 "properties": {
                   "exitId": "7",
                   "exitName": "Upper totem 1",
-                  "details": "r1 y3"
+                  "details": "r1 y0"
                 },
                 "isBidirectional": true,
                 "linknum": 1
