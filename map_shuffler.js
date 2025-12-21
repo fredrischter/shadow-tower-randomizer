@@ -671,9 +671,10 @@ function extractSegment(map, segmentAreaName) {
  * @param {Array} map - The area map
  * @param {Object} segment - Segment to insert (from extractSegment)
  * @param {Object} referenceWalk - Optional walk path from no-change for directionality
+ * @param {Object} walkIndexMap - Map of area names to walk indices for progression checking
  * @returns {boolean} Success
  */
-function insertSegment(map, segment, referenceWalk) {
+function insertSegment(map, segment, referenceWalk, walkIndexMap) {
 	// Find all potential insertion points (any door exit in the map)
 	const allDoors = [];
 	map.forEach(area => {
@@ -699,16 +700,40 @@ function insertSegment(map, segment, referenceWalk) {
 		return false;
 	}
 	
-	// Pick random insertion point
-	const insertionPoint = allDoors[Math.floor(Math.random() * allDoors.length)];
+	// For funnels, filter insertion points to maintain forward progression
+	let validDoors = allDoors;
+	if (segment.archetype === "funnel" && walkIndexMap && Object.keys(walkIndexMap).length > 0) {
+		validDoors = allDoors.filter(doorInfo => {
+			const insertAreaName = doorInfo.area.name;
+			const destAreaName = doorInfo.exit.dest;
+			
+			// Get walk indices for insertion point and destination
+			const insertIndex = walkIndexMap[insertAreaName];
+			const destIndex = walkIndexMap[destAreaName];
+			
+			// Only allow insertion if it maintains forward progression
+			// (insertion point should come before destination in the walk)
+			if (insertIndex !== undefined && destIndex !== undefined) {
+				return insertIndex < destIndex;
+			}
+			
+			// If we don't have index info, allow it (fallback behavior)
+			return true;
+		});
+		
+		console.error("   Filtered " + allDoors.length + " doors to " + validDoors.length + 
+		              " for funnel forward progression");
+		
+		if (validDoors.length === 0) {
+			console.error("   WARNING - No forward-progression doors found, using all doors");
+			validDoors = allDoors;
+		}
+	}
+	
+	// Pick random insertion point from valid doors
+	const insertionPoint = validDoors[Math.floor(Math.random() * validDoors.length)];
 	const insertArea = insertionPoint.area;
 	const insertExit = insertionPoint.exit;
-	
-	// For funnels, check walk path indices to ensure forward progression
-	if (segment.archetype === "funnel" && referenceWalk) {
-		// TODO: Implement walk index checking
-		// For now, we'll skip this check and insert anyway
-	}
 	
 	// Determine if we should invert the segment (pipes only)
 	const invertSegment = (segment.archetype === "pipe" && Math.random() < 0.5);
@@ -765,6 +790,26 @@ function insertSegment(map, segment, referenceWalk) {
 }
 
 /**
+ * Build a map of area names to their walk indices for progression tracking
+ * @param {Array} referenceWalk - Walk path from no-change mode
+ * @returns {Object} Map of areaName -> earliest walk index
+ */
+function buildWalkIndexMap(referenceWalk) {
+	const walkIndexMap = {};
+	if (!referenceWalk) return walkIndexMap;
+	
+	// Track the earliest index each area appears in the walk
+	referenceWalk.forEach((step, index) => {
+		const areaName = step.dest;
+		if (areaName && (!walkIndexMap[areaName] || walkIndexMap[areaName] > index)) {
+			walkIndexMap[areaName] = index;
+		}
+	});
+	
+	return walkIndexMap;
+}
+
+/**
  * Performs extraction-insertion randomization for all pipe/funnel segments
  * @param {Array} map - The area map
  * @param {Object} referenceWalk - Optional walk path from no-change
@@ -778,6 +823,10 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 	
 	console.error(" - Pipe areas: " + pipeAreas.length + " (" + pipeAreas.join(", ") + ")");
 	console.error(" - Funnel areas: " + funnelAreas.length + " (" + funnelAreas.join(", ") + ")");
+	
+	// Build walk index map for funnel directionality checking
+	const walkIndexMap = buildWalkIndexMap(referenceWalk);
+	console.error(" - Built walk index map with " + Object.keys(walkIndexMap).length + " areas");
 	
 	// Extract all segments (pipes and funnels)
 	const testSegments = [...pipeAreas, ...funnelAreas];
@@ -809,7 +858,7 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 	extractedSegments.forEach(segment => {
 		console.error(" - Attempting to insert segment: " + segment.areaName);
 		try {
-			const success = insertSegment(map, segment, referenceWalk);
+			const success = insertSegment(map, segment, referenceWalk, walkIndexMap);
 			if (!success) {
 				console.error("   ✗ Failed to insert " + segment.areaName);
 			}

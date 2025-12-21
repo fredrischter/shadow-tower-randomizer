@@ -132,6 +132,45 @@ waybackInDest.dest = incoming.area.name;
 waybackInDest.wayBackId = incoming.exit.id;
 ```
 
+### Issue 4: Funnel Forward Progression
+
+**Problem**: Funnels must maintain forward progression in the game path, but insertion is random.
+
+**Solution**: Use walk path indices from no-change mode to enforce directionality:
+
+1. **Build walk index map** from reference walk (no-change mode):
+```javascript
+function buildWalkIndexMap(referenceWalk) {
+    const walkIndexMap = {};
+    referenceWalk.forEach((step, index) => {
+        const areaName = step.dest;
+        // Track earliest index each area appears
+        if (!walkIndexMap[areaName] || walkIndexMap[areaName] > index) {
+            walkIndexMap[areaName] = index;
+        }
+    });
+    return walkIndexMap;
+}
+```
+
+2. **Filter insertion points** to only allow forward progression:
+```javascript
+if (segment.archetype === "funnel" && walkIndexMap) {
+    validDoors = allDoors.filter(doorInfo => {
+        const insertAreaName = doorInfo.area.name;
+        const destAreaName = doorInfo.exit.dest;
+        
+        const insertIndex = walkIndexMap[insertAreaName];
+        const destIndex = walkIndexMap[destAreaName];
+        
+        // Only allow if insertion point comes before destination in walk
+        return insertIndex < destIndex;
+    });
+}
+```
+
+This ensures funnels are always inserted such that the player progresses forward through them, never backward.
+
 ## Testing
 
 All 7 segments (2 pipes + 5 funnels) successfully extract and insert:
@@ -145,8 +184,16 @@ All 7 segments (2 pipes + 5 funnels) successfully extract and insert:
 
 Walk validation confirms the resulting map is complete and walkable (isComplete: true).
 
+### Walk Index Filtering
+
+Funnels use walk path indices from the no-change reference walk to maintain forward progression:
+- Build map of area → earliest walk index
+- Filter insertion points to only allow insertAreaIndex < destinationAreaIndex
+- Typically filters ~50% of possible insertion points for funnels
+- Example: "Filtered 46 doors to 23 for funnel forward progression"
+
 ## Future Enhancements
 
-- Add walk path index tracking for funnel directionality enforcement
-- Prevent funnels from being inserted backwards in progression
+- Add more sophisticated walk path tracking (e.g., handle areas visited multiple times)
 - Add constraints to ensure thematic consistency (e.g., water funnels in water-accessible areas)
+- Consider difficulty scaling when inserting segments
