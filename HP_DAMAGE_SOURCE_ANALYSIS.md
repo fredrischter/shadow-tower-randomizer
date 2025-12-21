@@ -173,13 +173,44 @@ From `data_model.js` analysis, each creature spawn contains:
 | +0x02 | 2 bytes | spawnY | Y coordinate |
 | +0x04 | 2 bytes | spawnZ | Z coordinate |
 | +0x06 | 1 byte | rotation | Facing direction |
-| +0x07 | 1 byte | creatureId | Type (0x01 = acid slime) |
-| +0x08 | 1 byte | attack1 | Physical attack type (0x20) |
-| +0x09 | 1 byte | **magic1** | **Magic attack type (0x30)** |
-| +0x0A | 1 byte | weaponPower1 | Attack power value |
-| +0x0B | 1 byte | weaponDefense1 | Defense value |
-| +0x0C-0x0F | 4 bytes | Additional attributes | Unknown magic modifiers |
-| +0x10+ | varies | Drop tables | Item drops |
+| +0x07 | 1 byte | attack1 | Physical attack type |
+| +0x08 | 1 byte | attack2 | Physical attack type |
+| +0x09 | 1 byte | **magic1** | **Magic attack TYPE (0x30 = spell)** |
+| +0x24 | 1 byte | str | Strength stat |
+| +0x25 | 1 byte | spd | Speed stat |
+| +0x26 | 1 byte | def | Defense stat |
+| ... | ... | ... | More stats |
+
+**IMPORTANT CORRECTION:** The creature spawn structure does **NOT** directly contain `weaponPower1` or magic damage power values!
+
+Instead, **magic attack power is stored in EntityStateData** (see below).
+
+### EntityStateData Structure (Active Attack Data)
+
+When a creature performs an attack, the game creates an **EntityStateData** structure containing the actual damage values:
+
+| Offset | Size | Field | Description |
+|--------|------|-------|-------------|
+| +0x00 | 1 byte | type | 0x20 = physical, 0x30 = spell |
+| +0x1a | 2 bytes | **attack1** | **MAGIC DAMAGE POWER (UInt16)** |
+| +0x1c | 2 bytes | **attack2** | Additional magic power (UInt16) |
+| +0x1e | 2 bytes | **attack3** | Additional magic power (UInt16) |
+
+**From data_model.js (lines 1110-1127):**
+```javascript
+// Type 0x20 = physical attack, Type 0x30 = spell/magic attack
+// Both use the same offsets for attack damage values
+if (this.type == 0x20 || this.type == 0x30) {
+  var att = new UInt16(this.originalBin, 0x1a);
+  if (!att.isNull()) {
+    this.attack1 = att;  // *** MAGIC POWER VALUE HERE ***
+  }
+}
+```
+
+**This is where the HP damage calculation reads magic power from!**
+
+See `MAGIC_POWER_SOURCE_ANALYSIS.md` for complete details and code trace.
 
 ### Secondary Storage: creatures_data.csv
 
@@ -202,16 +233,19 @@ blood slime;0;0;0;0;0;0;0;0;0;0;0;0;1;0;96
    ↓
 3. Game reads creature spawn data:
    - Creature ID: 0x01 (acid slime)
-   - Magic type: 0x30 (projectile spell)
-   - Attack power: <value from FDAT.T>
+   - Magic type: magic1 = 0x30 (spell type indicator)
+   - Stats: str, spr, etc.
    ↓
 4. Slime detects player and triggers spray attack
    ↓
-5. Game calls damage calculation in ST.EXE:
-   - Function: CalculateHPDamage (from hp_damage.mips analysis)
-   - Inputs: base_damage, modifier, target (player)
+5. Game creates EntityStateData structure:
+   - type = 0x30 (spell)
+   - attack1 (offset 0x1a) = CALCULATED DAMAGE POWER
+     (based on creature stats, difficulty, etc.)
    ↓
-6. Damage formula applied:
+6. Damage calculation in ST.EXE (0x80030000+):
+   - Function: CalculateHPDamage
+   - Reads attack power from EntityStateData offset 0x1a
    - Formula: ((base_damage * 5) + modifier) * multiplier
    - Multiplier factors:
      * Player armor/defense
@@ -222,6 +256,8 @@ blood slime;0;0;0;0;0;0;0;0;0;0;0;0;1;0;96
    - Updates one of 26 HP values (body part system)
    - HP address: 0x801a8f28 + 0x190 + (body_part * 2)
 ```
+
+**Key Insight:** Magic power is NOT directly stored in FDAT.T creature spawn! It's calculated at runtime and stored in EntityStateData before damage calculation.
 
 ---
 
