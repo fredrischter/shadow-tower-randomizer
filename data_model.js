@@ -590,7 +590,7 @@
   /*
   0-entity and entity data
   1-spawns (to remove fixed 0x2C04, to take address from address of sized mix [1])
-  2-300 entries 0x18 bytes each 
+  2-mystery 300 entries 0x18 bytes each 
   3-objects
   4-collectables
   5-0x80 entries, size 0x10, all empty
@@ -631,7 +631,25 @@
       });
 
       //2-300 entries 0x18 bytes each     
+      console.log("\n300 entries 0x18 bytes each");
+      console.log("-------------");
       
+
+      //2-mystery
+      var MYSTERY_START_OFFSET = this.map_file.sizedMixStarts[2] - 0x10;//0x5ae4;
+      this.misteries = [];
+      console.log("\nMystery ");
+      console.log("data");
+      for (var i = 0; i<MYSTERY_COUNT; i++) {
+        var offset_in_file = 16 + MYSTERY_START_OFFSET + MYSTERY_SIZE * i;
+        var absoluteIndex = this.map_file.startOffset + offset_in_file;
+        this.misteries.push(new Mystery(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
+      }
+      for (var i = 0; i<MYSTERY_COUNT; i++) {
+        //if (i != 31) {
+          this.misteries[i].blank();
+        //}
+      }
 
       //3-objects
       var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
@@ -1227,6 +1245,51 @@
     blank() {
       //binSet(this.bin, this.offset_in_file, COLLECTABLE_SIZE, 0x00);
       this.type.set(0xffff);
+    }
+  }
+
+  global.MYSTERY_SIZE = 0x18;
+  global.MYSTERY_COUNT = 0x12c;
+
+  class Mystery {
+    constructor(bin, area, offset_in_file, absoluteIndex, index, mapTiles) {
+      this.bin = bin;
+      this.area = area;
+      this.offset_in_file = offset_in_file;
+      this.absoluteIndex = absoluteIndex;
+      this.index = index;
+
+//      this.tileX = new UInt8(this.bin, this.offset_in_file + 0x00);
+//      this.tileY = new UInt8(this.bin, this.offset_in_file + 0x01);
+//      this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x02);
+
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      var text = "" + binToStr(this.bin.slice(this.offset_in_file, this.offset_in_file + MYSTERY_SIZE), 4);
+      return text;
+    }
+
+    toString() {
+      return "{"/*"{\"name\":\""+(this.name + "\"").padEnd(40)
+        + ", \"x\":" + (this.x.get() + "").padStart(5)
+        + ", \"y\":" + (this.y.get() + "").padStart(5)
+        + ", \"z\":" + (this.z.get() + "").padStart(5)
+        + ", \"rotation_z\":" + (this.rotation_z.get() + "").padStart(5)*/
+        + "}";
+    }
+
+    set(source) {
+      binCopy(source.bin, source.offset_in_file, this.bin, this.offset_in_file, MYSTERY_SIZE);
+    }
+
+    swap(source) {
+      binSwap(source.bin, source.offset_in_file, this.bin, this.offset_in_file, MYSTERY_SIZE);
+    }
+
+    blank() {
+      binSet(this.bin, this.offset_in_file, MYSTERY_SIZE, 0x00);
     }
   }
 

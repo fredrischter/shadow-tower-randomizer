@@ -2393,8 +2393,8 @@ function randomize(paramsFile, stDir) {
     }
 
     // Generate creature power value table (for PR #14 verification)
-    console.log(" generating creature power value table");
-    generateCreaturePowerTable(changeSetPath);
+    //console.log(" generating creature power value table");
+    //generateCreaturePowerTable(changeSetPath);
 
     // Write item location tracker
     console.log(" writing item tracker notes");
