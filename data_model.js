@@ -608,6 +608,9 @@
     var offset_in_file = TILE_START_OFFSET + TILE_SIZE * i;
     var absoluteIndex = this.tiles_file.startOffset + offset_in_file;
     this.tiles.push(new Tile(this.tiles_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
+    //if (i%2==1) {
+    //  this.tiles[i].blank();
+    //}
   }
 
       //1-spawns - need to setup before creatures, because creature creation will verify if there is some spawn pointinig to it, in this case the creature will be considered forcibly blank because it is unused.
@@ -645,11 +648,11 @@
         var absoluteIndex = this.map_file.startOffset + offset_in_file;
         this.misteries.push(new Mystery(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
       }
-      for (var i = 0; i<MYSTERY_COUNT; i++) {
+      //for (var i = 0; i<MYSTERY_COUNT; i++) {
         //if (i != 31) {
-          this.misteries[i].blank();
+        //  this.misteries[i].blank();
         //}
-      }
+      //}
 
       //3-objects
       var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
