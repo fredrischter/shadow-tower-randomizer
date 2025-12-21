@@ -752,8 +752,8 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 	const pipeAreas = allowLists["pipe"] || [];
 	const funnelAreas = allowLists["funnel"] || [];
 	
-	console.error(" - Pipe areas: " + pipeAreas.length);
-	console.error(" - Funnel areas: " + funnelAreas.length);
+	console.error(" - Pipe areas: " + pipeAreas.length + " (" + pipeAreas.join(", ") + ")");
+	console.error(" - Funnel areas: " + funnelAreas.length + " (" + funnelAreas.join(", ") + ")");
 	
 	// Extract all segments first
 	const extractedSegments = [];
@@ -763,10 +763,13 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 		const segment = extractSegment(map, areaName);
 		if (segment) {
 			extractedSegments.push(segment);
+			console.error("   ✓ Successfully extracted " + areaName);
+		} else {
+			console.error("   ✗ Failed to extract " + areaName);
 		}
 	});
 	
-	console.error(" - Extracted " + extractedSegments.length + " segments");
+	console.error(" - Extracted " + extractedSegments.length + " segments total");
 	
 	// Shuffle the segments array for random re-insertion
 	for (let i = extractedSegments.length - 1; i > 0; i--) {
@@ -776,7 +779,11 @@ function performSegmentExtractionInsertion(map, referenceWalk) {
 	
 	// Insert segments at random locations
 	extractedSegments.forEach(segment => {
-		insertSegment(map, segment, referenceWalk);
+		console.error(" - Attempting to insert segment: " + segment.areaName);
+		const success = insertSegment(map, segment, referenceWalk);
+		if (!success) {
+			console.error("   ✗ Failed to insert " + segment.areaName);
+		}
 	});
 	
 	console.error(" - Completed segment extraction-insertion");
@@ -821,9 +828,10 @@ function shuffle(params) {
 
 				// Task #NEW: Pipe/Funnel segment extraction and insertion
 				// This replaces the swap-based archetype randomization
-				console.error(new Date().toISOString() + "  Starting segment extraction-insertion randomization");
+				// TEMPORARILY DISABLED FOR DEBUGGING
+				console.error(new Date().toISOString() + "  SKIPPING segment extraction-insertion (disabled for testing)");
 				
-				performSegmentExtractionInsertion(generated, lastValidMap.walk);
+				// performSegmentExtractionInsertion(generated, lastValidMap.walk);
 			}
 
 			var shadowTowerSamePartConnection = hasShadowTowerSamePartConnection(generated);
@@ -911,7 +919,7 @@ function shuffle(params) {
 //	gaveUp:
 //}
 
-if (process.argv[1].indexOf("map_shuffler.js") > -1){
+if (process.argv && process.argv[1] && process.argv[1].indexOf("map_shuffler.js") > -1){
 	console.log(JSON.stringify(shuffle(), null, 2));
 } else {
 	module.exports = shuffle;
