@@ -1,7 +1,11 @@
 {
 	"label": "only-bosses",
-	"preset": "no-change",
-	"difficulty": "medium",
+	"preset": "any%",
+	"difficulty": "extreme-easy",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
+	"randomizeNonEssentialKeys": true,
 	"keepOnlyBosses": true,
-	"seed": "1"
+	"seed": "1234567890"
 }

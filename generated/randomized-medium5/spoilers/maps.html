@@ -76,6 +76,60 @@
         span {
             font-family: monospace
         }
+        
+        /* Fixed Layout Chart Styles */
+        #fixed-layout-container {
+            width: 100%;
+            height: 1100px;
+            border: 2px solid #8b4513;
+            border-radius: 10px;
+            background: #2a2a2a;
+            position: relative;
+            overflow: auto;
+        }
+        
+        .area-box {
+            position: absolute;
+            border: 2px solid #d4af37;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 11px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #1a1a1a;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .area-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+            z-index: 100;
+        }
+        
+        .connection-arrow {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .connection-line {
+            stroke: #d4af37;
+            stroke-width: 2;
+            fill: none;
+            opacity: 0.6;
+        }
+        
+        .connection-arrow-head {
+            fill: #d4af37;
+            opacity: 0.8;
+        }
+        
+        .bidirectional-arrow {
+            stroke: #4a90e2;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +137,7 @@
     
     <div class="tab-buttons">
         <button class="tab-button active" onclick="showTab('neo4j')">Interactive Graph (neo4jd3)</button>
+        <button class="tab-button" onclick="showTab('fixed')">Fixed Layout Map</button>
         <button class="tab-button" onclick="showTab('mermaid')">Flowchart (Mermaid)</button>
         <button class="tab-button" onclick="showTab('details')">Area Details</button>
     </div>
@@ -95,6 +150,17 @@
         <p style="font-size: 0.9em; color: #b8a080;">
             <strong>Legend:</strong> Nodes represent areas, edges represent exits/jumps between areas. 
             Node size indicates progression difficulty/score.
+        </p>
+    </div>
+    
+    <!-- Fixed Layout Map -->
+    <div id="fixed-tab" class="tab-content visualization-section">
+        <h2>Fixed Layout Map</h2>
+        <p>Areas in fixed positions grouped by world. Arrows show connections (blue = bidirectional, gold = one-way).</p>
+        <svg id="fixed-layout-container"></svg>
+        <p style="font-size: 0.9em; color: #b8a080;">
+            <strong>Legend:</strong> Each rectangle is an area. Shadow Tower in center, worlds arranged around it. 
+            Arrows change in shuffled maps but area positions stay the same.
         </p>
     </div>
     
@@ -273,18 +339,18 @@ if (typeof neo4jGraphData !== 'undefined') {
     console.log('Has nodes:', neo4jGraphData.nodes);
     console.log('Has relationships:', neo4jGraphData.relationships);
     
-    // Define color palette for node coloring (assigned by label type automatically)
+    // Task 7: Define color palette for neo4jd3 v0.0.5
+    // Array of colors - neo4jd3 assigns them to labels in alphabetical order
+    // Labels: Death, Earth, Fire, Human, Illusion, Monster, Shadow, Water
     var shadowTowerColors = [
-        '#4a90e2', // human world - blue
-        '#8b4513', // earth world - brown
-        '#ff4500', // fire world - orange-red
-        '#1e90ff', // water world - dodger blue
-        '#9932cc', // monster world - purple
-        '#ff1493', // illusion world - deep pink
-        '#2f4f4f', // death world - dark slate
-        '#000000', // shadow tower - black
-        '#d4af37', // gold accent
-        '#696969'  // void/default - gray
+        '#2f4f4f', // Death - dark slate gray
+        '#8b4513', // Earth - brown
+        '#ff4500', // Fire - orange-red  
+        '#4a90e2', // Human - blue
+        '#ff1493', // Illusion - deep pink
+        '#9932cc', // Monster - purple
+        '#2f2f2f', // Shadow - dark gray (not pure black)
+        '#1e90ff'  // Water - dodger blue
     ];
     
     try {
@@ -414,6 +480,285 @@ if (typeof neo4jGraphData !== 'undefined') {
 } else {
     document.getElementById('neo4jd3-container').innerHTML = 
         '<p style="color: #ff6b6b; padding: 20px;">Neo4j graph data not available. Please regenerate the map.</p>';
+}
+</script>
+
+<!-- Fixed Layout Map Visualization -->
+<script>
+// Task #25: Fixed layout map with areas as rectangles in predefined positions
+if (typeof neo4jGraphData !== 'undefined') {
+    try {
+        var graphData = neo4jGraphData.results[0].data[0].graph;
+        
+        // Task #25: Redesigned layout - circular positioning with Shadow Tower vertical center column
+        // Define fixed positions for each world in circular arrangement around center
+        var centerX = 600;
+        var centerY = 660; // Moved down from 580 to 660 (added another 80px)
+        var radius = 350; // Distance from center
+        
+        var worldPositions = {
+            'Earth': { x: centerX - radius, y: centerY - radius * 0.7 },      // Top-left (swapped with Human)
+            'Human': { x: centerX, y: centerY - radius - 160 },                // Top, moved up 160px (swapped with Earth)
+            'Fire': { x: centerX + radius, y: centerY - radius * 0.7 },        // Top-right
+            'Water': { x: centerX - radius, y: centerY },                      // Left
+            'Shadow': { x: centerX, y: centerY },                              // Center (will be vertical column)
+            'Monster': { x: centerX + radius, y: centerY },                    // Right
+            'Illusion': { x: centerX - radius, y: centerY + radius * 0.7 },    // Bottom-left
+            'Death': { x: centerX + radius, y: centerY + radius * 0.7 }        // Bottom-right
+        };
+        
+        // World colors matching neo4jd3
+        var worldColors = {
+            'Human': '#4a90e2',
+            'Earth': '#8b4513',
+            'Fire': '#ff4500',
+            'Water': '#1e90ff',
+            'Monster': '#9932cc',
+            'Illusion': '#ff1493',
+            'Death': '#2f4f4f',
+            'Shadow': '#2f2f2f'
+        };
+        
+        // Task #25: Define FIXED positions for each specific area (by name)
+        // This ensures areas always appear in same position regardless of randomization
+        var fixedAreaPositions = {
+            // Shadow Tower - vertical column in center
+            'shadow_tower_part1a': { x: centerX, y: centerY - 245 },
+            'shadow_tower_part1b': { x: centerX, y: centerY - 175 },
+            'shadow_tower_part1c': { x: centerX, y: centerY - 105 },
+            'shadow_tower_part2a': { x: centerX, y: centerY - 35 },
+            'shadow_tower_part2b': { x: centerX, y: centerY + 35 },
+            'shadow_tower_part3a': { x: centerX, y: centerY + 105 },
+            'shadow_tower_part3b': { x: centerX, y: centerY + 175 },
+            'shadow_tower_part3c': { x: centerX, y: centerY + 245 },
+            
+            // Earth World - top-left (6 areas in 3x2 grid) - swapped with Human
+            'earth_world_poisonous_cavern': { x: centerX - radius - 150, y: centerY - radius * 0.7 - 80 },
+            'earth_world_stone_cavern': { x: centerX - radius, y: centerY - radius * 0.7 - 80 },
+            'earth_world_false_pit_cavern': { x: centerX - radius + 150, y: centerY - radius * 0.7 - 80 },
+            'earth_world_hostile_rock_cavern': { x: centerX - radius - 150, y: centerY - radius * 0.7 + 80 },
+            'earth_world_quaking_cavern': { x: centerX - radius, y: centerY - radius * 0.7 + 80 },
+            'earth_world_rotting_cavern': { x: centerX - radius + 150, y: centerY - radius * 0.7 + 80 },
+            
+            // Human World - top (4 areas in 2x2 grid, moved up 160px) - swapped with Earth
+            'human_world_solitary_region': { x: centerX - 150, y: centerY - radius - 240 },
+            'human_world_hidden_region': { x: centerX + 150, y: centerY - radius - 240 },
+            'human_world_cursed_region': { x: centerX - 150, y: centerY - radius - 80 },
+            'human_world_forgotten_region': { x: centerX + 150, y: centerY - radius - 80 },
+            
+            // Fire World - top-right (4 areas)
+            'fire_world_phoenix_cave': { x: centerX + radius - 150, y: centerY - radius * 0.7 - 80 },
+            'fire_world_burning_cavern': { x: centerX + radius + 150, y: centerY - radius * 0.7 - 80 },
+            'fire_world_molten_cavern': { x: centerX + radius - 150, y: centerY - radius * 0.7 + 80 },
+            'fire_world_ashen_cavern': { x: centerX + radius + 150, y: centerY - radius * 0.7 + 80 },
+            
+            // Water World - left (4 areas)
+            'water_world_sunken_river_area': { x: centerX - radius - 150, y: centerY - 80 },
+            'water_world_impure_pool_area': { x: centerX - radius + 150, y: centerY - 80 },
+            'water_world_watery_labyrinth_area': { x: centerX - radius - 150, y: centerY + 80 },
+            'water_world_white_rain_area': { x: centerX - radius + 150, y: centerY + 80 },
+            
+            // Monster World - right (2 areas)
+            'monster_world_false_eye_area': { x: centerX + radius, y: centerY - 80 },
+            'monster_world_screeching_area': { x: centerX + radius, y: centerY + 80 },
+            
+            // Illusion World - bottom-left (4 areas)
+            'illusion_world_gloomy_domain': { x: centerX - radius - 150, y: centerY + radius * 0.7 - 80 },
+            'illusion_world_bewilderment_domain': { x: centerX - radius + 150, y: centerY + radius * 0.7 - 80 },
+            'illusion_world_worship_domain': { x: centerX - radius - 150, y: centerY + radius * 0.7 + 80 },
+            'illusion_world_dream_domain': { x: centerX - radius + 150, y: centerY + radius * 0.7 + 80 },
+            
+            // Death World - bottom-right (4 areas)
+            'death_world_lingering_curse_layer': { x: centerX + radius - 150, y: centerY + radius * 0.7 - 80 },
+            'death_world_gate_of_the_dead': { x: centerX + radius + 150, y: centerY + radius * 0.7 - 80 },
+            'death_world_dark_castle_layer': { x: centerX + radius - 150, y: centerY + radius * 0.7 + 80 },
+            'death_world_undead_layer': { x: centerX + radius + 150, y: centerY + radius * 0.7 + 80 }
+        };
+        
+        // Calculate positions for areas
+        var areaPositions = {};
+        
+        graphData.nodes.forEach(function(node) {
+            var areaName = node.properties.areaId; // Use areaId, not name (name is readable with spaces)
+            var world = node.labels[0];
+            
+            // Use fixed position if available, otherwise fallback to dynamic calculation
+            if (fixedAreaPositions[areaName]) {
+                areaPositions[node.id] = {
+                    x: fixedAreaPositions[areaName].x,
+                    y: fixedAreaPositions[areaName].y,
+                    name: node.properties.name, // Display name (readable)
+                    world: world
+                };
+            } else {
+                // Fallback: use world center if area not in fixed positions
+                console.warn('Area not in fixed positions:', areaName);
+                var worldPos = worldPositions[world] || { x: centerX, y: centerY };
+                areaPositions[node.id] = {
+                    x: worldPos.x,
+                    y: worldPos.y,
+                    name: node.properties.name, // Display name (readable)
+                    world: world
+                };
+            }
+        });
+        
+        // Create SVG with larger dimensions (increased height to accommodate extra space)
+        var svg = d3.select('#fixed-layout-container')
+            .attr('width', 1400)
+            .attr('height', 1520); // Increased from 1360 to 1520 (added another 160px)
+        
+        // Clear existing content
+        svg.selectAll('*').remove();
+        
+        // Add background
+        svg.append('rect')
+            .attr('width', '100%')
+            .attr('height', '100%')
+            .attr('fill', '#2a2a2a');
+        
+        // Define arrow markers FIRST (before drawing anything)
+        var defs = svg.append('defs');
+        
+        // Bidirectional arrowhead (blue)
+        defs.append('marker')
+            .attr('id', 'arrowhead-bi')
+            .attr('markerWidth', 10)
+            .attr('markerHeight', 10)
+            .attr('refX', 8)
+            .attr('refY', 3)
+            .attr('orient', 'auto')
+            .append('polygon')
+            .attr('points', '0 0, 10 3, 0 6')
+            .attr('fill', '#4a90e2');
+        
+        // Unidirectional arrowhead (gold)
+        defs.append('marker')
+            .attr('id', 'arrowhead-uni')
+            .attr('markerWidth', 10)
+            .attr('markerHeight', 10)
+            .attr('refX', 8)
+            .attr('refY', 3)
+            .attr('orient', 'auto')
+            .append('polygon')
+            .attr('points', '0 0, 10 3, 0 6')
+            .attr('fill', '#d4af37');
+        
+        // Draw area boxes FIRST (so arrows appear on top)
+        var boxGroup = svg.append('g').attr('class', 'area-boxes');
+        
+        graphData.nodes.forEach(function(node) {
+            var pos = areaPositions[node.id];
+            if (!pos) return;
+            
+            var boxWidth = 100;
+            var boxHeight = 40;
+            
+            // Create group for box and text
+            var areaGroup = boxGroup.append('g')
+                .attr('class', 'area-box-group')
+                .attr('transform', 'translate(' + (pos.x - boxWidth/2) + ',' + (pos.y - boxHeight/2) + ')');
+            
+            // Box background
+            areaGroup.append('rect')
+                .attr('width', boxWidth)
+                .attr('height', boxHeight)
+                .attr('rx', 5)
+                .attr('fill', worldColors[pos.world] || '#696969')
+                .attr('stroke', '#d4af37')
+                .attr('stroke-width', 2)
+                .attr('class', 'area-box');
+            
+            // Area name text (split into multiple lines if needed)
+            var words = pos.name.split(' ');
+            var textGroup = areaGroup.append('text')
+                .attr('x', boxWidth / 2)
+                .attr('y', boxHeight / 2)
+                .attr('text-anchor', 'middle')
+                .attr('fill', pos.world === 'Shadow' ? '#d4c5b9' : '#1a1a1a')
+                .attr('font-size', '10px')
+                .attr('font-weight', 'bold');
+            
+            if (words.length <= 2) {
+                textGroup.append('tspan')
+                    .attr('x', boxWidth / 2)
+                    .attr('dy', '0.3em')
+                    .text(pos.name);
+            } else {
+                // Split into 2 lines
+                var line1 = words.slice(0, Math.ceil(words.length / 2)).join(' ');
+                var line2 = words.slice(Math.ceil(words.length / 2)).join(' ');
+                textGroup.append('tspan')
+                    .attr('x', boxWidth / 2)
+                    .attr('dy', '-0.2em')
+                    .text(line1);
+                textGroup.append('tspan')
+                    .attr('x', boxWidth / 2)
+                    .attr('dy', '1.2em')
+                    .text(line2);
+            }
+            
+            // Hover effect
+            areaGroup.on('mouseenter', function() {
+                d3.select(this).select('.area-box')
+                    .attr('stroke-width', 4)
+                    .attr('filter', 'url(#glow)');
+            }).on('mouseleave', function() {
+                d3.select(this).select('.area-box')
+                    .attr('stroke-width', 2)
+                    .attr('filter', null);
+            });
+        });
+        
+        // Task #25: Draw connection arrows AFTER boxes (so they appear on top)
+        var arrowGroup = svg.append('g').attr('class', 'arrows');
+        
+        graphData.relationships.forEach(function(rel) {
+            var startPos = areaPositions[rel.startNode];
+            var endPos = areaPositions[rel.endNode];
+            
+            if (!startPos || !endPos) return;
+            
+            // Calculate arrow path with curve
+            var dx = endPos.x - startPos.x;
+            var dy = endPos.y - startPos.y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            
+            // Control point for curved arrow
+            var midX = (startPos.x + endPos.x) / 2;
+            var midY = (startPos.y + endPos.y) / 2;
+            var curvature = 0.2;
+            var controlX = midX - dy * curvature;
+            var controlY = midY + dx * curvature;
+            
+            // Arrow color based on bidirectional status
+            var arrowColor = rel.isBidirectional ? '#4a90e2' : '#d4af37';
+            var strokeWidth = rel.isBidirectional ? 2 : 1.5;
+            
+            // Draw curved path
+            var path = arrowGroup.append('path')
+                .attr('d', 'M ' + startPos.x + ' ' + startPos.y + 
+                          ' Q ' + controlX + ' ' + controlY + 
+                          ' ' + endPos.x + ' ' + endPos.y)
+                .attr('stroke', arrowColor)
+                .attr('stroke-width', strokeWidth)
+                .attr('fill', 'none')
+                .attr('opacity', 0.6)
+                .attr('marker-end', 'url(#arrowhead-' + (rel.isBidirectional ? 'bi' : 'uni') + ')');
+        });
+        
+        // Add glow filter for hover
+        defs.append('filter')
+            .attr('id', 'glow')
+            .append('feGaussianBlur')
+            .attr('stdDeviation', 3)
+            .attr('result', 'coloredBlur');
+        
+    } catch (err) {
+        console.error('Error creating fixed layout map:', err);
+        document.getElementById('fixed-layout-container').innerHTML = 
+            '<text x="50" y="50" fill="#ff6b6b">Error: ' + err.message + '</text>';
+    }
 }
 </script>
 

@@ -1,0 +1,12 @@
+{
+	"label": "comedy",
+	"preset": "comedy",
+	"difficulty": "easy",
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"progressiveness": "crazy",
+	"messWithScenery": true,
+	"fieryKeyFlamingKeyDrop": "flaming-key-in-the-first-area",
+	"randomizeNonEssentialKeys": true,
+	"seed": "1234567890"
+}
