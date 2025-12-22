@@ -1,0 +1,13 @@
+# ST.EXE Patch: zero_final_damage_write
+# Description: Zeros out the final damage write to player HP array. Player takes no damage. Proves HP is stored at PlayerState+0x19c.
+#
+# File: iso-dump/ST.EXE
+# Apply with: hex editor or custom patcher
+#
+
+## Patch at offset 0x02dff8
+Description: Zero the final HP damage write (prevents HP loss)
+Original: a4 62 01 9c
+New:      a4 60 01 9c
+Runtime:  0x8003dff8
+

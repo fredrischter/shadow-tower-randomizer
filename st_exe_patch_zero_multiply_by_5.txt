@@ -1,0 +1,13 @@
+# ST.EXE Patch: zero_multiply_by_5
+# Description: Zeros out the damage * 5 calculation. If damage becomes zero, proves formula is (damage * 5) + modifier.
+#
+# File: iso-dump/ST.EXE
+# Apply with: hex editor or custom patcher
+#
+
+## Patch at offset 0x01f800
+Description: Zero the 'multiply by 5' damage calculation
+Original: 00 03 18 80 00 64 18 21
+New:      00 00 18 25 00 00 00 00
+Runtime:  0x8002f800
+
