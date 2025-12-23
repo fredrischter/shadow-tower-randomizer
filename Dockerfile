@@ -45,6 +45,7 @@ COPY *.json ./
 COPY *.html ./
 COPY site /app/site  
 COPY params /app/params
+COPY maps /app/maps
 
 # Expose the port and start the server
 EXPOSE 8080  
