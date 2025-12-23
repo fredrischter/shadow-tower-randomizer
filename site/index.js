@@ -1,6 +1,18 @@
 
 $(document).ready(function() {
 
+	// Task #add-version-timestamp: Fetch and display version info
+	fetch('/version')
+		.then(response => response.json())
+		.then(data => {
+			const versionText = `Version created at ${data.timestamp}`;
+			document.getElementById('versionInfo').textContent = versionText;
+		})
+		.catch(error => {
+			console.error('Error fetching version info:', error);
+			document.getElementById('versionInfo').textContent = 'Version info unavailable';
+		});
+
 	// Task #Mobile-Usability: Gallery toggle functionality
 	// Task #Mobile-Flickering-Fix: Updated to change icon text instead of CSS transform
 	$('#galleryToggle').on('click', function() {
