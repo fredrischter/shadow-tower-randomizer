@@ -134,24 +134,21 @@ class CreatureStatsRandomizer {
     this.report.push(`**Preset Mode:** ${this.params.creatureTemplatePreset || 'normal'}\n`);
     this.report.push(`**Randomization Levels:**\n`);
     
-    // DISABLED: X3 template randomization
-    // Root cause: X3 parts are MIPS executable code, not template databases
-    // Only Parts 43 and 55 have templates, but they're NOT in all X3 parts
-    // Attempting to randomize causes MIPS corruption → game freeze
-    const x3Enabled = false;  // ALWAYS DISABLED - unsafe architecture
-    this.report.push(`- Level 1 (X3 templates): ${x3Enabled ? 'YES' : 'NO - DISABLED (unsafe)'}\n`);
+    // X3 template randomization: ONLY for specific parts with actual templates
+    // Parts 43 and 55 contain global creature template databases
+    // Other X3 parts contain MIPS executable code - DO NOT modify
+    const x3Enabled = this.params.randomizeX3Templates !== false;  // Default: enabled
+    this.report.push(`- Level 1 (X3 templates - Parts 43, 55 only): ${x3Enabled ? 'YES' : 'NO'}\n`);
     this.report.push(`- Level 2 (X4 per-instance): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n\n`);
 
     const preset = this.params.creatureTemplatePreset;
 
-    // Level 1: DISABLED - X3 randomization is unsafe
-    // X3 parts contain MIPS executable code, not templates
-    // The templates we found in Part 43/55 are edge cases, not standard
-    // Trying to randomize all X3 parts corrupts the game
-    // NOTE: Keeping method for documentation purposes only
-    if (false) {  // NEVER enabled
-      console.log("X3 randomization DISABLED - unsafe architecture");
-      this.randomizeX3Templates();
+    // Level 1: Randomize ONLY Parts 43 and 55 (verified template locations)
+    // These are global creature template databases, NOT MIPS code
+    // All other X3 parts contain executable code and must NOT be modified
+    if (x3Enabled) {
+      console.log("X3 randomization ENABLED for Parts 43 and 55 only");
+      this.randomizeX3TemplatesTargeted();
     }
 
     // Level 2: Randomize per-instance stats in X4 parts (map files)
@@ -260,6 +257,75 @@ class CreatureStatsRandomizer {
     }
 
     return true;  // Passed all checks - likely a valid template
+  }
+
+  /**
+   * TARGETED X3 Randomization - ONLY for Parts 43 and 55
+   * These are the ONLY parts with verified global creature template databases
+   * All other X3 parts contain MIPS executable code and must NOT be modified
+   */
+  randomizeX3TemplatesTargeted() {
+    this.report.push(`## Level 1: Creature Type Templates (TARGETED - Parts 43 & 55 Only)\n\n`);
+    this.report.push(`**Strategy:** Only modify Parts 43 and 55 (verified template locations)\n`);
+    this.report.push(`**Safety:** All other X3 parts are MIPS code - NOT modified\n\n`);
+
+    // VERIFIED template locations from FDAT_TEMPLATE_SEARCH_RESULTS.md
+    const TEMPLATE_PARTS = [43, 55];  // ONLY these parts have templates
+
+    this.areas.forEach(area => {
+      // CRITICAL: Only process areas with mips_index matching our verified parts
+      if (!area.mips_index || !TEMPLATE_PARTS.includes(area.mips_index)) {
+        return;  // Skip - this X3 part is MIPS code, not templates
+      }
+
+      // Safety check: mips_file must exist and be properly initialized
+      if (!area.mips_file || !area.mips_file.bin) {
+        this.report.push(`\nSkipping Part ${area.mips_index} - mips_file not available\n`);
+        return;
+      }
+
+      this.report.push(`\n### Part ${area.mips_index}: Global Creature Template Database\n\n`);
+      this.report.push(`**Area Reference:** ${area.name}\n`);
+      this.report.push(`| Template Offset | Original Stats | New Stats |\n`);
+      this.report.push(`|-----------------|----------------|------------|\n`);
+
+      const bin = area.mips_file.bin;
+      let templatesModified = 0;
+
+      // Scan template section for valid templates
+      // Use validation to skip any remaining MIPS code sections
+      for (let i = 0; i < MAX_TEMPLATES_PER_AREA; i++) {
+        const offset = TEMPLATE_SECTION_OFFSET + (i * TEMPLATE_SIZE);
+        
+        if (offset + TEMPLATE_SIZE > bin.length) {
+          break;  // Beyond file bounds
+        }
+
+        const template = new CreatureTemplate(bin, offset);
+        
+        // Validate this is actually a creature template
+        if (!this.isValidCreatureTemplate(template)) {
+          continue;  // Skip invalid/MIPS code blocks
+        }
+
+        const originalStats = template.toString();
+        
+        // Randomize template stats
+        this.randomizeTemplateStats(template);
+        
+        const newStats = template.toString();
+        this.report.push(`| 0x${offset.toString(16).padStart(6, '0')} | ${originalStats} | ${newStats} |\n`);
+        templatesModified++;
+      }
+
+      this.report.push(`\n**Templates modified:** ${templatesModified}\n`);
+
+      // CRITICAL: Update checksum after modifying X3 part
+      if (templatesModified > 0 && area.mips_file.setCheckSum) {
+        area.mips_file.setCheckSum();
+        this.report.push(`**Checksum updated:** YES\n`);
+      }
+    });
   }
 
   /**
