@@ -6,6 +6,8 @@ const uuid = require('uuid');
 const { promisify } = require('util');
 const child_process = require('child_process');
 const archiver = require('archiver');
+// Task #add-version-timestamp: Import version info helper
+const { getVersionInfo } = require('./get-version-info');
 
 function zipDirectory(sourceDir, outPath) {
   const archive = archiver('zip', { zlib: { level: 9 }});
@@ -225,6 +227,12 @@ app.get('/status', (req, res) => {
   setTimeout(function() {
   	res.json(uploadStatus[sessionId]);
   }, 10000);
+});
+
+// Task #add-version-timestamp: Add version endpoint
+app.get('/version', (req, res) => {
+  const versionInfo = getVersionInfo();
+  res.json(versionInfo);
 });
 
 // Serve static files from the 'site' folder (if needed)
