@@ -1758,8 +1758,10 @@
 
       this.height = new UInt16( bin, this.offset_in_file + 0x0b);
       this.weight = new UInt16( bin, this.offset_in_file + 0x0d);
-      this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
-      this.something4 = new UInt16( bin, this.offset_in_file + 0x11);
+      // Task: Track enemy_power and base_damage fields in binary data
+      // Based on hp_damage.mips analysis: 0x0f and 0x11 are actively used in damage calculations
+      this.enemyPower = new UInt16( bin, this.offset_in_file + 0x0f);  // Previously something3
+      this.baseDamage = new UInt16( bin, this.offset_in_file + 0x11);  // Previously something4
 
       this.centerPositionHeight = new UInt16( bin, this.offset_in_file + 0x19);
       this.shadowSize = new UInt8( bin, this.offset_in_file + 0x1b);
@@ -1887,8 +1889,8 @@
       + ", \"magic1\":" + (this.magic1.get() + "").padStart(5)
       + ", \"height\":" + (this.height.get() + "").padStart(5)
       + ", \"weight\":" + (this.weight.get() + "").padStart(5)
-      + ", \"something3\":" + (this.something3.get() + "").padStart(5)
-      + ", \"something4\":" + (this.something4.get() + "").padStart(5)
+      + ", \"enemyPower\":" + (this.enemyPower.get() + "").padStart(5)
+      + ", \"baseDamage\":" + (this.baseDamage.get() + "").padStart(5)
       + ", \"weaponDefense1\":" + (this.weaponDefense1.get() + "").padStart(5)
       + ", \"weaponDefense2\":" + (this.weaponDefense2.get() + "").padStart(5)
       + ", \"weaponDefense3\":" + (this.weaponDefense3.get() + "").padStart(5)
