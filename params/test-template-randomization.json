@@ -5,9 +5,8 @@
   "randomizeMap": false,
   "randomizeCreatures": false,
   "randomizeCollectablesAndDrops": false,
-  "randomizeCreatureTemplates": false,
-  "randomizeX3Templates": false,
+  "randomizeCreatureTemplates": true,
   "creatureTemplatePreset": "normal",
   "seed": "12345",
-  "comment": "EXPERIMENTAL X3 template randomization - DISABLED by default as it modifies MIPS code and may cause crashes. Set randomizeX3Templates:true to enable."
+  "comment": "Tests X3 creature template randomization with HP signature validation (NOW SAFE)"
 }

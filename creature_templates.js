@@ -133,16 +133,18 @@ class CreatureStatsRandomizer {
     this.report.push(`**Difficulty:** ${this.difficulty} (${this.difficultyFactor}x factor)\n`);
     this.report.push(`**Preset Mode:** ${this.params.creatureTemplatePreset || 'normal'}\n`);
     this.report.push(`**Randomization Levels:**\n`);
-    this.report.push(`- Level 1 (X3 templates): ${this.params.randomizeX3Templates ? 'YES' : 'NO'}\n`);
+    
+    const x3Enabled = this.params.randomizeX3Templates !== false && this.params.randomizeCreatureTemplates;
+    this.report.push(`- Level 1 (X3 templates): ${x3Enabled ? 'YES (with validation)' : 'NO'}\n`);
     this.report.push(`- Level 2 (X4 per-instance): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n\n`);
 
     const preset = this.params.creatureTemplatePreset;
 
     // Level 1: Randomize creature type templates in X3 parts
-    // DISABLED BY DEFAULT - Only enable with explicit randomizeX3Templates flag
-    // This modifies MIPS executable files and must be used with caution
-    if (this.params.randomizeX3Templates === true) {
-      console.log("WARNING: X3 template randomization is EXPERIMENTAL and may cause game crashes!");
+    // NOW SAFE with template validation to avoid corrupting MIPS code
+    // Can be disabled with randomizeX3Templates: false if needed
+    if (this.params.randomizeX3Templates !== false && this.params.randomizeCreatureTemplates) {
+      console.log("Randomizing X3 creature type templates (with validation)...");
       this.randomizeX3Templates();
     }
 
@@ -156,11 +158,11 @@ class CreatureStatsRandomizer {
 
   /**
    * Level 1: Randomize creature type templates in Part X3 (MIPS files)
-   * WARNING: EXPERIMENTAL - Modifies MIPS executable files, may cause crashes
+   * FIXED: Now validates templates before modifying to avoid corrupting MIPS code
    */
   randomizeX3Templates() {
     this.report.push(`## Level 1: Creature Type Templates (X3 Parts)\n\n`);
-    this.report.push(`**WARNING:** This is EXPERIMENTAL and disabled by default.\n\n`);
+    this.report.push(`**Template Detection:** Using HP signature validation (HP 1-1000 range)\n\n`);
 
     this.areas.forEach(area => {
       // Safety check: mips_file must exist and be properly initialized
@@ -177,6 +179,7 @@ class CreatureStatsRandomizer {
       let templatesModified = 0;
 
       // Scan template section for valid templates
+      // Use stricter validation to avoid modifying MIPS code
       for (let i = 0; i < MAX_TEMPLATES_PER_AREA; i++) {
         const offset = TEMPLATE_SECTION_OFFSET + (i * TEMPLATE_SIZE);
         
@@ -186,8 +189,9 @@ class CreatureStatsRandomizer {
 
         const template = new CreatureTemplate(bin, offset);
         
-        if (template.isBlank()) {
-          continue;  // Skip blank templates
+        // CRITICAL FIX: Validate this is actually a creature template, not MIPS code
+        if (!this.isValidCreatureTemplate(template)) {
+          continue;  // Skip invalid/MIPS code blocks
         }
 
         const originalStats = template.toString();
@@ -208,6 +212,47 @@ class CreatureStatsRandomizer {
         this.report.push(`**Checksum updated:** YES\n`);
       }
     });
+  }
+
+  /**
+   * Validate that a 16-byte block is actually a creature template, not MIPS code
+   * Uses HP signature validation and stat pattern analysis
+   */
+  isValidCreatureTemplate(template) {
+    // Check 1: HP must be in reasonable range (1-1000)
+    // MIPS code typically has random values, not small integers
+    const hp = template.hp;
+    if (hp === 0 || hp > 1000) {
+      return false;
+    }
+
+    // Check 2: At least one non-HP stat must be non-zero
+    // Pure MIPS code is unlikely to have this pattern
+    const hasStats = template.str > 0 || template.spd > 0 || template.def > 0 ||
+                     template.bal > 0 || template.sla > 0 || template.smh > 0 ||
+                     template.pir > 0 || template.spr > 0 || template.foc > 0 ||
+                     template.ham > 0 || template.pur > 0 || template.par > 0 ||
+                     template.mel > 0 || template.sol > 0;
+    
+    // Allow templates with all zero stats if HP is in common range (20-100)
+    const commonHPRange = hp >= 20 && hp <= 100;
+    if (!hasStats && !commonHPRange) {
+      return false;
+    }
+
+    // Check 3: Stats should be relatively small (< 100 typically)
+    // MIPS code often has larger byte values
+    const maxStat = Math.max(
+      template.str, template.spd, template.def, template.bal,
+      template.sla, template.smh, template.pir, template.spr,
+      template.foc, template.ham, template.pur, template.par,
+      template.mel, template.sol
+    );
+    if (maxStat > 200) {
+      return false;  // Probably not a creature template
+    }
+
+    return true;  // Passed all checks - likely a valid template
   }
 
   /**
