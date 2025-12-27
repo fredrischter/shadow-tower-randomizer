@@ -1450,6 +1450,45 @@ function randomize(paramsFile, stDir) {
         }
     }
 
+    function zeroAllCreatureStats(creature, area, index) {
+        console.log("DEBUG - Modifying speed for creature " + creature.name + " at " + area.name);
+
+        // Only modify speed in EntityStateData
+        if (creature.entityStates && creature.entityStates.length > 0) {
+            creature.entityStates.forEach((entityState) => {
+                // Type 0x20 = physical attack, Type 0x30 = spell/magic attack
+                if (entityState.type == 0x20 || entityState.type == 0x30) {
+                    var attackType = entityState.type == 0x20 ? "physical" : "spell/magic";
+                    
+                    // RESTORE: Keep attack values intact (don't zero)
+                    // These may control whether creature uses spells or not
+                    if (entityState.attack1 && !entityState.attack1.isNull()) {
+                        //console.log("  Keeping " + attackType + " attack1: " + entityState.attack1.get() + " (unchanged)");
+                         entityState.attack1.set(entityState.attack1.get()+1);
+                    }
+                    if (entityState.attack2 && !entityState.attack2.isNull()) {
+                        //console.log("  Keeping " + attackType + " attack2: " + entityState.attack2.get() + " (unchanged)");
+                        //entityState.attack2.set(1);
+                    }
+                    if (entityState.attack3 && !entityState.attack3.isNull()) {
+                        //console.log("  Keeping " + attackType + " attack3: " + entityState.attack3.get() + " (unchanged)");
+                        //entityState.attack3.set(1);
+                    }
+
+                    if (entityState.actionSpeedTimer && !entityState.actionSpeedTimer.isNull()) {
+                        //entityState.actionSpeedTimer.set(100);
+                    }
+                    
+                    if (entityState.movementSpeed && !entityState.movementSpeed.isNull()) {
+                        //entityState.movementSpeed.set(100);
+                    }
+                }
+            });
+        }1
+        
+        console.log("  Speed modified for " + creature.name);
+    }
+
     function groupObjectsByKey(objects, params) {
       return objects.reduce((groupedObject, obj) => {
         const keyValue = obj.randomizationGroup(params);
@@ -1577,6 +1616,253 @@ function randomize(paramsFile, stDir) {
             //forEachCollectable(removeEachCollectable);
         }
 
+        // TEST: Copy demon_bat 0x30 EntityStateData to acid_slime 0x30 EntityStateData byte by byte
+        if (params.testCopyDemonBatToSlime) {
+            console.log("\n\n=== TEST: Copying demon_bat 0x30 EntityStateData to acid_slime 0x30 ===\n");
+            
+            // Get the creatures
+            var demonBat = human_world_solitary_region["09_demon_bat"];
+            var acidSlime = human_world_solitary_region["01_acid_slime"];
+            
+            if (!demonBat || !acidSlime) {
+                console.log("ERROR: Could not find demon_bat or acid_slime");
+            } else if (!demonBat.entityStates || demonBat.entityStates.length < 2) {
+                console.log("ERROR: demon_bat doesn't have enough entityStates");
+                console.log("demon_bat has " + (demonBat.entityStates ? demonBat.entityStates.length : 0) + " entityStates");
+            } else if (!acidSlime.entityStates || acidSlime.entityStates.length < 2) {
+                console.log("ERROR: acid_slime doesn't have enough entityStates");
+                console.log("acid_slime has " + (acidSlime.entityStates ? acidSlime.entityStates.length : 0) + " entityStates");
+            } else {
+                // Find the 0x30 type EntityStateData
+                // Look through all entity states to find the 0x30 type
+                var demonBatMagic = null;
+                var acidSlimeMagic = null;
+                
+                for (var i = 0; i < demonBat.entityStates.length; i++) {
+                    if (demonBat.entityStates[i].type == 0x30) {
+                        demonBatMagic = demonBat.entityStates[i];
+                        console.log("Found demon_bat 0x30 EntityStateData at index " + i);
+                        break;
+                    }
+                }
+                
+                for (var i = 0; i < acidSlime.entityStates.length; i++) {
+                    if (acidSlime.entityStates[i].type == 0x30) {
+                        acidSlimeMagic = acidSlime.entityStates[i];
+                        console.log("Found acid_slime 0x30 EntityStateData at index " + i);
+                        break;
+                    }
+                }
+                
+                if (!demonBatMagic) {
+                    console.log("ERROR: Could not find 0x30 type EntityStateData in demon_bat");
+                } else if (!acidSlimeMagic) {
+                    console.log("ERROR: Could not find 0x30 type EntityStateData in acid_slime");
+                } else {
+                    console.log("demon_bat 0x30 EntityStateData type: 0x" + demonBatMagic.type.toString(16));
+                    console.log("acid_slime 0x30 EntityStateData type: 0x" + acidSlimeMagic.type.toString(16));
+                    
+                    // Copy byte by byte - demon_bat 0x30 EntityStateData to acid_slime 0x30 EntityStateData
+                    // EntityStateData(pos 1074 size 30)  30  1  0 30 80  5  0  0 20  0  0  0 80  0 e8 13  0 50  0  2  0  8 ff ff ff ff 30  0 ff ff ff ff ff ff ff ff ff ff ff ff  0  0 ea fe a8 ff  0  0
+                    var srcBin = demonBatMagic.originalBin;
+                    var dstBin = acidSlimeMagic.originalBin;
+                    
+                    console.log("\nCopying from demon_bat offset 0x" + demonBatMagic.offset_in_file.toString(16) + " to acid_slime offset 0x" + acidSlimeMagic.offset_in_file.toString(16));
+                    console.log("Source length: " + srcBin.length + " bytes, Dest length: " + dstBin.length + " bytes");
+                    console.log("Byte-by-byte copy (comment out lines you don't want to copy):\n");
+                
+                    // Byte 0x00: type (0x30)
+                    dstBin[0x00] = srcBin[0x00]; console.log("Byte 0x00: 0x" + srcBin[0x00].toString(16).padStart(2, '0') + " (type)");
+                    
+                    // Byte 0x01: subtype
+                    dstBin[0x01] = srcBin[0x01]; console.log("Byte 0x01: 0x" + srcBin[0x01].toString(16).padStart(2, '0') + " (subtype)");
+                    
+                    // Byte 0x02: unknown
+                    dstBin[0x02] = srcBin[0x02]; console.log("Byte 0x02: 0x" + srcBin[0x02].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x03: unknown
+                    dstBin[0x03] = srcBin[0x03]; console.log("Byte 0x03: 0x" + srcBin[0x03].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x04: unknown
+                    dstBin[0x04] = srcBin[0x04]; console.log("Byte 0x04: 0x" + srcBin[0x04].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x05: unknown
+                    dstBin[0x05] = srcBin[0x05]; console.log("Byte 0x05: 0x" + srcBin[0x05].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x06: unknown
+                    dstBin[0x06] = srcBin[0x06]; console.log("Byte 0x06: 0x" + srcBin[0x06].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x07: unknown
+                    dstBin[0x07] = srcBin[0x07]; console.log("Byte 0x07: 0x" + srcBin[0x07].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x08: unknown
+                    dstBin[0x08] = srcBin[0x08]; console.log("Byte 0x08: 0x" + srcBin[0x08].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x09: unknown
+                    dstBin[0x09] = srcBin[0x09]; console.log("Byte 0x09: 0x" + srcBin[0x09].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x0a: unknown
+                    dstBin[0x0a] = srcBin[0x0a]; console.log("Byte 0x0a: 0x" + srcBin[0x0a].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x0b: unknown
+                    dstBin[0x0b] = srcBin[0x0b]; console.log("Byte 0x0b: 0x" + srcBin[0x0b].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x0c: unknown
+                    dstBin[0x0c] = srcBin[0x0c]; console.log("Byte 0x0c: 0x" + srcBin[0x0c].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x0d: unknown
+                    dstBin[0x0d] = srcBin[0x0d]; console.log("Byte 0x0d: 0x" + srcBin[0x0d].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x0e: unknown
+                    dstBin[0x0e] = srcBin[0x0e]; console.log("Byte 0x0e: 0x" + srcBin[0x0e].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x0f: unknown
+                    dstBin[0x0f] = srcBin[0x0f]; console.log("Byte 0x0f: 0x" + srcBin[0x0f].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x10: unknown
+                    dstBin[0x10] = srcBin[0x10]; console.log("Byte 0x10: 0x" + srcBin[0x10].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x11: unknown
+                    dstBin[0x11] = srcBin[0x11]; console.log("Byte 0x11: 0x" + srcBin[0x11].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x12: unknown
+                    dstBin[0x12] = srcBin[0x12]; console.log("Byte 0x12: 0x" + srcBin[0x12].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x13: unknown
+                    dstBin[0x13] = srcBin[0x13]; console.log("Byte 0x13: 0x" + srcBin[0x13].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x14: unknown
+                    dstBin[0x14] = srcBin[0x14]; console.log("Byte 0x14: 0x" + srcBin[0x14].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x15: unknown
+                    dstBin[0x15] = srcBin[0x15]; console.log("Byte 0x15: 0x" + srcBin[0x15].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x16: unknown
+                    dstBin[0x16] = srcBin[0x16]; console.log("Byte 0x16: 0x" + srcBin[0x16].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x17: unknown
+                    dstBin[0x17] = srcBin[0x17]; console.log("Byte 0x17: 0x" + srcBin[0x17].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x18: unknown
+                    dstBin[0x18] = srcBin[0x18]; console.log("Byte 0x18: 0x" + srcBin[0x18].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x19: unknown
+                    dstBin[0x19] = srcBin[0x19]; console.log("Byte 0x19: 0x" + srcBin[0x19].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x1a: unknown
+                    dstBin[0x1a] = srcBin[0x1a]; console.log("Byte 0x1a: 0x" + srcBin[0x1a].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x1b: unknown
+                    dstBin[0x1b] = srcBin[0x1b]; console.log("Byte 0x1b: 0x" + srcBin[0x1b].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x1c: unknown
+                    dstBin[0x1c] = srcBin[0x1c]; console.log("Byte 0x1c: 0x" + srcBin[0x1c].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x1d: unknown
+                    dstBin[0x1d] = srcBin[0x1d]; console.log("Byte 0x1d: 0x" + srcBin[0x1d].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x1e: unknown
+                    dstBin[0x1e] = srcBin[0x1e]; console.log("Byte 0x1e: 0x" + srcBin[0x1e].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x1f: unknown
+                    dstBin[0x1f] = srcBin[0x1f]; console.log("Byte 0x1f: 0x" + srcBin[0x1f].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x20: unknown
+                    dstBin[0x20] = srcBin[0x20]; console.log("Byte 0x20: 0x" + srcBin[0x20].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x21: unknown
+                    dstBin[0x21] = srcBin[0x21]; console.log("Byte 0x21: 0x" + srcBin[0x21].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x22: unknown
+                    dstBin[0x22] = srcBin[0x22]; console.log("Byte 0x22: 0x" + srcBin[0x22].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x23: unknown
+                    dstBin[0x23] = srcBin[0x23]; console.log("Byte 0x23: 0x" + srcBin[0x23].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x24: unknown
+                    dstBin[0x24] = srcBin[0x24]; console.log("Byte 0x24: 0x" + srcBin[0x24].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x25: unknown
+                    dstBin[0x25] = srcBin[0x25]; console.log("Byte 0x25: 0x" + srcBin[0x25].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x26: unknown
+                    dstBin[0x26] = srcBin[0x26]; console.log("Byte 0x26: 0x" + srcBin[0x26].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x27: unknown
+                    dstBin[0x27] = srcBin[0x27]; console.log("Byte 0x27: 0x" + srcBin[0x27].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x28: unknown
+                    dstBin[0x28] = srcBin[0x28]; console.log("Byte 0x28: 0x" + srcBin[0x28].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x29: unknown
+                    dstBin[0x29] = srcBin[0x29]; console.log("Byte 0x29: 0x" + srcBin[0x29].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x2a: unknown
+                    dstBin[0x2a] = srcBin[0x2a]; console.log("Byte 0x2a: 0x" + srcBin[0x2a].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x2b: unknown
+                    dstBin[0x2b] = srcBin[0x2b]; console.log("Byte 0x2b: 0x" + srcBin[0x2b].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x2c: unknown
+                    dstBin[0x2c] = srcBin[0x2c]; console.log("Byte 0x2c: 0x" + srcBin[0x2c].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x2d: unknown
+                    dstBin[0x2d] = srcBin[0x2d]; console.log("Byte 0x2d: 0x" + srcBin[0x2d].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x2e: unknown
+                    dstBin[0x2e] = srcBin[0x2e]; console.log("Byte 0x2e: 0x" + srcBin[0x2e].toString(16).padStart(2, '0'));
+                    
+                    // Byte 0x2f: unknown (last byte - size is 0x30 = 48 bytes)
+                    dstBin[0x2f] = srcBin[0x2f]; console.log("Byte 0x2f: 0x" + srcBin[0x2f].toString(16).padStart(2, '0'));
+                    
+                    console.log("\n=== Copy complete! All 48 bytes (0x30) of EntityStateData copied ===\n");
+                    
+                    // Now copy the creature spawn attributes (stats, defenses, etc.)
+                    console.log("\n=== Copying demon_bat creature attributes to acid_slime ===\n");
+                    
+                    // Stats (offsets 0x24-0x31)
+                    acidSlime.str.set(Math.min(0xff, demonBat.str.get()*5)); console.log("str (0x24): " + demonBat.str.get());
+                    acidSlime.spd.set(Math.min(0xff, demonBat.spd.get()*5)); console.log("spd (0x25): " + demonBat.spd.get());
+                    acidSlime.def.set(Math.min(0xff, demonBat.def.get()*5)); console.log("def (0x26): " + demonBat.def.get());
+                    acidSlime.bal.set(Math.min(0xff, demonBat.bal.get()*5)); console.log("bal (0x27): " + demonBat.bal.get());
+                    acidSlime.sla.set(Math.min(0xff, demonBat.sla.get()*5)); console.log("sla (0x28): " + demonBat.sla.get());
+                    acidSlime.smh.set(Math.min(0xff, demonBat.smh.get()*5)); console.log("smh (0x29): " + demonBat.smh.get());
+                    acidSlime.pir.set(Math.min(0xff, demonBat.pir.get()*5)); console.log("pir (0x2a): " + demonBat.pir.get());
+                    acidSlime.spr.set(Math.min(0xff, demonBat.spr.get()*5)); console.log("spr (0x2b): " + demonBat.spr.get());
+                    acidSlime.foc.set(Math.min(0xff, demonBat.foc.get()*5)); console.log("foc (0x2c): " + demonBat.foc.get());
+                    acidSlime.ham.set(Math.min(0xff, demonBat.ham.get()*5)); console.log("ham (0x2d): " + demonBat.ham.get());
+                    acidSlime.pur.set(Math.min(0xff, demonBat.pur.get()*5)); console.log("pur (0x2e): " + demonBat.pur.get());
+                    acidSlime.par.set(Math.min(0xff, demonBat.par.get()*5)); console.log("par (0x2f): " + demonBat.par.get());
+                    acidSlime.mel.set(Math.min(0xff, demonBat.mel.get()*5)); console.log("mel (0x30): " + demonBat.mel.get());
+                    acidSlime.sol.set(Math.min(0xff, demonBat.sol.get()*5)); console.log("sol (0x31): " + demonBat.sol.get());
+                    acidSlime.hp.set(Math.min(0xff, demonBat.hp.get()*5)); console.log("hp (0x32-0x33): " + demonBat.hp.get());
+                    
+                    // Attacks (offsets 0x04-0x09)
+                    acidSlime.attack1.set(Math.min(0xff, demonBat.attack1.get()*5)); console.log("attack1 (0x04): " + demonBat.attack1.get());
+                    acidSlime.attack2.set(Math.min(0xff, demonBat.attack2.get()*5)); console.log("attack2 (0x08): " + demonBat.attack2.get());
+                    acidSlime.magic1.set(Math.min(0xff, demonBat.magic1.get()*5)); console.log("magic1 (0x09): " + demonBat.magic1.get());
+                    
+                    // Physical properties
+                    acidSlime.height.set(demonBat.height.get()); console.log("height (0x0b-0x0c): " + demonBat.height.get());
+                    acidSlime.weight.set(demonBat.weight.get()); console.log("weight (0x0d-0x0e): " + demonBat.weight.get());
+                    acidSlime.centerPositionHeight.set(demonBat.centerPositionHeight.get()); console.log("centerPositionHeight (0x19-0x1a): " + demonBat.centerPositionHeight.get());
+                    acidSlime.shadowSize.set(demonBat.shadowSize.get()); console.log("shadowSize (0x1b): " + demonBat.shadowSize.get());
+                    
+                    // Defenses (offsets 0x4a-0x58)
+                    acidSlime.weaponDefense1.set(Math.min(0xff, demonBat.weaponDefense1.get()*5)); console.log("weaponDefense1 (0x4a-0x4b): " + demonBat.weaponDefense1.get());
+                    acidSlime.weaponDefense2.set(Math.min(0xff, demonBat.weaponDefense2.get()*5)); console.log("weaponDefense2 (0x4c-0x4d): " + demonBat.weaponDefense2.get());
+                    acidSlime.weaponDefense3.set(Math.min(0xff, demonBat.weaponDefense3.get()*5)); console.log("weaponDefense3 (0x4e-0x4f): " + demonBat.weaponDefense3.get());
+                    acidSlime.magDefense1.set(Math.min(0xff, demonBat.magDefense1.get()*5)); console.log("magDefense1 (0x50-0x51): " + demonBat.magDefense1.get());
+                    acidSlime.magDefense2.set(Math.min(0xff, demonBat.magDefense2.get()*5)); console.log("magDefense2 (0x52-0x53): " + demonBat.magDefense2.get());
+                    acidSlime.magDefense3.set(Math.min(0xff, demonBat.magDefense3.get()*5)); console.log("magDefense3 (0x54-0x55): " + demonBat.magDefense3.get());
+                    acidSlime.magDefense4.set(Math.min(0xff, demonBat.magDefense4.get()*5)); console.log("magDefense4 (0x56-0x57): " + demonBat.magDefense4.get());
+                    acidSlime.magDefense5.set(Math.min(0xff, demonBat.magDefense5.get()*5)); console.log("magDefense5 (0x58-0x59): " + demonBat.magDefense5.get());
+                    
+                    console.log("\n=== All creature attributes copied! ===\n");
+                }
+            }
+        }
+
         // Randomize creatures
         else if (params.randomizeCreatures) {
             // set all creatures to slime
@@ -1591,6 +1877,11 @@ function randomize(paramsFile, stDir) {
         }
 
         // ------- Adjust creature and equip levels for proper progression
+
+        // Task: Zero all creature stats if parameter is set
+        if (params.zeroAllCreatureStats) {
+            forEachValidCreature(zeroAllCreatureStats);
+        }
 
         // ------- ApplyDifficulty
 
@@ -1798,7 +2089,7 @@ function randomize(paramsFile, stDir) {
     human_world_hidden_region.objects[29].id.set(0x21); // hanging guy
     human_world_hidden_region.objects[0].id.set(0x82); // forge
 
-    //, to try 0x84 0x85 0x86 0x87
+    // Task: Remove falling stones event and invisible walls in Shadow Tower Part 1
 
 //    human_world_solitary_region.objects.forEach(obj => {
 //        if (obj.getType() == "scenery") {
