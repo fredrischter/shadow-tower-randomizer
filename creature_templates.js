@@ -133,30 +133,39 @@ class CreatureStatsRandomizer {
     this.report.push(`**Difficulty:** ${this.difficulty} (${this.difficultyFactor}x factor)\n`);
     this.report.push(`**Preset Mode:** ${this.params.creatureTemplatePreset || 'normal'}\n`);
     this.report.push(`**Randomization Levels:**\n`);
-    this.report.push(`- Level 1 (X3 templates): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n`);
+    this.report.push(`- Level 1 (X3 templates): ${this.params.randomizeX3Templates ? 'YES' : 'NO'}\n`);
     this.report.push(`- Level 2 (X4 per-instance): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n\n`);
 
     const preset = this.params.creatureTemplatePreset;
 
     // Level 1: Randomize creature type templates in X3 parts
-    if (this.params.randomizeCreatureTemplates) {
+    // DISABLED BY DEFAULT - Only enable with explicit randomizeX3Templates flag
+    // This modifies MIPS executable files and must be used with caution
+    if (this.params.randomizeX3Templates === true) {
+      console.log("WARNING: X3 template randomization is EXPERIMENTAL and may cause game crashes!");
       this.randomizeX3Templates();
     }
 
     // Level 2: Randomize per-instance stats in X4 parts (map files)
-    this.randomizeX4PerInstanceStats(preset);
+    if (this.params.randomizeCreatureTemplates) {
+      this.randomizeX4PerInstanceStats(preset);
+    }
 
     this.writeReport();
   }
 
   /**
    * Level 1: Randomize creature type templates in Part X3 (MIPS files)
+   * WARNING: EXPERIMENTAL - Modifies MIPS executable files, may cause crashes
    */
   randomizeX3Templates() {
     this.report.push(`## Level 1: Creature Type Templates (X3 Parts)\n\n`);
+    this.report.push(`**WARNING:** This is EXPERIMENTAL and disabled by default.\n\n`);
 
     this.areas.forEach(area => {
-      if (!area.mips_file || !area.mips_file.bin) {
+      // Safety check: mips_file must exist and be properly initialized
+      if (!area.mips_file || !area.mips_file.bin || !area.mips_index) {
+        this.report.push(`\nSkipping ${area.name} - mips_file not available\n`);
         return;
       }
 
