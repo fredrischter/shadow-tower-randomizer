@@ -4,6 +4,7 @@ const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 const map_shuffler = require('./map_shuffler');
 const randomizer_map = require('./randomizer_map');
+const creature_templates = require('./creature_templates');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
@@ -138,6 +139,55 @@ function randomize(paramsFile, stDir) {
     }
 
     data_model.setup(tfile, stDir, params);
+
+    // Creature Template Randomization System
+    // Load and randomize creature stat templates from FDAT.T Parts 43, 54, 55
+    let creatureTemplatesSystem = null;
+    if (params.randomizeCreatureTemplates || params.creatureTemplatePreset) {
+        console.log("\n=== Creature Template System ===");
+        creatureTemplatesSystem = new creature_templates.CreatureTemplates(tFilePath);
+        creatureTemplatesSystem.loadParts();
+        
+        // Apply preset-specific template modifications
+        if (params.creatureTemplatePreset === 'high-slime-stats') {
+            console.log("\nApplying HIGH SLIME STATS test preset");
+            
+            // Set acid slime to maximum stats
+            creatureTemplatesSystem.setTemplateHighStats(
+                creature_templates.KNOWN_TEMPLATES.acid_slime,
+                {
+                    str: 200, spd: 150, def: 180, bal: 150,
+                    sla: 200, smh: 200, pir: 200, spr: 250,  // Spirit = 250 for massive magic damage
+                    foc: 180, har: 180, pur: 200, par: 180,
+                    mel: 200, sol: 200, hp: 5000
+                }
+            );
+            
+            // Set blood slime to maximum stats
+            creatureTemplatesSystem.setTemplateHighStats(
+                creature_templates.KNOWN_TEMPLATES.blood_slime,
+                {
+                    str: 220, spd: 160, def: 200, bal: 160,
+                    sla: 220, smh: 220, pir: 220, spr: 255,  // Spirit = 255 (max) for testing
+                    foc: 200, har: 200, pur: 220, par: 200,
+                    mel: 250, sol: 220, hp: 6000
+                }
+            );
+            
+            console.log("Acid slime and blood slime set to extreme high stats for testing");
+        } else {
+            // Normal randomization with difficulty scaling
+            creatureTemplatesSystem.randomizeTemplates(params);
+        }
+        
+        // Generate report
+        creatureTemplatesSystem.generateReport(changeSetPath + path.sep + 'creature_templates_report.md');
+        
+        // Write modified parts back (with checksums!)
+        creatureTemplatesSystem.writeParts();
+        
+        console.log("=== Creature Template System Complete ===\n");
+    }
 
     const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
     //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
