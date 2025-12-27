@@ -1,0 +1,25 @@
+# ST.EXE Patch: zero_attack_power_reads
+# Description: Zeros out all EntityStateData.attack1 reads at offset 0x1a. If damage becomes zero, proves attack power comes from EntityStateData.
+#
+# File: iso-dump/ST.EXE
+# Apply with: hex editor or custom patcher
+#
+
+## Patch at offset 0x028514
+Description: Zero attack1 power read #1
+Original: 97 a6 00 1a
+New:      00 00 30 25
+Runtime:  0x80038514
+
+## Patch at offset 0x028570
+Description: Zero attack1 power read #2
+Original: 97 a6 00 1a
+New:      00 00 30 25
+Runtime:  0x80038570
+
+## Patch at offset 0x02d8c4
+Description: Zero attack1 power read #3
+Original: 87 a3 00 1a
+New:      00 00 18 25
+Runtime:  0x8003d8c4
+

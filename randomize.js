@@ -4,6 +4,7 @@ const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 const map_shuffler = require('./map_shuffler');
 const randomizer_map = require('./randomizer_map');
+const creature_templates = require('./creature_templates');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
@@ -138,6 +139,19 @@ function randomize(paramsFile, stDir) {
     }
 
     data_model.setup(tfile, stDir, params);
+
+    // Creature Stats Randomization System
+    // Randomizes creature stats that are embedded in each area's map file
+    // Stats are already loaded in area.creatures[] by data_model.setup()
+    if (params.randomizeCreatureTemplates || params.creatureTemplatePreset) {
+        console.log("\n=== Creature Stats Randomization System ===");
+        
+        // Randomize creature stats using the corrected system
+        // This modifies the Creature objects' stat fields directly
+        creature_templates.randomizeCreatureStats(data_model.areas, params, changeSetPath);
+        
+        console.log("=== Creature Stats Randomization Complete ===\n");
+    }
 
     const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
     //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});

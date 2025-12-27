@@ -1,0 +1,185 @@
+================================================================================
+                    SHADOW TOWER HP DECOMPILATION
+                         Complete Analysis
+================================================================================
+
+PROBLEM STATEMENT:
+------------------
+"HP value at 198f2a is changed on 0x8003d7f8 runtime instruction"
+
+SOLUTION DELIVERED:
+-------------------
+✓ Located instruction in ST.EXE at file offset 0x2dff8
+✓ Disassembled complete function (InitializePlayerState)
+✓ Decompiled to readable C code
+✓ Created reusable analysis tools
+
+================================================================================
+                           ADDRESS MAPPINGS
+================================================================================
+
+Runtime Address:    0x8003d7f8  (Where code executes in PSX memory)
+                         ↓
+File Offset:        0x2dff8     (Position in ST.EXE file)
+                         ↓
+Instruction:        a440019c    (MIPS machine code)
+                         ↓
+Assembly:           sh $zero, 0x19c($v0)
+                         ↓
+C Code:             state->hp_array[6] = 0;
+
+================================================================================
+                      INSTRUCTION BREAKDOWN
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────┐
+│ sh $zero, 0x19c($v0)                                            │
+│                                                                 │
+│ • sh      = Store Halfword (16 bits)                           │
+│ • $zero   = Register always containing 0                       │
+│ • 0x19c   = Offset from base address                           │
+│ • ($v0)   = Base register containing 0x801a8f28                │
+│                                                                 │
+│ Result: Writes 0 to address 0x801a8f28 + 0x19c = 0x801a90c4    │
+└─────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                    FUNCTION: InitializePlayerState
+================================================================================
+
+Address:     0x8003d794 - 0x8003d840
+Size:        160 bytes (40 instructions)
+Purpose:     Initialize/reset player state structure
+
+What it does:
+  1. Loads global PlayerState structure at 0x801a8f28
+  2. Saves values from offsets 0x002 and 0x004
+  3. CLEARS HP ARRAY (26 halfwords, offsets 0x190-0x1c2)
+     ├─ Clears offset 0x190
+     ├─ Clears offset 0x192
+     │   ...
+     ├─ Clears offset 0x19c ← TARGET INSTRUCTION HERE
+     │   ...
+     └─ Clears offset 0x1c2
+  4. Restores saved values to multiple locations
+  5. Clears status byte at 0x238
+  6. Calls sub_8003c054() for more initialization
+
+================================================================================
+                        DATA STRUCTURE
+================================================================================
+
+PlayerState structure at runtime address 0x801a8f28:
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Offset  │ Type     │ Name          │ Description                │
+├─────────┼──────────┼───────────────┼────────────────────────────┤
+│ +0x002  │ uint16_t │ field_0x002   │ Saved/restored value       │
+│ +0x004  │ uint16_t │ field_0x004   │ Saved/restored value       │
+│ +0x006  │ uint16_t │ field_0x006   │ Copy destination           │
+│   ...   │          │               │                            │
+│ +0x18a  │ uint16_t │ field_0x18a   │ Copy destination           │
+│ +0x18c  │ uint16_t │ field_0x18c   │ Copy destination           │
+│ +0x190  │ uint16_t │ hp_array[0]   │ HP value #0                │
+│ +0x192  │ uint16_t │ hp_array[1]   │ HP value #1                │
+│   ...   │          │               │                            │
+│ +0x19c  │ uint16_t │ hp_array[6]   │ HP value #6 ← TARGET       │
+│   ...   │          │               │                            │
+│ +0x1c2  │ uint16_t │ hp_array[25]  │ HP value #25               │
+│ +0x02c  │ uint32_t │ field_0x02c   │ Cleared word               │
+│ +0x238  │ uint8_t  │ field_0x238   │ Status byte                │
+└─────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                         C DECOMPILATION
+================================================================================
+
+typedef struct {
+    uint16_t field_0x002;
+    uint16_t field_0x004;
+    uint16_t field_0x006;
+    // ... more fields ...
+    uint16_t field_0x18a;
+    uint16_t field_0x18c;
+    uint16_t hp_array[26];    // +0x190 to +0x1c2
+    uint32_t field_0x02c;
+    uint8_t  field_0x238;
+} PlayerState;
+
+void InitializePlayerState(void) {
+    PlayerState* state = (PlayerState*)0x801a8f28;
+    uint16_t saved_val1 = state->field_0x002;
+    uint16_t saved_val2 = state->field_0x004;
+    
+    // Clear HP array (compiler unrolled this loop)
+    for (int i = 0; i < 26; i++) {
+        state->hp_array[i] = 0;  // <-- Index 6 = target instruction
+    }
+    
+    state->field_0x238 = 0;
+    state->field_0x18a = saved_val1;
+    state->field_0x002 = saved_val1;
+    state->field_0x18c = saved_val2;
+    state->field_0x006 = saved_val2;
+    state->field_0x02c = 0;
+    
+    sub_8003c054();
+}
+
+================================================================================
+                         TOOLS PROVIDED
+================================================================================
+
+1. HP_DECOMPILATION_ANALYSIS.md (11 KB)
+   → Complete analysis with assembly and C code
+   
+2. disassemble_st_exe.py (11 KB)
+   → MIPS disassembler for ST.EXE
+   → Usage: python3 disassemble_st_exe.py 0x8003d7f8 --function
+   
+3. hex_viewer.py (3.5 KB)
+   → Hex dump viewer for ST.EXE
+   → Usage: python3 hex_viewer.py 0x8003d7f8 --bytes 128
+   
+4. DECOMPILATION_GUIDE.md (4.5 KB)
+   → User guide with examples and tips
+
+================================================================================
+                            CONCLUSION
+================================================================================
+
+The instruction at 0x8003d7f8 is NORMAL INITIALIZATION CODE that:
+  • Clears player HP values to 0
+  • Is part of a larger state reset function
+  • Uses compiler optimization (loop unrolling)
+  • Is NOT a bug or unexpected behavior
+
+The HP array likely represents:
+  • Different body part HP values (head, arms, legs, etc.)
+  • HP for different damage types
+  • Historical HP tracking over time
+
+================================================================================
+                         NEXT STEPS
+================================================================================
+
+To further investigate the HP system:
+  [ ] Find functions that READ HP values (lhu instructions)
+  [ ] Find functions that WRITE HP values during gameplay
+  [ ] Map complete PlayerState structure (all fields)
+  [ ] Analyze HP damage calculation code
+  [ ] Identify HP recovery/healing code
+  [ ] Reverse engineer body part damage system
+
+Use the provided tools to continue exploration!
+
+================================================================================
+                        FILE LOCATIONS
+================================================================================
+
+Executable:         iso-dump/ST.EXE (491,520 bytes)
+Function offset:    0x2df94 (188,308 bytes)
+Target offset:      0x2dff8 (188,408 bytes)
+HP data offset:     0x198f2a (1,675,050 bytes) [mentioned in problem]
+
+================================================================================

@@ -1,0 +1,13 @@
+# ST.EXE Patch: force_damage_to_one
+# Description: Forces all damage to be exactly 1 HP. Proves damage calculation flows through to HP write.
+#
+# File: iso-dump/ST.EXE
+# Apply with: hex editor or custom patcher
+#
+
+## Patch at offset 0x02dff4
+Description: Force all damage to be exactly 1 (for testing)
+Original: 00 00 00 00 a4 62 01 9c
+New:      34 02 00 01 a4 62 01 9c
+Runtime:  0x8003dff4
+

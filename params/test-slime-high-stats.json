@@ -1,0 +1,13 @@
+{
+	"label": "test-slime-high-stats",
+	"preset": "no-change",
+	"difficulty": "medium",
+	"randomizeMap": false,
+	"randomizeCreatures": false,
+	"randomizeCollectablesAndDrops": false,
+	"randomizeNonEssentialKeys": false,
+	"randomizeCreatureTemplates": true,
+	"creatureTemplatePreset": "high-slime-stats",
+	"seed": "slimetest1",
+	"comment": "Test preset that sets acid slime and blood slime to maximum stats for damage testing"
+}

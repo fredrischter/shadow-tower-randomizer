@@ -1,0 +1,13 @@
+{
+	"label": "randomized-with-template-stats",
+	"preset": "any%",
+	"difficulty": "hard",
+	"randomizeMap": true,
+	"randomizeCreatures": true,
+	"randomizeCollectablesAndDrops": true,
+	"randomizeCreatureTemplates": true,
+	"fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
+	"randomizeNonEssentialKeys": true,
+	"seed": "2",
+	"comment": "Full randomization including creature template stats with hard difficulty"
+}
