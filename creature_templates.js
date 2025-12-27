@@ -1,20 +1,25 @@
 'use strict';
 
 /**
- * Creature Stats Randomization System
+ * Creature Stats Randomization System - TWO-LEVEL ARCHITECTURE
  * 
- * Randomizes creature stats that are embedded in each area's map file.
- * Each Creature object (defined in data_model.js) has stats at offsets 0x24-0x32:
+ * LEVEL 1: Global Creature Type Templates (Part X3 - MIPS files)
+ * - Each area has creature type templates in Part X3 (logo_index + 2)
+ * - Templates at offset +0x2000 typically
+ * - 16-byte structure: 14 stats + 2-byte HP
+ * - Affects ALL instances of that creature type in the area
+ * 
+ * LEVEL 2: Per-Instance Creature Stats (Part X4 - Map files)
+ * - Each Creature object (defined in data_model.js) has stats at offsets 0x24-0x32
  * - str, spd, def, bal, sla, smh, pir, spr, foc, ham, pur, par, mel, sol, hp
- * 
- * These stats feed into EntityStateData and are used in damage calculations.
- * Spirit (spr) stat is particularly important as it feeds EntityStateData.enemy_power.
+ * - Overrides/customizes global template stats for specific spawns
+ * - Already loaded as area.creatures[] by data_model.js
  * 
  * Architecture:
  * - Each area has 10 FDAT.T parts starting from logo_index
- * - Map file is at logo_index + 3
- * - Creature stats are in the map file's entity data (sizedMixStarts[0])
- * - Creatures are already loaded as area.creatures[] by data_model.js
+ * - Part X3 (logo_index + 2): MIPS code + creature templates
+ * - Part X4 (logo_index + 3): Map file with spawn data
+ * - Both levels can be randomized independently or together
  */
 
 const fs = require('fs');
@@ -30,6 +35,89 @@ const DIFFICULTY_FACTORS = {
   'even-harder': 2.0
 };
 
+// Creature template structure (16 bytes)
+const TEMPLATE_SIZE = 16;
+const TEMPLATE_SECTION_OFFSET = 0x2000;  // Standard offset in X3 parts
+const MAX_TEMPLATES_PER_AREA = 128;      // Conservative estimate
+
+/**
+ * CreatureTemplate - Represents a single 16-byte creature type template in Part X3
+ */
+class CreatureTemplate {
+  constructor(bin, offset) {
+    this.bin = bin;
+    this.offset = offset;
+  }
+
+  // Stat getters/setters (bytes 0-13)
+  get str() { return this.bin[this.offset + 0]; }
+  set str(v) { this.bin[this.offset + 0] = Math.max(0, Math.min(255, v)); }
+  
+  get spd() { return this.bin[this.offset + 1]; }
+  set spd(v) { this.bin[this.offset + 1] = Math.max(0, Math.min(255, v)); }
+  
+  get def() { return this.bin[this.offset + 2]; }
+  set def(v) { this.bin[this.offset + 2] = Math.max(0, Math.min(255, v)); }
+  
+  get bal() { return this.bin[this.offset + 3]; }
+  set bal(v) { this.bin[this.offset + 3] = Math.max(0, Math.min(255, v)); }
+  
+  get sla() { return this.bin[this.offset + 4]; }
+  set sla(v) { this.bin[this.offset + 4] = Math.max(0, Math.min(255, v)); }
+  
+  get smh() { return this.bin[this.offset + 5]; }
+  set smh(v) { this.bin[this.offset + 5] = Math.max(0, Math.min(255, v)); }
+  
+  get pir() { return this.bin[this.offset + 6]; }
+  set pir(v) { this.bin[this.offset + 6] = Math.max(0, Math.min(255, v)); }
+  
+  get spr() { return this.bin[this.offset + 7]; }  // Spirit - critical for damage!
+  set spr(v) { this.bin[this.offset + 7] = Math.max(0, Math.min(255, v)); }
+  
+  get foc() { return this.bin[this.offset + 8]; }
+  set foc(v) { this.bin[this.offset + 8] = Math.max(0, Math.min(255, v)); }
+  
+  get ham() { return this.bin[this.offset + 9]; }
+  set ham(v) { this.bin[this.offset + 9] = Math.max(0, Math.min(255, v)); }
+  
+  get pur() { return this.bin[this.offset + 10]; }
+  set pur(v) { this.bin[this.offset + 10] = Math.max(0, Math.min(255, v)); }
+  
+  get par() { return this.bin[this.offset + 11]; }
+  set par(v) { this.bin[this.offset + 11] = Math.max(0, Math.min(255, v)); }
+  
+  get mel() { return this.bin[this.offset + 12]; }
+  set mel(v) { this.bin[this.offset + 12] = Math.max(0, Math.min(255, v)); }
+  
+  get sol() { return this.bin[this.offset + 13]; }
+  set sol(v) { this.bin[this.offset + 13] = Math.max(0, Math.min(255, v)); }
+  
+  // HP getter/setter (bytes 14-15, little-endian UInt16)
+  get hp() {
+    return this.bin[this.offset + 14] | (this.bin[this.offset + 15] << 8);
+  }
+  set hp(v) {
+    const clamped = Math.max(0, Math.min(65535, v));
+    this.bin[this.offset + 14] = clamped & 0xFF;
+    this.bin[this.offset + 15] = (clamped >> 8) & 0xFF;
+  }
+
+  isBlank() {
+    // Template is blank if all bytes are 0
+    for (let i = 0; i < TEMPLATE_SIZE; i++) {
+      if (this.bin[this.offset + i] !== 0) return false;
+    }
+    return true;
+  }
+
+  toString() {
+    return `Str=${this.str}, Spd=${this.spd}, Def=${this.def}, Spr=${this.spr}, HP=${this.hp}`;
+  }
+}
+
+/**
+ * CreatureStatsRandomizer - Handles both Level 1 (templates) and Level 2 (per-instance) randomization
+ */
 class CreatureStatsRandomizer {
   constructor(areas, params, changeSetPath) {
     this.areas = areas;
@@ -41,18 +129,117 @@ class CreatureStatsRandomizer {
   }
 
   randomize() {
-    this.report.push(`# Creature Stats Randomization Report\n`);
+    this.report.push(`# Creature Stats Randomization Report\n\n`);
     this.report.push(`**Difficulty:** ${this.difficulty} (${this.difficultyFactor}x factor)\n`);
-    this.report.push(`**Preset Mode:** ${this.params.creatureTemplatePreset || 'normal'}\n\n`);
+    this.report.push(`**Preset Mode:** ${this.params.creatureTemplatePreset || 'normal'}\n`);
+    this.report.push(`**Randomization Levels:**\n`);
+    this.report.push(`- Level 1 (X3 templates): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n`);
+    this.report.push(`- Level 2 (X4 per-instance): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n\n`);
 
     const preset = this.params.creatureTemplatePreset;
+
+    // Level 1: Randomize creature type templates in X3 parts
+    if (this.params.randomizeCreatureTemplates) {
+      this.randomizeX3Templates();
+    }
+
+    // Level 2: Randomize per-instance stats in X4 parts (map files)
+    this.randomizeX4PerInstanceStats(preset);
+
+    this.writeReport();
+  }
+
+  /**
+   * Level 1: Randomize creature type templates in Part X3 (MIPS files)
+   */
+  randomizeX3Templates() {
+    this.report.push(`## Level 1: Creature Type Templates (X3 Parts)\n\n`);
+
+    this.areas.forEach(area => {
+      if (!area.mips_file || !area.mips_file.bin) {
+        return;
+      }
+
+      this.report.push(`\n### Area: ${area.name} (Part ${area.mips_index})\n\n`);
+      this.report.push(`| Template Offset | Original Stats | New Stats |\n`);
+      this.report.push(`|-----------------|----------------|------------|\n`);
+
+      const bin = area.mips_file.bin;
+      let templatesModified = 0;
+
+      // Scan template section for valid templates
+      for (let i = 0; i < MAX_TEMPLATES_PER_AREA; i++) {
+        const offset = TEMPLATE_SECTION_OFFSET + (i * TEMPLATE_SIZE);
+        
+        if (offset + TEMPLATE_SIZE > bin.length) {
+          break;  // Beyond file bounds
+        }
+
+        const template = new CreatureTemplate(bin, offset);
+        
+        if (template.isBlank()) {
+          continue;  // Skip blank templates
+        }
+
+        const originalStats = template.toString();
+        
+        // Randomize template stats
+        this.randomizeTemplateStats(template);
+        
+        const newStats = template.toString();
+        this.report.push(`| 0x${offset.toString(16).padStart(6, '0')} | ${originalStats} | ${newStats} |\n`);
+        templatesModified++;
+      }
+
+      this.report.push(`\n**Templates modified:** ${templatesModified}\n`);
+
+      // CRITICAL: Update checksum after modifying X3 part
+      if (templatesModified > 0 && area.mips_file.setCheckSum) {
+        area.mips_file.setCheckSum();
+        this.report.push(`**Checksum updated:** YES\n`);
+      }
+    });
+  }
+
+  /**
+   * Randomize a single creature template's stats
+   */
+  randomizeTemplateStats(template) {
+    const variance = 0.3;  // ±30%
     
+    const stats = ['str', 'spd', 'def', 'bal', 'sla', 'smh', 'pir', 'spr', 
+                   'foc', 'ham', 'pur', 'par', 'mel', 'sol'];
+    
+    stats.forEach(statName => {
+      const original = template[statName];
+      if (original === 0) return;  // Don't modify zero stats
+      
+      const factor = 1 + (Math.random() * 2 - 1) * variance;  // 0.7 to 1.3
+      const scaled = original * factor * this.difficultyFactor;
+      template[statName] = Math.round(scaled);
+    });
+
+    // HP
+    const originalHP = template.hp;
+    if (originalHP > 0) {
+      const factor = 1 + (Math.random() * 2 - 1) * variance;
+      const scaled = originalHP * factor * this.difficultyFactor;
+      template.hp = Math.round(scaled);
+    }
+  }
+
+  /**
+   * Level 2: Randomize per-instance creature stats in Part X4 (map files)
+   */
+  randomizeX4PerInstanceStats(preset) {
+    this.report.push(`\n## Level 2: Per-Instance Creature Stats (X4 Parts)\n\n`);
+
     this.areas.forEach(area => {
       if (!area.creatures || area.creatures.length === 0) {
         return;
       }
 
-      this.report.push(`\n## Area: ${area.name}\n\n`);
+      this.report.push(`\n### Area: ${area.name} (Part ${area.map_index})\n\n`);
       this.report.push(`| Creature | Original Stats | New Stats |\n`);
       this.report.push(`|----------|----------------|------------|\n`);
 
@@ -73,13 +260,11 @@ class CreatureStatsRandomizer {
         this.report.push(`| ${creature.name} | ${originalStats} | ${newStats} |\n`);
       });
 
-      // Mark map file as modified - checksum will be updated during pack
+      // Mark map file as modified - checksum will be updated during pack.js
       if (area.map_file) {
         area.map_file.modified = true;
       }
     });
-
-    this.writeReport();
   }
 
   getCreatureStats(creature) {

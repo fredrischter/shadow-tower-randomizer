@@ -1,0 +1,11 @@
+{
+  "label": "test-template-randomization",
+  "preset": "no-change",
+  "difficulty": "medium",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "randomizeCreatureTemplates": true,
+  "creatureTemplatePreset": "normal",
+  "seed": "12345"
+}
