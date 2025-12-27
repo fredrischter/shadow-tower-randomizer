@@ -2192,6 +2192,10 @@ function randomize(paramsFile, stDir) {
                 attack2: creature.attack2 ? creature.attack2.get() : 0,
                 magic1: creature.magic1 ? creature.magic1.get() : 0,
                 
+                // Damage calculation fields (from binary analysis)
+                enemyPower: creature.enemyPower ? creature.enemyPower.get() : 0,
+                baseDamage: creature.baseDamage ? creature.baseDamage.get() : 0,
+                
                 // EntityStateData attacks
                 physicalAttacks: [],
                 magicAttacks: [],
@@ -2324,20 +2328,30 @@ function randomize(paramsFile, stDir) {
         md += '- **Area Score**: Indicates creature\'s position in randomized map progression (0 = start, higher = later)\n';
         md += '- **Power Score**: Calculated from base attributes + attacks + defenses after difficulty scaling\n';
         md += '- **Attack Values**: Shown are the actual scaled values (Type 0x20 = physical, Type 0x30 = magic)\n\n';
+        md += '### New Fields: Enemy Power & Base Damage\n\n';
+        md += '**Enemy Power (0x0f)** and **Base Damage (0x11)** are newly identified fields from binary analysis:\n\n';
+        md += '- **Source**: Found through MIPS analysis of `hp_damage.mips` damage calculation routines\n';
+        md += '- **Offset 0x0f (Enemy Power)**: UInt16 field with 10 references in damage code, used in multiplication operations\n';
+        md += '- **Offset 0x11 (Base Damage)**: UInt16 field with 10 references in damage code, used in arithmetic operations\n';
+        md += '- **Discovery**: These were previously labeled "something3" and "something4" - unknown fields missing from isolation patches\n';
+        md += '- **Hypothesis**: `damage = (baseDamage + attack1) × enemyPower - defenseValue`\n';
+        md += '- **Status**: Identified via binary analysis, requires Ghidra decompilation for formula confirmation\n\n';
+        md += 'See documentation in `decompilation/ISOLATION_PATCHES_RECAP.md` for complete analysis.\n\n';
         
         md += '---\n\n';
         md += '## Compact Creature Table (Sorted by Power)\n\n';
         md += '**Note:** Power values shown are after global difficulty scaling but do NOT include progression-based normalization.\n';
         md += 'Area Score indicates the creature\'s position in game progression (0 = start area, higher = later areas).\n\n';
-        md += '| Creature Name | Power | HP | Area Score | Physical (0x20) | Magic (0x30) | Area |\n';
-        md += '|---------------|-------|----|-----------|-----------------|--------------|-----------|\n';
+        md += '**Enemy Power (0x0f)** and **Base Damage (0x11)** are newly identified damage calculation fields from binary analysis.\n\n';
+        md += '| Creature Name | Power | HP | Area Score | EP | BD | Physical (0x20) | Magic (0x30) | Area |\n';
+        md += '|---------------|-------|----|-----------|----|----|-----------------|--------------|-----------|\n';
         
         sortedData.forEach(data => {
             const physAttacks = data.physicalAttacks.length > 0 ? data.physicalAttacks.join('; ') : '-';
             const magAttacks = data.magicAttacks.length > 0 ? data.magicAttacks.join('; ') : '-';
             const areaShort = data.area.replace(/_/g, ' ').substring(0, 25);
             
-            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${data.areaScore} | ${physAttacks} | ${magAttacks} | ${areaShort} |\n`;
+            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${data.areaScore} | ${data.enemyPower} | ${data.baseDamage} | ${physAttacks} | ${magAttacks} | ${areaShort} |\n`;
         });
         
         md += '\n---\n\n';
@@ -2387,6 +2401,7 @@ function randomize(paramsFile, stDir) {
             'STR', 'SPD', 'DEF', 'BAL', 'SLA', 'SMH', 'PIR', 'SPR',
             'FOC', 'HAM', 'PUR', 'PAR', 'MEL', 'SOL',
             'Attack1', 'Attack2', 'Magic1',
+            'Enemy Power (0x0f)', 'Base Damage (0x11)',
             'Physical Attacks (0x20)', 'Magic Attacks (0x30)'
         ].join(',');
         
@@ -2396,6 +2411,7 @@ function randomize(paramsFile, stDir) {
                 data.str, data.spd, data.def, data.bal, data.sla, data.smh, data.pir, data.spr,
                 data.foc, data.ham, data.pur, data.par, data.mel, data.sol,
                 data.attack1, data.attack2, data.magic1,
+                data.enemyPower, data.baseDamage,
                 '"' + data.physicalAttacks.join('; ') + '"',
                 '"' + data.magicAttacks.join('; ') + '"'
             ].join(',');
