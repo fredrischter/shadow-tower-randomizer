@@ -134,21 +134,28 @@ class CreatureStatsRandomizer {
     this.report.push(`**Preset Mode:** ${this.params.creatureTemplatePreset || 'normal'}\n`);
     this.report.push(`**Randomization Levels:**\n`);
     
-    const x3Enabled = this.params.randomizeX3Templates !== false && this.params.randomizeCreatureTemplates;
-    this.report.push(`- Level 1 (X3 templates): ${x3Enabled ? 'YES (with validation)' : 'NO'}\n`);
+    // DISABLED: X3 template randomization
+    // Root cause: X3 parts are MIPS executable code, not template databases
+    // Only Parts 43 and 55 have templates, but they're NOT in all X3 parts
+    // Attempting to randomize causes MIPS corruption → game freeze
+    const x3Enabled = false;  // ALWAYS DISABLED - unsafe architecture
+    this.report.push(`- Level 1 (X3 templates): ${x3Enabled ? 'YES' : 'NO - DISABLED (unsafe)'}\n`);
     this.report.push(`- Level 2 (X4 per-instance): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n\n`);
 
     const preset = this.params.creatureTemplatePreset;
 
-    // Level 1: Randomize creature type templates in X3 parts
-    // NOW SAFE with template validation to avoid corrupting MIPS code
-    // Can be disabled with randomizeX3Templates: false if needed
-    if (this.params.randomizeX3Templates !== false && this.params.randomizeCreatureTemplates) {
-      console.log("Randomizing X3 creature type templates (with validation)...");
+    // Level 1: DISABLED - X3 randomization is unsafe
+    // X3 parts contain MIPS executable code, not templates
+    // The templates we found in Part 43/55 are edge cases, not standard
+    // Trying to randomize all X3 parts corrupts the game
+    // NOTE: Keeping method for documentation purposes only
+    if (false) {  // NEVER enabled
+      console.log("X3 randomization DISABLED - unsafe architecture");
       this.randomizeX3Templates();
     }
 
     // Level 2: Randomize per-instance stats in X4 parts (map files)
+    // This is SAFE and works correctly
     if (this.params.randomizeCreatureTemplates) {
       this.randomizeX4PerInstanceStats(preset);
     }
