@@ -1758,8 +1758,10 @@
 
       this.height = new UInt16( bin, this.offset_in_file + 0x0b);
       this.weight = new UInt16( bin, this.offset_in_file + 0x0d);
-      this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
-      this.something4 = new UInt16( bin, this.offset_in_file + 0x11);
+      // Task: Track enemy_power and base_damage fields in binary data
+      // Based on hp_damage.mips analysis: 0x0f and 0x11 are actively used in damage calculations
+      this.enemyPower = new UInt16( bin, this.offset_in_file + 0x0f);  // Previously something3
+      this.baseDamage = new UInt16( bin, this.offset_in_file + 0x11);  // Previously something4
 
       this.centerPositionHeight = new UInt16( bin, this.offset_in_file + 0x19);
       this.shadowSize = new UInt8( bin, this.offset_in_file + 0x1b);

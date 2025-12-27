@@ -1,0 +1,1243 @@
+PS-X EXE
+Sony Computer Entertainment Inc. for North America area
+\LOAD02.TIM;1
+CHR0\M00.T
+COM\MO.T
+COM\FDAT.T
+COM\STAT.T
+COM\CRT.T
+COM\ICON.T
+COM\ITEM.T
+COM\EQUIP.T
+COM\TALKMSG.T
+\ST\XA0\HAM.XA;1
+\ST\XA0\SHOP0.XA;1
+\ST\XA0\SHOP1.XA;1
+\ST\XA0\SHOP2.XA;1
+\ST\XA0\SHOP3.XA;1
+\ST\XA0\03100.XA;1
+\ST\XA0\19010.XA;1
+\ST\XA0\30200.XA;1
+\ST\XA0\07900.XA;1
+\ST\XA0\10300.XA;1
+\ST\XA0\01300.XA;1
+\ST\XA0\04601.XA;1
+\ST\XA0\04400.XA;1
+\ST\XA0\09502.XA;1
+\ST\XA0\22700.XA;1
+\ST\XA0\10200.XA;1
+\ST\XA0\03000.XA;1
+\ST\XA0\09506.XA;1
+\ST\XA0\30400.XA;1
+\ST\XA0\10100.XA;1
+\ST\XA0\02400.XA;1
+\ST\XA0\10301.XA;1
+\ST\XA0\12300.XA;1
+\ST\XA0\22900.XA;1
+\ST\XA1\09503.XA;1
+\ST\XA1\10800.XA;1
+\ST\XA1\09504.XA;1
+\ST\XA1\11100.XA;1
+\ST\XA1\00100.XA;1
+\ST\XA1\02500.XA;1
+\ST\XA1\07700.XA;1
+\ST\XA1\10900.XA;1
+\ST\XA1\08100.XA;1
+\ST\XA1\09505.XA;1
+\ST\XA1\10302.XA;1
+\ST\XA1\20400.XA;1
+\ST\XA1\13900.XA;1
+\ST\XA1\01100.XA;1
+\ST\XA1\29500.XA;1
+\ST\XA1\30600.XA;1
+CHRX\MXX.T
+\st\itemcg\icon1\0000.tim
+\st\itemcg\icon5\0000.tim
+""""Z
+BASLUS-00863FS_ST
+B1FsN
+VUUYYi
+933YiY
+VUUej
+F*BYYi
+1YiY
+VUUej
+[euVm
+mDS]v
+{`wgp
+vwwg
+{`wgpB
+hlfX
+|ffgf
+wff(
+\hff(
+fffX
+"LD$
+""BB
+fHDhf$
+jffff$
+jfffh
+\st\itemcg\icon1\0000.tim
+\st\itemcg\icon5\0000.tim
+CdInit: Init failed
+none
+CdlReadS
+CdlSeekP
+CdlSeekL
+CdlGetTD
+CdlGetTN
+CdlGetlocP
+CdlGetlocL
+CdlSetmode
+CdlSetfilter
+CdlDemute
+CdlMute
+CdlReset
+CdlPause
+CdlStop
+CdlStandby
+CdlReadN
+CdlBackward
+CdlForward
+CdlPlay
+CdlSetloc
+CdlNop
+CdlSync
+DiskError
+DataEnd
+Acknowledge
+Complete
+DataReady
+NoIntr
+CD timeout: 
+%s:(%s) Sync=%s, Ready=%s
+DiskError: 
+com=%s,code=(%02x:%02x)
+CDROM: unknown intr
+(%d)
+CD_sync
+CD_ready
+%s...
+%s: no param
+CD_cw
+$Id: bios.c,v 1.86 1997/03/28 07:42:42 makoto Exp $
+CD_init:
+addr=%08x
+CD_datasync
+%s: path level (%d) error
+%s: dir was not found
+CdSearchFile: disc error
+CdSearchFile: searching %s...
+%s:  found
+%s: not found
+CD_newmedia: Read error in cd_read(PVD)
+CD001
+CD_newmedia: Disc format error in cd_read(PVD)
+CD_newmedia: Read error (PT:%08x)
+CD_newmedia: sarching dir..
+	%08x,%04x,%04x,%s
+CD_newmedia: %d dir entries found
+CD_cachefile: dir not found
+CD_cachefile: searching...
+	(%02x:%02x:%02x) %8d %s
+CD_cachefile: %d files found
+CdRead: sector error
+CdRead: Shell open...
+CdRead: retry...
+SPU:T/O [%s]
+wait (reset)
+wait (wrdy H -> L)
+wait (dmaf clear/W)
+VSync: timeout
+$Id: intr.c,v 1.76 1997/02/12 12:45:05 makoto Exp $
+unexpected interrupt(%04x)
+intr timeout(%04x:%04x)
+DMA bus error: code=%08x
+MADR[%d]=%08x
+0123456789ABCDEF
+0123456789abcdef
+$Id: sys.c,v 1.140 1998/01/12 07:52:27 noda Exp $
+ResetGraph:jtb=%08x,env=%08x
+ResetGraph(%d)...
+SetGraphDebug:level:%d,type:%d reverse:%d
+SetGrapQue(%d)...
+DrawSyncCallback(%08x)...
+SetDispMask(%d)...
+DrawSync(%d)...
+%s:bad RECT
+(%d,%d)-(%d,%d)
+ClearImage
+ClearImage2
+LoadImage
+StoreImage
+MoveImage
+ClearOTag(%08x,%d)...
+ClearOTagR(%08x,%d)...
+DrawOTag(%08x)...
+PutDrawEnv(%08x)...
+DrawOTagEnv(%08x,&08x)...
+PutDispEnv(%08x)...
+GPU timeout:que=%d,stat=%08x,chcr=%08x,madr=%08x
+LoadImage2
+$!0@
+$!P@
+B$4Q
+< Yc$	
+vG$!0
+B$! 
+B$! 
+$#(Q
+4!(@
+$!@@
+'!0@
+'!0@
+'!0@
+4!8`
+'!8`
+$!( 
+$! `
+$!(@
+'!( 
+'!  
+$! @
+c$! 
+c$6Z
+s&! 
+&! `
+&!  
+	$!P 
+&!  
+&!  
+&!  
+&! `
+<|SB$!
+xQB$
+0! D
+V4UU
+<VUR6`
+1&ff
+gfc4# 
+s&ff
+gfc4# 
+c4# 
+B$!0E
+c$! 
+	$!P 
+B$!(
+gfc4# 
+gfc4# 
+Y4!x
+c4# 
+B$!0E
+c$! 
+	$!P 
+&UU	<
+VU)5T
+gfc4# 
+'UU	<
+VU)5\
+gfc4# 
+c4# 
+B$!0E
+c$! 
+	$!P 
+B$!(
+HYP$d
+<HYE$
+G$! 
+<HYF$
+B02q
+<HYC$
+<HYE$
+0!0@
+B$fr
+<0"B$
+B0#r
+$trC
+ YT$
+<HYC$
+<!p`
+<HYC$
+HYc$@
+B$! b
+xJ$ 
+HYc$@
+B$! b
+(m#&@
+xJ$ 
+<HYc$@
+B$! b
+HYc$@
+B$! b
+(mc&@
+<HYC$
+B$!H
+<HYC$
+B$! b
+B$!Pb
+<HYC$
+B$! b
+B$!Hb
+<HYC$
+B$! b
+B$!Hb
+{1&4
+$!( 
+ YP$L
+{B$@
+$!H@
+$!H@
+&!@@
+$!H@
+&!@@
+$!H@
+&!@@
+c$!  
+< YE$ YC
+<$YB
+3! `
+<!( 
+$! `
+<gfB4
+$!(@
+e2! 
+P2! 
+2! @
+$! @
+$!(@
+%2! @
+4! d
+PU$@
+<!(`
+B$B!
+(&! 
+<?YB
+R0! @
+S0! `
+<?YB
+7&!0
+<?YB
+P^$@
+$!0@
+$! @
+$!0@
+4!(C
+B4! @
+4!@C
+4!(C
+B4! @
+<)YB
+B$!PC
+B$!PC
+R0!0
+R0!@
+4!(C
+4!(C
+4!(C
+4!0C
+4!HC
+H0C!
+B$!0C
+B$! C
+B$! C
+B$! C
+B$! C
+4!HC
+4!(C
+4!PC
+4!HC
+V$! `
+V$! `
+B$@@
+uV$L
+q2!0 
+$!0 
+gfB4
+&!(`
+&!0@
+$!8@
+r&! @
+q&!( 
+p&!0
+1&)YB
+02!0
+02!0
+&!8@
+<)YB
+<)YB
+$! D
+$!8@
+$!8@
+<gfB4
+$!8@
+4!(@
+4!0@
+4!8`
+02!0
+02!0
+P&!8
+F6!8`
+'!8@
+$!8@
+R&!8@
+$!8@
+$!8@
+&!8 
+&!8@
+$!8@
+$!8@
+$!8@
+$!8`
+R&!8@
+$!8@
+B4!(
+4!(@
+4!0@
+4!(@
+4!0@
+%!8`
+<% D
+$!8`
+vB$!
+&!8 
+VUc4@
+<% D
+&!8@
+2!0@
+$!0@
+$!( 
+< xB$!
+<gfB4
+02!0
+PU$!
+'!( 
+4!( 
+4!( 
+$!8 
+'!( 
+$!8 
+$!8 
+$!8 
+$!8 
+$!8 
+'!(`
+VUB4
+e&!0
+<gfc4
+4!(`
+<!  
+p2!0
+$! D
+&!8@
+$!8@
+$!8@
+$!8@
+$!8@
+$!8@
+F6!8
+gfB4
+D&!0
+<gfB4
+F6!8
+gfB4
+D&!0
+<gfB4
+vB$@
+r&!8@
+q&!8 
+q&!8 
+p&!8
+%!  
+< xc$!
+P2!0
+$!  
+B$!(C
+<)Yc
+<)YC
+<)YB
+<!  
+< YB$
+B$!(C
+$!0@
+4!8`
+$!0@
+$!8@
+$!X@
+$!H@
+$! @
+$! @
+$! @
+S0!(`
+$!(@
+$! @
+$! @
+HYQ&
+F$!(
+f&!(
+'! @
+$! @
+Q&!( 
+4! @
+Q&!( 
+P&!(
+<HY0& 
+<HYB$
+<HYD$0
+B$!  
+'!8`
+B$!(
+VUB4
+VUB4
+gfc4
+c$# 
+c$# 
+gfc4
+gfc4
+b(UU
+VUB4
+B0# 
+<xYB
+<$YC
+PB,;
+PB,2
+P$! 
+P$! 
+$!8@
+<HYB$
+B$da@
+P$! 
+Q$!  
+Q$!  
+P$! 
+P$! 
+P$! 
+P$! 
+P$! 
+P$! 
+P$! 
+M$!(
+vc$@
+vQ$@
+<VUB4
+<gf16
+<gfc4z
+xc$!(C
+1&!0
+ic4*
+F2!8
+C$! `
+@B$$
+< rB$
+$# C
+'!  
+xc$!
+< Rc$!
+'!0 
+$#@C
+'!0@
+'! `
+gfc4@ 
+gfB4
+xc$!
+xc$!
+xc$!
+B8+(
+xc$!
+<gfB4
+B$Da
+0!HH
+c$!PC
+0! e
+0! e
+0!(D
+0!(D
+0!(D
+0!(D
+<HYR$c
+<HYD$
+<HYR$
+<HYD$
+<HYG$,
+< YC
+ YD$
+<0"B$T
+$haC
+$^aC
+< Yc$
+r$!0B
+< YC
+ YD$
+<gfB4
+< YC
+< YC
+uc$!
+<,YB
+<0"B$T
+$haC
+$^aC
+< Yc$
+<HYB$
+B$da@
+<HYC$
+'!  
+$!  
+<HYC$
+'!  
+$!  
+<HYC$
+'!  
+gfc4
+<gfB4
+<HYF$
+'!  
+E&?S
+E&?S
+E&?S
+E&?S
+E&?S
+E&?S
+E&?S
+E&?S
+E&?S
+ Y"&
+< YC$
+< YB$
+C2!X
+< YB$
+c2!H@
+< YB$
+< YB$
+< YC
+ YD$
+< YD$
+$ Yb
+ Yc$
+ YB$
+< YE$
+< Yb
+< YD$
+< YD$
+< YB$
+< YB$
+< YB$
+< YB$
+< YB$
+< YB$
+< Yc$
+< YB$
+< YC
+ YQ$8
+<0"B$
+<0YB
+< YQ$
+<0"B$
+1&!  
+e&?S
+d& Y
+$ha"
+$^a"
+<>YC
+<1YC
+< YP$
+< YB$
+< YP$
+@#%!HC
+@#%!HC
+$!8C
+< YL%
+K$! 
+<HYG$
+$ YC
+<HYC$
+<HYC$
+<HYC$
+B$!0
+<HYC$
+B$!0
+HYP$
+<HYB$
+"Q$$
+HYc$8
+HYR$
+B0! @
+B0! @
+'!(`
+B0!H
+d$!0D
+$^ab
+<)Yc
+B$! 
+5B$@(
+B$Pa@
+$haC
+R&! 
+<,YB
+<,YB
+pB(	
+PB,Q
+PB,I
+E$8a
+B$8a@
+B4HY
+<HYP$
+<HYS$.
+#2# 
+<HYS$.
+#2# 
+<HYS$t
+$2# 
+<tYD
+$! `
+$! `
+'! `
+$! `
+'! `
+'!  
+'!  
+'! `
+xd$!pD
+B$R6
+<)YB
+B$!@b
+U0!(
+h$!8 
+$! @
+<gfc4
+<)YC
+s&x8
+$! @
+B$!(@
+B$haD
+S$Da`
+5t&!
+&Da"
+B$Da"
+< YW$!
+&La`
+B$Da
+F$\a
+c(ba
+E$!0
+'!0E
+B$0a@
+<0"B$D
+$! @
+B$zr@
+$!8`
+c4<=
+c$<=
+<,YB
+0"S$ 
+PB,>
+PB,6
+<0"c$!
+PB,Y
+PB,P
+<0"c$!8C
+<0"C$
+$!0`
+0"P$
+D&!(
+P&! 
+< YB
+"%!H@
+%!@@
+$!8@
+$!8@
+$!8@
+$!8@
+$!8`
+$!8`
+$!8`
+$!8`
+$!8@
+$!8@
+$!8@
+$!8@
+0"U$
+ YJ%
+ YJ%
+ B(7
+$!8`
+< 'B$
+B0<C
+ B(z
+$!8`
+$!8`
+ B(j
+gfc4
+<0"R$!
+<0"R$!
+< YB
+k%iab
+k%iab
+k%`.s%
+k%iab
+J%iaC
+`.s%
+J%iaB
+< Yk%H
+<0"B$(
+ Yk%x
+k%^aj
+<HYB$
+<HYP$
+< YJ%
+<0"B$P
+<HYB$
+B$da@
+Q$!  
+<HYP$
+vB$$
+e$C)
+uB$! 
+vB$B!
+<)YC
+'!0 
+xB$!Hb
+`HJ@
+$#(P
+$#(P
+ YV$
+HYU$8
+<8'B$
+B$%O
+&!  
+&!( 
+$!(S
+<! `
+B$@ 
+<! `
+<0"c$#(C
+< YE$	
+<0"T$
+<,YB
+<L'F$0
+<,YB
+<,YB
+<|'F$
+uB$! 
+uB$! 
+uB$!0
+<,YB
+<0"W$
+R& YC
+ YP$
+<,YB
+uB$9
+R&! @
+D&!(
+D&!(
+D&!(
+D&!(
+D&!(
+D&!(
+D&!(
+D&!(
+D&!(
+<0"N$
+c$!(
+c$!(
+c$!(
+<0"K$!H
+%!@`
+< YB$
+F$!(
+E&?S
+< YB$ 
+e&?S
+e&?S
+e&?S
+e&?S
+e&?S
+e&?S
+e&?S
+e&?S
+e&?S
+	$!(
+&!(`
+G$!0
+vG$0
+e&KS
+e&KS
+e&?S
+e&?S
+e&?S
+e&?S
+<@wR&! @
+e&?S
+e&?S
+e&KS
+e&KS
+<,YB
+<T(B$
+C$! 
+C$! 
+C$! 
+C$! 
+"*~`
+B$!8b
+<p(B$
+$!(`
+4!0`
+$!(@
+4!0@
+$!8 
+b0;_
+@B0E
+<87B$
+'!(E
+vB$@
+vc$@
+$! @
+'!0 
+$!( 
+$!( 
+$!(`
+4!0`
+<$)F$P
+vT$>
+@b0;_
+e&!0
+b$5p
+<@8B$
+b$5p
+@B09
+vB$@
+b0D_
+b0D_
+b0D_
+b0D_
+VUB4
+VUB4
+@B0H
+1&ff
+q&!( 
+E6!0
+$!(E
+gfc4
+PB0,
+E&!0
+1&mt
+t)F$
+q&!( 
+$!(@
+4!0@
+B$! 
+1&!(
+v^$!
+1&!P`
+U$gf
+b$4x
+vJ%!
+B$%y
+vJ%!
+vJ%!
+1&-Y
+@B0(
+G$! 
+)F$h
+&!(@
+1&!0 
+@c0B
+b$#|
+"&y|
+<gfB4
+r&!(@
+uq$!
+@B0B
+< YG$
+'!  
+@B0@
+Q&!(
+ b0H
+@B0=
+B&!0b
+1&! 
+ b02_
+b0;_
+ b02_
+B$;_
+@b01
+ b02_
+@b0!
+c$! 
+$! @
+<|*F$
+<\+F$
+<\2F$
+)%ff
+<gfB4$
+< YQ$`
+'!(`
+B$$Yc
+$!(@
+4!0@
+$!(@
+4!0@
+< YT$@
+@B0"
+$!0`
+@b0;_
+vB$@
+vc$@
+b0D_
+b0D_
+b0D_
+B$!8b
+B$!(
+vc$@
+b0D_
+b0D_
+b0D_
+B$!(b
+vB$!
+$!8@
+$!8`
+&!8@
+2!0@
+$!0@
+vB$@
+<89B$
+v)%!
+)%!8
+)%!0 
+$!0 
+v)%!
+$!0 
+$!0 
+F2!8
+<,	B$!
+Q&!( 
+$!( 
+4!0 
+vB$@
+c,! `
+1%!  
+0%!(
+< xc$!
+P2!0
+4%!8`
+$!0 
+%%!0 
+3%!8`
+2! d
+$!0@
+<% $
+$!0@
+$!  
+0&!(
+&6!8
+$! @
+<Pa?
+<Pa?
+<`a?
+<P	c$$
+$!( 
+2!( 
+<P	c$ 
+$!( 
+d2!( 
+<P	c$$
+$!( 
+2!( 
+ff	<gf)5
+<pac$I
+<pac$	
+<pac$
+<pac$	
+<xac$	
+<xac$	
+<xac$	
+'! @
+$!(@
+	$!0
+c$! 
+$!( 
+$!( 
+B2!  
+4!(@
+4!(`
+	$!8
+b1!@
+R&! 
+B4$P
+B4$(
+ "2+
+<Q c4
+$!(@
+<Q c4
+%! "
+4! @
+<! `
+BAc4
+<!(`
+'Ps	!
+$$PA
+	$"H*
+$"Xj
+$$PA
+	$"H*
+$"Xj
+H Xl
+$"Xc
+<$H!
+<$H!
+<$H!
+<$H!
+B$!x@
+k1&$
+<8kc
+wwc4$
+<$|B
+<$|B
+<@|B
+<@|"
+<@|"
+<@| 
+<D|B
+<H|c
+<P|$
+<P|&
+<P|B
+<P|B
+B$! `
+R&! 
+'!(@
+'!(@
+<`}c$
+<l}c$$
+<l}c$$
+0&! 
+D&!( 
+|s& 
+$!(@
+0&! 
+d&!( 
+$!(`
+$!(`
+$!( 
+<$0&
+?B0%
+<d~B
+<L~c
+<,~B
+<,~B
+<,~B
+<,~B
+<,~B
+<,~B
+<,~B
+<l~c
+<h~B
+<P~ 
+<h~ 
+<h~"
+<l~#
+<l~ 
+<P~"
+<x~c
+<@~B
+<h~c
+<l~B
+<P~B
+<h~c
+<l~B
+<L~B
+<\~ 
+<X~#
+<X~c
+<l~B
+<`~ 
+<L~B
+<X~c
+<l~B
+<|~c
+<x~c
+<P~"
+<|~c
+<X~B
+p~c$
+<X~c
+<8~c
+<X~B
+<X~B
+<p~c$
+<8~B
+<<~B
+<|~c
+<|~c
+<x~c
+<\~B
+<\~c
+<|~B
+<|~c
+<|~c
+<|~B
+<x~c
+<x~B
+<|~B
+<|~c
+<x~c
+5!8`
+<\~c
+<|~B
+<x~c
+<|~B
+<|~c
+c0! 
+<4~B
+<4~B
+	$!0
+<4~B
+<0~B
+<X~c
+<h~B
+<T~B
+<H~B
+<D~B
+<0~B
+<0~B
+<0~B
+<0~B
+< ~B
+<$~B
+<d~B
+<$~B
+< ~B
+$!  
+<X~c
+<p~c$
+<L~c
+<8~B
+<8~B
+<L~B
+<8~B
+<<~B
+< ~B
+< ~B
+<P~ 
+<d~ 
+< ~"
+<$~"
+<(~"
+<,~"
+B$! 
+<L~0
+<<~"
+<P~"
+<p~R& 
+<X~c
+<X~c
+<\~ 
+<l~B
+<X~#
+<`~B
+<`~B
+<`~B
+<0~"
+<4~"
+	"	'	,	1	7	<	A	F	K	P	U	Z	_	e	j	o	t	y	~	
+	|	v	o	i	b	\	U	O	I	C	<	6	0	*	$	
+Library Programs (c) 1993-1997 Sony Computer Entertainment Inc., All Rights Reserved.
+\ST\
