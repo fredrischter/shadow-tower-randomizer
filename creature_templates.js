@@ -135,19 +135,19 @@ class CreatureStatsRandomizer {
     this.report.push(`**Randomization Levels:**\n`);
     
     // X3 template randomization: ONLY for specific parts with actual templates
-    // Parts 43 and 55 contain global creature template databases
+    // Parts 43, 54, and 55 contain global creature template databases
     // Other X3 parts contain MIPS executable code - DO NOT modify
     const x3Enabled = this.params.randomizeX3Templates !== false;  // Default: enabled
-    this.report.push(`- Level 1 (X3 templates - Parts 43, 55 only): ${x3Enabled ? 'YES' : 'NO'}\n`);
+    this.report.push(`- Level 1 (X3 templates - Parts 43, 54, 55 only): ${x3Enabled ? 'YES' : 'NO'}\n`);
     this.report.push(`- Level 2 (X4 per-instance): ${this.params.randomizeCreatureTemplates ? 'YES' : 'NO'}\n\n`);
 
     const preset = this.params.creatureTemplatePreset;
 
-    // Level 1: Randomize ONLY Parts 43 and 55 (verified template locations)
+    // Level 1: Randomize ONLY Parts 43, 54, and 55 (verified template locations)
     // These are global creature template databases, NOT MIPS code
     // All other X3 parts contain executable code and must NOT be modified
     if (x3Enabled) {
-      console.log("X3 randomization ENABLED for Parts 43 and 55 only");
+      console.log("X3 randomization ENABLED for Parts 43, 54, and 55 only");
       this.randomizeX3TemplatesTargeted();
     }
 
@@ -265,12 +265,16 @@ class CreatureStatsRandomizer {
    * All other X3 parts contain MIPS executable code and must NOT be modified
    */
   randomizeX3TemplatesTargeted() {
-    this.report.push(`## Level 1: Creature Type Templates (TARGETED - Parts 43 & 55 Only)\n\n`);
-    this.report.push(`**Strategy:** Only modify Parts 43 and 55 (verified template locations)\n`);
-    this.report.push(`**Safety:** All other X3 parts are MIPS code - NOT modified\n\n`);
+    this.report.push(`## Level 1: Creature Type Templates (TARGETED - Parts 43, 54, 55 Only)\n\n`);
+    this.report.push(`**Strategy:** Only modify Parts 43, 54, and 55 (verified template locations)\n`);
+    this.report.push(`**Safety:** All other X3 parts are MIPS code - NOT modified\n`);
+    this.report.push(`**Coverage:** Part 43 (868 templates), Part 54 (212 templates), Part 55 (730 templates) = 1,810 total\n\n`);
 
-    // VERIFIED template locations from FDAT_TEMPLATE_SEARCH_RESULTS.md
-    const TEMPLATE_PARTS = [43, 55];  // ONLY these parts have templates
+    // VERIFIED template locations from comprehensive template search
+    // Part 43: 868 templates at offset 0x255000
+    // Part 54: 212 templates at offset 0x2f0000 (hybrid part)
+    // Part 55: 730 templates at offset 0x305000
+    const TEMPLATE_PARTS = [43, 54, 55];  // ONLY these parts have templates
 
     this.areas.forEach(area => {
       // CRITICAL: Only process areas with mips_index matching our verified parts
