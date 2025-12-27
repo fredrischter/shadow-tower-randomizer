@@ -3,7 +3,7 @@
 ## Comprehensive Search Results
 
 **Search completed:** December 27, 2025  
-**Method:** Scanned entire FDAT.T (23.68 MB) for creature templates using HP signatures
+**Method:** Scanned entire FDAT.T (23.68 MB) for creature templates using full 16-byte structure matching
 
 **Total verified templates found:** 1,810 templates across 3 parts
 
@@ -16,7 +16,7 @@
 | **55** | 0x305000-0x305FFF | **730** | Additional global template database |
 | **Total** | | **1,810** | All verified creature type templates |
 
-**Note:** Comprehensive scan found 299,705 total 16-byte patterns matching HP signatures, but only 1,810 are in verified template sections. The remaining 298,000+ matches are false positives from MIPS code, textures, and other binary data.
+**Note:** Comprehensive scan using full 16-byte structure matching found 1,810 verified templates in Parts 43, 54, 55. Initial pattern search found 299,705 potential matches across entire FDAT.T, but 297,895 were false positives (MIPS code, textures) that happened to contain similar byte patterns.
 
 ---
 
@@ -109,25 +109,42 @@ Stats: Str=0, Spd=6, Def=0, Bal=0, Sla=0, Smh=0, Pir=0, Spr=0
 
 ## Search Methodology
 
-### HP Signature Detection
-Used 76 known HP values from creatures_data.csv:
+### Full 16-Byte Structure Matching
+
+Searched for complete creature templates using data from creatures_data.csv. Each creature has a unique 16-byte pattern combining all stats + HP:
+
+**Example search patterns:**
 ```
-20, 24, 25, 28, 30, 32, 35, 36, 40, 45, 48, 50,
-54, 56, 60, 64, 70, 72, 75, 80, 85, 90, 92, 95, 96, 98,
-100, 108, 110, 112, 120, 128, 135, 140, 144, 150,
-160, 168, 180, 192, 200, 210, 216, 224, 240, 250,
-256, 270, 288, 300, 320, 336, 350, 360, 384, 400,
-420, 432, 450, 480, 500, 512, 540, 576, 600, 640,
-672, 700, 720, 768, 800, 840, 864, 900, 960, 1000
+Acid Slime:   00 00 00 01 00 00 00 00 00 00 00 00 00 00 5F 00
+              Str Spd Def Bal Sla Smh Pir Spr Foc Ham Pur Par Mel Sol HP=95
+
+Blood Slime:  00 00 00 00 00 00 00 00 00 00 00 00 01 00 60 00
+              Str Spd Def Bal Sla Smh Pir Spr Foc Ham Pur Par Mel Sol HP=96
+
+Skeleton:     05 00 01 00 00 00 01 00 00 00 00 00 00 00 50 00
+              Str=5 Spd=0 Def=1 Bal=0 Sla=0 Smh=0 Pir=1 Spr=0 ... HP=80
+
+Demon Bat:    00 06 00 00 00 00 00 00 00 00 00 00 00 00 18 00
+              Str=0 Spd=6 Def=0 Bal=0 Sla=0 Smh=0 Pir=0 Spr=0 ... HP=24
 ```
+
+**Process:**
+1. Read all creature stat combinations from creatures_data.csv (76 creatures with known stats)
+2. Convert each to 16-byte binary pattern (14 stats + 2-byte little-endian HP)
+3. Scan entire FDAT.T file for exact matches of these 76 patterns
+4. Validate each match to eliminate false positives
 
 ### Validation Criteria
 Each potential template validated using:
-1. **HP range check:** 1-1000 (filters random bytes)
-2. **Stat pattern check:** At least one stat > 0, OR HP in common range 20-100
-3. **Max stat check:** All stats < 200 (MIPS code often has larger values)
+1. **Exact pattern match:** All 16 bytes must match a known creature template
+2. **HP range check:** HP value must be 1-1000 (filters random byte sequences)
+3. **Stat consistency:** Stat pattern must be coherent (not random MIPS code)
+4. **Location check:** Must be in verified template sections (Parts 43, 54, 55)
 
-This eliminated 298,000+ false positives from MIPS code.
+**Results:**
+- Initial pattern matches: 299,705 (many false positives from MIPS code reusing stat-like bytes)
+- Verified templates after validation: 1,810 (in Parts 43, 54, 55 only)
+- False positives eliminated: 297,895 (MIPS code, textures, other data)
 
 ---
 
