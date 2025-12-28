@@ -10,19 +10,25 @@ Complete MIPS disassembly of ST.EXE covering runtime addresses 0x80030000 to 0x8
 **Lines:** 16,358  
 **Coverage:** 65,536 bytes (0x10000 bytes)  
 **Runtime Range:** 0x80030000 - 0x80040000  
-**File Offset Range:** 0x20000 - 0x30000  
+**File Offset Range:** 0x20800 - 0x30800 (accounting for 0x800 byte PSX header)
 
 ## Address Mapping
 
-```
-Runtime Address = File Offset + 0x80010000
-File Offset = Runtime Address - 0x80010000
+### PSX Executable Format
 
-Example:
-  Runtime 0x80030000 → File 0x20000
-  Runtime 0x8003d430 → File 0x2d430
-  Runtime 0x8003d7f8 → File 0x2d7f8
-  Runtime 0x80040000 → File 0x30000
+PSX .EXE files have a 0x800 byte header before the code begins. This must be accounted for in address mapping.
+
+```
+Runtime Address = (File Offset - 0x800) + 0x80010000
+File Offset = (Runtime Address - 0x80010000) + 0x800
+
+VMA Adjustment: 0x8000f800 (= 0x80010000 - 0x800)
+
+Examples:
+  Runtime 0x80030000 → File 0x20800 (0x20000 + 0x800)
+  Runtime 0x8003d430 → File 0x2d430 + 0x800 = 0x2dc30
+  Runtime 0x8003c7f8 → File 0x2cff8 (verified: lhu v1,-28888(s1))
+  Runtime 0x80040000 → File 0x30800 (0x30000 + 0x800)
 ```
 
 ## Key Locations in This Region
@@ -63,7 +69,7 @@ When debugging Shadow Tower at runtime:
 **Command used:**
 ```bash
 mipsel-linux-gnu-objdump -D -b binary -m mips:3000 \
-  --adjust-vma=0x80010000 \
+  --adjust-vma=0x8000f800 \
   --start-address=0x80030000 \
   --stop-address=0x80040000 \
   decompilation/ST.EXE > ST_EXE_0x80030000_to_0x80040000.asm
@@ -73,8 +79,14 @@ mipsel-linux-gnu-objdump -D -b binary -m mips:3000 \
 - `-D` - Disassemble all sections
 - `-b binary` - Treat as raw binary
 - `-m mips:3000` - MIPS R3000 architecture (PSX CPU)
-- `--adjust-vma=0x80010000` - Adjust virtual memory addresses for correct runtime mapping (Runtime = File + 0x80010000)
-- `--start-address` / `--stop-address` - Range to disassemble
+- `--adjust-vma=0x8000f800` - Adjust VMA accounting for 0x800 byte PSX header (0x80010000 - 0x800)
+- `--start-address` / `--stop-address` - Runtime address range to disassemble
+
+**Why 0x8000f800?**
+- PSX .EXE has 0x800 byte header
+- Code starts at file offset 0x800, not 0x0
+- Runtime 0x80030000 corresponds to file offset 0x20800
+- VMA = Runtime - (File Offset - Header) = 0x80030000 - 0x20000 = 0x80010000 - 0x800 = 0x8000f800
 
 ## Finding Specific Patterns
 
