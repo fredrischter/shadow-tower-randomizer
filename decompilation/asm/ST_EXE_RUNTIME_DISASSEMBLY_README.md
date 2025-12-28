@@ -10,18 +10,19 @@ Complete MIPS disassembly of ST.EXE covering runtime addresses 0x80030000 to 0x8
 **Lines:** 16,358  
 **Coverage:** 65,536 bytes (0x10000 bytes)  
 **Runtime Range:** 0x80030000 - 0x80040000  
-**File Offset Range:** 0x20800 - 0x30800  
+**File Offset Range:** 0x20000 - 0x30000  
 
 ## Address Mapping
 
 ```
-Runtime Address = File Offset - 0x800 + 0x80010000
-File Offset = Runtime Address - 0x80010000 + 0x800
+Runtime Address = File Offset + 0x80010000
+File Offset = Runtime Address - 0x80010000
 
 Example:
-  Runtime 0x80030000 → File 0x20800
-  Runtime 0x8003d430 → File 0x2dc30
-  Runtime 0x80040000 → File 0x30800
+  Runtime 0x80030000 → File 0x20000
+  Runtime 0x8003d430 → File 0x2d430
+  Runtime 0x8003d7f8 → File 0x2d7f8
+  Runtime 0x80040000 → File 0x30000
 ```
 
 ## Key Locations in This Region
@@ -29,17 +30,17 @@ Example:
 ### Magic Damage Function (0x8003d430)
 
 **Runtime:** 0x8003d430 - 0x8003d7f8 (~968 bytes)  
-**File Offset:** 0x2dc30 - 0x2dff8  
+**File Offset:** 0x2d430 - 0x2d7f8  
 **Line in disassembly:** ~13,562  
 
 This is the HP damage calculation function that was successfully patched in ST.EXE.full_nop_1. When the first 256 bytes were NOPed, magic damage was set to 1.
 
 **First instruction at 0x8003d430:**
 ```mips
-8003d430:  1a004300  div  zero,v0,v1
+8003d430:  2000b0af  sw  s0,32(sp)
 ```
 
-Note: This differs from the expected function prologue (`sw $s0, 0x20($sp)`), suggesting the actual function may start slightly earlier or the bytes have been misinterpreted.
+This is the expected MIPS function prologue (saving $s0 register to stack at offset 32).
 
 ### Other Notable Regions
 
@@ -62,7 +63,7 @@ When debugging Shadow Tower at runtime:
 **Command used:**
 ```bash
 mipsel-linux-gnu-objdump -D -b binary -m mips:3000 \
-  --adjust-vma=0x8000f800 \
+  --adjust-vma=0x80010000 \
   --start-address=0x80030000 \
   --stop-address=0x80040000 \
   decompilation/ST.EXE > ST_EXE_0x80030000_to_0x80040000.asm
@@ -72,7 +73,7 @@ mipsel-linux-gnu-objdump -D -b binary -m mips:3000 \
 - `-D` - Disassemble all sections
 - `-b binary` - Treat as raw binary
 - `-m mips:3000` - MIPS R3000 architecture (PSX CPU)
-- `--adjust-vma=0x8000f800` - Adjust virtual memory addresses for correct runtime mapping
+- `--adjust-vma=0x80010000` - Adjust virtual memory addresses for correct runtime mapping (Runtime = File + 0x80010000)
 - `--start-address` / `--stop-address` - Range to disassemble
 
 ## Finding Specific Patterns
