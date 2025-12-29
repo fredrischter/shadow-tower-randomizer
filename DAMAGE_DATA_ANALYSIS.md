@@ -1,5 +1,9 @@
 # Damage Data Analysis - Shadow Tower
 
+## UPDATE: Spell/Magic Damage Source Found
+
+Based on user debugging feedback and further analysis, here's the complete damage flow from source to application.
+
 ## Key Finding: HP/Damage Data Location
 
 Based on analysis of the decompiled code, here are the key functions and addresses for tracking damage/effect data:
@@ -125,8 +129,125 @@ Add these memory watches:
 
 5. **Further processing** applies the damage to the entity
 
+## Spell/Magic Damage Calculation Source
+
+### Function: `func_0x8003e0a0()` - Spell Damage Calculator
+**Address:** 0x8003e0a0
+**Location in fluid.c:** ~Line 11200-11400
+
+This is the **source** function where spell/magic damage is calculated BEFORE being passed to the damage application function.
+
+### How Spell Damage is Calculated
+
+**Key Assembly Instructions (0x8003e488 - 0x8003e5b0):**
+
+1. **Load Base Damage Values** (0x8003e488, 0x8003e4f4, 0x8003e4f8):
+```assembly
+8003e488:  lhu  v0,0(s1)       # Load damage component 1 from array pointed by s1
+8003e4f4:  lhu  v0,0(s3)       # Load damage component 2 from array pointed by s3  
+8003e4f8:  lhu  v1,0(s4)       # Load damage component 3 from array pointed by s4
+```
+
+These are loading **spell base damage values** from arrays. The registers s1, s3, s4 point to different damage component tables.
+
+2. **Damage Calculation Loop** (0x8003e3f8 - 0x8003e57c):
+The function loops 6 times (checking `slti v0,a2,6` at 0x8003e588), calculating damage for different spell elements/types.
+
+3. **Formula Applied** (0x8003e430 - 0x8003e460):
+```assembly
+# Complex damage formula involving:
+# - Base damage values from arrays (s1, s3, s4)
+# - Distance modifier (650 - value)
+# - Multiplication and division operations
+# Result accumulated in s5 and s6
+```
+
+4. **Final Damage Calculation** (0x8003e594 - 0x8003e5b0):
+```assembly
+8003e594:  addu  v1,s6,s5         # Add accumulated damage components
+8003e598:  andi  v0,s8,0xffff      # Get multiplier from s8
+8003e59c:  mult  v1,v0             # Multiply total by spell power multiplier
+8003e5a4:  lw    a2,84(sp)         # Load target pointer
+8003e5a8:  mflo  t5                # Get multiplication result
+8003e5ac:  jal   0x8003d788        # Call damage application function
+8003e5b0:  sra   a0,t5,0xc         # Shift result right 12 bits = arg0 (damage value)
+```
+
+**The damage value passed to the application function is:** `(accumulated_damage * spell_power) >> 12`
+
+### Data Structure Pointers
+
+The spell damage components are loaded from memory arrays. To find the **source data addresses**, set breakpoints and check these registers:
+
+**During spell damage calculation (func_0x8003e0a0):**
+- **s1 register** - Points to damage component array 1
+- **s3 register** - Points to damage component array 2  
+- **s4 register** - Points to damage component array 3
+- **s8 register** - Contains spell power multiplier
+- **s5, s6 registers** - Accumulated damage values
+
+### Complete Damage Flow
+
+```
+Spell Cast
+  ↓
+func_0x8003e0a0 (0x8003e0a0) - DAMAGE SOURCE
+  │ 
+  ├─ Loads base damage from arrays at [s1], [s3], [s4]
+  ├─ Applies distance/range modifiers  
+  ├─ Loops through 6 damage components
+  ├─ Multiplies by spell power (s8)
+  ├─ Shifts result >> 12 to get final damage
+  │
+  └─> Calls func_0x8003d788 (0x8003d788) with calculated damage
+        ↓
+      func_0x8003d784 (0x8003d784) - DAMAGE APPLICATION
+        │
+        ├─ Loads damage cap from 0x80198f28
+        ├─ Compares calculated damage to cap
+        └─ Applies final damage (clamped to max)
+```
+
+## Debugging Spell Damage Source
+
+### Breakpoints for Spell Damage Origin
+
+1. **Set breakpoint at:** `0x8003e0a0`
+   - Entry point of spell damage calculation
+   - Check what values are in memory arrays
+
+2. **Set breakpoint at:** `0x8003e488`  
+   - First damage component load
+   - Check register **s1** to see array address
+   - Check **v0** after instruction to see loaded value
+
+3. **Set breakpoint at:** `0x8003e4f4`
+   - Second damage component load  
+   - Check register **s3** to see array address
+   - Check **v0** after instruction to see loaded value
+
+4. **Set breakpoint at:** `0x8003e4f8`
+   - Third damage component load
+   - Check register **s4** to see array address  
+   - Check **v1** after instruction to see loaded value
+
+5. **Set breakpoint at:** `0x8003e5b0`
+   - Final damage value before calling application function
+   - Check register **a0** for the calculated damage value
+   - Check register **t5** for pre-shift value
+
+### Memory Watches for Spell Damage
+
+When debugging, watch these locations:
+- **[s1]** - Spell damage component 1 array
+- **[s3]** - Spell damage component 2 array  
+- **[s4]** - Spell damage component 3 array
+- **s8 register** - Spell power multiplier
+- **s5 register** - Accumulated damage part 1
+- **s6 register** - Accumulated damage part 2
+
 ## Binary File Reference
 
 The damage data appears to be in the `hp_damage.mips` file (65KB) in the repository root.
 
-This likely contains the damage tables and related data that gets loaded at runtime to address `0x80198f28`.
+This likely contains the damage tables and related data that gets loaded at runtime to address `0x80198f28` and the spell damage component arrays.
