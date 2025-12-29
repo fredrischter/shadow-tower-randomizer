@@ -604,17 +604,10 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * equipsAttributeFactor)));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * equipsAttributeFactor)));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
-        // Task: Fix equipment weight - weight should NOT scale with difficulty like other stats
         if (!item.weight.isNull()) {
-            // Weight should remain reasonable regardless of difficulty
-            // Don't apply difficulty scaling to weight - it makes hard mode unplayable
-            // Weight is already randomized in randomizeEquipsStats(), so just keep base value
-            // item.weight.set(Math.min(255, Math.ceil(item.weight.get() * equipsAttributeFactor)));
-            // Actually, leave weight unchanged by difficulty - it's a physical property
+            // Weight not scaled by difficulty to avoid excessive weight in hard mode
         }
-        // Task: Increase minimum durability even on difficult mode
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            // Minimum durability should be at least 10, even on hardest difficulty
             item.max_dura.set(Math.max(10, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * equipsAttributeFactor)));
         }
@@ -942,17 +935,11 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * Math.pow(Math.random() + 0.5, 3))));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 3))));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 3))));
-        // Task: Fix equipment weight randomization - weight should stay reasonable
         if (!item.weight.isNull()) {
-            // Old code divided by random^3 which created extreme variations (8x lighter to 1.3x heavier)
-            // New approach: Keep weight proportional to original, with controlled randomization
-            // Weight should be relatively constant - it's a physical property
-            // Apply moderate random variation: 0.7x to 1.3x of original
-            var randomFactor = 0.7 + (Math.random() * 0.6); // Range: 0.7 to 1.3
+            var randomFactor = 0.7 + (Math.random() * 0.6);
             item.weight.set(Math.min(255, Math.max(1, Math.ceil(item.weight.get() * randomFactor))));
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            // Ensure minimum durability even after randomization
             item.max_dura.set(Math.max(10, Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3)))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
         }
