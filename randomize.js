@@ -604,12 +604,13 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * equipsAttributeFactor)));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * equipsAttributeFactor)));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
-        // Task: Fix equipment weight - weight should be proportional to attributes, lighter on easy, heavier on hard
+        // Task: Fix equipment weight - weight should NOT scale with difficulty like other stats
         if (!item.weight.isNull()) {
-            // Weight should scale with attributes: better stats = can be heavier
-            // On easy mode (factor > 1): lighter weight (better stats, lighter items)
-            // On hard mode (factor < 1): heavier weight (worse stats, heavier items)
-            item.weight.set(Math.min(255, Math.ceil(item.weight.get() * equipsAttributeFactor)));
+            // Weight should remain reasonable regardless of difficulty
+            // Don't apply difficulty scaling to weight - it makes hard mode unplayable
+            // Weight is already randomized in randomizeEquipsStats(), so just keep base value
+            // item.weight.set(Math.min(255, Math.ceil(item.weight.get() * equipsAttributeFactor)));
+            // Actually, leave weight unchanged by difficulty - it's a physical property
         }
         // Task: Increase minimum durability even on difficult mode
         if (!item.max_dura.isNull() && item.max_dura.get()) {
@@ -941,13 +942,14 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * Math.pow(Math.random() + 0.5, 3))));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 3))));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 3))));
-        // Task: Fix equipment weight randomization - weight should be proportional to item power
+        // Task: Fix equipment weight randomization - weight should stay reasonable
         if (!item.weight.isNull()) {
-            // Weight should correlate with item score: powerful items can be heavier
-            // Use score-based scaling instead of pure random
-            var scoreRatio = Math.max(0.5, Math.min(2.0, item.score() / 50)); // Normalize around score of 50
-            var randomFactor = Math.pow(Math.random() + 0.5, 2); // Less extreme than cube (1.5 range instead of 3)
-            item.weight.set(Math.min(255, Math.max(1, Math.ceil(item.weight.get() * scoreRatio * randomFactor))));
+            // Old code divided by random^3 which created extreme variations (8x lighter to 1.3x heavier)
+            // New approach: Keep weight proportional to original, with controlled randomization
+            // Weight should be relatively constant - it's a physical property
+            // Apply moderate random variation: 0.7x to 1.3x of original
+            var randomFactor = 0.7 + (Math.random() * 0.6); // Range: 0.7 to 1.3
+            item.weight.set(Math.min(255, Math.max(1, Math.ceil(item.weight.get() * randomFactor))));
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
             // Ensure minimum durability even after randomization
