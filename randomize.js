@@ -604,11 +604,17 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * equipsAttributeFactor)));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * equipsAttributeFactor)));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
+        // Task: Fix equipment weight - weight should be proportional to attributes, lighter on easy, heavier on hard
         if (!item.weight.isNull()) {
-            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+            // Weight should scale with attributes: better stats = can be heavier
+            // On easy mode (factor > 1): lighter weight (better stats, lighter items)
+            // On hard mode (factor < 1): heavier weight (worse stats, heavier items)
+            item.weight.set(Math.min(255, Math.ceil(item.weight.get() * equipsAttributeFactor)));
         }
+        // Task: Increase minimum durability even on difficult mode
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            item.max_dura.set(Math.max(5, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
+            // Minimum durability should be at least 10, even on hardest difficulty
+            item.max_dura.set(Math.max(10, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * equipsAttributeFactor)));
         }
 
@@ -935,11 +941,17 @@ function randomize(paramsFile, stDir) {
         item.mel.set(Math.min(255, Math.ceil(item.mel.get() * Math.pow(Math.random() + 0.5, 3))));
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 3))));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 3))));
+        // Task: Fix equipment weight randomization - weight should be proportional to item power
         if (!item.weight.isNull()) {
-            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 3))));
+            // Weight should correlate with item score: powerful items can be heavier
+            // Use score-based scaling instead of pure random
+            var scoreRatio = Math.max(0.5, Math.min(2.0, item.score() / 50)); // Normalize around score of 50
+            var randomFactor = Math.pow(Math.random() + 0.5, 2); // Less extreme than cube (1.5 range instead of 3)
+            item.weight.set(Math.min(255, Math.max(1, Math.ceil(item.weight.get() * scoreRatio * randomFactor))));
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3))));
+            // Ensure minimum durability even after randomization
+            item.max_dura.set(Math.max(10, Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3)))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
         }
         if (primaryConsumables.indexOf(item.itemIndex) == -1 && secondaryConsumables.indexOf(item.itemIndex) == -1) {

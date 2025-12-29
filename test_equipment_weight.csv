@@ -1,0 +1,17 @@
+Preset,Difficulty,Status,Issues,AvgWeight,MaxWeight,AvgWeightToScoreRatio,ProblematicItems
+test-only-bosses,medium,OK,0,0,0,0
+randomized-hard,hard,FAIL,65,234,41,113
+randomized-extreme-easy,extreme-easy,FAIL,95,247,40,98
+randomized-medium5,medium,OK,0,0,0,0
+test-randomized-easy,easy,FAIL,100,254,37,107
+randomized-medium10,medium,FAIL,87,235,39,113
+test-bonanza,easy,FAIL,96,237,38,105
+randomized-medium4,medium,FAIL,77,254,41,109
+randomized-medium8,medium,FAIL,85,253,38,118
+randomized-medium,medium,FAIL,94,234,41,113
+fix-king-hopper,medium,OK,0,0,0,0
+test-apocrypha-weak,extreme-easy,OK,0,0,0,0
+randomized-even-harder,even-harder,FAIL,60,241,39,110
+randomized-very-hard,very-hard,FAIL,60,241,39,110
+randomized-medium13,medium,OK,0,0,0,0
+custom-path-swap,easy,OK,0,0,0,0
