@@ -123,14 +123,21 @@ echo "=== Test Summary ==="
 if [ -f "$outputFile" ]; then
     totalTests=$(wc -l < "$outputFile")
     totalTests=$((totalTests - 1))  # Subtract header
-    failedTests=$(grep -c ",FAIL," "$outputFile" || echo "0")
+    
+    # Count failed tests safely
+    if grep -q ",FAIL," "$outputFile" 2>/dev/null; then
+        failedTests=$(grep -c ",FAIL," "$outputFile")
+    else
+        failedTests=0
+    fi
+    
     passedTests=$((totalTests - failedTests))
     
     echo "Total presets tested: $totalTests"
     echo "Passed: $passedTests"
     echo "Failed: $failedTests"
     
-    if [ "$failedTests" -gt 0 ]; then
+    if [ $failedTests -gt 0 ]; then
         echo ""
         echo "Failed presets:"
         grep ",FAIL," "$outputFile" | cut -d',' -f1
