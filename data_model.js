@@ -361,6 +361,72 @@
     return ATTR_BY_ID[this.getAttributeType()];
   }
 
+  //===== START SPELL DAMAGE DATA
+  
+  // Spell damage data found at runtime address 0x8018D73A
+  // File: FDAT.T Part 481, Subpart 3 (2b64-3b54.sizedMixPart)
+  // Used in func_0x8003e0a0() - spell damage calculation function
+  // Loaded at addresses: 0x8003e488 (s1), 0x8003e4f4 (s3), 0x8003e4f8 (s4)
+  
+  global.SPELL_DAMAGE_DATA_PART_FILE_INDEX = 481;
+  global.SPELL_DAMAGE_DATA_PART_SUBFILE_INDEX = 3; // Subpart 3
+  global.SPELL_DAMAGE_DATA_PART_FILE_OFFSET_START = 0x138b800;
+  global.SPELL_DAMAGE_DATA_SUBPART_OFFSET = 0x2b64 + 12; // Offset within part 481
+  global.SPELL_DAMAGE_DATA_START_OFFSET = SPELL_DAMAGE_DATA_PART_FILE_OFFSET_START + SPELL_DAMAGE_DATA_SUBPART_OFFSET;
+  global.SPELL_DAMAGE_DATA_ENTRY_SIZE = 24; // 12 uint16 values = 24 bytes
+  global.SPELL_DAMAGE_DATA_ENTRY_COUNT = 170; // Total number of spell damage entries
+
+  class EffectData {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SPELL_DAMAGE_DATA_START_OFFSET + entryIndex * SPELL_DAMAGE_DATA_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SPELL_DAMAGE_DATA_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SPELL_DAMAGE_DATA_PART_FILE_INDEX];
+      
+      // Each entry contains 12 uint16 values (little-endian)
+      // These are damage components loaded in func_0x8003e0a0()
+      this.val0  = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1  = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2  = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3  = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4  = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0A);
+      this.val6  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0C);
+      this.val7  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0E);
+      this.val8  = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9  = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
+      this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+if (this.entryIndex>10 && this.entryIndex<100) {
+        this.val0.set(0);
+        this.val1.set(0);
+        this.val2.set(0);
+        this.val3.set(0);
+        this.val4.set(0);
+        this.val5.set(0);
+        this.val6.set(0);
+        this.val7.set(0);
+        this.val8.set(0);
+        this.val9.set(0);
+        this.val10.set(0);
+        this.val11.set(0);
+}
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `Effect[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+    }
+  }
+
+  //===== END SPELL DAMAGE DATA
+
   class ItemData  {
     constructor(itemIndex, lineSplit, line) {
       this.itemIndex = itemIndex;
@@ -521,6 +587,11 @@
     var lineSplit = line.split(" ").filter(n => n);
     itemData[i] = new ItemData(i, lineSplit, line);
     global.items.push(itemData[i]);
+  }
+
+  global.spells = [];
+  for (var i = 0 ; i < 170 ; i++) {
+    global.spells.push(new EffectData(i));
   }
 
   global.areas = [];
@@ -2379,6 +2450,11 @@
     console.log("\n** Item info dump");
     for (var i in items) {
       items[i].setup(FDAT);
+    }
+
+    console.log("\n** Spells info dump");
+    for (var i in spells) {
+      spells[i].setup(FDAT);
     }
 
     console.log("\n** Map info dump");
