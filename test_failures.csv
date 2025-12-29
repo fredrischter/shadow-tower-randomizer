@@ -1,5 +1,19 @@
 
 Result for ERROR: Found problems
-./generated/randomized-medium12/spoilers/readable.txt:ERROR - Couldn't distribute collectable uniques item_bf_master_gothic_shield
+./generated/test-only-bosses/spoilers/randomize.txt:ERROR - expected address 13b0 doesnt match 1388 EntityStateData(pos 1388 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-only-bosses/spoilers/randomize.txt:ERROR - expected address 14b8 doesnt match 1490 EntityStateData(pos 1490 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-only-bosses/spoilers/randomize.txt:ERROR - expected address 11ec doesnt match 11d8 EntityStateData(pos 11d8 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-easy/spoilers/randomize.txt:ERROR - expected address 13b0 doesnt match 1388 EntityStateData(pos 1388 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-easy/spoilers/randomize.txt:ERROR - expected address 14b8 doesnt match 1490 EntityStateData(pos 1490 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-easy/spoilers/randomize.txt:ERROR - expected address 11ec doesnt match 11d8 EntityStateData(pos 11d8 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-bonanza/spoilers/randomize.txt:ERROR - expected address 13b0 doesnt match 1388 EntityStateData(pos 1388 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-bonanza/spoilers/randomize.txt:ERROR - expected address 14b8 doesnt match 1490 EntityStateData(pos 1490 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-bonanza/spoilers/randomize.txt:ERROR - expected address 11ec doesnt match 11d8 EntityStateData(pos 11d8 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-medium/spoilers/randomize.txt:ERROR - expected address 13b0 doesnt match 1388 EntityStateData(pos 1388 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-medium/spoilers/randomize.txt:ERROR - expected address 14b8 doesnt match 1490 EntityStateData(pos 1490 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-medium/spoilers/randomize.txt:ERROR - expected address 11ec doesnt match 11d8 EntityStateData(pos 11d8 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-hard/spoilers/randomize.txt:ERROR - expected address 13b0 doesnt match 1388 EntityStateData(pos 1388 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-hard/spoilers/randomize.txt:ERROR - expected address 14b8 doesnt match 1490 EntityStateData(pos 1490 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+./generated/test-randomized-hard/spoilers/randomize.txt:ERROR - expected address 11ec doesnt match 11d8 EntityStateData(pos 11d8 size 14)   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 
 Result for memory crime: Didn't find failures.
