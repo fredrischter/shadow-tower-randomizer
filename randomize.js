@@ -606,6 +606,14 @@ function randomize(paramsFile, stDir) {
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
         if (!item.weight.isNull()) {
             item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+            // Task: Fix Too Heavy Weapons - Cap weight proportional to item score
+            // Base max ratio: 0.3 for medium difficulty, scales inversely with difficulty
+            // Easy mode (factor=2): ratio=0.15, Hard mode (factor=0.77): ratio=0.39
+            var maxWeightToScoreRatio = 0.3 / equipsAttributeFactor;
+            var maxAllowedWeight = Math.ceil(item.score() * maxWeightToScoreRatio);
+            if (maxAllowedWeight > 0 && item.weight.get() > maxAllowedWeight) {
+                item.weight.set(maxAllowedWeight);
+            }
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
             item.max_dura.set(Math.max(5, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
@@ -937,6 +945,14 @@ function randomize(paramsFile, stDir) {
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 3))));
         if (!item.weight.isNull()) {
             item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 3))));
+            // Task: Fix Too Heavy Weapons - Cap weight proportional to item score after randomization
+            // This ensures weight stays reasonable even with unlucky random rolls
+            // Use same ratio as difficulty adjustment (0.3 base, scaled by difficulty)
+            var maxWeightToScoreRatio = 0.3 / equipsAttributeFactor;
+            var maxAllowedWeight = Math.ceil(item.score() * maxWeightToScoreRatio);
+            if (maxAllowedWeight > 0 && item.weight.get() > maxAllowedWeight) {
+                item.weight.set(maxAllowedWeight);
+            }
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
             item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3))));
