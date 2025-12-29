@@ -1,0 +1,11 @@
+{
+  "label": "test-weight-easy",
+  "preset": "any%",
+  "difficulty": "easy",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": true,
+  "fieryKeyFlamingKeyDrop": "fiery-key-in-fire-world",
+  "randomizeNonEssentialKeys": false,
+  "seed": "12345"
+}

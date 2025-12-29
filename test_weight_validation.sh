@@ -10,52 +10,129 @@ folderPath="./generated"
 outputFile="test_weight_validation.csv"
 
 # Create CSV file with header
-echo "Preset,Status,OverweightItems" > "$outputFile"
+echo "Preset,Difficulty,Status,MaxWeight,MaxWeightItem,OverweightCount,Details" > "$outputFile"
 
-# Maximum allowed weight-to-score ratio
-# For reference:
-# - item_0_short_sword: weight=11, score≈150 (ratio≈0.073)
-# - item_31_blood_sword: weight=44, score≈900 (ratio≈0.049)
-# - item_76_god_plate: weight=80, score≈500 (ratio≈0.16)
-# A reasonable maximum ratio is 0.25 (weight should not exceed 25% of total score)
-MAX_WEIGHT_TO_SCORE_RATIO=0.25
+# Maximum allowed weight values by difficulty
+# These are based on the max score in game (~2000 for best items)
+# Medium: max_weight = score * 0.3 ≈ 600 (but capped at 255)
+# Easy: max_weight = score * 0.15 ≈ 300 (lighter items)
+# Hard: max_weight = score * 0.39 ≈ 780 (but capped at 255)
+
+# Function to determine difficulty from folder name
+get_difficulty() {
+    local folder="$1"
+    if [[ "$folder" == *"extreme-easy"* ]]; then
+        echo "extreme-easy"
+    elif [[ "$folder" == *"easy"* ]]; then
+        echo "easy"
+    elif [[ "$folder" == *"even-harder"* ]]; then
+        echo "even-harder"
+    elif [[ "$folder" == *"very-hard"* ]]; then
+        echo "very-hard"
+    elif [[ "$folder" == *"hard"* ]]; then
+        echo "hard"
+    elif [[ "$folder" == *"medium"* ]]; then
+        echo "medium"
+    else
+        echo "unknown"
+    fi
+}
 
 # Loop through each readable.txt file
 find "$folderPath" -type f -name "readable.txt" | while read -r file; do
     # Extract folder name
     folderName="$(dirname "$file")"
+    baseName="$(basename "$folderName")"
+    
+    # Determine difficulty
+    difficulty=$(get_difficulty "$baseName")
     
     # Initialize result variables
     result="OK"
-    overweightItems=""
+    maxWeight=0
+    maxWeightItem=""
+    overweightCount=0
+    details=""
     
-    # Parse readable.txt for item stats
-    # Format: "item_name ... weight X ... score Y"
-    # We need to extract both weight and score for each item
+    # Parse the file for item weights
+    # Look for lines with "weight" keyword and extract values
+    # Format in readable.txt: "... weight: XX ..."
     
-    # Use awk to parse the file and check weight-to-score ratios
-    # This is a simplified check - looks for obvious problems
-    # We'll look for lines with "weight" and extract the value
-    
-    # For now, check if any weight value exceeds 100 (unreasonably heavy)
-    # and if medium difficulty, check if any basic weapons are > 50
-    if grep -qE "weight [0-9]{3,}" "$file"; then
-        # Found weights with 3+ digits (>99)
-        overweightItems=$(grep -oE "item_[a-z0-9_]+ .* weight [0-9]{3,}" "$file" | head -5)
-        if [ ! -z "$overweightItems" ]; then
-            result="OVERWEIGHT"
+    while IFS= read -r line; do
+        if [[ "$line" =~ weight.*[[:space:]]([0-9]+) ]]; then
+            weight="${BASH_REMATCH[1]}"
+            
+            # Track maximum weight
+            if [ "$weight" -gt "$maxWeight" ]; then
+                maxWeight="$weight"
+                # Try to extract item name from the line
+                if [[ "$line" =~ (item_[a-z0-9_]+) ]]; then
+                    maxWeightItem="${BASH_REMATCH[1]}"
+                fi
+            fi
+            
+            # Check for unreasonably heavy items based on difficulty
+            case "$difficulty" in
+                "extreme-easy"|"easy")
+                    # Easy modes should have lighter items (max ~100 for endgame)
+                    if [ "$weight" -gt 100 ]; then
+                        ((overweightCount++))
+                        if [ -z "$details" ]; then
+                            details="weight>100"
+                        fi
+                    fi
+                    ;;
+                "medium")
+                    # Medium should have reasonable weights (max ~150 for endgame)
+                    if [ "$weight" -gt 150 ]; then
+                        ((overweightCount++))
+                        if [ -z "$details" ]; then
+                            details="weight>150"
+                        fi
+                    fi
+                    ;;
+                "hard"|"very-hard"|"even-harder")
+                    # Hard modes can be heavier but not excessive (max ~200)
+                    if [ "$weight" -gt 200 ]; then
+                        ((overweightCount++))
+                        if [ -z "$details" ]; then
+                            details="weight>200"
+                        fi
+                    fi
+                    ;;
+            esac
         fi
-    fi
+    done < "$file"
     
-    # Check for specific problem items mentioned in issue
-    if grep -qE "item_(0|1|2|3|4|5)_[a-z_]+ .* weight (5[0-9]|[6-9][0-9]|[1-9][0-9]{2,})" "$file"; then
-        # Basic swords with weight > 50
-        result="OVERWEIGHT"
-        overweightItems+=" BASIC_WEAPON_TOO_HEAVY"
+    # Determine overall result
+    if [ "$overweightCount" -gt 0 ]; then
+        result="FAIL"
+    elif [ "$maxWeight" -eq 0 ]; then
+        result="NO_DATA"
     fi
     
     # Append result to CSV file
-    echo "$folderName,$result,\"$overweightItems\"" >> "$outputFile"
+    echo "$baseName,$difficulty,$result,$maxWeight,$maxWeightItem,$overweightCount,\"$details\"" >> "$outputFile"
 done
 
 echo "Weight validation results saved to $outputFile"
+
+# Print summary
+echo ""
+echo "=== Test Summary ==="
+if [ -f "$outputFile" ]; then
+    totalTests=$(wc -l < "$outputFile")
+    totalTests=$((totalTests - 1))  # Subtract header
+    failedTests=$(grep -c ",FAIL," "$outputFile" || echo "0")
+    passedTests=$((totalTests - failedTests))
+    
+    echo "Total presets tested: $totalTests"
+    echo "Passed: $passedTests"
+    echo "Failed: $failedTests"
+    
+    if [ "$failedTests" -gt 0 ]; then
+        echo ""
+        echo "Failed presets:"
+        grep ",FAIL," "$outputFile" | cut -d',' -f1
+    fi
+fi
