@@ -2136,11 +2136,13 @@ function randomize(paramsFile, stDir) {
 
     //shadow_tower_part1.objects[0].destinationRotation.set(2);
 
+    // Task #45: Changed ERROR to WARNING - not distributing all items is expected for presets like any%, comedy, bonanza
+    // Only 100% preset guarantees all items are distributed
     if (collectableUniques.length) {
-        console.log("ERROR - Couldn't distribute collectable uniques " + collectableUniques.map(i => items[i].name));
+        console.log("WARNING - Couldn't distribute collectable uniques " + collectableUniques.map(i => items[i].name));
     }
     if (dropUniques.length) {
-        console.log("ERROR - Couldn't distribute drop uniques " + dropUniques.map(i => items[i].name));
+        console.log("WARNING - Couldn't distribute drop uniques " + dropUniques.map(i => items[i].name));
     }
 
     // Function to generate creature power value table (PR #14)
