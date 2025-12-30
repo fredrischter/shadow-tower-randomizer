@@ -451,10 +451,10 @@
     }
 
     toReadableString() {
-      return `Effect[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.pierce.get()} ${this.smash.get()} ` +
-        `${this.slash.get()} ${this.fire.get()} ${this.water.get()} ${this.poisonous.get()} ` +
-        `${this.acid.get()} ${this.holy.get()} ${this.dark.get()} ${this.status.get()}`;
+      return `Effect[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.pierce.get().toString(16).padStart(3)} ${this.smash.get().toString(16).padStart(3)} ` +
+        `${this.slash.get().toString(16).padStart(3)} ${this.fire.get().toString(16).padStart(3)} ${this.water.get().toString(16).padStart(3)} ${this.poisonous.get().toString(16).padStart(3)} ` +
+        `${this.acid.get().toString(16).padStart(3)} ${this.holy.get().toString(16).padStart(3)} ${this.dark.get().toString(16).padStart(3)} ${this.status.get().toString(16).padStart(3)}`;
     }
   }
 
@@ -495,10 +495,10 @@
     }
 
     toReadableString() {
-      return `DataSizedMix0[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+      return `DataSizedMix0[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)} ${this.val6.get().toString(16).padStart(5)} ${this.val7.get().toString(16).padStart(5)} ` +
+        `${this.val8.get().toString(16).padStart(5)} ${this.val9.get().toString(16).padStart(5)} ${this.val10.get().toString(16).padStart(5)} ${this.val11.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -537,11 +537,11 @@
     }
 
     toReadableString() {
-      return `DataSizedMix1[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()} ` +
-        `${this.val12.get()} ${this.val13.get()}`;
+      return `DataSizedMix1[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)} ${this.val6.get().toString(16).padStart(5)} ${this.val7.get().toString(16).padStart(5)} ` +
+        `${this.val8.get().toString(16).padStart(5)} ${this.val9.get().toString(16).padStart(5)} ${this.val10.get().toString(16).padStart(5)} ${this.val11.get().toString(16).padStart(5)} ` +
+        `${this.val12.get().toString(16).padStart(5)} ${this.val13.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -578,10 +578,10 @@
     }
 
     toReadableString() {
-      return `DataSizedMix2[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+      return `DataSizedMix2[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)} ${this.val6.get().toString(16).padStart(5)} ${this.val7.get().toString(16).padStart(5)} ` +
+        `${this.val8.get().toString(16).padStart(5)} ${this.val9.get().toString(16).padStart(5)} ${this.val10.get().toString(16).padStart(5)} ${this.val11.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -618,10 +618,10 @@
     }
 
     toReadableString() {
-      return `DataSizedMix4[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+      return `DataSizedMix4[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)} ${this.val6.get().toString(16).padStart(5)} ${this.val7.get().toString(16).padStart(5)} ` +
+        `${this.val8.get().toString(16).padStart(5)} ${this.val9.get().toString(16).padStart(5)} ${this.val10.get().toString(16).padStart(5)} ${this.val11.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -656,10 +656,10 @@
     }
 
     toReadableString() {
-      return `DataSizedMix5[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()}`;
+      return `DataSizedMix5[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)} ${this.val6.get().toString(16).padStart(5)} ${this.val7.get().toString(16).padStart(5)} ` +
+        `${this.val8.get().toString(16).padStart(5)} ${this.val9.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -694,10 +694,10 @@
     }
 
     toReadableString() {
-      return `DataSizedMix6[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()}`;
+      return `DataSizedMix6[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)} ${this.val6.get().toString(16).padStart(5)} ${this.val7.get().toString(16).padStart(5)} ` +
+        `${this.val8.get().toString(16).padStart(5)} ${this.val9.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -728,9 +728,9 @@
     }
 
     toReadableString() {
-      return `DataSizedMix9[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()}`;
+      return `DataSizedMix9[${this.entryIndex.toString(16).padStart(5)}]: ` +
+        `${this.val0.get().toString(16).padStart(5)} ${this.val1.get().toString(16).padStart(5)} ${this.val2.get().toString(16).padStart(5)} ${this.val3.get().toString(16).padStart(5)} ` +
+        `${this.val4.get().toString(16).padStart(5)} ${this.val5.get().toString(16).padStart(5)}`;
     }
   }
 
@@ -935,9 +935,9 @@
     global.items.push(itemData[i]);
   }
 
-  global.spells = [];
+  global.effects = [];
   for (var i = 0 ; i < 170 ; i++) {
-    global.spells.push(new EffectData(i));
+    global.effects.push(new EffectData(i));
   }
 
   global.areas = [];
@@ -2794,13 +2794,48 @@
   function setup(FDAT, stDir, params) {
 
     console.log("\n** Item info dump");
-    for (var i in items) {
-      items[i].setup(FDAT);
+    for (var i in global.items) {
+      global.items[i].setup(FDAT);
     }
 
     console.log("\n** Spells info dump");
-    for (var i in spells) {
-      spells[i].setup(FDAT);
+    for (var i in global.effects) {
+      global.effects[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix0 info dump");
+    for (var i in global.sizedMix0) {
+      global.sizedMix0[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix1 info dump");
+    for (var i in global.sizedMix1) {
+      global.sizedMix1[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix2 info dump");
+    for (var i in global.sizedMix2) {
+      global.sizedMix2[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix4 info dump");
+    for (var i in global.sizedMix4) {
+      global.sizedMix4[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix5 info dump");
+    for (var i in global.sizedMix5) {
+      global.sizedMix5[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix6 info dump");
+    for (var i in global.sizedMix6) {
+      global.sizedMix6[i].setup(FDAT);
+    }
+
+    console.log("\n** sizedMix9 info dump");
+    for (var i in global.sizedMix9) {
+      global.sizedMix9[i].setup(FDAT);
     }
 
     console.log("\n** Map info dump");
