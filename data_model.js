@@ -460,6 +460,282 @@
 
   //===== END SPELL DAMAGE DATA
 
+  //===== START SIZEDMIX DATA MAPPINGS =====
+  
+  // SizedMix Part 0 - 300 entries × 24 bytes (12 uint16 values)
+  global.SIZEDMIX0_PART_FILE_INDEX = 481;
+  global.SIZEDMIX0_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX0_SUBPART_OFFSET = 0x4;
+  global.SIZEDMIX0_START_OFFSET = SIZEDMIX0_PART_FILE_OFFSET_START + SIZEDMIX0_SUBPART_OFFSET;
+  global.SIZEDMIX0_ENTRY_SIZE = 24;
+  global.SIZEDMIX0_ENTRY_COUNT = 300;
+
+  class DataSizedMix0 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX0_START_OFFSET + entryIndex * SIZEDMIX0_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX0_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX0_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      this.val6 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0c);
+      this.val7 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0e);
+      this.val8 = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9 = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
+      this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix0[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+    }
+  }
+
+  // SizedMix Part 1 - 64 entries × 28 bytes (14 uint16 values)
+  global.SIZEDMIX1_PART_FILE_INDEX = 481;
+  global.SIZEDMIX1_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX1_SUBPART_OFFSET = 0x1c24;
+  global.SIZEDMIX1_START_OFFSET = SIZEDMIX1_PART_FILE_OFFSET_START + SIZEDMIX1_SUBPART_OFFSET;
+  global.SIZEDMIX1_ENTRY_SIZE = 28;
+  global.SIZEDMIX1_ENTRY_COUNT = 64;
+
+  class DataSizedMix1 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX1_START_OFFSET + entryIndex * SIZEDMIX1_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX1_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX1_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      this.val6 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0c);
+      this.val7 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0e);
+      this.val8 = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9 = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
+      this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+      this.val12 = new UInt16(this.map_file.bin, this.offset_in_file + 0x18);
+      this.val13 = new UInt16(this.map_file.bin, this.offset_in_file + 0x1a);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix1[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()} ` +
+        `${this.val12.get()} ${this.val13.get()}`;
+    }
+  }
+
+  // SizedMix Part 2 - 88 entries × 24 bytes (12 uint16 values)
+  global.SIZEDMIX2_PART_FILE_INDEX = 481;
+  global.SIZEDMIX2_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX2_SUBPART_OFFSET = 0x2324;
+  global.SIZEDMIX2_START_OFFSET = SIZEDMIX2_PART_FILE_OFFSET_START + SIZEDMIX2_SUBPART_OFFSET;
+  global.SIZEDMIX2_ENTRY_SIZE = 24;
+  global.SIZEDMIX2_ENTRY_COUNT = 88;
+
+  class DataSizedMix2 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX2_START_OFFSET + entryIndex * SIZEDMIX2_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX2_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX2_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      this.val6 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0c);
+      this.val7 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0e);
+      this.val8 = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9 = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
+      this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix2[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+    }
+  }
+
+  // SizedMix Part 4 - 96 entries × 24 bytes (12 uint16 values)
+  global.SIZEDMIX4_PART_FILE_INDEX = 481;
+  global.SIZEDMIX4_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX4_SUBPART_OFFSET = 0x3b54;
+  global.SIZEDMIX4_START_OFFSET = SIZEDMIX4_PART_FILE_OFFSET_START + SIZEDMIX4_SUBPART_OFFSET;
+  global.SIZEDMIX4_ENTRY_SIZE = 24;
+  global.SIZEDMIX4_ENTRY_COUNT = 96;
+
+  class DataSizedMix4 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX4_START_OFFSET + entryIndex * SIZEDMIX4_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX4_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX4_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      this.val6 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0c);
+      this.val7 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0e);
+      this.val8 = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9 = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
+      this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix4[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+    }
+  }
+
+  // SizedMix Part 5 - 616 entries × 20 bytes (10 uint16 values)
+  global.SIZEDMIX5_PART_FILE_INDEX = 481;
+  global.SIZEDMIX5_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX5_SUBPART_OFFSET = 0x4454;
+  global.SIZEDMIX5_START_OFFSET = SIZEDMIX5_PART_FILE_OFFSET_START + SIZEDMIX5_SUBPART_OFFSET;
+  global.SIZEDMIX5_ENTRY_SIZE = 20;
+  global.SIZEDMIX5_ENTRY_COUNT = 616;
+
+  class DataSizedMix5 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX5_START_OFFSET + entryIndex * SIZEDMIX5_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX5_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX5_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      this.val6 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0c);
+      this.val7 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0e);
+      this.val8 = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9 = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix5[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()}`;
+    }
+  }
+
+  // SizedMix Part 6 - 896 entries × 20 bytes (10 uint16 values)
+  global.SIZEDMIX6_PART_FILE_INDEX = 481;
+  global.SIZEDMIX6_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX6_SUBPART_OFFSET = 0x7474;
+  global.SIZEDMIX6_START_OFFSET = SIZEDMIX6_PART_FILE_OFFSET_START + SIZEDMIX6_SUBPART_OFFSET;
+  global.SIZEDMIX6_ENTRY_SIZE = 20;
+  global.SIZEDMIX6_ENTRY_COUNT = 896;
+
+  class DataSizedMix6 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX6_START_OFFSET + entryIndex * SIZEDMIX6_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX6_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX6_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      this.val6 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0c);
+      this.val7 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0e);
+      this.val8 = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.val9 = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix6[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
+        `${this.val8.get()} ${this.val9.get()}`;
+    }
+  }
+
+  // SizedMix Part 9 - 473 entries × 12 bytes (6 uint16 values)
+  global.SIZEDMIX9_PART_FILE_INDEX = 481;
+  global.SIZEDMIX9_PART_FILE_OFFSET_START = 0x138b800;
+  global.SIZEDMIX9_SUBPART_OFFSET = 0xf078;
+  global.SIZEDMIX9_START_OFFSET = SIZEDMIX9_PART_FILE_OFFSET_START + SIZEDMIX9_SUBPART_OFFSET;
+  global.SIZEDMIX9_ENTRY_SIZE = 12;
+  global.SIZEDMIX9_ENTRY_COUNT = 473;
+
+  class DataSizedMix9 {
+    constructor(entryIndex) {
+      this.entryIndex = entryIndex;
+      this.absoluteIndex = SIZEDMIX9_START_OFFSET + entryIndex * SIZEDMIX9_ENTRY_SIZE;
+      this.offset_in_file = this.absoluteIndex - SIZEDMIX9_PART_FILE_OFFSET_START;
+    }
+
+    setup(FDAT) {
+      this.map_file = FDAT.files[SIZEDMIX9_PART_FILE_INDEX];
+      this.val0 = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
+      this.val1 = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
+      this.val2 = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.val3 = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.val4 = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.val5 = new UInt16(this.map_file.bin, this.offset_in_file + 0x0a);
+      console.log(this.toReadableString());
+    }
+
+    toReadableString() {
+      return `DataSizedMix9[${this.entryIndex}]: ` +
+        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
+        `${this.val4.get()} ${this.val5.get()}`;
+    }
+  }
+
+  //===== END SIZEDMIX DATA MAPPINGS =====
+
   class ItemData  {
     constructor(itemIndex, lineSplit, line) {
       this.itemIndex = itemIndex;
@@ -609,6 +885,43 @@
   }
 
   global.itemData = {};
+
+  // Initialize sizedMix arrays
+  global.sizedMix0 = [];
+  for (var i = 0; i < SIZEDMIX0_ENTRY_COUNT; i++) {
+    global.sizedMix0.push(new DataSizedMix0(i));
+  }
+
+  global.sizedMix1 = [];
+  for (var i = 0; i < SIZEDMIX1_ENTRY_COUNT; i++) {
+    global.sizedMix1.push(new DataSizedMix1(i));
+  }
+
+  global.sizedMix2 = [];
+  for (var i = 0; i < SIZEDMIX2_ENTRY_COUNT; i++) {
+    global.sizedMix2.push(new DataSizedMix2(i));
+  }
+
+  global.sizedMix4 = [];
+  for (var i = 0; i < SIZEDMIX4_ENTRY_COUNT; i++) {
+    global.sizedMix4.push(new DataSizedMix4(i));
+  }
+
+  global.sizedMix5 = [];
+  for (var i = 0; i < SIZEDMIX5_ENTRY_COUNT; i++) {
+    global.sizedMix5.push(new DataSizedMix5(i));
+  }
+
+  global.sizedMix6 = [];
+  for (var i = 0; i < SIZEDMIX6_ENTRY_COUNT; i++) {
+    global.sizedMix6.push(new DataSizedMix6(i));
+  }
+
+  global.sizedMix9 = [];
+  for (var i = 0; i < SIZEDMIX9_ENTRY_COUNT; i++) {
+    global.sizedMix9.push(new DataSizedMix9(i));
+  }
+
   global.items = [];
 
   var itemLinesSplit = itemDataString.split("\n");
