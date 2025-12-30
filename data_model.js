@@ -400,6 +400,20 @@
       this.val9  = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
       this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
       this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+
+
+if (this.entryIndex>=0 && this.entryIndex<=16) {
+        this.val2.set(0x0);
+        this.val3.set(0x0);
+        this.val4.set(0x0);
+        this.val5.set(0x0);
+        this.val6.set(0x0);
+        this.val7.set(0x0);
+        this.val8.set(0x0);
+        this.val9.set(0x0);
+        this.val10.set(0x0);
+        this.val11.set(0x0);
+}
 // if (this.entryIndex>=32 && this.entryIndex<40) {
 // if (this.entryIndex>=40 && this.entryIndex<48) { -- none
 // if (this.entryIndex>=25 && this.entryIndex<32) { - none
@@ -411,16 +425,20 @@
 //if (this.entryIndex==48 && this.entryIndex==49) { - none
         //this.val0.set(0xff);
         //this.val1.set(0xff);
-        //this.val2.set(0xff);
-        //this.val3.set(0xff);
-        //this.val4.set(0xff);
-        //this.val5.set(0xff);
-        //this.val6.set(0xff);
-        //this.val7.set(0xff);
-        //this.val8.set(0x01); -- damage very low
-        //this.val9.set(0xff);
-        //this.val10.set(0xff);
-        //this.val11.set(0xff);
+        //this.val2.set(0xff); -- star_serpent - pierce?
+        //this.val3.set(0xff); -- star_serpent - smash?
+        //this.val4.set(0xff); -- star_serpent - slash?
+        //this.val5.set(0xff); -- fire damage
+        //this.val6.set(0xff); -- water damage
+        //this.val7.set(0xff); -- poisonous damage
+        //this.val8.set(0x00); //-- acid damage
+        //this.val9.set(0xff); -- holy damage?
+        //this.val10.set(0x10); -- bat damage (dark? - blidness charged attacks also have this one)
+        //this.val11.set(0x07); // inflict poison
+        //this.val11.set(0x60); // inflict blindness
+        //this.val11.set(0x18); // inflict paralysis
+        //this.val11.set(0x80); // inflict heavy weight - slowness
+        //this.val11.set(0x400); // inflict corrosion - but I couldn't verify equip corrosion..
 }
       console.log(this.toReadableString());
     }
