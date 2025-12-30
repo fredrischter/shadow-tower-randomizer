@@ -605,10 +605,10 @@ function randomize(paramsFile, stDir) {
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * equipsAttributeFactor)));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * equipsAttributeFactor)));
         if (!item.weight.isNull()) {
-            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / equipsAttributeFactor)));
+            // Weight not scaled by difficulty to avoid excessive weight in hard mode
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            item.max_dura.set(Math.max(5, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
+            item.max_dura.set(Math.max(10, Math.min(255, Math.ceil(item.max_dura.get() * equipsAttributeFactor))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * equipsAttributeFactor)));
         }
 
@@ -936,10 +936,11 @@ function randomize(paramsFile, stDir) {
         item.sol.set(Math.min(255, Math.ceil(item.sol.get() * Math.pow(Math.random() + 0.5, 3))));
         item.hp.set(Math.min(255, Math.ceil(item.hp.get() * Math.pow(Math.random() + 0.5, 3))));
         if (!item.weight.isNull()) {
-            item.weight.set(Math.min(255, Math.ceil(item.weight.get() / Math.pow(Math.random() + 0.5, 3))));
+            var randomFactor = 0.7 + (Math.random() * 0.6);
+            item.weight.set(Math.min(255, Math.max(1, Math.ceil(item.weight.get() * randomFactor))));
         }
         if (!item.max_dura.isNull() && item.max_dura.get()) {
-            item.max_dura.set(Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3))));
+            item.max_dura.set(Math.max(10, Math.min(255, Math.ceil(item.max_dura.get() * Math.pow(Math.random() + 0.5, 3)))));
             item.dura.set(Math.min(item.max_dura.get(), Math.ceil(item.dura.get() * Math.pow(Math.random() + 0.5, 3))));
         }
         if (primaryConsumables.indexOf(item.itemIndex) == -1 && secondaryConsumables.indexOf(item.itemIndex) == -1) {
