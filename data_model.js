@@ -400,19 +400,27 @@
       this.val9  = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
       this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
       this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
-if (this.entryIndex>10 && this.entryIndex<100) {
-        this.val0.set(0);
-        this.val1.set(0);
-        this.val2.set(0);
-        this.val3.set(0);
-        this.val4.set(0);
-        this.val5.set(0);
-        this.val6.set(0);
-        this.val7.set(0);
-        this.val8.set(0);
-        this.val9.set(0);
-        this.val10.set(0);
-        this.val11.set(0);
+// if (this.entryIndex>=32 && this.entryIndex<40) {
+// if (this.entryIndex>=40 && this.entryIndex<48) { -- none
+// if (this.entryIndex>=25 && this.entryIndex<32) { - none
+// if (this.entryIndex>10 && this.entryIndex<25) { - none
+// if (this.entryIndex>10 && this.entryIndex<50) { -- slime
+// if (this.entryIndex>30 && this.entryIndex<50) { -- slime
+// if (this.entryIndex>40 && this.entryIndex<50) { -- slime
+ if (this.entryIndex==49) {
+//if (this.entryIndex==48 && this.entryIndex==49) { - none
+        //this.val0.set(0xff);
+        //this.val1.set(0xff);
+        //this.val2.set(0xff);
+        //this.val3.set(0xff);
+        //this.val4.set(0xff);
+        //this.val5.set(0xff);
+        //this.val6.set(0xff);
+        //this.val7.set(0xff);
+        //this.val8.set(0x01); -- damage very low
+        //this.val9.set(0xff);
+        //this.val10.set(0xff);
+        //this.val11.set(0xff);
 }
       console.log(this.toReadableString());
     }
