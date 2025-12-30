@@ -376,6 +376,12 @@
   global.SPELL_DAMAGE_DATA_ENTRY_SIZE = 24; // 12 uint16 values = 24 bytes
   global.SPELL_DAMAGE_DATA_ENTRY_COUNT = 170; // Total number of spell damage entries
 
+  global.EFFECT_POISON = 0x07;
+  global.EFFECT_BLINDNESS = 0x60;
+  global.EFFECT_PARALYSIS = 0x18;
+  global.EFFECT_HEAVY_WEIGHT = 0x80;
+  global.EFFECT_CORROSION = 0x400;
+
   class EffectData {
     constructor(entryIndex) {
       this.entryIndex = entryIndex;
@@ -390,30 +396,31 @@
       // These are damage components loaded in func_0x8003e0a0()
       this.val0  = new UInt16(this.map_file.bin, this.offset_in_file + 0x00);
       this.val1  = new UInt16(this.map_file.bin, this.offset_in_file + 0x02);
-      this.val2  = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
-      this.val3  = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
-      this.val4  = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
-      this.val5  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0A);
-      this.val6  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0C);
-      this.val7  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0E);
-      this.val8  = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
-      this.val9  = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
-      this.val10 = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
-      this.val11 = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
+      this.pierce  = new UInt16(this.map_file.bin, this.offset_in_file + 0x04);
+      this.smash  = new UInt16(this.map_file.bin, this.offset_in_file + 0x06);
+      this.slash  = new UInt16(this.map_file.bin, this.offset_in_file + 0x08);
+      this.fire  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0A);
+      this.water  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0C);
+      this.poisonous  = new UInt16(this.map_file.bin, this.offset_in_file + 0x0E);
+      this.acid  = new UInt16(this.map_file.bin, this.offset_in_file + 0x10);
+      this.holy  = new UInt16(this.map_file.bin, this.offset_in_file + 0x12);
+      this.dark = new UInt16(this.map_file.bin, this.offset_in_file + 0x14);
+      this.status = new UInt16(this.map_file.bin, this.offset_in_file + 0x16);
 
 
-if (this.entryIndex>=0 && this.entryIndex<=16) {
-        this.val2.set(0x0);
-        this.val3.set(0x0);
-        this.val4.set(0x0);
-        this.val5.set(0x0);
-        this.val6.set(0x0);
-        this.val7.set(0x0);
-        this.val8.set(0x0);
-        this.val9.set(0x0);
-        this.val10.set(0x0);
-        this.val11.set(0x0);
-}
+//if (this.entryIndex>=0 && this.entryIndex<=150) {
+//        this.pierce.set(0x0);
+//        this.smash.set(0x0);
+//        this.slash.set(0x0);
+//        this.fire.set(0x0);
+//        this.water.set(0x0);
+//        this.poisonous.set(0x0);
+//        this.acid.set(0x0);
+//        this.holy.set(0x0);
+//        this.dark.set(0x0);
+//        this.status.set(0x0);
+//}
+
 // if (this.entryIndex>=32 && this.entryIndex<40) {
 // if (this.entryIndex>=40 && this.entryIndex<48) { -- none
 // if (this.entryIndex>=25 && this.entryIndex<32) { - none
@@ -425,29 +432,29 @@ if (this.entryIndex>=0 && this.entryIndex<=16) {
 //if (this.entryIndex==48 && this.entryIndex==49) { - none
         //this.val0.set(0xff);
         //this.val1.set(0xff);
-        //this.val2.set(0xff); -- star_serpent - pierce?
-        //this.val3.set(0xff); -- star_serpent - smash?
-        //this.val4.set(0xff); -- star_serpent - slash?
-        //this.val5.set(0xff); -- fire damage
-        //this.val6.set(0xff); -- water damage
-        //this.val7.set(0xff); -- poisonous damage
-        //this.val8.set(0x00); //-- acid damage
-        //this.val9.set(0xff); -- holy damage?
-        //this.val10.set(0x10); -- bat damage (dark? - blidness charged attacks also have this one)
-        //this.val11.set(0x07); // inflict poison
-        //this.val11.set(0x60); // inflict blindness
-        //this.val11.set(0x18); // inflict paralysis
-        //this.val11.set(0x80); // inflict heavy weight - slowness
-        //this.val11.set(0x400); // inflict corrosion - but I couldn't verify equip corrosion..
+        //this.pierce.set(0xff); -- star_serpent - pierce?
+        //this.smash.set(0xff); -- star_serpent - smash?
+        //this.slash.set(0xff); -- star_serpent - slash?
+        //this.fire.set(0xff); -- fire damage
+        //this.water.set(0xff); -- water damage
+        //this.poisonous.set(0xff); -- poisonous damage
+        //this.acid.set(0x00); //-- acid damage
+        //this.holy.set(0xff); -- holy damage?
+        //this.dark.set(0x10); -- bat damage (dark? - blidness charged attacks also have this one)
+        //this.status.set(EFFECT_POISON); // inflict poison
+        //this.status.set(EFFECT_BLINDNESS); // inflict blindness
+        //this.status.set(EFFECT_PARALYSIS); // inflict paralysis
+        //this.status.set(EFFECT_HEAVY_WEIGHT); // inflict heavy weight - slowness
+        //this.status.set(EFFECT_CORROSION); // inflict corrosion - but I couldn't verify equip corrosion..
 }
       console.log(this.toReadableString());
     }
 
     toReadableString() {
       return `Effect[${this.entryIndex}]: ` +
-        `${this.val0.get()} ${this.val1.get()} ${this.val2.get()} ${this.val3.get()} ` +
-        `${this.val4.get()} ${this.val5.get()} ${this.val6.get()} ${this.val7.get()} ` +
-        `${this.val8.get()} ${this.val9.get()} ${this.val10.get()} ${this.val11.get()}`;
+        `${this.val0.get()} ${this.val1.get()} ${this.pierce.get()} ${this.smash.get()} ` +
+        `${this.slash.get()} ${this.fire.get()} ${this.water.get()} ${this.poisonous.get()} ` +
+        `${this.acid.get()} ${this.holy.get()} ${this.dark.get()} ${this.status.get()}`;
     }
   }
 
