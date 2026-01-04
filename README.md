@@ -121,6 +121,38 @@ test_all_presets.bat
 ./test_all_presets.sh
 ```
 
+## Debugging PSX Memory Issues
+
+**New!** Comprehensive guides for debugging texture corruption caused by memory overflow:
+
+- **[Quick Start Guide](QUICK_START_MEMORY_DEBUGGING.md)** - 5-minute setup and testing workflow
+- **[Visual Guide](VISUAL_MEMORY_GUIDE.md)** - Diagrams and visualizations of the memory system
+- **[Full Debugging Guide](PSX_MEMORY_DEBUGGING_GUIDE.md)** - Complete 500+ line reference
+- **[Implementation Plan](MEMORY_TRACKING_IMPROVEMENTS.md)** - Code fixes for memory tracking
+
+**Tools provided:**
+- `psx-memory-inspector.js` - CLI tool to analyze randomization memory usage
+- `duckstation-memory-monitor.lua` - Real-time monitoring in DuckStation emulator
+
+**Usage:**
+```bash
+# After generating a randomization, check for memory issues:
+node psx-memory-inspector.js ./generated/bonanza/spoilers
+
+# Shows:
+# - Memory distribution histogram
+# - Areas with overflow (17+ models = corruption!)
+# - Risk assessment and recommendations
+```
+
+**Quick tips:**
+- Each area can load maximum **16 unique item models**
+- Exceeding this limit causes **texture corruption**
+- Current code underestimates by ~30-50% (drop2/drop3 not counted)
+- Use inspector tool before playing to avoid issues!
+
+See guides for step-by-step DuckStation debugging workflow.
+
 ## Options
 
 toNotGenerateImages Doesn't generate map images, that makes it much quicker to run.
