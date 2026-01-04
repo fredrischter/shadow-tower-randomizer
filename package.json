@@ -14,6 +14,7 @@
     "map_texture_extract": "node map_texture_extract.js",
     "test-randomizer": "node --max-old-space-size=8192 test_randomizer.js",
     "test-version": "node test_version_endpoint.js",
+    "test-parallel": "node test_parallel.js",
     "dump-tiles": "node --max-old-space-size=8192 dump_tiles.js"
   },
   "author": "",
