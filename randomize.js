@@ -295,7 +295,7 @@ function randomize(paramsFile, stDir) {
             return;
         }
 
-        console.log("Setting creature " + creature1.name + " ("+creature1.area.name + ") to " + creature2.name + " (" + creature2.area.name + ")");
+        console.log("Setting creature " + creature1.name + " ("+ creature1.area.name + ") to " + creature2.name + " (" + creature2.area.name + ")");
 
         // model
         for (var i in creature2.modelFiles) {
@@ -508,8 +508,17 @@ function randomize(paramsFile, stDir) {
 
         console.log("DEBUG - Creature " + creature.name);
         
-        // Fix for magic damage problem - Scale creature base attack attributes
-        // These are separate from EntityStateData attacks and must be scaled too
+        // Check if creature has effect ID
+        // Effect-based creatures will be regulated by area progression (which includes difficulty)
+        // So we skip difficulty scaling here to avoid double-scaling
+        const effectId = creature.getEffectId();
+        
+        if (effectId !== undefined && global.effects && global.effects[effectId]) {
+            console.log("  Skipping difficulty scaling - will be regulated by area progression");
+            return;
+        }
+        
+        // For non-effect creatures: apply traditional difficulty scaling
         if (creature.attack1 && !creature.attack1.isNull()) {
             var oldValue = creature.attack1.get();
             var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
@@ -1895,6 +1904,165 @@ function randomize(paramsFile, stDir) {
             forEachCollectable(applyDifficultyForEachCollectable);
         }
 
+        // Effect Power Regulation System
+        // 
+        // Regulates effect power AND base stats (HP, attack) based on area progression.
+        // This ensures creatures have appropriate power levels that scale with game progression,
+        // regardless of which creature type was randomized into which area.
+        //
+        // Key points:
+        // - Randomization groups are for INTERCHANGEABLE creatures (similar types), NOT difficulty levels
+        // - Difficulty/power should be proportional to the area's position in map progression
+        // - Uses MIN/MAX range similar to how items use UNIQUES_SEQUENCE_RANDOMIZATION_SPAN
+        // - Respects progressiveness settings (flat, medium, increased, crazy)
+        // - Incorporates difficulty factor into MIN/MAX targets
+        // - Regulates HP, attack, AND effect power for fair distribution
+        //
+        function regulateEffectPowerForArea(creature, area, index) {
+            // Define base min and max ranges for all stats
+            // These are adjusted by difficulty factor
+            const BASE_MIN_HP = 50;
+            const BASE_MAX_HP = 2000;
+            const BASE_MIN_ATTACK = 5;
+            const BASE_MAX_ATTACK = 100;
+            const BASE_MIN_EFFECT_POWER = 10;
+            const BASE_MAX_EFFECT_POWER = 200;
+            
+            // Apply difficulty factor to targets
+            // Easy mode (0.5): weaker creatures (lower targets)
+            // Hard mode (1.3): stronger creatures (higher targets)
+            const MIN_HP = BASE_MIN_HP * difficultyFactor;
+            const MAX_HP = BASE_MAX_HP * difficultyFactor;
+            const MIN_ATTACK = BASE_MIN_ATTACK * difficultyFactor;
+            const MAX_ATTACK = BASE_MAX_ATTACK * difficultyFactor;
+            const MIN_EFFECT_POWER = BASE_MIN_EFFECT_POWER * difficultyFactor;
+            const MAX_EFFECT_POWER = BASE_MAX_EFFECT_POWER * difficultyFactor;
+            
+            // Get area index in progression (areas are already sorted by walk depth)
+            const areaIndex = areas.indexOf(area);
+            const totalAreas = areas.length;
+            
+            // Calculate progression factor (0.0 = start, 1.0 = end)
+            // This matches how items use UNIQUES_SEQUENCE_RANDOMIZATION_SPAN
+            let progressionFactor = areaIndex / Math.max(1, totalAreas - 1);
+            
+            // Apply progressiveness setting (same as items)
+            if (params.progressiveness == PROGRESSIVENESS_FLAT) {
+                progressionFactor = 0.5; // Middle power for all areas
+            } else if (params.progressiveness == PROGRESSIVENESS_INCREASED) {
+                // Slower start, faster ramp
+                progressionFactor = Math.pow(progressionFactor, 0.7);
+            } else if (params.progressiveness == PROGRESSIVENESS_CRAZY) {
+                // Random power regardless of area
+                progressionFactor = Math.random();
+            }
+            // MEDIUM/default uses linear progression
+            
+            // Calculate target values based on area progression
+            const targetHP = MIN_HP + (MAX_HP - MIN_HP) * progressionFactor;
+            const targetAttack = MIN_ATTACK + (MAX_ATTACK - MIN_ATTACK) * progressionFactor;
+            const targetEffectPower = MIN_EFFECT_POWER + (MAX_EFFECT_POWER - MIN_EFFECT_POWER) * progressionFactor;
+            
+            console.log("DEBUG - Regulating creature power for " + creature.name + " in " + area.name);
+            console.log("  Difficulty factor: " + difficultyFactor);
+            console.log("  Area index: " + areaIndex + "/" + totalAreas);
+            console.log("  Progression factor: " + progressionFactor.toFixed(2));
+            console.log("  Target HP: " + targetHP.toFixed(1));
+            console.log("  Target Attack: " + targetAttack.toFixed(1));
+            console.log("  Target Effect Power: " + targetEffectPower.toFixed(1));
+            
+            // Regulate HP (for ALL creatures)
+            if (creature.hp && !creature.hp.isNull()) {
+                const currentHP = creature.hp.get();
+                const hpScaling = targetHP / Math.max(1, currentHP);
+                const newHP = Math.min(255, Math.max(1, Math.ceil(currentHP * hpScaling)));
+                creature.hp.set(newHP);
+                console.log("  HP: " + currentHP + " -> " + newHP + " (scaling: " + hpScaling.toFixed(2) + ")");
+            }
+            
+            // Regulate base attack values (for ALL creatures that have them)
+            let currentAttack = 0;
+            let attackCount = 0;
+            
+            if (creature.attack1 && !creature.attack1.isNull() && creature.attack1.get() > 0) {
+                currentAttack += creature.attack1.get();
+                attackCount++;
+            }
+            if (creature.attack2 && !creature.attack2.isNull() && creature.attack2.get() > 0) {
+                currentAttack += creature.attack2.get();
+                attackCount++;
+            }
+            if (creature.magic1 && !creature.magic1.isNull() && creature.magic1.get() > 0) {
+                currentAttack += creature.magic1.get();
+                attackCount++;
+            }
+            
+            if (attackCount > 0) {
+                const avgAttack = currentAttack / attackCount;
+                const attackScaling = targetAttack / Math.max(1, avgAttack);
+                
+                if (creature.attack1 && !creature.attack1.isNull() && creature.attack1.get() > 0) {
+                    const old = creature.attack1.get();
+                    const newVal = Math.min(255, Math.max(1, Math.ceil(old * attackScaling)));
+                    creature.attack1.set(newVal);
+                    console.log("  Attack1: " + old + " -> " + newVal);
+                }
+                if (creature.attack2 && !creature.attack2.isNull() && creature.attack2.get() > 0) {
+                    const old = creature.attack2.get();
+                    const newVal = Math.min(255, Math.max(1, Math.ceil(old * attackScaling)));
+                    creature.attack2.set(newVal);
+                    console.log("  Attack2: " + old + " -> " + newVal);
+                }
+                if (creature.magic1 && !creature.magic1.isNull() && creature.magic1.get() > 0) {
+                    const old = creature.magic1.get();
+                    const newVal = Math.min(255, Math.max(1, Math.ceil(old * attackScaling)));
+                    creature.magic1.set(newVal);
+                    console.log("  Magic1: " + old + " -> " + newVal);
+                }
+            }
+            
+            // ALSO regulate effect power if creature has effects
+            const effectId = creature.getEffectId();
+            if (effectId !== undefined && global.effects && global.effects[effectId]) {
+                const effect = global.effects[effectId];
+                const currentEffectPower = creature.calculateEffectPower(effect);
+                
+                if (currentEffectPower > 0) {
+                    const effectScaling = targetEffectPower / currentEffectPower;
+                    
+                    console.log("  Current effect power: " + currentEffectPower);
+                    console.log("  Effect scaling: " + effectScaling.toFixed(2));
+                    
+                    const scaleEffectValue = (field, fieldName) => {
+                        if (field && !field.isNull() && field.get() > 0) {
+                            var oldValue = field.get();
+                            var newValue = Math.min(255, Math.max(1, Math.ceil(oldValue * effectScaling)));
+                            field.set(newValue);
+                            console.log("    " + fieldName + ": " + oldValue + " -> " + newValue);
+                        }
+                    };
+                    
+                    scaleEffectValue(effect.pierce, "pierce");
+                    scaleEffectValue(effect.smash, "smash");
+                    scaleEffectValue(effect.slash, "slash");
+                    scaleEffectValue(effect.fire, "fire");
+                    scaleEffectValue(effect.water, "water");
+                    scaleEffectValue(effect.poisonous, "poisonous");
+                    scaleEffectValue(effect.acid, "acid");
+                    scaleEffectValue(effect.holy, "holy");
+                    scaleEffectValue(effect.dark, "dark");
+                }
+            }
+        }
+        
+        // Apply effect power regulation based on area progression
+        // This runs INSTEAD of difficulty scaling for effect-based creatures
+        if (params.randomizeCreatures) {
+            console.log("\nRegulating effect power based on area progression...\n");
+            forEachValidCreature(regulateEffectPowerForArea);
+        }
+
+
         if (params.messWithScenery) {
             forEachObject(messWithSceneryObjects);
         }
@@ -1956,57 +2124,65 @@ function randomize(paramsFile, stDir) {
 
     console.log("DEBUG - The game has " + allChangeableCollectablesInDefaultGame.length + " collectables."); // + allChangeableCollectablesInDefaultGame.map(c => itemData[c.collectable.type.get()].name + " at " + c.area.name));
 
-    // Issue #14: Test parameter: Place apocrypha (late-game projectile enemy) in first area for testing attack scaling
-    // To isolate magic attack issues, remove all other creatures and items from the area
+    function getCreture(creatureName) {
+        var foundArea, foundCreature;
+        global.GAME_DATA
+            .areas.forEach(a => {
+                if (foundCreature) {
+                    return;
+                }
+                a.creatures.forEach(c => {
+                    if (foundCreature || c.isBlank) {
+                        return;
+                    }
+                    if (c.name && c.name.indexOf(creatureName)!=-1) {
+                        foundArea = a;
+                        foundCreature = global[a.name][c.name];
+                    }
+                });
+            });
+
+        return foundCreature;
+    }
+
     if (params.testApocryphaInSolitaryRegion) {
+
+        //setCreature(creature, human_world_solitary_region["01_acid_slime"], changeSet);
         console.log("\n\n========== TEST: Placing Apocrypha in Solitary Region ==========\n");
         
-        // Find the areas
         var solitaryRegion = areas.find(a => a.name === "human_world_solitary_region");
-        var lingeringCurse = areas.find(a => a.name === "death_world_lingering_curse_layer");
-        
-        if (solitaryRegion && lingeringCurse) {
-            // Find the creatures
-            // In solitary region: dark_spider is creature 0
-            // In lingering curse: apocrypha is creature 8 (based on magic.txt line 469-471)
-            var darkSpider = solitaryRegion.creatures[0];
-            var apocrypha = lingeringCurse.creatures[8];
-            
-            if (darkSpider && apocrypha) {
-                console.log("TEST: Replacing " + darkSpider.name + " with " + apocrypha.name);
-                setCreature(darkSpider, apocrypha, changeSet);
-                console.log("TEST: Apocrypha placed successfully. Attack scaling should apply based on difficulty=" + params.difficulty);
-                
-                // Issue #14: Remove all other spawns and items to check if magic attack issue is memory-related
-                console.log("\nTEST: Removing all other spawns and collectables from " + solitaryRegion.name);
-                
-                // Blank all spawns except the first one (which now has apocrypha)
-                var blankedSpawns = 0;
-                solitaryRegion.spawns.forEach((spawn, index) => {
-                    if (index !== 3 && !spawn.isBlank) {
-                        spawn.blank();
-                        blankedSpawns++;
-                    }
-                });
-                console.log("TEST: Blanked " + blankedSpawns + " spawns (keeping only apocrypha)");
-                
-                // Blank all collectables
-                var blankedCollectables = 0;
-                solitaryRegion.collectables.forEach((collectable) => {
-                    if (!collectable.isBlank()) {
-                        collectable.blank();
-                        blankedCollectables++;
-                    }
-                });
-                console.log("TEST: Blanked " + blankedCollectables + " collectables");
-                
-                console.log("TEST: Solitary region now has only apocrypha and no items");
-            } else {
-                console.log("ERROR: Could not find dark_spider or apocrypha creatures");
+
+        setCreature(solitaryRegion.creatures[0],
+                //human_world_cursed_region["0a_guardian_a"],
+                //earth_world_rotting_cavern("00_watcher_plant"),
+                //getCreture("guardian_b"),
+                //getCreture("blue_flicker"),
+                //getCreture("ray_plant"),
+                //getCreture("black_onyx"),
+                //getCreture("mystic_tower"),
+                //getCreture("ruby_demon"),
+                //getCreture("demons_eye"),
+                getCreture("apocrypha"),
+                //getCreture("descrypha"),
+                //getCreture("wyvern"),
+                //getCreture("ring_demon"),
+                //getCreture("gordoral"),
+                //getCreture("trickster"),
+                //getCreture("wildowess"),
+                //getCreture("unknown_d"),
+                //getCreture("tongue_imp"),
+                //getCreture("zygote"),
+                //getCreture("black_imp"),
+                //getCreture("dark_imp"),
+                //getCreture("warpoor"),
+            //getCreture("zygote"),
+            changeSet);
+
+        solitaryRegion.spawns.forEach((spawn, index) => {
+            if (index !== 3 && !spawn.isBlank) {
+                spawn.blank();
             }
-        } else {
-            console.log("ERROR: Could not find solitary region or lingering curse areas");
-        }
+        });
         
         console.log("========== END TEST ==========\n\n");
     }
@@ -2247,42 +2423,8 @@ function randomize(paramsFile, stDir) {
                 });
             }
             
-            // Calculate power score
-            let score = 0;
-            score += data.str * 2;
-            score += data.spd * 1;
-            score += data.def * 3;
-            score += data.bal * 1;
-            score += data.sla * 1.5;
-            score += data.smh * 1.5;
-            score += data.pir * 1.5;
-            score += data.spr * 1.5;
-            score += data.foc * 1;
-            score += data.ham * 1;
-            score += data.pur * 1.5;
-            score += data.par * 1;
-            score += data.mel * 2;
-            score += data.sol * 1.5;
-            score += data.hp * 0.5;
-            score += data.attack1 * 3;
-            score += data.attack2 * 3;
-            score += data.magic1 * 3;
-            
-            // Add EntityStateData attack values
-            data.physicalAttacks.forEach(attackStr => {
-                const values = attackStr.split('/').map(v => parseInt(v));
-                values.forEach(v => score += v * 0.3);
-            });
-            data.magicAttacks.forEach(attackStr => {
-                const values = attackStr.split('/').map(v => parseInt(v));
-                values.forEach(v => score += v * 0.3);
-            });
-            
-            // Add defense values
-            score += (data.weaponDef1 + data.weaponDef2 + data.weaponDef3) * 0.1;
-            score += (data.magDef1 + data.magDef2 + data.magDef3 + data.magDef4 + data.magDef5) * 0.1;
-            
-            data.powerScore = Math.round(score);
+            // Calculate power score using creature's score() method for consistency
+            data.powerScore = creature.score();
             
             return data;
         });

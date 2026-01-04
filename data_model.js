@@ -1053,23 +1053,22 @@
       //2-300 entries 0x18 bytes each     
       console.log("\n300 entries 0x18 bytes each");
       console.log("-------------");
-      
 
       //2-mystery
-      var MYSTERY_START_OFFSET = this.map_file.sizedMixStarts[2] - 0x10;//0x5ae4;
+      var MYSTERY_START_OFFSET = 0x3ec4 + 4/*+ this.map_file.sizedMixStarts[2] - 0x10*/;//0x3ec4;
       this.misteries = [];
       console.log("\nMystery ");
       console.log("data");
       for (var i = 0; i<MYSTERY_COUNT; i++) {
-        var offset_in_file = 16 + MYSTERY_START_OFFSET + MYSTERY_SIZE * i;
+        var offset_in_file = MYSTERY_START_OFFSET + MYSTERY_SIZE * i;
         var absoluteIndex = this.map_file.startOffset + offset_in_file;
         this.misteries.push(new Mystery(this.map_file.bin, this, offset_in_file, absoluteIndex, i, this.mapTiles));
       }
-      //for (var i = 0; i<MYSTERY_COUNT; i++) {
+      for (var i = 0; i<MYSTERY_COUNT; i++) {
         //if (i != 31) {
-        //  this.misteries[i].blank();
+          //this.misteries[i].blank();
         //}
-      //}
+      }
 
       //3-objects
       var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
@@ -1670,7 +1669,7 @@
   }
 
   global.MYSTERY_SIZE = 0x18;
-  global.MYSTERY_COUNT = 0x12c;
+  global.MYSTERY_COUNT = 300; //0x12c
 
   class Mystery {
     constructor(bin, area, offset_in_file, absoluteIndex, index, mapTiles) {
@@ -1680,9 +1679,9 @@
       this.absoluteIndex = absoluteIndex;
       this.index = index;
 
-//      this.tileX = new UInt8(this.bin, this.offset_in_file + 0x00);
-//      this.tileY = new UInt8(this.bin, this.offset_in_file + 0x01);
-//      this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x02);
+      this.tileX = new UInt8(this.bin, this.offset_in_file + 0x04);
+      this.tileY = new UInt8(this.bin, this.offset_in_file + 0x05);
+      this.tileZ = new UInt8(this.bin, this.offset_in_file + 0x06);
 
       console.log(this.toReadableString());
     }
@@ -1711,6 +1710,9 @@
 
     blank() {
       binSet(this.bin, this.offset_in_file, MYSTERY_SIZE, 0x00);
+      this.tileX.set(0xff);
+      this.tileY.set(0x10);
+      this.tileZ.set(0xff);
     }
   }
 
@@ -2321,42 +2323,52 @@
       + ",\"randomizationGroup\": \"" + this.randomizationGroup({}) + "\"}";
     }
 
+  // Helper function: Get effect ID for this creature
+  getEffectId() {
+    for (const effectCreatureName in global.creatureNameToEffectId) {
+      if (this.name.includes(effectCreatureName)) {
+        return global.creatureNameToEffectId[effectCreatureName];
+      }
+    }
+    return undefined;
+  }
+
+  // Helper function: Calculate total effect power from effect object
+  calculateEffectPower(effect) {
+    if (!effect) return 0;
+    
+    let effectPower = 0;
+    effectPower += effect.pierce ? effect.pierce.get() : 0;
+    effectPower += effect.smash ? effect.smash.get() : 0;
+    effectPower += effect.slash ? effect.slash.get() : 0;
+    effectPower += effect.fire ? effect.fire.get() : 0;
+    effectPower += effect.water ? effect.water.get() : 0;
+    effectPower += effect.poisonous ? effect.poisonous.get() : 0;
+    effectPower += effect.acid ? effect.acid.get() : 0;
+    effectPower += effect.holy ? effect.holy.get() : 0;
+    effectPower += effect.dark ? effect.dark.get() : 0;
+    if (effect.status && effect.status.get() !== 0) {
+      effectPower += 100;
+    }
+    return effectPower;
+  }
+
   score() {
-    var attackSum = 0;
-    var count = 0;
-    if (this.weaponDefense1) {
-      if (this.weaponDefense1.get()) {
-        attackSum += this.weaponDefense1.get();
-        count++;
-      }
-      if (this.weaponDefense2.get()) {
-        attackSum += this.weaponDefense2.get();
-        count++;
-      }
-      if (this.weaponDefense3.get()) {
-        attackSum += this.weaponDefense3.get();
-        count++;
-      }
-      if (this.magDefense1.get()) {
-        attackSum += this.magDefense1.get();
-        count++;
-      }
-      if (this.magDefense2.get()) {
-        attackSum += this.magDefense2.get();
-        count++;
-      }
-      if (this.magDefense3.get()) {
-        attackSum += this.magDefense3.get();
-        count++;
-      }
-      if (this.magDefense4.get()) {
-        attackSum += this.magDefense4.get();
-        count++;
-      }
-      if (this.magDefense5.get()) {
-        attackSum += this.magDefense5.get();
-        count++;
-      }
+    // Check if creature has an effect ID - use effect power instead of attack attributes
+    // Match by contains since creature names have ID prefixes (e.g., "01_acid_slime")
+    const effectId = this.getEffectId();
+    
+    if (effectId !== undefined && global.effects && global.effects[effectId]) {
+      // Use effect-based power calculation
+      const effect = global.effects[effectId];
+      const effectPower = this.calculateEffectPower(effect);
+      
+      return Math.round(this.hp.get()/4 + effectPower * 2);
+    } else {
+      // Use traditional attack-based calculation
+      var attackSum = 0;
+      var count = 0;
+
       if (this.attack1.get()) {
         attackSum += this.attack1.get();
         count++;
@@ -2369,10 +2381,13 @@
         attackSum += this.magic1.get();
         count++;
       }
-      attackSum = attackSum / count;
-    }
 
-    return Math.round(this.hp.get()/4 + attackSum * 2);
+      if (count) {
+        attackSum = attackSum / count;
+      }
+
+      return Math.round(this.hp.get()/4 + attackSum * 2);
+    }
   }
 
   set(source) {
@@ -2635,9 +2650,43 @@
 
       var shortText = "" + this.index.toString(16).padEnd(2) + " " + this.name();
 
+      // Get creature stats for display
+      const creature = this.creature();
+      const hp = creature.hp ? creature.hp.get() : 0;
+      
+      // Calculate average attack
+      let attack = 0;
+      let attackCount = 0;
+      if (creature.attack1 && creature.attack1.get()) {
+        attack += creature.attack1.get();
+        attackCount++;
+      }
+      if (creature.attack2 && creature.attack2.get()) {
+        attack += creature.attack2.get();
+        attackCount++;
+      }
+      if (creature.magic1 && creature.magic1.get()) {
+        attack += creature.magic1.get();
+        attackCount++;
+      }
+      if (attackCount > 0) {
+        attack = Math.round(attack / attackCount);
+      }
+      
+      // Get effect power if creature uses effects
+      let effectPower = 0;
+      const effectId = creature.getEffectId();
+      if (effectId !== undefined && global.effects && global.effects[effectId]) {
+        const effect = global.effects[effectId];
+        effectPower = creature.calculateEffectPower(effect);
+      }
+
       var text = shortText.padEnd(25)
          + (" " + this.chance.get()).padStart(4) + "% 0x" + this.mutexGroup.get()
-         + " score " + this.creature().score();
+         + " score " + creature.score()
+         + " hp " + hp
+         + " atk " + attack
+         + (effectPower > 0 ? " eff " + effectPower : "");
 
       var summary = '<span style="background:#ff8080">'+text+'</span>\n';
 
