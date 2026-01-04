@@ -133,7 +133,12 @@ The randomizer has been optimized for parallel processing:
 
 For detailed performance information, see [PERFORMANCE.md](PERFORMANCE.md).
 
-To monitor performance:
+To measure performance on your system:
+```bash
+npm run benchmark
+```
+
+To monitor performance during regular runs:
 ```bash
 npm run mod ".\generated\st.bin" ".\params\no-change.json"
 # Check the timing summary at the end of the output

@@ -15,6 +15,7 @@
     "test-randomizer": "node --max-old-space-size=8192 test_randomizer.js",
     "test-version": "node test_version_endpoint.js",
     "test-parallel": "node test_parallel.js",
+    "benchmark": "node benchmark.js",
     "dump-tiles": "node --max-old-space-size=8192 dump_tiles.js"
   },
   "author": "",

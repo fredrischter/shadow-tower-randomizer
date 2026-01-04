@@ -122,19 +122,35 @@ Run `npm run test-parallel` to validate the implementation:
 - Validates parallel processing logic
 - Confirms timing instrumentation
 
+### Performance Benchmark
+To measure actual processing time with your system:
+
+```bash
+# Ensure st.bin exists in generated/ folder
+npm run benchmark
+```
+
+This will run the randomizer with timing instrumentation and display:
+- Per-step timing (dumpsxiso, unpack, randomize, change, pack, mkpsxiso)
+- Total processing time
+- Percentage breakdown of time spent in each step
+
 ### Performance Comparison
-To measure actual performance improvements:
+To compare before and after optimization (requires git):
 
 1. **Before optimization** (use git to checkout previous version):
    ```bash
-   git checkout HEAD~1
-   time npm run mod "./generated/st.bin" "./params/no-change.json"
+   git stash  # Save current changes
+   git checkout HEAD~2  # Go back before optimization
+   npm run benchmark
+   # Note the total time
    ```
 
 2. **After optimization** (current version):
    ```bash
    git checkout copilot/optimize-processing-time
-   time npm run mod "./generated/st.bin" "./params/no-change.json"
+   npm run benchmark
+   # Note the total time and compare
    ```
 
 3. Compare the timing summary output
