@@ -429,11 +429,16 @@ function randomize(paramsFile, stDir) {
 
     // Directives
 
+    // King Hopper spawn fix - addresses a spawn bug in the original game
+    // Original issue: King Hopper had mutexGroup=0x5a which caused spawn failures
+    // Fix: Change mutexGroup to 0x14 (14 decimal, same as 0x0e behavior - allows 6 at once)
+    // This ensures King Hopper spawns reliably and doesn't cause game freezes
+    // See SPAWN_GROUPS_DOCUMENTATION.md for details on mutexGroup values
     function presetKingHopperFixforEachCreatureSpawn(spawn, area, index) {
         if (spawn.name().includes("king_hopper")) {
             console.log("Setting spawn change to 100% and fixing mutex group, creature " + spawn.name());
             spawn.chance.set(100);
-            spawn.mutexGroup.set(14);
+            spawn.mutexGroup.set(14); // 0x0e - allows 6 creatures at once
         }
     }
 

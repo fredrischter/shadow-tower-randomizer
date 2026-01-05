@@ -1113,6 +1113,9 @@
       }
     }
 
+    // Memory management - Shadow Tower limits each area to 16 unique item models
+    // This works together with spawn.mutexGroup to prevent memory overflow
+    // See SPAWN_GROUPS_DOCUMENTATION.md for how spawn groups affect memory
     hasFreeItemMemory() {
       return this.usedItemMemory()<16;
     }
@@ -1121,6 +1124,11 @@
       return this.usedItemMemory()>16;
     }
 
+    // Counts unique item models across all spawns and collectables in this area
+    // Each spawn can have up to 3 drops (drop1, drop2, drop3)
+    // Currently only counts drop1 to avoid overcounting (drop2/drop3 commented out)
+    // Relationship to mutexGroup: spawn groups limit simultaneous creature instances,
+    // which indirectly affects how many item models can be in memory at once
     usedItemMemory() {
       let models = new Set();
       for (var i in this.spawns) {
@@ -2585,6 +2593,10 @@
       var message = "";
       message = binToStr(this.tfile.bin.slice(this.offset_in_file, this.offset_in_file + SPAWN_ENTRY_SIZE));
 
+      // Spawn group / mutex group - controls how many creatures from this spawn pool can exist simultaneously
+      // See SPAWN_GROUPS_DOCUMENTATION.md for detailed explanation
+      // Known values: 0x0e (6 at once), 0x1c/0x1d/0x28 (3 at once), 0x7f/0x5a (1 at once)
+      // Affects memory management and spawn behavior - wrong values can cause crashes
       this.mutexGroup = new UInt8(this.tfile.bin, this.offset_in_file + 0x0a);
       this.drop1 = new UInt16(this.tfile.bin, this.offset_in_file + 0x04);
       this.drop1Chance = new UInt8(this.tfile.bin, this.offset_in_file + 0x0b);

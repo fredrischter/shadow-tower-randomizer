@@ -48,6 +48,15 @@ Replace st.bin by your image file.
 npm run mod ".\generated\st.bin" -toNotGenerateImages
 ```
 
+## Documentation
+
+For developers and contributors:
+
+- **SPAWN_GROUPS_DOCUMENTATION.md** - Comprehensive guide to spawn groups (mutexGroup) and memory management
+- **.github/instructions/KNOWLEDGE.instructions.md** - Complete technical documentation of the codebase
+- **.github/instructions/TASKS.instructions.md** - Current task list and development roadmap
+- **analyze_spawn_groups.js** - Tool for analyzing spawn group patterns in game data
+
 Or each preset individually:
 
 ```
