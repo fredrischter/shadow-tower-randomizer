@@ -95,6 +95,17 @@ function randomize(paramsFile, stDir) {
         params.fieryKeyFlamingKeyDrop = KEEP_ON_CERBERUS;
     }
 
+    // Task: PSX Memory Management - Add memory-conservative mode parameters
+    params.memoryConservative = params.memoryConservative || false;
+    params.memoryStrict = params.memoryStrict || false;
+
+    if (params.memoryConservative) {
+        console.log("MEMORY CONSERVATIVE MODE ENABLED");
+        console.log("  - Using 12-model limit (instead of 16)");
+        console.log("  - Prioritizing model reuse");
+        console.log("  - Avoiding memory overflow");
+    }
+
     var difficultyFactor = factorByDificultyParam[params.difficulty];
     var smoothDifficultyFactor = (2 + difficultyFactor)/3;
     var sharpDifficultyFactor = difficultyFactor * difficultyFactor * difficultyFactor;
@@ -138,6 +149,15 @@ function randomize(paramsFile, stDir) {
     }
 
     data_model.setup(tfile, stDir, params);
+
+    // Task: PSX Memory Management - Override memory limit for conservative mode
+    if (params.memoryConservative) {
+        const Area = data_model.Area;
+        const originalHasFreeMemory = Area.prototype.hasFreeItemMemory;
+        Area.prototype.hasFreeItemMemory = function() {
+            return this.usedItemMemory() < 12;  // Stricter limit
+        };
+    }
 
     const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
     //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
@@ -2806,6 +2826,69 @@ function randomize(paramsFile, stDir) {
         fs.appendFileSync(logFileRandomize, "ERROR writing maps.html: " + err + "\n");
     }
 
+    // Task: PSX Memory Management - Validate memory usage across all areas
+    function validateAreaMemory() {
+        console.log("\n=== MEMORY VALIDATION REPORT ===\n");
+        
+        let overflowAreas = [];
+        let warningAreas = [];
+        let totalMemoryUsed = 0;
+        let maxMemoryUsed = 0;
+        
+        areas.forEach(area => {
+            const memoryUsed = area.usedItemMemory();
+            totalMemoryUsed += memoryUsed;
+            
+            if (memoryUsed > maxMemoryUsed) {
+                maxMemoryUsed = memoryUsed;
+            }
+            
+            if (memoryUsed > 16) {
+                overflowAreas.push({name: area.name, memory: memoryUsed});
+                console.error(`ERROR - ${area.name} EXCEEDS MEMORY LIMIT: ${memoryUsed}/16 models`);
+                
+                // Log detailed breakdown
+                const report = area.detailedMemoryReport();
+                console.error("  Models loaded:");
+                report.models.forEach(modelId => {
+                    console.error(`    - Model ${modelId}: ${report.itemsByModel[modelId]}`);
+                    console.error(`      Sources: ${report.modelSources[modelId].length}`);
+                });
+            } else if (memoryUsed >= 14) {
+                warningAreas.push({name: area.name, memory: memoryUsed});
+                console.warn(`WARNING - ${area.name} HIGH MEMORY USAGE: ${memoryUsed}/16 models`);
+            }
+        });
+        
+        console.log(`\nTotal areas: ${areas.length}`);
+        console.log(`Average memory per area: ${(totalMemoryUsed / areas.length).toFixed(2)}`);
+        console.log(`Maximum memory used: ${maxMemoryUsed}/16`);
+        console.log(`Areas with overflow: ${overflowAreas.length}`);
+        console.log(`Areas with warnings: ${warningAreas.length}`);
+        
+        if (overflowAreas.length > 0) {
+            console.error("\n!!! MEMORY OVERFLOW DETECTED !!!");
+            console.error("The following areas exceed PSX memory limits:");
+            overflowAreas.forEach(area => {
+                console.error(`  - ${area.name}: ${area.memory}/16 models`);
+            });
+            console.error("\nTexture corruption is LIKELY to occur in these areas!");
+            console.error("Consider:");
+            console.error("  1. Enabling memoryConservative mode");
+            console.error("  2. Reducing randomization intensity");
+            console.error("  3. Using different seed");
+        }
+        
+        return overflowAreas.length === 0;
+    }
+    
+    // Run memory validation
+    const memoryValid = validateAreaMemory();
+    if (!memoryValid && params.memoryStrict) {
+        console.error("\nSTRICT MODE: Aborting due to memory violations");
+        process.exit(1);
+    }
+
     for (var i in tfileOriginal.files) {
         var originalPart = tfileOriginal.files[i];
         var changedPart = tfile.files[i];
@@ -2831,6 +2914,30 @@ function randomize(paramsFile, stDir) {
     // Generate creature power value table (for PR #14 verification)
     //console.log(" generating creature power value table");
     //generateCreaturePowerTable(changeSetPath);
+
+    // Task: PSX Memory Management - Add memory statistics to readable.txt
+    const memoryStats = `
+
+=== MEMORY USAGE STATISTICS ===
+
+Areas by Memory Usage:
+${areas
+    .map(area => ({name: area.name, memory: area.usedItemMemory()}))
+    .sort((a, b) => b.memory - a.memory)
+    .map(a => `  ${a.name.padEnd(40)} ${a.memory}/16 models`)
+    .join('\n')}
+
+Memory Distribution:
+  0-8 models:   ${areas.filter(a => a.usedItemMemory() <= 8).length} areas
+  9-12 models:  ${areas.filter(a => a.usedItemMemory() > 8 && a.usedItemMemory() <= 12).length} areas
+  13-15 models: ${areas.filter(a => a.usedItemMemory() > 12 && a.usedItemMemory() < 16).length} areas
+  16 models:    ${areas.filter(a => a.usedItemMemory() === 16).length} areas
+  OVERFLOW:     ${areas.filter(a => a.usedItemMemory() > 16).length} areas
+
+Average Memory Usage: ${(areas.reduce((sum, a) => sum + a.usedItemMemory(), 0) / areas.length).toFixed(2)} models per area
+`;
+
+    fs.appendFileSync(changeSetPath + path.sep + 'readable.txt', memoryStats);
 
     // Write item location tracker
     console.log(" writing item tracker notes");

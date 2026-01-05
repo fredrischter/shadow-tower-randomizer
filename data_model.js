@@ -1096,7 +1096,36 @@
     }
 
     draw(mapDraw, mapSummary) {
-      mapSummary.push('<span style="background:#f0f0f0">Item Memory used '+this.usedItemMemory()+'</span>\n');
+      const memoryUsed = this.usedItemMemory();
+      const memoryLimit = 16;
+      
+      // Color-code based on usage
+      let colorStyle = '#f0f0f0';  // Normal (white)
+      if (memoryUsed >= memoryLimit) {
+        colorStyle = '#ff4444';  // Critical (red)
+      } else if (memoryUsed >= 14) {
+        colorStyle = '#ffaa00';  // Warning (orange)
+      } else if (memoryUsed >= 12) {
+        colorStyle = '#ffff00';  // Caution (yellow)
+      }
+      
+      mapSummary.push(`<span style="background:${colorStyle}">Item Memory used ${memoryUsed}/${memoryLimit}</span>\n`);
+      
+      // Add detailed breakdown if high usage
+      if (memoryUsed >= 12) {
+        const report = this.detailedMemoryReport();
+        mapSummary.push('<details><summary>Memory Details</summary>\n');
+        mapSummary.push('<pre>\n');
+        report.models.forEach(modelId => {
+          mapSummary.push(`Model ${modelId} (${report.itemsByModel[modelId]}):\n`);
+          report.modelSources[modelId].forEach(source => {
+            mapSummary.push(`  - ${source}\n`);
+          });
+        });
+        mapSummary.push('</pre>\n');
+        mapSummary.push('</details>\n');
+      }
+      
       var creaturesScore = this.creaturesScore();
       mapSummary.push('<span style="background:#f0f0f0">Creatures score '+creaturesScore+'</span>\n');
 
@@ -1132,11 +1161,11 @@
           //console.log("Item Memory count +1 by drop1 - " + this.spawns[i].name());
         }
         if (!this.spawns[i].drop2.isNull()) {
-           //models.add(itemData[this.spawns[i].drop2.get()].model.get());
+          models.add(itemData[this.spawns[i].drop2.get()].model.get());
           //console.log("Item Memory count +1 by drop2 - " + this.spawns[i].name());
         }
         if (!this.spawns[i].drop3.isNull()) {
-           //models.add(itemData[this.spawns[i].drop3.get()].model.get());
+          models.add(itemData[this.spawns[i].drop3.get()].model.get());
           //console.log("Item Memory count +1 by drop3 - " + this.spawns[i].name());
         }
       }
@@ -1148,6 +1177,68 @@
       }
 
       return models.size;
+    }
+
+    detailedMemoryReport() {
+      let models = new Set();
+      let modelSources = {};
+      let itemsByModel = {};
+      
+      // Track from spawn drops
+      for (var i in this.spawns) {
+        if (this.spawns[i].chance.isNull()) continue;
+        
+        const logDrop = (dropSlot, itemId) => {
+          if (itemId !== null && itemId !== 0xFF) {
+            const modelId = itemData[itemId].model.get();
+            const itemName = itemData[itemId].name;
+            models.add(modelId);
+            
+            if (!modelSources[modelId]) {
+              modelSources[modelId] = [];
+              itemsByModel[modelId] = itemName;
+            }
+            modelSources[modelId].push(
+              `Spawn ${i} (${this.spawns[i].name()}) ${dropSlot}`
+            );
+          }
+        };
+        
+        if (!this.spawns[i].drop1.isNull()) {
+          logDrop('drop1', this.spawns[i].drop1.get());
+        }
+        if (!this.spawns[i].drop2.isNull()) {
+          logDrop('drop2', this.spawns[i].drop2.get());
+        }
+        if (!this.spawns[i].drop3.isNull()) {
+          logDrop('drop3', this.spawns[i].drop3.get());
+        }
+      }
+      
+      // Track from collectables
+      for (var i in this.collectables) {
+        if (!this.collectables[i].type.isNull()) {
+          const itemId = this.collectables[i].type.get();
+          const modelId = itemData[itemId].model.get();
+          const itemName = itemData[itemId].name;
+          models.add(modelId);
+          
+          if (!modelSources[modelId]) {
+            modelSources[modelId] = [];
+            itemsByModel[modelId] = itemName;
+          }
+          modelSources[modelId].push(
+            `Collectable ${i}`
+          );
+        }
+      }
+      
+      return {
+        count: models.size,
+        models: Array.from(models),
+        modelSources: modelSources,
+        itemsByModel: itemsByModel
+      };
     }
 
     creaturesScore() {
