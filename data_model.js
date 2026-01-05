@@ -2363,7 +2363,10 @@
       const effect = global.effects[effectId];
       const effectPower = this.calculateEffectPower(effect);
       
-      return Math.round(this.hp.get()/4 + effectPower * 2);
+      // Fix for bat wave magic damage being too strong in first stage
+      // effectPower is a sum of all damage types, so it should have lower multiplier than attack average
+      // Changed from * 2 to * 0.5 to balance magic-based creatures with physical attackers
+      return Math.round(this.hp.get()/4 + effectPower * 0.5);
     } else {
       // Use traditional attack-based calculation
       var attackSum = 0;
