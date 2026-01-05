@@ -2011,7 +2011,7 @@ class Area {
 Shadow Tower has limited memory for items per area. The randomizer tracks this:
 
 ```javascript
-const MAX_ITEM_MEMORY = 64;  // Maximum items per area
+const MAX_ITEM_MEMORY = 16;  // Maximum unique item models per area (not 64)
 
 // Before adding item
 if (!area.hasFreeItemMemory()) {
@@ -2025,6 +2025,40 @@ spawn.drop1Chance.set(100);
 ```
 
 This prevents crashes from too many items in one area.
+
+**Important:** The actual limit is **16 unique item models**, not 64. The `usedItemMemory()` function counts unique item model IDs using a Set to avoid duplicates.
+
+### Spawn Groups (mutexGroup)
+
+**See:** `SPAWN_GROUPS_DOCUMENTATION.md` for comprehensive documentation.
+
+**Location:** Offset 0x0a in spawn structure (1 byte, UInt8)
+
+**Purpose:** Controls how many creatures from a spawn pool can exist simultaneously. Acts as both a spawn limiter and memory management mechanism.
+
+**Known Values:**
+```
+0x0e (14) - 6 creatures at once
+0x1c (28) - 3 creatures at once  
+0x1d (29) - 3 creatures at once
+0x28 (40) - 3 creatures at once
+0x7f (127) - 1 creature at once
+0x5a (90) - 1 at once, limit 3 (King Hopper bug - causes spawn failures)
+0x14 (20) - 6 creatures at once (King Hopper fix value)
+```
+
+**Key Points:**
+- Wrong mutexGroup values cause spawn failures, crashes, or memory overflow
+- King Hopper fix changes mutexGroup from 0x5a → 0x14 (randomize.js line 436)
+- Interacts with item memory limit - spawn groups control creature instances
+- Currently preserved when copying spawns but not validated during randomization
+- Analysis tool: `analyze_spawn_groups.js`
+
+**Relationship to Memory:**
+- mutexGroup limits simultaneous creature instances
+- Each creature can carry 3 item drops (drop1, drop2, drop3)
+- Combined with 16-model limit, this prevents memory exhaustion
+- Randomization should respect both constraints
 
 ---
 
