@@ -1925,8 +1925,10 @@ function randomize(paramsFile, stDir) {
             const BASE_MAX_HP = 2000;
             const BASE_MIN_ATTACK = 5;
             const BASE_MAX_ATTACK = 100;
-            const BASE_MIN_EFFECT_POWER = 10;
-            const BASE_MAX_EFFECT_POWER = 200;
+            // Fix: Reduced effect power values to balance magic creatures with physical attackers
+            // demon_bat in first stage should have effect power ~7-8 to match acid_slime's power
+            const BASE_MIN_EFFECT_POWER = 5;
+            const BASE_MAX_EFFECT_POWER = 100;
             
             // Apply difficulty factor to targets
             // Easy mode (0.5): weaker creatures (lower targets)
