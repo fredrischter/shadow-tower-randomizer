@@ -3,6 +3,7 @@
 const randomizer_common = require('./randomizer_common');
 const data_model = require('./data_model');
 
+// Task: Performance optimization - Parallelize T-file unpacking
 function unpack(files) {
 
 	if (!files) {
@@ -11,20 +12,48 @@ function unpack(files) {
 		return;
 	}
 
-	var filesArray = files.split(";");
-
-	filesArray.forEach((fileName) => {
-		if (!fileName.trim().length) {
-			return;
-		}
-		var tfile = new TFILEReader(fileName).readTFormat();
-		tfile.writeParts();
+	var filesArray = files.split(";").filter(f => f.trim().length > 0);
+	
+	// Task: Performance optimization - Process files in parallel using Promise.all
+	const startTime = Date.now();
+	console.log(`Starting parallel unpacking of ${filesArray.length} T-files...`);
+	
+	const promises = filesArray.map((fileName, index) => {
+		return new Promise((resolve, reject) => {
+			try {
+				const fileStartTime = Date.now();
+				var tfile = new TFILEReader(fileName).readTFormat();
+				tfile.writeParts();
+				const fileEndTime = Date.now();
+				console.log(`[${index + 1}/${filesArray.length}] Unpacked ${fileName} in ${fileEndTime - fileStartTime}ms`);
+				resolve();
+			} catch (error) {
+				console.error(`Error unpacking ${fileName}:`, error);
+				reject(error);
+			}
+		});
+	});
+	
+	// Use Promise.all to process all files in parallel
+	return Promise.all(promises).then(() => {
+		const endTime = Date.now();
+		console.log(`Parallel unpacking completed in ${endTime - startTime}ms (${filesArray.length} files)`);
+	}).catch((error) => {
+		console.error("Error during parallel unpacking:", error);
+		process.exit(1);
 	});
 
 }
 
 if (process.argv[1].indexOf("unpack.js") > -1){
-	unpack(process.argv[2]);
+	// Task: Performance optimization - Handle promise from parallel processing
+	const result = unpack(process.argv[2]);
+	if (result && result.then) {
+		result.catch((error) => {
+			console.error("Unpack failed:", error);
+			process.exit(1);
+		});
+	}
 } else {
 	module.exports = unpack;
 }

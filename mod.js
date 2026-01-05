@@ -104,18 +104,43 @@ if (useCachedExtracted) {
 
 fs.copyFileSync(originalParamsFile, paramsFile);
 
-function exec(cmd, callback) {
+// Task: Performance optimization - Add timing for overall processing
+const overallStartTime = Date.now();
+const stepTimes = {};
+
+function exec(cmd, callback, stepName) {
+	const stepStartTime = Date.now();
 	console.log("Running " + cmd);
 	var child = child_process.exec(cmd);
 	child.stdout.pipe(process.stdout);
 	child.stderr.pipe(process.stderr);
 	child.on('exit', function(err) {
+		const stepEndTime = Date.now();
+		const stepDuration = stepEndTime - stepStartTime;
+		if (stepName) {
+			stepTimes[stepName] = stepDuration;
+			console.log(`[TIMING] ${stepName} completed in ${stepDuration}ms (${(stepDuration/1000).toFixed(2)}s)`);
+		}
 		if (err) {
 			console.log("Step finished with error " + err);
 			return;
 		}
 		callback();
 	});
+}
+
+// Task: Performance optimization - Add function to print timing summary
+function printTimingSummary() {
+	const overallEndTime = Date.now();
+	const totalDuration = overallEndTime - overallStartTime;
+	console.log("\n========== PERFORMANCE TIMING SUMMARY ==========");
+	console.log(`Total processing time: ${totalDuration}ms (${(totalDuration/1000).toFixed(2)}s)`);
+	console.log("\nStep breakdown:");
+	for (const [stepName, duration] of Object.entries(stepTimes)) {
+		const percentage = ((duration / totalDuration) * 100).toFixed(1);
+		console.log(`  ${stepName}: ${duration}ms (${(duration/1000).toFixed(2)}s) - ${percentage}%`);
+	}
+	console.log("================================================\n");
 }
 
 // Task: Cache extracted files system - Skip extraction/unpacking if using cache
@@ -134,16 +159,17 @@ if (useCachedExtracted) {
 			exec('npm run pack "' + filesFullPath + '"', function() {
 
 				exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
+					printTimingSummary();
 					console.log("Finished, output " + outputImage);
 					console.log("Used cached extracted files from " + extractedPath);
 					console.log("Spoilers " + spoilersPath);
-				});
+				}, 'mkpsxiso');
 			
-			});
+			}, 'pack');
 
-		});
+		}, 'change');
 
-	});
+	}, 'randomize');
 	
 } else {
 	// Full workflow: extract -> unpack -> randomize -> change -> pack -> build ISO
@@ -158,20 +184,21 @@ if (useCachedExtracted) {
 					exec('npm run pack "' + filesFullPath + '"', function() {
 
 						exec('mkpsxiso "' + xmlDescriptor + '" -y -o "' + outputImage + '"'/* + '" -c "' + outputCue + '"'*/, function() {
+							printTimingSummary();
 							console.log("Finished, output " + outputImage);
 							console.log("Extracted modified files " + extractedPath);
 							console.log("Spoilers " + spoilersPath);
-						});
+						}, 'mkpsxiso');
 					
-					});
+					}, 'pack');
 
-				});
+				}, 'change');
 
-			});
+			}, 'randomize');
 
-		});
+		}, 'unpack');
 
-	});
+	}, 'dumpsxiso');
 }
 
 
