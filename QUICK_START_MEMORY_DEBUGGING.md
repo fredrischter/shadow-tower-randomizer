@@ -16,8 +16,10 @@ You asked for guidance on using DuckStation or other tools to debug Shadow Tower
 - Best PSX debugging tools
 - VRAM viewer for texture inspection
 - Memory scanner
-- Lua scripting support
+- CPU debugger
 - Save state support for testing
+
+**Note:** DuckStation does NOT support Lua scripting. For real-time monitoring with scripts, use BizHawk instead.
 
 ### 2. Enable Debugging Features
 
@@ -109,17 +111,23 @@ OVERFLOW  ██████ 6 areas (14.3%)  ← PROBLEM!
 
    Save as: `area-name-vram.png`
 
-### Method 3: Live Monitoring with Lua Script
+### Method 3: Live Monitoring with Lua Script (BizHawk)
 
-1. **Load the monitoring script**
+**Note:** This requires BizHawk emulator, not DuckStation. DuckStation does not support Lua scripting.
+
+1. **Download BizHawk**
+   - Get it from: https://tasvideos.org/BizHawk
+   - Load Shadow Tower with PSX core
+
+2. **Load the monitoring script**
    ```
-   Tools → Execute Lua Script
-   → Select duckstation-memory-monitor.lua
+   Tools → Lua Console
+   → Load Script → Select bizhawk-memory-monitor.lua
    ```
 
-2. **Play through the area**
+3. **Play through the area**
 
-3. **Watch the on-screen display:**
+4. **Watch the on-screen display:**
    ```
    ┌─────────────────────────────┐
    │ Shadow Tower Memory Monitor │
@@ -129,12 +137,20 @@ OVERFLOW  ██████ 6 areas (14.3%)  ← PROBLEM!
    └─────────────────────────────┘
    ```
 
-4. **Check console for alerts:**
+5. **Check console for alerts:**
    ```
    [Memory Monitor] Model loaded: 0x80123456 (count: 14/16)
    [Memory Monitor] ⚠ Approaching limit: 14/16
    [Memory Monitor] 🚨 OVERFLOW: 17/16  ← STOP!
    ```
+
+**Alternative: DuckStation Manual Monitoring**
+
+If you prefer DuckStation (no Lua support):
+1. Open Memory Viewer: `Tools → Memory`
+2. Manually watch addresses for model pointers
+3. Use VRAM viewer to check for corruption
+4. Less convenient but works with DuckStation's native tools
 
 ---
 
@@ -382,7 +398,7 @@ shadow-tower-randomizer/
 ├── PSX_MEMORY_DEBUGGING_GUIDE.md  - Full 500+ line guide
 ├── MEMORY_TRACKING_IMPROVEMENTS.md - Implementation plan
 ├── psx-memory-inspector.js         - CLI analysis tool
-└── duckstation-memory-monitor.lua  - Real-time monitoring
+└── bizhawk-memory-monitor.lua  - Real-time monitoring
 ```
 
 ---

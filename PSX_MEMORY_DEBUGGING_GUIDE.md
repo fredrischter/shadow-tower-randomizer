@@ -253,12 +253,16 @@ For detailed memory inspection:
 
 ## Automated Memory Monitoring
 
-### Create a DuckStation Lua Script
+### Using BizHawk with Lua Script
 
-DuckStation supports **Lua scripting** for automated monitoring:
+**Important:** DuckStation does NOT support Lua scripting. Use BizHawk emulator for automated monitoring.
+
+**Download BizHawk:** https://tasvideos.org/BizHawk
+
+BizHawk supports **Lua scripting** for automated monitoring:
 
 ```lua
--- psx_memory_monitor.lua
+-- bizhawk_memory_monitor.lua
 -- Monitors Shadow Tower item memory usage
 
 local item_models = {}
@@ -267,7 +271,7 @@ local current_area = 0
 
 function on_frame()
   -- Read current area ID (example address)
-  local area_id = memory.readbyte(0x8001ABCD)
+  local area_id = memory.read_u8(0x8001ABCD)  -- BizHawk API
   
   -- If area changed, reset tracking
   if area_id ~= current_area then
@@ -278,7 +282,7 @@ function on_frame()
   
   -- Scan for loaded item models (example range)
   for addr = 0x80100000, 0x80150000, 4 do
-    local model_ptr = memory.readdword(addr)
+    local model_ptr = memory.read_u32_le(addr)  -- BizHawk API
     
     -- Check if valid model pointer
     if model_ptr >= 0x80000000 and model_ptr < 0x80200000 then
@@ -293,20 +297,27 @@ function on_frame()
         -- Alert if approaching limit
         if count >= max_models then
           console.error("WARNING: Item memory limit reached!")
-          emu.pause()  -- Pause emulation for inspection
+          client.pause()  -- Pause emulation for inspection (BizHawk API)
         end
       end
     end
   end
 end
 
-emu.registerframe(on_frame)
+emu.registerbeforeframe(on_frame)  -- BizHawk API
 ```
 
-**To use:**
-1. Save as `psx_memory_monitor.lua`
-2. Load in DuckStation: `Tools → Execute Lua Script`
-3. Watch console for memory warnings
+**To use with BizHawk:**
+1. Save as `bizhawk_memory_monitor.lua`
+2. Open BizHawk: `Tools → Lua Console`
+3. Load the script
+4. Watch console for memory warnings
+
+**Alternative: DuckStation (Manual)**
+DuckStation doesn't support Lua, but you can:
+1. Use Memory Viewer to manually watch addresses
+2. Use VRAM viewer to check for texture corruption
+3. Create save states before entering areas for testing
 
 ---
 

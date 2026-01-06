@@ -132,7 +132,7 @@ test_all_presets.bat
 
 **Tools provided:**
 - `psx-memory-inspector.js` - CLI tool to analyze randomization memory usage
-- `duckstation-memory-monitor.lua` - Real-time monitoring in DuckStation emulator
+- `bizhawk-memory-monitor.lua` - Real-time monitoring in BizHawk emulator (DuckStation lacks Lua support)
 
 **Usage:**
 ```bash

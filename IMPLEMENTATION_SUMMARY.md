@@ -51,12 +51,13 @@ In response to your question about **debugging PSX memory management** for textu
    - Risk assessment with recommendations
    - Generates detailed report file
 
-2. **duckstation-memory-monitor.lua** - Real-time monitoring
-   - Load in DuckStation emulator
+2. **bizhawk-memory-monitor.lua** - Real-time monitoring
+   - **Requires BizHawk emulator** (DuckStation lacks Lua support)
    - On-screen memory usage overlay
    - Live alerts (safe/warning/critical)
    - Area transition detection
    - Console logging
+   - Download BizHawk: https://tasvideos.org/BizHawk
 
 ## Your Question Answered
 
@@ -65,7 +66,7 @@ In response to your question about **debugging PSX memory management** for textu
 
 ### The Answer
 
-**Short Answer:** Use `psx-memory-inspector.js` after generation and `duckstation-memory-monitor.lua` during gameplay.
+**Short Answer:** Use `psx-memory-inspector.js` after generation for analysis, or `bizhawk-memory-monitor.lua` with BizHawk for real-time monitoring.
 
 **Complete Answer:**
 
@@ -114,12 +115,15 @@ node psx-memory-inspector.js ./generated/preset/spoilers
 4. Look for scrambled/wrong textures in VRAM window
 5. Screenshot for evidence
 
-**Option C: Live Monitoring**
-1. DuckStation → Tools → Execute Lua Script
-2. Load `duckstation-memory-monitor.lua`
-3. Play normally
-4. Watch on-screen overlay
-5. Console alerts when approaching limits
+**Option C: Live Monitoring (requires BizHawk)**
+1. Download BizHawk from https://tasvideos.org/BizHawk
+2. Load Shadow Tower with PSX core
+3. Tools → Lua Console → Load Script
+4. Select `bizhawk-memory-monitor.lua`
+5. Play normally - watch on-screen overlay
+6. Console alerts when approaching limits
+
+**Note:** DuckStation does not support Lua scripting. Use BizHawk for automated monitoring, or DuckStation's manual tools (memory viewer, VRAM viewer).
 
 #### 4. Reading the Results
 
@@ -216,7 +220,7 @@ New Documentation:
 
 New Tools:
 ├── psx-memory-inspector.js              (8 KB)
-└── duckstation-memory-monitor.lua       (7 KB)
+└── bizhawk-memory-monitor.lua       (7 KB)
 
 Total: ~68 KB documentation + tools
 ```
@@ -331,7 +335,7 @@ Maximum memory: 18/16 models
 ## Questions Answered
 
 ✅ "How can I do a precise inspect on memory is being used?"
-   → Use psx-memory-inspector.js and duckstation-memory-monitor.lua
+   → Use psx-memory-inspector.js and bizhawk-memory-monitor.lua
 
 ✅ "Maybe you guide me through some debugging using duckstation"
    → Complete step-by-step guide in PSX_MEMORY_DEBUGGING_GUIDE.md

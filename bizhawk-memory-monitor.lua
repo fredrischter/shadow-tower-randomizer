@@ -1,10 +1,14 @@
--- DuckStation Memory Monitor for Shadow Tower
+-- BizHawk Memory Monitor for Shadow Tower
 -- Tracks item model loading in real-time to prevent texture corruption
 -- 
+-- IMPORTANT: This script is designed for BizHawk emulator (NOT DuckStation)
+-- DuckStation does not support Lua scripting.
+--
 -- Installation:
--- 1. Open DuckStation
--- 2. Tools → Execute Lua Script
--- 3. Select this file
+-- 1. Download BizHawk: https://tasvideos.org/BizHawk
+-- 2. Open BizHawk with PSX core
+-- 3. Tools → Lua Console
+-- 4. Load this script
 --
 -- Features:
 -- - Real-time item memory tracking
@@ -12,8 +16,8 @@
 -- - Area transition detection
 -- - Memory usage logging
 
-local script_name = "Shadow Tower Memory Monitor"
-local version = "1.0"
+local script_name = "Shadow Tower Memory Monitor (BizHawk)"
+local version = "1.1"
 
 -- Configuration
 local MEMORY_LIMIT = 16         -- Maximum unique item models per area
@@ -59,9 +63,9 @@ local area_names = {
 -- Helper Functions
 
 local function read_word(address)
-  -- Safely read 4-byte word from memory
+  -- Safely read 4-byte word from memory (BizHawk API)
   local success, value = pcall(function()
-    return memory.readdword(address)
+    return memory.read_u32_le(address)  -- BizHawk's API
   end)
   if success then
     return value
@@ -71,9 +75,9 @@ local function read_word(address)
 end
 
 local function read_byte(address)
-  -- Safely read 1 byte from memory
+  -- Safely read 1 byte from memory (BizHawk API)
   local success, value = pcall(function()
-    return memory.readbyte(address)
+    return memory.read_u8(address)  -- BizHawk's API
   end)
   if success then
     return value
