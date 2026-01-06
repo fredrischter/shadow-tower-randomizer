@@ -11,6 +11,17 @@ const replaceAll = require('string.prototype.replaceall');
 
 function randomize(paramsFile, stDir) {
 
+    // Task: Performance analysis - Add detailed timing for randomize substeps
+    const randomizeStartTime = Date.now();
+    const substepTimes = {};
+    function logSubstepTime(stepName, startTime) {
+        const endTime = Date.now();
+        const duration = endTime - startTime;
+        substepTimes[stepName] = duration;
+        console.error(`[PERF] ${stepName}: ${duration}ms (${(duration/1000).toFixed(2)}s)`);
+        return endTime;
+    }
+
     for (var i = 2; i < process.argv.length; i++) {
         if (process.argv[i] == "-toNotGenerateImages") {
             global.toNotGenerateImages = true;
@@ -125,10 +136,15 @@ function randomize(paramsFile, stDir) {
     fs.copyFileSync('maps' + path.sep + 'libs' + path.sep + 'neo4jd3.min.css', changeSetPath + path.sep + 'libs' + path.sep + 'neo4jd3.min.css');
     fs.copyFileSync('maps' + path.sep + 'libs' + path.sep + 'mermaid.min.js', changeSetPath + path.sep + 'libs' + path.sep + 'mermaid.min.js'); // Task 7: Add mermaid
 
+    // Task: Performance analysis - Time T-file reading
+    var substepStart = Date.now();
     let tFilePath = stDir + path.sep + "ST" + path.sep + "COM" + path.sep + "FDAT.T";
     var tfileOriginal = new TFILEReader(tFilePath).readTFormat();
     var tfile = new TFILEReader(tFilePath).readTFormat();
+    logSubstepTime("Read T-files", substepStart);
 
+    // Task: Performance analysis - Time seed setup
+    substepStart = Date.now();
     if (params.seed) {
         seedRandom(params.seed);
         console.log("Randomization - Using given seed " + params.seed);
@@ -136,8 +152,12 @@ function randomize(paramsFile, stDir) {
         var seed = useRandomSeed();
         console.log("Randomization - Using generated seed " + seed);
     }
+    logSubstepTime("Seed setup", substepStart);
 
+    // Task: Performance analysis - Time data model setup
+    substepStart = Date.now();
     data_model.setup(tfile, stDir, params);
+    logSubstepTime("Data model setup", substepStart);
 
     const logFile2 = fs.openSync(changeSetPath + path.sep + 'readable.txt', 'w');
     //const logFile2 = fs.createWriteStream(changeSetPath + path.sep + 'readable.txt', {flags: 'w+'});
@@ -147,11 +167,15 @@ function randomize(paramsFile, stDir) {
     }
     console.log("Parameters - " + JSON.stringify(params));
 
+    // Task: Performance analysis - Time map shuffling
+    var substepStart = Date.now();
     //const shuffle = JSON.parse(fs.readFileSync("./shuffle2.json"));
     const shuffle = map_shuffler(params, stDir);
+    logSubstepTime("Map shuffling", substepStart);
 
     // Task #21: Custom Door Assignment for testing specific area connections
     // NOTE: This is for TESTING only - it directly assigns door destinations without full swap logic
+    substepStart = Date.now();
     if (params.customDoorSwaps && params.customDoorSwaps.length > 0) {
         console.log("DEBUG ------------------ Applying custom door assignments");
         
@@ -224,14 +248,21 @@ function randomize(paramsFile, stDir) {
         
         // Task #21: Re-write map.json to include the custom assignments
     }
+    logSubstepTime("Custom door assignments", substepStart);
 
+    // Task: Performance analysis - Time map file writing
+    substepStart = Date.now();
     fs.writeFileSync(changeSetPath + path.sep + 'map-with-walk-detail.json', JSON.stringify(shuffle, null, 2));
     delete shuffle.explanation;
 
     fs.writeFileSync(changeSetPath + path.sep + 'map.json', JSON.stringify(shuffle, null, 2));
+    logSubstepTime("Write map JSON files", substepStart);
 
+    // Task: Performance analysis - Time map application
+    substepStart = Date.now();
     var map = new MapShuffle(shuffle.map);
     map.applyMap(data_model);
+    logSubstepTime("Apply map to data model", substepStart);
 
     //Innofensive shift to demonstrate how it works
     //shadow_tower_part1.objects[0].destinationYFineShift.set(-5);
@@ -2189,7 +2220,10 @@ function randomize(paramsFile, stDir) {
         console.log("========== END TEST ==========\n\n");
     }
 
+    // Task: Performance analysis - Time item/creature randomization (operate function)
+    substepStart = Date.now();
     operate();
+    logSubstepTime("Item/creature randomization (operate)", substepStart);
 
     // As can be found in spoilers map.js this is exit in poisonous cavern that leads to stone cavern, I'm setting it directly to the first door to make easier way there. 
     // shadow_tower_part1.objects[0].setExit(earth_world_poisonous_cavern.objects[13], shuffle.map);
@@ -2559,6 +2593,8 @@ function randomize(paramsFile, stDir) {
         fs.writeSync(logFileRandomize, util.format.apply(null, arguments) + '\n');
     }
 
+    // Task: Performance analysis - Time map HTML generation
+    substepStart = Date.now();
     var htmlFile = mapFolder + path.sep + "maps.html";
     var mapsHTML = ""+fs.readFileSync(htmlFile);
     if (!global.toNotGenerateImages) {
@@ -2784,6 +2820,10 @@ function randomize(paramsFile, stDir) {
     };
     var neo4jDataJson = JSON.stringify(neo4jDataWrapped, null, 2);
     mapsHTML = mapsHTML.replace("<!--neo4j-data-->", "var neo4jGraphData = " + neo4jDataJson + ";");
+    logSubstepTime("Map HTML/Mermaid/Neo4j generation", substepStart);
+
+    // Task: Performance analysis - Time area loop (map images and entity data)
+    substepStart = Date.now();
     fs.appendFileSync(logFileRandomize, "DEBUG: About to enter area loop. Total areas: " + Object.keys(areas).length + "\n");
 
     for (var a in areas) {
@@ -2807,7 +2847,10 @@ function randomize(paramsFile, stDir) {
     } catch (err) {
         fs.appendFileSync(logFileRandomize, "ERROR writing maps.html: " + err + "\n");
     }
+    logSubstepTime("Area loop (images + entity data)", substepStart);
 
+    // Task: Performance analysis - Time changeset generation
+    substepStart = Date.now();
     for (var i in tfileOriginal.files) {
         var originalPart = tfileOriginal.files[i];
         var changedPart = tfile.files[i];
@@ -2829,15 +2872,31 @@ function randomize(paramsFile, stDir) {
             });
         }
     }
+    logSubstepTime("Changeset generation", substepStart);
 
     // Generate creature power value table (for PR #14 verification)
     //console.log(" generating creature power value table");
     //generateCreaturePowerTable(changeSetPath);
 
+    // Task: Performance analysis - Time file writing
+    substepStart = Date.now();
     // Write item location tracker
     console.log(" writing item tracker notes");
     console.log(" writing " + changeSetFile);
     fs.writeFileSync(changeSetFile, JSON.stringify(changeSet));
+    logSubstepTime("Write changeset file", substepStart);
+
+    // Task: Performance analysis - Print timing summary for randomize substeps
+    const randomizeEndTime = Date.now();
+    const randomizeTotalDuration = randomizeEndTime - randomizeStartTime;
+    console.error("\n========== RANDOMIZE SUBSTEP TIMING SUMMARY ==========");
+    console.error(`Total randomize time: ${randomizeTotalDuration}ms (${(randomizeTotalDuration/1000).toFixed(2)}s)`);
+    console.error("\nSubstep breakdown:");
+    for (const [stepName, duration] of Object.entries(substepTimes)) {
+        const percentage = ((duration / randomizeTotalDuration) * 100).toFixed(1);
+        console.error(`  ${stepName}: ${duration}ms (${(duration/1000).toFixed(2)}s) - ${percentage}%`);
+    }
+    console.error("======================================================\n");
 }
 
 if (process.argv[1] && process.argv[1].indexOf("randomize.js") > -1) {
