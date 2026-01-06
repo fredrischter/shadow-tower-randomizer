@@ -1874,7 +1874,7 @@ function randomize(paramsFile, stDir) {
         }
 
         // Randomize creatures
-        else if (params.randomizeCreatures) {
+        else if (params.randomizeCreatures && !params.keepOnlyBosses) {
             // set all creatures to slime
 
             //swapCreatures(human_world_solitary_region["01_acid_slime"], earth_world_rotting_cavern["00_watcher_plant"], changeSet);
