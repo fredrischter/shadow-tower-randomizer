@@ -1114,11 +1114,11 @@
     }
 
     hasFreeItemMemory() {
-      return this.usedItemMemory()<16;
+      return this.usedItemMemory()<12;
     }
 
     hasMemoryCrime() {
-      return this.usedItemMemory()>16;
+      return this.usedItemMemory()>12;
     }
 
     usedItemMemory() {
@@ -1132,11 +1132,11 @@
           //console.log("Item Memory count +1 by drop1 - " + this.spawns[i].name());
         }
         if (!this.spawns[i].drop2.isNull()) {
-           //models.add(itemData[this.spawns[i].drop2.get()].model.get());
+          models.add(itemData[this.spawns[i].drop2.get()].model.get());
           //console.log("Item Memory count +1 by drop2 - " + this.spawns[i].name());
         }
         if (!this.spawns[i].drop3.isNull()) {
-           //models.add(itemData[this.spawns[i].drop3.get()].model.get());
+          models.add(itemData[this.spawns[i].drop3.get()].model.get());
           //console.log("Item Memory count +1 by drop3 - " + this.spawns[i].name());
         }
       }
