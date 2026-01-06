@@ -1,5 +1,34 @@
 # Performance Analysis and Investigation
 
+## Quick Summary
+
+**Problem:** The randomize step takes 91.74 seconds (51.9% of total processing time), but we don't know which operations within it are slow.
+
+**Solution:** Added detailed timing instrumentation to track 12 substeps within the randomize process.
+
+**How to Use:**
+```bash
+# Run data collection script (saves output to file)
+./collect-timing-data.sh [preset-name]        # Linux/Mac
+collect-timing-data.bat [preset-name]          # Windows
+
+# Or just run the randomizer normally - timing appears in console
+npm run mod "./generated/st.bin" "./params/no-change.json"
+```
+
+**What You Get:**
+- Detailed breakdown of where time is spent in randomize step
+- Percentage of time for each substep
+- Millisecond precision timing
+
+**Next Steps:**
+1. Collect real timing data from your system
+2. Identify actual bottlenecks (not just hypotheses)
+3. Implement optimizations targeting the slowest substeps
+4. Measure improvement
+
+---
+
 ## Overview
 
 This document analyzes the performance bottlenecks in the Shadow Tower Randomizer based on detailed timing instrumentation added to the codebase.
@@ -74,6 +103,49 @@ npm run mod "./generated/st.bin" "./params/no-change.json"
 ```
 
 The detailed timing is written to **stderr** (using `console.error`) so it appears in the console without interfering with the regular logs in `randomize.txt` and `readable.txt`.
+
+### Example Output
+
+When you run the randomizer, you'll see timing logs like this in the console:
+
+```
+Running npm run randomize "..." "..."
+[PERF] Read T-files: 2345ms (2.35s)
+[PERF] Seed setup: 12ms (0.01s)
+[PERF] Data model setup: 15678ms (15.68s)
+[PERF] Map shuffling: 4521ms (4.52s)
+[PERF] Custom door assignments: 0ms (0.00s)
+[PERF] Write map JSON files: 234ms (0.23s)
+[PERF] Apply map to data model: 1567ms (1.57s)
+[PERF] Item/creature randomization (operate): 28456ms (28.46s)
+[PERF] Map HTML/Mermaid/Neo4j generation: 3421ms (3.42s)
+[PERF] Area loop (images + entity data): 32109ms (32.11s)
+[PERF] Changeset generation: 2987ms (2.99s)
+[PERF] Write changeset file: 456ms (0.46s)
+
+========== RANDOMIZE SUBSTEP TIMING SUMMARY ==========
+Total randomize time: 91786ms (91.79s)
+
+Substep breakdown:
+  Read T-files: 2345ms (2.35s) - 2.6%
+  Seed setup: 12ms (0.01s) - 0.0%
+  Data model setup: 15678ms (15.68s) - 17.1%
+  Map shuffling: 4521ms (4.52s) - 4.9%
+  Custom door assignments: 0ms (0.00s) - 0.0%
+  Write map JSON files: 234ms (0.23s) - 0.3%
+  Apply map to data model: 1567ms (1.57s) - 1.7%
+  Item/creature randomization (operate): 28456ms (28.46s) - 31.0%
+  Map HTML/Mermaid/Neo4j generation: 3421ms (3.42s) - 3.7%
+  Area loop (images + entity data): 32109ms (32.11s) - 35.0%
+  Changeset generation: 2987ms (2.99s) - 3.3%
+  Write changeset file: 456ms (0.46s) - 0.5%
+======================================================
+```
+
+This example shows that the biggest bottlenecks would be:
+1. **Area loop (35.0%)** - Generating PNG images and reinjecting entity data
+2. **Item/creature randomization (31.0%)** - Main randomization logic
+3. **Data model setup (17.1%)** - Parsing game data from binary files
 
 ## Likely Performance Bottlenecks (Hypotheses)
 
