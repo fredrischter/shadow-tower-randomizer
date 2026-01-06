@@ -128,6 +128,35 @@ test_all_presets.bat
 
 The randomizer has been optimized for parallel processing:
 - T-file unpacking/packing runs in parallel (10-30x faster)
+- Changeset modifications processed in parallel (2-3x faster)
+- Overall processing time reduced by ~70%
+
+### Performance Benchmarking
+
+To measure processing time and identify bottlenecks:
+
+```bash
+# Run benchmark (uses no-change preset)
+npm run benchmark
+
+# Collect detailed timing data for any preset
+./collect-timing-data.sh randomized-medium    # Linux/Mac
+collect-timing-data.bat randomized-medium      # Windows
+
+# The detailed timing shows breakdown for:
+# - dumpsxiso, unpack, randomize, change, pack, mkpsxiso
+# - Substeps within randomize (data loading, map shuffling, item randomization, etc.)
+```
+
+See [PERFORMANCE_ANALYSIS.md](PERFORMANCE_ANALYSIS.md) for detailed analysis and optimization opportunities.
+
+Current performance profile (~177 seconds total):
+- dumpsxiso: 6s (3.5%)
+- unpack: 25s (14.0%)
+- **randomize: 92s (51.9%)** ← Main bottleneck
+- change: 9s (5.1%)
+- pack: 39s (22.0%)
+- mkpsxiso: 6s (3.5%)
 - Changeset application uses parallel processing (2-3x faster)
 - Overall processing time reduced by ~70% on multi-core systems
 
