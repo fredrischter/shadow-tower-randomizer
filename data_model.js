@@ -2170,18 +2170,27 @@
           }
         }
 
-      //this.maxPresence = new UInt8( bin, this.offset_in_file + 0x10);
       this.attack1 = new UInt8( bin, this.offset_in_file + 0x07);
       this.attack2 = new UInt8( bin, this.offset_in_file + 0x08);
-      this.magic1 = new UInt8( bin, this.offset_in_file + 0x09);
+      //this.magic1 = new UInt8( bin, this.offset_in_file + 0x09);
 
       this.height = new UInt16( bin, this.offset_in_file + 0x0b);
       this.weight = new UInt16( bin, this.offset_in_file + 0x0d);
-      this.something3 = new UInt16( bin, this.offset_in_file + 0x0f);
-      this.something4 = new UInt16( bin, this.offset_in_file + 0x11);
+      
+      this.something1 = new UInt16( bin, this.offset_in_file + 0x0f);
+      this.something2 = new UInt16( bin, this.offset_in_file + 0x11);
+      this.something3 = new UInt16( bin, this.offset_in_file + 0x13);
+      this.something4 = new UInt16( bin, this.offset_in_file + 0x15);
 
       this.centerPositionHeight = new UInt16( bin, this.offset_in_file + 0x19);
       this.shadowSize = new UInt8( bin, this.offset_in_file + 0x1b);
+      this.activatesOnProximity = new UInt8( bin, this.offset_in_file + 0x1d);
+      this.zero1 = new UInt8( bin, this.offset_in_file + 0x1e);
+      this.zero2 = new UInt8( bin, this.offset_in_file + 0x1f);
+      this.zero3 = new UInt8( bin, this.offset_in_file + 0x20);
+      this.zero4 = new UInt8( bin, this.offset_in_file + 0x21);
+      this.zero5 = new UInt8( bin, this.offset_in_file + 0x22);
+      this.eventTriggered = new UInt8( bin, this.offset_in_file + 0x23);
 
       this.str = new UInt8( bin, this.offset_in_file + 0x24);
       this.spd = new UInt8( bin, this.offset_in_file + 0x25);
@@ -2232,12 +2241,15 @@
         this.entityStates.push(entityStateData);
         if (entityStateData.attack1) {
           this.attacks.push(entityStateData.attack1);
+          //entityStateData.attack1.set(0);
         }
         if (entityStateData.attack2) {
           this.attacks.push(entityStateData.attack2);
+          //entityStateData.attack2.set(0);
         }
         if (entityStateData.attack3) {
           this.attacks.push(entityStateData.attack3);
+          //entityStateData.attack3.set(0);
         }
 
         nextExpectedEntityDataAddress += entityStateData.length;
@@ -2303,9 +2315,10 @@
 
       + ", \"attack1\":" + (this.attack1.get() + "").padStart(5)
       + ", \"attack2\":" + (this.attack2.get() + "").padStart(5)
-      + ", \"magic1\":" + (this.magic1.get() + "").padStart(5)
       + ", \"height\":" + (this.height.get() + "").padStart(5)
       + ", \"weight\":" + (this.weight.get() + "").padStart(5)
+      + ", \"something1\":" + (this.something3.get() + "").padStart(5)
+      + ", \"something2\":" + (this.something3.get() + "").padStart(5)
       + ", \"something3\":" + (this.something3.get() + "").padStart(5)
       + ", \"something4\":" + (this.something4.get() + "").padStart(5)
       + ", \"weaponDefense1\":" + (this.weaponDefense1.get() + "").padStart(5)
@@ -2365,28 +2378,19 @@
       
       return Math.round(this.hp.get()/4 + effectPower * 2);
     } else {
-      // Use traditional attack-based calculation
-      var attackSum = 0;
-      var count = 0;
-
-      if (this.attack1.get()) {
-        attackSum += this.attack1.get();
-        count++;
-      }
-      if (this.attack2.get()) {
-        attackSum += this.attack2.get();
-        count++;
-      }
-      if (this.magic1.get()) {
-        attackSum += this.magic1.get();
-        count++;
+      // Use attacks array max value instead of attack1/attack2
+      var maxAttack = 0;
+      
+      if (this.attacks && this.attacks.length > 0) {
+        for (var i = 0; i < this.attacks.length; i++) {
+          var attackValue = this.attacks[i].get();
+          if (attackValue > maxAttack) {
+            maxAttack = attackValue;
+          }
+        }
       }
 
-      if (count) {
-        attackSum = attackSum / count;
-      }
-
-      return Math.round(this.hp.get()/4 + attackSum * 2);
+      return Math.round(this.hp.get()/4 + maxAttack * 2);
     }
   }
 
@@ -2663,10 +2667,6 @@
       }
       if (creature.attack2 && creature.attack2.get()) {
         attack += creature.attack2.get();
-        attackCount++;
-      }
-      if (creature.magic1 && creature.magic1.get()) {
-        attack += creature.magic1.get();
         attackCount++;
       }
       if (attackCount > 0) {

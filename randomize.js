@@ -345,7 +345,6 @@ function randomize(paramsFile, stDir) {
 /*
         creature1.attack1.set(1);
         creature1.attack2.set(1);
-        creature1.magic1.set(1);
         creature1.weaponDefense1.set(1);
         creature1.weaponDefense2.set(1);
         creature1.weaponDefense3.set(1);
@@ -358,7 +357,6 @@ function randomize(paramsFile, stDir) {
 
         creature2.attack1.set(1);
         creature2.attack2.set(1);
-        creature2.magic1.set(1);
         creature2.weaponDefense1.set(1);
         creature2.weaponDefense2.set(1);
         creature2.weaponDefense3.set(1);
@@ -518,6 +516,7 @@ function randomize(paramsFile, stDir) {
             return;
         }
         
+        /*
         // For non-effect creatures: apply traditional difficulty scaling
         if (creature.attack1 && !creature.attack1.isNull()) {
             var oldValue = creature.attack1.get();
@@ -531,16 +530,35 @@ function randomize(paramsFile, stDir) {
             creature.attack2.set(newValue);
             console.log("  Scaled base attack2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
         }
-        if (creature.magic1 && !creature.magic1.isNull()) {
-            var oldValue = creature.magic1.get();
+        if (creature.something1 && !creature.something1.isNull()) {
+            var oldValue = creature.something1.get();
             var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
-            creature.magic1.set(newValue);
-            console.log("  Scaled base magic1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+            creature.something1.set(newValue);
+            console.log("  Scaled base something1: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
         }
+        if (creature.something2 && !creature.something2.isNull()) {
+            var oldValue = creature.something2.get();
+            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.something2.set(newValue);
+            console.log("  Scaled base something2: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.something3 && !creature.something3.isNull()) {
+            var oldValue = creature.something3.get();
+            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.something3.set(newValue);
+            console.log("  Scaled base something3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        if (creature.something4 && !creature.something4.isNull()) {
+            var oldValue = creature.something4.get();
+            var newValue = Math.min(255, Math.ceil(oldValue * creatureAttributeFactor));
+            creature.something4.set(newValue);
+            console.log("  Scaled base something4: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
+        }
+        */
         
         // Fix for magic/projectile attack damage scaling
         // Scale attack values in entityState data (type 0x20 = physical attack, type 0x30 = spell/magic attack)
-        /*if (creature.entityStates && creature.entityStates.length > 0) {
+        if (creature.entityStates && creature.entityStates.length > 0) {
             creature.entityStates.forEach((entityState) => {
                 if (entityState.type == 0x20 || entityState.type == 0x30) {
                     var attackType = entityState.type == 0x20 ? "physical" : "spell/magic";
@@ -563,7 +581,9 @@ function randomize(paramsFile, stDir) {
                         entityState.attack3.set(newValue);
                         console.log("  Scaled " + attackType + " attack3: " + oldValue + " -> " + newValue + " (factor: " + creatureAttributeFactor + ")");
                     }
-                    
+                    //actionSpeedTimer.set(1);
+                    //movementSpeed.set(1);
+/*                    
                     // Task: Add creature movement/rotation speed parameters
                     // Scale speed parameters if creatureSpeedMultiplier is specified
                     if (params.creatureSpeedMultiplier && params.creatureSpeedMultiplier !== 1.0) {
@@ -586,10 +606,10 @@ function randomize(paramsFile, stDir) {
                             entityState.actionSpeedTimer.set(newTimer);
                             console.log("  Scaled action speed timer: " + oldTimer + " -> " + newTimer + " (x" + speedMultiplier + ")");
                         }
-                    }
+                    }*/
                 }
             });
-        }*/
+        }
     }
 
     function applyDifficultyForEachItem(item) {
@@ -2523,35 +2543,6 @@ function randomize(paramsFile, stDir) {
         md += '        Defenses×0.1\n';
         md += '```\n\n';
         
-        // Write to file
-        const tablePath = outputPath + path.sep + 'creature_power_table.md';
-        fs.writeFileSync(tablePath, md);
-        console.log(`Creature power table written to: ${tablePath}`);
-        
-        // Also generate CSV for spreadsheet analysis
-        const csvHeaders = [
-            'Creature Name', 'Power Score', 'HP', 'Area Score', 'Area',
-            'STR', 'SPD', 'DEF', 'BAL', 'SLA', 'SMH', 'PIR', 'SPR',
-            'FOC', 'HAM', 'PUR', 'PAR', 'MEL', 'SOL',
-            'Attack1', 'Attack2', 'Magic1',
-            'Physical Attacks (0x20)', 'Magic Attacks (0x30)'
-        ].join(',');
-        
-        const csvRows = sortedData.map(data => {
-            return [
-                data.name, data.powerScore, data.hp, data.areaScore, '"' + data.area + '"',
-                data.str, data.spd, data.def, data.bal, data.sla, data.smh, data.pir, data.spr,
-                data.foc, data.ham, data.pur, data.par, data.mel, data.sol,
-                data.attack1, data.attack2, data.magic1,
-                '"' + data.physicalAttacks.join('; ') + '"',
-                '"' + data.magicAttacks.join('; ') + '"'
-            ].join(',');
-        });
-        
-        const csv = [csvHeaders, ...csvRows].join('\n');
-        const csvPath = outputPath + path.sep + 'creature_power_table.csv';
-        fs.writeFileSync(csvPath, csv);
-        console.log(`CSV table written to: ${csvPath}`);
     }
 
     console.log = function() {
@@ -2833,6 +2824,190 @@ function randomize(paramsFile, stDir) {
     // Generate creature power value table (for PR #14 verification)
     //console.log(" generating creature power value table");
     //generateCreaturePowerTable(changeSetPath);
+
+    // Generate creatures.txt spoiler file (sorted by walk order)
+    console.log(" generating creatures.txt spoiler");
+    try {
+        let creaturesOutput = "";
+        creaturesOutput += "=" + "=".repeat(130) + "\n";
+        creaturesOutput += "CREATURES LIST - Sorted by Order of Appearance (Walk Sequence)\n";
+        creaturesOutput += "=" + "=".repeat(130) + "\n\n";
+        
+        // Build walk order map
+        const walkOrder = [];
+        let currentAreaName = "shadow_tower_part1a";
+        walkOrder.push(currentAreaName);
+        shuffle.walk.forEach(walk => {
+            walkOrder.push(walk.dest);
+            currentAreaName = walk.dest;
+        });
+        
+        // Create area order index
+        const areaOrderMap = {};
+        walkOrder.forEach((areaName, index) => {
+            if (!areaOrderMap[areaName]) {
+                areaOrderMap[areaName] = index;
+            }
+        });
+        
+        // Collect all creatures with their area
+        const allCreatures = [];
+        for (const area of data_model.areas) {
+            if (!area.creatures) continue;
+            
+            for (const creature of area.creatures) {
+                if (creature.isBlank || creature.isDoor) continue;
+                
+                allCreatures.push({
+                    creature: creature,
+                    area: area,
+                    order: areaOrderMap[area.name] !== undefined ? areaOrderMap[area.name] : 9999
+                });
+            }
+        }
+        
+        // Sort by walk order
+        allCreatures.sort((a, b) => {
+            if (a.order !== b.order) return a.order - b.order;
+            return a.creature.name.localeCompare(b.creature.name);
+        });
+        
+        // Generate table
+        let lastAreaOrder = -1;
+        for (const entry of allCreatures) {
+            const creature = entry.creature;
+            const area = entry.area;
+            
+            // Add area header when we enter a new area
+            if (entry.order !== lastAreaOrder) {
+                if (lastAreaOrder !== -1) creaturesOutput += "\n";
+                creaturesOutput += "-".repeat(130) + "\n";
+                creaturesOutput += "AREA: " + (readableName[area.name] || area.name).replace(/\n/g, " ") + "\n";
+                creaturesOutput += "-".repeat(130) + "\n";
+                creaturesOutput += "Name                 | STR | SPD | DEF | BAL | SLA | SMH | PIR | SPR | FOC | HAM | PUR | PAR | MEL | SOL |  HP  | ATKAVG | ATKMAX | MAG |\n";
+                creaturesOutput += "-".repeat(130) + "\n";
+                lastAreaOrder = entry.order;
+            }
+            
+            // Format creature name (20 chars)
+            const creatureName = creature.name.substring(0, 20).padEnd(20);
+            
+            // Format stats
+            const str = creature.str.get().toString().padStart(3);
+            const spd = creature.spd.get().toString().padStart(3);
+            const def = creature.def.get().toString().padStart(3);
+            const bal = creature.bal.get().toString().padStart(3);
+            const sla = creature.sla.get().toString().padStart(3);
+            const smh = creature.smh.get().toString().padStart(3);
+            const pir = creature.pir.get().toString().padStart(3);
+            const spr = creature.spr.get().toString().padStart(3);
+            const foc = creature.foc.get().toString().padStart(3);
+            const ham = creature.ham.get().toString().padStart(3);
+            const pur = creature.pur.get().toString().padStart(3);
+            const par = creature.par.get().toString().padStart(3);
+            const mel = creature.mel.get().toString().padStart(3);
+            const sol = creature.sol.get().toString().padStart(3);
+            const hp = creature.hp.get().toString().padStart(5);
+            
+            // Calculate attack statistics from attacks array
+            let avgAttack = 0;
+            let maxAttack = 0;
+            if (creature.attacks && creature.attacks.length > 0) {
+                let attackSum = 0;
+                for (let i = 0; i < creature.attacks.length; i++) {
+                    const attackValue = creature.attacks[i].get();
+                    attackSum += attackValue;
+                    if (attackValue > maxAttack) {
+                        maxAttack = attackValue;
+                    }
+                }
+                avgAttack = Math.round(attackSum / creature.attacks.length);
+            }
+            const atkAvg = avgAttack.toString().padStart(6);
+            const atkMax = maxAttack.toString().padStart(6);
+            
+            // Get magic power from effect data if available
+            let magicPower = 0;
+            const effectId = creature.getEffectId();
+            if (effectId !== undefined && effects && effects[effectId]) {
+                magicPower = creature.calculateEffectPower(effects[effectId]);
+            }
+            const mag = magicPower.toString().padStart(3);
+            
+            creaturesOutput += `${creatureName} | ${str} | ${spd} | ${def} | ${bal} | ${sla} | ${smh} | ${pir} | ${spr} | ${foc} | ${ham} | ${pur} | ${par} | ${mel} | ${sol} | ${hp} | ${atkAvg} | ${atkMax} | ${mag} |\n`;
+        }
+        
+        creaturesOutput += "\n" + "=" + "=".repeat(130) + "\n";
+        
+        fs.writeFileSync(changeSetPath + path.sep + 'creatures.txt', creaturesOutput);
+        console.log(" creatures.txt written successfully");
+    } catch (err) {
+        console.log("ERROR writing creatures.txt: " + err);
+    }
+    
+    // Generate equips.txt spoiler file (sorted by walk order)
+    console.log(" generating equips.txt spoiler");
+    try {
+        let equipsOutput = "";
+        equipsOutput += "=" + "=".repeat(130) + "\n";
+        equipsOutput += "EQUIPMENT LIST - All Items in Game Data\n";
+        equipsOutput += "=" + "=".repeat(130) + "\n\n";
+        
+        equipsOutput += "Name                             | STR | SPD | DEF | BAL | SLA | SMH | PIR | SPR | FOC | HAM | PUR | PAR | MEL | SOL |  HP  | Attr1          | Attr2          |\n";
+        equipsOutput += "-".repeat(130) + "\n";
+        
+        // Iterate through all items
+        for (const itemKey in itemData) {
+            const item = itemData[itemKey];
+            if (!item) continue;
+            
+            // Format item name (32 chars)
+            const itemName = item.name.substring(0, 32).padEnd(32);
+            
+            // Format stats
+            const str = item.str.get().toString().padStart(3);
+            const spd = item.spd.get().toString().padStart(3);
+            const def = item.def.get().toString().padStart(3);
+            const bal = item.bal.get().toString().padStart(3);
+            const sla = item.sla.get().toString().padStart(3);
+            const smh = item.smh.get().toString().padStart(3);
+            const pir = item.pir.get().toString().padStart(3);
+            const spr = item.spr.get().toString().padStart(3);
+            const foc = item.foc.get().toString().padStart(3);
+            const ham = item.ham.get().toString().padStart(3);
+            const pur = item.pur.get().toString().padStart(3);
+            const par = item.par.get().toString().padStart(3);
+            const mel = item.mel.get().toString().padStart(3);
+            const sol = item.sol.get().toString().padStart(3);
+            const hp = item.hp.get().toString().padStart(5);
+            
+            // Format attributes
+            let attr1 = "None";
+            if (item.attribute1.get() !== 0) {
+                const attrVal = item.attribute1.getReadableAttributeValue();
+                const attrType = item.attribute1.getReadableAttributeType();
+                attr1 = `${attrVal} ${attrType}`;
+            }
+            attr1 = attr1.substring(0, 14).padEnd(14);
+            
+            let attr2 = "None";
+            if (item.attribute2.get() !== 0) {
+                const attrVal = item.attribute2.getReadableAttributeValue();
+                const attrType = item.attribute2.getReadableAttributeType();
+                attr2 = `${attrVal} ${attrType}`;
+            }
+            attr2 = attr2.substring(0, 14).padEnd(14);
+            
+            equipsOutput += `${itemName} | ${str} | ${spd} | ${def} | ${bal} | ${sla} | ${smh} | ${pir} | ${spr} | ${foc} | ${ham} | ${pur} | ${par} | ${mel} | ${sol} | ${hp} | ${attr1} | ${attr2} |\n`;
+        }
+        
+        equipsOutput += "\n" + "=" + "=".repeat(130) + "\n";
+        
+        fs.writeFileSync(changeSetPath + path.sep + 'equips.txt', equipsOutput);
+        console.log(" equips.txt written successfully");
+    } catch (err) {
+        console.log("ERROR writing equips.txt: " + err);
+    }
 
     // Write item location tracker
     console.log(" writing item tracker notes");
