@@ -1,0 +1,11 @@
+{
+	"label": "test-zero-stats",
+	"preset": "no-change",
+	"difficulty": "medium",
+	"randomizeMap": false,
+	"randomizeCreatures": false,
+	"randomizeCollectablesAndDrops": false,
+	"zeroAllCreatureStats": true,
+	"comment": "Test preset",
+	"seed": "1"
+}
