@@ -3006,6 +3006,10 @@ function randomize(paramsFile, stDir) {
         console.log("ERROR writing equips.txt: " + err);
     }
 
+    // Dump post-randomization state (extracted from data_model.setup)
+    console.log("\n=== POST-RANDOMIZATION STATE DUMP ===");
+    data_model.dumpInfo();
+
     // Write item location tracker
     console.log(" writing item tracker notes");
     console.log(" writing " + changeSetFile);
