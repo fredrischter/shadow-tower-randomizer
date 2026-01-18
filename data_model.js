@@ -1949,11 +1949,11 @@
       var rotationToSet = - origin.rotation + (dest.type=="totem" ? 0 : -2) + dest.rotation;
       rotationToSet = (rotationToSet + 40) % 4;
 
-      if (dest.type!="totem") {
-        this.exitDisplacementX.set(source.exitDisplacementX.get());
-        this.exitDisplacementY.set(source.exitDisplacementY.get());
-        this.exitDisplacementZ.set(source.exitDisplacementZ.get());
-      }
+      //if (dest.type!="totem") {
+      //  this.exitDisplacementX.set(source.exitDisplacementX.get());
+      //  this.exitDisplacementY.set(source.exitDisplacementY.get());
+      //  this.exitDisplacementZ.set(source.exitDisplacementZ.get());
+      //}
 
       //console.log("Rotation to set " + rotationToSet);
       this.destinationRotation.set(rotationToSet);
