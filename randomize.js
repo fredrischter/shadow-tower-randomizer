@@ -2393,6 +2393,11 @@ function randomize(paramsFile, stDir) {
                 attack2: creature.attack2 ? creature.attack2.get() : 0,
                 magic1: creature.magic1 ? creature.magic1.get() : 0,
                 
+                // Attacks array from entity data
+                attacksList: creature.attacks && creature.attacks.length > 0 
+                    ? creature.attacks.map(atk => atk.get()).join(', ') 
+                    : '0',
+                
                 // EntityStateData attacks
                 physicalAttacks: [],
                 magicAttacks: [],
@@ -2496,15 +2501,15 @@ function randomize(paramsFile, stDir) {
         md += '## Compact Creature Table (Sorted by Power)\n\n';
         md += '**Note:** Power values shown are after global difficulty scaling but do NOT include progression-based normalization.\n';
         md += 'Area Score indicates the creature\'s position in game progression (0 = start area, higher = later areas).\n\n';
-        md += '| Creature Name | Power | HP | Area Score | Physical (0x20) | Magic (0x30) | Area |\n';
-        md += '|---------------|-------|----|-----------|-----------------|--------------|-----------|\n';
+        md += '| Creature Name | Power | HP | Area Score | Attacks | Physical (0x20) | Magic (0x30) | Area |\n';
+        md += '|---------------|-------|----|-----------|---------|-----------------|--------------|-----------|\n';
         
         sortedData.forEach(data => {
             const physAttacks = data.physicalAttacks.length > 0 ? data.physicalAttacks.join('; ') : '-';
             const magAttacks = data.magicAttacks.length > 0 ? data.magicAttacks.join('; ') : '-';
             const areaShort = data.area.replace(/_/g, ' ').substring(0, 25);
             
-            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${data.areaScore} | ${physAttacks} | ${magAttacks} | ${areaShort} |\n`;
+            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${data.areaScore} | ${data.attacksList} | ${physAttacks} | ${magAttacks} | ${areaShort} |\n`;
         });
         
         md += '\n---\n\n';
@@ -2519,11 +2524,11 @@ function randomize(paramsFile, stDir) {
         
         md += '\n---\n\n';
         md += '## Full Attribute Table\n\n';
-        md += '| Creature | Power | HP | STR | SPD | DEF | BAL | SLA | SMH | PIR | SPR | FOC | HAM | PUR | PAR | MEL | SOL |\n';
-        md += '|----------|-------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|\n';
+        md += '| Creature | Power | HP | Attacks | STR | SPD | DEF | BAL | SLA | SMH | PIR | SPR | FOC | HAM | PUR | PAR | MEL | SOL |\n';
+        md += '|----------|-------|----|---------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|\n';
         
         sortedData.forEach(data => {
-            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | `;
+            md += `| ${data.name} | ${data.powerScore} | ${data.hp} | ${data.attacksList} | `;
             md += `${data.str} | ${data.spd} | ${data.def} | ${data.bal} | `;
             md += `${data.sla} | ${data.smh} | ${data.pir} | ${data.spr} | `;
             md += `${data.foc} | ${data.ham} | ${data.pur} | ${data.par} | `;
@@ -2829,9 +2834,9 @@ function randomize(paramsFile, stDir) {
     console.log(" generating creatures.txt spoiler");
     try {
         let creaturesOutput = "";
-        creaturesOutput += "=" + "=".repeat(130) + "\n";
+        creaturesOutput += "=" + "=".repeat(140) + "\n";
         creaturesOutput += "CREATURES LIST - Sorted by Order of Appearance (Walk Sequence)\n";
-        creaturesOutput += "=" + "=".repeat(130) + "\n\n";
+        creaturesOutput += "=" + "=".repeat(140) + "\n\n";
         
         // Build walk order map
         const walkOrder = [];
@@ -2881,11 +2886,11 @@ function randomize(paramsFile, stDir) {
             // Add area header when we enter a new area
             if (entry.order !== lastAreaOrder) {
                 if (lastAreaOrder !== -1) creaturesOutput += "\n";
-                creaturesOutput += "-".repeat(130) + "\n";
+                creaturesOutput += "-".repeat(140) + "\n";
                 creaturesOutput += "AREA: " + (readableName[area.name] || area.name).replace(/\n/g, " ") + "\n";
-                creaturesOutput += "-".repeat(130) + "\n";
-                creaturesOutput += "Name                 | STR | SPD | DEF | BAL | SLA | SMH | PIR | SPR | FOC | HAM | PUR | PAR | MEL | SOL |  HP  | ATKAVG | ATKMAX | MAG |\n";
-                creaturesOutput += "-".repeat(130) + "\n";
+                creaturesOutput += "-".repeat(140) + "\n";
+                creaturesOutput += "Name                 | STR | SPD | DEF | BAL | SLA | SMH | PIR | SPR | FOC | HAM | PUR | PAR | MEL | SOL |  HP  | ATTACKS       | MAG |\n";
+                creaturesOutput += "-".repeat(140) + "\n";
                 lastAreaOrder = entry.order;
             }
             
@@ -2909,22 +2914,14 @@ function randomize(paramsFile, stDir) {
             const sol = creature.sol.get().toString().padStart(3);
             const hp = creature.hp.get().toString().padStart(5);
             
-            // Calculate attack statistics from attacks array
-            let avgAttack = 0;
-            let maxAttack = 0;
+            // Get all attacks from attacks array as a comma-separated list
+            let attacksList = "";
             if (creature.attacks && creature.attacks.length > 0) {
-                let attackSum = 0;
-                for (let i = 0; i < creature.attacks.length; i++) {
-                    const attackValue = creature.attacks[i].get();
-                    attackSum += attackValue;
-                    if (attackValue > maxAttack) {
-                        maxAttack = attackValue;
-                    }
-                }
-                avgAttack = Math.round(attackSum / creature.attacks.length);
+                attacksList = creature.attacks.map(atk => atk.get()).join(", ");
+            } else {
+                attacksList = "0";
             }
-            const atkAvg = avgAttack.toString().padStart(6);
-            const atkMax = maxAttack.toString().padStart(6);
+            const attacks = attacksList.padEnd(13); // Fixed width for attacks column
             
             // Get magic power from effect data if available
             let magicPower = 0;
@@ -2934,10 +2931,10 @@ function randomize(paramsFile, stDir) {
             }
             const mag = magicPower.toString().padStart(3);
             
-            creaturesOutput += `${creatureName} | ${str} | ${spd} | ${def} | ${bal} | ${sla} | ${smh} | ${pir} | ${spr} | ${foc} | ${ham} | ${pur} | ${par} | ${mel} | ${sol} | ${hp} | ${atkAvg} | ${atkMax} | ${mag} |\n`;
+            creaturesOutput += `${creatureName} | ${str} | ${spd} | ${def} | ${bal} | ${sla} | ${smh} | ${pir} | ${spr} | ${foc} | ${ham} | ${pur} | ${par} | ${mel} | ${sol} | ${hp} | ${attacks} | ${mag} |\n`;
         }
         
-        creaturesOutput += "\n" + "=" + "=".repeat(130) + "\n";
+        creaturesOutput += "\n" + "=" + "=".repeat(140) + "\n";
         
         fs.writeFileSync(changeSetPath + path.sep + 'creatures.txt', creaturesOutput);
         console.log(" creatures.txt written successfully");
