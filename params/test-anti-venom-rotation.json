@@ -1,0 +1,11 @@
+{
+	"label": "test-anti-venom-rotation",
+	"preset": "no-change",
+	"difficulty": "medium",
+	"seed": "1",
+	"testAntiVenomRotation": true,
+	"colorRandomizationGeneral": 0,
+	"colorRandomizationBossRooms": 0,
+	"colorRandomizationCreatures": 0,
+	"colorValueFactor": 1
+}
