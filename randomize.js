@@ -1956,6 +1956,39 @@ function randomize(paramsFile, stDir) {
                 var creature2 = randomElement(creatureRandomizableGroups[creature1.randomizationGroup(params)]);
                 swapCreatures(creature1, creature2, changeSet);
             }
+            
+            // Task: Block projectile-shooting creatures from certain areas
+            console.log("\n=== Blocking projectile creatures from restricted areas ===");
+            forEachValidCreature(function blockProjectileCreaturesFromRestrictedAreas(creature, area) {
+                // Check if this area blocks projectile creatures
+                var areaBlocked = false;
+                global.areasBlockedForProjectileCreatures.forEach(function(blockedAreaName) {
+                    if (area.name.includes(blockedAreaName)) {
+                        areaBlocked = true;
+                    }
+                });
+                
+                if (areaBlocked && creature.farProjectileShooter) {
+                    // Find a non-projectile creature from the same randomization group to swap with
+                    var randomizationGroup = creature.randomizationGroup(params);
+                    var sameGroupCreatures = creatureRandomizableGroups[randomizationGroup];
+                    
+                    // Filter to only non-projectile creatures
+                    var nonProjectileCreatures = sameGroupCreatures.filter(function(c) {
+                        return !c.farProjectileShooter;
+                    });
+                    
+                    if (nonProjectileCreatures.length > 0) {
+                        var replacement = randomElement(nonProjectileCreatures);
+                        console.log("  Removing projectile creature " + creature.name + " from " + area.name);
+                        console.log("  Replacing with " + replacement.name);
+                        swapCreatures(creature, replacement, changeSet);
+                    } else {
+                        console.log("  WARNING: Could not find non-projectile replacement for " + creature.name + " in " + area.name);
+                    }
+                }
+            });
+            console.log("=== Projectile blocking complete ===\n");
         }
 
         // ------- Adjust creature and equip levels for proper progression
