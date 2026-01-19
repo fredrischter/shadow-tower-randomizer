@@ -1468,6 +1468,22 @@
     "acid_skull", "blood_skull"
   ];
 
+  // Task: Block certain areas from having projectile shooting creatures
+  // Projectile creatures have magic effects with just bare damage value (no status effects)
+  var projectileShootingCreatures = [
+    "demon_bat", "imp", "star_serpent", "hollow_mage", "beak_plant", 
+    "damned_angel", "magi_magus", "dragon_turtle", "winged_worm", 
+    "claw_head", "hell_hunter", "stack_eyes", "old_face", 
+    "dark_fairy", "maristella", "dark_bishop", "deha", "gargaral", 
+    "death_mage", "fester", "tongue_imp", "watcher_plant", 
+    "elder", "ray_plant", "black_imp", "dark_imp"
+  ];
+
+  // Areas where projectile creatures should not spawn
+  global.areasBlockedForProjectileCreatures = [
+    "human_world_cursed_region"
+  ];
+
   const CREATURE_DATA_LENGTH = 93;
   const ENTITY_STATE_OFFSETS_ARRAY_START_OFFSET = 96;
   const ENTITY_STATE_OFFSETS_ARRAY_LENGTH = 24;
@@ -2145,6 +2161,14 @@
               if (this.name.includes(name)) {
                 this.randomizable = true;
                 this.largeAreaRandomizable = true;
+              };
+            });
+
+            // Task: Mark projectile-shooting creatures
+            this.projectileShooter = false;
+            projectileShootingCreatures.forEach((name) => {
+              if (this.name.includes(name)) {
+                this.projectileShooter = true;
               };
             });
           }
