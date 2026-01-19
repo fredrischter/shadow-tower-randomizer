@@ -764,6 +764,27 @@ function randomize(paramsFile, stDir) {
         collectable.blank();
     }
 
+    // Issue: Reset rotation to zero when item is anti venom
+    function setAllCollectablesToAntiVenom(collectable, area) {
+        if (collectable.isBlank()) {
+            return;
+        }
+        var previousItem = collectable.type.get();
+        collectable.type.set(item_11e_anti_venom);
+        console.log("TEST - Setting collectable to anti venom at " + area.name + " (was " + (itemData[previousItem] ? itemData[previousItem].name : "unknown") + ")");
+    }
+
+    function resetAntiVenomRotation(collectable, area) {
+        if (collectable.isBlank()) {
+            return;
+        }
+        if (collectable.type.get() == item_11e_anti_venom) {
+            var oldRotation = collectable.rotation_z.get();
+            collectable.rotation_z.set(0);
+            console.log("FIX - Resetting anti venom rotation to 0 at " + area.name + " (was " + oldRotation + ")");
+        }
+    }
+
     // Guarantee poison vaccine before poisonous cavern
 
     var poisonVaccinesBeforePoisonousCavern = 0;
@@ -2128,6 +2149,15 @@ function randomize(paramsFile, stDir) {
         if (params.removeTilesPercent && params.removeTilesPercent > 0) {
             forEachTile(removeTiles);
         }
+
+        // Issue: Reset rotation to zero when item is anti venom
+        // Step 1: For testing, make all collectables become anti venom
+        if (params.testAntiVenomRotation) {
+            forEachCollectable(setAllCollectablesToAntiVenom);
+        }
+        
+        // Step 2: Apply the fix - reset rotation to 0 for all anti venom items
+        forEachCollectable(resetAntiVenomRotation);
 
         // ------- PRESET Directives
 
