@@ -734,15 +734,6 @@ function randomize(paramsFile, stDir) {
     }
 
     // Issue: Reset rotation to zero when item is anti venom
-    function setAllCollectablesToAntiVenom(collectable, area) {
-        if (collectable.isBlank()) {
-            return;
-        }
-        var previousItem = collectable.type.get();
-        collectable.type.set(item_11e_anti_venom);
-        console.log("TEST - Setting collectable to anti venom at " + area.name + " (was " + (itemData[previousItem] ? itemData[previousItem].name : "unknown") + ")");
-    }
-
     function resetAntiVenomRotation(collectable, area) {
         if (collectable.isBlank()) {
             return;
@@ -2120,12 +2111,6 @@ function randomize(paramsFile, stDir) {
         }
 
         // Issue: Reset rotation to zero when item is anti venom
-        // Step 1: For testing, make all collectables become anti venom
-        if (params.testAntiVenomRotation) {
-            forEachCollectable(setAllCollectablesToAntiVenom);
-        }
-        
-        // Step 2: Apply the fix - reset rotation to 0 for all anti venom items
         forEachCollectable(resetAntiVenomRotation);
 
         // ------- PRESET Directives
