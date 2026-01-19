@@ -1910,7 +1910,7 @@ function randomize(paramsFile, stDir) {
             forEachValidCreature(function blockProjectileCreaturesFromRestrictedAreas(creature, area) {
                 // Check if this area blocks projectile creatures
                 var areaBlocked = false;
-                areasBlockedForProjectileCreatures.forEach(function(blockedAreaName) {
+                global.areasBlockedForProjectileCreatures.forEach(function(blockedAreaName) {
                     if (area.name.includes(blockedAreaName)) {
                         areaBlocked = true;
                     }
