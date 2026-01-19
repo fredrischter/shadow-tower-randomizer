@@ -1,0 +1,387 @@
+SHADOW TOWER RANDOMIZER - MUTEX GROUPS ANALYSIS
+Generated from: no-change preset (VANILLA GAME)
+================================================================================
+
+
+AREA: human_world_solitary_region
+--------------------------------------------------------------------------------
+  [0] 01_acid_slime                     mx=32 (0x20) binary: 00100000
+  [1] 01_acid_slime                     mx=32 (0x20) binary: 00100000
+  [2] 02_blood_slime                    mx=37 (0x25) binary: 00100101
+  [3] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [4] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [5] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [6] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [7] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [8] 01_acid_slime                     mx=32 (0x20) binary: 00100000
+  [9] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+
+AREA: human_world_hidden_region
+--------------------------------------------------------------------------------
+  [0] 00_acid_slime                     mx=80 (0x50) binary: 01010000
+  [1] 00_acid_slime                     mx=80 (0x50) binary: 01010000
+  [2] 00_acid_slime                     mx=32 (0x20) binary: 00100000
+  [3] 01_blood_slime                    mx=32 (0x20) binary: 00100000
+  [4] 06_fanged_worm                    mx=80 (0x50) binary: 01010000
+  [5] 04_acid_slime                     mx=32 (0x20) binary: 00100000
+  [6] 05_blood_slime                    mx=32 (0x20) binary: 00100000
+  [7] 04_acid_slime                     mx=32 (0x20) binary: 00100000
+  [8] 04_acid_slime                     mx=32 (0x20) binary: 00100000
+  [9] 04_acid_slime                     mx=32 (0x20) binary: 00100000
+
+AREA: human_world_forgotten_region
+--------------------------------------------------------------------------------
+  [0] 02_skeleton                       mx=48 (0x30) binary: 00110000
+  [1] 02_skeleton                       mx=48 (0x30) binary: 00110000
+  [2] 02_skeleton                       mx=48 (0x30) binary: 00110000
+  [3] 02_skeleton                       mx=48 (0x30) binary: 00110000
+  [4] 02_skeleton                       mx=48 (0x30) binary: 00110000
+  [5] 00_acid_skull                     mx=48 (0x30) binary: 00110000
+  [6] 00_acid_skull                     mx=48 (0x30) binary: 00110000
+  [7] 00_acid_skull                     mx=48 (0x30) binary: 00110000
+  [8] 00_acid_skull                     mx=48 (0x30) binary: 00110000
+  [9] 01_blood_skull                    mx=48 (0x30) binary: 00110000
+
+AREA: human_world_cursed_region
+--------------------------------------------------------------------------------
+  [0] 02_tongue_imp                     mx=48 (0x30) binary: 00110000
+  [1] 02_tongue_imp                     mx=48 (0x30) binary: 00110000
+  [2] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [3] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [4] 01_shadow_spider                  mx=48 (0x30) binary: 00110000
+  [5] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [6] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [7] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [8] 00_dark_spider                    mx=53 (0x35) binary: 00110101
+  [9] 06_tongue_imp                     mx=48 (0x30) binary: 00110000
+
+AREA: earth_world_rotting_cavern
+--------------------------------------------------------------------------------
+  [0] 02_elder                          mx=48 (0x30) binary: 00110000
+  [1] 00_watcher_plant                  mx=32 (0x20) binary: 00100000
+  [2] 00_watcher_plant                  mx=32 (0x20) binary: 00100000
+  [3] 00_watcher_plant                  mx=32 (0x20) binary: 00100000
+  [4] 01_myconid                        mx=48 (0x30) binary: 00110000
+  [5] 01_myconid                        mx=48 (0x30) binary: 00110000
+  [6] 01_myconid                        mx=48 (0x30) binary: 00110000
+  [7] 00_watcher_plant                  mx=32 (0x20) binary: 00100000
+  [8] 06_elder                          mx=64 (0x40) binary: 01000000
+  [9] 06_elder                          mx=64 (0x40) binary: 01000000
+
+AREA: earth_world_poisonous_cavern
+--------------------------------------------------------------------------------
+  [0] 02_watcher_plant                  mx=21 (0x15) binary: 00010101
+  [1] 02_watcher_plant                  mx=21 (0x15) binary: 00010101
+  [2] 02_watcher_plant                  mx=21 (0x15) binary: 00010101
+  [3] 01_beak_plant                     mx=21 (0x15) binary: 00010101
+  [4] 01_beak_plant                     mx=21 (0x15) binary: 00010101
+  [5] 01_beak_plant                     mx=21 (0x15) binary: 00010101
+  [6] 01_beak_plant                     mx=21 (0x15) binary: 00010101
+  [7] 02_watcher_plant                  mx=21 (0x15) binary: 00010101
+  [8] 02_watcher_plant                  mx=21 (0x15) binary: 00010101
+  [9] 02_watcher_plant                  mx=21 (0x15) binary: 00010101
+
+AREA: earth_world_stone_cavern
+--------------------------------------------------------------------------------
+  [0] 01_demon_bat                      mx=96 (0x60) binary: 01100000
+  [1] 01_demon_bat                      mx=80 (0x50) binary: 01010000
+  [2] 01_demon_bat                      mx=80 (0x50) binary: 01010000
+  [3] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+  [4] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+  [5] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+  [6] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+  [7] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+  [8] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+  [9] 05_hobble_worm                    mx=48 (0x30) binary: 00110000
+
+AREA: earth_world_quaking_cavern
+--------------------------------------------------------------------------------
+  [0] 01_blue_flicker                   mx=48 (0x30) binary: 00110000
+  [1] 01_blue_flicker                   mx=48 (0x30) binary: 00110000
+  [2] 01_blue_flicker                   mx=48 (0x30) binary: 00110000
+  [3] 01_blue_flicker                   mx=48 (0x30) binary: 00110000
+  [4] 01_blue_flicker                   mx=48 (0x30) binary: 00110000
+  [5] 01_blue_flicker                   mx=48 (0x30) binary: 00110000
+  [6] 00_sand_leech_a                   mx=96 (0x60) binary: 01100000
+  [7] 00_sand_leech_a                   mx=16 (0x10) binary: 00010000
+  [8] 00_sand_leech_a                   mx=16 (0x10) binary: 00010000
+  [9] 00_sand_leech_a                   mx=16 (0x10) binary: 00010000
+
+AREA: earth_world_false_pit_cavern
+--------------------------------------------------------------------------------
+  [0] 00_earth_knight                   mx=80 (0x50) binary: 01010000
+  [1] 01_acid_pod                       mx=80 (0x50) binary: 01010000
+  [2] 01_acid_pod                       mx=16 (0x10) binary: 00010000
+  [3] 01_acid_pod                       mx=16 (0x10) binary: 00010000
+  [4] 01_acid_pod                       mx=16 (0x10) binary: 00010000
+  [5] 01_acid_pod                       mx=16 (0x10) binary: 00010000
+  [6] 05_cocoon_plant                   mx=16 (0x10) binary: 00010000
+  [7] 05_cocoon_plant                   mx=16 (0x10) binary: 00010000
+  [8] 05_cocoon_plant                   mx=16 (0x10) binary: 00010000
+  [9] 04_cannon_snail                   mx=32 (0x20) binary: 00100000
+
+AREA: earth_world_hostile_rock_cavern
+--------------------------------------------------------------------------------
+  [0] 01_earth_knight                   mx=48 (0x30) binary: 00110000
+  [1] 01_earth_knight                   mx=48 (0x30) binary: 00110000
+  [2] 01_earth_knight                   mx=48 (0x30) binary: 00110000
+  [3] 01_earth_knight                   mx=48 (0x30) binary: 00110000
+  [4] 05_earth_knight                   mx=96 (0x60) binary: 01100000
+  [5] 05_earth_knight                   mx=96 (0x60) binary: 01100000
+  [6] 00_black_onyx                     mx=48 (0x30) binary: 00110000
+  [7] 00_black_onyx                     mx=48 (0x30) binary: 00110000
+  [8] 00_black_onyx                     mx=48 (0x30) binary: 00110000
+  [9] 00_black_onyx                     mx=48 (0x30) binary: 00110000
+
+AREA: fire_world_burning_cavern
+--------------------------------------------------------------------------------
+  [0] 02_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [1] 02_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [2] 02_mystic_tower                   mx=80 (0x50) binary: 01010000
+  [3] 02_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [4] 02_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [5] 02_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [6] 06_mystic_tower                   mx=128 (0x80) binary: 10000000
+  [7] 06_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [8] 06_mystic_tower                   mx=48 (0x30) binary: 00110000
+  [9] 04_berzerker                      mx=80 (0x50) binary: 01010000
+
+AREA: fire_world_molten_cavern
+--------------------------------------------------------------------------------
+  [0] 01_horned_skull                   mx=32 (0x20) binary: 00100000
+  [1] 01_horned_skull                   mx=48 (0x30) binary: 00110000
+  [2] 01_horned_skull                   mx=48 (0x30) binary: 00110000
+  [3] 01_horned_skull                   mx=96 (0x60) binary: 01100000
+  [4] 01_horned_skull                   mx=48 (0x30) binary: 00110000
+  [5] 01_horned_skull                   mx=48 (0x30) binary: 00110000
+  [6] 06_mystic_tower                   mx=32 (0x20) binary: 00100000
+  [7] 06_mystic_tower                   mx=32 (0x20) binary: 00100000
+  [8] 06_mystic_tower                   mx=32 (0x20) binary: 00100000
+  [9] 04_berzerker                      mx=96 (0x60) binary: 01100000
+
+AREA: fire_world_phoenix_cave
+--------------------------------------------------------------------------------
+  [0] 02_fire_jinn                      mx=128 (0x80) binary: 10000000
+  [1] 02_fire_jinn                      mx=64 (0x40) binary: 01000000
+  [2] 02_fire_jinn                      mx=64 (0x40) binary: 01000000
+  [3] 02_fire_jinn                      mx=128 (0x80) binary: 10000000
+  [4] 02_fire_jinn                      mx=128 (0x80) binary: 10000000
+  [5] 02_fire_jinn                      mx=64 (0x40) binary: 01000000
+  [6] 06_fire_jinn                      mx=128 (0x80) binary: 10000000
+  [7] 06_fire_jinn                      mx=64 (0x40) binary: 01000000
+  [8] 06_fire_jinn                      mx=64 (0x40) binary: 01000000
+  [9] 06_fire_jinn                      mx=64 (0x40) binary: 01000000
+
+AREA: fire_world_ashen_cavern
+--------------------------------------------------------------------------------
+  [0] 01_berzerker                      mx=80 (0x50) binary: 01010000
+  [1] 01_berzerker                      mx=80 (0x50) binary: 01010000
+  [2] 01_berzerker                      mx=80 (0x50) binary: 01010000
+  [3] 00_bone_demon                     mx=80 (0x50) binary: 01010000
+  [4] 00_bone_demon                     mx=80 (0x50) binary: 01010000
+  [5] 01_berzerker                      mx=80 (0x50) binary: 01010000
+  [6] 01_berzerker                      mx=80 (0x50) binary: 01010000
+  [7] 01_berzerker                      mx=80 (0x50) binary: 01010000
+  [8] 00_bone_demon                     mx=80 (0x50) binary: 01010000
+  [9] 04_zygote                         mx=80 (0x50) binary: 01010000
+
+AREA: water_world_impure_pool_area
+--------------------------------------------------------------------------------
+  [0] 01_horned_slime                   mx=48 (0x30) binary: 00110000
+  [1] 01_horned_slime                   mx=48 (0x30) binary: 00110000
+  [2] 01_horned_slime                   mx=48 (0x30) binary: 00110000
+  [3] 01_horned_slime                   mx=48 (0x30) binary: 00110000
+  [4] 01_horned_slime                   mx=48 (0x30) binary: 00110000
+  [5] 02_blood_brain                    mx=21 (0x15) binary: 00010101
+  [6] 02_blood_brain                    mx=48 (0x30) binary: 00110000
+  [7] 02_blood_brain                    mx=48 (0x30) binary: 00110000
+  [8] 02_blood_brain                    mx=48 (0x30) binary: 00110000
+  [9] 02_blood_brain                    mx=48 (0x30) binary: 00110000
+
+AREA: water_world_sunken_river_area
+--------------------------------------------------------------------------------
+  [0] 00_kabasaur                       mx=80 (0x50) binary: 01010000
+  [1] 00_kabasaur                       mx=80 (0x50) binary: 01010000
+  [2] 00_kabasaur                       mx=80 (0x50) binary: 01010000
+  [3] 05_water_knight                   mx=64 (0x40) binary: 01000000
+  [4] 05_water_knight                   mx=112 (0x70) binary: 01110000
+  [5] 04_kabasaur                       mx=64 (0x40) binary: 01000000
+  [6] 04_kabasaur                       mx=64 (0x40) binary: 01000000
+  [7] 04_kabasaur                       mx=64 (0x40) binary: 01000000
+  [8] 04_kabasaur                       mx=64 (0x40) binary: 01000000
+  [9] 04_kabasaur                       mx=64 (0x40) binary: 01000000
+
+AREA: water_world_white_rain_area
+--------------------------------------------------------------------------------
+  [0] 00_winged_worm                    mx=48 (0x30) binary: 00110000
+  [1] 00_winged_worm                    mx=48 (0x30) binary: 00110000
+  [2] 00_winged_worm                    mx=48 (0x30) binary: 00110000
+  [3] 00_winged_worm                    mx=96 (0x60) binary: 01100000
+  [4] 00_winged_worm                    mx=48 (0x30) binary: 00110000
+  [5] 00_winged_worm                    mx=48 (0x30) binary: 00110000
+  [6] 00_winged_worm                    mx=48 (0x30) binary: 00110000
+  [7] 04_dragon_turtle                  mx=96 (0x60) binary: 01100000
+  [8] 04_dragon_turtle                  mx=96 (0x60) binary: 01100000
+  [9] 04_dragon_turtle                  mx=144 (0x90) binary: 10010000
+
+AREA: water_world_watery_labyrinth_area
+--------------------------------------------------------------------------------
+  [0] 00_kabasaur                       mx=48 (0x30) binary: 00110000
+  [1] 02_horned_slime                   mx=48 (0x30) binary: 00110000
+  [2] 00_kabasaur                       mx=48 (0x30) binary: 00110000
+  [3] 02_horned_slime                   mx=48 (0x30) binary: 00110000
+  [4] 05_blood_brain                    mx=48 (0x30) binary: 00110000
+  [5] 05_blood_brain                    mx=48 (0x30) binary: 00110000
+  [6] 05_blood_brain                    mx=48 (0x30) binary: 00110000
+  [7] 05_blood_brain                    mx=48 (0x30) binary: 00110000
+  [8] 04_great_frog                     mx=96 (0x60) binary: 01100000
+  [9] 04_great_frog                     mx=96 (0x60) binary: 01100000
+
+AREA: monster_world_false_eye_area
+--------------------------------------------------------------------------------
+  [0] 00_night_howler                   mx=96 (0x60) binary: 01100000
+  [1] 00_night_howler                   mx=96 (0x60) binary: 01100000
+  [2] 00_night_howler                   mx=96 (0x60) binary: 01100000
+  [3] 01_chirper                        mx=96 (0x60) binary: 01100000
+  [4] 04_night_howler                   mx=96 (0x60) binary: 01100000
+  [5] 04_night_howler                   mx=96 (0x60) binary: 01100000
+  [6] 04_night_howler                   mx=96 (0x60) binary: 01100000
+  [7] 04_night_howler                   mx=96 (0x60) binary: 01100000
+  [8] 04_night_howler                   mx=96 (0x60) binary: 01100000
+  [9] 04_night_howler                   mx=96 (0x60) binary: 01100000
+
+AREA: monster_world_screeching_area
+--------------------------------------------------------------------------------
+  [0] 04_king_hopper                    mx=144 (0x90) binary: 10010000
+  [1] 04_king_hopper                    mx=144 (0x90) binary: 10010000
+  [2] 04_king_hopper                    mx=144 (0x90) binary: 10010000
+  [3] 05_warden                         mx=64 (0x40) binary: 01000000
+  [4] 05_warden                         mx=64 (0x40) binary: 01000000
+  [5] 06_oblid                          mx=80 (0x50) binary: 01010000
+  [6] 06_oblid                          mx=144 (0x90) binary: 10010000
+  [7] 06_oblid                          mx=80 (0x50) binary: 01010000
+  [8] 08_oxelus                         mx=64 (0x40) binary: 01000000
+  [9] 08_oxelus                         mx=64 (0x40) binary: 01000000
+
+AREA: illusion_world_gloomy_domain
+--------------------------------------------------------------------------------
+  [0] 09_dark_fairy                     mx=48 (0x30) binary: 00110000
+  [1] 09_dark_fairy                     mx=48 (0x30) binary: 00110000
+  [2] 09_dark_fairy                     mx=48 (0x30) binary: 00110000
+  [3] 0a_dark_bishop                    mx=48 (0x30) binary: 00110000
+  [4] 0a_dark_bishop                    mx=48 (0x30) binary: 00110000
+  [5] 0a_dark_bishop                    mx=48 (0x30) binary: 00110000
+  [6] 09_dark_fairy                     mx=64 (0x40) binary: 01000000
+  [7] 09_dark_fairy                     mx=64 (0x40) binary: 01000000
+  [8] 09_dark_fairy                     mx=64 (0x40) binary: 01000000
+  [9] 0c_maristella                     mx=48 (0x30) binary: 00110000
+
+AREA: illusion_world_bewilderment_domain
+--------------------------------------------------------------------------------
+  [0] 01_gargaral                       mx=32 (0x20) binary: 00100000
+  [1] 02_gordoral                       mx=32 (0x20) binary: 00100000
+  [2] 02_gordoral                       mx=32 (0x20) binary: 00100000
+  [3] 01_gargaral                       mx=32 (0x20) binary: 00100000
+  [4] 01_gargaral                       mx=32 (0x20) binary: 00100000
+  [5] 04_demon_warrior                  mx=48 (0x30) binary: 00110000
+  [6] 04_demon_warrior                  mx=48 (0x30) binary: 00110000
+  [7] 05_gargaral                       mx=32 (0x20) binary: 00100000
+  [8] 05_gargaral                       mx=32 (0x20) binary: 00100000
+  [9] 06_gordoral                       mx=32 (0x20) binary: 00100000
+
+AREA: illusion_world_worship_domain
+--------------------------------------------------------------------------------
+  [0] 00_master_knight                  mx=64 (0x40) binary: 01000000
+  [1] 00_master_knight                  mx=64 (0x40) binary: 01000000
+  [2] 00_master_knight                  mx=64 (0x40) binary: 01000000
+  [3] 00_master_knight                  mx=64 (0x40) binary: 01000000
+  [4] 00_master_knight                  mx=64 (0x40) binary: 01000000
+  [5] 06_warpoor                        mx=48 (0x30) binary: 00110000
+  [6] 06_warpoor                        mx=48 (0x30) binary: 00110000
+  [7] 06_warpoor                        mx=48 (0x30) binary: 00110000
+  [8] 0a_warpoor                        mx=48 (0x30) binary: 00110000
+  [9] 0a_warpoor                        mx=48 (0x30) binary: 00110000
+
+AREA: illusion_world_dream_domain
+--------------------------------------------------------------------------------
+  [0] 00_dark_spirits                   mx=48 (0x30) binary: 00110000
+  [1] 00_dark_spirits                   mx=48 (0x30) binary: 00110000
+  [2] 00_dark_spirits                   mx=48 (0x30) binary: 00110000
+
+AREA: death_world_dark_castle_layer
+--------------------------------------------------------------------------------
+  [0] 00_hell_hunter                    mx=48 (0x30) binary: 00110000
+  [1] 00_hell_hunter                    mx=48 (0x30) binary: 00110000
+  [2] 00_hell_hunter                    mx=48 (0x30) binary: 00110000
+  [3] 02_karasu                         mx=128 (0x80) binary: 10000000
+  [4] 02_karasu                         mx=16 (0x10) binary: 00010000
+  [5] 05_armored_warrior                mx=48 (0x30) binary: 00110000
+  [6] 05_armored_warrior                mx=48 (0x30) binary: 00110000
+  [7] 06_armored_slayer                 mx=48 (0x30) binary: 00110000
+  [8] 06_armored_slayer                 mx=48 (0x30) binary: 00110000
+  [9] 06_armored_slayer                 mx=48 (0x30) binary: 00110000
+
+AREA: death_world_gate_of_the_dead
+--------------------------------------------------------------------------------
+  [0] 01_doriwi                         mx=64 (0x40) binary: 01000000
+  [1] 01_doriwi                         mx=64 (0x40) binary: 01000000
+  [2] 02_bone_wolf                      mx=64 (0x40) binary: 01000000
+  [3] 06_hell_warrior                   mx=64 (0x40) binary: 01000000
+  [4] 06_hell_warrior                   mx=64 (0x40) binary: 01000000
+  [5] 06_hell_warrior                   mx=64 (0x40) binary: 01000000
+  [6] 05_doriwi                         mx=64 (0x40) binary: 01000000
+  [7] 05_doriwi                         mx=64 (0x40) binary: 01000000
+  [8] 05_doriwi                         mx=64 (0x40) binary: 01000000
+  [9] 05_doriwi                         mx=64 (0x40) binary: 01000000
+
+AREA: death_world_lingering_curse_layer
+--------------------------------------------------------------------------------
+  [0] 01_stack_eyes                     mx=48 (0x30) binary: 00110000
+  [1] 01_stack_eyes                     mx=48 (0x30) binary: 00110000
+  [2] 01_stack_eyes                     mx=48 (0x30) binary: 00110000
+  [3] 01_stack_eyes                     mx=48 (0x30) binary: 00110000
+  [4] 01_stack_eyes                     mx=48 (0x30) binary: 00110000
+  [5] 05_old_face                       mx=64 (0x40) binary: 01000000
+  [6] 05_old_face                       mx=64 (0x40) binary: 01000000
+  [7] 05_old_face                       mx=64 (0x40) binary: 01000000
+  [8] 08_apocrypha                      mx=32 (0x20) binary: 00100000
+  [9] 09_descrypha                      mx=32 (0x20) binary: 00100000
+
+AREA: death_world_undead_layer
+--------------------------------------------------------------------------------
+  [0] 05_hell_hunter                    mx=64 (0x40) binary: 01000000
+  [1] 05_hell_hunter                    mx=64 (0x40) binary: 01000000
+  [2] 05_hell_hunter                    mx=64 (0x40) binary: 01000000
+  [3] 05_hell_hunter                    mx=64 (0x40) binary: 01000000
+  [4] 08_claw_head                      mx=48 (0x30) binary: 00110000
+  [5] 08_claw_head                      mx=48 (0x30) binary: 00110000
+  [6] 08_claw_head                      mx=48 (0x30) binary: 00110000
+  [7] 0a_demons_eye                     mx=21 (0x15) binary: 00010101
+  [8] 0a_demons_eye                     mx=21 (0x15) binary: 00010101
+  [9] 0a_demons_eye                     mx=21 (0x15) binary: 00010101
+
+AREA: void
+--------------------------------------------------------------------------------
+  (No spawns with mutex data)
+
+
+================================================================================
+SUMMARY OF UNIQUE MUTEX GROUP VALUES
+================================================================================
+
+Decimal | Hex    | Binary
+--------|--------|----------
+     16 | 0x10   | 00010000
+     21 | 0x15   | 00010101
+     32 | 0x20   | 00100000
+     37 | 0x25   | 00100101
+     48 | 0x30   | 00110000
+     53 | 0x35   | 00110101
+     64 | 0x40   | 01000000
+     80 | 0x50   | 01010000
+     96 | 0x60   | 01100000
+    112 | 0x70   | 01110000
+    128 | 0x80   | 10000000
+    144 | 0x90   | 10010000
+
+Total unique mutex values: 12
