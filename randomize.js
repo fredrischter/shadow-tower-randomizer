@@ -764,7 +764,7 @@ function randomize(paramsFile, stDir) {
         collectable.blank();
     }
 
-    // Issue: Reset rotation to zero when item is anti venom
+    // Issue: Reset rotation to zero when item is anti venom, anti paralytic, or fire world stone
     function setAllCollectablesToAntiVenom(collectable, area) {
         if (collectable.isBlank()) {
             return;
@@ -778,10 +778,13 @@ function randomize(paramsFile, stDir) {
         if (collectable.isBlank()) {
             return;
         }
-        if (collectable.type.get() == item_11e_anti_venom) {
+        var itemType = collectable.type.get();
+        // Issue: rotation issue again - block rotation for anti_venom, anti_paralytic, and fire_world_stone
+        if (itemType == item_11e_anti_venom || itemType == item_11f_anti_paralytic || itemType == item_123_fire_world_stone) {
             var oldRotation = collectable.rotation_z.get();
             collectable.rotation_z.set(0);
-            console.log("FIX - Resetting anti venom rotation to 0 at " + area.name + " (was " + oldRotation + ")");
+            var itemName = itemData[itemType] ? itemData[itemType].name : "unknown";
+            console.log("FIX - Resetting rotation to 0 for " + itemName + " at " + area.name + " (was " + oldRotation + ")");
         }
     }
 
@@ -2183,13 +2186,13 @@ function randomize(paramsFile, stDir) {
             forEachTile(removeTiles);
         }
 
-        // Issue: Reset rotation to zero when item is anti venom
+        // Issue: rotation issue again - Reset rotation to zero for anti venom, anti paralytic, and fire world stone
         // Step 1: For testing, make all collectables become anti venom
         if (params.testAntiVenomRotation) {
             forEachCollectable(setAllCollectablesToAntiVenom);
         }
         
-        // Step 2: Apply the fix - reset rotation to 0 for all anti venom items
+        // Step 2: Apply the fix - reset rotation to 0 for anti venom, anti paralytic, and fire world stone items
         forEachCollectable(resetAntiVenomRotation);
 
         // ------- PRESET Directives
