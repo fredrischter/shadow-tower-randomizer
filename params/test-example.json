@@ -1,0 +1,10 @@
+{
+  "label": "test-example",
+  "preset": "no-change",
+  "difficulty": "extreme-easy",
+  "randomizeMap": false,
+  "randomizeCreatures": false,
+  "randomizeCollectablesAndDrops": false,
+  "seed": "test123",
+  "testExample": true
+}

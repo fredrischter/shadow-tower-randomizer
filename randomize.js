@@ -2261,6 +2261,30 @@ function randomize(paramsFile, stDir) {
         return foundCreature;
     }
 
+    if (params.testExample) {
+        for (var a in areas) {
+            var area = areas[a];
+
+            area.spawns.forEach((spawn, index) => {
+                spawn.mutexGroup.set(0x10);
+//Decimal | Hex    | Binary
+//--------|--------|----------
+//     16 | 0x10   | 00010000
+//     21 | 0x15   | 00010101
+//     32 | 0x20   | 00100000
+//     37 | 0x25   | 00100101
+//     48 | 0x30   | 00110000
+//     53 | 0x35   | 00110101
+//     64 | 0x40   | 01000000
+//     80 | 0x50   | 01010000
+//     96 | 0x60   | 01100000
+//    112 | 0x70   | 01110000
+//    128 | 0x80   | 10000000
+//    144 | 0x90   | 10010000
+            });
+        }
+    }
+
     if (params.testApocryphaInSolitaryRegion) {
 
         //setCreature(creature, human_world_solitary_region["01_acid_slime"], changeSet);

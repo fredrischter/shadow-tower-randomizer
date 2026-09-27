@@ -124,6 +124,18 @@ test_all_presets.bat
 ./test_all_presets.sh
 ```
 
+## Testing custom changes
+
+If you want to do some custom changes to the game, the easiest way is:
+
+- Create your own params file, like ".\params\test-example.json" having your own boolean variable.
+- Do your manipulations freely in randomize.js, like in the example under "if (params.testExample) {"
+- Generate your changed binary, by providing your params file:
+
+```bash
+npm run mod ".\generated\st.bin" ".\params\test-example.json"
+```
+
 ## Performance
 
 The randomizer has been optimized for parallel processing:
