@@ -1,0 +1,753 @@
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_acid_slime          14   [drop  80% item_47_cap                   ][drop 100% item_11e_anti_venom           ]                                            
+1     100% 01_acid_slime          14   [drop 100% item_11e_anti_venom           ]                                                                                      
+2      25% 02_blood_slime         19   [drop 100% item_11c_healing_potion       ]                                                                                      
+3     100% 00_dark_spider         23   [drop  40% item_32_mace                  ][drop 100% item_35_morning_star          ]                                            
+4     100% 00_dark_spider         23                                                                                                                                   
+5     100% 00_dark_spider         23   [drop 100% item_a1_buckler               ]                                                                                      
+6      50% 00_dark_spider         23   [drop 100% item_11c_healing_potion       ]                                                                                      
+7      50% 00_dark_spider         23   [drop  50% item_1_short_sword            ]                                                                                      
+8      50% 01_acid_slime          14   [drop 100% item_11e_anti_venom           ]                                                                                      
+9      25% 00_dark_spider         23                                                                                                                                   
+a      25% 00_dark_spider         23   [drop 100% item_127_acid_vaccine         ]                                                                                      
+b     100% 0a_skeleton            23                                                                                                                                   
+c     100% 09_demon_bat           14   [drop  15% item_2_deadly_short_sword     ][drop 100% item_4_long_sword             ]                                            
+d     100% 09_demon_bat           14   [drop  30% item_3_long_sword             ]                                                                                      
+e     100% 08_dark_spider         5a                                                                                                                                   
+f     100% 0a_skeleton            23   [drop  50% item_a3_small_shield          ]                                                                                      
+10    100% 08_dark_spider         5a                                                                                                                                   
+11     25% 08_dark_spider         5a   [drop  50% item_5c_quilted_armor         ]                                                                                      
+12     25% 08_dark_spider         5a                                                                                                                                   
+20    100% 0a_skeleton             0   [drop  50% item_5d_leather_armor         ][drop 100% item_11c_healing_potion       ]                                            
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_acid_slime          32   [drop  30% item_11e_anti_venom           ]                                                                                      
+1      50% 00_acid_slime          32   [drop  60% item_99_leg_guard             ]                                                                                      
+2     100% 00_acid_slime          14   [drop  30% item_11e_anti_venom           ]                                                                                      
+3      50% 01_blood_slime         14   [drop 100% item_10a_cune                 ]                                                                                      
+4     100% 06_fanged_worm         32   [drop  10% item_f_broad_sword            ][drop 100% item_9_rapier                 ]                                            
+5     100% 04_acid_slime          14                                                                                                                                   
+6     100% 05_blood_slime         14   [drop 100% item_11c_healing_potion       ]                                                                                      
+7     100% 04_acid_slime          14   [drop  30% item_11e_anti_venom           ]                                                                                      
+8     100% 04_acid_slime          14   [drop 100% item_11e_anti_venom           ]                                                                                      
+9     100% 04_acid_slime          14                                                                                                                                   
+a      25% 04_acid_slime          14   [drop 100% item_11e_anti_venom           ]                                                                                      
+b      25% 05_blood_slime         14   [drop  10% item_5_long_sword             ]                                                                                      
+c     100% 08_casket              32   [drop  40% item_2_deadly_short_sword     ][drop  50% item_3_long_sword             ][drop 100% item_10c_torch                ]  
+d     100% 08_casket              32   [drop 100% item_10c_torch                ]                                                                                      
+e     100% 09_blood_slime         14   [drop 100% item_124_poison_vaccine       ]                                                                                      
+f     100% 09_blood_slime         14   [drop 100% item_10a_cune                 ]                                                                                      
+10     25% 09_blood_slime         14   [drop  20% item_60_scale_mail            ][drop  50% item_5e_leather_armor         ]                                            
+11     25% 09_blood_slime         14   [drop 100% item_124_poison_vaccine       ]                                                                                      
+20    100% 02_parasite            32   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0       0% 02_skeleton            1e   [drop  20% item_92_steel_boots_of_resist ]                                                                                      
+1       0% 02_skeleton            1e   [drop  30% item_82_caustic_hand_guard    ][drop  50% item_81_fiery_gauntlet        ]                                            
+2       0% 02_skeleton            1e   [drop  50% item_9_rapier                 ]                                                                                      
+3       0% 02_skeleton            1e   [drop  40% item_49_crown_of_resist       ][drop  60% item_48_crown                 ]                                            
+4       0% 02_skeleton            1e   [drop 100% item_10a_cune                 ]                                                                                      
+5     100% 00_acid_skull          1e   [drop  50% item_8e_leather_boots         ]                                                                                      
+6     100% 00_acid_skull          1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+7     100% 00_acid_skull          1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+8     100% 00_acid_skull          1e                                                                                                                                   
+9     100% 01_blood_skull         1e                                                                                                                                   
+a     100% 00_acid_skull          1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+b     100% 01_blood_skull         1e   [drop  20% item_11f_anti_paralytic       ]                                                                                      
+c      50% 01_blood_skull         1e   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+d      25% 01_blood_skull         1e   [drop  10% item_4a_crown_of_composure    ][drop 100% item_127_acid_vaccine         ]                                            
+e     100% 05_blood_skull         1e   [drop  50% item_a4_small_shield          ]                                                                                      
+f     100% 05_blood_skull         1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+10    100% 05_blood_skull         1e                                                                                                                                   
+11     25% 05_blood_skull         1e   [drop  30% item_90_steel_boots           ]                                                                                      
+12     25% 05_blood_skull         1e   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+13     25% 05_blood_skull         1e   [drop  60% item_b_lethal_rapier          ][drop 100% item_23_guardian_bastard_sword]                                            
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 02_tongue_imp          1e   [drop  70% item_a2_buckler               ]                                                                                      
+1     100% 02_tongue_imp          1e                                                                                                                                   
+2     100% 00_dark_spider         23   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+3      25% 00_dark_spider         23   [drop  50% item_8d_leather_boots         ]                                                                                      
+4     100% 01_shadow_spider       1e   [drop 100% item_11d_magic_potion         ]                                                                                      
+5     100% 00_dark_spider         23   [drop  50% item_8f_hard_boots            ]                                                                                      
+6      50% 00_dark_spider         23   [drop  50% item_79_leather_glove         ][drop  30% item_7c_wooden_glove          ]                                            
+7      25% 00_dark_spider         23   [drop 100% item_11c_healing_potion       ]                                                                                      
+8      25% 00_dark_spider         23   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+9     100% 06_tongue_imp          1e   [drop  20% item_5f_magical_leather_armor ][drop  50% item_5e_leather_armor         ]                                            
+a     100% 06_tongue_imp          1e   [drop  50% item_1_short_sword            ]                                                                                      
+b     100% 08_dark_spider         1e                                                                                                                                   
+c     100% 08_dark_spider         1e   [drop 100% item_124_poison_vaccine       ]                                                                                      
+d     100% 09_shadow_spider       1e   [drop 100% item_11d_magic_potion         ]                                                                                      
+e      25% 08_dark_spider         1e   [drop  30% item_48_crown                 ][drop  80% item_47_cap                   ]                                            
+f      25% 09_shadow_spider       50   [drop 100% item_10e_sacred_feather       ]                                                                                      
+10     25% 09_shadow_spider        a   [drop 100% item_10e_sacred_feather       ]                                                                                      
+21    100% 0a_guardian_a          32   [drop  30% item_36_swift_morning_star    ][drop  30% item_34_shining_mace          ]                                            
+30    100% 04_fat_mole_a          1e                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 02_elder               1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+1     100% 00_watcher_plant       14                                                                                                                                   
+2     100% 00_watcher_plant       14   [drop  50% item_91_steel_boots           ]                                                                                      
+3      50% 00_watcher_plant       14                                                                                                                                   
+4     100% 01_myconid             1e                                                                                                                                   
+5     100% 01_myconid             1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+6      50% 01_myconid             1e   [drop  80% item_7b_leather_glove         ]                                                                                      
+7      25% 00_watcher_plant       14   [drop 100% item_124_poison_vaccine       ]                                                                                      
+8     100% 06_elder               28                                                                                                                                   
+9     100% 06_elder               28   [drop 100% item_11e_anti_venom           ]                                                                                      
+a     100% 04_minor_dwarf         23   [drop 100% item_10a_cune                 ]                                                                                      
+b     100% 04_minor_dwarf         23   [drop 100% item_11c_healing_potion       ]                                                                                      
+c      50% 04_minor_dwarf         23   [drop 100% item_10a_cune                 ]                                                                                      
+d     100% 09_imp                 14   [drop  20% item_d7_ring_of_poison        ]                                                                                      
+e     100% 09_imp                 14                                                                                                                                   
+f     100% 09_imp                 14                                                                                                                                   
+10    100% 09_imp                 14   [drop  10% item_d9_ring_of_protect       ]                                                                                      
+11    100% 09_imp                 14   [drop  20% item_c9_summoner_ring_of_frost]                                                                                      
+12    100% 08_star_serpent        19   [drop 100% item_e8_bracelet_of_balance   ]                                                                                      
+13     50% 08_star_serpent        19   [drop  20% item_e7_bracelet_of_resist    ][drop  20% item_d3_dark_ring             ][drop 100% item_120_divine_symbol        ]  
+14     25% 08_star_serpent        19   [drop  70% item_a7_large_shield          ][drop 100% item_120_divine_symbol        ]                                            
+15    100% 0d_tondrom              a                                                                                                                                   
+16    100% 0d_tondrom              a                                                                                                                                   
+17     25% 0d_tondrom              a                                                                                                                                   
+18     25% 0d_tondrom              a                                                                                                                                   
+19    100% 0c_barrel_snail        14   [drop 100% item_11e_anti_venom           ]                                                                                      
+1a    100% 0c_barrel_snail        14   [drop 100% item_11e_anti_venom           ]                                                                                      
+1b    100% 0e_elder               3c   [drop  80% item_49_crown_of_resist       ]                                                                                      
+1c    100% 0e_elder               1e   [drop 100% item_120_divine_symbol        ]                                                                                      
+1d    100% 0e_elder               1e   [drop 100% item_120_divine_symbol        ]                                                                                      
+1e     25% 0e_elder               1e   [drop  50% item_63_plate_mail            ][drop  50% item_62_scale_mail_of_curing  ]                                            
+20    100% 05_dwarfling            a                                                                                                                                   
+30    100% 0a_blank               14                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 02_watcher_plant        f   [drop 100% item_10a_cune                 ]                                                                                      
+1     100% 02_watcher_plant        f                                                                                                                                   
+2     100% 02_watcher_plant        f   [drop 100% item_11c_healing_potion       ]                                                                                      
+3     100% 01_beak_plant           f   [drop  60% item_33_crushing_mace         ]                                                                                      
+4     100% 01_beak_plant           f                                                                                                                                   
+5     100% 01_beak_plant           f                                                                                                                                   
+6      50% 01_beak_plant           f                                                                                                                                   
+7      50% 02_watcher_plant        f   [drop 100% item_10a_cune                 ]                                                                                      
+8      50% 02_watcher_plant        f   [drop 100% item_10a_cune                 ]                                                                                      
+9      50% 02_watcher_plant        f   [drop 100% item_11c_healing_potion       ]                                                                                      
+a      25% 02_watcher_plant        f   [drop 100% item_11c_healing_potion       ]                                                                                      
+b     100% 09_dwarf_warrior       32   [drop  70% item_5f_magical_leather_armor ]                                                                                      
+c     100% 09_dwarf_warrior       3c   [drop 100% item_10c_torch                ]                                                                                      
+d     100% 08_trickster           28   [drop  40% item_ec_bracelet_of_recovery  ]                                                                                      
+e     100% 08_trickster           28                                                                                                                                   
+f      25% 08_trickster           28                                                                                                                                   
+10    100% 0c_hanging_dead         f                                                                                                                                   
+11    100% 0c_hanging_dead         f                                                                                                                                   
+12    100% 0c_hanging_dead         f                                                                                                                                   
+13    100% 0c_hanging_dead         f                                                                                                                                   
+14    100% 0c_hanging_dead         f   [drop  80% item_d7_ring_of_poison        ]                                                                                      
+15    100% 0c_hanging_dead         f                                                                                                                                   
+16    100% 0e_watcher_plant       14   [drop 100% item_11c_healing_potion       ]                                                                                      
+17    100% 0e_watcher_plant       14   [drop 100% item_10a_cune                 ]                                                                                      
+18     25% 0e_watcher_plant       14   [drop 100% item_11c_healing_potion       ]                                                                                      
+19    100% 0d_trickster           1e                                                                                                                                   
+1a    100% 0d_trickster           1e   [drop 100% item_42_bow                   ]                                                                                      
+1b     50% 0d_trickster           1e   [drop  40% item_ce_soul_ring             ]                                                                                      
+1d    100% 02_watcher_plant       14   [drop 100% item_124_poison_vaccine       ]                                                                                      
+1e    100% 0d_trickster           1e   [drop  30% item_14_crushing_broad_sword  ]                                                                                      
+1f    100% 0d_trickster           1e   [drop  30% item_fb_magical_amulet        ]                                                                                      
+20    100% 00_duhrin               a   [drop 100% item_12f_spirit_key           ]                                                                                      
+30    100% 05_blank               14                                                                                                                                   
+31    100% 04_auriel_b            46                                                                                                                                   
+32    100% 0b_blank               32                                                                                                                                   
+33    100% 0a_blank               32                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_blue_flicker        1e                                                                                                                                   
+1     100% 01_blue_flicker        1e   [drop 100% item_10d_lamp                 ]                                                                                      
+2     100% 01_blue_flicker        1e                                                                                                                                   
+3     100% 01_blue_flicker        1e   [drop 100% item_124_poison_vaccine       ]                                                                                      
+4     100% 01_blue_flicker        1e   [drop 100% item_10d_lamp                 ]                                                                                      
+5     100% 01_blue_flicker        1e   [drop 100% item_10d_lamp                 ]                                                                                      
+6     100% 00_sand_leech_a        3c   [drop 100% item_10a_cune                 ]                                                                                      
+7     100% 00_sand_leech_a         a                                                                                                                                   
+8     100% 00_sand_leech_a         a   [drop 100% item_10a_cune                 ]                                                                                      
+9     100% 00_sand_leech_a         a                                                                                                                                   
+a      50% 00_sand_leech_a         a   [drop  80% item_fb_magical_amulet        ]                                                                                      
+b     100% 05_acid_pod            5a   [drop  20% item_83_gauntlet              ][drop  50% item_7c_wooden_glove          ]                                            
+c      10% 04_kiljoy              23                                                                                                                                   
+d      10% 04_kiljoy              23   [drop  60% item_cf_soul_ring             ]                                                                                      
+e      10% 04_kiljoy              23   [drop  60% item_e7_bracelet_of_resist    ]                                                                                      
+f      50% 05_acid_pod            1e   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+10     50% 05_acid_pod            1e   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+11     50% 05_acid_pod            1e   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+12    100% 09_cocoon_plant        1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+13    100% 09_cocoon_plant        1e   [drop  50% item_11e_anti_venom           ]                                                                                      
+14     50% 09_cocoon_plant        1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+15     50% 09_cocoon_plant        1e   [drop 100% item_11e_anti_venom           ]                                                                                      
+16    100% 08_torg                28   [drop  90% item_10_broad_sword           ]                                                                                      
+17    100% 08_torg                28   [drop 100% item_10d_lamp                 ]                                                                                      
+18    100% 08_torg                28   [drop  80% item_62_scale_mail_of_curing  ]                                                                                      
+20    100% 02_sand_leech_b         a   [drop  20% item_95_caustic_steel_boots   ]                                                                                      
+21    100% 02_sand_leech_b         a   [drop 100% item_10a_cune                 ]                                                                                      
+22    100% 02_sand_leech_b         a   [drop 100% item_42_bow                   ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_earth_knight        32   [drop  50% item_a8_harden_large_shield   ][drop  50% item_a9_large_shield_of_balance]                                            
+1     100% 01_acid_pod            32   [drop 100% item_11c_healing_potion       ]                                                                                      
+2      50% 01_acid_pod             a   [drop 100% item_11c_healing_potion       ]                                                                                      
+3      50% 01_acid_pod             a   [drop 100% item_11c_healing_potion       ]                                                                                      
+4      50% 01_acid_pod             a   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+5      50% 01_acid_pod             a   [drop 100% item_11c_healing_potion       ]                                                                                      
+6      50% 05_cocoon_plant         a   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+7      50% 05_cocoon_plant         a   [drop 100% item_11c_healing_potion       ]                                                                                      
+8      50% 05_cocoon_plant         a   [drop  50% item_12e_dorados_ashes        ]                                                                                      
+9     100% 04_cannon_snail        14   [drop  60% item_81_fiery_gauntlet        ]                                                                                      
+a     100% 04_cannon_snail        14   [drop  40% item_95_caustic_steel_boots   ][drop  40% item_91_steel_boots           ]                                            
+b      75% 08_guardian_b          1e   [drop 100% item_10a_cune                 ]                                                                                      
+c      75% 08_guardian_b          1e   [drop 100% item_10a_cune                 ]                                                                                      
+d     100% 09_sloth_bug           14   [drop  30% item_51_full_helm             ]                                                                                      
+e     100% 09_sloth_bug           14   [drop  30% item_64_plate_mail            ]                                                                                      
+f      50% 09_sloth_bug           14   [drop  60% item_82_caustic_hand_guard    ]                                                                                      
+10     50% 09_sloth_bug           14   [drop  50% item_4b_wizard_crown          ]                                                                                      
+11    100% 0c_ray_plant           32   [drop 100% item_fe_deadly_amulet         ]                                                                                      
+12    100% 0d_cocoon_plant        32   [drop 100% item_11c_healing_potion       ]                                                                                      
+13    100% 0d_cocoon_plant         a   [drop 100% item_11c_healing_potion       ]                                                                                      
+14    100% 0d_cocoon_plant         a   [drop 100% item_11c_healing_potion       ]                                                                                      
+15    100% 0d_cocoon_plant         a   [drop  50% item_11d_magic_potion         ]                                                                                      
+16     10% 0d_cocoon_plant         a   [drop 100% item_d9_ring_of_protect       ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_demon_bat           3c   [drop  40% item_5_long_sword             ]                                                                                      
+1     100% 01_demon_bat           32   [drop  10% item_7_fiery_long_sword       ]                                                                                      
+2     100% 01_demon_bat           32                                                                                                                                   
+3      50% 05_hobble_worm         1e                                                                                                                                   
+4      50% 05_hobble_worm         1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+5     100% 05_hobble_worm         1e   [drop  70% item_3a_giant_axe             ]                                                                                      
+6     100% 05_hobble_worm         1e   [drop  20% item_af_dark_great_shield     ][drop 100% item_11c_healing_potion       ]                                            
+7      50% 05_hobble_worm         1e   [drop  50% item_4c_devil_crown           ]                                                                                      
+8      25% 05_hobble_worm         1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+9      25% 05_hobble_worm         1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+a     100% 0a_barrel_snail        28                                                                                                                                   
+b     100% 0a_barrel_snail        28   [drop 100% item_120_divine_symbol        ]                                                                                      
+c     100% 08_clay_servant        19   [drop  50% item_90_steel_boots           ]                                                                                      
+d     100% 08_clay_servant        19   [drop 100% item_18_bastard_sword         ]                                                                                      
+e     100% 08_clay_servant        19   [drop  40% item_e9_bracelet_of_movement  ]                                                                                      
+f      80% 08_clay_servant        19                                                                                                                                   
+10     25% 0a_barrel_snail        28   [drop  60% item_60_scale_mail            ][drop 100% item_120_divine_symbol        ]                                            
+11     25% 0a_barrel_snail        28   [drop 100% item_120_divine_symbol        ]                                                                                      
+12     25% 0a_barrel_snail        28   [drop  40% item_9b_harden_leg_guard      ]                                                                                      
+13    100% 0c_dybbuk              19   [drop 100% item_db_caustic_ring          ]                                                                                      
+14    100% 0d_crying_root         14   [drop 100% item_10e_sacred_feather       ]                                                                                      
+15    100% 0d_crying_root         14   [drop 100% item_10e_sacred_feather       ]                                                                                      
+16    100% 0d_crying_root         14   [drop 100% item_10e_sacred_feather       ]                                                                                      
+17     10% 0d_crying_root         50   [drop 100% item_d4_dark_ring             ]                                                                                      
+30    100% 00_dybbuk              32                                                                                                                                   
+31    100% 04_dybbuk               0                                                                                                                                   
+32    100% 04_dybbuk               0                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_earth_knight        1e   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+1     100% 01_earth_knight        1e   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+2     100% 01_earth_knight        1e   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+3     100% 01_earth_knight        1e   [drop  60% item_4f_magical_helm          ][drop 100% item_11f_anti_paralytic       ]                                            
+4     100% 05_earth_knight        3c   [drop 100% item_10e_sacred_feather       ]                                                                                      
+5     100% 05_earth_knight        3c   [drop 100% item_122_evil_eye             ]                                                                                      
+6     100% 00_black_onyx          1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+7     100% 00_black_onyx          1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+8      50% 00_black_onyx          1e   [drop  50% item_11e_anti_venom           ]                                                                                      
+9      25% 00_black_onyx          1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+a      25% 00_black_onyx          1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+21    100% 04_dread_knight         a   [drop   0% item_8_silent_sword           ][drop   0% item_2c_deadly_great_sword    ][drop   0% item_27_great_sword           ]  
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_horned_slime        1e                                                                                                                                   
+1     100% 01_horned_slime        1e   [drop 100% item_123_fire_world_stone     ]                                                                                      
+2     100% 01_horned_slime        1e   [drop 100% item_10e_sacred_feather       ]                                                                                      
+3     100% 01_horned_slime        1e                                                                                                                                   
+4     100% 01_horned_slime        1e                                                                                                                                   
+5     100% 02_blood_brain          f                                                                                                                                   
+6      50% 02_blood_brain         1e                                                                                                                                   
+7      50% 02_blood_brain         1e   [drop 100% item_10a_cune                 ]                                                                                      
+8      50% 02_blood_brain         1e                                                                                                                                   
+9      30% 02_blood_brain         1e   [drop 100% item_10a_cune                 ]                                                                                      
+a     100% 05_horned_slime        1e   [drop  50% item_123_fire_world_stone     ]                                                                                      
+b     100% 05_horned_slime        1e   [drop 100% item_123_fire_world_stone     ]                                                                                      
+c     100% 06_dweller             1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+d      50% 05_horned_slime        1e   [drop 100% item_123_fire_world_stone     ]                                                                                      
+e      50% 05_horned_slime        1e   [drop  50% item_123_fire_world_stone     ]                                                                                      
+f      25% 06_dweller             1e                                                                                                                                   
+10    100% 0a_dweller             1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+11    100% 0a_dweller             1e                                                                                                                                   
+12    100% 0a_dweller             1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+13    100% 09_dementor            32   [drop  80% item_80_metal_glove           ][drop 100% item_127_acid_vaccine         ]                                            
+14     50% 09_dementor            32   [drop  80% item_37_frosty_morning_star   ][drop 100% item_127_acid_vaccine         ]                                            
+15    100% 0c_worm_face           28   [drop  40% item_6c_caustic_plate_mail    ]                                                                                      
+16    100% 0c_worm_face           28   [drop  20% item_9d_frosty_leg_guard      ][drop 100% item_127_acid_vaccine         ]                                            
+17     25% 0d_hatchlin            1e   [drop 100% item_cb_balance_ring_of_frost ]                                                                                      
+18    100% 0c_worm_face           28   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+19    100% 0c_worm_face           28   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+1a     50% 0c_worm_face           28   [drop  20% item_1f_frosty_bastard_sword  ][drop 100% item_127_acid_vaccine         ]                                            
+1b     25% 0c_worm_face           28   [drop 100% item_120_divine_symbol        ]                                                                                      
+1c     25% 0c_worm_face           28   [drop 100% item_120_divine_symbol        ]                                                                                      
+30    100% 00_fat_mole_f           5   [drop   0% item_127_acid_vaccine         ]                                                                                      
+31    100% 04_blank                5                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_kabasaur            32   [drop 100% item_114_floodgate_key        ]                                                                                      
+1      20% 00_kabasaur            32   [drop 100% item_122_evil_eye             ]                                                                                      
+2      20% 00_kabasaur            32   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+3     100% 05_water_knight        28   [drop  50% item_1f_frosty_bastard_sword  ]                                                                                      
+4     100% 05_water_knight        46   [drop  20% item_6b_frosty_plate_mail     ][drop  40% item_9f_caustic_leg_guard     ]                                            
+5     100% 04_kabasaur            28   [drop  50% item_f_broad_sword            ]                                                                                      
+6     100% 04_kabasaur            28   [drop  50% item_27_great_sword           ][drop  20% item_122_evil_eye             ]                                            
+7     100% 04_kabasaur            28   [drop  50% item_e9_bracelet_of_movement  ][drop 100% item_11f_anti_paralytic       ]                                            
+8      50% 04_kabasaur            28   [drop  10% item_da_sorcerer_ring_of_poison][drop 100% item_122_evil_eye             ]                                            
+9      50% 04_kabasaur            28   [drop  40% item_ca_summoner_ring_of_frost][drop  30% item_122_evil_eye             ]                                            
+a      30% 05_water_knight        28   [drop  50% item_11c_healing_potion       ]                                                                                      
+b      30% 05_water_knight        28   [drop  50% item_11c_healing_potion       ]                                                                                      
+c      30% 05_water_knight        28   [drop 100% item_115_mermaid_key          ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_kabasaur            1e   [drop  40% item_38_axe                   ]                                                                                      
+1     100% 02_horned_slime        1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+2     100% 00_kabasaur            1e   [drop  40% item_18_bastard_sword         ]                                                                                      
+3     100% 02_horned_slime        1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+4     100% 05_blood_brain         1e                                                                                                                                   
+5     100% 05_blood_brain         1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+6      50% 05_blood_brain         1e                                                                                                                                   
+7      50% 05_blood_brain         1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+8     100% 04_great_frog          3c   [drop  80% item_43_warrior_bow           ][drop 100% item_11c_healing_potion       ]                                            
+9     100% 04_great_frog          3c   [drop  80% item_53_harden_full_helm      ][drop 100% item_52_full_helm_of_curing   ]                                            
+a     100% 04_great_frog          3c   [drop  70% item_69_magical_plate_mail    ][drop 100% item_11c_healing_potion       ]                                            
+b     100% 09_koazul              28                                                                                                                                   
+c     100% 09_koazul              28   [drop 100% item_10a_cune                 ]                                                                                      
+d     100% 09_koazul              28   [drop 100% item_4e_helm                  ]                                                                                      
+e      50% 09_koazul              28   [drop 100% item_10a_cune                 ]                                                                                      
+f      50% 09_koazul              28   [drop 100% item_10a_cune                 ]                                                                                      
+10     50% 0a_horned_slime        1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+11     50% 0a_horned_slime        1e   [drop  40% item_dc_caustic_ring          ]                                                                                      
+12    100% 0c_gaze_hopper         1e                                                                                                                                   
+13    100% 0c_gaze_hopper         1e                                                                                                                                   
+14    100% 0c_gaze_hopper         1e   [drop  80% item_d3_dark_ring             ]                                                                                      
+15    100% 0d_slasher             1e   [drop  40% item_95_caustic_steel_boots   ]                                                                                      
+16    100% 0d_slasher             1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+17    100% 0e_manna_python        1e                                                                                                                                   
+18    100% 0e_manna_python        1e   [drop  30% item_ca_summoner_ring_of_frost]                                                                                      
+19    100% 0e_manna_python        1e   [drop  40% item_c9_summoner_ring_of_frost]                                                                                      
+1a    100% 0c_gaze_hopper         1e   [drop 100% item_10a_cune                 ]                                                                                      
+1b     50% 0c_gaze_hopper         1e   [drop 100% item_10a_cune                 ]                                                                                      
+1c     50% 0d_slasher             28   [drop  30% item_dd_caustic_priest_ring   ]                                                                                      
+1d     50% 0d_slasher             28   [drop 100% item_11c_healing_potion       ]                                                                                      
+1e     50% 0d_slasher             28   [drop  50% item_3f_battle_axe            ]                                                                                      
+1f     50% 0d_slasher             28   [drop  30% item_74_plate_mail_of_honor   ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_winged_worm         1e   [drop  60% item_3b_giant_axe             ]                                                                                      
+1     100% 00_winged_worm         1e   [drop  50% item_100_amulet_of_curing     ]                                                                                      
+2     100% 00_winged_worm         1e   [drop  60% item_9d_frosty_leg_guard      ]                                                                                      
+3      50% 00_winged_worm         3c   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+4      50% 00_winged_worm         1e                                                                                                                                   
+5      50% 00_winged_worm         1e   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+6      50% 00_winged_worm         1e   [drop 100% item_10e_sacred_feather       ]                                                                                      
+7     100% 04_dragon_turtle       3c   [drop  30% item_bc_gothic_shield_of_resist][drop  50% item_a8_harden_large_shield   ][drop  80% item_a3_small_shield          ]  
+8     100% 04_dragon_turtle       3c   [drop  20% item_6b_frosty_plate_mail     ][drop 100% item_127_acid_vaccine         ]                                            
+9      25% 04_dragon_turtle       5a   [drop 100% item_127_acid_vaccine         ]                                                                                      
+20    100% 05_magi_magus           a   [drop  20% item_d_shadow_wolf            ][drop  20% item_24_dark_sword            ][drop 100% item_ee_mighty_ring           ]  
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 02_fire_jinn           50                                                                                                                                   
+1     100% 02_fire_jinn           28   [drop 100% item_11c_healing_potion       ]                                                                                      
+2     100% 02_fire_jinn           28   [drop  30% item_83_gauntlet              ]                                                                                      
+3      50% 02_fire_jinn           50   [drop  30% item_98_steel_boots_of_resist ][drop  40% item_93_steel_boots_of_curing ]                                            
+4      50% 02_fire_jinn           50                                                                                                                                   
+5      50% 02_fire_jinn           28   [drop 100% item_11c_healing_potion       ]                                                                                      
+6     100% 06_fire_jinn           50   [drop  10% item_a_rapier                 ][drop 100% item_11c_healing_potion       ]                                            
+7     100% 06_fire_jinn           28   [drop  60% item_7_fiery_long_sword       ]                                                                                      
+8     100% 06_fire_jinn           28   [drop 100% item_11c_healing_potion       ]                                                                                      
+9     100% 06_fire_jinn           28   [drop  20% item_c_shadow_blade           ]                                                                                      
+a     100% 05_armored_jinn        50                                                                                                                                   
+b     100% 05_armored_jinn        50   [drop  30% item_123_fire_world_stone     ]                                                                                      
+c     100% 05_armored_jinn        28   [drop  80% item_123_fire_world_stone     ]                                                                                      
+d     100% 06_fire_jinn           28   [drop  50% item_11c_healing_potion       ]                                                                                      
+e     100% 05_armored_jinn        50                                                                                                                                   
+f     100% 04_jinn_lord           28   [drop  40% item_c5_summoner_ring_of_fire ][drop  10% item_101_amulet_of_resist     ][drop 100% item_123_fire_world_stone     ]  
+10    100% 06_fire_jinn           50   [drop 100% item_11c_healing_potion       ]                                                                                      
+11     50% 06_fire_jinn           28   [drop  70% item_16_guardian_broad_sword  ]                                                                                      
+12     50% 06_fire_jinn           28                                                                                                                                   
+13     50% 06_fire_jinn           50   [drop 100% item_11c_healing_potion       ]                                                                                      
+14     50% 06_fire_jinn           50                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 02_mystic_tower        1e   [drop  10% item_3_long_sword             ]                                                                                      
+1     100% 02_mystic_tower        1e   [drop 100% item_10d_lamp                 ]                                                                                      
+2     100% 02_mystic_tower        32   [drop  25% item_6_keenest_long_sword     ]                                                                                      
+3      50% 02_mystic_tower        1e                                                                                                                                   
+4      15% 02_mystic_tower        1e   [drop 100% item_123_fire_world_stone     ]                                                                                      
+5      15% 02_mystic_tower        1e   [drop 100% item_123_fire_world_stone     ]                                                                                      
+6     100% 06_mystic_tower        50                                                                                                                                   
+7      30% 06_mystic_tower        1e                                                                                                                                   
+8      30% 06_mystic_tower        1e                                                                                                                                   
+9      25% 04_berzerker           32   [drop  50% item_b_lethal_rapier          ]                                                                                      
+a     100% 06_mystic_tower        3c   [drop 100% item_10d_lamp                 ]                                                                                      
+b     100% 06_mystic_tower        3c   [drop  50% item_10d_lamp                 ]                                                                                      
+c     100% 06_mystic_tower        3c                                                                                                                                   
+d     100% 06_mystic_tower        3c                                                                                                                                   
+e     100% 08_berzerker           3c   [drop  30% item_93_steel_boots_of_curing ][drop  30% item_94_steel_boots_of_resist ]                                            
+f     100% 08_berzerker           3c   [drop  30% item_c5_summoner_ring_of_fire ]                                                                                      
+10    100% 09_iron_crusher        3c                                                                                                                                   
+11     25% 08_berzerker           5a                                                                                                                                   
+12     25% 08_berzerker           5a                                                                                                                                   
+13    100% 0e_mystic_tower        28   [drop  50% item_19_bastard_sword         ]                                                                                      
+14    100% 0e_mystic_tower        28                                                                                                                                   
+15     50% 0e_mystic_tower        1e   [drop  50% item_50_full_helm             ]                                                                                      
+16    100% 0d_dweller             28   [drop  30% item_32_mace                  ]                                                                                      
+17    100% 0d_dweller             28   [drop  10% item_73_full_plate            ]                                                                                      
+18    100% 0d_dweller             28   [drop  40% item_68_plate_mail            ]                                                                                      
+19    100% 0d_dweller             28   [drop  50% item_3c_crushing_axe          ]                                                                                      
+1a     50% 0e_mystic_tower        1e   [drop  40% item_b2_tower_shield          ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_horned_skull        14                                                                                                                                   
+1     100% 01_horned_skull        1e                                                                                                                                   
+2     100% 01_horned_skull        1e                                                                                                                                   
+3     100% 01_horned_skull        3c                                                                                                                                   
+4      30% 01_horned_skull        1e   [drop  80% item_ed_mind_bracelet         ]                                                                                      
+5      30% 01_horned_skull        1e                                                                                                                                   
+6     100% 06_mystic_tower        14                                                                                                                                   
+7      50% 06_mystic_tower        14   [drop 100% item_10d_lamp                 ]                                                                                      
+8      50% 06_mystic_tower        14   [drop  80% item_ff_amulet_of_composure   ]                                                                                      
+9     100% 04_berzerker           3c   [drop  30% item_12e_dorados_ashes        ]                                                                                      
+a     100% 04_berzerker           3c   [drop  30% item_12e_dorados_ashes        ]                                                                                      
+b     100% 04_berzerker           3c   [drop  30% item_12e_dorados_ashes        ]                                                                                      
+c      50% 04_berzerker           3c                                                                                                                                   
+d      50% 04_berzerker           3c                                                                                                                                   
+e     100% 09_steel_servant       1e   [drop  50% item_3d_deadly_axe            ][drop 100% item_11c_healing_potion       ]                                            
+f      50% 09_steel_servant       1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+10     50% 09_steel_servant       1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+11    100% 0d_arachness           1e   [drop  50% item_51_full_helm             ]                                                                                      
+12     50% 0d_arachness           1e   [drop  50% item_84_gauntlet              ]                                                                                      
+13     50% 0d_arachness           1e   [drop  70% item_df_ring_of_desire        ]                                                                                      
+14    100% 0d_arachness           1e   [drop 100% item_123_fire_world_stone     ]                                                                                      
+15     50% 0d_arachness           1e                                                                                                                                   
+16     50% 0d_arachness           1e   [drop  50% item_c1_gothic_shield_of_rage ]                                                                                      
+21    100% 02_dead_abraxus         a                                                                                                                                   
+30    100% 00_abraxus              a                                                                                                                                   
+31    100% 0c_fat_mole_c           5                                                                                                                                   
+32    100% 08_fat_mole_b           5                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_berzerker           32                                                                                                                                   
+1     100% 01_berzerker           32   [drop  30% item_126_bottle_of_light      ]                                                                                      
+2     100% 01_berzerker           32   [drop  20% item_96_swift_steel_boots     ][drop 100% item_126_bottle_of_light      ]                                            
+3     100% 00_bone_demon          32   [drop 100% item_10a_cune                 ]                                                                                      
+4     100% 00_bone_demon          32   [drop 100% item_10a_cune                 ]                                                                                      
+5     100% 01_berzerker           32                                                                                                                                   
+6      50% 01_berzerker           32   [drop  30% item_126_bottle_of_light      ]                                                                                      
+7      50% 01_berzerker           32   [drop  50% item_4c_devil_crown           ]                                                                                      
+8      25% 00_bone_demon          32                                                                                                                                   
+9     100% 04_zygote              32                                                                                                                                   
+a     100% 04_zygote              32                                                                                                                                   
+b     100% 04_zygote              32                                                                                                                                   
+c      15% 0d_damned_angel         5   [drop  40% item_44_bow_gun               ]                                                                                      
+d     100% 05_horned_skull        32   [drop  20% item_d8_ring_of_poison        ]                                                                                      
+e     100% 05_horned_skull        32   [drop  40% item_cf_soul_ring             ]                                                                                      
+f     100% 05_horned_skull        32                                                                                                                                   
+10     50% 04_zygote              32                                                                                                                                   
+11     50% 04_zygote              32   [drop  30% item_6f_plate_mail_of_protect ]                                                                                      
+12    100% 0a_ruby_demon          32   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+13    100% 0a_ruby_demon          32   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+14    100% 09_cerberus            32   [drop 100% item_110_fiery_key            ]                                                                                      
+15    100% 09_cerberus            32   [drop  35% item_fe_deadly_amulet         ]                                                                                      
+16     50% 09_cerberus            32                                                                                                                                   
+17     50% 09_cerberus            32   [drop  40% item_b4_harden_tower_shield   ]                                                                                      
+20    100% 0c_ebony_knight        64   [drop 100% item_1e_fiery_bastard_sword   ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+1     100% 00_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+2     100% 00_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+3      50% 01_chirper             3c   [drop 100% item_125_dust_of_rage         ]                                                                                      
+4     100% 04_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+5     100% 04_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+6     100% 04_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+7     100% 04_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+8     100% 04_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+9     100% 04_night_howler        3c   [drop 100% item_10a_cune                 ]                                                                                      
+a     100% 05_master_howler       3c   [drop 100% item_12a_young_dragon_gem     ]                                                                                      
+b      30% 09_freak               3c   [drop  50% item_40_deadly_battle_axe     ]                                                                                      
+c      30% 09_freak               3c   [drop  50% item_28_great_sword           ]                                                                                      
+d      30% 09_freak               3c   [drop  10% item_2f_mighty_great_sword    ]                                                                                      
+e      30% 09_freak               3c   [drop  30% item_3e_living_axe            ]                                                                                      
+f      30% 09_freak               3c   [drop 100% item_124_poison_vaccine       ]                                                                                      
+10    100% 08_hermit_crab         3c   [drop 100% item_e1_ring_of_dark_souls    ]                                                                                      
+11    100% 0c_saurian_warrior_a   3c                                                                                                                                   
+12    100% 0c_saurian_warrior_a   3c   [drop  40% item_87_swift_gauntlet        ]                                                                                      
+13    100% 0c_saurian_warrior_a   3c   [drop  40% item_89_arm_guard             ]                                                                                      
+14    100% 0e_dinogon             3c   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+15    100% 0e_dinogon             3c   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+16    100% 0d_saurian_warrior_b   3c                                                                                                                                   
+17    100% 0d_saurian_warrior_b   3c                                                                                                                                   
+18     20% 0d_saurian_warrior_b   28   [drop  50% item_b7_tower_shield_of_balance]                                                                                      
+30    100% 02_lizard_servant       a                                                                                                                                   
+31    100% 06_lizard_servant       a                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0       5% 04_king_hopper         5a   [drop  50% item_f8_holy_bracelet         ]                                                                                      
+1       5% 04_king_hopper         5a   [drop  20% item_f9_king_bracelet         ]                                                                                      
+2       5% 04_king_hopper         5a   [drop 100% item_eb_bracelet_of_curing    ]                                                                                      
+3     100% 05_warden              28   [drop 100% item_10a_cune                 ]                                                                                      
+4     100% 05_warden              28   [drop 100% item_10a_cune                 ]                                                                                      
+5     100% 06_oblid               32                                                                                                                                   
+6     100% 06_oblid               5a   [drop 100% item_11d_magic_potion         ]                                                                                      
+7      25% 06_oblid               32                                                                                                                                   
+8     100% 08_oxelus              28   [drop  30% item_41_keenest_battle_axe    ]                                                                                      
+9     100% 08_oxelus              28   [drop  40% item_1d_crushing_bastard_sword]                                                                                      
+a     100% 08_oxelus              1e   [drop  40% item_2c_deadly_great_sword    ]                                                                                      
+b     100% 0a_cursed_demon        1e   [drop 100% item_11d_magic_potion         ]                                                                                      
+c     100% 0a_cursed_demon        1e   [drop 100% item_138_soul_pod_29_sp       ]                                                                                      
+d      50% 0a_cursed_demon        28   [drop  10% item_c2_shinning_gothic_shield]                                                                                      
+e      50% 0a_cursed_demon        28   [drop  30% item_ad_great_shield_of_balance][drop  30% item_bd_gothic_shield_of_honor]                                            
+f     100% 0d_death_serpent       28   [drop  30% item_9b_harden_leg_guard      ][drop  30% item_9e_leg_guard_of_protect  ]                                            
+10    100% 0d_death_serpent       28   [drop  50% item_8a_arm_guard_of_composure]                                                                                      
+11     25% 0d_death_serpent       28   [drop  20% item_70_eternal_plate_mail    ][drop  30% item_77_plate_mail_of_rage    ]                                            
+21    100% 0e_necron               a   [drop 100% item_e4_ring_of_dead_spirit   ]                                                                                      
+30    100% 01_auriel_c             a                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_gargaral            14   [drop 100% item_10a_cune                 ]                                                                                      
+1     100% 02_gordoral            14                                                                                                                                   
+2     100% 02_gordoral            14   [drop  10% item_107_star_amulet          ]                                                                                      
+3     100% 01_gargaral            14   [drop 100% item_10a_cune                 ]                                                                                      
+4     100% 01_gargaral            14                                                                                                                                   
+5     100% 04_demon_warrior       1e   [drop  30% item_eb_bracelet_of_curing    ]                                                                                      
+6     100% 04_demon_warrior       1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+7     100% 05_gargaral            14   [drop  30% item_101_amulet_of_resist     ]                                                                                      
+8     100% 05_gargaral            14   [drop 100% item_10a_cune                 ]                                                                                      
+9     100% 06_gordoral            14   [drop  10% item_f9_king_bracelet         ]                                                                                      
+a     100% 04_demon_warrior       28   [drop  50% item_ec_bracelet_of_recovery  ]                                                                                      
+b     100% 04_demon_warrior       28   [drop 100% item_11c_healing_potion       ]                                                                                      
+c      50% 04_demon_warrior       28   [drop  40% item_44_bow_gun               ]                                                                                      
+d      50% 04_demon_warrior       28   [drop  20% item_17_dragon_sword          ]                                                                                      
+e      50% 04_demon_warrior       28   [drop  50% item_f1_sorcerer_bracelet     ][drop  50% item_f2_priest_bracelet       ]                                            
+f     100% 0a_rotting_face        50   [drop 100% item_11d_magic_potion         ]                                                                                      
+10    100% 08_war_demon_1         28   [drop  40% item_53_harden_full_helm      ]                                                                                      
+11    100% 08_war_demon_1         28   [drop  50% item_15_keenest_broad_sword   ]                                                                                      
+12    100% 09_war_demon_2         28                                                                                                                                   
+13    100% 0e_rotting_face         a   [drop 100% item_11d_magic_potion         ]                                                                                      
+14    100% 0c_death_mage          1e                                                                                                                                   
+15    100% 0c_death_mage          3c   [drop  40% item_4b_wizard_crown          ]                                                                                      
+16     50% 0c_death_mage          1e   [drop  30% item_d4_dark_ring             ]                                                                                      
+21    100% 08_war_demon_1         28   [drop  40% item_6d_shining_plate_mail    ][drop  30% item_6e_dark_plate_mail       ]                                            
+22    100% 09_war_demon_2         28   [drop  50% item_26_righteous_sword       ]                                                                                      
+30    100% 00_gorgoral             a   [drop 100% item_10a_cune                 ][drop   0% item_116_key_of_delusion      ]                                            
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 09_dark_fairy          1e   [drop 100% item_127_acid_vaccine         ]                                                                                      
+1      50% 09_dark_fairy          1e   [drop 100% item_127_acid_vaccine         ]                                                                                      
+2      50% 09_dark_fairy          1e   [drop  30% item_c6_ring_of_fire_resist   ]                                                                                      
+3      50% 0a_dark_bishop         1e   [drop  50% item_d5_dark_priest_ring      ][drop  25% item_d0_holy_ring_of_resist   ]                                            
+4      50% 0a_dark_bishop         1e   [drop  40% item_d1_holy_ring_of_priest   ][drop  50% item_cf_soul_ring             ]                                            
+5      50% 0a_dark_bishop         1e   [drop   5% item_e6_ring_of_drain         ]                                                                                      
+6      50% 09_dark_fairy          28   [drop 100% item_120_divine_symbol        ]                                                                                      
+7      50% 09_dark_fairy          28                                                                                                                                   
+8      50% 09_dark_fairy          28   [drop 100% item_120_divine_symbol        ]                                                                                      
+9     100% 0c_maristella          1e   [drop 100% item_10a_cune                 ]                                                                                      
+a     100% 0c_maristella          1e   [drop 100% item_10a_cune                 ]                                                                                      
+b     100% 0d_deha                28                                                                                                                                   
+c      50% 0d_deha                28   [drop  40% item_73_full_plate            ]                                                                                      
+d      50% 0d_deha                28   [drop 100% item_125_dust_of_rage         ]                                                                                      
+e      50% 0d_deha                28   [drop  50% item_bb_gothic_shield         ][drop 100% item_b5_tower_shield_of_protect]                                            
+f      50% 0d_deha                28   [drop 100% item_125_dust_of_rage         ]                                                                                      
+10     50% 0c_maristella          1e   [drop 100% item_10a_cune                 ]                                                                                      
+11     50% 0c_maristella          1e                                                                                                                                   
+20    100% 02_dark_imp            14                                                                                                                                   
+21    100% 00_red_puppet          14   [drop  30% item_103_sorcerer_amulet      ]                                                                                      
+22    100% 01_dark_spirits        14   [drop  30% item_86_gauntlet_of_resist    ][drop 100% item_11f_anti_paralytic       ]                                            
+23    100% 06_black_imp           14                                                                                                                                   
+24    100% 04_dark_spirits        14   [drop  50% item_f4_bracelet_of_composure ][drop  30% item_f5_deadly_bracelet       ]                                            
+25    100% 05_dark_spirits        14   [drop 100% item_11f_anti_paralytic       ]                                                                                      
+26      0% 08_ring_demon          1e   [drop  50% item_12e_dorados_ashes        ]                                                                                      
+27      0% 08_ring_demon          1e   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+28      0% 0d_deha                28   [drop  60% item_56_great_helm            ]                                                                                      
+30    100% 0e_blank               14                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_dark_spirits        1e   [drop  20% item_f0_guardian_bracelet     ][drop  50% item_f4_bracelet_of_composure ][drop 100% item_122_evil_eye             ]  
+1     100% 00_dark_spirits        1e   [drop  10% item_57_harden_great_helm     ][drop  30% item_56_great_helm            ][drop 100% item_10e_sacred_feather       ]  
+2     100% 00_dark_spirits        1e   [drop  10% item_45_fiery_bow_gun         ][drop 100% item_128_spirit_book          ]                                            
+20    100% 01_disguise             a   [drop  60% item_108_amulet_of_winter     ][drop 100% item_59_mystic_great_helm     ]                                            
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_master_knight       28                                                                                                                                   
+1     100% 00_master_knight       28   [drop  50% item_1a_lethal_bastard_sword  ]                                                                                      
+2     100% 00_master_knight       28                                                                                                                                   
+3      50% 00_master_knight       28   [drop  50% item_20_shining_bastard_sword ]                                                                                      
+4      50% 00_master_knight       28   [drop  50% item_1b_swift_bastard_sword   ][drop  30% item_22_mighty_bastard_sword  ]                                            
+5     100% 06_warpoor             1e   [drop  20% item_52_full_helm_of_curing   ]                                                                                      
+6     100% 06_warpoor             1e   [drop  20% item_65_harden_plate_mail     ]                                                                                      
+7     100% 06_warpoor             1e   [drop 100% item_116_key_of_delusion      ]                                                                                      
+8     100% 0a_warpoor             1e   [drop  30% item_c9_summoner_ring_of_frost]                                                                                      
+9     100% 0a_warpoor             1e   [drop  50% item_11d_magic_potion         ]                                                                                      
+a     100% 0a_warpoor             1e   [drop 100% item_124_poison_vaccine       ]                                                                                      
+b     100% 0a_warpoor             1e   [drop  50% item_11d_magic_potion         ]                                                                                      
+c     100% 0a_warpoor             1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+d      50% 0a_warpoor             1e   [drop  10% item_d8_ring_of_poison        ][drop  20% item_dc_caustic_ring          ]                                            
+e      30% 0a_warpoor             1e   [drop  20% item_d7_ring_of_poison        ]                                                                                      
+f      30% 0a_warpoor             1e   [drop  30% item_cc_priest_ring_of_frost  ]                                                                                      
+10    100% 09_cross_breed         1e   [drop 100% item_120_divine_symbol        ]                                                                                      
+11    100% 09_cross_breed         1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+12    100% 09_cross_breed         1e   [drop  30% item_102_mind_amulet          ][drop  40% item_105_amulet_of_balance    ]                                            
+13     50% 09_cross_breed         1e   [drop  20% item_103_sorcerer_amulet      ][drop 100% item_126_bottle_of_light      ]                                            
+14     50% 09_cross_breed         1e   [drop  20% item_104_priest_amulet        ][drop 100% item_120_divine_symbol        ]                                            
+21    100% 04_wildowess            5   [drop  40% item_da_sorcerer_ring_of_poison]                                                                                      
+22    100% 01_gorthaur             a   [drop  50% item_e0_ring_of_ice           ]                                                                                      
+23    100% 08_fester               5   [drop  80% item_f7_priest_bracelet       ]                                                                                      
+30    100% 02_fat_mole_d          50                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 00_hell_hunter         1e                                                                                                                                   
+1     100% 00_hell_hunter         1e   [drop  30% item_43_warrior_bow           ]                                                                                      
+2     100% 00_hell_hunter         1e   [drop 100% item_10a_cune                 ]                                                                                      
+3      50% 02_karasu              50   [drop  20% item_107_star_amulet          ][drop 100% item_128_spirit_book          ]                                            
+4      50% 02_karasu               a   [drop  30% item_f5_deadly_bracelet       ][drop 100% item_128_spirit_book          ]                                            
+5     100% 05_armored_warrior     1e                                                                                                                                   
+6     100% 05_armored_warrior     1e   [drop 100% item_10a_cune                 ]                                                                                      
+7     100% 06_armored_slayer      1e   [drop  10% item_b8_tower_shield_of_resist][drop  50% item_11c_healing_potion       ]                                            
+8     100% 06_armored_slayer      1e   [drop  20% item_8b_deadly_arm_guard      ]                                                                                      
+9     100% 06_armored_slayer      1e   [drop  30% item_74_plate_mail_of_honor   ]                                                                                      
+a      50% 06_armored_slayer      1e   [drop  30% item_75_harden_full_plate     ]                                                                                      
+b      50% 06_armored_slayer      1e   [drop  50% item_97_steel_boots_of_balance]                                                                                      
+c     100% 04_tree_ogre           1e   [drop 100% item_10a_cune                 ]                                                                                      
+d     100% 04_tree_ogre           1e   [drop 100% item_11c_healing_potion       ]                                                                                      
+e      50% 04_tree_ogre           1e   [drop 100% item_128_spirit_book          ]                                                                                      
+f      50% 04_tree_ogre           1e   [drop 100% item_7f_metal_glove           ]                                                                                      
+10    100% 09_armored_warrior     1e   [drop   5% item_59_mystic_great_helm     ]                                                                                      
+11    100% 09_armored_warrior     1e   [drop  50% item_11c_healing_potion       ]                                                                                      
+12    100% 0a_armored_slayer      1e                                                                                                                                   
+13    100% 0a_armored_slayer      1e   [drop  30% item_2d_keenest_great_sword   ]                                                                                      
+14     50% 09_armored_warrior     1e   [drop  30% item_2e_crushing_great_sword  ]                                                                                      
+15     50% 0a_armored_slayer      1e   [drop  50% item_af_dark_great_shield     ]                                                                                      
+20    100% 08_armored_guardian    1e   [drop 100% item_129_sealed_sword_stone   ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_stack_eyes          1e                                                                                                                                   
+1     100% 01_stack_eyes          1e   [drop  50% item_12e_dorados_ashes        ]                                                                                      
+2     100% 01_stack_eyes          1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+3     100% 01_stack_eyes          1e   [drop 100% item_126_bottle_of_light      ]                                                                                      
+4     100% 01_stack_eyes          1e   [drop 100% item_12e_dorados_ashes        ]                                                                                      
+5     100% 05_unknown_g           28                                                                                                                                   
+6     100% 05_unknown_g           28                                                                                                                                   
+7     100% 05_unknown_g           28                                                                                                                                   
+8     100% 08_apocrypha           14   [drop  10% item_e3_ring_of_seal          ][drop  50% item_ca_summoner_ring_of_frost]                                            
+9     100% 09_descrypha           14   [drop  10% item_e0_ring_of_ice           ][drop 100% item_128_spirit_book          ]                                            
+a     100% 08_apocrypha           14   [drop  20% item_df_ring_of_desire        ][drop  40% item_cc_priest_ring_of_frost  ][drop 100% item_11d_magic_potion         ]  
+b     100% 09_descrypha           14   [drop  10% item_c8_sorcerer_ring_of_fire ]                                                                                      
+c      50% 08_apocrypha           14   [drop 100% item_11d_magic_potion         ]                                                                                      
+d      50% 09_descrypha           14   [drop  30% item_c6_ring_of_fire_resist   ]                                                                                      
+e     100% 0c_old_face            1e   [drop   5% item_78_knight_plate_mail     ][drop  40% item_73_full_plate            ]                                            
+f     100% 0c_old_face            1e   [drop  15% item_76_god_plate             ]                                                                                      
+10    100% 0c_old_face            1e   [drop  10% item_5a_holy_great_helm       ]                                                                                      
+11    100% 0c_old_face            1e   [drop  10% item_8c_master_arm_guard      ][drop  60% item_92_steel_boots_of_resist ]                                            
+12    100% 0c_old_face            1e   [drop 100% item_10e_sacred_feather       ]                                                                                      
+13    100% 0c_old_face            1e   [drop  10% item_e5_ring_of_rage          ][drop 100% item_11d_magic_potion         ]                                            
+14    100% 0c_old_face            1e   [drop  30% item_da_sorcerer_ring_of_poison][drop  50% item_11d_magic_potion         ]                                            
+15    100% 0c_old_face            1e   [drop  40% item_bd_gothic_shield_of_honor]                                                                                      
+16    100% 0c_old_face            1e   [drop  10% item_bf_master_gothic_shield  ][drop  60% item_a5_shield_of_resist      ]                                            
+17    100% 0c_old_face            1e   [drop  10% item_c0_gothic_shield_of_power]                                                                                      
+22    100% 0a_wizcrypha           14   [drop  10% item_e6_ring_of_drain         ][drop  30% item_e2_black_ring            ][drop 100% item_d3_dark_ring             ]  
+23    100% 0d_bugler              14   [drop 100% item_122_evil_eye             ]                                                                                      
+30    100% 00_unknown_e           14                                                                                                                                   
+31    100% 04_blank               14                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 05_hell_hunter         28   [drop  20% item_a0_holy_leg_guard        ][drop  50% item_7f_metal_glove           ]                                            
+1     100% 05_hell_hunter         28                                                                                                                                   
+2     100% 05_hell_hunter         28   [drop 100% item_120_divine_symbol        ]                                                                                      
+3     100% 05_hell_hunter         28   [drop  50% item_120_divine_symbol        ]                                                                                      
+4     100% 08_claw_head           1e                                                                                                                                   
+5     100% 08_claw_head           1e   [drop  50% item_41_keenest_battle_axe    ]                                                                                      
+6     100% 08_claw_head           1e   [drop   5% item_71_devil_plate_mail      ]                                                                                      
+7     100% 0a_demons_eye           f                                                                                                                                   
+8     100% 0a_demons_eye           f   [drop  50% item_125_dust_of_rage         ]                                                                                      
+9     100% 0a_demons_eye           f                                                                                                                                   
+a     100% 0a_demons_eye           f   [drop  50% item_125_dust_of_rage         ]                                                                                      
+b     100% 0a_demons_eye           f   [drop  15% item_d2_holy_ring             ]                                                                                      
+c     100% 0a_demons_eye           f   [drop  50% item_125_dust_of_rage         ]                                                                                      
+d     100% 0a_demons_eye           f   [drop  30% item_dd_caustic_priest_ring   ]                                                                                      
+e     100% 0a_demons_eye           f   [drop 100% item_11d_magic_potion         ]                                                                                      
+f     100% 0a_demons_eye           f   [drop  15% item_c8_sorcerer_ring_of_fire ]                                                                                      
+10    100% 0a_demons_eye           f   [drop  15% item_e2_black_ring            ]                                                                                      
+11    100% 0e_claw_head           1e   [drop  50% item_10c_torch                ]                                                                                      
+12    100% 0e_claw_head           1e   [drop  50% item_10c_torch                ]                                                                                      
+13    100% 0e_claw_head           1e   [drop 100% item_10c_torch                ]                                                                                      
+14    100% 0e_claw_head           1e   [drop 100% item_120_divine_symbol        ]                                                                                      
+21    100% 04_king_edward         14                                                                                                                                   
+30    100% 01_unknown_b           14                                                                                                                                   
+31    100% 09_pulsating_heart      a                                                                                                                                   
+32    100% 0d_fat_mole_e           a                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0     100% 01_doriwi              28   [drop  20% item_df_ring_of_desire        ]                                                                                      
+1     100% 01_doriwi              28   [drop  20% item_e0_ring_of_ice           ]                                                                                      
+2     100% 02_bone_wolf           28   [drop 100% item_128_spirit_book          ]                                                                                      
+3     100% 06_hell_warrior        28   [drop  20% item_72_holy_plate_mail       ]                                                                                      
+4     100% 06_hell_warrior        28   [drop  20% item_b0_deadly_great_shield   ]                                                                                      
+5     100% 06_hell_warrior        28   [drop   5% item_c3_holy_gothic_shield    ][drop  20% item_c2_shinning_gothic_shield]                                            
+6     100% 05_doriwi              28   [drop  20% item_e1_ring_of_dark_souls    ]                                                                                      
+7     100% 05_doriwi              28   [drop  50% item_ef_deadly_bracelet       ]                                                                                      
+8     100% 05_doriwi              28   [drop  20% item_fa_moon_bracelet         ]                                                                                      
+9     100% 05_doriwi              28   [drop  40% item_f0_guardian_bracelet     ]                                                                                      
+a     100% 08_wyvern              28   [drop  50% item_10e_sacred_feather       ]                                                                                      
+b     100% 08_wyvern              28   [drop  50% item_10e_sacred_feather       ]                                                                                      
+c     100% 08_wyvern              32                                                                                                                                   
+d     100% 0a_bone_wolf           28   [drop 100% item_128_spirit_book          ]                                                                                      
+e     100% 0a_bone_wolf           28                                                                                                                                   
+f     100% 0a_bone_wolf           28   [drop 100% item_128_spirit_book          ]                                                                                      
+10    100% 0d_blood_bone          3c   [drop  75% item_13_broad_sword           ]                                                                                      
+11    100% 0d_blood_bone          3c   [drop  30% item_31_blood_sword           ]                                                                                      
+12    100% 0d_blood_bone          3c   [drop  60% item_29_great_sword           ]                                                                                      
+13    100% 0d_blood_bone          3c   [drop  50% item_2a_swift_great_sword     ]                                                                                      
+14    100% 0d_blood_bone          3c                                                                                                                                   
+20    100% 0c_hollow_mage          5   [drop  80% item_109_endless_amulet       ]                                                                                      
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+0       0% 00_balron_a            14                                                                                                                                   
+3       0% 03_balron_b            14                                                                                                                                   
+5       0% 08_demon_king          14                                                                                                                                   
+30    100% 01_unknown_i           14                                                                                                                                   
+31    100% 02_unknown_j           14                                                                                                                                   
+32      0% 04_unknown_k           14                                                                                                                                   
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
+
+Spawns
+idx chance name                   mx                                 drop1                                     drop2                                     drop3
