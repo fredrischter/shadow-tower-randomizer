@@ -1001,6 +1001,8 @@
     if (!this.name || !this.map_file || !this.map_file.bin || !this.map_file.bin.length) {
       return;
     }
+    console.log("\nSetup Area " + this.name + " in FDAT file index " + this.map_index + " map index " + this.index);
+    console.log("\n params " + JSON.stringify(params));
 
   /*
   0-entity and entity data
@@ -1014,6 +1016,8 @@
 
   var TILE_START_OFFSET = 0x00;
   this.tiles = [];
+  console.log("\nTiles");
+  console.log("idx                                                                     x       y       z     rot      tile xyz  ----");
 
   this.mapTiles = [];
 
@@ -1031,6 +1035,8 @@
 
       //0-entity and entity data
       this.creatures = [];
+      console.log("\nCreatures");
+      console.log("name      offset_in_file    offset  ---------------------------------------------------------- some creature data ---------------------------------------------------------------- str spd def bal sla smh pir spr foc ham pur par mel sol  ----hp ---idx0 ---idx1 ---idx2 ---idx3 ---idx4 ---idx5 ---idx6 ---idx7 ---idx8 ---idx9 --idx10 --idx11 --idx12 --idx13 --idx14 --idx15 --idx16 --idx17 --idx18 --idx19 --idx20 --idx21  --stateOffset0  --stateOffset1  --stateOffset2  --stateOffset3  --stateOffset4  --stateOffset5  --stateOffset6  --stateOffset7  --stateOffset8  --stateOffset9  -stateOffset10  -stateOffset11  -stateOffset12  -stateOffset13  -stateOffset14  -stateOffset15  -stateOffset16  -stateOffset17  -stateOffset18  -stateOffset19  -stateOffset20  -stateOffset21  -stateOffset22  -stateOffset23");
       nextExpectedEntityDataAddress = ENTITY_STATE_DATA_START;
       for (var i = 0; i<CREATURE_COUNT; i++) {
         var offset_in_file = 4 + CREATURE_SIZE * i;
@@ -1038,11 +1044,21 @@
         this.creatures.push(new Creature(this.map_file.bin, this, offset_in_file, absoluteIndex, i));
       }
 
+      console.log("\nSpawns");
+      console.log("idx chance name                                                      drop1                                     drop2                                     drop3                                      chance typ  tile drop1 drop2 drop3 mx %1 %2 %2 ---------    x     y     z --");
+      this.spawns.forEach(spawn => {
+        console.log(spawn.toReadableString());
+      });
+
       //2-300 entries 0x18 bytes each     
+      console.log("\n300 entries 0x18 bytes each");
+      console.log("-------------");
 
       //2-mystery
       var MYSTERY_START_OFFSET = 0x3ec4 + 4/*+ this.map_file.sizedMixStarts[2] - 0x10*/;//0x3ec4;
       this.misteries = [];
+      console.log("\nMystery ");
+      console.log("data");
       for (var i = 0; i<MYSTERY_COUNT; i++) {
         var offset_in_file = MYSTERY_START_OFFSET + MYSTERY_SIZE * i;
         var absoluteIndex = this.map_file.startOffset + offset_in_file;
@@ -1057,6 +1073,8 @@
       //3-objects
       var OBJECTS_START_OFFSET = this.map_file.sizedMixStarts[3] - 0x10;//0x5ae4;
       this.objects = [];
+        console.log("\nObjects ");
+      console.log("idx  in_file offset type     ");
       for (var i = 0; i<OBJECTS_COUNT; i++) {
         var offset_in_file = 16 + OBJECTS_START_OFFSET + OBJECTS_SIZE * i;
         var absoluteIndex = this.map_file.startOffset + offset_in_file;
@@ -1067,6 +1085,8 @@
       // to do to fix this workaround 0x10
       var COLLECTABLE_START_OFFSET = this.map_file.sizedMixStarts[4] - 0x10;//0x7bb4;
       this.collectables = [];
+      console.log("\nCollectables");
+      console.log("idx  name                          offset_in_file    offset                                                                   type     ------ tile         -----  pos  x       y       z     rot -------------------  tileId");
       for (var i = 0; i<COLLECTABLE_COUNT; i++) {
         var offset_in_file = 16 + COLLECTABLE_START_OFFSET + COLLECTABLE_SIZE * i;
         var absoluteIndex = this.map_file.startOffset + offset_in_file;
@@ -2844,42 +2864,52 @@
 
   function setup(FDAT, stDir, params) {
 
+    console.log("\n** Item info dump");
     for (var i in global.items) {
       global.items[i].setup(FDAT);
     }
 
+    console.log("\n** Spells info dump");
     for (var i in global.effects) {
       global.effects[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix0 info dump");
     for (var i in global.sizedMix0) {
       global.sizedMix0[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix1 info dump");
     for (var i in global.sizedMix1) {
       global.sizedMix1[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix2 info dump");
     for (var i in global.sizedMix2) {
       global.sizedMix2[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix4 info dump");
     for (var i in global.sizedMix4) {
       global.sizedMix4[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix5 info dump");
     for (var i in global.sizedMix5) {
       global.sizedMix5[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix6 info dump");
     for (var i in global.sizedMix6) {
       global.sizedMix6[i].setup(FDAT);
     }
 
+    console.log("\n** sizedMix9 info dump");
     for (var i in global.sizedMix9) {
       global.sizedMix9[i].setup(FDAT);
     }
 
+    console.log("\n** Map info dump");
     for (var i in areas) {
       areas[i].setup(FDAT, params);
     }
